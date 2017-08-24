@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Comment From</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body onload="adjust_iframe_height()">
+<div class="main-wrap">
+	<div class="main-wrap--form">
+		<form id="foo">
+			<div class="form-group">
+			    <label for="Name">Name:</label>
+			    <input id="Name" name="Name" type="text" value="" required>
+		    </div>
+
+		    <div class="form-group">
+			    <label for="Comments">Comment:</label>
+			    <textarea id="Comments" name="Comments" cols="40" required></textarea>
+		    </div>
+		    <div class="form-group">
+			    <p id="result"></p>
+			    <button type="submit" class="btn-submit">Send</button>
+		    </div>
+		</form>
+	</div>
+
+	<div class="main-wrap--block">
+		<div id="display_data">
+			<div id="default_block" class="block-content" style="display:none">
+				<div class="que-block">
+					<div class="avtar"><img src="assets/images/avatar2.jpg"></div>
+					<span class="author"></span> <span class="timestamp"></span>
+					<p class="comment"></p>
+				</div>
+			</div>
+			<!-- Dynamic Data -->
+		</div>
+	</div>
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+
+<!-- Spreadsheet API -->
+<script type="text/javascript" src="assets/api/spreadsheet.js"></script>
+<script type="text/javascript" src="assets/api/data-spreadsheet-loops.js"></script>
+<script data-cfasync="false" type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+	// variable to hold request
+	var request;
+	
+	$("#foo").submit(function(event){
+
+		// Form Validation
+		if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
+        	alert('Please insert all fields');
+       	}
+		// 
+		$("#default_block").show();
+		var input_name = $("#Name").val();
+		var input_comment = $("#Comments").val();
+
+		$('#default_block .que-block .author').html(input_name);
+		$('#default_block .que-block .comment').html(input_comment);
+
+		// Display Date
+		var myDate = new Date();
+		var displayDate = (myDate.getHours() + ':' + myDate.getMinutes()) + ' ' + (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
+		$('#default_block .que-block .timestamp').text(displayDate);
+
+		// abort any pending request
+		if (request) {
+			request.abort();
+		}
+		// setup some local variables
+		var $form = $(this);
+		// let's select and cache all the fields
+		var $inputs = $form.find("input, select, button, textarea");
+		// serialize the data in the form
+		var serializedData = $form.serialize();
+	
+		// Disabled form elements will not be serialized.
+		$inputs.prop("disabled", true);
+		$('#result').text('Sending data...');
+	
+		// fire off the request to /form.php
+		request = $.ajax({
+			url: "https://script.google.com/macros/s/AKfycbwuEXc3gS_UZuUO8gWJHqKS4kVZdDdO8EaGnTh3k2zJXNxFFmyn/exec",
+			type: "post",
+			data: serializedData
+		});
+	
+		// callback handler that will be called on success
+		request.done(function (response, textStatus, jqXHR){
+			// log a message to the console
+			//$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+			$('#result').html('<span class="success">Success</span>');
+			console.log("Hooray, it worked!");
+		});
+	
+		// callback handler that will be called on failure
+		request.fail(function (jqXHR, textStatus, errorThrown){
+			// log the error to the console
+			console.error(
+				"The following error occured: "+
+				textStatus, errorThrown
+			);
+		});
+	
+		// if the request failed or succeeded
+		request.always(function () {
+			// reenable the inputs
+			$inputs.prop("disabled", false);
+		});
+	
+		// prevent default posting of form
+		event.preventDefault();
+	});
+});
+</script>
+<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script> 
+<script>
+	function adjust_iframe_height(){
+	    var actual_height = document.body.scrollHeight; 
+	    console.log("height is",actual_height);
+	    parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
+	}
+</script>
+</body>
+</html>
