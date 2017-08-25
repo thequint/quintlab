@@ -11,7 +11,10 @@ function init(){
 window.addEventListener('DOMContentLoaded', init);
 
 function showInfo(data) {
+	//console.log(data[0].Comments);
+	$("#total_length").html(data.length);
 	for(var index = data.length-1; index >= 0; index--) {
+		//console.log(data[2].Name);
 		//console.log(data[index].Reply);
 		if(data[index].Reply == "undefined" || data[index].Reply == "") {
 			$("#display_data").append (
