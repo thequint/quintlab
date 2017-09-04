@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#54747F" />
+<meta name="theme-color" content="#222" />
 <title>Election Journey - TheQuint</title>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,250 +47,10 @@
 <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
 <link href="assets/css/animate.css" rel="stylesheet" media="all">
 <link href="assets/css/base.css" rel="stylesheet" media="all">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" media="all">
 <link href="assets/css/theme.css" rel="stylesheet" media="all">
 <link href="assets/css/responsive.css" rel="stylesheet" media="all">
 
-<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" media="all">
-
-<style>
-	.ui-widget.ui-widget-content
-	{
-		height: 6px;
-    border-radius: 0;
-    border: 0;
-	}
-	.is-congress .ui-widget.ui-widget-content
-	{
-	background: rgba(59,153,205,0.2);
-	}
-	.is-bjp .ui-widget.ui-widget-content
-	{
-	background: rgba(226,124,32,0.2);
-	}
-.timeline-progress ,.mapsvg-region,.ui-slider-handle,.ui-slider-range-min
-	{
-	/*	-webkit-transition: all 1s;
-    transition: all 1s;*/
-	}
-	.mapsvg-region
-	{
-		-webkit-transition: all 1s;
-    transition: all 1s;
-	}
-	.is-bjp .ui-slider-range-min
-	{
-		background:rgba(226,124,32,1);
-	}
-	.is-congress .ui-slider-range-min
-	{
-		background:rgba(59,153,205,1)
-	}
-	.is-janata .ui-slider-range-min
-	{
-		background:#d23737;
-	}
-	
-	.ui-widget.ui-widget-content
-	{
-		
-	}
-	
-.mapsvg-region:hover
-	{
-		fill:#867272;
-	}
-.Congress,.Congress_A	
-	{
-		fill:rgba(59,153,205,1)!important;
-	}
-	
-.BJP,.BJP_A
-	{
-		fill:rgba(226,124,32,1)!important;
-	}	
-	.Janata_Party,.Janata_Dal
-	{
-		fill:#d23737!important;
-	}
-	 .ui-widget-content .ui-state-default
-	{
-	    width: 28px;
-    height: 28px;
-    background: #fff;
-    border-radius: 100%;
-    position: absolute;
-    right: -15px;
-    top: -11px;
-    cursor: move;	
-	}
-	.timeline-progressbar
-	{
-		display: none;
-		
-	}
-	figure
-	{
-	position:relative;
-	}
-	.info-container
-	{
-	position:relative;
-	}
-	.chart-1,.chart-2
-	{
-	position:absolute;
-	top:0px;
-	left:50%;
-	transform:translate(-50%,-15%);
-	}
-	.pie
-	{
-	width:136px;
-	position:absolute;
-	top:60px;
-		left:50%;
-	transform:translate(-50%,-15%);
-
-	}
-	.pie svg { 
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0; 
-  margin: auto;
-  width: 100%;
-}
-.pie-2
-{
-width:160px;
-
-}
-.pm-img
-{
-position:relative;
-border:4px solid #222222;
-}
-
-.graph { visibility: hidden; }
-
-.graph > * { 
-  visibility: visible;
-  transition: all 200ms ease-in-out;
-}
- 
-.graph:hover > * { opacity: 0.5; }
-
-	.graph__percent
-	{
-		opacity: 0.7;
-		cursor: pointer;
-	}
-.graph__percent:hover {
-  /*stroke: #f96b07;*/
-  opacity: 1;
-}
-.pie-2 .graph
-{
-stroke-width:3;
-
-}
-	.current-year
-	{
-		color: white;
-		font-family: 'Paprika', cursive;
-	}
-	.menu ul li .list-img
-	{
-		top:0px;
-	}
-	.ui-slider-horizontal .ui-slider-range-min
-	{
-	
-		transform-origin: 0% 0%;
-	}
-	.morph-shape svg path
-	{
-		stroke:#f2c300;
-	}
-	.timeline-elmt.is-congress .timeline-progress, .map-index ul li.is-janata::before, .timeline-elmt.is-janata .current-year
-	{
-		background: #d23737;
-	}
-	.timeline-elmt.is-janata .current-year::after
-	{
-		border-top:12px solid rgb(210, 55, 55);
-		
-	}
-	.is-janata .ui-widget.ui-widget-content
-	{
-		background: rgba(210, 55, 55,0.4)
-		
-	}
-	.popup
-	{
-	background: #f2c300;
-	position: absolute;
-	padding: 10px 15px;
-		color: black;
-		font-size: 20px;
-		z-index: 100;
-		visibility: hidden;
-	}
-	.popup.visible
-	{
-		visibility: visible;
-	}
-	.mapsvg-region
-	{
-		cursor: pointer;
-		position: absolute;
-	}
-	
-	.mapsvg-region.Congress.active, .mapsvg-region.Congress_A.active
-	{
-		fill:rgb(28, 105, 147)!important;
-	}
-	
-	.mapsvg-region.BJP.active, .mapsvg-region.BJP_A.active
-	{
-		fill:rgb(215, 102, 1)!important;
-	}
-	
-	.mapsvg-region.Janata_Party.active, .mapsvg-region.Janata_Dal.active
-	{
-	fill:#b82626!important;
-	}
-	.map-img
-	{
-	opacity: 0;
-		width: 150%;
-		margin-left: -25%;
-		position: absolute;
-				-webkit-transition: all 1s;
-    transition: all 1s;
-		pointer-events: none;
-	}
-	.map-img.map-visible
-	{
-		opacity: 1;
-		pointer-events: all;
-	}
-	
-@media (max-width: 991px) {
-	.map-img
-	{
-		width: 200%;
-		margin-left:-50%;
-	}
-	.morph-shape
-	{
-		display: block;
-	}
-	.pie_cont
-	{
-		display: none;
-	}
-	}
-	
-</style>
 
 </head>
 <body>
@@ -298,6 +58,13 @@ stroke-width:3;
 	<div class="logo">
 		<a href="https://www.thequint.com" target="_blank"><img src="assets/images/logo-text.svg" alt="The Quint"></a>
 		<h2>India Since<br>1947</h2>
+	</div>
+	<div class="share">
+		<a class="share-ico" href="javascript:void(0);">share</a>
+		<ul class="social-ico">
+			<li><a target="_blank" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a target="_blank" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+		</ul>
 	</div>
 </header><!--/.header-wraper -->
 
