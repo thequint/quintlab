@@ -186,12 +186,12 @@ template {
 .wrapper, .container {
 	position: relative;
 }
-.clearfix:before,  .clearfix:after, .wrapper:before, .wrapper:after, .container:before, .container:after, .row:before, .row:after {
+.clearfix:before,  .clearfix:after, .wrapper:before, .wrapper:after, .container:before, .container:after, .row:before, .row:after,.info-container:after, .info-container:before {
 	display: table;
 	line-height: 0;
 	content: "";
 }
-.clearfix:after, .wrapper:after, .container:after, .row:after{
+.clearfix:after, .wrapper:after, .container:after, .row:after, .info-container:after{
 	clear: both;
 }
 .clearfix {
