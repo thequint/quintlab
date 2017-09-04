@@ -1,0 +1,650 @@
+@charset "utf-8";
+:root{
+	
+}
+
+body {
+    font-family: 'Paprika', cursive;
+	font-size: 14px;
+	color: #fff;
+	overflow-x: hidden;
+	background: #222222;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+	
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #333;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 100%;
+}
+
+/*-- Website CSS --*/
+.header-wrapper{z-index: 100;}
+.logo{
+	margin: -100px auto 0 auto;
+	text-align: center;
+	position: relative;
+	width: 180px;
+	
+}
+.logo a {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 100%;
+  display: inline-block;
+  height: 180px;
+  text-align: center;
+  width: 180px;
+  position: absolute;
+	top: 0;
+	
+	left: 0
+}
+.logo a img{
+	width: 50%;
+	margin-top: 110px;
+}
+
+
+.logo h2 {
+  font-size: 25px;
+  line-height: 100%;
+  margin-top: 188px;
+  position: absolute;
+  width: 100%;
+}
+
+
+
+.footer-wrapper {
+  background: #000 none repeat scroll 0 0;
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  padding: 28px 0 0;
+  position: fixed;
+  transform: translateZ(0px);
+  width: 100%;
+}
+
+
+
+.timeline-progressbar{
+	height: 6px;
+	background: rgba(255,255,255,0.4);
+	position: relative;
+}
+
+.timeline-elmt{padding: 0px 60px;}
+.timeline-progress{
+	position: absolute;
+	display: block;
+	height: 100%;
+	background: rgba(255,255,255,1);
+}
+.progress-pointer{
+	width: 28px;
+	height: 28px;
+	background: #fff;
+	border-radius: 100%;
+	position: absolute;
+	right: -15px;
+	top: -11px;
+	cursor: move;
+}
+
+.current-year {
+  background: #ccc;
+  border-radius: 30px;
+  font-size: 18px;
+  height: 35px;
+  transform: translate3d(-36%, -50px, 0px);
+  line-height: 35px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+	
+}
+
+.current-year::after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #ccc;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 40px;
+  top: 34px;
+  width: 0;
+}
+
+
+
+
+
+.year{
+	position: absolute;
+	top: -8px;
+	font-size: 20px;
+	line-height: 100%;
+	width: 50px;
+}
+
+.year.year-left{
+	left: -10px;
+	text-align: right;
+}
+.year.year-right{
+	right: -10px;
+}
+
+.controller{
+	text-align: center;
+	margin: 23px 0 0 0;
+}
+
+.item-controll{
+	display: inline-block;
+}
+.controller a{
+	display: inline-block;
+	float: left;
+	margin: 0px;
+	
+	
+}
+.controller a.prev, .controller a.next{
+	width: 30px;
+	margin-top: 4px;
+}
+.controller a.play-pause{
+	width: 18px;
+	margin: 0 23px 0 26px;
+	min-height: 30px;
+}
+
+.controller a.play-pause .pause{
+	margin-top: 2px;
+}
+
+.controller a svg, .volume svg{
+	fill: #fff;
+	transition: all 0.2s ease-in-out;
+}
+.controller a:hover svg, .volume:hover svg{
+	fill:#f2c300;
+}
+.is-hide{
+	display: none;
+}
+
+.volume {
+  display: block;
+  position: absolute;
+  right: -50px;
+  top: -8px;
+  width: 24px;
+}
+
+
+
+/*Timeline Theme*/
+.timeline-elmt.is-bjp .timeline-progressbar{
+	background: rgba(226,124,32,0.4);
+}
+.timeline-elmt.is-bjp .timeline-progress,
+.map-index ul li.is-bjp::before, .timeline-elmt.is-bjp .current-year{
+	background: rgba(226,124,32,1);
+}
+
+.timeline-elmt.is-congress .timeline-progressbar{
+	background: rgba(59,153,205,0.4);
+}
+.timeline-elmt.is-congress .timeline-progress,
+.map-index ul li.is-congress::before, .timeline-elmt.is-congress .current-year{
+	background: rgba(59,153,205,1);
+}
+
+.timeline-elmt.is-others .timeline-progressbar{
+	background: rgba(142,137,133,0.4);
+}
+.timeline-elmt.is-others .timeline-progress,
+.map-index ul li.is-others::before, .timeline-elmt.is-others .current-year{
+	background: rgba(142,137,133,1);
+}
+
+/*CSS Arrow*/ 
+
+.timeline-elmt.is-bjp .current-year::after{
+	border-top: 12px solid rgba(226,124,32,1);
+}
+
+.timeline-elmt.is-congress .current-year::after{
+	border-top: 12px solid rgba(59,153,205,1);
+}
+
+.timeline-elmt.is-others .current-year::after{
+	border-top: 12px solid rgba(142,137,133,1);
+}
+
+
+
+.wrapper.body-wrapper{
+	height: calc(100% - 100px); 
+	position: fixed;
+	width:100%;
+	top: 0;
+	left: 0;
+	padding-top: 20px;
+}
+.wrapper.body-wrapper .container{
+	height: 100%;
+	max-width: 80%;
+}
+.timeline-container{
+	width: 80%;
+}
+.map{
+	width: 50%;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+.map-img{
+	height: 100%;
+	text-align: center;
+}
+
+.map-img > img{
+	height: 100%
+}
+
+.map-index {position: absolute; bottom: 20px; left:50% ;}
+.map-index ul li {
+  display: block;
+  font-size: 17px;
+  line-height: 100%;
+  margin: 0 0 15px;
+  padding: 0 0 0 30px;
+  position: relative;
+  text-align: left;
+}
+.map-index ul li::before{
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 0;
+	border-radius: 100%;
+	background: #000;
+}
+
+.info{
+	width: 50%;
+	position: relative;
+	margin-top: 30px;
+	
+	float: right;
+	text-align: right;
+	
+}
+
+.info-container{
+	display: inline-block;
+	text-align: left;
+	max-width: 400px;
+}
+
+.pm{text-align: center;}
+.pm-img{
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	overflow: hidden;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+.headline {
+  color: #f2c300;
+  font-size: 28px;
+  line-height: 100%;
+}
+
+.pm h4 {
+  font-size: 15px;
+	 font-family: 'Paprika', cursive;
+  line-height: 100%;
+}
+
+.pm h5{
+  font-size: 17px;
+	 font-family: 'Paprika', cursive;
+  line-height: 100%;
+	color: #f2c300;
+	margin-top: 5px;
+}
+.event{
+	margin-top: 30px;
+	position: relative;
+	padding-top: 30px;
+	border-top:0.25px solid #b3b3b3;
+}
+.event figure{
+	position: relative;
+}
+ 
+.event-img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+.event figcaption{
+	padding-left: 95px;
+}
+.event figcaption p{margin: 4px 0 0 0;}
+
+
+/*--------------- Sidebar -----------------*/
+.menu {
+	position: fixed;
+	width: 420px;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	z-index: 100;
+	overflow: hidden;
+	-webkit-transform: translate3d(-280px, 0, 0);
+	transform: translate3d(-280px, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+}
+
+.menu.menu--open {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.main {
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.menu.menu--open + .main {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.menu__inner {
+	width: calc(100% + 25px);
+	padding: 0 140px 2em 0;
+	overflow-y: auto;
+	height: 100%;
+	position: relative;
+	z-index: 100;
+}
+
+.menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu ul li {
+	margin: 0;
+	-webkit-transform: translate3d(-150px, 0, 0);
+	transform: translate3d(-150px, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	background: #000;
+}
+
+.menu.menu--anim ul li {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	padding: 0px 10px;
+}
+
+/*
+.menu ul li:first-child {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.menu ul li:nth-child(2) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.menu ul li:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+*/
+
+.menu ul li a {
+	display: block;
+	outline: none;
+	position: relative;
+	min-height: 105px;
+	border-bottom: 0.5px solid rgba(255,255,255,0.5);
+	padding: 20px 0px;
+}
+.menu ul li:last-child a{
+	border: 0;
+}
+
+.menu ul li .fa {
+	font-size: 2.5em;
+	display: block;
+	margin: 0 auto;
+	color: #5f656f;
+}
+
+
+.menu ul li figcaption{
+	padding-left: 75px;
+	color: #fff;
+}
+
+.menu ul li .list-img {
+  border-radius: 100%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  width: 65px;
+	height: 65px
+}
+
+.menu ul li h3{
+	color: #F2C300;
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 0px;
+}
+
+.menu ul li h4,.menu ul li h5{
+	font-family: 'Paprika', cursive;
+	font-size: 14px;
+	line-height: 150%;
+}
+
+.menu__handle {
+	background: rgba(0,0,0,0.0);
+	border: none;
+	width: 30px;
+	height: 24px;
+	padding: 0;
+	outline: none;
+	position: absolute;
+	top: 16px;
+	right: 70px;
+	z-index: 2000;
+	cursor: pointer;
+}
+
+.menu__handle::before,
+.menu__handle::after,
+.menu__handle span {
+	background: #f2c300;
+}
+
+.menu__handle::before,
+.menu__handle::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s;
+}
+
+.menu__handle span {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	overflow: hidden;
+	text-indent: 200%;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+.menu__handle::before {
+	-webkit-transform: translate3d(0, -10px, 0);
+	transform: translate3d(0, -10px, 0);
+}
+
+.menu__handle::after {
+	-webkit-transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
+}
+
+.menu--open .menu__handle span {
+	opacity: 0;
+}
+
+.menu--open .menu__handle::before {
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.menu--open .menu__handle::after {
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.morph-shape {
+	position: absolute;
+	width: 240px;
+	height: calc(100% - 40px);
+	top: 0;
+	right: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.morph-shape svg path {
+	stroke: #5f656f;
+	stroke-width: 5px;
+}
+
+@media screen and (max-width: 63em) {
+	.main {
+		padding: 0 2em;
+		-webkit-transition: opacity 0.6s;
+		transition: opacity 0.6s;
+	}
+
+	.menu {
+		-webkit-transform: translate3d(-280px, 0, 0);
+		transform: translate3d(-280px, 0, 0);
+	}
+
+	.menu.menu--open + .main {
+		opacity: 0.05;
+	}
+}
+
+/*----------------- End Sidebar CSS ---------------*/
+
+
+.event-close{
+	width: 30px;
+	height: 30px;
+	background: #f2c300;
+	color: #222;
+	display: inline-block;
+	text-align: center;
+	line-height: 100%;
+	border-radius: 10px 10px 0px 0px;
+	position: absolute;
+	top: -30px;
+	right: -100%;
+	transition: 1s all ease-in-out;	
+}
+.event-close.is-show{
+	right: 0%;
+}
+
+.event-close i{line-height: 28px; font-size: 20px;}
+.event-toggle{
+	width: 35px;
+	height: 135px;
+	background: #f2c300;
+	position: absolute;
+	bottom: -10px;
+	right: -5%;
+	border-radius: 10px 0px 0px 10px;
+	margin-right: -10px;
+	overflow: hidden;
+	color: #222;
+	display: none;
+	transition: all 0.3 s ease-in-out;
+}
+.event-toggle.is-hide{
+	right: -100%;
+}
+
+
+
+.event-toggle span {
+  display: block;
+  white-space: nowrap;
+  font-size: 14px;
+  left: -33px;
+  position: absolute;
+  top: 56px;
+	-webkit-transform: rotate(-90deg);  
+      -ms-transform: rotate(-90deg); 
+  		  transform: rotate(-90deg);
+ 
+}
+
+
