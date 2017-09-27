@@ -1,0 +1,529 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: auto;
+    color: #3c3c3c;
+    background-color: #f7f7f7;
+    font-family: 'Quicksand', sans-serif;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.main-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 740px;
+    max-height: 600px;
+    position: relative;
+    background-color: #302f37;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+}
+.main-wrap:after,
+.main-wrap--container:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.main-wrap--container {
+    width: 200%;
+    transition: 0.9s all ease-in-out;
+}
+
+.main-wrap--container.slide {
+    /*transform: translate3d(-1, 1, 1.1);*/
+    transform: translateX(-50%);
+    transition: 0.9s all ease-in-out;
+    /*background-color: #302f37;*/
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+
+#step01 {
+    position: relative;
+    padding: 57px 0 17px;
+    width: 50%;
+    float: left;
+}
+#step02 {
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: #302f37;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+.main-wrap--headline {
+    margin: 0 auto;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    width: 350px;
+}
+.pin-top {
+    width: 58px;
+    position: absolute;
+    top: 20px;
+    right: 95px;
+    z-index: 9;
+}
+.pin-bottom {
+    width: 85px;
+    position: absolute;
+    top: 80px;
+    right: 115px;
+    z-index: 5;
+    transition: transform 0.4s linear;
+    transform-origin: top center;
+    transform: rotate(0deg);
+}
+.pin-rotate {
+    transform: rotate(-33deg);
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    cursor: pointer;
+}
+.box-nut-top-left {
+    top: 7%;
+    left: 7%;
+}
+
+.box-nut-top-left,
+.box-nut-top-right,
+.box-nut-btm-left,
+.box-nut-btm-right {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.box-nut-top-left {
+    top: 7%;
+    left: 7%;
+}
+.box-nut-top-right {
+    top: 7%;
+    right: 7%;
+}
+.box-nut-btm-left {
+    bottom: 7%;
+    left: 7%;
+}
+.box-nut-btm-right {
+    bottom: 7%;
+    right: 7%;
+}
+.svg-wrap {
+    margin: 0 auto;
+    max-width: 562px;
+    padding: 0 20px;
+}
+.svg-wrap svg {
+    width: 100%;
+    /*-webkit-filter: drop-shadow(6px 4px 15px rgba(0,0,0,0.5));
+    filter: drop-shadow(6px 4px 15px rgba(0,0,0,0.5));*/
+}
+
+#IN_LOVE {
+    cursor: pointer;
+}
+.bg-love {
+    background-color: #e94d4b;
+}
+
+#PARTY {
+    cursor: pointer;
+}
+.bg-party {
+    background-color: #fdd44d;
+}
+
+#SOULFUL {
+    cursor: pointer;
+}
+.bg-soulful {
+    background-color: #d3d1bc;
+}
+
+#HEARTBREAK {
+    cursor: pointer;
+    /*transition: 0.9s all ease-in-out;*/
+}
+.bg-heartbreak {
+    background-color: #02a2a4;
+}
+
+#SURPRISE_ME {
+    cursor: pointer;
+}
+.bg-surprise {
+    background: url(../images/bg-surprise.svg) no-repeat center;
+    background-size: cover;
+}
+
+/* Circle Animation */
+.circle {
+    -webkit-animation: rotation 18s infinite linear;
+    -moz-animation: rotation 18s infinite linear;
+    -o-animation: rotation 18s infinite linear;
+    animation: rotation 18s infinite linear;
+    transform-origin: 50% 50%;
+}
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg);
+    }
+    to {
+        -webkit-transform: rotate3d(0,0,1,359deg);
+        transform: rotate3d(0,0,1,359deg);
+    }
+}
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg);
+    }
+    to {
+        -webkit-transform: rotate3d(0,0,1,359deg);
+        transform: rotate3d(0,0,1,359deg);
+    }
+}
+.circle:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+
+/*  */
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 18s linear infinite;
+  -moz-animation: rotating 18s linear infinite;
+  -ms-animation: rotating 18s linear infinite;
+  -o-animation: rotating 18s linear infinite;
+  animation: rotating 18s linear infinite;
+}
+.rotating:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+#step02 .song-name {
+    margin: 0 auto;
+    position: relative;
+    margin-top: 25px;
+    color: #e3e5e5;
+    width: 345px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px #e3e5e5 solid; 
+}
+#step02 .song-name span {
+    text-transform: uppercase;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    padding: 0 6px 0 18px;
+}
+#step02 .song-name marquee {
+    position: absolute;
+    right: 0;
+    width: 195px;
+    line-height: 30px;
+    height: 30px;
+}
+#step02 .song-name:before {
+    position: absolute;
+    left: 0;
+    content: " ";
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ececec;
+}
+
+
+#step02 .track-love .song-name {
+    background-color: #e94d4b;
+}
+#step02 .track-love .song-name span {
+    background-color: #bd3533;
+}
+#step02 .track-soulful .song-name {
+    background-color: #bab69d;
+}
+#step02 .track-soulful .song-name span {
+    background-color: #8c886d;
+}
+#step02 .track-heartbreak .song-name {
+    background-color: #02a2a4;
+}
+#step02 .track-heartbreak .song-name span {
+    background-color: #037e80;
+}
+#step02 .track-party .song-name {
+    background-color: #e2b947;
+}
+#step02 .track-party .song-name span {
+    background-color: #c0941c;
+}
+#step02 .track-surprise .song-name {
+    background-color: #8f0896;
+}
+#step02 .track-surprise .song-name span {
+    background-color: #700b75;
+}
+
+
+
+#step02 .song-iframe {
+    margin: 30px auto 0;
+    width: 95%;
+    background-color: #02a2a4;
+}
+#step02 .song-iframe img {
+    width: 100%;
+}
+
+#step02 .song-footer {
+    margin: 0 auto;
+    /*position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    padding-top: 10px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+#step02 .song-footer h2 {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#step02 .song-footer h2 span {
+    position: relative;
+}
+#step02 .song-footer h2 span::before,
+#step02 .song-footer h2 span::after {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    content: " ";
+}
+#step02 .song-footer h2 span::before {
+    left: -22px;
+    top: 2px;
+    background: url(../images/line-icon-left.svg) no-repeat left;
+}
+#step02 .song-footer h2 span::after {
+    right: -22px;
+    top: 2px;
+    background: url(../images/line-icon-right.svg) no-repeat left;
+}
+
+#step02 .song-footer .play-icon li {
+    margin: 18px 20px;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#step02 .song-footer .play-icon li img {
+    opacity: 0.4;
+}
+#step02 .song-footer .play-icon li:hover img {
+    opacity: 1;
+}
+#step02 .song-footer .play-icon li.hvr-ripple-out img {
+    opacity: 1;
+}
+
+/* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #fff solid 3px;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: hvr-ripple-out 1s infinite linear;
+}
+
+@media only screen and (max-width: 767px) {
+    .svg-wrap {
+        max-width: 580px;
+    }
+}
+@media only screen and (max-width: 639px) {
+    .main-wrap--headline {
+        display: none;
+    }
+    #step01 {
+        padding: 20px 0;
+    }
+    .pin-top {
+        width: 38px;
+        top: 15px;
+        right: 70px;
+    }
+    .pin-bottom {
+        width: 58px;
+        top: 63px;
+        right: 82px;
+    }
+    .pin-rotate {
+        transform: rotate(-41deg);
+    }
+}
+@media only screen and (max-width: 550px) {
+    .pin-top {
+        width: 31px;
+        top: 15px;
+        right: 70px;
+    }
+    .pin-bottom {
+        width: 45px;
+        top: 53px;
+        right: 81px;
+    }
+    #step02 .song-footer .play-icon li {
+        margin: 15px 15px;
+    }
+    #step02 .song-name {
+        width: 220px;
+        line-height: 34px;
+        height: 34px;
+    }
+    #step02 .song-name marquee {
+        width: 200px;
+    }
+    #step02 .song-name span {
+        display: none;
+    }
+    .pin-rotate {
+        transform: rotate(-47deg);
+    }
+}
+@media only screen and (max-width: 480px) {
+    .pin-top {
+        width: 30px;
+        top: 12px;
+        right: 55px;
+    }
+    .pin-bottom {
+        width: 45px;
+        top: 50px;
+        right: 65px;
+    }
+    .pin-rotate {
+        transform: rotate(-50deg);
+    }
+    #step02 .song-footer {
+        padding: 5px 0;
+    }
+    #step02 .song-footer h2 {
+        font-size: 16px;
+    }
+    #step02 .song-footer .play-icon li {
+        margin: 10px 8px;
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+@media only screen and (max-width: 375px) {
+    .pin-top {
+        right: 50px;
+    }
+    .pin-bottom {
+        right: 60px;
+    }
+    #step02 .song-footer .play-icon li {
+        margin: 10px 2px;
+    }
+    #step02 .song-name {
+        width: 170px;
+    }
+    #step02 .song-name marquee {
+        width: 150px;
+    }
+}
