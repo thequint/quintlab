@@ -509,7 +509,7 @@ width:100px;
   Flame Animation
 */
 @-webkit-keyframes flame {
- 0%,  6.24999% {
+ 0%,  6.24% {
  background-position: -0px -0px;
 }
  6.25%,  12.49% {

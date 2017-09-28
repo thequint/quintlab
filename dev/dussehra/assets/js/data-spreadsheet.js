@@ -117,7 +117,7 @@ function create_news() {
 		
 	}
 	console.log("left"+"|"+window.innerWidth+"|"+left);
-	$("#news-list").append("<li class='demo' data-news="+news_data[random_array[news_count]].data+" style='left:" + left + "px'><figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure><div class='demo_msg hvr-bob'>Evil news to be destroyed</div></li>");
+	$("#news-list").append("<li class='demo' data-news="+news_data[random_array[news_count]].data+" style='left:" + left + "px'><figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure><div class='demo_msg hvr-bob'>Evil to be destroyed</div></li>");
 	news_count++
 	
 }
