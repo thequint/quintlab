@@ -840,8 +840,16 @@ keyframes lose {
     letter-spacing: -1px;
     text-transform: uppercase;
     visibility: hidden;
+    transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
 }
-
+.landing_container .btn:hover {
+	background: #5f0a0a;
+    color: #eac803;
+}
 .landing_container .btn.visible, .landing_container .btn.restart_btn {
 	visibility: visible;
 }

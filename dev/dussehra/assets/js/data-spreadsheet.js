@@ -117,7 +117,7 @@ function create_news() {
 		
 	}
 	console.log("left"+"|"+window.innerWidth+"|"+left);
-	$("#news-list").append("<li class='demo' data-news="+news_data[random_array[news_count]].data+" style='left:" + left + "px'><figure><img src="+news_data[random_array[news_count]].Image +"><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure><div class='demo_msg hvr-bob'>Evil news to be destroyed</div></li>");
+	$("#news-list").append("<li class='demo' data-news="+news_data[random_array[news_count]].data+" style='left:" + left + "px'><figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure><div class='demo_msg hvr-bob'>Evil news to be destroyed</div></li>");
 	news_count++
 	
 }
@@ -205,7 +205,7 @@ function update_news(i) {
 		
 	}
 	console.log("news_count"+ "|"+news_count+"|"+ news_data[random_array[news_count]].Image );
-	$("#news-list li").eq(i).html("<figure><img src="+news_data[random_array[news_count]].Image +"><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure>");
+	$("#news-list li").eq(i).html("<figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure>");
 	$("#news-list li").eq(i).css("left", left)
 	$("#news-list li").eq(i).attr("data-news",  news_data[random_array[news_count]].data )
 	//button_click_handler();
