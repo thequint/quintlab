@@ -148,6 +148,11 @@
     .footer-wrapper ul li.demo_show::before {
         left: 66%;
     }
+    .flame
+    {
+        
+    transform: scale(0.7,0.7);
+    }
 }
 
 @media (max-width:480px) {

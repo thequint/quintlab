@@ -912,3 +912,9 @@ keyframes lose {
 	}
 }
 
+.youtube_iframe
+{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
