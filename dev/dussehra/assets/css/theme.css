@@ -39,11 +39,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-wrapper {
 	position: fixed;
-	bottom: 0;
+	bottom: 40px;
 	left: 0;
 	width: 100%;
 	text-align: center;
-	height: 38%;
+	/*height: 38%;*/
+	/*height: 355px;*/
 	z-index: 1;
 	transform: translateZ(0px);
 }
