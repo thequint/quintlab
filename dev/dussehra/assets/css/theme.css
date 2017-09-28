@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 10px 5px 10px;
 	width: 130px;
 	line-height: 110%;
-	font-size: 13px;
+	font-size: 14px;
 
 }
 .start_msg
@@ -239,15 +239,14 @@ opacity: 0;
 	
 	
 }
-.news-items li.demo::after
-{
-background: rgba(0, 0, 0, 0) url("../images/arrow.svg") no-repeat scroll 0 0 / 100% auto;
+.news-items li.demo::after {
+	background: rgba(0, 0, 0, 0) url("../images/arrow.svg") no-repeat scroll 0 0 / 100% auto;
 	content: "";
-	height: 60px;
+	height: 48px;
 	position: absolute;
-	width: 20px;
+	width: 16px;
 	z-index: 99;
-	bottom:-70px;
+	bottom:-53px;
 	left: 50%;
 	margin-left: -15px;
 	transform: scale(-1,-1)
@@ -256,16 +255,16 @@ background: rgba(0, 0, 0, 0) url("../images/arrow.svg") no-repeat scroll 0 0 / 1
 {
 	display: none;
 }
-.demo_msg
-{
+.demo_msg {
 	position: absolute;
-	bottom: -100px;
+	top: 217px;
 	width: 100%;
 	text-align: center;
 	font-weight: 700;
 	background: rgba(0,0,0,0.5);
-	padding: 5px;
-	
+	padding: 8px 10px 5px;
+	font-size: 14px;
+    line-height: 128%;
 }
 /*
 .news-items li::before {
@@ -291,21 +290,18 @@ background: rgba(0, 0, 0, 0) url("../images/arrow.svg") no-repeat scroll 0 0 / 1
 	background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
 	bottom: 0;
 	color: #fff;
-	font-size: 90%;
+	font-size: 14px;
 	left: 0;
-	padding: 5px 20px;
+	padding: 7px 10px 5px;
 	position: absolute;
 	text-align: left;
 	width: 100%;
-	
-	
 }
-figcaption h1
-{
+.news-items li figcaption h1 {
 	font-weight: 700!important;
+	font-size: 14px;
 }
-figcaption h2
-{
+figcaption h2 {
 	display: none;
 }
 .lives {
@@ -516,49 +512,49 @@ width:100px;
  0%,  6.24999% {
  background-position: -0px -0px;
 }
- 6.25%,  12.49999% {
+ 6.25%,  12.49% {
  background-position: -320px -0px;
 }
- 12.5%,  18.74999% {
+ 12.5%,  18.74% {
  background-position: -640px -0px;
 }
- 18.75%,  24.99999% {
+ 18.75%,  24.99% {
  background-position: -960px -0px;
 }
- 25%,  31.24999% {
+ 25%,  31.24% {
  background-position: -0px -320px;
 }
- 31.25%,  37.49999% {
+ 31.25%,  37.49% {
  background-position: -320px -320px;
 }
- 37.5%,  43.74999% {
+ 37.5%,  43.74% {
  background-position: -640px -320px;
 }
- 43.75%,  49.99999% {
+ 43.75%,  49.99% {
  background-position: -960px -320px;
 }
- 50%,  56.24999% {
+ 50%,  56.24% {
  background-position: -0px -640px;
 }
- 56.25%,  62.49999% {
+ 56.25%,  62.49% {
  background-position: -320px -640px;
 }
- 62.5%,  68.74999% {
+ 62.5%,  68.74% {
  background-position: -640px -640px;
 }
- 68.75%,  74.99999% {
+ 68.75%,  74.99% {
  background-position: -960px -640px;
 }
- 75%,  81.24999% {
+ 75%,  81.24% {
  background-position: -0px -960px;
 }
- 81.25%,  87.49999% {
+ 81.25%,  87.49% {
  background-position: -320px -960px;
 }
- 87.5%,  93.74999% {
+ 87.5%,  93.74% {
  background-position: -640px -960px;
 }
- 93.75%,  99.99999% {
+ 93.75%,  99.99% {
  background-position: -960px -960px;
 }
  100% {
@@ -566,52 +562,52 @@ width:100px;
 }
 }
 @keyframes flame {
- 0%,  6.24999% {
+ 0%,  6.24% {
  background-position: -0px -0px;
 }
- 6.25%,  12.49999% {
+ 6.25%,  12.49% {
  background-position: -320px -0px;
 }
- 12.5%,  18.74999% {
+ 12.5%,  18.74% {
  background-position: -640px -0px;
 }
- 18.75%,  24.99999% {
+ 18.75%,  24.99% {
  background-position: -960px -0px;
 }
- 25%,  31.24999% {
+ 25%,  31.24% {
  background-position: -0px -320px;
 }
- 31.25%,  37.49999% {
+ 31.25%,  37.49% {
  background-position: -320px -320px;
 }
- 37.5%,  43.74999% {
+ 37.5%,  43.74% {
  background-position: -640px -320px;
 }
- 43.75%,  49.99999% {
+ 43.75%,  49.99% {
  background-position: -960px -320px;
 }
- 50%,  56.24999% {
+ 50%,  56.24% {
  background-position: -0px -640px;
 }
- 56.25%,  62.49999% {
+ 56.25%,  62.49% {
  background-position: -320px -640px;
 }
- 62.5%,  68.74999% {
+ 62.5%,  68.74% {
  background-position: -640px -640px;
 }
- 68.75%,  74.99999% {
+ 68.75%,  74.99% {
  background-position: -960px -640px;
 }
- 75%,  81.24999% {
+ 75%,  81.24% {
  background-position: -0px -960px;
 }
- 81.25%,  87.49999% {
+ 81.25%,  87.49% {
  background-position: -320px -960px;
 }
- 87.5%,  93.74999% {
+ 87.5%,  93.74% {
  background-position: -640px -960px;
 }
- 93.75%,  99.99999% {
+ 93.75%,  99.99% {
  background-position: -960px -960px;
 }
  100% {

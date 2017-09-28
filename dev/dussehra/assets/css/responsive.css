@@ -154,4 +154,14 @@
     .news-items li {
         width: 160px;
     }
+    .news-items li figcaption {
+        padding: 5px 5px 3px;
+        position: relative;
+    }
+    .news-items li figcaption h1 {
+        font-size: 12px;
+    }
+    .demo_msg {
+        font-size: 12px;
+    }
 }

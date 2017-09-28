@@ -2,7 +2,7 @@ var public_spreadsheet_bol = 'https://docs.google.com/spreadsheets/d/1U0lzu5bm8Y
 
 
 
-var speed = 0.5;
+var speed = 0.05;
 var level = 1;
 var tile_number = 2;
 var count = 0;
