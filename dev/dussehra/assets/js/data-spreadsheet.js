@@ -239,6 +239,7 @@ if(left_switch==0)
 		}
 	else{
 var left = window.innerWidth/2;		
+left_switch=0;
 	}
 
 	}
