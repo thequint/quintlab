@@ -116,11 +116,12 @@
         margin: 0 0 0 0;
     }
     .footer-wrapper ul li span {
-        bottom: -32px;
-        font-size: 11px;
+        /*bottom: -32px;*/
+        font-size: 9px;
         margin-left: -34px;
         text-align: center;
         width: 100px;
+        font-weight: 400;
     }
     .footer-wrapper ul li:nth-child(5) span {
         margin: 0;
