@@ -869,6 +869,24 @@ keyframes lose {
 	width: 45%;
 }
 
+.social-share .share-on {
+	display: inline-block;
+	font-weight: 700;
+	line-height: 40px;
+}
+.social-share .facebook,
+.social-share .twitter {
+	display: inline-block;
+	font-weight: 700;
+	width: 35px;
+	height: 35px;
+	line-height: 35px
+}
+.social-share .facebook img,
+.social-share .twitter img {
+	width: 100%;
+}
+
 @media screen and (max-width:960px) {
 	.start_msg {
 		font-size: 120px;
