@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 	font-weight: 700;
 	background: rgba(0,0,0,0.5);
-	padding: 10px 10px 5px 10px;
+	padding: 7px 10px 6px 10px;
 	width: 140px;
 	line-height: 115%;
 	font-size: 14px;
@@ -337,6 +337,22 @@ figcaption h2 {
 }
 #lives {
 	top: 58px;
+}
+
+#sound-on-off {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 999;
+}
+#sound-on-off .on {
+	display: block;
+	width: 25px;
+}
+
+#sound-on-off .off {
+	display: none;
+	width: 25px;
 }
 
 .landing_screen {

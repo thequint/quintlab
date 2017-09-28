@@ -19,7 +19,7 @@ var fire_sound;
 var laugh_sound;
 var demo_count=2;
 var left_switch=0;
-
+window.my_mute = false;
 function create_smoke()
 {
 	var canvas = document.createElement('canvas');
@@ -106,6 +106,8 @@ function shuffle(array) {
 
 function create_news() {
 	
+	if(window.innerWidth>768)
+	{
 	if(left_switch==0)
 		{
 	var left = Math.floor((Math.random() * (window.innerWidth/2 - 300)) + 1);
@@ -115,6 +117,20 @@ function create_news() {
 	var left =Math.floor((Math.random() * (window.innerWidth/2-300)) + window.innerWidth/2);
 			left_switch=0;
 		
+	}
+	}
+	else
+	{
+
+if(left_switch==0)
+		{
+	var left = 10;
+			left_switch=1;
+		}
+	else{
+var left = window.innerWidth/2;		
+	}
+
 	}
 	console.log("left"+"|"+window.innerWidth+"|"+left);
 	$("#news-list").append("<li class='demo' data-news="+news_data[random_array[news_count]].data+" style='left:" + left + "px'><figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure><div class='demo_msg hvr-bob'>Evil to be destroyed</div></li>");
@@ -148,15 +164,21 @@ function destroy_heads(value)
 			var swipe_audioElement_click;
    swipe_audioElement_click = document.createElement('audio');
    swipe_audioElement_click.setAttribute('src', 'assets/sound/death.mp3');
+   if (!my_mute )
+   {
  	swipe_audioElement_click.play();
-	
+	}
 		}
 	else
 		{
 			var swipe_audioElement_click;
    swipe_audioElement_click = document.createElement('audio');
    swipe_audioElement_click.setAttribute('src', 'assets/sound/punch.mp3');
+    if (!my_mute )
+   {
+ 
    swipe_audioElement_click.play();
+}
 			console.log("value"+value);
 			$("#ravana-heads li").eq(value-1).find(".img-punch").addClass("visible");
 			setTimeout(function(){ $("#ravana-heads li").eq(value-1).find(".img-punch").removeClass("visible"); }, 3000);
@@ -194,6 +216,8 @@ function update_lives()
 function update_news(i) {
 	
 	
+	if(window.innerWidth>768)
+	{
 	if(left_switch==0)
 		{
 	var left = Math.floor((Math.random() * (window.innerWidth/2 - 300)) + 1);
@@ -204,6 +228,21 @@ function update_news(i) {
 			left_switch=0;
 		
 	}
+	}
+	else
+	{
+
+if(left_switch==0)
+		{
+	var left = 10;
+			left_switch=1;
+		}
+	else{
+var left = window.innerWidth/2;		
+	}
+
+	}
+
 	console.log("news_count"+ "|"+news_count+"|"+ news_data[random_array[news_count]].Image );
 	$("#news-list li").eq(i).html("<figure><img src='https://www.thequint.com/quintlab/aaj-ka-raavan/media/"+news_data[random_array[news_count]].Image +"'><figcaption><h1>" + news_data[random_array[news_count]].News + "</h1><h2>Data-" + news_data[random_array[news_count]].data + "</h2></figcaption></figure>");
 	$("#news-list li").eq(i).css("left", left)
@@ -223,7 +262,11 @@ $("#ravana-heads li").mouseover(function () {
 	
  fire_sound = document.createElement('audio');
    fire_sound.setAttribute('src', 'assets/sound/fire.mp3');
+    if (!my_mute )
+   {
+ 
    fire_sound.play();
+}
 });
 	
 	
@@ -325,11 +368,17 @@ function play_evil()
 {
    laugh_sound = document.createElement('audio');
    laugh_sound.setAttribute('src', 'assets/sound/evil.mp3');
+    if (!my_mute )
+   {
+ 
    laugh_sound.play();
+}
 	setInterval(function(){ 
-	 
+	 if (!my_mute )
+   {
+  
 	laugh_sound.play();
-	
+}	
 	}, 55000);
 	
 }
@@ -490,6 +539,30 @@ $("#start_btn").click(function(){
 })
 
 
+
+$('#sound-on-off').bind('click', function(){
+
+
+        if (!my_mute ) {
+
+$(".youtube_cont").html('');
+                $("#sound-on-off .on").hide();
+                $("#sound-on-off .off").show();
+            
+
+        } else {
+ $(".youtube_cont").html("<iframe class='youtube_iframe' width='560' height='315' src='https://www.youtube.com/embed/EPPcsdO0h_Q?autoplay=1&rel=0&amp;controls=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>");
+//alert("no");
+                $("#sound-on-off .on").show();
+                $("#sound-on-off .off").hide();
+            
+
+        }
+    
+
+    my_mute = !my_mute;
+
+});
 
 }
 

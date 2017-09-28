@@ -140,6 +140,7 @@
         left: -34px;
         top: -87px;
         z-index: 99;
+        background: rgba(0,0,0,1);
     }
     .footer-wrapper ul li.demo_show::before {
         left: 66%;
