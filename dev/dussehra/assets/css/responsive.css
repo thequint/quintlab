@@ -120,9 +120,9 @@
     .footer-wrapper ul li span {
         /*bottom: -32px;*/
         font-size: 9px;
-        margin-left: -34px;
+        margin-left: -22px;
         text-align: center;
-        width: 100px;
+        width: 80px;
         font-weight: 400;
     }
     .footer-wrapper ul li:nth-child(5) span {
@@ -147,6 +147,9 @@
     }
     .flame {
         transform: scale(0.7,0.7);
+    }
+    .footer-wrapper ul li:hover .flame {
+        display: none;
     }
 }
 

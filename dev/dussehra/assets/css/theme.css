@@ -900,6 +900,10 @@ keyframes lose {
 	height: 35px;
 	line-height: 35px
 }
+.social-share .twitter {
+	width: 37px;
+	height: 37px;
+}
 .social-share .facebook img,
 .social-share .twitter img {
 	width: 100%;
