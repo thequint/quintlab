@@ -842,7 +842,7 @@ keyframes lose {
     visibility: hidden;
 }
 
-.landing_container .btn.visible {
+.landing_container .btn.visible, .landing_container .btn.restart_btn {
 	visibility: visible;
 }
 #end_screen .landing_container .popup-headline {
