@@ -148,7 +148,7 @@ function destroy_heads(value)
 			var swipe_audioElement_click;
    swipe_audioElement_click = document.createElement('audio');
    swipe_audioElement_click.setAttribute('src', 'assets/sound/death.mp3');
- //  swipe_audioElement_click.play();
+ 	swipe_audioElement_click.play();
 	
 		}
 	else
@@ -156,7 +156,7 @@ function destroy_heads(value)
 			var swipe_audioElement_click;
    swipe_audioElement_click = document.createElement('audio');
    swipe_audioElement_click.setAttribute('src', 'assets/sound/punch.mp3');
-  // swipe_audioElement_click.play();
+   swipe_audioElement_click.play();
 			console.log("value"+value);
 			$("#ravana-heads li").eq(value-1).find(".img-punch").addClass("visible");
 			setTimeout(function(){ $("#ravana-heads li").eq(value-1).find(".img-punch").removeClass("visible"); }, 3000);
@@ -223,7 +223,7 @@ $("#ravana-heads li").mouseover(function () {
 	
  fire_sound = document.createElement('audio');
    fire_sound.setAttribute('src', 'assets/sound/fire.mp3');
-   //fire_sound.play();
+   fire_sound.play();
 });
 	
 	
@@ -325,10 +325,10 @@ function play_evil()
 {
    laugh_sound = document.createElement('audio');
    laugh_sound.setAttribute('src', 'assets/sound/evil.mp3');
-   // laugh_sound.play();
+   laugh_sound.play();
 	setInterval(function(){ 
 	 
-		//laugh_sound.play();
+	laugh_sound.play();
 	
 	}, 55000);
 	

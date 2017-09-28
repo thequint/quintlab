@@ -132,6 +132,13 @@
         transform: rotate(-180deg) scale(0.13) translate(-50%);
         -webkit-transform: rotate(-180deg) scale(0.13) translate(-50%);
     }
+    .demo_msg_head {
+        width: 105px;
+        font-size: 10px;
+        left: -38px;
+        top: -108px;
+        z-index: 99;
+    }
 }
 
 @media (max-width:480px) {
