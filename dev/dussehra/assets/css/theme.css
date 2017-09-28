@@ -788,7 +788,6 @@ keyframes lose {
 	width: 100%;
     max-width: 700px;
     position: absolute;
-    min-width: 320px;
     z-index: 100;
     left: 50%;
     top: 50%;
