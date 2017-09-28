@@ -496,6 +496,7 @@ width:100px;
 .footer-wrapper ul li .flame {
 	display: none;
 	transform: rotate(-180deg) scale(0.5) translate(-50%);
+	-webkit-transform: rotate(-180deg) scale(0.5) translate(-50%);
 	bottom: 50px;
 	left: 50%;
 }
@@ -816,7 +817,14 @@ keyframes lose {
 	width: 70%;
 }
 .landing_container .popup-content {
-	margin: 0 0 10px;
+	margin: 0 0 5px;
+}
+.landing_container .loading {
+	text-transform: uppercase;
+	color: #eac803;
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 10px;
 }
 .landing_container .btn {
     display: inline-block !important;
@@ -831,6 +839,11 @@ keyframes lose {
     padding: 7px 30px;
     letter-spacing: -1px;
     text-transform: uppercase;
+    visibility: hidden;
+}
+
+.landing_container .btn.visible {
+	visibility: visible;
 }
 #end_screen .landing_container .popup-headline {
 	width: 50%;
@@ -846,6 +859,9 @@ keyframes lose {
 }
 
 @media screen and (max-width:550px) {
+	.start_msg {
+		top: 20%;
+	}
 	.landing_container {
 		width: 80%;
 	}

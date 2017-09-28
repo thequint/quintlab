@@ -373,7 +373,7 @@ function showInfo(data) {
 	blink_random_ravana();
 	news_data = data;
 	$("#loading_text").hide();
-	$("#start_btn").show();
+	$("#start_btn").addClass("visible");
 	//console.log(data);
 	//push the element at 5 in the end
 	
