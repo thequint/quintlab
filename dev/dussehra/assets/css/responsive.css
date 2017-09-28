@@ -5,14 +5,9 @@
     position: relative;
     padding: 0px 15px;
 }
-
 .back-top.is-mobile {
     display: none;
 }
-
-@media screen and (min-width:1440px) {}
-
-@media (max-width:1024px) {}
 
 @media (max-width:990px) {
     .footer-wrapper {
@@ -148,10 +143,8 @@
     .footer-wrapper ul li.demo_show::before {
         left: 66%;
     }
-    .flame
-    {
-        
-    transform: scale(0.7,0.7);
+    .flame {
+        transform: scale(0.7,0.7);
     }
 }
 
@@ -160,6 +153,7 @@
         width: 160px;
     }
     .news-items li figcaption {
+        background: rgba(0,0,0,1.0);
         padding: 5px 5px 3px;
         position: relative;
     }

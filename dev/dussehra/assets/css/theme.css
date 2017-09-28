@@ -166,15 +166,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .demo_msg_head {
 	position: absolute;
-	left: -17px;
+	left: -23px;
     right: 0;
-	top: -94px;
+	top: -97px;
 	display: none;
 	font-weight: 700;
 	background: rgba(0,0,0,0.5);
 	padding: 10px 10px 5px 10px;
-	width: 130px;
-	line-height: 110%;
+	width: 140px;
+	line-height: 115%;
 	font-size: 14px;
 
 }
@@ -306,7 +306,7 @@ figcaption h2 {
 }
 .lives {
 	position: fixed;
-	top: 100px;
+	top: 90px;
 	right: 0px;
 	z-index: 99;
 }
@@ -314,18 +314,31 @@ figcaption h2 {
 	float: left;
 	width: 50px;
 	margin-right: 10px;
+	line-height: 110%;
 }
-#score, #lives {
+#score,
+#lives {
+	font-weight: 700;
 	position: absolute;
-	top: 0px;
 	right: 10px;
 	font-size: 20px;
+	width: 70px;
+	line-height: 110%;
+	text-align: right;
+}
+#score {
+	top: 10px;
+}
+#score span {
+	display: block;
+	color: #eac803;
+	font-size: 22px;
 }
 #lives {
-	top: 30px;
+	top: 58px;
 }
-.landing_screen
-{
+
+.landing_screen {
 	position: absolute;
 	width: 50%;
 	height: 50%;
@@ -759,9 +772,7 @@ keyframes lose {
  opacity: 0;
 }
 }
-.lives {
-	top: 50px;
-}
+
 	.img-blink,.img-punch,.img-dead,.img-mad
 	{
 		position: absolute;

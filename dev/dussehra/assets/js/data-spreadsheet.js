@@ -2,7 +2,7 @@ var public_spreadsheet_bol = 'https://docs.google.com/spreadsheets/d/1U0lzu5bm8Y
 
 
 
-var speed = 0.05;
+var speed = 0.3;
 var level = 1;
 var tile_number = 2;
 var count = 0;
@@ -164,14 +164,14 @@ function destroy_heads(value)
 }
 
 function update_score() {
-	$("#score").html("Score :"+ score);
+	$("#score").html("Score<span>"+ score+"</span>");
 }
 function update_lives()
 {
 	
 	
 	
-	$("#lives").html("Lives :"+ lives);
+	$("#lives").html("Lives "/*+ lives*/);
 	
 	if(lives==2)
 		{
