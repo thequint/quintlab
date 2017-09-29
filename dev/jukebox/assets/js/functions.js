@@ -124,7 +124,8 @@ $(document).ready(function() {
         $(".iframe-section").fadeOut();
         $(".song-footer").fadeOut();
         $(".play-icon li").removeClass("hvr-ripple-out");
-        $("#step02 .song-name marquee").removeClass("open")
+        $("#step02 .song-name marquee").removeClass("open");
+        $("#step02 .song-iframe").html("");
     });
 
 });
