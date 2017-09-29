@@ -1,13 +1,8 @@
 $(document).ready(function() {
-    
-
-
-    function reset_video(video_var)
-    {
-
+    function reset_video(video_var) {
         $("#step02 .song-iframe").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+video_var+"?autoplay=1' frameborder='0' allowfullscreen></iframe>");
-       /* <iframe width="560" height="315" src="https://www.youtube.com/embed/gWn4Csu3Kc8?autoplay=1" frameborder="0" allowfullscreen></iframe>
- */   }
+       /* <iframe width="560" height="315" src="https://www.youtube.com/embed/gWn4Csu3Kc8?autoplay=1" frameborder="0" allowfullscreen></iframe>*/
+    }
 
     $(".svg_hover").click(function(){
         reset_video($(this).attr("data-video"));
@@ -20,15 +15,6 @@ $(document).ready(function() {
     })
 
     var isPause = 0;
-    /*
-    function repeatOften() {
-    // Do whatever
-    console.log(isPause);
-
-    requestAnimationFrame(repeatOften);
-    }
-    requestAnimationFrame(repeatOften);
-*/
     //
     $("#IN_LOVE").mouseover(function(){
         $(".main-wrap").addClass("bg-love");
