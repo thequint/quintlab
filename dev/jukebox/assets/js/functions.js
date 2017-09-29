@@ -1,5 +1,34 @@
 $(document).ready(function() {
     
+
+
+    function reset_video(video_var)
+    {
+
+        $("#step02 .song-iframe").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+video_var+"?autoplay=1' frameborder='0' allowfullscreen></iframe>");
+       /* <iframe width="560" height="315" src="https://www.youtube.com/embed/gWn4Csu3Kc8?autoplay=1" frameborder="0" allowfullscreen></iframe>
+ */   }
+
+    $(".svg_hover").click(function(){
+        reset_video($(this).attr("data-video"));
+
+    })
+
+    $(".play-icon li").click(function(){
+        reset_video($(this).attr("data-video"));
+
+    })
+
+    var isPause = 0;
+    /*
+    function repeatOften() {
+    // Do whatever
+    console.log(isPause);
+
+    requestAnimationFrame(repeatOften);
+    }
+    requestAnimationFrame(repeatOften);
+*/
     //
     $("#IN_LOVE").mouseover(function(){
         $(".main-wrap").addClass("bg-love");
@@ -9,6 +38,7 @@ $(document).ready(function() {
     });
     $("#IN_LOVE").click(function() {
         $(".main-wrap--container").addClass("slide");
+        setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
         // $("#step01").animate({left: "-100%"},500);
         // $("#step02").animate({right: "0"},500);
         $(".track-love").fadeIn();
@@ -26,11 +56,21 @@ $(document).ready(function() {
     });
     $("#PARTY").click(function() {
         $(".main-wrap--container").addClass("slide");
+         setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
         $(".track-party").fadeIn();
         $(".song-footer").fadeIn();
         $(".play-icon li.party-icon").addClass("hvr-ripple-out");
     });
+    $(".svg_hover_parent").mouseover(function(){
 
+        isPause=1;
+        $(".rotating").addClass("paused");
+    })
+    $(".svg_hover_parent").mouseout(function(){
+
+        isPause=0;
+        $(".rotating").removeClass("paused");
+    })
     //
     $("#SOULFUL").mouseover(function(){
         $(".main-wrap").addClass("bg-soulful");
@@ -40,6 +80,7 @@ $(document).ready(function() {
     });
     $("#SOULFUL").click(function() {
         $(".main-wrap--container").addClass("slide");
+         setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
         $(".track-soulful").fadeIn();
         $(".song-footer").fadeIn();
         $(".play-icon li.soulful-icon").addClass("hvr-ripple-out");
@@ -54,6 +95,7 @@ $(document).ready(function() {
     });
     $("#HEARTBREAK").click(function() {
         $(".main-wrap--container").addClass("slide");
+         setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
         $(".track-heartbreak").fadeIn();
         $(".song-footer").fadeIn();
         $(".play-icon li.heartbreak-icon").addClass("hvr-ripple-out");
@@ -67,6 +109,7 @@ $(document).ready(function() {
     });
     $("#SURPRISE_ME").click(function() {
         $(".main-wrap--container").addClass("slide");
+         setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
         $(".track-surprise").fadeIn();
         $(".song-footer").fadeIn();
         $(".play-icon li.surprise-icon").addClass("hvr-ripple-out");
@@ -79,6 +122,8 @@ $(document).ready(function() {
 
         $(".play-icon li").removeClass("hvr-ripple-out");
         $(this).addClass("hvr-ripple-out");
+        $("#step02 .song-name marquee").removeClass("open");
+        setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2500);
     });
 
     $('#IN_LOVE, #PARTY, #SOULFUL, #HEARTBREAK, #SURPRISE_ME').mouseover(function () {
@@ -93,6 +138,7 @@ $(document).ready(function() {
         $(".iframe-section").fadeOut();
         $(".song-footer").fadeOut();
         $(".play-icon li").removeClass("hvr-ripple-out");
+        $("#step02 .song-name marquee").removeClass("open")
     });
 
 });
