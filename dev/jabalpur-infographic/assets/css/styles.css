@@ -848,6 +848,13 @@ li.active .list-box {
 	}
 
 	/* Tree */
+	.main-wrap--section .stone-first,
+	.main-wrap--section .stone-second,
+	.main-wrap--section .stone-third,
+	.main-wrap--section .stone-forth,
+	.main-wrap--section .stone-fifth,
+	.main-wrap--section .stone-sixth,
+	.main-wrap--section .stone-seventh,
 	.main-wrap--section .tree-first,
 	.main-wrap--section .tree-second,
 	.main-wrap--section .tree-third {
