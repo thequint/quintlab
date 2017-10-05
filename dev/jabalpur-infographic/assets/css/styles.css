@@ -909,6 +909,16 @@ li.active .list-box {
 	    width: 60px;
 	}
 
+	.footer--how-to-reach .icons.plane {
+		width: 70px;
+	}
+	.footer--how-to-reach .icons.train {
+		width: 65px;
+	}
+	.footer--how-to-reach .icons.cabs {
+		width: 70px;
+	}
+
 	/* pop */
 	.pop-box--left {
 		width: 100%;
@@ -944,6 +954,16 @@ li.active .list-box {
 		font-size: 20px;
 		line-height: 20px;
 		min-height: 120px;
+	}
+
+	.footer--how-to-reach .icons.plane {
+		width: 50px;
+	}
+	.footer--how-to-reach .icons.train {
+		width: 45px;
+	}
+	.footer--how-to-reach .icons.cabs {
+		width: 45px;
 	}
 
 	/* pop */
