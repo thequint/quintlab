@@ -613,12 +613,15 @@ li.active .list-box {
 	left: -200%;
 }
 .content-box ul li:nth-child(7) .pop-box {
+	top: -120px;
 	left: 0;
 }
 .content-box ul li:nth-child(8) .pop-box {
+	top: -120px;
 	left: -100%;
 }
 .content-box ul li:nth-child(9) .pop-box {
+	top: -120px;
 	left: -200%;
 }
 .pop-box .pop-box--content {
@@ -641,6 +644,9 @@ li.active .list-box {
     height: 100%;
     overflow: auto;
     line-height: 25px;
+}
+.pop-box--left .img-box img {
+    border-radius: 12px;
 }
 .pop-box--right {
     float: left;
