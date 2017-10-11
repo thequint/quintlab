@@ -20,6 +20,11 @@ body {
     -moz-border-radius: 60px;
     border-radius: 60px;
     overflow: hidden;
+	opacity: 0;
+}
+.main-wrap.show
+{
+	opacity: 1;
 }
 .main-wrap:after,
 .main-wrap--container:after {
