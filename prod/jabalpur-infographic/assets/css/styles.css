@@ -150,20 +150,20 @@ img {
 }
 .main-wrap--section .tree-first {
 	position: absolute;
-    top: 25%;
+    top: 27.5%;
     left: 23%;
     width: 170px;
     pointer-events: none;
 }
 .main-wrap--section .tree-second {
 	position: absolute;
-    top: 51%;
+    top: 54%;
     left: 51%;
     width: 170px
 }
 .main-wrap--section .tree-third {
 	position: absolute;
-    top: 78%;
+    top: 81%;
     left: 57%;
     width: 170px;
 }
@@ -195,8 +195,8 @@ img {
 	margin: 0 auto;
 	padding: 30px 0;
 	width: 94%;
-	position: relative;
-	z-index: 10;
+	/*position: relative;
+	z-index: 10;*/
 }
 .content-box ul li {
 	float: left;
@@ -776,17 +776,17 @@ li.active .list-box {
 
 	/* Tree */
 	.main-wrap--section .tree-first {
-	    top: 27%;
+	    top: 29%;
 	    left: 24%;
 	    width: 120px;
 	}
 	.main-wrap--section .tree-second {
-	    top: 53%;
+	    top: 54.5%;
 	    left: 51%;
 	    width: 120px;
 	}
 	.main-wrap--section .tree-third {
-	    top: 79%;
+	    top: 80%;
 	    left: 59%;
 	    width: 120px;
 	}
