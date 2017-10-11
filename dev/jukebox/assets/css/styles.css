@@ -3,8 +3,9 @@ body {
     font-weight: 400;
     text-rendering: auto;
     color: #3c3c3c;
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
     font-family: 'Quicksand', sans-serif;
+    background: url(../images/loading-body.gif) no-repeat center;
 }
 *, *::before, *::after {
     box-sizing: border-box;
