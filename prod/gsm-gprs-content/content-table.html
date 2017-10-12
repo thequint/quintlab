@@ -3,6 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Title of the document</title>
 <style type="text/css">
 body {
@@ -38,6 +39,11 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: #fff;
 }
+@media only screen and (max-width: 500px) {
+    th.col-half {
+        width: 50%;
+    }
+}
 </style>
 </head>
 
@@ -49,8 +55,8 @@ tr:nth-child(even) {
                 <th colspan="2">CEA Comparison Of GSM/GPRS And RF Mesh Technology For Single-Phase Meters</th>
             </tr>
             <tr>
-                <th>GSM/GPRS</th>
-                <th>RF Mesh</th>
+                <th class="col-half">GSM/GPRS</th>
+                <th class="col-half">RF Mesh</th>
             </tr>
             <tr>
                 <td>GSM/GPRS is essentially one-to-one communication. The maximum speed available is 9.6 kbps/256 kilobits per second (kbps)</td>
