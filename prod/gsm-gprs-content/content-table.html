@@ -5,6 +5,14 @@
 <meta charset="UTF-8">
 <title>Title of the document</title>
 <style type="text/css">
+#table-wrap {
+    margin: 0 auto;
+    max-width: 580px
+}
+table {
+    width: 100%;
+    color: #555;
+}
 table, th, td {
     font-size: 12px;
     font-family: arial;
@@ -30,7 +38,8 @@ tr:nth-child(even) {
 </head>
 
 <body>
-    <table style="margin-left:20px; margin-right:20px; width:580px;">
+    <div id="table-wrap">
+    <table style="margin-left:20px; margin-right:20px; align:center">
         <tbody>
             <tr>
                 <th colspan="2">CEA Comparison Of GSM/GPRS And RF Mesh Technology For Single-Phase Meters</th>
@@ -85,6 +94,7 @@ tr:nth-child(even) {
             </tr>
         </tbody>
     </table>
+    </div>
 </body>
 
 </html>
