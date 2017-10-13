@@ -548,6 +548,11 @@ visibility: visible;
     .step01--container {
         top: 50%;
     }
+    /*.main-wrap--headline {
+        display: none;
+    }*/
+}
+@media only screen and (max-width: 620px) {
     .main-wrap--headline {
         display: none;
     }
