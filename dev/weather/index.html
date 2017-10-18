@@ -58,34 +58,32 @@
 
 		<article class="article">
 			<div class="article--row">
-				<h2 class="article--row__location">Delhi Weather</h2>
+				<h2 class="article--row__location"><span id="currentLocation">Delhi</span> Weather</h2>
 				<h3 class="article--row__change">Change Location</h3>
 			</div>
 
 			<div class="article--row">
+			
+			
 				<div class="local-weather">
 					<div class="local-weather--content"> 
 						<h4 class="local-weather--headline">Loncal Weather Report</h4>
 						<div class="local-weather--left"><img src="assets/images/sunny-cloud.svg"></div>
 						<div class="local-weather--right">
-							<span class="days">Sunday</span>
-							<span class="weather">Sunny</span>
-							<span class="degrees">22°C</span>
+							<span id="toDay" class="days">Sunday</span>
+							<span id="currentCond">Sunny</span>
+							<span id="currentTemp" class="degrees">22°C</span>
 						</div>
 					</div>
 				</div>
+				
+				
 				<div class="state-weather">
 					<h4 class="state-weather--headline">Indian Weather Conditions</h4>
 					<div  class="state-weather--list">
 						<ul class="city_list">
 							<li><span class="city_name">Agra</span><span class="city_border"> </span><span class="city_temp">13</span></li>
-							<li><span class="city_name">Mumbai</span><span class="city_border"> </span><span class="city_temp">14</span></li>
-							<li><span class="city_name">Chennai</span><span class="city_border"> </span><span class="city_temp">SW</span></li>
-							<li><span class="city_name">Kolkata</span><span class="city_border"> </span><span class="city_temp">2.2</span></li>
-							<li><span class="city_name">Banglore</span><span class="city_border"> </span><span class="city_temp">12</span></li>
-							<li><span class="city_name">Lucknow</span><span class="city_border"> </span><span class="city_temp">SW</span></li>
-							<li><span class="city_name">Assam</span><span class="city_border"> </span><span class="city_temp">23</span></li>
-							<li><span class="city_name">Rajasthan</span><span class="city_border"> </span><span class="city_temp">24</span></li>
+							
 							
 						</ul>
 					</div>
@@ -244,85 +242,22 @@
 </div>
 
 <footer class="footer">
-	<div id="results"></div>
+	<div id="results">
+		<div id="wa"></div>
+		<div id="wb"></div>
+		<div id="wc"></div>
+		
+	</div>
 </footer>
-<p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">Try It</button>
 
-<p id="demo"></p>
+
+
+
 <!-- Scripts -->
 <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="assets/js/slick.min.js"></script>
 <script type="text/javascript" src="assets/js/functions.js"></script>
-
-
-<script type="text/javascript">
-    
-    var city_id;
-
-    function get_weather(id) {
-	    $.ajax({
-            type: "GET",
-            dataType: "jsonp",
-            jsonp: "callback",
-            jsonpCallback: "callback",
-            url: "http://apidev.accuweather.com/currentconditions/v1/"+id+".json?language=en&apikey=hoArfRosT1215",
-            cache: false,
-
-            success: function (data) {
-           		console.log(data[0].Temperature.Metric.Value);
-           		$("#results").html(data[0].Temperature.Metric.Value+ "°C");
-            }
-      	});	
-    }
-
-    function getIdByCityName (){
-	    $.ajax({
-	        type: "GET",
-	        dataType: "jsonp",
-	        jsonp: "callback",
-	        jsonpCallback: "callback",
-	        url: "http://apidev.accuweather.com/locations/v1/search?q=delhi,%20india&apikey=hoArfRosT1215",
-	        cache: false,
-
-	        success: function (data) {
-	       		city_id = data[0].Key
-	       		get_weather(city_id)
-	       		console.log(data[0].Key)
-	        }
-	  	});
-	}
-
-
-    function getIdByLatLong (){
-    	$.ajax({
-	        type: "GET",
-	        dataType: "jsonp",
-	        jsonp: "callback",
-	        jsonpCallback: "callback",
-	        url: "http://api.accuweather.com/locations/v1/cities/geoposition/search.json?q=40.78, -77.89&apikey=hoArfRosT1215",
-	        cache: false,
-
-	        success: function (data) {
-	        }
-	  	});
-    }
-
-
-
-	function success(pos) {
-		var crd = pos.coords;
-
-		console.log('Your current position is:');
-		console.log(`Latitude : ${crd.latitude}`);
-		console.log(`Longitude: ${crd.longitude}`);
-	};
-
-	navigator.geolocation.getCurrentPosition(success);
-	
- 	
-</script>
-
+<script type="text/javascript" src="assets/js/accuweather.js"></script>
 </body>
 </html>
