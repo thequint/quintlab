@@ -36,16 +36,16 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-body.blue {
-	/*background-color: #5485bd;*/
-	/*background: url(../images/bg-blue.svg)  no-repeat top left;*/
-	background-image: url(../images/bg-blue.svg);
-	background-position: top;
-	/*background-size: 100%;*/
+body{
 	background-size: cover;
 	background-attachment: fixed;
-
+	background-position: top;
+	background-image: url(../images/bg-blue.svg);
 }
+
+
+
+
 
 .nav {
 	position: fixed;
@@ -374,14 +374,19 @@ body.blue {
 	float: left;
 	width: 33.33%;
 	min-height: 56px;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 17px;
 	font-weight: 700;
 	margin-bottom: 30px;
 	padding: 20px 30px 0 50px;
 	position: relative;
 	outline: none;
+	text-transform: initial;
 }
+
+.list-stories--story li a{
+		color: #fff;
+	}
 .list-stories--story ul {
 	counter-reset: section;
 	list-style-type: none;
@@ -487,9 +492,14 @@ body.blue {
 	padding: 15px;
 	float: left;
 	width: 33.33%;
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: 700;
 	position: relative;
+	text-transform: initial;
+}
+.section-box li a{
+	color: #fff;
+	display: block;
 }
 
 .section-box li figure {
@@ -503,13 +513,17 @@ body.blue {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 10px;
+	padding: 30px 10px 10px 10px;
 	z-index: 1;
+	background: -webkit-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
+    background: -o-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
+    background: -moz-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
+    background: linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
 }
 
 
 
-.section-box li figure::before {
+/*.section-box li figure::before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -521,7 +535,7 @@ body.blue {
     background: -o-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
     background: -moz-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
     background: linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
-}
+}*/
 
 
 @media only screen and (max-width: 1023px) {
@@ -536,6 +550,8 @@ body.blue {
 	    margin-bottom: 20px;
 	    padding: 5px 20px 0 45px;
 	}
+	
+	
 	.list-stories--story li::before {
 		font-size: 70px;
 		top: 10px;
@@ -681,3 +697,42 @@ body.blue {
 		font-size: 15px;
 	}
 }
+
+
+/*Dynamic bg as per cond*/
+
+/*
+Sunny
+Clear
+Mostly Sunny
+*/
+
+
+.accuweather-logo{
+	background: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+
+
+
+body.bg-white{
+	background-image: url(../images/bg-white.svg);
+}
+
+body.bg-black{
+	background-image: url(../images/bg-black.svg);
+}
+
+body.bg-blue{
+	background-image: url(../images/bg-blue.svg);
+}
+
+body.bg-yellow{
+	background-image: url(../images/bg-yellow.svg);
+}
+
+
+

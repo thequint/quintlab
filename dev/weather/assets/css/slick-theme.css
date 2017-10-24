@@ -196,20 +196,18 @@
 }
 /*Scale*/
 
-.slider-img, .story-image, .gallery-img {
+
+
+.section-box--story a{
 	overflow: hidden;
-	position: relative;
 }
-.slider-img img, .story-image img, .gallery-img img {
+
+.section-box--story a img{
 	transition: all 0.3s ease;
 }
-.slider-img:hover img {
+
+.section-box--story a:hover img{
 	-webkit-transform: scale(1.5);
 	-ms-transform: scale(1.5);
 	transform: scale(1.5);
-}
-.story-image:hover img, .gallery-img:hover img {
-	-webkit-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	transform: scale(1.2);
 }
