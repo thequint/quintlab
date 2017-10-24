@@ -20,7 +20,7 @@ var city_id,city_name,city_temp,city_cond, forecasts_data;
            		console.log(city_temp,city_cond);
 				append_data();
 				getForecastsInfo(city_id);
-				
+				$('.local-weather--left').html("<img src='assets/images/icons/"+data[0].WeatherIcon+".png'>");
 				//white
            		
 				if(city_cond=="Snow"||city_cond=="Mostly Cloudy w/ Snow")
@@ -95,7 +95,7 @@ Date.prototype.addDays = function(days) {
 	        success: function (forecast_data) {
 				//console.log(forecast_data);
 				//console.log(forecast_data.DailyForecasts[0].Temperature.Maximum.Value);
-				$('.local-weather--left').html("<img src='assets/images/icons/"+forecast_data.DailyForecasts[0].Day.Icon+".png'>");
+				
 				for (var i=0; i<5; i++)
 							{
 								//console.log(d);
