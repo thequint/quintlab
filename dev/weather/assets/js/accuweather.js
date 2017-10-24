@@ -20,7 +20,32 @@ var city_id,city_name,city_temp,city_cond, forecasts_data;
            		console.log(city_temp,city_cond);
 				append_data();
 				getForecastsInfo(city_id);
+				
+				//white
            		
+				if(city_cond=="Snow"||city_cond=="Mostly Cloudy w/ Snow")
+					{
+						$("body").addClass("bg-white");
+					}
+				
+				//black
+				else if(city_cond=="Mostly Cloudy"||city_cond=="Cloudy")
+					{
+							$("body").addClass("bg-black");	
+					}
+				
+				//blue
+				
+				else if(city_cond=="Clear"||city_cond=="Mostly Clear")
+					{
+							$("body").addClass("bg-blue");	
+					}
+				
+				//yellow
+				else if(city_cond=="Sunny"||city_cond=="Mostly Sunny")
+					{
+							$("body").addClass("bg-yellow");	
+					}
 				
             }
       	});	
@@ -119,7 +144,7 @@ Date.prototype.addDays = function(days) {
 		$("#currentLocation").html(city_name);
 		$("#currentTemp").html(city_temp);
 		$("#currentCond").html(city_cond);
-		$('body').addClass(city_cond);
+		//$('body').addClass(city_cond);
 		//$('.local-weather--left').html("<img src='assets/images/icons/"+forecast_data.DailyForecasts[0].Day.Icon+".png'>");
 		
 		
