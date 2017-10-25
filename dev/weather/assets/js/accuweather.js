@@ -85,11 +85,19 @@ function getForecastsInfo(city_id) {
         .done(function(forecast_data) {
             for (var i = 0; i < 5; i++) {
                 //console.log(d);
+				
+				
+				 //toCelsius(f);
+				//console.log(toCelsius(forecast_data.DailyForecasts[i].Temperature.Maximum.Value).toFixed(2));
+				
+				
 
-                var cur_date = new Date();
+               var cur_date = new Date();
                 //console.log(cur_date.addDays(i))
+				
+				//forecast_data.DailyForecasts[i].Temperature.Maximum.Value
 
-                $(".daily-weather--slider").append("<li><h4 class='daily-weather--headline'>" + weekday[cur_date.addDays(i).getDay()] + "</h4><span class='daily-weather--icon'><img src='assets/images/icons/" + forecast_data.DailyForecasts[i].Day.Icon + ".png'></span><div class='daily-weather--temp'><span class='small-temp'>" + forecast_data.DailyForecasts[i].Temperature.Maximum.Value + '°F' + "</span><span class='large-temp'>" + forecast_data.DailyForecasts[i].Temperature.Minimum.Value + '°F' + "</span></div></li>");
+                $(".daily-weather--slider").append("<li><h4 class='daily-weather--headline'>" + weekday[cur_date.addDays(i).getDay()] + "</h4><span class='daily-weather--icon'><img src='assets/images/icons/" + forecast_data.DailyForecasts[i].Day.Icon + ".png'></span><div class='daily-weather--temp'><span class='small-temp'>" + toCelsius(forecast_data.DailyForecasts[i].Temperature.Maximum.Value).toFixed(2) + '°C' + "</span><span class='large-temp'>" +toCelsius(forecast_data.DailyForecasts[i].Temperature.Minimum.Value).toFixed(2) + '°C' + "</span></div></li>");
 
             }
 
@@ -206,3 +214,11 @@ var weekday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", 
 document.getElementById("toDay").innerHTML = weekday[d.getDay()];
 
 var current_day_index = weekday.indexOf(weekday[d.getDay()]);
+
+
+function toCelsius(f) {
+	var celsius = (5/9) * (f-32);
+   return celsius
+	
+	
+}
