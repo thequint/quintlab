@@ -5,7 +5,7 @@ var city_id, city_name, city_temp, city_cond, forecasts_data;
 function get_weather(id) { // for current location
 
 
-    var url = "http://apidev.accuweather.com/currentconditions/v1/" + id + ".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8";
+    var url = "https://apidev.accuweather.com/currentconditions/v1/" + id + ".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
@@ -45,7 +45,7 @@ function get_weather(id) { // for current location
 function getCityInfoByLatLong(x, y) { //for current location
 
 
-    var url = "http://apidev.accuweather.com/locations/v1/cities/geoposition/search.json?q=" + x + "," + y + "&apikey=1bbb649ae0174399b320067bbc1c3aa8";
+    var url = "https://apidev.accuweather.com/locations/v1/cities/geoposition/search.json?q=" + x + "," + y + "&apikey=1bbb649ae0174399b320067bbc1c3aa8";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
@@ -69,7 +69,7 @@ function getForecastsInfo(city_id) {
 
 
 
-    var url = "http://apidev.accuweather.com/forecasts/v1/daily/5day/" + city_id + "?apikey=1bbb649ae0174399b320067bbc1c3aa8&details=true";
+    var url = "https://apidev.accuweather.com/forecasts/v1/daily/5day/" + city_id + "?apikey=1bbb649ae0174399b320067bbc1c3aa8&details=true";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
@@ -124,7 +124,7 @@ var id_list_array_count = 0;
 
 function get_weather_list(id) { // for current location
 	
-    var url = "http://apidev.accuweather.com/currentconditions/v1/" + id + ".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8";
+    var url = "https://apidev.accuweather.com/currentconditions/v1/" + id + ".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
@@ -156,7 +156,7 @@ function get_weather_list(id) { // for current location
 
 function getIdByCityName(city_name) { // For the city listing
 	
-    var url = "http://apidev.accuweather.com/locations/v1/search?q=" + city_name + ",%20india&apikey=1bbb649ae0174399b320067bbc1c3aa8";
+    var url = "https://apidev.accuweather.com/locations/v1/search?q=" + city_name + ",%20india&apikey=1bbb649ae0174399b320067bbc1c3aa8";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
