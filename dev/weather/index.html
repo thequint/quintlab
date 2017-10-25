@@ -11,15 +11,11 @@
 
 <!-- Fav icon -->
 <link rel="icon" href="assets/images/favicon/favicon.ico">
-
 <link rel="stylesheet" href="assets/css/base.css" media="all">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
 <link rel="stylesheet" href="assets/css/slick.css" media="all">
 <link rel="stylesheet" href="assets/css/slick-theme.css" media="all">
-
 <link rel="stylesheet" href="assets/css/themes.css" media="all">
-
-
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -33,151 +29,99 @@
 </head>
 
 <body>
-
 <nav class="nav">
-	<div class="nav--wrap">
-		<div class="nav--wrap__logo"><h1><a href=""><img src="assets/images/logo.svg"></a></h1></div>
-		<div class="nav--wrap__social">
-			<ul>
-				<li class="fa fa-whatsapp"></li>
-				<li class="fa fa-facebook"></li>
-				<li class="fa fa-google-plus"></li>
-			</ul>
-		</div>
-	</div>
+  <div class="nav--wrap">
+    <div class="nav--wrap__logo">
+      <h1><a href=""><img src="assets/images/logo.svg"></a></h1>
+    </div>
+    <div class="nav--wrap__social">
+      <ul>
+        <li class="fa fa-whatsapp"></li>
+        <li class="fa fa-facebook"></li>
+        <li class="fa fa-google-plus"></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-
-
 <div class="section-wrap">
-	<section class="section">
-		<aside class="aside">
-			
-			<div class="aside--top-icon"><img src="assets/images/sunny-cloud.svg"></div>
-			<div class="accuweather-logo">
-				
-			</div>
-			<div class="aside--ver-ads"><img src="assets/images/300x600.jpg" height="600" width="300"></div>
-			<div class="aside--squ-ads"><img src="assets/images/300x250.jpg" height="250" width="300"></div>
-		</aside>
-
-		<article class="article">
-			<div class="article--row">
-				<h2 class="article--row__location"><span id="currentLocation">Delhi</span> Weather</h2>
-				<h3 class="article--row__change">Change Location</h3>
-			</div>
-
-			<div class="article--row">
-			
-			
-				<div class="local-weather">
-					<div class="local-weather--content"> 
-						<h4 class="local-weather--headline">Local Weather Report</h4>
-						<div class="local-weather--left"></div>
-						<div class="local-weather--right">
-							<span id="toDay" class="days">Sunday</span>
-							<span id="currentCond">Sunny</span>
-							<span id="currentTemp" class="degrees">22°C</span>
-						</div>
-					</div>
-				</div>
-				
-				
-				<div class="state-weather">
-					<h4 class="state-weather--headline">Indian Weather Conditions</h4>
-					<div  class="state-weather--list">
-						<ul class="city_list">
-							<!--<li><span class="city_name">Agra</span><span class="city_border"> </span><span class="city_temp">13</span></li>-->
-							
-							
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<!-- <div class="daily-weather--slider">
-				<div>your content</div>
-				<div>your content</div>
-				<div>your content</div>
-				<div>your content</div>
-				<div>your content</div>
-				<div>your content</div>
-			</div> -->
-
-			<div class="article--row">
-				<div class="col-fluid">
-					<div class="daily-weather">
-						<ul class="daily-weather--slider">
-							
-						</ul>
-					</div>
-				</div>
-				<div class="col-fluid">
-					<div class="list-stories">
-						<h4 class="list-stories--headline">Top Stories</h4>
-						<div class="list-stories--story">
-							<ul class="list-stories--slider" id="SlugType_1">
-								
-
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-fluid">
-					<div class="list-stories">
-						<h4 class="list-stories--headline">Most Read</h4>
-						<div class="list-stories--story">
-							<ul class="list-stories--slider" id="SlugType_2">
-								
-
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-	</section>
-
-	<section class="section">
-		<div class="horizontal-ads"><img src="assets/images/728x90.jpg"></div>
-	</section>
-
-
-	<section class="section">
-
-		<div class="section-box">
-			<h4 class="section-box--headline">Watch</h4>
-			<div class="section-box--story">
-				<ul id="SlugType_3">
-				</ul>
-			</div>
-		</div>
-	</section>
-
-	<section class="section">
-		<div class="horizontal-ads"><img src="assets/images/728x90.jpg"></div>
-	</section>
-
+  <section class="section">
+    <aside class="aside">
+      <div class="aside--top-icon"></div>
+      <div class="accuweather-logo"> </div>
+      <div class="aside--ver-ads"><img src="assets/images/300x600.jpg" height="600" width="300"></div>
+      <div class="aside--squ-ads"><img src="assets/images/300x250.jpg" height="250" width="300"></div>
+    </aside>
+    <article class="article">
+      <div class="article--row">
+        <h2 class="article--row__location"><span id="currentLocation"></span> Weather</h2>
+        <h3 class="article--row__change">Change Location</h3>
+      </div>
+      <div class="article--row">
+        <div class="local-weather">
+          <div class="local-weather--content">
+            <h4 class="local-weather--headline">Local Weather Report</h4>
+            <div class="local-weather--left"></div>
+            <div class="local-weather--right"> <span id="toDay" class="days"></span> <span id="currentCond"></span> <span id="currentTemp" class="degrees"></span> </div>
+          </div>
+        </div>
+        <div class="state-weather">
+          <h4 class="state-weather--headline">Indian Weather Conditions</h4>
+          <div  class="state-weather--list">
+            <ul class="city_list">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="article--row">
+        <div class="col-fluid">
+          <div class="daily-weather">
+            <ul class="daily-weather--slider">
+            </ul>
+          </div>
+        </div>
+        <div class="col-fluid">
+          <div class="list-stories">
+            <h4 class="list-stories--headline">Top Stories</h4>
+            <div class="list-stories--story">
+              <ul class="list-stories--slider" id="SlugType_1">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-fluid">
+          <div class="list-stories">
+            <h4 class="list-stories--headline">Most Read</h4>
+            <div class="list-stories--story">
+              <ul class="list-stories--slider" id="SlugType_2">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="section">
+    <div class="horizontal-ads"><img src="assets/images/728x90.jpg"></div>
+  </section>
+  <section class="section">
+    <div class="section-box">
+      <h4 class="section-box--headline">Watch</h4>
+      <div class="section-box--story">
+        <ul id="SlugType_3">
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="horizontal-ads"><img src="assets/images/728x90.jpg"></div>
+  </section>
 </div>
 
-<footer class="footer">
-	<div id="results">
-		<div id="wa"></div>
-		<div id="wb"></div>
-		<div id="wc"></div>
-		
-	</div>
-</footer>
-
-
-
-
-
-<!-- Scripts -->
-<script src="https://metype.com/quintype/metype/assets/application.js"></script>
-<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script type="text/javascript" src="assets/js/functions.js"></script>
+<!-- Scripts --> 
+<script src="https://metype.com/quintype/metype/assets/application.js"></script> 
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script> 
+<script type="text/javascript" src="assets/js/slick.min.js"></script> 
+<script type="text/javascript" src="assets/js/functions.js"></script> 
 <script type="text/javascript" src="assets/js/accuweather.js"></script>
 </body>
 </html>

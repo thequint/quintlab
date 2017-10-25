@@ -17,6 +17,7 @@ function get_weather(id) { // for current location
             append_data();
             getForecastsInfo(city_id);
             $('.local-weather--left').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
+            $('.aside--top-icon').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
             //white
 
             if (city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow") {
