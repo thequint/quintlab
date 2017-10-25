@@ -97,7 +97,7 @@ function getForecastsInfo(city_id) {
 				
 				//forecast_data.DailyForecasts[i].Temperature.Maximum.Value
 
-                $(".daily-weather--slider").append("<li><h4 class='daily-weather--headline'>" + weekday[cur_date.addDays(i).getDay()] + "</h4><span class='daily-weather--icon'><img src='assets/images/icons/" + forecast_data.DailyForecasts[i].Day.Icon + ".png'></span><div class='daily-weather--temp'><span class='small-temp'>" + toCelsius(forecast_data.DailyForecasts[i].Temperature.Maximum.Value).toFixed(2) + '°C' + "</span><span class='large-temp'>" +toCelsius(forecast_data.DailyForecasts[i].Temperature.Minimum.Value).toFixed(2) + '°C' + "</span></div></li>");
+                $(".daily-weather--slider").append("<li><h4 class='daily-weather--headline'>" + weekday[cur_date.addDays(i).getDay()] + "</h4><span class='daily-weather--icon'><img src='assets/images/icons/" + forecast_data.DailyForecasts[i].Day.Icon + ".png'></span><div class='daily-weather--temp'><span class='small-temp'>" + toCelsius(forecast_data.DailyForecasts[i].Temperature.Maximum.Value).toFixed(1) + '°C' + "</span><span class='large-temp'>" +toCelsius(forecast_data.DailyForecasts[i].Temperature.Minimum.Value).toFixed(1) + '°C' + "</span></div></li>");
 
             }
 
