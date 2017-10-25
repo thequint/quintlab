@@ -11,7 +11,7 @@ var city_id,city_name,city_temp,city_cond, forecasts_data;
             dataType: "jsonp",
             jsonp: "callback",
             jsonpCallback: "callback",
-            url: "http://apidev.accuweather.com/currentconditions/v1/"+id+".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8",
+            url: "https://apidev.accuweather.com/currentconditions/v1/"+id+".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8",
             cache: false,
 
             success: function (data) {
@@ -59,7 +59,7 @@ var city_id,city_name,city_temp,city_cond, forecasts_data;
 	        dataType: "jsonp",
 	        jsonp: "callback",
 	        jsonpCallback: "callback",
-	        url: "http://apidev.accuweather.com/locations/v1/cities/geoposition/search.json?q="+x+","+y+"&apikey=1bbb649ae0174399b320067bbc1c3aa8",
+	        url: "https://apidev.accuweather.com/locations/v1/cities/geoposition/search.json?q="+x+","+y+"&apikey=1bbb649ae0174399b320067bbc1c3aa8",
 	        cache: false,
 
 	        success: function (data) {
@@ -89,7 +89,7 @@ Date.prototype.addDays = function(days) {
 	        dataType: "jsonp",
 	        jsonp: "callback",
 	        jsonpCallback: "callback",
-	        url: "http://apidev.accuweather.com/forecasts/v1/daily/5day/"+city_id+"?apikey=1bbb649ae0174399b320067bbc1c3aa8&details=true",
+	        url: "https://apidev.accuweather.com/forecasts/v1/daily/5day/"+city_id+"?apikey=1bbb649ae0174399b320067bbc1c3aa8&details=true",
 	        cache: false,
 
 	        success: function (forecast_data) {
@@ -172,7 +172,7 @@ Date.prototype.addDays = function(days) {
             dataType: "jsonp",
             jsonp: "callback",
             jsonpCallback: "callback",
-            url: "http://apidev.accuweather.com/currentconditions/v1/"+id+".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8",
+            url: "https://apidev.accuweather.com/currentconditions/v1/"+id+".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8",
             cache: false,
 
             success: function (data) {
@@ -212,7 +212,7 @@ Date.prototype.addDays = function(days) {
 	        dataType: "jsonp",
 	        jsonp: "callback",
 	        jsonpCallback: "callback",
-	        url: "http://apidev.accuweather.com/locations/v1/search?q="+city_name+",%20india&apikey=1bbb649ae0174399b320067bbc1c3aa8",
+	        url: "https://apidev.accuweather.com/locations/v1/search?q="+city_name+",%20india&apikey=1bbb649ae0174399b320067bbc1c3aa8",
 	        cache: false,
 
 	        success: function (data) {
