@@ -27,7 +27,7 @@ function get_weather(id) { // for current location
             }
 
             //black
-            else if (city_cond == "Dreary (Overcast)" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny w/ T-Storms" || city_cond == "Rain" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Partly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy w/ Snow") {
+            else if (city_cond == "Overcast" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny w/ T-Storms" || city_cond == "Rain" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Partly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy w/ Snow") {
                 $("body").addClass("bg-black");
             }
 

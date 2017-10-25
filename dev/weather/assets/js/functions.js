@@ -9,6 +9,7 @@ function reset_dash() {
 }
 
 $(document).ready(function() {
+	
     $('.daily-weather--slider').slick({
         infinite: true,
         autoplay: true,

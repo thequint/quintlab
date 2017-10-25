@@ -84,7 +84,7 @@ body{
 }
 
 .nav--wrap__social li {
-	color: #5198ae;
+	color: #65B3C2;
 	width: 40px;
 	height: 40px;
 	font-size: 18px;
@@ -96,6 +96,10 @@ body{
 	background-color: #fff;
 	transition: all 0.2s ease-in-out;
 }
+
+
+
+
 .nav--wrap__social li.fa-whatsapp:hover {
 	color: #fff;
 	background-color: #25d366;
@@ -731,6 +735,25 @@ Mostly Sunny
 }
 
 
+body.bg-white .nav--wrap__social li{
+	color: #B1B1B1;
+}
+
+body.bg-black .nav--wrap__social li{
+	color: #2C302F;
+}
+
+body.bg-blue .nav--wrap__social li{
+	color: #65B3C2;
+}
+
+body.bg-yellow .nav--wrap__social li{
+	color: #FAC552;
+}
+
+body.bg-purple .nav--wrap__social li{
+	color: #573481;
+}
 
 
 body.bg-white{
