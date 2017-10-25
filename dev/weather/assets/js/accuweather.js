@@ -13,30 +13,37 @@ function get_weather(id) { // for current location
         .done(function(data) {
             city_temp = data[0].Temperature.Metric.Value + "°C";
             city_cond = data[0].WeatherText;
-            console.log(city_temp, city_cond);
+            //console.log(city_temp, city_cond);
             append_data();
             getForecastsInfo(city_id);
             $('.local-weather--left').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
             $('.aside--top-icon').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
+		
+		
             //white
 
-            if (city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow") {
+            if (city_cond == "Flurries" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Partly Sunny w/ Flurries" || city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow" || city_cond == "Ice" || city_cond == "Sleet" || city_cond == "Freezing Rain" || city_cond == "Rain and Snow") {
                 $("body").addClass("bg-white");
             }
 
             //black
-            else if (city_cond == "Mostly Cloudy" || city_cond == "Cloudy") {
+            else if (city_cond == "Dreary (Overcast)" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny w/ T-Storms" || city_cond == "Rain" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Partly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy w/ Snow") {
                 $("body").addClass("bg-black");
             }
 
             //blue
-            else if (city_cond == "Sunny" || city_cond == "Mostly Clear") {
+            else if (city_cond == "Sunny" || city_cond == "Mostly Sunny" || city_cond == "Partly Sunny" || city_cond == "Intermittent Clouds" || city_cond == "Mostly Cloudy" || city_cond == "Cloudy" || city_cond == "Fog" || city_cond == "Showers" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Cold" || city_cond == "Windy") {
                 $("body").addClass("bg-blue");
             }
 
             //yellow
-            else if (city_cond == "Clear" || city_cond == "Mostly Sunny") {
+            else if (city_cond == "Hazy Sunshine" || city_cond == "Partly Sunny w/ Showers" || city_cond == "Hot") {
                 $("body").addClass("bg-yellow");
+            }
+		
+		//purple
+            else if (city_cond == "Clear" || city_cond == "Mostly Clear" || city_cond == "Partly Cloudy" || city_cond == "Intermittent Clouds" || city_cond == "Hazy Moonlight" || city_cond == "Mostly Cloudy") {
+                $("body").addClass("bg-purple");
             }
         });
 }
@@ -66,7 +73,7 @@ Date.prototype.addDays = function(days) {
 };
 
 function getForecastsInfo(city_id) {
-    console.log(city_id);
+    //console.log(city_id);
 
 
 
@@ -140,7 +147,7 @@ function get_weather_list(id) { // for current location
             if (id_list_array_count < city_array.length) {
                 append_city_weather_array(id_list_array_count)
             } else {
-                console.log(city_weather_array);
+                //console.log(city_weather_array);
                 // append list
                 for (var i = 0; i < city_array.length; i++) {
                     $(".city_list").append("<li><span class='city_name'>" + city_array[i] + "</span><span class='city_border'></span><span class='city_temp'>" + city_weather_array[i] + "</span></li>");

@@ -133,9 +133,8 @@ body{
 	float: left;
 	width: 300px;
 }
-.aside--top-icon {
-	/* */
-}
+
+
 .aside--ver-ads {
 	margin-bottom: 20px;
 }
@@ -208,13 +207,13 @@ body{
 	min-height: 270px;
 	padding: 0 20px;
 	border-radius: 10px;
-	background-color: rgba(255,255,255, 0.1);
+	background-color: rgba(0,0,0, 0.1);
 }
 .article--row .local-weather--content {
 	border-radius: 10px;
 	min-height: 270px;
 	padding: 0 20px;
-	background-color: rgba(255,255,255, 0.1);
+	background-color: rgba(0,0,0, 0.1);
 }
 .article--row .local-weather {
 	padding-right: 20px;
@@ -299,7 +298,7 @@ body{
 	/*min-height: 220px;*/
 	margin-bottom: 20px;
 	border-radius: 10px;
-	background-color: rgba(255,255,255, 0.1);
+	background-color: rgba(0,0,0, 0.1);
 }
 .article--row .col-fluid:last-child {
 	margin-bottom: 0;
@@ -473,7 +472,7 @@ body{
 	padding: 15px 15px;
 	margin-bottom: 20px;
 	border-radius: 10px;
-	background-color: rgba(255,255,255, 0.1);
+	background-color: rgba(0,0,0, 0.1);
 }
 .section-box:after {
     content: " ";
@@ -709,10 +708,26 @@ Mostly Sunny
 
 
 .accuweather-logo{
+	position: relative;
+	text-align: center;
+	color: #F05514;
 	background: #fff;
-	padding: 10px;
+	padding: 30px 10% 10px 10%;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	display: block;
+}
+
+.accuweather-logo img {
+	
+	display: inline-block;
+}
+.accuweather-logo span{
+	position: absolute;
+	font-weight: 600;
+	top: 10px;
+	left: 11%;
+	font-size: 12px;
 }
 
 
@@ -732,6 +747,10 @@ body.bg-blue{
 
 body.bg-yellow{
 	background-image: url(../images/bg-yellow.svg);
+}
+
+body.bg-purple{
+	background-image: url(../images/bg-purple.svg);
 }
 
 
