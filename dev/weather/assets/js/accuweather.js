@@ -1,16 +1,17 @@
-var city_id, city_name, city_temp, city_cond, forecasts_data;
+var city_id, cur_city_name, city_temp, city_cond, forecasts_data;
 
 
 
 function get_weather(id) { // for current location
 
-
+	
     var url = "https://apidev.accuweather.com/currentconditions/v1/" + id + ".json?language=en&apikey=1bbb649ae0174399b320067bbc1c3aa8";
     $.getJSON(url, {
             tagmode: "any",
             format: "json"
         })
         .done(function(data) {
+			
             city_temp = data[0].Temperature.Metric.Value + "°C";
             city_cond = data[0].WeatherText;
             //console.log(city_temp, city_cond);
@@ -59,7 +60,8 @@ function getCityInfoByLatLong(x, y) { //for current location
             format: "json"
         })
         .done(function(data) {
-            city_name = data.LocalizedName;
+		
+            cur_city_name = data.LocalizedName;
             city_id = data.Key;
             get_weather(city_id);
 
@@ -96,7 +98,9 @@ function getForecastsInfo(city_id) {
                 //console.log(cur_date.addDays(i))
 				
 				//forecast_data.DailyForecasts[i].Temperature.Maximum.Value
-
+				if(i==0){
+					$(".daily-weather--slider").html('');
+				}
                 $(".daily-weather--slider").append("<li><h4 class='daily-weather--headline'>" + weekday[cur_date.addDays(i).getDay()] + "</h4><span class='daily-weather--icon'><img src='assets/images/icons/" + forecast_data.DailyForecasts[i].Day.Icon + ".png'></span><div class='daily-weather--temp'><span class='small-temp'>" + toCelsius(forecast_data.DailyForecasts[i].Temperature.Maximum.Value).toFixed(1) + '°C' + "</span><span class='large-temp'>" +toCelsius(forecast_data.DailyForecasts[i].Temperature.Minimum.Value).toFixed(1) + '°C' + "</span></div></li>");
 
             }
@@ -118,8 +122,9 @@ function getLatLong(){ // for current location
 }
 
 function append_data(){ // for current location
-
-    $("#currentLocation").html(city_name);
+	
+	//alert(cur_city_name)
+    $("#currentLocation").html(cur_city_name);
     $("#currentTemp").html(city_temp);
     $("#currentCond").html(city_cond);
 }
@@ -181,6 +186,7 @@ function getIdByCityName(city_name) { // For the city listing
             //get_weather_array(data[0].Key)
             //console.log(data[0].Key)
             //console.log(data[0].Key);
+		
             city_id_array.push(data[0].Key);
             //console.log(city_id_array);
             city_list_array_count = city_list_array_count + 1;
@@ -189,6 +195,29 @@ function getIdByCityName(city_name) { // For the city listing
             } else {
                 append_city_weather_array(id_list_array_count);
             }
+
+        });
+
+}
+
+
+
+function getIdByChangeCityName(city_name) { // For the city listing
+	
+    var url = "https://apidev.accuweather.com/locations/v1/search?q=" + city_name + ",%20india&apikey=1bbb649ae0174399b320067bbc1c3aa8";
+    $.getJSON(url, {
+            tagmode: "any",
+            format: "json"
+        })
+        .done(function(data) {
+            //get_weather_array(data[0].Key)
+            //console.log(data[0].Key)
+            console.log(data);
+			
+			cur_city_name = data[0].LocalizedName;
+			city_id = data[0].Key;
+            get_weather(city_id);
+ //console.log(city_id_array);
 
         });
 

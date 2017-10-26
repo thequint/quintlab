@@ -168,3 +168,26 @@ $(document).ready(function() {
 
 
 
+
+
+// Location
+
+$(document).ready(function(){
+	
+	
+	$('#btnChangeLoc').click(function(){
+		$(this).addClass('invisible');
+		$('#LocSearch').show();
+		$('#currentLoc').hide();
+		$('.input-loc').val('').focus();
+		
+	})
+	$('#locClose').click(function(){
+		$('#LocSearch').hide();
+		$('#btnChangeLoc').removeClass('invisible');
+		$('#currentLoc').show();
+	})
+	
+});
+
+

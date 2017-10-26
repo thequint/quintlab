@@ -156,6 +156,7 @@ body{
 }
 .article--row {
 	padding-left: 20px;
+	position: relative;
 }
 .article--row:after {
     content: " ";
@@ -526,19 +527,129 @@ body{
 
 
 
-/*.section-box li figure::before {
+/*Achintya's CSS*/
+
+
+.accuweather-logo{
+	position: relative;
+	text-align: center;
+	color: #F05514;
+	background: #fff;
+	padding: 30px 10% 10px 10%;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.accuweather-logo img {
+	
+	display: inline-block;
+}
+.accuweather-logo span{
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	font-weight: 600;
+	top: 10px;
+	left: 11%;
+	font-size: 12px;
+}
+
+/*Location Search*/
+.loc-search{
+	position: absolute; 
+	width: 98%;
+	bottom: 15px;
 	right: 0;
-	content: " ";
-	height: 100px;
-    background: red;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
-    background: -o-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
-    background: -moz-linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
-    background: linear-gradient(rgba(255,255,255,0.0), rgba(0,0,0,0.6), rgba(0,0,0,1.0));
-}*/
+}
+.input-loc{
+	width: 100%;
+	height: 40px;
+	background-color: rgba(0,0,0, 0.1);
+	border: 0;
+	border-radius: 10px;
+	text-align: left;
+font-size: 16px;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0px 20px;
+	
+}
+.input-loc:focus{
+	border: 0;
+	outline: 0;
+}
+
+.invisible{
+	visibility: hidden !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.close-loc{
+	cursor: pointer;
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+}
+
+
+body.bg-white .nav--wrap__social li{
+	color: #B1B1B1;
+}
+
+body.bg-black .nav--wrap__social li{
+	color: #2C302F;
+}
+
+body.bg-blue .nav--wrap__social li{
+	color: #65B3C2;
+}
+
+body.bg-yellow .nav--wrap__social li{
+	color: #FAC552;
+}
+
+body.bg-purple .nav--wrap__social li{
+	color: #573481;
+}
+
+
+body.bg-white{
+	background-image: url(../images/bg-white.svg);
+}
+
+body.bg-black{
+	background-image: url(../images/bg-black.svg);
+}
+
+body.bg-blue{
+	background-image: url(../images/bg-blue.svg);
+}
+
+body.bg-yellow{
+	background-image: url(../images/bg-yellow.svg);
+}
+
+body.bg-purple{
+	background-image: url(../images/bg-purple.svg);
+}
+
+
+/*Achintya's CSS*/
 
 
 @media only screen and (max-width: 1023px) {
@@ -700,81 +811,4 @@ body{
 		font-size: 15px;
 	}
 }
-
-
-/*Dynamic bg as per cond*/
-
-/*
-Sunny
-Clear
-Mostly Sunny
-*/
-
-
-.accuweather-logo{
-	position: relative;
-	text-align: center;
-	color: #F05514;
-	background: #fff;
-	padding: 30px 10% 10px 10%;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	display: block;
-}
-
-.accuweather-logo img {
-	
-	display: inline-block;
-}
-.accuweather-logo span{
-	position: absolute;
-	font-weight: 600;
-	top: 10px;
-	left: 11%;
-	font-size: 12px;
-}
-
-
-body.bg-white .nav--wrap__social li{
-	color: #B1B1B1;
-}
-
-body.bg-black .nav--wrap__social li{
-	color: #2C302F;
-}
-
-body.bg-blue .nav--wrap__social li{
-	color: #65B3C2;
-}
-
-body.bg-yellow .nav--wrap__social li{
-	color: #FAC552;
-}
-
-body.bg-purple .nav--wrap__social li{
-	color: #573481;
-}
-
-
-body.bg-white{
-	background-image: url(../images/bg-white.svg);
-}
-
-body.bg-black{
-	background-image: url(../images/bg-black.svg);
-}
-
-body.bg-blue{
-	background-image: url(../images/bg-blue.svg);
-}
-
-body.bg-yellow{
-	background-image: url(../images/bg-yellow.svg);
-}
-
-body.bg-purple{
-	background-image: url(../images/bg-purple.svg);
-}
-
-
 
