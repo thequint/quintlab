@@ -1,4 +1,4 @@
-var city_id, cur_city_name, city_temp, city_cond, forecasts_data;
+var city_id, cur_city_name, city_temp, city_cond, forecasts_data, cond_icon;
 
 
 
@@ -15,35 +15,38 @@ function get_weather(id) { // for current location
             city_temp = data[0].Temperature.Metric.Value + "°C";
             city_cond = data[0].WeatherText;
             //console.log(city_temp, city_cond);
+			cond_icon = (data[0].WeatherIcon);
             append_data();
             getForecastsInfo(city_id);
             $('.local-weather--left').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
             $('.aside--top-icon').html("<img src='assets/images/icons/" + data[0].WeatherIcon + ".png'>");
+			
 		
+			console.log(cond_icon);
 		
             //white
 
-            if (city_cond == "Flurries" || city_cond == "Mostly Cloudy" || city_cond == "Partly Sunny w/ Flurries" || city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow" || city_cond == "Ice" || city_cond == "Sleet" || city_cond == "Freezing Rain" || city_cond == "Rain and Snow") {
+            if (cond_icon == "19" || cond_icon == "20" || cond_icon == "21" || cond_icon == "22" || cond_icon == "23" || cond_icon == "24" || cond_icon == "25" || cond_icon == "26" || cond_icon == "29") {
                 $("body").addClass("bg-white");
             }
 
             //black
-            else if (city_cond == "Overcast" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny" || city_cond == "Rain" || city_cond == "Mostly Cloudy" || city_cond == "Partly Cloudy" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy") {
+            else if (cond_icon == "8" || cond_icon == "15" || cond_icon == "16" || cond_icon == "17" || cond_icon == "18" || cond_icon == "39" || cond_icon == "40" || cond_icon == "41" || cond_icon == "42" || cond_icon == "43" || cond_icon == "44") {
                 $("body").addClass("bg-black");
             }
 
             //blue
-            else if (city_cond == "Sunny" || city_cond == "Mostly Sunny" || city_cond == "Partly Sunny" || city_cond == "Intermittent Clouds" || city_cond == "Mostly Cloudy" || city_cond == "Cloudy" || city_cond == "Fog" || city_cond == "Showers" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Cold" || city_cond == "Windy") {
+            else if (cond_icon == "1" || cond_icon == "2" || cond_icon == "3" || cond_icon == "4" || cond_icon == "6" || cond_icon == "7" || cond_icon == "11" || cond_icon == "12" || cond_icon == "13" || cond_icon == "31" || cond_icon == "32" || cond_icon == "aaa") {
                 $("body").addClass("bg-blue");
             }
 
             //yellow
-            else if (city_cond == "Hazy Sunshine" || city_cond == "Partly Sunny" || city_cond == "Hot") {
+            else if (cond_icon == "5" || cond_icon == "14" || cond_icon == "30") {
                 $("body").addClass("bg-yellow");
             }
 		
 		//purple
-            else if (city_cond == "Clear" || city_cond == "Mostly Clear" || city_cond == "Partly Cloudy" || city_cond == "Intermittent Clouds" || city_cond == "Hazy Moonlight" || city_cond == "Mostly Cloudy") {
+            else if (cond_icon == "33" || cond_icon == "34" || cond_icon == "35" || cond_icon == "36" || cond_icon == "37" || cond_icon == "38") {
                 $("body").addClass("bg-purple");
             }
         });
