@@ -23,12 +23,12 @@ function get_weather(id) { // for current location
 		
             //white
 
-            if (city_cond == "Flurries" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Partly Sunny w/ Flurries" || city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow" || city_cond == "Ice" || city_cond == "Sleet" || city_cond == "Freezing Rain" || city_cond == "Rain and Snow") {
+            if (city_cond == "Flurries" || city_cond == "Mostly Cloudy" || city_cond == "Partly Sunny w/ Flurries" || city_cond == "Snow" || city_cond == "Mostly Cloudy w/ Snow" || city_cond == "Ice" || city_cond == "Sleet" || city_cond == "Freezing Rain" || city_cond == "Rain and Snow") {
                 $("body").addClass("bg-white");
             }
 
             //black
-            else if (city_cond == "Overcast" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny w/ T-Storms" || city_cond == "Rain" || city_cond == "Mostly Cloudy w/ Showers" || city_cond == "Partly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy w/ Snow") {
+            else if (city_cond == "Overcast" || city_cond == "T-Storms" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Partly Sunny" || city_cond == "Rain" || city_cond == "Mostly Cloudy" || city_cond == "Partly Cloudy" || city_cond == "Mostly Cloudy w/ T-Storms" || city_cond == "Mostly Cloudy w/ Flurries" || city_cond == "Mostly Cloudy") {
                 $("body").addClass("bg-black");
             }
 
@@ -38,7 +38,7 @@ function get_weather(id) { // for current location
             }
 
             //yellow
-            else if (city_cond == "Hazy Sunshine" || city_cond == "Partly Sunny w/ Showers" || city_cond == "Hot") {
+            else if (city_cond == "Hazy Sunshine" || city_cond == "Partly Sunny" || city_cond == "Hot") {
                 $("body").addClass("bg-yellow");
             }
 		
