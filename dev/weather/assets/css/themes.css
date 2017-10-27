@@ -43,6 +43,7 @@ body {
 	background-position: top;
 	background-image: url(../images/bg-blue.svg);
 	background-repeat: no-repeat;
+	transform: translateZ(0px);
 }
 .nav {
 	position: fixed;
