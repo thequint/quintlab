@@ -108,7 +108,7 @@
     </aside>
     <article class="article">
       <div class="article--row">
-        <h2 class="article--row__location" id="currentLoc" ><span id="currentLocation"></span> Weather</h2>
+        <h2 class="article--row__location" id="currentLoc" ><span id="currentLocation">New Delhi</span> Weather</h2>
         <h3 class="article--row__change"><span id="btnChangeLoc">Change Location</span></h3>
         <div class="loc-search" id="LocSearch" style="display: none;">
 			<div id="locationField">
@@ -266,6 +266,9 @@
 		  
 		  //console.log(autocomplete.getPlace().name);
 		  getIdByChangeCityName(autocomplete.getPlace().name);
+		  
+		 // init_weather_slider();
+		  
 		  $('#LocSearch').hide();
 		  $('#btnChangeLoc').removeClass('invisible');
 		  $('#currentLoc').show();

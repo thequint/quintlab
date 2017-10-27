@@ -10,10 +10,10 @@ function reset_dash() {
 
 function init_weather_slider() // to be called on forecast success
 {
-
+console.log($('.daily-weather--slider').html())
     $('.daily-weather--slider').slick({
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         arrows: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -27,7 +27,7 @@ function init_weather_slider() // to be called on forecast success
             }, {
                 breakpoint: 639,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             }
@@ -199,13 +199,6 @@ $(document).ready(function() {
 	
 	
 });
-
-
-
-
-
-
-
 
 
 
