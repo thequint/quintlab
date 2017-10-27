@@ -8,8 +8,9 @@ function reset_dash() {
     }); 
 }
 
-$(document).ready(function() {
-	
+function init_weather_slider() // to be called on forecast success
+{
+
     $('.daily-weather--slider').slick({
         infinite: true,
         autoplay: true,
@@ -31,10 +32,13 @@ $(document).ready(function() {
                 }
             }
         ]
-    });
+    });	
+}
 
-    // 
-    $('.list-stories--slider').slick({
+function init_top_story_slider() //  call when top story success
+{
+ // 
+    $('#SlugType_1').slick({
         infinite: true,
         autoplay: true,
         arrows: true,
@@ -65,7 +69,16 @@ $(document).ready(function() {
     });
 
     // 
-    $('.list-stories-most--slider').slick({
+   
+	
+}
+
+
+function init_most_story_slider() //  call when most read success
+{
+	if ($(window).width() < 960) {
+   
+	 $('#SlugType_2').slick({
         infinite: true,
         autoplay: true,
         arrows: true,
@@ -94,23 +107,20 @@ $(document).ready(function() {
 
         ]
     });
-
-    // 
-    reset_dash();
-});
-
-$(window).resize(function(){
-    reset_dash();
-});
-
-
-
-
-// Story collections
-
-//Slug 1 
+		
+		}
+}
 
 $(document).ready(function() {
+	
+
+   
+    // 
+    reset_dash();
+	
+		
+	//Slug 1 
+	
   var collectionSlug = 'bol-ugc'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
@@ -124,12 +134,17 @@ $(document).ready(function() {
     elements.forEach(function(element) {
       $('#SlugType_1').append(element);
     });
+	  
+	init_top_story_slider();  
+	  
+	  
   });
-});
+
 
 //Slug 2 
 
-$(document).ready(function() {
+	
+	
   var collectionSlug = 'bol-feature'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
@@ -143,12 +158,13 @@ $(document).ready(function() {
     elements.forEach(function(element) {
       $('#SlugType_2').append(element);
     });
+	  
+	init_most_story_slider();
   });
-});
+
 
 // Slug 3
 
-$(document).ready(function() {
   var collectionSlug = 'bol-video'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
@@ -163,18 +179,10 @@ $(document).ready(function() {
       $('#SlugType_3').append(element);
     });
   });
-});
-
-
-
-
-
-
-// Location
-
-$(document).ready(function(){
 	
+	// Location
 	
+		
 	$('#btnChangeLoc').click(function(){
 		$(this).addClass('invisible');
 		$('#LocSearch').show();
@@ -188,6 +196,26 @@ $(document).ready(function(){
 		$('#currentLoc').show();
 	})
 	
+	
+	
 });
+
+
+
+
+
+
+
+
+
+
+$(window).resize(function(){
+    reset_dash();
+});
+
+
+
+
+
 
 
