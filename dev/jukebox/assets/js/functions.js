@@ -1,26 +1,21 @@
 
 var public_spreadsheet_bol = 'https://docs.google.com/spreadsheets/d/123K1UBXTDboRF2w1PaxcXejIp8pFe0X6ywaZf2SfRaQ/pubhtml';
 
-
-
-
 var juke_data;
 
+//var track_data=1;
 
-
-    function reset_video(video_var,video_name) {
-		$(".iframe-section").show();
-		$(".main-wrap--container").addClass("slide");
-        //setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
-        $(".track-party").fadeIn();
-        $(".song-footer").fadeIn();
-    	$("#step02 .song-name marquee").html(video_name)
-		
-        //$("#step02 .song-iframe").html("");
-        $("#step02 .song-iframe").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+video_var+"?autoplay=1' frameborder='0' allowfullscreen></iframe>");
-       /* <iframe width="560" height="315" src="https://www.youtube.com/embed/gWn4Csu3Kc8?autoplay=1" frameborder="0" allowfullscreen></iframe>*/
-    }
-
+function reset_video(video_var,video_name) {
+	$(".iframe-section").show();
+	$(".main-wrap--container").addClass("slide");
+    //setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2000);
+    $(".track-party").fadeIn();
+    $(".song-footer").fadeIn();
+	$("#step02 .song-name marquee").html(video_name);
+	
+    $("#step02 .song-iframe").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+video_var+"?autoplay=1' frameborder='0' allowfullscreen></iframe>");
+   /* <iframe width="560" height="315" src="https://www.youtube.com/embed/gWn4Csu3Kc8?autoplay=1" frameborder="0" allowfullscreen></iframe>*/
+}
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -38,7 +33,7 @@ function showInfo(data) {
 	
 	$(".main-wrap").addClass("show");
 	juke_data = data[getParameterByName('id')];
-console.log(juke_data);	
+    console.log(juke_data);	
 	
 	$(".heart-icon").attr("data-video",juke_data.love_url);
 	$(".heart-icon").attr("data-videoname",juke_data.love_name);
@@ -54,7 +49,6 @@ console.log(juke_data);
 	
 	$(".surprise-icon").attr("data-video",juke_data.surprise_url);
 	$(".surprise-icon").attr("data-videoname",juke_data.surprise_name);
-	
 	
 	$("#IN_LOVE").attr("data-video",juke_data.love_url);
 	$("#IN_LOVE").attr("data-videoname",juke_data.love_name);
@@ -74,28 +68,111 @@ console.log(juke_data);
 	
 }
 $(document).ready(function() {
-	
-	
-	
 	Tabletop.init({
 		key: public_spreadsheet_bol,
 		callback: showInfo,
 		simpleSheet: true
 	});
 	
-
     $(".svg_hover").click(function(){
-		
-        reset_video($(this).attr("data-video"),$(this).attr("data-videoname") );
+        $(".btn-track01").addClass("active");
+        $(".btn-track02").removeClass("active");
+        reset_video($(this).attr("data-video"),$(this).attr("data-videoname"));
+    });
 
-    })
+    $(".track-btn").click(function(){
+        if( $(this).hasClass("active")){
+            //
+        }else {  
+            $(".track-btn").removeClass("active");
+            $(this).addClass("active");
+            reset_video($(this).attr("data-video"),$(this).attr("data-videoname"));
+        }
+    });
 
     $(".play-icon li").click(function(){
-       reset_video($(this).attr("data-video"),$(this).attr("data-videoname"));
+        $(".btn-track01").addClass("active");
+        $(".btn-track02").removeClass("active");
+        reset_video($(this).attr("data-video"),$(this).attr("data-videoname"));
 
-    })
+        console.log($(this).attr("class"));
+
+        //console.log(juke_data.love_name_2);
+
+        switch($(this).attr("class")){
+            case "heart-icon":
+                if(juke_data.love_url_2 == "" || juke_data.love_name_2 == "") {
+                    $(".track-btn").hide();
+                }else {
+                    $(".track-btn").show();
+                    $(".btn-track01").attr("data-video",juke_data.love_url);
+                    $(".btn-track01").attr("data-videoname",juke_data.love_name);
+                    $(".btn-track02").attr("data-video",juke_data.love_url_2);
+                    $(".btn-track02").attr("data-videoname",juke_data.love_name_2);
+                }
+                break;
+            case "soulful-icon":
+                if(juke_data.soul_url_2 == "" || juke_data.soul_name_2 == "") {
+                    $(".track-btn").hide();
+                }else {
+                    $(".track-btn").show();
+                    $(".btn-track01").attr("data-video",juke_data.soul_url);
+                    $(".btn-track01").attr("data-videoname",juke_data.soul_name);
+                    $(".btn-track02").attr("data-video",juke_data.soul_url_2);
+                    $(".btn-track02").attr("data-videoname",juke_data.soul_name_2);
+                }
+                break;
+            case "heartbreak-icon":
+                if(juke_data.heartbreak_url_2 == "" || juke_data.heartbreak_name_2 == "") {
+                    $(".track-btn").hide();
+                }else {
+                    $(".track-btn").show();
+                    $(".btn-track01").attr("data-video",juke_data.heartbreak_url);
+                    $(".btn-track01").attr("data-videoname",juke_data.heartbreak_name);
+                    $(".btn-track02").attr("data-video",juke_data.heartbreak_url_2);
+                    $(".btn-track02").attr("data-videoname",juke_data.heartbreak_name_2);
+                }
+                break;
+            case "party-icon":
+                if(juke_data.party_url_2 == "" || juke_data.party_name_2 == "") {
+                    $(".track-btn").hide();
+                }else {
+                    $(".track-btn").show();
+                    $(".btn-track01").attr("data-video",juke_data.party_url);
+                    $(".btn-track01").attr("data-videoname",juke_data.party_name);
+                    $(".btn-track02").attr("data-video",juke_data.party_url_2);
+                    $(".btn-track02").attr("data-videoname",juke_data.party_name_2);
+                }
+                break;
+           case "surprise-icon":
+                 if(juke_data.surprise_url_2 == "" || juke_data.surprise_name_2 == "") {
+                    $(".track-btn").hide();
+                }else {
+                    $(".track-btn").show();
+                    $(".btn-track01").attr("data-video",juke_data.surprise_url);
+                    $(".btn-track01").attr("data-videoname",juke_data.surprise_name);
+                    $(".btn-track02").attr("data-video",juke_data.surprise_url_2);
+                    $(".btn-track02").attr("data-videoname",juke_data.surprise_name_2);
+                }
+                break;    
+
+            default:
+                break;
+        }
+
+    });
 
     var isPause = 0;
+    //
+    $(".svg_hover_parent").mouseover(function(){
+        isPause=1;
+        $(".rotating").addClass("paused");
+    })
+    $(".svg_hover_parent").mouseout(function(){
+        isPause=0;
+        $(".rotating").removeClass("paused");
+    });
+
     //
     $("#IN_LOVE").mouseover(function(){
         $(".main-wrap").addClass("bg-love");
@@ -105,6 +182,19 @@ $(document).ready(function() {
     });
     $("#IN_LOVE").click(function() {
         $(".play-icon li.heart-icon").addClass("hvr-ripple-out");
+
+        console.log(juke_data.love_url_2);
+        console.log(juke_data.love_name_2);
+
+        if(juke_data.love_url_2 == "" || juke_data.love_name_2 == "") {
+            $(".track-btn").hide();
+        }else {
+            $(".track-btn").show();
+            $(".btn-track01").attr("data-video",juke_data.love_url);
+            $(".btn-track01").attr("data-videoname",juke_data.love_name);
+            $(".btn-track02").attr("data-video",juke_data.love_url_2);
+            $(".btn-track02").attr("data-videoname",juke_data.love_name_2);
+        }
     });
 
     //
@@ -116,17 +206,18 @@ $(document).ready(function() {
     });
     $("#PARTY").click(function() {
         $(".play-icon li.party-icon").addClass("hvr-ripple-out");
+
+        if(juke_data.party_url_2 == "" || juke_data.party_name_2 == "") {
+            $(".track-btn").hide();
+        }else {
+            $(".track-btn").show();
+            $(".btn-track01").attr("data-video",juke_data.party_url);
+            $(".btn-track01").attr("data-videoname",juke_data.party_name);
+            $(".btn-track02").attr("data-video",juke_data.party_url_2);
+            $(".btn-track02").attr("data-videoname",juke_data.party_name_2);
+        }
     });
-    $(".svg_hover_parent").mouseover(function(){
 
-        isPause=1;
-        $(".rotating").addClass("paused");
-    })
-    $(".svg_hover_parent").mouseout(function(){
-
-        isPause=0;
-        $(".rotating").removeClass("paused");
-    })
     //
     $("#SOULFUL").mouseover(function(){
         $(".main-wrap").addClass("bg-soulful");
@@ -136,6 +227,16 @@ $(document).ready(function() {
     });
     $("#SOULFUL").click(function() {
         $(".play-icon li.soulful-icon").addClass("hvr-ripple-out");
+
+        if(juke_data.soul_url_2 == "" || juke_data.soul_name_2 == "") {
+            $(".track-btn").hide();
+        }else {
+            $(".track-btn").show();
+            $(".btn-track01").attr("data-video",juke_data.soul_url);
+            $(".btn-track01").attr("data-videoname",juke_data.soul_name);
+            $(".btn-track02").attr("data-video",juke_data.soul_url_2);
+            $(".btn-track02").attr("data-videoname",juke_data.soul_name_2);
+        }
     });
 
     //
@@ -147,6 +248,16 @@ $(document).ready(function() {
     });
     $("#HEARTBREAK").click(function() {
         $(".play-icon li.heartbreak-icon").addClass("hvr-ripple-out");
+
+        if(juke_data.heartbreak_url_2 == "" || juke_data.heartbreak_name_2 == "") {
+            $(".track-btn").hide();
+        }else {
+            $(".track-btn").show();
+            $(".btn-track01").attr("data-video",juke_data.heartbreak_url);
+            $(".btn-track01").attr("data-videoname",juke_data.heartbreak_name);
+            $(".btn-track02").attr("data-video",juke_data.heartbreak_url_2);
+            $(".btn-track02").attr("data-videoname",juke_data.heartbreak_name_2);
+        }
     });
 
     $("#SURPRISE_ME").mouseover(function(){
@@ -157,17 +268,22 @@ $(document).ready(function() {
     });
     $("#SURPRISE_ME").click(function() {
         $(".play-icon li.surprise-icon").addClass("hvr-ripple-out");
+        //console.log(juke_data.surprise_url_2);
+        if(juke_data.surprise_url_2 == "" || juke_data.surprise_name_2 == "") {
+            $(".track-btn").hide();
+        }else {
+            $(".track-btn").show();
+            $(".btn-track01").attr("data-video",juke_data.surprise_url);
+            $(".btn-track01").attr("data-videoname",juke_data.surprise_name);
+            $(".btn-track02").attr("data-video",juke_data.surprise_url_2);
+            $(".btn-track02").attr("data-videoname",juke_data.surprise_name_2);
+        }
     });
 
     //
     $(".play-icon li").on("click", function () {
-        //$("#step02 .iframe-section").hide();
-        //$("#step02 .iframe-section").eq($(this).index()).show();
-
         $(".play-icon li").removeClass("hvr-ripple-out");
         $(this).addClass("hvr-ripple-out");
-      //  $("#step02 .song-name marquee").removeClass("open");
-       // setTimeout(function(){ $("#step02 .song-name marquee").addClass("open") }, 2500);
     });
 
     $('#IN_LOVE, #PARTY, #SOULFUL, #HEARTBREAK, #SURPRISE_ME').mouseover(function () {
@@ -178,11 +294,13 @@ $(document).ready(function() {
     });
 
     $(".back-btn").click(function(){
+        $(".btn-track01").addClass("active");
+        $(".btn-track02").removeClass("active");
+
         $(".main-wrap--container").removeClass("slide");
         $(".iframe-section").fadeOut();
         $(".song-footer").fadeOut();
         $(".play-icon li").removeClass("hvr-ripple-out");
-       // $("#step02 .song-name marquee").removeClass("open");
         $("#step02 .song-iframe").html("");
     });
 

@@ -22,11 +22,11 @@ body {
     -moz-border-radius: 60px;
     border-radius: 60px;
     overflow: hidden;
-    opacity: 0;
+	opacity: 0;
 }
 .main-wrap.show
 {
-    opacity: 1;
+	opacity: 1;
 }
 .main-wrap:after,
 .main-wrap--container:after {
@@ -377,12 +377,8 @@ visibility: visible;
     background: url(../images/line-icon-right.svg) no-repeat left;
 }
 
-#step02 .song-footer .play-icon {
-    padding: 15px 0 25px;
-}
 #step02 .song-footer .play-icon li {
-    /*margin: 10px 20px 20px;*/
-    margin: 0 20px;
+    margin: 10px 20px 20px;
     display: inline-block;
     width: 55px;
     height: 55px;
@@ -642,11 +638,8 @@ visibility: visible;
         top: 53px;
         right: 81px;
     }
-    #step02 .song-footer .play-icon {
-        padding: 15px 0;
-    }
     #step02 .song-footer .play-icon li {
-        margin: 0 15px;
+        margin: 15px 15px;
     }
     #step02 .song-name {
         width: 220px;
@@ -692,11 +685,8 @@ visibility: visible;
         font-size: 16px;
         padding-top: 6px;
     }
-    #step02 .song-footer .play-icon {
-        padding: 10px 0;
-    }
     #step02 .song-footer .play-icon li {
-        margin: 0 8px;
+        margin: 10px 8px;
         width: 40px;
         height: 40px;
     }
@@ -728,11 +718,8 @@ visibility: visible;
     .pin-bottom {
         right: 60px;
     }
-    #step02 .song-footer .play-icon {
-        padding: 10px 0;
-    }
     #step02 .song-footer .play-icon li {
-        margin: 0 2px;
+        margin: 10px 2px;
     }
     #step02 .song-name {
         width: 170px;
