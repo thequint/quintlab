@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@media (max-width:1024px) {
+
+}
+
+@media screen and (max-width: 900px) {
+.grid li {
+	width: 50%;
+}
+}
+
+@media screen and (max-width: 400px) {
+.grid li {
+	width: 100%;
+}
+}

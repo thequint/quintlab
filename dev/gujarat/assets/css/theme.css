@@ -1,0 +1,287 @@
+@charset "utf-8";
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	background-image: url(../images/body-bg.jpg);
+	background-repeat: repeat;
+	background-size: 5%;
+	background-attachment: fixed;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #CC8A39;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-weight: 400;
+	font-size: 100%;
+}
+/*Start CSS*/
+.container {
+	margin: 0 auto;
+	max-width: 90%;
+}
+.header-top {
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+.design-ring-container {
+	
+	position: relative;
+}
+.img-design-ring{
+	margin-top: -51%;
+	animation: 40s linear 0s normal none infinite running spin;
+}
+
+.inner-ring-content{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 4%;
+	left: 0;
+	text-align: center;
+}
+.single-content{
+	display: block; 
+	width: 100%;
+}
+
+.qt-logo{
+	display: none;
+	width: 20%;
+	margin: 0 auto;
+	
+	
+}
+
+.tq-logo img{width: 100%;}
+.img-eng-text{
+	width: 42%;
+	margin-top: 3%;
+}
+
+.img-gujarat-text{
+	width: 23%;
+	margin-top: 2%;
+}
+
+.intro-text {
+	font-size: 220%;
+	padding: 1% 4%;
+	font-weight: 800;
+	color: #fdf8c8;
+	text-shadow: 2px 2px 0px #8f5711;
+	letter-spacing: 0.9px;
+	line-height: 120%;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+
+/*===============================================================*/
+
+.grid {
+	list-style: none;
+	margin: 30px auto;
+	padding: 0;
+}
+.grid li {
+	display: block;
+	float: left;
+	padding: 10px;
+	width: 25%;
+	opacity: 0;
+}
+.grid li.shown, 
+.no-js .grid li, 
+.no-cssanimations .grid li {
+	opacity: 1;
+}
+.grid li a, .grid li img {
+	outline: none;
+	border: none;
+	display: block;
+	max-width: 100%;
+}
+/* Effect 1: opacity */
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid.effect-6 {
+	-webkit-perspective: 1300px;
+	perspective: 1300px;
+}
+.grid.effect-6 li.animate {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-80deg);
+	transform: rotateX(-80deg);
+	-webkit-animation: flip .8s ease-in-out forwards;
+	animation: flip .8s ease-in-out forwards;
+}
+ @-webkit-keyframes flip {
+ 0% {
+}
+ 100% {
+-webkit-transform: rotateX(0deg);
+opacity: 1;
+}
+}
+ @keyframes flip {
+ 0% {
+}
+ 100% {
+-webkit-transform: rotateX(0deg);
+transform: rotateX(0deg);
+opacity: 1;
+}
+}
+
+
+.grid li a{
+	border-width: 5px;
+	text-align: center;
+	border-style: solid;
+	border-color: #878474;
+	background-color: #fbf2b9;
+	display: block;
+	padding: 10px;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+}
+
+.grid li a .list-img{
+	border-radius: 100%;
+	overflow: hidden;
+	background-image:url(../images/ring.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+
+.grid li a .list-img img{
+	padding: 20px;
+	border-radius: 100%;
+}
+
+.grid li a figcaption{
+	font-size: 150%;
+	line-height: 120%;
+	font-weight: 900;
+	color: #2b706d;
+	padding: 10px 0;
+}
+.grid li a figcaption span{
+	background: #878474;
+	color: #fbf2b9;
+	padding: 0px 5px;
+}
+
+
+/*ctg-orange*/
+
+.grid li.ctg-orange a{
+	border-color: #fc8e17;
+}
+
+.grid li.ctg-orange a .list-img{
+	background-image:url(../images/ring-orage.svg);
+}
+
+.grid li.ctg-orange a figcaption span{
+	background: #fc8e17;
+}
+
+
+
+/*ctg-blueviolet*/
+
+.grid li.ctg-blueviolet a{
+	border-color: #6d6ba1;
+}
+
+.grid li.ctg-blueviolet a .list-img{
+	background-image:url(../images/ring-blueviolet.svg);
+}
+
+.grid li.ctg-blueviolet a figcaption span{
+	background: #6d6ba1;
+}
+
+/*ctg-turquoise*/
+
+.grid li.ctg-turquoise a{
+	border-color: #39b58c;
+}
+
+.grid li.ctg-turquoise a .list-img{
+	background-image:url(../images/ring-turquoise.svg);
+}
+
+.grid li.ctg-turquoise a figcaption span{
+	background: #39b58c;
+}
+
+/*ctg-limegreen*/
+
+.grid li.ctg-limegreen a{
+	border-color: #679b35;
+}
+
+.grid li.ctg-limegreen a .list-img{
+	background-image:url(../images/ring-limegreen.svg);
+}
+
+.grid li.ctg-limegreen a figcaption span{
+	background: #679b35;
+}
+
+/*ctg-brown*/
+
+.grid li.ctg-brown a{
+	border-color: #cc522f;
+}
+
+.grid li.ctg-brown a .list-img{
+	background-image:url(../images/ring-brown.svg);
+}
+
+.grid li.ctg-brown a figcaption span{
+	background: #cc522f;
+}
+
+
+
+
+
+/*
+color (color )
+----------------------
+1. orange
+2. blueviolet #6d6ba1
+3. turquoise
+4. limegreen
+5. brown #cc522f
+6.
+*/
+
+
+
