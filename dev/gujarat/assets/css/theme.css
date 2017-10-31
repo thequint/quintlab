@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
+	font-weight: 900;
 	background-image: url(../images/body-bg.jpg);
 	background-repeat: repeat;
 	background-size: 5%;
@@ -94,6 +94,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
+.details-container{
+	width: 60%;
+	position: relative;
+	margin: 0 auto;
+}
+
 
 
 /*===============================================================*/
@@ -174,6 +180,7 @@ opacity: 1;
 	background-image:url(../images/ring.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
+	position: relative;
 	
 }
 
@@ -198,12 +205,94 @@ opacity: 1;
 
 .move-down{
 	width: 40px;
-	margin: 50px auto 0 auto;
+	margin: 30px auto 50px auto;
 	display: block;
 	-moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
+
+.track{
+	width: 50px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -25px;
+	background: url(../images/track.svg) repeat-y;
+	z-index: 9999;
+	background-size: 100%;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+}
+
+.car{
+	width: 100%;
+	padding: 5px;
+	z-index: 50;
+	position: absolute;
+	top: -20px;
+	-webkit-transition: top 1s ease;
+    -moz-transition: top 1s ease;
+    -o-transition: top 1s ease;
+    -ms-transition: top 1s ease;
+    transition: top 1s ease
+}
+.car.rotate
+{
+	transform: rotate(-180deg);
+			-webkit-transform: rotate(-180deg)
+}
+
+
+
+
+#bars {
+height: 100%;
+left: 50%;
+position: absolute;
+top: -50%;
+width: 100%;
+}
+.bar
+{
+  position:absolute;
+    height: 25px;
+  width:5px;
+}
+
+.bar-inner{
+   background: #666;
+    bottom: 0px;
+    height: 25px;
+    position: absolute;
+    width: 4px;
+ 
+  transform-origin:100% 100%;
+  animation: sound 0ms -800ms linear infinite alternate;
+  animation-duration: 433ms;
+}
+
+@keyframes sound {
+    0% {
+ 
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 28px;        
+    }
+}
+
+
+.parking {
+	width: 70px;
+	z-index: 100;
+	position: absolute;
+	top: -27px;
+	left: 50%;
+	margin-left: -32px;
+}
+
 
 
 
