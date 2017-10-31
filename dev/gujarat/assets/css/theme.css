@@ -196,6 +196,17 @@ opacity: 1;
 }
 
 
+.move-down{
+	width: 40px;
+	margin: 50px auto 0 auto;
+	display: block;
+	-moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+
+
 /*ctg-orange*/
 
 .grid li.ctg-orange a{

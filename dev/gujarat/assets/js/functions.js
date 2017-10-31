@@ -7,6 +7,15 @@ $(document).ready(function(){
    $("body").click(function(){
       $(".social-ico").slideUp();
    });
+	
+	
+	$(".move-down").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#grid").offset().top
+    }, 1000);
+});
+	
+	
 });
 
 
