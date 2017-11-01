@@ -6,6 +6,7 @@ body {
 	background-repeat: repeat;
 	background-size: 5%;
 	background-attachment: fixed;
+	color: #4d4d4d;
 }
 p {
 	line-height: 130%;
@@ -14,7 +15,7 @@ p {
 a {
 	text-decoration: none;
 	outline: none;
-	color: #CC8A39;
+	color: #4d4d4d;
 }
 button, a {
 	outline: none;
@@ -25,8 +26,8 @@ button, a {
 	-ms-transition: all 0.2s ease-in-out;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #fff;
-	font-weight: 400;
+	color: #4d4d4d;
+	font-weight: 900;
 	font-size: 100%;
 }
 /*Start CSS*/
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 90%;
 }
 .header-top {
-	max-width: 50%;
+	max-width: 40%;
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
@@ -82,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-text {
-	font-size: 220%;
+	font-size: 170%;
 	padding: 1% 4%;
 	font-weight: 800;
 	color: #fdf8c8;
@@ -90,15 +91,13 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0.9px;
 	line-height: 120%;
 	text-align: center;
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 }
 
-.details-container{
-	width: 60%;
-	position: relative;
-	margin: 0 auto;
-}
+
+
+
 
 
 
@@ -204,8 +203,8 @@ opacity: 1;
 
 
 .move-down{
-	width: 40px;
-	margin: 30px auto 50px auto;
+	width: 30px;
+	margin: 20px auto 40px auto;
 	display: block;
 	-moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
@@ -294,6 +293,124 @@ width: 100%;
 }
 
 
+/*Play List*/
+body.grid-details{
+	background: #fbf2b9;
+}
+
+
+.details-container{
+	max-width: 680px;
+	padding: 0px 20px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.playlist li.list{
+	position: relative;
+	margin: 80px 0 0 0;
+	padding: 0px 0px 80px 0px;
+}
+
+
+
+.playlist li.list:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #646567;
+	content: '';
+	
+}
+
+.playlist li.list::before {
+	position: absolute;
+	bottom: -37px;
+	left: 50%;
+	width: 100px;
+	height: 80px;
+	margin-left: -50px;
+	content: '';
+	background-image: url(../images/sep.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #FBF2B9;
+	background-size: 60%;
+	z-index: 100;
+}
+.playlist li.list:last-child::after, .playlist li.list:last-child::before{
+	display: none;
+}
+
+
+.playlist li.list h3 {
+font-size: 200%;
+line-height: 120%;
+font-weight: 900;
+color: #2b706d;
+}
+
+.playlist li.list h3 span{
+	color: #fbf2b9;
+	padding: 0px 5px;
+}
+
+.playlist li.list .frame-video{
+	margin-top: 20px;
+}
+
+.personal-details{
+	margin-top: 20px;
+}
+
+.personal-details p {
+	margin: 10px 0 0 0;
+	font-weight: 400;
+	line-height: 140%;
+}
+
+
+.personal-details h4,
+.personal-details h5,
+.personal-details h6{
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.personal-details h4 label,
+.personal-details h5 label,
+.personal-details h6 label{
+	font-size: 23px;
+}
+
+
+.collection-stories ul{
+	margin: 0px -10px;
+}
+.collection-stories li{
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.collection-stories li a {
+	background: #4d4d4d;
+	color: #FBF2B9;
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 130%;
+}
+
+.collection-stories h2 {
+	font-size: 23px;
+	font-weight: 400;
+	margin: 20px 0 0 0;
+	line-height: 100%;
+}
 
 
 /*ctg-orange*/
@@ -306,11 +423,16 @@ width: 100%;
 	background-image:url(../images/ring-orage.svg);
 }
 
-.grid li.ctg-orange a figcaption span{
+.grid li.ctg-orange a figcaption span, 
+.playlist li.ctg-orange h3 span,
+.playlist li.ctg-orange .collection-stories li a{
 	background: #fc8e17;
 }
 
-
+.playlist li.ctg-orange .personal-details label,
+.playlist li.ctg-orange .collection-stories h2{
+	color: #fc8e17;
+}
 
 /*ctg-blueviolet*/
 
@@ -322,8 +444,15 @@ width: 100%;
 	background-image:url(../images/ring-blueviolet.svg);
 }
 
-.grid li.ctg-blueviolet a figcaption span{
+.grid li.ctg-blueviolet a figcaption span, 
+.playlist li.ctg-blueviolet h3 span,
+.playlist li.ctg-blueviolet .collection-stories li a{
 	background: #6d6ba1;
+}
+
+.playlist li.ctg-blueviolet .personal-details label,
+.playlist li.ctg-blueviolet .collection-stories h2{
+	color: #6d6ba1;
 }
 
 /*ctg-turquoise*/
@@ -336,8 +465,15 @@ width: 100%;
 	background-image:url(../images/ring-turquoise.svg);
 }
 
-.grid li.ctg-turquoise a figcaption span{
+.grid li.ctg-turquoise a figcaption span, 
+.playlist li.ctg-turquoise h3 span,
+.playlist li.ctg-turquoise .collection-stories li a{
 	background: #39b58c;
+}
+
+.playlist li.ctg-turquoise .personal-details label,
+.playlist li.ctg-turquoise .collection-stories h2{
+	color: #39b58c;
 }
 
 /*ctg-limegreen*/
@@ -350,10 +486,16 @@ width: 100%;
 	background-image:url(../images/ring-limegreen.svg);
 }
 
-.grid li.ctg-limegreen a figcaption span{
+.grid li.ctg-limegreen a figcaption span, 
+.playlist li.ctg-limegreen h3 span,
+.playlist li.ctg-limegreen .collection-stories li a{
 	background: #679b35;
 }
 
+.playlist li.ctg-limegreen .personal-details label,
+.playlist li.ctg-limegreen .collection-stories h2{
+	color: #679b35;
+}
 /*ctg-brown*/
 
 .grid li.ctg-brown a{
@@ -364,24 +506,18 @@ width: 100%;
 	background-image:url(../images/ring-brown.svg);
 }
 
-.grid li.ctg-brown a figcaption span{
+.grid li.ctg-brown a figcaption span, 
+.playlist li.ctg-brown h3 span,
+.playlist li.ctg-brown .collection-stories li a{
 	background: #cc522f;
 }
 
+.playlist li.ctg-brown .personal-details label,
+.playlist li.ctg-brown .collection-stories h2{
+	color: #cc522f;
+}
 
 
-
-
-/*
-color (color )
-----------------------
-1. orange
-2. blueviolet #6d6ba1
-3. turquoise
-4. limegreen
-5. brown #cc522f
-6.
-*/
 
 
 

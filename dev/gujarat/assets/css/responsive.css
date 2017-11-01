@@ -14,4 +14,48 @@
 .grid li {
 	width: 100%;
 }
+	
+.playlist li.list {
+	position: relative;
+	margin: 60px 0 0 0;
+	padding: 0px 0px 60px 0px;
+}
+	
+	
+
+.playlist li.list::before {
+
+
+    bottom: -37px;
+ 
+    width: 90px;
+    height: 80px;
+    margin-left: -45px;
+
+    background-size: 60%;
+	
+	
+
+
+}
+	
+	.playlist li.list h3{
+		font-size: 170%;
+	}
+	
+	.personal-details h4, .personal-details h5, .personal-details h6{
+		font-size: 18px;
+	}
+	
+	.personal-details h4 label, .personal-details h5 label, .personal-details h6 label{
+		font-size: 20px;
+	}
+	
+	.collection-stories h2{
+		font-size: 20px;
+	}
+	
+	.collection-stories li a{
+		font-size: 18px;
+	}
 }

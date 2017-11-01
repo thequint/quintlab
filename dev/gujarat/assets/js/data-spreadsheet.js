@@ -93,7 +93,7 @@ function showInfo(data) {
 			
 			//alert();
 			
-			$('#playList').append("<li class='"+cat_class+"'><h3 class='quote'>"+data[index].Sub_Headline+"</h3><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4>"+data[index].Name+"</h4><h5>"+data[index].Age+"</h5><h6>"+data[index].Location+"</h6><p>"+data[index].Description+"</p></div></li>");
+			$('#playList').append("<li class='list "+cat_class+"'><h3 class='quote'>"+data[index].Sub_Headline+"</h3><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h5><label>Age: </label>"+data[index].Age+"</h5><h6><label>Location: </label>"+data[index].Location+"</h6><p>"+data[index].Description+"</p></div><div class='collection-stories'><h2>MORE FROM THE QUINT</h2><ul><li><a href='#'>I Was Beaten & Locked up for Covering Kathputli Colony Demolition</a></li><li><a href='#' target='_blank'>I Was Beaten & Locked up for Covering Kathputli Colony Demolition</a></li></ul></div></li>");
 		}
 
 	}
