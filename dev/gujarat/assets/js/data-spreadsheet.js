@@ -76,16 +76,16 @@ function showInfo(data) {
 		
 		if ($('body').hasClass('grid-list')) {
 			
-			$("#grid").append("<li class='"+cat_class +"'><a href='play-list.html'><figure><div class='list-img'><img src='profile-images/"+data[index].Profile_Image +"' alt='"+data[index].Profile_Image+"'></div><figcaption>"+data[index].Sub_Headline+"</figcaption></figure></a></li>"),
+			$("#grid").append("<li class='"+cat_class +"'><a href='play-list.html'><figure><div class='list-img placeholder'><img class='img-small' data-large='profile-images/"+data[index].Profile_Image +"' src='assets/images/placeholder.jpg' alt='"+data[index].Profile_Image+"'></div><figcaption>"+data[index].Sub_Headline+"</figcaption></figure></a></li>"),
 				
 			new AnimOnScroll( document.getElementById( 'grid' ),{
 				minDuration : 0.4,
 				maxDuration : 0.7,
 				viewportFactor : 0.2
-			});
+			},);
 			
 			
-			
+			// src="assets/images/small/bol-logo.png" data-large="assets/images/bol-logo.png"
 			
 		} 
 		
@@ -130,6 +130,13 @@ $(".bar").each(function(index){
 				
 				//$(this).find("#bars").remove();
 	})
+		
+		
+		setTimeout(function(){
+			
+			lazy_load_image();
+			
+		},4000)
 }
 
 

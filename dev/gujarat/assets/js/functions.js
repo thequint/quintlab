@@ -17,6 +17,12 @@ $(document).ready(function () {
 		}, 1000);
 
 	});
+	
+	// filters
+	
+	$('.btn-filter').click(function(){
+		$('.grid-area').toggleClass('is-open');
+	});
 
 	// car animation
 	
@@ -48,13 +54,13 @@ $(document).ready(function () {
 
 			var car_move = $(window).scrollTop() - $(".header-wrapper").height() / 2;
 
-			if (car_move > -20) {
+			if (car_move > -55) {
 				$(".car").css({
 					"top": $(window).scrollTop() - window.innerHeight / 2
 				})
 			} else {
 				$(".car").css({
-					"top": -20
+					"top": -55
 				})
 			}
 
@@ -75,3 +81,31 @@ new AnimOnScroll(document.getElementById('grid'), {
 	maxDuration: 0.7,
 	viewportFactor: 0.2
 });
+
+
+
+function lazy_load_image() {
+	
+	$(".placeholder").each(function(){
+	var n = $(this),
+    i = $(this).find(".img-small"),
+    o = i.attr("title"),
+    r = new Image;
+		
+	
+r.src = i.attr("src"), r.onload = function() {
+   
+};
+var s = new Image;
+		
+		console.log(i.attr("data-large"));	
+s.src = i.attr("data-large"), s.onload = function() {
+	
+
+    s.classList.add("loaded"), s.classList.add("img-large"), s.setAttribute("alt", o), s.setAttribute("title", o)
+}, n.append(s)
+});
+}
+
+
+
