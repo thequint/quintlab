@@ -108,4 +108,25 @@ s.src = i.attr("data-large"), s.onload = function() {
 }
 
 
+$(document).ready(function(){
+		
+var collectionSlug = 'bol-feature'; //Needs to be replaced.
+  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+    var stories = res.items.filter(function(item) {
+      return item.type == 'story'
+    }).map(function(item) {
+      return item.story
+    }).slice(0,2);
+    var elements = stories.map(function(story) {
+      return '<li><a href="https://www.thequint.com/' + story.slug + '" target="blank">'+ story.headline +'</a></li>'
+    });
+    elements.forEach(function(element) {
+      $('.collection-stories ul').append(element);
+    });
+	   
+  });
+	  
+})
+
+
 

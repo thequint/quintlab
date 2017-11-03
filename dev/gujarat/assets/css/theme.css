@@ -95,12 +95,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
-
-
-
-
-
-
 /*===============================================================*/
 
 .grid {
@@ -112,9 +106,19 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	float: left;
 	padding: 10px;
-	width: 25%;
+	width: 16.666%;
 	opacity: 0;
 }
+@media screen and (max-width: 1280px) {
+	.grid li {width:25%;}
+}
+
+@media screen and (max-width: 992px) {
+	.grid li {width:50%;}
+}
+
+
+
 .grid li.shown, 
 .no-js .grid li, 
 .no-cssanimations .grid li {

@@ -15,9 +15,6 @@
 }
 
 @media screen and (max-width: 900px) {
-.grid li {
-	width: 50%;
-}
 .intro-text {
 	font-size: 120%;
 }
@@ -33,47 +30,52 @@
 }
 
 @media screen and (max-width: 580px) {
-	
-	.filter-options, .filter{display: none;}
-	.body-wrapper .container{
-		max-width: 100%;
-		padding: 0px 2px;
-	}
-	.grid-area{
-		padding-left: 34px;
-	}
-	
-	.track {
-	display: block;
-	left: 0px;
-	margin: 0;
-	top: -12px;
-	width: 38px;
+.move-down {
+	margin: 10px auto 20px auto;
 }
-	
-	.grid li{
-		padding: 3px;
-	}
-	.details-container{
-		margin: 0 auto;
-	}
-	
-	.grid li a{
-		border-width: 3px;
-		box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
-	}
-	
-	.grid li a .list-img img{
-		padding: 10px;
-	}
-	.grid li a{
-		padding: 5px;
-	}
-	.grid li a figcaption{
-		font-size: 100%;
-		padding: 5px 0 3px 0;
-	}
-	
+.filter-options, .filter {
+	display: none;
+}
+.body-wrapper .container {
+	max-width: 100%;
+	padding: 0px 2px;
+}
+.grid-area {
+	padding-left: 40px;
+}
+.track {
+	display: block;
+	left: 4px;
+	margin: 0;
+	top: -3px;
+	width: 38px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+.parking {
+	width: 53px;
+	top: -45px;
+	margin-left: -24px;
+}
+.grid li {
+	padding: 3px;
+}
+.details-container {
+	margin: 0 auto;
+}
+.grid li a {
+	border-width: 3px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+.grid li a .list-img img {
+	padding: 10px;
+}
+.grid li a {
+	padding: 5px;
+}
+.grid li a figcaption {
+	font-size: 115%;
+	padding: 5px 0 3px 0;
+}
 .playlist li.list {
 	position: relative;
 	margin: 60px 0 0 0;
@@ -100,5 +102,11 @@
 }
 .collection-stories li a {
 	font-size: 18px;
+}
+}
+
+@media screen and (max-width: 350px) {
+.grid li a figcaption {
+	font-size: 100%;
 }
 }
