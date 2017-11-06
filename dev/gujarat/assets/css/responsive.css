@@ -33,9 +33,6 @@
 .move-down {
 	margin: 10px auto 20px auto;
 }
-.filter-options, .filter {
-	display: none;
-}
 .body-wrapper .container {
 	max-width: 100%;
 	padding: 0px 2px;
@@ -103,6 +100,33 @@
 .collection-stories li a {
 	font-size: 18px;
 }
+.filter {
+	display: block;
+	left: inherit;
+	right: 5px;
+	padding: 0;
+}
+.filter-options {
+	display: none;
+	z-index: 1000;
+	width: 180px;
+	left: inherit;
+	right: 5px;
+	top: 0;
+	border-width: 3px;
+	padding: 15px;
+}
+	
+.grid-area.is-open {
+	transform: inherit;
+	
+	
+}
+	
+.filter-options.is-open{
+		display: block;
+		
+	}
 }
 
 @media screen and (max-width: 350px) {

@@ -76,7 +76,7 @@ function showInfo(data) {
 		
 		if ($('body').hasClass('grid-list')) {
 			
-			$("#grid").append("<li class='"+cat_class +"'><a href='play-list.html'><figure><div class='list-img placeholder'><img class='img-small' data-large='profile-images/"+data[index].Profile_Image +"' src='assets/images/placeholder.jpg' alt='"+data[index].Profile_Image+"'></div><figcaption>"+data[index].Sub_Headline+"</figcaption></figure></a></li>"),
+			$("#grid").append("<li class='"+cat_class +"'><a href='play-list.html'><figure><div class='list-img placeholder'><img class='img-small' data-large='"+data[index].Profile_Image +"' src='assets/images/placeholder.jpg' alt='"+data[index].Profile_Image+"'></div><figcaption>"+data[index].Sub_Headline+"</figcaption></figure></a></li>"),
 				
 			new AnimOnScroll( document.getElementById( 'grid' ),{
 				minDuration : 0.4,

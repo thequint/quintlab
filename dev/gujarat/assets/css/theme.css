@@ -204,6 +204,7 @@ opacity: 1;
 	background: #878474;
 	color: #fbf2b9;
 	padding: 0px 5px;
+	word-wrap: break-word;
 }
 
 
@@ -257,15 +258,14 @@ opacity: 1;
 
 .filter .btn{
 	float: left;
-	margin-right: 20px;
-	
+
 	
 }
 
 
 
 .btn{
-	color: rgba(255,255,255,0.8);
+	color: #FBF2B9;
 	background: #d65065;
 	padding: 3px;
 	font-size: 18px;
@@ -286,7 +286,7 @@ opacity: 1;
 
 .filter-options {
 	padding: 20px;
-	background: #D65065;
+	background: #FBF2B9;
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -294,15 +294,32 @@ opacity: 1;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 	font-weight: 400;
 	color: #fff;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #D65065;
 }
 
-.filter-options ul li {
-	margin-bottom: 3px;
-}
+
 
 .filter-options ul li{
 	margin:0 0 8px 0;
+	position: relative;
+	padding-left: 18px;
 }
+
+.filter-options ul li::before{
+	position: absolute;
+	top: 4px;
+	left: 0;
+	content: '';
+	width: 12px;
+	height: 12px;
+	background: #A7A9AC;
+	border-radius: 100%;
+/*	border: 2px solid #FBF2B9;*/
+}
+
+
 
 .filter-options ul li:last-child{
 	margin: 0
@@ -310,14 +327,14 @@ opacity: 1;
 
 .filter-options ul li a{
 	display: block;
-	color: rgba(255,255,255,0.8);
+	color: #4d4d4d;
 	line-height: 100%;
 	padding: 2px 0px;
 	
 }
 
 .filter-options ul li a:hover{
-	color: #fff;
+	color: #333;
 }
 
 
@@ -463,13 +480,14 @@ color: #2b706d;
 .personal-details h6{
 	font-size: 20px;
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 800;
 }
 
 .personal-details h4 label,
 .personal-details h5 label,
 .personal-details h6 label{
 	font-size: 23px;
+	font-weight: 800;
 }
 
 
@@ -493,7 +511,7 @@ color: #2b706d;
 
 .collection-stories h2 {
 	font-size: 23px;
-	font-weight: 400;
+	font-weight: 800;
 	margin: 20px 0 0 0;
 	line-height: 100%;
 }
@@ -529,7 +547,8 @@ color: #2b706d;
 
 .grid li.ctg-orange a figcaption span, 
 .playlist li.ctg-orange h3 span,
-.playlist li.ctg-orange .collection-stories li a{
+.playlist li.ctg-orange .collection-stories li a,
+.filter-options ul li.ctg-orange::before{
 	background: #fc8e17;
 }
 
@@ -550,7 +569,8 @@ color: #2b706d;
 
 .grid li.ctg-blueviolet a figcaption span, 
 .playlist li.ctg-blueviolet h3 span,
-.playlist li.ctg-blueviolet .collection-stories li a{
+.playlist li.ctg-blueviolet .collection-stories li a,
+.filter-options ul li.ctg-blueviolet::before{
 	background: #6d6ba1;
 }
 
@@ -571,7 +591,8 @@ color: #2b706d;
 
 .grid li.ctg-turquoise a figcaption span, 
 .playlist li.ctg-turquoise h3 span,
-.playlist li.ctg-turquoise .collection-stories li a{
+.playlist li.ctg-turquoise .collection-stories li a,
+.filter-options ul li.ctg-turquoise::before{
 	background: #39b58c;
 }
 
@@ -592,7 +613,8 @@ color: #2b706d;
 
 .grid li.ctg-limegreen a figcaption span, 
 .playlist li.ctg-limegreen h3 span,
-.playlist li.ctg-limegreen .collection-stories li a{
+.playlist li.ctg-limegreen .collection-stories li a,
+.filter-options ul li.ctg-limegreen::before{
 	background: #679b35;
 }
 
@@ -612,7 +634,8 @@ color: #2b706d;
 
 .grid li.ctg-brown a figcaption span, 
 .playlist li.ctg-brown h3 span,
-.playlist li.ctg-brown .collection-stories li a{
+.playlist li.ctg-brown .collection-stories li a,
+.filter-options ul li.ctg-brown::before{
 	background: #cc522f;
 }
 

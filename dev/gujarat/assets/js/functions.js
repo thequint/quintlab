@@ -22,6 +22,7 @@ $(document).ready(function () {
 	
 	$('.btn-filter').click(function(){
 		$('.grid-area').toggleClass('is-open');
+		$('.filter-options').toggleClass('is-open');
 	});
 
 	// car animation
