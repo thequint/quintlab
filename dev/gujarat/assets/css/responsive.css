@@ -108,13 +108,10 @@
 	max-width: 100%;
 	padding: 0px 2px;
 }
-.grid-area {
-	padding-left: 40px;
-}
+
 .track {
 	display: block;
-	left: 4px;
-	margin: 0;
+	margin: 0 0 0 -19px;
 	top: -3px;
 	width: 38px;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
@@ -124,8 +121,15 @@
 	top: -45px;
 	margin-left: -24px;
 }
+	.grid{margin: 0px 0px;}
+	
+	.body-wrapper .container{
+		/*overflow-x: hidden;*/
+		padding: 0;
+	}
+	
 .grid li {
-	padding: 3px;
+	padding: 5px 13px;
 }
 .details-container {
 	margin: 0 auto;
@@ -174,7 +178,7 @@
 .filter {
 	display: block;
 	left: inherit;
-	right: 5px;
+	right: 13px;
 	padding: 0;
 }
 .filter-options {
@@ -182,10 +186,11 @@
 	z-index: 1000;
 	width: 180px;
 	left: inherit;
-	right: 5px;
+	right: 13px;
 	top: 0;
 	border-width: 3px;
 	padding: 15px;
+	z-index: 999999;
 }
 	
 .grid-area.is-open {
