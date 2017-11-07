@@ -547,6 +547,30 @@ color: #2b706d;
 
 
 
+.btn-back {
+	background: #D65065;
+	border-radius: 100%;
+	display: block;
+	font-size: 20px;
+	height: 50px;
+	overflow: hidden;
+	width: 50px;
+	color: #FDF8C8;
+	text-align: center;
+	position: fixed;
+	top: 40px;
+	left: calc(50% - 372px);
+}
+
+.btn-back i{
+	line-height: 47px;
+	padding-right: 15px;
+}
+
+
+
+
+
 
 /*ctg-orange*/
 

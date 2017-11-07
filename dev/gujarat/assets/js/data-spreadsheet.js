@@ -99,7 +99,7 @@ function showInfo(data) {
 		
 	}
 	
-	var check=0;
+	/*var check=0;
 	
 	$("#grid li a").mouseover(function(){
 				if(check==0)
@@ -130,7 +130,7 @@ $(".bar").each(function(index){
 		$("#grid li ").mouseout(function(){
 				
 				//$(this).find("#bars").remove();
-	})
+	})*/
 		
 		
 		setTimeout(function(){

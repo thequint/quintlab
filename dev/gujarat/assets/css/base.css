@@ -405,6 +405,9 @@ transform:translateY(4px) rotate(90deg)
 	color: #FDF8C8;
 	text-align: center;
 }
+
+
+
 .social-ico li a i {
 	line-height: 40px;
 }
@@ -420,10 +423,13 @@ transform:translateY(4px) rotate(90deg)
 	z-index: 1000;
 	display: none;
 }
+	
+	
 
-	body.grid-details .logo{
+	.logo.details-logo{
 		display: block;
 		width: 60px;
+		
 	}
 	
 .app-title img {
