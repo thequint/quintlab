@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>PM Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav and Touch Icons -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Custom -->
+<link href="assets/css/styles.css" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="wrap">
+    <h1 class="headline"> Enter PM 2.5 level of your locality </h1>
+    <input id="text_a" type="text" class="input-field">
+    <p id="answer"></p>
+    <button class="button" onclick="myFunction()">Check</button>
+</div>
+
+<script>
+function myFunction() {
+   var a = document.getElementById("text_a").value;
+
+   if (a > 0 && a < 60) {
+      document.getElementById("answer").innerText = "You will not lose any hours of your life";
+   } else if (a > 59 && a < 120) {
+      document.getElementById("answer").innerText = "The pollution is taking away 30 minutes of your life per day";
+   } else if (a > 119 && a < 140) {
+      document.getElementById("answer").innerText = "The pollution is taking away 60 minutes of your life per day";
+   } else if (a > 139 && a < 160) {
+      document.getElementById("answer").innerText = "The pollution is taking away 90 minutes of your life per day";
+   } else if (a > 159 && a < 180) {
+      document.getElementById("answer").innerText = "The pollution is taking away 120 minutes of your life per day";
+   } else if (a > 179 && a < 190) {
+      document.getElementById("answer").innerText = "The pollution is taking away 150 minutes of your life per day";
+   } else if (a > 189 && a < 200) {
+      document.getElementById("answer").innerText = "The pollution is taking away 180 minutes of your life per day";
+   } else if (a > 199 && a < 220) {
+      document.getElementById("answer").innerText = "The pollution is taking away 210 minutes of your life per day";
+   } else if (a > 219 && a < 250) {
+      document.getElementById("answer").innerText = "The pollution is taking away 240 minutes of your life per day";
+   } else if (a > 249 && a < 270) {
+      document.getElementById("answer").innerText = "The pollution is taking away 270 minutes of your life per day";
+   } else if (a > 269 && a < 300) {
+      document.getElementById("answer").innerText = "The pollution is taking away 300 minutes of your life per day";
+   } else if (a > 299 && a < 320) {
+      document.getElementById("answer").innerText = "The pollution is taking away 330 minutes of your life per day";
+   } else if (a > 319 && a < 350) {
+      document.getElementById("answer").innerText = "The pollution is taking away 360 minutes of your life per day";
+   } else if (a > 349 && a < 380) {
+      document.getElementById("answer").innerText = "The pollution is taking away 390 minutes of your life per day";
+   } else if (a > 379 && a < 400) {
+      document.getElementById("answer").innerText = "The pollution is taking away 420 minutes of your life per day";
+   } else if (a > 399 && a < 420) {
+      document.getElementById("answer").innerText = "The pollution is taking away 450 minutes of your life per day";
+   } else if (a > 419 && a < 440) {
+      document.getElementById("answer").innerText = "The pollution is taking away 480 minutes of your life per day";
+   } else if (a > 439 && a < 450) {
+      document.getElementById("answer").innerText = "The pollution is taking away 510 minutes of your life per day";
+   } else if (a > 449 && a < 480) {
+      document.getElementById("answer").innerText = "The pollution is taking away 540 minutes of your life per day";
+   } else if (a > 479 && a < 490) {
+      document.getElementById("answer").innerText = "The pollution is taking away 570 minutes of your life per day";
+   } else if (a > 489 && a < 500) {
+      document.getElementById("answer").innerText = "The pollution is taking away 600 minutes of your life per day";
+   } else if (a > 499 && a < 520) {
+      document.getElementById("answer").innerText = "The pollution is taking away 630 minutes of your life per day";
+   } else if (a > 519 && a < 540) {
+      document.getElementById("answer").innerText = "The pollution is taking away 660 minutes of your life per day";
+   } else if (a > 539 && a < 560) {
+      document.getElementById("answer").innerText = "The pollution is taking away 690 minutes of your life per day";
+   } else if (a > 559 && a < 580) {
+      document.getElementById("answer").innerText = "The pollution is taking away 720 minutes of your life per day";
+   } else if (a > 579 && a < 600) {
+      document.getElementById("answer").innerText = "The pollution is taking away 750 minutes of your life per day";
+   } else if (a > 599 && a < 620) {
+      document.getElementById("answer").innerText = "The pollution is taking away 780 minutes of your life per day";
+   } else if (a > 619 && a < 640) {
+      document.getElementById("answer").innerText = "The pollution is taking away 810 minutes of your life per day";
+   } else if (a > 639 && a < 660) {
+      document.getElementById("answer").innerText = "The pollution is taking away 840 minutes of your life per day";
+   } else if (a > 659 && a < 680) {
+      document.getElementById("answer").innerText = "The pollution is taking away 870 minutes of your life per day";
+   } else if (a > 679 && a < 700) {
+      document.getElementById("answer").innerText = "The pollution is taking away 900 minutes of your life per day";
+   } else if (a > 699 && a < 720) {
+      document.getElementById("answer").innerText = "The pollution is taking away 930 minutes of your life per day";
+   } else if (a > 719 && a < 740) {
+      document.getElementById("answer").innerText = "The pollution is taking away 960 minutes of your life per day";
+   } else if (a > 739 && a < 760) {
+      document.getElementById("answer").innerText = "The pollution is taking away 990 minutes of your life per day";
+   } else if (a > 759 && a < 780) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1020 minutes of your life per day";
+   } else if (a > 779 && a < 800) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1050 minutes of your life per day";
+   } else if (a > 799 && a < 820) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1080 minutes of your life per day";
+   } else if (a > 819 && a < 840) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1110 minutes of your life per day";
+   } else if (a > 839 && a < 860) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1140 minutes of your life per day";
+   } else if (a > 859 && a < 880) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1170 minutes of your life per day";
+   } else if (a > 879 && a < 900) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1200 minutes of your life per day";
+   } else if (a > 899 && a < 920) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1230 minutes of your life per day";
+   } else if (a > 919 && a < 940) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1260 minutes of your life per day";
+   } else if (a > 939 && a < 960) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1290 minutes of your life per day";
+   } else if (a > 959 && a < 980) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1320 minutes of your life per day";
+   } else if (a > 979 && a < 1000) {
+      document.getElementById("answer").innerText = "The pollution is taking away 1350 minutes of your life per day";
+   } else if (a > 999) {
+      document.getElementById("answer").innerText = "Not Applicable";
+   } else {
+      document.getElementById("answer").innerHTML = "Wrong Input";
+   }
+}
+</script>
+</body>
+
+</html>

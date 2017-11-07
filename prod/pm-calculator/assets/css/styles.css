@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+.wrap {
+   margin: 0 auto;
+   width: 75%;
+   font-family: "Merriweather", "Georgia", serif;
+   text-align: center;
+   width: 100%;
+   max-width: 800px;
+   padding: 0 20px
+}
+h1.headline {
+   font-family: "Merriweather", "Georgia", serif;
+   font-size: 28px;
+   color: #6a357f;
+}
+@media screen and (max-width: 767px) {
+  h1.headline {
+   font-size: 24px;
+  }
+}
+.input-field {
+   background-color: #fff;
+   border: 1px #ccc solid;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   font-size: 22px;
+   color: #555;
+   padding: 10px 8px;
+   width: 100%;
+   max-width: 400px;
+}
+@media screen and (max-width: 767px) {
+  .input-field {
+     padding: 6px 4px;
+  }
+}
+#answer {
+   color: #555;
+   font-size: 16px;
+}
+.button {
+    background-color: #6a357f;
+    color: #fff;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 10px;
+    cursor: pointer;
+    font-family: "Merriweather", "Georgia", serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.button:hover {
+   background-color: #f3b72a;
+}
