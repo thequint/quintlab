@@ -15,6 +15,10 @@
 }
 
 @media screen and (max-width: 900px) {
+	.grid-details{
+		margin-top: 70px;
+	}
+	
 .intro-text {
 	font-size: 120%;
 }

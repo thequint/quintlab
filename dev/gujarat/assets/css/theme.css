@@ -307,6 +307,15 @@ opacity: 1;
 	padding-left: 18px;
 }
 
+.filter-options ul li.is-active a{
+	padding: 2px 5px;
+	background: #D65065;
+	color: #FBF2B9;
+	
+}
+
+
+
 .filter-options ul li::before{
 	position: absolute;
 	top: 4px;
@@ -336,6 +345,10 @@ opacity: 1;
 .filter-options ul li a:hover{
 	color: #333;
 }
+.filter-options ul li.is-active a:hover{
+	color: #FBF2B9;
+}
+
 
 
 #bars {
@@ -470,7 +483,7 @@ color: #2b706d;
 
 .personal-details p {
 	margin: 10px 0 0 0;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 140%;
 }
 
