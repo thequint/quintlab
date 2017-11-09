@@ -121,7 +121,7 @@ $(document).ready(function() {
 		
 	//Slug 1 
 	
-  var collectionSlug = 'bol-ugc'; //Needs to be replaced.
+  var collectionSlug = 'top-story---home'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 	
 	
-  var collectionSlug = 'bol-feature'; //Needs to be replaced.
+  var collectionSlug = 'trending'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -165,7 +165,7 @@ $(document).ready(function() {
 
 // Slug 3
 
-  var collectionSlug = 'bol-video'; //Needs to be replaced.
+  var collectionSlug = 'videos'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'

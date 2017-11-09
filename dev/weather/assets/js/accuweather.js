@@ -32,13 +32,13 @@ function get_weather(id) { // for current location
             }
 
             //black
-            else if (cond_icon == "8" || cond_icon == "15" || cond_icon == "16" || cond_icon == "17" || cond_icon == "18" || cond_icon == "39" || cond_icon == "40" || cond_icon == "41" || cond_icon == "42" || cond_icon == "43" || cond_icon == "44") {
+            else if ( cond_icon == "15" || cond_icon == "16" || cond_icon == "17" || cond_icon == "18" || cond_icon == "39" || cond_icon == "40" || cond_icon == "41" || cond_icon == "42" || cond_icon == "43" || cond_icon == "44") {
 				
                 $("body").addClass("bg-black");
             }
 
             //blue
-            else if (cond_icon == "1" || cond_icon == "2" || cond_icon == "3" || cond_icon == "4" || cond_icon == "6" || cond_icon == "7" || cond_icon == "11" || cond_icon == "12" || cond_icon == "13" || cond_icon == "31" || cond_icon == "32") {
+            else if (cond_icon == "8" || cond_icon == "1" || cond_icon == "2" || cond_icon == "3" || cond_icon == "4" || cond_icon == "6" || cond_icon == "7" || cond_icon == "11" || cond_icon == "12" || cond_icon == "13" || cond_icon == "31" || cond_icon == "32") {
                 $("body").addClass("bg-blue");
             }
 
