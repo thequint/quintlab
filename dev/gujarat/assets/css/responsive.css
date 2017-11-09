@@ -183,7 +183,6 @@
 }
 .filter-options {
 	display: none;
-	z-index: 1000;
 	width: 180px;
 	left: inherit;
 	right: 13px;
