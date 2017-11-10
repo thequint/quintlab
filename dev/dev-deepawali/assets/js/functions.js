@@ -19,7 +19,7 @@ var swiper = new Swiper('.swiper-container', {
 
 
 swiper.on('slideChange', function () {
- // console.log('slide changed');
+  console.log('slide changed');
 	$(".video-background").each(function(){
 
 	this.pause();	
@@ -32,7 +32,7 @@ swiper.on('slideChange', function () {
 		
 		if($(".swiper-slide-active video").index()>=0)
 			{
-				
+				console.log('slide changed 2');
 				$(".swiper-slide-active video")[0].play(); 
 			}
 		
