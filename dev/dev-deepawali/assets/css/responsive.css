@@ -11,6 +11,18 @@
 @media (max-width:768px) {
 	
 	
+	/*
+	.video-background.is-mobile{
+	display: block;
+}
+
+.video-background.is-desktop{
+	display: block;
+}
+	*/
+	
+	
+	
 .swiper-slide.slide-1 {
 	background-image: url(../data/mob/slide-1.jpg);
 }

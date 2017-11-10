@@ -1,4 +1,9 @@
 
+if(window.innerWidth<768)
+	{
+$("#boatman").attr("src","assets/data/mob-video.mp4");
+$("#boatman").attr("poster","assets/data/poster/mob-poster.jpg");
+	}
 var swiper = new Swiper('.swiper-container', {
         //direction: 'vertical',
 	    effect: 'fade',

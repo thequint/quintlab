@@ -146,6 +146,15 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100vh;
 	z-index: -100
 }
+/*
+.video-background.is-mobile{
+	display: none;
+}
+
+.video-background.is-desktop{
+	display: block;
+}*/
+
 .caption.slide-3-cap {
 	position: absolute;
 	width: 100%;
