@@ -4,6 +4,7 @@ var swiper = new Swiper('.swiper-container', {
 	    effect: 'fade',
         slidesPerView: 1,
         spaceBetween: 30,
+	direction:'vertical',
         mousewheel: true,
         pagination: {
           el: '.swiper-pagination',
