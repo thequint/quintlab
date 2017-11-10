@@ -1,3 +1,4 @@
+
 var swiper = new Swiper('.swiper-container', {
         //direction: 'vertical',
 	    effect: 'fade',
@@ -9,6 +10,10 @@ var swiper = new Swiper('.swiper-container', {
           //clickable: true,
 			type: 'progressbar',
         },
+	
+	navigation: {
+      nextEl: '#scrollDown',
+    }
     });
 
 
