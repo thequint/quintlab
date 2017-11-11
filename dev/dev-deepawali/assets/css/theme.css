@@ -169,6 +169,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.loading{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	z-index: 10000;
+	color: #fff;
+	display: none;
+}
+
+.loading.is-loading{display: block;}
+
+.byte-text{
+	display: none;
+}
+
+.byte-text.is-loaded{
+	display: block;
+}
+
+
 .swiper-slide.slide-1 {
 	background-image: url(../data/slide-1.jpg);
 }

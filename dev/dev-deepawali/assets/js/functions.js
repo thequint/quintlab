@@ -28,6 +28,8 @@ swiper.on('slideChange', function () {
 	$(".video-background").each(function(){
 
 	this.pause();	
+			$('.loading').addClass('is-loading');
+			$('.byte-text').removeClass('is-loaded');
 			
 	})
 	
@@ -39,6 +41,8 @@ swiper.on('slideChange', function () {
 			{
 				console.log('slide changed 2');
 				$(".swiper-slide-active video")[0].play(); 
+				$('.loading').removeClass('is-loading');
+				$('.byte-text').addClass('is-loaded');
 			}
 		
 	}, 1000);
