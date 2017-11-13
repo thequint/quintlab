@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*Ctg-orange: #f8931f*/
+
+.filter-block .options li.ctg-orange a::before{
+	background-color: #f8931f;
+}
+
+
+/*Ctg-blue: #29aae3*/
+.filter-block .options li.ctg-blue a::before{
+	background-color: #29aae3;
+}
+
+
+
+/*Ctg-turquoise: #01a89e*/
+.filter-block .options li.ctg-turquoise a::before{
+	background-color: #01a89e;
+}
+
+
+/*Ctg-limegreen: #8cc63e*/
+.filter-block .options li.ctg-limegreen a::before{
+	background-color: #8cc63e;
+}
+
+
+/*Ctg-red: #c2272d*/
+.filter-block .options li.ctg-red a::before{
+	background-color: #c2272d;
+}
+
+/*Ctg-pink: #ed1e79*/
+
+.filter-block .options li.ctg-pink a::before{
+	background-color: #ed1e79;
+}
+
+
+
+
+

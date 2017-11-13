@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@media (max-width:1024px) {
+.header-top {
+	max-width: 480px;
+}
+.intro-text {
+	max-width: 700px;
+	font-size: 150%;
+	padding: 10px 0px;
+}
+.img-eng-text {
+	width: 38%;
+}
+}
+
