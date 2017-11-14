@@ -2,42 +2,86 @@
 
 /*Ctg-orange: #f8931f*/
 
-.filter-block .options li.ctg-orange a::before{
+.filter-block .options li.ctg-orange a::before,
+.chat-container li.ctg-orange .btn-more{
 	background-color: #f8931f;
 }
 
+.chat-container li.ctg-orange .profile-img{
+	border-color: #f8931f;
+}
+
+.chat-container li.ctg-orange .msg-text span{ 
+	color: #f8931f;
+}
 
 /*Ctg-blue: #29aae3*/
-.filter-block .options li.ctg-blue a::before{
+.filter-block .options li.ctg-blue a::before,
+.chat-container li.ctg-blue .btn-more{
 	background-color: #29aae3;
 }
 
+.chat-container ul li.ctg-blue .profile-img{
+	border-color: #29aae3;
+}
+
+.chat-container li.ctg-blue .msg-text span{ 
+	color: #29aae3;
+}
 
 
 /*Ctg-turquoise: #01a89e*/
-.filter-block .options li.ctg-turquoise a::before{
+.filter-block .options li.ctg-turquoise a::before,
+.chat-container li.ctg-turquoise .btn-more{
 	background-color: #01a89e;
 }
 
+.chat-container ul li.ctg-turquoise .profile-img{
+	border-color: #01a89e;
+}
+.chat-container li.ctg-turquoise .msg-text span{ 
+	color: #01a89e;
+}
 
 /*Ctg-limegreen: #8cc63e*/
-.filter-block .options li.ctg-limegreen a::before{
+.filter-block .options li.ctg-limegreen a::before,
+.chat-container li.ctg-limegreen .btn-more{
 	background-color: #8cc63e;
 }
 
+.chat-container ul li.ctg-limegreen .profile-img{
+	border-color: #8cc63e;
+}
+.chat-container li.ctg-limegreen .msg-text span{ 
+	color: #8cc63e;
+}
 
 /*Ctg-red: #c2272d*/
-.filter-block .options li.ctg-red a::before{
+.filter-block .options li.ctg-red a::before,
+.chat-container li.ctg-red .btn-more{
 	background-color: #c2272d;
 }
 
+.chat-container ul li.ctg-red .profile-img{
+	border-color: #c2272d;
+}
+.chat-container li.ctg-red .msg-text span{ 
+	color: #c2272d;
+}
 /*Ctg-pink: #ed1e79*/
 
-.filter-block .options li.ctg-pink a::before{
+.filter-block .options li.ctg-pink a::before,
+.chat-container li.ctg-pink .btn-more{
 	background-color: #ed1e79;
 }
 
+.chat-container ul li.ctg-pink .profile-img{
+	border-color: #ed1e79;
+}
 
+.chat-container li.ctg-pink .msg-text span{ 
+	color: #ed1e79;
+}
 
 
 

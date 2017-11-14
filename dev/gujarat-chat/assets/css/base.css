@@ -190,12 +190,25 @@ template {
 .wrapper, .container {
 	position: relative;
 }
-.clearfix:before, .clearfix:after, .section-content:after, .section-content:before, .wrapper:before, .wrapper:after, .container:before, .container:after, .row:before, .row:after, .collection-stories:after, .collection-stories:before {
+.clearfix:before, 
+.clearfix:after, 
+.wrapper:before, 
+.wrapper:after, 
+.container:before, 
+.container:after, 
+.row:before, 
+.row:after, 
+.chat-container li:after, 
+.chat-container li:before {
 	display: table;
 	line-height: 0;
 	content: "";
 }
-.clearfix:after, .wrapper:after, .container:after, .row:after, .section-content:after, .collection-stories:after {
+.clearfix:after, 
+.wrapper:after, 
+.container:after, 
+.row:after,  
+.chat-container li:after {
 	clear: both;
 }
 .clearfix {
