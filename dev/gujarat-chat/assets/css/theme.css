@@ -1,13 +1,13 @@
 @charset "utf-8";
 @font-face {
 	font-family: 'allerbold';
-	src: url('../fonts/aller_bd-webfont.ttf') format('woff2'),  url('../fonts/aller_bd-webfont.woff') format('woff');
+	src: url('../fonts/aller_bd-webfont.ttf') format('woff2'), url('../fonts/aller_bd-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'allerregular';
-	src: url('../fonts/aller_rg-webfont.woff2') format('woff2'),  url('../fonts/aller_rg-webfont.woff') format('woff');
+	src: url('../fonts/aller_rg-webfont.woff2') format('woff2'), url('../fonts/aller_rg-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -127,21 +127,19 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 	text-align: left;
 }
-.filter-block ul li{
+.filter-block ul li {
 	position: relative;
 }
-.filter-block ul.send-voice{
+.filter-block ul.send-voice {
 	border-top: 0;
 	padding-top: 0;
 }
-
-.filter-block ul.send-voice li a{
+.filter-block ul.send-voice li a {
 	display: inline-block;
 	position: relative;
 	padding-left: 10px;
 	color: #fff;
 }
-
 .filter-block ul.send-voice li a::before {
 	position: absolute;
 	width: 30px;
@@ -154,7 +152,6 @@ h1, h2, h3, h4, h5, h6 {
 .filter-block .gender li {
 	float: left;
 	margin: 0px 4px;
-
 }
 .filter-block .gender li.female {
 	margin-top: 2px;
@@ -171,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 	margin: 10px 0 0 5px;
 }
-
 .filter-block .options li {
 	margin-bottom: 10px;
 }
@@ -196,32 +192,29 @@ h1, h2, h3, h4, h5, h6 {
 .filter-block .options li a:hover, .filter-block .options li.is-active a {
 	color: #fff;
 }
-.chat-container{
+.chat-container {
 	margin: 30px 9% 0 9%;
 	height: 100%;
 }
-.chat-container ul li{
-	
+.chat-container ul li {
 }
 .chat-el {
 	max-width: 80%;
 	float: left;
 }
-
-.chat-el .show-el{
+.chat-el .show-el {
 	position: relative;
 }
-
-.chat-container ul li{display: block; position: relative; margin-bottom: 30px;}
-.chat-el .msg{
+.chat-container ul li {
+	display: block;
 	position: relative;
-
+	margin-bottom: 30px;
+}
+.chat-el .msg {
+	position: relative;
 	margin-left: 110px;
 }
-
-
-
-.chat-el .profile-img{
+.chat-el .profile-img {
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
@@ -233,15 +226,10 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: -5px;
 	left: 0;
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
-	
 }
-.chat-el .profile-img img{
+.chat-el .profile-img img {
 	border-radius: 100%;
-	
 }
-
-
-
 .chat-el .msg-text {
 	background: #fff;
 	position: relative;
@@ -252,15 +240,13 @@ h1, h2, h3, h4, h5, h6 {
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
 	line-height: 130%;
 	vertical-align: bottom;
-/*	display: table;*/
+	/*	display: table;*/
 	display: inline-block;
 }
-
-.chat-el .msg-text span{
+.chat-el .msg-text span {
 	color: #662C90;
 	font-weight: 700;
 }
-
 .chat-el .msg-text::after {
 	position: absolute;
 	content: "";
@@ -273,7 +259,6 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: transparent #fff transparent transparent;
 	box-shadow: 0px 2px 2px -3px rgba(0,0,0,0.5);
 }
-
 .chat-el .btn-more {
 	font-size: 12px;
 	text-transform: uppercase;
@@ -286,8 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 1px;
 	font-weight: 700;
 }
-
-.chat-el .hide-el{
+.chat-el .hide-el {
 	position: relative;
 	background: #fff;
 	padding: 13px;
@@ -295,65 +279,52 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1000;
 	border-width: 3px;
 	border-style: solid;
-	border-color:#fff;
+	border-color: #fff;
 	margin-top: -7px;
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-	display: none1;
+	display: none;
 }
-
-.chat-el .hide-el{
+.chat-el .hide-el {
 	font-size: 16px;
 }
-
-.personal-details{
+.personal-details {
 	margin: 15px 0 10px 0;
 }
-.personal-details p{
+.personal-details p {
 	margin: 10px 0 5px 0;
 }
-.personal-details h4{
+.personal-details h4 {
 	font-weight: 700;
 }
-
-
-.chat-container ul li.is-more .chat-el .msg-text, 
-.chat-container ul li.is-more .chat-el .msg-text span{
+.chat-container ul li.is-more .chat-el .msg-text, .chat-container ul li.is-more .chat-el .msg-text span {
 	color: #fff;
 }
-.chat-container ul li.is-more .chat-el .btn-more{
+.chat-container ul li.is-more .chat-el .btn-more {
 	background: #fff;
 }
-
-
 /*All even */
-.chat-container ul li:nth-child(even) .chat-el{
+.chat-container ul li:nth-child(even) .chat-el {
 	float: right;
 }
-
-.chat-container ul li:nth-child(even) .chat-el .profile-img{
+.chat-container ul li:nth-child(even) .chat-el .profile-img {
 	left: inherit;
 	right: 0;
 }
-.chat-container ul li:nth-child(even) .chat-el .msg{
+.chat-container ul li:nth-child(even) .chat-el .msg {
 	margin: 0 110px 0 0;
 	text-align: right;
 }
-
-.chat-container ul li:nth-child(even) .chat-el .msg-text{
+.chat-container ul li:nth-child(even) .chat-el .msg-text {
 	left: inherit;
 	right: 0;
 	text-align: left;
 }
-
-
 .chat-container ul li:nth-child(even) .chat-el .msg-text::after {
 	left: inherit;
 	right: -16px;
 	border-width: 0px 25px 25px 0;
 	border-color: transparent transparent #fff transparent;
 }
-
-.chat-container ul li:nth-child(even) .chat-el .hide-el{
+.chat-container ul li:nth-child(even) .chat-el .hide-el {
 	border-radius: 0px 8px 8px 8px;
 }
-
