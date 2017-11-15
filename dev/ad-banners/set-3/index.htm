@@ -528,7 +528,32 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   });
 
 </script>
+	<style>
+	
+	.close-ad{
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		width: 30px;
+		height: 30px;
+		background: #fff;
+		text-align: center;
+		line-height: 30px;
+		cursor: pointer;
+	}
+		.baltimore-background{
+			display: none !important;
+		}
+	</style>
+<script type="text/javascript" src="jquery.min.js"></script>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.close-ad').click(function(){
+			$('#div-gpt-ad-1506320259916-0').hide();
+		})
+	})
+	</script>
 
 </head>
 <body>
@@ -620,7 +645,7 @@ om58e49129e2603.init({s:"30536.58e49129e2603",staging:0,dev:0,beta:0}),a.onload=
 	
 
 <div id='div-gpt-ad-1506320259916-0' style='height:250px; width:300px; position: fixed; bottom: 0px;right: 10px; z-index:9999;'>
-
+<div class="close-ad">x</div>
 <script>
 
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1506320259916-0'); });
