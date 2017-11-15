@@ -56,7 +56,7 @@ function showInfo(data) {
 		       cat_class="ctg-orange";
 		        break;
 		    case "religion":
-		        cat_class="ctg-blueviolet";
+		        cat_class="ctg-blue";
 		        break;
 		    case "business":
 		        cat_class="ctg-turquoise";
@@ -65,7 +65,7 @@ function showInfo(data) {
 		        cat_class="ctg-limegreen";
 		        break;
 		    case "amenities":
-		        cat_class="ctg-brown";
+		        cat_class="ctg-red";
 		        break;
 
 		    default:
