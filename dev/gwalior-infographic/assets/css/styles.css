@@ -43,8 +43,9 @@ img {
     background-color: #fff;
 }
 .pattern-rectangle {
+	display: block;
 	width: 100%;
-	height: 40px;
+	height: 32px;
 	float: left;
 	background-image: url(../images/pattern-rectangle.svg);
 	background-repeat: repeat-x;
@@ -52,6 +53,7 @@ img {
 	background-position: center;
 }
 .pattern-duck {
+	display: block;
 	width: 100%;
 	height: 40px;
 	float: left;
@@ -62,6 +64,7 @@ img {
 	background-color: #1f7de9;
 }
 .pattern-diamond {
+	display: block;
 	width: 100%;
 	height: 23px;
 	float: left;
@@ -73,6 +76,7 @@ img {
 	border-bottom: 2px #0662c6 solid;
 }
 .pattern-fort {
+	display: block;
 	width: 100%;
 	height: 130px;
 	float: left;
@@ -84,6 +88,7 @@ img {
 	/*border-bottom: 2px #0662c6 solid;*/
 }
 .pattern-arrow {
+	display: block;
 	width: 100%;
 	height: 40px;
 	float: left;
@@ -95,6 +100,7 @@ img {
 	border-bottom: 2px #0662c6 solid;
 }
 .pattern-square {
+	display: block;
 	width: 100%;
 	height: 64px;
 	float: left;
@@ -105,6 +111,7 @@ img {
 	/*background-color: #f8c401;*/
 }
 .pattern-circle {
+	display: block;
 	width: 100%;
 	height: 40px;
 	float: left;
@@ -351,8 +358,9 @@ img {
 	margin-bottom: -23%;
 }
 .main-wrap--header__pattern-texture {
+	display: block;
 	position: absolute;
-	bottom: 80px;
+	bottom: 70px;
 	width: 100%;
 	height: 73px;
 	float: left;
