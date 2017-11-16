@@ -37,24 +37,24 @@ $(document).ready(function () {
 //});
 
 
-$(".chat-container ul li").click(function(e){
+$(".chat-el").click(function(e){
 	
-	if($(this).hasClass("is-more")){
-		$(this).removeClass("is-more").find(".hide-el").slideUp(350);
+	if($(this).parent().hasClass("is-more")){
+		$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
 	}
 	
 	else {
 		
 	var this_var = $(this);	
 		
-	$(".chat-container ul li").each(function(){
+	$(".chat-el").each(function(){
 		
-		if($(this)!=this_var && $(this).hasClass("is-more")){
-			$(this).removeClass("is-more").find(".hide-el").slideUp(350);
+		if($(this)!=this_var && $(this).parent().hasClass("is-more")){
+			$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
 		}
 	});
 	
-	$(this).addClass("is-more").find(".hide-el").slideDown(350);
+	$(this).parent().addClass("is-more").find(".hide-el").slideDown(350);
 	
 	}
 	

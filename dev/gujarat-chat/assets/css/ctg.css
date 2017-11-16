@@ -108,30 +108,30 @@
 	border-color: transparent transparent #8cc63e transparent;
 }
 
-/*Ctg-red: #c2272d*/
+/*Ctg-red: #9B0E18*/
 .filter-block .options li.ctg-red a::before,
 .chat-container li.ctg-red .btn-more,
 .chat-container li.ctg-red.is-more .msg-text{
-	background-color: #c2272d;
+	background-color: #9B0E18;
 }
 
 .chat-container li.ctg-red .profile-img,
 .chat-container li.ctg-red .chat-el .hide-el{
-	border-color: #c2272d;
+	border-color: #9B0E18;
 }
 
 .chat-container li.ctg-red .msg-text span,
 .chat-container li.ctg-red.is-more .chat-el .btn-more,
 .chat-container li.ctg-red .personal-details h4 label{ 
-	color: #c2272d;
+	color: #9B0E18;
 }
 
 .chat-container li.ctg-red.is-more .msg-text::after{
-	border-color: transparent #c2272d transparent transparent;
+	border-color: transparent #9B0E18 transparent transparent;
 }
 
 .chat-container ul li:nth-child(even).ctg-red.is-more .msg-text::after{
-	border-color: transparent transparent #c2272d transparent;
+	border-color: transparent transparent #9B0E18 transparent;
 }
 
 
