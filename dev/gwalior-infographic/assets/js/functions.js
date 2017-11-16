@@ -16,8 +16,13 @@ $(document).ready(function() {
 
     $(".popup-bt").click(function(e) {
         $(".info-popup").show();
-        $(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() -  $(".info-popup").height()/2 });
-
+        $(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() -  $(".info-popup").height()/2  });
+        if($(this).hasClass('click-even')) {
+            $(".info-popup").css({ "left": $(".main-wrap").width()/20  });
+        }else {
+            $(".info-popup").css({ "left": "inherit"  });       
+            $(".info-popup").css({ "right": $(".main-wrap").width()/20  });    
+        }
         $(".info-popup img").attr("src",$(this).attr("data-img"));
         $(".info-popup h3").html($(this).attr("data-heading"));
         $(".info-popup p").html($(this).attr("data-text"));
