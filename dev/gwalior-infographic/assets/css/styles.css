@@ -958,6 +958,19 @@ img {
 	.footer--how-to-reach .icons.cabs {
 		width: 70px;
 	}
+
+	.cloud-first {
+	    width: 200px;
+	    animation-duration: 15s;
+	}
+	.cloud-second {
+	    width: 170px;
+	    animation-duration: 5s;
+	}
+	.cloud-third {
+	    width: 150px;
+	    animation-duration: 10s;
+	}
 }
 @media only screen and (max-width: 480px) {
 	.main-wrap--header__know-more {
