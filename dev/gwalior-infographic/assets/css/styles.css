@@ -603,12 +603,13 @@ img {
 	background-position: top left;
 }
 
-.main-wrap--header .bird-first {
+.bird-first {
 	position: absolute;
     top: 20%;
     left: 0;
     width: 100px;
     animation-duration: 8s;
+    z-index: 2;
 }
 
 /* Animations */
@@ -961,15 +962,32 @@ img {
 
 	.cloud-first {
 	    width: 200px;
-	    animation-duration: 15s;
+	    animation-duration: 17s;
 	}
 	.cloud-second {
+		top: 22%;
 	    width: 170px;
-	    animation-duration: 5s;
+	    animation-duration: 8s;
 	}
 	.cloud-third {
+		top: 35%;
 	    width: 150px;
-	    animation-duration: 10s;
+	    animation-duration: 12s;
+	}
+
+	.bird-first {
+	    top: 45%;
+	    width: 55px;
+	    animation-duration: 8s;
+	}
+
+	@keyframes slide{
+		0%{
+			transform: translate3d(-10vw, 0, 0);
+		}
+		100%{
+			transform: translate3d(110vw, -180px, 0);
+		}
 	}
 }
 @media only screen and (max-width: 480px) {
