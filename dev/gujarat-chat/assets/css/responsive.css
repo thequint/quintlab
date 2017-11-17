@@ -1,111 +1,87 @@
 @charset "utf-8";
 
 @media (max-width:1219px) {
-
-	.chat-wrapper .container{
-		height: 100%;
-		top: 0;
-		border-radius: 0;
-	}
-
+.chat-wrapper .container {
+	height: 100%;
+	top: 0;
+	border-radius: 0;
+}
 }
 
 @media (max-width:980px) {
-	.chat-wrapper .container{
-		height: calc(100% - 55px);
-		top: 55px;
-		
-	}
-	.sticky-top-wrapper{
-		display: block;
-	}
-	
-	.share-chat{
-		position: fixed;
-		top: 8px;
-		right: 15px;
-	}
-	.window-header h1{
-		display: none;
-	}
-	
-	.sidebar{
-		display: none;
-	}
-	.chat-window{
-		float: none;
-		width: 100%;
-	}
+.chat-wrapper .container {
+	height: calc(100% - 55px);
+	top: 55px;
+}
+.sticky-top-wrapper {
+	display: block;
+}
+.share-chat {
+	position: fixed;
+	top: 8px;
+	right: 15px;
+}
+.window-header h1 {
+	display: none;
+}
+.sidebar {
+	display: none;
+}
+.chat-window {
+	float: none;
+	width: 100%;
+}
 }
 
 @media (max-width:767px) {
-	.chat-container ul li{
-		margin-bottom: 20px;
-	}
-	
-	.chat-container{
-		margin: 0 15px;
-	}
-	
-	.inner-caption{
-		width: 400px;
-	}
-	
-	.chat-el {
+.chat-container ul li {
+	margin-bottom: 20px;
+}
+.chat-container {
+	margin: 0 15px;
+}
+.inner-caption {
+	width: 400px;
+}
+.chat-el {
 	max-width: 100%;
-	
 }
-	
-	.chat-el .profile-img{
-		width: 80px;
-		height: 80px;
-		bottom: 0;
-	}
-	
-	.chat-el .msg{
-		margin-left: 88px;
-	}
-	
-	.chat-container ul li:nth-child(2n) .chat-el .msg {
+.chat-el .profile-img {
+	width: 80px;
+	height: 80px;
+	bottom: 0;
+}
+.chat-el .msg {
+	margin-left: 88px;
+}
+.chat-container ul li:nth-child(2n) .chat-el .msg {
 	margin: 0 88px 0 0;
-	
 }
-	
-	
-	
 }
 
 @media (max-width:500px) {
-	
-	body{
-		font-size: 16px;
-	}
-	.sticky-top-wrapper h2{
-		font-size: 26px;
-	}
-	.inner-caption{
-		width: 80%;
-	}
-	
+body {
+	font-size: 16px;
+}
+.sticky-top-wrapper h2 {
+	font-size: 26px;
+}
+.inner-caption {
+	width: 80%;
+}
 .inner-caption h2 {
 	line-height: 116%;
 	font-size: 14px;
 }
-	.inner-caption h3 {
+.inner-caption h3 {
 	line-height: 110%;
 	margin-top: 6px;
 	font-size: 14px;
 }
-	
-	.chat-el .msg-text{
-		line-height: 120%;
-	}
-	
-	.chat-el .msg-text{
-		padding: 8px 10px;
-	}
-	
+.chat-el .msg-text {
+	line-height: 120%;
 }
-
-
-
+.chat-el .msg-text {
+	padding: 8px 10px;
+}
+}
