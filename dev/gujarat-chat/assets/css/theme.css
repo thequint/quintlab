@@ -21,6 +21,11 @@ body {
 	color: #4d4d4d;
 	overflow: hidden;
 	font-size: 17px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	transform: translateZ(0px);
+	
 }
 p {
 	line-height: 130%;
@@ -121,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .filter-block ul {
 	padding: 20px 8px;
-	border-top: 1px solid #fff;
+	border-top: 1px solid #F9920B;
 	min-width: 200px;
 	font-size: 22px;
 	text-transform: uppercase;
@@ -142,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 .filter-block ul.send-voice li a:hover {
-	color: #FFBF00;
+	color: #F9920B;
 }
 .filter-block ul.send-voice li a::before {
 	position: absolute;
@@ -156,6 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 .filter-block .gender li {
 	float: left;
 	margin: 0px 4px;
+	color: #F9920A;
 }
 .filter-block .gender li.female {
 	margin-top: 2px;
@@ -194,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding-left: 30px;
 }
 .filter-block .options li a:hover, .filter-block .options li.is-active a {
-	color: #fff;
+	color: #F9920A;
 }
 .chat-container {
 	margin: 30px 9% 0 9%;
@@ -415,6 +421,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	z-index: 9999;
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	transform: translateZ(0px);
 	display: none;
@@ -437,3 +445,90 @@ h1, h2, h3, h4, h5, h6 {
 	left: 15px;
 	transform: translateZ(0px);
 }
+
+.sticky-footer-wrapper{
+	background: #9B0E18;
+	height: 55px;
+	text-align: center;
+	z-index: 9999;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transform: translateZ(0px);
+	display: none;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+
+.sticky-footer-wrapper li{
+	float: left;
+	width: 50%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+}
+.sticky-footer-wrapper li.send-voice{
+	border-right: 1px solid #F9920B;
+}
+.sticky-footer-wrapper li.link-filter{
+	border-left: 1px solid #F9920B;
+}
+
+
+.sticky-footer-wrapper li a{
+	display: block;
+	line-height: 55px;
+	color: #fff;
+}
+.sticky-footer-wrapper li a:hover, .sticky-footer-wrapper li.is-active a{
+	color: #F9920B;
+}
+
+.sticky-footer-wrapper li a span{
+	display: inline-block;
+	position: relative;
+}
+.sticky-footer-wrapper li.send-voice span{padding-left: 26px;}
+.sticky-footer-wrapper li.send-voice span::before {
+	position: absolute;
+	width: 24px;
+	height: 30px;
+	top: 10px;
+	left: 0px;
+	content: '';
+	background: url(../images/send.svg) no-repeat 100%;
+}
+
+
+.sticky-footer-wrapper li.link-filter span{padding-left: 26px;}
+.sticky-footer-wrapper li.link-filter span::before {
+	position: absolute;
+	width: 21px;
+	height: 30px;
+	top: 12px;
+	left: 0px;
+	content: '';
+	background: url(../images/filter.svg) no-repeat 100%;
+}
+
+.close-filter{
+	display: none;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: #F9920B;
+	border-radius: 100%;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+}
+.close-filter:hover{
+	color: #9B0E18;
+}
+
+

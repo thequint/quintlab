@@ -18,6 +18,19 @@ $(document).ready(function () {
 
 	});
 	
+	//
+	
+	$('.link-filter').click(function(){
+		$('.sidebar').toggleClass('is-open');
+		$(this).toggleClass('is-active');
+	});
+	
+	$('.close-filter').click(function(){
+		$('.sidebar').removeClass('is-open');
+		$('.link-filter').removeClass('is-active');
+	});
+	
+	
 });
 
 
