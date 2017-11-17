@@ -391,7 +391,7 @@ transform:translateY(4px) rotate(90deg)
 	
 }
 .share-ico {
-	background: #9B0E18 url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
+	background: #F9920B url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
 	border-radius: 100%;
 	display: block;
 	font-size: 0;
@@ -408,7 +408,7 @@ transform:translateY(4px) rotate(90deg)
 	margin-top: 10px;
 }
 .social-ico li a {
-	background: #9B0E18;
+	background: #F9920B;
 	border-radius: 100%;
 	display: block;
 	font-size: 20px;
@@ -425,7 +425,7 @@ transform:translateY(4px) rotate(90deg)
 	line-height: 40px;
 }
 .social-ico li a:hover {
-	color: #FFBF00;
+	color: #9B0E18;
 }
 
 @media (max-width:767px) {
@@ -443,6 +443,7 @@ transform:translateY(4px) rotate(90deg)
 .social-ico li {
 	margin-top: 7px;
 }
+/*
 .share-ico, .social-ico li a {
 	width: 35px;
 	height: 35px;
@@ -450,6 +451,7 @@ transform:translateY(4px) rotate(90deg)
 .social-ico li a i {
 	line-height: 35px;
 }
+*/
 }
 
 @-webkit-keyframes spin{

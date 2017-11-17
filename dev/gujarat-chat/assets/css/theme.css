@@ -365,16 +365,21 @@ h1, h2, h3, h4, h5, h6 {
 .inner-caption h3{color:#C1272D; line-height: 130%; margin-top: 10px;}
 
 .caption-text {
-	padding: 20px 0;
+	padding: 0px 0;
 	border-radius: 10px;
 	background: #F9920B;
 	position: relative;
 	height: 110px;
+	
 }
 
 .cap-z-index{
 	position: relative;
 	z-index: 2;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .caption-text::before, .caption-text::after{
@@ -413,5 +418,38 @@ h1, h2, h3, h4, h5, h6 {
 .inner-caption::after {
 	right: -47px;
 	background: url(../images/right-bk-2.svg) no-repeat;
+}
+
+.sticky-top-wrapper{
+	background: #9B0E18;
+	height: 55px;
+	text-align: center;
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	transform: translateZ(0px);
+	display: none;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0px 2px 3px 0px rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+.sticky-top-wrapper h2{
+	display: inline-block;
+	color: #fff;
+	font-size: 30px;
+	line-height: 53px;
+	font-weight: 700;
+	letter-spacing: -2px;
+}
+
+.logo-ico{
+	width: 40px;
+	position: fixed;
+	top: 8px;
+	left: 15px;
+	transform: translateZ(0px);
+	
+	
 }
 
