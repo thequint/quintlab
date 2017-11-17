@@ -56,7 +56,7 @@
 	margin: 0;
 }
 .filter-block ul {
-	padding: 10px 5px;
+	padding: 10px 5px 15px 0;
 }
 .filter-block ul.gender {
 	border-top: 0;
@@ -72,6 +72,9 @@
 	height: 18px;
 	top: 0px;
 }
+	.filter-block .options li{
+		margin-bottom: 13px;
+	}
 .filter-block .options li a {
 	display: block;
 	padding-left: 26px;
