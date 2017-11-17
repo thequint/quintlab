@@ -23,6 +23,7 @@ $(document).ready(function() {
             $(".info-popup").css({ "left": "inherit"  });       
             $(".info-popup").css({ "right": $(".main-wrap").width()/20  });    
         }
+        $(".info-popup img").attr("src","");
         $(".info-popup img").attr("src",$(this).attr("data-img"));
         $(".info-popup h3").html($(this).attr("data-heading"));
         $(".info-popup p").html($(this).attr("data-text"));
@@ -30,6 +31,8 @@ $(document).ready(function() {
 
     $(".close-icon").click(function() {
         $(".info-popup").hide();
+         $(".info-popup img").attr("src","");
+        $(".info-popup img").attr("src",$(this).attr("data-img"));
     });
 
     // Document Click
