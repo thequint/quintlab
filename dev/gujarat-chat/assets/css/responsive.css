@@ -39,6 +39,9 @@
 }
 
 @media (max-width:767px) {
+	.chat-container ul li{
+		margin-bottom: 20px;
+	}
 	
 	.chat-container{
 		margin: 0 15px;
