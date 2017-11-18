@@ -34,23 +34,11 @@ $(document).ready(function () {
 });
 
 
-//$('.show-el').click(function(e) {
-//  	e.preventDefault();
-//    var $this = $(this);
-//    if ($this.next().hasClass('hide-el')) {
-//        $this.next().removeClass('hide-el');
-//        $this.next().slideUp(350);
-//		$this.addClass('is-more');
-//    } else {
-//        $this.parent().parent().find('li .inner').removeClass('show');
-//        $this.parent().parent().find('li .inner').slideUp(350);
-//        $this.next().toggleClass('hide-el');
-//        $this.next().slideToggle(350);
-//    }
-//});
 
 
-$(".chat-el").click(function(e){
+ function moreData(){
+
+$(".chat-el").click(function(){
 	
 	if($(this).parent().hasClass("is-more")){
 		$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
@@ -63,20 +51,17 @@ $(".chat-el").click(function(e){
 	$(".chat-el").each(function(){
 		
 		if($(this)!=this_var && $(this).parent().hasClass("is-more")){
+			
 			$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
+			
 		}
 	});
 	
 	$(this).parent().addClass("is-more").find(".hide-el").slideDown(350);
 	
+		$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
+		
 	}
-	
-//	if ($(this).hasClass("is-more")){
-//      $(this).removeClass("is-more").find(".hide-el").slideUp(350);
-//    }
 });
-
-
-
-
-
+	 
+	 }

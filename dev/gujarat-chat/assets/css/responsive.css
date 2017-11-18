@@ -24,7 +24,6 @@
 .window-header h1 {
 	display: none;
 }
-
 .chat-window {
 	float: none;
 	width: 100%;
@@ -44,11 +43,9 @@
 	border-radius: 20px 0 0 0;
 	transition: 0.5s bottom ease-in-out;
 }
-
-	.sidebar.is-open{
-		bottom: 55px;
-	}
-	
+.sidebar.is-open {
+	bottom: 55px;
+}
 .sidebar-iner {
 	padding: 10px 10px 0px 10px;
 }
@@ -72,9 +69,9 @@
 	height: 18px;
 	top: 0px;
 }
-	.filter-block .options li{
-		margin-bottom: 13px;
-	}
+.filter-block .options li {
+	margin-bottom: 13px;
+}
 .filter-block .options li a {
 	display: block;
 	padding-left: 26px;
