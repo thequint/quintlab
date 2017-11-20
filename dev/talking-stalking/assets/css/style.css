@@ -1,0 +1,1432 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: auto;
+    color: #fff;
+    background-color: #3D4356;
+    font-weight: 400;
+    font-family: 'Merriweather', serif;
+    
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+h1, h2, h3, h4 {
+    font-weight: 400;
+    font-family: 'Merriweather', serif;
+}
+a {
+    outline: none;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+/* Logo */
+.quint-logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    z-index: 9999;
+    display: block;
+}
+.quint-logo img {
+    width: 100%;
+}
+
+/* Parallax */
+.horizon {
+    top: 0;
+    line-height: 0;
+    z-index: 100;
+    width: 4500px;
+    padding-left: 80px;
+}
+.horizon img {
+    width: 60%;
+}
+.middle {
+    z-index: 250;
+    line-height: 0;
+    width: 4500px;
+}
+.scroll {
+
+}
+
+/* Wrap */
+.front {
+    z-index: 500;
+    top: 0;
+    width: 5000px;
+
+}
+.section {
+    left: 0;
+    top: 0px;
+    width: 25%;
+    min-height: 550px;
+    position: absolute;
+}
+
+/*  //////// */
+
+.section.first {
+    height: 100%;
+}
+.section.first .first--logo {
+    position: absolute;
+    top: 40px;
+    left: 2.8%;
+    width: 340px;
+    border-radius: 100%; 
+}
+.section.first .first--content {
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    max-width: 483px;
+}
+.section.first .first--content h2 {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    /*letter-spacing: 1px;*/
+}
+.section.first .first--content p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.section.first .first--content__btn {
+
+}
+.section.first .first--content__btn:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.section.first .first--content .btn-left {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+.section.first .first--content .btn-right {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+.section.first .first--content a.btn {
+    font-size: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    color: #fff;
+    background-color: #3D4356;
+}
+.section.first .first--content a.btn:hover {
+    background-color: #fff;
+    color: #3D4356;
+}
+/*.section.first .first--content a.btn.signup {
+    background-color: #fff;
+    color: #3D4356;
+}
+.section.first .first--content a.btn.signup:hover {
+    background-color: transparent;
+    color: #fff;
+}*/
+.section.first .first--testimonials {
+    position: absolute;
+    top: 148px;
+    left: 37%;
+    max-width: 250px;
+}
+.section.first .first--testimonials h3 {
+    font-size: 30px;
+    color: #65AEA1;
+    text-transform: uppercase;
+}
+.section.first .first--testimonials p {
+    color: #fff;
+    font-size: 12px;
+}
+.section.first .first--quote-comment {
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    top: 290px;
+    left: 54%;
+    width: 150px;
+    height: 170px;
+    background-image: url(../images/quote-comment.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.section.first .first--quote-comment span {
+    display: block;
+}
+.section.first .first--quote-comment__content {
+    width: 100%;
+    padding: 15px 9px 22px;
+    /*background-color: rgba(0,0,0,0.5);*/
+    border-radius: 35px;
+}
+.section.first .first--quote-comment .txt-top {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.section.first .first--quote-circle {
+    font-size: 17px;
+    color: #b2b7b5;
+    position: absolute;
+    top: 250px;
+    left: 75.8%;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/quote-circle.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.section.first .first--quote-circle span {
+    display: block;
+}
+.section.first .first--quote-circle__content {
+    width: 100%;
+    height: 200px;
+    padding: 45px 0 0 28px;
+    /*background-color: rgba(0,0,0,0.5);*/
+    border-radius: 100%;
+}
+.section.first .first--quote-circle .txt-top {
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* Dot icon */
+/* Red */
+.section.first .red-dot-first {
+    position: absolute;
+    top: 340px;
+    left: 4%;
+    width: 12px;
+}
+.section.first .red-dot-second {
+    position: absolute;
+    top: 290px;
+    left: 87.5%;
+    width: 12px;
+}
+/* Red Leaf */
+.section.first .red-leaf-first {
+    position: absolute;
+    top: 335px;
+    left: 50%;
+    width: 20px;
+}
+.section.first .red-leaf-second {
+    position: absolute;
+    top: 182px;
+    left: 73%;
+    width: 45px;
+}
+.section.first .red-leaf-third {
+    position: absolute;
+    top: 267px;
+    left: 93.7%;
+    width: 65px;
+}
+/* Yellow */
+.section.first .yellow-dot-first {
+    position: absolute;
+    top: 265px;
+    left: 65.5%;
+    width: 12px;
+}
+.section.first .yellow-dot-second {
+    position: absolute;
+    top: 459px;
+    left: 77.5%;
+    width: 12px;
+}
+/* Eye */
+.section.first .eye-first {
+    position: absolute;
+    top: 487px;
+    left: 85%;
+    width: 40px;
+}
+.section.first .eye-second {
+    position: absolute;
+    top: 183px;
+    left: 92%;
+    width: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     //////////////////////////////       */
+.section.second {
+    left: 25%;
+    height: 100%;
+    /*background-color: rgba(255,255,255,0.1);*/
+}
+.section.second .talking--quote {
+    font-size: 18px;
+    color: #a9aaa9;
+    position: absolute;
+    top: 110px;
+    left: 10%;
+    width: 210px;
+    height: 210px;
+    background-image: url(../images/talking-quote.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.section.second .talking--quote__content {
+    padding-top: 55px;
+    width: 100%;
+    min-height: 110px;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+.section.second .talking--quote span {
+    display: block;
+}
+.section.second .talking--quote .txt-top {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.section.second .black--quote {
+    font-size: 15px;
+    color: #a9aaa9;
+    position: absolute;
+    top: 185px;
+    left: 45%;
+    width: 160px;
+    height: 230px;
+    background-image: url(../images/black-quote.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.section.second .black--quote__content {
+    width: 100%;
+    padding: 49px 14px;
+    min-height: 110px;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+.section.second .black--quote span {
+    display: block;
+}
+.section.second .black--quote .txt-top {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.section.second .colon--quote {
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    top: 250px;
+    left: 75%;
+    width: 160px;
+    height: 230px;
+    background-image: url(../images/colon-quote.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.section.second .colon--quote__content {
+    width: 100%;
+    /*padding:12px;*/
+    padding: 105px 12px 12px 12px;
+    min-height: 125px;
+}
+.section.second .colon--quote span {
+    display: block;
+}
+.section.second .colon--quote .txt-top {
+    display: block;
+    margin-bottom: 20px;
+}
+.section.second .tweet--box {
+    position: absolute;
+    bottom: 60px;
+    left: 5%;
+    width: 180px;
+    height: 180px;
+    padding: 15px;
+    color: #e5e5e5;
+    font-size: 11px;
+    background-color: #646977;
+}
+.section.second .tweet--box p {
+    margin-bottom: 10px;
+}
+.section.second .tweet--scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    width: 75%;
+    padding-left: 10px;
+}
+
+.section.second .tweet--scroll__bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ccc;
+}
+.section.second .tweet--scroll__logo {
+    position: absolute;
+    top: -19px;
+    left: 0;
+    width: 40px;
+    height: 30px;
+}
+.section.second .tweet--scroll__cricle span {
+    position: absolute;
+    left: 15%;
+    top: -5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #ccc;
+}
+.section.second .tweet--scroll__cricle span:nth-child(2) {
+    left: 50%;
+}
+.section.second .tweet--scroll__cricle span:nth-child(3) {
+    left: 80%;
+}
+.section.second .tweet--scroll__right-sep {
+    position: absolute;
+    top: -11px;
+    right: 0;
+    width: 6px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #ccc;
+}
+
+.section.second .circle--net {
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    width: 300px;
+    z-index: -1;
+}
+
+/* Yellow */
+.section.second .yellow-dot-first {
+    position: absolute;
+    top: 84px;
+    left: 22.5%;
+    width: 12px;
+}
+.section.second .yellow-dot-second {
+    position: absolute;
+    top: 510px;
+    left: 93%;
+    width: 24px;
+}
+/* Red Leaf */
+.section.second .red-leaf-first {
+    position: absolute;
+    top: 320px;
+    left: 11%;
+    width: 25px;
+}
+.section.second .red-leaf-second {
+    position: absolute;
+    top: 215px;
+    left: 37%;
+    width: 12px;
+}
+.section.second .red-leaf-third {
+    position: absolute;
+    top: 50px;
+    left: 41%;
+    width: 50px;
+}
+.section.second .red-leaf-forth {
+    position: absolute;
+    top: 409px;
+    left: 64.5%;
+    width: 25px;
+}
+.section.second .red-leaf-fifth {
+    position: absolute;
+    top: 175px;
+    left: 78%;
+    width: 15px;
+}
+
+/* Eye */
+.section.second .eye-first {
+    position: absolute;
+    top: 59px;
+    left: 39%;
+    width: 100px;
+}
+.section.second .eye-second {
+    position: absolute;
+    top: 361px;
+    left: 39.5%;
+    width: 40px;
+}
+.section.second .eye-third {
+    position: absolute;
+    top: 78px;
+    left: 64%;
+    width: 70px;
+}
+.section.second .eye-forth {
+    position: absolute;
+    top: 340px;
+    left: 65%;
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+
+/*     ////////////////////       */
+.section.third {
+    left: 50%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+}
+.section.third .row-top {
+    margin: 40px auto 0;
+    width: 84%;
+    /*background-color: #ddd;*/
+}
+.section.third .row-top:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.section.third .row-top .col-left {
+    width: 47%;
+    float: left;
+    padding-right: 80px;
+}
+.section.third .row-top .col-left--headline {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.section.third .row-top .col-left--headline span {
+    font-weight: 700;
+    color: #65aea1;
+    text-transform: uppercase;
+}
+.section.third .row-top .col-left--scroll {
+    padding: 20px 10px;
+    color: #000;
+    width: 100%;
+    font-weight: 700;
+    overflow: auto;
+    background-color: #fff;
+}
+.section.third .row-top .col-left--scroll ul {
+    width: 100%;
+    height: 290px;
+    overflow: auto;
+    padding-right: 10px;
+}
+.section.third .row-top .col-left--scroll li:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.section.third .row-top .col-left--scroll li {
+    margin-bottom: 25px;
+}
+.section.third .row-top .col-left--scroll li:last-child {
+    margin-bottom: 0;
+}
+.section.third .row-top .col-left--scroll__date {
+    float: left;
+    font-size: 14px;
+    width: 110px;
+    display: inline-block;
+}
+.section.third .row-top .col-left--scroll__content {
+    float: left;
+    font-size: 12px;
+    width: calc(100% - 110px);
+    display: inline-block;
+}
+
+/* */
+
+.section.third .row-top .col-right {
+    width: 53%;
+    float: left;
+}
+.section.third .row-top .col-right--headline {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.section.third .row-top .col-right--headline span {
+    font-weight: 700;
+    color: #65aea1;
+    text-transform: uppercase;
+}
+.section.third .row-top .col-right--slider {
+    color: #000;
+    width: 100%;
+    height: 375px;
+    background-color: #fff;
+}
+
+.vertical-slider {
+    position: relative;
+    top: -15px;
+    left: 15px;
+    width: 85%;
+}
+.vertical-slider figcaption {
+    padding-top: 10px;
+}
+/* Slick Custom CSS */
+.slick-dots {
+    right: -37px;
+    top: 35%;
+    bottom: 0;
+    width: 20px;
+}
+.slick-dots li button {
+    padding: 32px;
+}
+.slick-dots li button:before {
+    font-size: 22px;
+    line-height: 22px;
+}
+
+
+.section.third .row-bottom {
+    margin: 0 auto;
+    width: 96%;
+}
+.section.third .row-bottom:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.section.third .row-bottom--headline {
+    font-size: 24px;
+    color: #fff;
+    padding-left: 40px;
+    text-transform: uppercase;
+}
+.section.third .row-bottom--col-third {
+    padding: 0 40px;
+    float: left;
+    width: 33.33%;
+}
+.section.third .row-bottom--col-third__sub-headline {
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #000;
+}
+.section.third .row-bottom--col-third__content {
+    padding: 10px 15px;
+    color: #000;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Red Leaf */
+.section.third .red-leaf-first {
+    position: absolute;
+    top: 366px;
+    left: 3%;
+    width: 25px;
+}
+.section.third .red-leaf-second {
+    position: absolute;
+    top: 185px;
+    left: 43%;
+    width: 17px;
+}
+.section.third .red-leaf-third {
+    position: absolute;
+    top: 522px;
+    right: 32%;
+    width: 25px;
+}
+.section.third .red-leaf-forth {
+    position: absolute;
+    top: 392px;
+    right: 0;
+    width: 66px;
+}
+
+/* Eye */
+.section.third .eye-first {
+    position: absolute;
+    top: 435px;
+    left: 2%;
+    width: 35px;
+}
+
+.section.third .yellow-dot-first {
+    position: absolute;
+    top: 500px;
+    right: 18%;
+    width: 12px;
+}
+
+
+/* ////////////////////////// */
+.section.forth {
+    left: 75%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+.section.forth .col-left {
+    margin-top: 50px;
+    float: left;
+    width: 50%;
+    padding: 0 80px;
+}
+.section.forth .col-left--headline {
+    font-size: 24px;
+    color: #65aea1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.section.forth .col-left--content-box {
+    padding: 10px;
+    color: #000;
+    min-height: 220px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.section.forth .col-right {
+    margin-top: 50px;
+    float: left;
+    width: 50%;
+    padding: 0 80px;
+}
+.section.forth .col-right--headline {
+    font-size: 24px;
+    color: #65aea1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.section.forth .col-right--content-box {
+    background-color: #fff;
+    min-height: 300px;
+    margin-bottom: 20px;
+}
+
+.section.forth .circle--net {
+    position: absolute;
+    bottom: 22px;
+    left: 23.5%;
+    width: 379px;
+    z-index: -1;
+}
+
+/* Red Leaf */
+.section.forth .red-leaf-first {
+    position: absolute;
+    top: 35px;
+    left: 25%;
+    width: 27px;
+}
+.section.forth .red-leaf-second {
+    position: absolute;
+    top: 45px;
+    left: 51%;
+    width: 35px;
+}
+.section.forth .red-leaf-third {
+    position: absolute;
+    top: 500px;
+    left: 52%;
+    width: 27px;
+}
+.section.forth .red-leaf-forth {
+    position: absolute;
+    top: 520px;
+    left: 80%;
+    width: 35px;
+}
+
+.prev-arrow {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+    background-color: #ccc;
+}
+.next-arrow {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+    background-color: #ccc;
+}
+
+
+
+/* Popup */
+
+.popup-btn {
+    cursor: pointer;
+}
+
+.popup-box {
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -ms-transform: translateY (-50%);
+    -webkit-transform: translateY (-50%);
+    -moz-transform: translateY (-50%);
+    -o-transform: translateY (-50%);
+    transform: translateY(-50%);
+    z-index: 9999;
+    max-width: 634px;
+    /*height: 356px;*/
+    color: #fff;
+    font-size: 21px;
+    font-weight: 400;  
+    background-color: #5db3b2;
+    box-shadow: 10px 10px 70px #000;
+    border-radius: 3px;
+}
+.popup-box--content {
+    padding: 20px;
+}
+.popup-box--content h3 {
+    font-size: 26px;
+    color: #fff;
+}
+.popup-box--content p {
+    font-size: 18px;
+    color: #fff;
+}
+.popup-box .close-icon {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background-color: #fff;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    cursor: pointer;
+    color: #5db3b2;
+    font-weight: bold;
+    transition: 0.1s all ease-in-out;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: #3D4356;
+        background-image: url(../images/parallax-mobile.svg);
+        background-size: 75%;
+        background-position: center 50px;
+        background-repeat: no-repeat;
+    }
+
+    .section {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        position: relative;
+    }
+    .first-assets {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        padding: 100% 0;
+        /*background-color: #ccc;*/
+        /*z-index: 99999999*/
+    }
+
+    .section.first .red-dot-first {
+        top: 5%;
+        left: 4%;
+    }
+    .section.first .red-dot-second {
+        top: 51%;
+        left: 87.5%;
+    }
+    /* Red Leaf */
+    .section.first .red-leaf-first {
+        top: 62%;
+        left: 50%;
+    }
+    .section.first .red-leaf-second {
+        top: 8%;
+        left: 58%;
+    }
+    .section.first .red-leaf-third {
+        top: 40%;
+        left: 93.7%;
+    }
+    /* Yellow */
+    .section.first .yellow-dot-first {
+        top: 49%;
+        left: 65.5%;
+    }
+    .section.first .yellow-dot-second {
+        top: 89%;
+        left: 77.5%;
+    }
+    /* Eye */
+    .section.first .eye-first {
+        top: 65%;
+        left: 85%;
+    }
+    .section.first .eye-second {
+        top: 2%;
+        left: 90%;
+    }
+
+
+
+
+
+
+
+    .prev-arrow,
+    .next-arrow {
+        display: none;
+    }
+    .section.first .first--logo,
+    .section.first .first--content,
+    .section.first .first--testimonials,
+    .section.first .first--quote-comment,
+    .section.first .first--quote-circle {
+        position: relative;
+    }
+    .section.first .first--logo {
+        margin: 0 auto;
+        width: 180px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .section.first .first--content {
+        margin-top: -20px;
+        padding: 40px 8%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: #8e8e8e;
+        opacity: 0.5;
+    }
+    .section.first .first--content h2 {
+        font-size: 30px;
+    }
+    .section.first .first--content p {
+        font-size: 20px;
+    }
+    .section.first .first--content .btn-left,
+    .section.first .first--content .btn-right {
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .section.first .first--content .btn-left {
+        margin-bottom: 15px;
+    }
+    .section.first .first--content a.btn {
+        font-size: 15px;
+        border-radius: 20px;
+        display: inline-block;
+        padding: 8px 20px;
+    }
+    .section.first .first--testimonials {
+        padding: 40px 8%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .section.first .first--testimonials h3 {
+        font-size: 24px;
+    }
+    .section.first .first--testimonials p {
+        font-size: 16px;
+    }
+    .section.first .first--quote-comment {
+        width: 150px;
+        height: 165px;
+        top: 30px;
+        left: calc(100% - 286px);
+        left: -webkit-calc(100% - 286px);
+        /*width: calc(100% - 300px);
+        width: -webkit-calc(100% - 300px);*/
+    }
+    .section.first .first--quote-circle {
+        width: 200px;
+        height: auto;
+        top: 0;
+        left: 8%;
+    }
+
+    /* ///// */
+    .section.second {
+        width: 100%;
+        left: 0;
+    }
+
+
+    .second-assets {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        padding: 100% 0;
+        /*background-color: #ccc;*/
+        /*z-index: 99999999*/
+    }
+
+    .section.second .yellow-dot-first {
+        top: -23%;
+        left: 17%;
+        width: 23px;
+    }
+    .section.second .yellow-dot-second {
+        left: 95%;
+    }
+    .section.second .eye-first {
+        top: -13%;
+        left: 52%;
+    }
+    .section.second .eye-third {
+        top: 1%;
+        left: 92%;
+        width: 62px;
+    }
+    .section.second .eye-second {
+        top: 414px;
+        left: 5%;
+        width: 40px;
+    }
+    .section.second .red-leaf-third {
+        top: -3%;
+        left: 30%;
+        width: 45px;
+    }
+
+    .section.second .talking--quote,
+    .section.second .black--quote,
+    .section.second .colon--quote,
+    .section.second .tweet--box,
+    .section.second .tweet--scroll {
+        position: relative;
+    }
+    .section.second .talking--quote {
+        top: -40px;
+        width: 210px;
+        height: 210px;
+        left: calc(100% - 292px);
+        left: -webkit-calc(100% - 292px);
+    }
+    .section.second .black--quote {
+        top: -40px;
+        left: 15%;
+        width: 160px;
+        height: 230px;
+    }
+    .section.second .colon--quote {
+        top: -75px;
+        width: 160px;
+        height: 230px;
+        left: calc(100% - 226px);
+        left: -webkit-calc(100% - 226px);
+    } 
+    .section.second .tweet--box {
+        /*margin: 0 auto 50px;*/
+        margin-bottom: 50px;
+        top: 0;
+        left: 10%;
+        right: 0;
+        width: 180px;
+        height: 180px;
+    }
+    .section.second .tweet--scroll {
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 80%;
+    }
+
+
+
+    /* ///// */
+    
+    .section.third {
+        width: 100%;
+        height: 500px;
+        left: 0;
+        background: #ccc;
+    }
+    .third-assets {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        padding: 100% 0;
+    }
+    .section.third .red-leaf-first {
+        top: -19%;
+        left: 6%;
+    }
+    .section.third .red-leaf-second {
+        top: -1%;
+    }
+    .section.third .red-leaf-forth {
+        top: -2%;
+    }
+    .section.third .red-leaf-third {
+        top: 584px;
+    }
+    .section.third .yellow-dot-first {
+        top: 405px;
+        right: 3%;
+        width: 24px;
+    }
+
+    .section.third .row-top {
+        padding: 0 8% 40px;
+        width: 100%;
+    }
+    .section.third .row-top .col-left {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .section.third .row-top .col-right {
+        width: 100%;
+        padding: 0;
+    }
+    .section.third .row-top .col-right--slider {
+        min-height: 0;
+        height: auto;
+    }
+    .section.third .row-bottom {
+        width: 100%;
+        padding: 0 8% 0;
+    }
+    .section.third .row-bottom--headline {
+        /*padding-left: 10px;*/
+        padding-left: 0;
+    }
+    .section.third .row-bottom--col-third {
+        padding: 0;
+        float: left;
+        /*width: 33.33%;*/
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* ///// */
+
+    .section.forth {
+        width: 100%;
+        height: 500px;
+        left: 0;
+    }
+    .section.forth .col-left {
+        width: 100%;
+        padding: 20px 8%;
+        margin-top: 0;
+    }
+    .section.forth .col-right {
+        width: 100%;
+        padding: 20px 8%;
+        margin-top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: #3D4356;
+        background-image: url(../images/parallax-mobile.svg);
+        background-size: 90%;
+        background-position: center 50px;
+        background-repeat: no-repeat;
+    }
+    .section.first .first--logo {
+        margin: 0 auto;
+        width: 130px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .section.first .first--content {
+        margin-top: -20px;
+        padding: 40px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: #8e8e8e;
+    }
+    .section.first .first--content h2 {
+        font-size: 24px;
+    }
+    .section.first .first--content p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .section.first .first--testimonials {
+        padding: 40px;
+    }
+    .section.first .first--content .btn-left,
+    .section.first .first--content .btn-right {
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .section.first .first--content .btn-left {
+        margin-bottom: 10px;
+    }
+    .section.first .first--content a.btn {
+        font-size: 13px;
+        border-radius: 20px;
+        display: inline-block;
+        padding: 8px 20px;
+    }
+    .section.third .row-top {
+        padding: 0 40px 40px;
+        margin-top: 20px;
+    }
+
+    .section.third .row-bottom {
+        width: 100%;
+        padding: 0 40px 0;
+    }
+    .section.forth .col-left {
+        padding: 40px;
+    }
+    .section.forth .col-right {
+        padding: 40px;
+    }
+    .section.first .first--quote-comment {
+        top: 0;
+        left: calc(100% - 200px);
+        left: -webkit-calc(100% - 200px);
+    }
+
+    .section.first .first--quote-circle {
+        top: -60px;
+    }
+    .section.second .talking--quote {
+        top: -90px;
+    }
+    .section.second .black--quote {
+        top: -100px;
+    }
+    .section.second .colon--quote {
+        top: -150px;
+    }
+    .section.second .tweet--box {
+        margin-bottom: 0;
+        top: -80px
+    }
+    .section.second .tweet--scroll {
+        top: -20px;
+       width: 90%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .section.first .first--content {
+        padding: 20px;
+    }
+    .section.first .first--testimonials {
+        padding: 20px;
+    }
+
+    .section.third .row-top {
+        padding: 0 20px 20px;
+        width: 100%;
+    }
+    .section.third .row-bottom {
+        width: 100%;
+        padding: 0 20px 0;
+    }
+    .section.forth .col-left {
+        padding: 0 20px 20px;
+    }
+    .section.forth .col-left--content-box.second {
+        margin-bottom: 0;
+    }
+    .section.forth .col-right {
+        padding: 0 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section.first .first--quote-comment {
+        top: 10px;
+        left: calc(100% - 180px);
+        left: -webkit-calc(100% - 180px);
+    }
+    .section.first .first--quote-circle {
+        top: -60px;
+        left: 30px;
+    }
+    .section.second .talking--quote {
+        top: -70px;
+        left: calc(100% - 240px);
+        left: -webkit-calc(100% - 240px);
+    }
+    .section.second .black--quote {
+        top: -70px;
+        left: 30px;
+    }
+    .section.second .colon--quote {
+        top: -110px;
+        left: calc(100% - 200px);
+        left: -webkit-calc(100% - 200px);
+    }
+    .section.second .tweet--box {
+        margin-bottom: 0;
+        top: -70px;
+        left: 30px;
+    }
+    .section.second .tweet--scroll {
+        top: -20px;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .section.first .first--quote-comment {
+        width: 120px;
+        height: 134px;
+        top: 0;
+        font-size: 14px;
+        left: calc(100% - 180px);
+        left: -webkit-calc(100% - 140px);
+    }
+    .section.first .first--quote-comment__content {
+        padding: 10px 9px 0;
+    }
+    .section.first .first--quote-comment .txt-top {
+        margin-bottom: 5px;
+    }
+    .section.first .first--quote-circle {
+        left: 20px;
+        font-size: 14px;
+        width: 150px;
+        height: 155px;
+    }
+    .section.first .first--quote-circle__content {
+        padding: 32px 0 0 21px;
+        height: 150px;
+    }
+    .section.first .first--quote-circle .txt-top {
+        margin-bottom: 5px;
+    }
+
+    .section.second .talking--quote {
+        font-size: 15px;
+        width: 160px;
+        height: 160px;
+        left: calc(100% - 180px);
+        left: -webkit-calc(100% - 180px);
+    }
+    .section.second .talking--quote__content {
+        padding-top: 42px;
+    }
+
+    .section.second .black--quote {
+        top: -60px;
+        font-size: 14px;
+        width: 140px;
+        height: 200px;
+    }
+    .section.second .black--quote__content {
+        padding: 40px 10px 0;
+    }
+
+    .section.second .colon--quote {
+        font-size: 14px;
+        width: 130px;
+        height: 200px; 
+        top: -80px;
+        left: calc(100% - 150px);
+        left: -webkit-calc(100% - 150px);
+    }
+    .section.second .colon--quote__content {
+        padding: 90px 12px 12px 12px;
+    }
+    .section.second .colon--quote .txt-top {
+        margin-bottom: 5px;
+    }
+
+
+
+}
