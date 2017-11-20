@@ -516,12 +516,6 @@ a {
 
 
 
-
-
-
-
-
-
 /*     ////////////////////       */
 .section.third {
     left: 50%;
@@ -954,7 +948,7 @@ a {
         left: 50%;
     }
     .section.first .red-leaf-second {
-        top: 8%;
+        top: 6%;
         left: 58%;
     }
     .section.first .red-leaf-third {
@@ -1194,18 +1188,32 @@ a {
         width: 24px;
     }
 
+
+
+    
+    .section.third .top-head--headline {
+        width: 100%;
+    }
     .section.third .row-top {
         padding: 0 8% 40px;
         width: 100%;
+        display: block;
     }
     .section.third .row-top .col-left {
+        display: block;
         width: 100%;
         padding: 0;
-        margin-bottom: 20px;
+        min-height: 400px;
+        margin-bottom: 60px;
+    }
+    .section.third .row-top .col-left--scroll {
+        width: 100%;
     }
     .section.third .row-top .col-right {
+        display: block;
         width: 100%;
         padding: 0;
+        margin-top: 20px;
     }
     .section.third .row-top .col-right--slider {
         min-height: 0;
@@ -1225,6 +1233,9 @@ a {
         /*width: 33.33%;*/
         width: 100%;
         margin-bottom: 20px;
+    }
+    .section.third .top-head {
+        margin: 40px auto 10px;
     }
 
     /* ///// */
@@ -1306,6 +1317,10 @@ a {
         width: 100%;
         padding: 0 40px 0;
     }
+    .section.third .top-head {
+        width: 100%;
+        padding: 0 40px;
+    }
     .section.forth .col-left {
         padding: 40px;
     }
@@ -1355,6 +1370,10 @@ a {
     .section.third .row-bottom {
         width: 100%;
         padding: 0 20px 0;
+    }
+    .section.third .top-head {
+        width: 100%;
+        padding: 0 20px;
     }
     .section.forth .col-left {
         padding: 0 20px 20px;
