@@ -53,7 +53,7 @@ function showInfo(data) {
 			  
       }
 	   
-	   $("#listData").append("<li class='"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + data[index].Profile_Image + "'></div><div class='msg'><div class='msg-text'><blockquote>"+ data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h4><label>Age: </label>"+data[index].Age+"</h4><h4><label>Location: </label>"+data[index].Location+"</h4><p>"+data[index].Description+"</p></div></div></figure></li>");
+	   $("#listData").append("<li class='ctg-limegreen"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + data[index].Profile_Image + "'></div><div class='msg'><div class='msg-text'><blockquote>"+ data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h4><label>Age: </label>"+data[index].Age+"</h4><h4><label>Location: </label>"+data[index].Location+"</h4><p>"+data[index].Description+"</p></div></div></figure></li>");
 	   
 	  
 	     
