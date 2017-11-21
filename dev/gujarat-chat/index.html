@@ -46,10 +46,10 @@
 <link href="assets/css/ctg.css" rel="stylesheet" media="all">
 
 
-<script type="text/javascript">
-  window.talktype = window.talktype || function(f) { (talktype.q=talktype.q||[]).push(arguments);};
-</script>
-<script src="https://metype.com/quintype/metype/assets/application.js"></script>
+
+<script src="https://d1y1r594kapmgi.cloudfront.net/quintype/metype/assets/application.js"></script>
+
+
 
 
 <!-- Google Analytics -->
@@ -137,11 +137,26 @@
 <section class="embed-form">
 <div class="embed-form-container">
 <a class="close-form" href="javascript:void(0);"><i class="fa fa-close"></i></a>
-<div id="contribution-container" data-talktype-account-id="1" data-metype-host="https://www.metype.com"></div>
-<script type="text/javascript">talktype(function() {
-  talktype.contributionWidgetIframe(document.getElementById("contribution-container"));
-});
+
+
+<script>
+  window.talktype = window.talktype || function(f) {
+                      if(talktype.loaded)
+                        f();
+                      else
+                        (talktype.q=talktype.q||[]).push(arguments);
+                    };
 </script>
+<div  id="metype-container"
+        data-talktype-account-id="44"
+        data-metype-host="https://metype-api.staging.quintype.com/"></div>
+
+<script type="text/javascript">
+  talktype(function() {
+    talktype.contributionWidgetIframe(document.getElementById("metype-container"));
+  });
+</script>
+
 </div>
 </section>
 
