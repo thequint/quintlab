@@ -30,6 +30,16 @@ $(document).ready(function () {
 		$('.link-filter').removeClass('is-active');
 	});
 	
+	//
+	
+	$('.open-form').click(function(){
+		$('.embed-form').addClass('is-open');
+	});
+	
+	$('.close-form').click(function(){
+		$('.embed-form').removeClass('is-open');
+	});
+	
 	
 });
 
