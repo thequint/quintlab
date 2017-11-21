@@ -545,7 +545,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	padding: 30px;
-	display: block;
+	display: none;
 	
 }
 
@@ -560,6 +560,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 2px;
 	margin: 0 auto;
 	position: relative;
+	
 }
 .close-form{
 	position: absolute;
