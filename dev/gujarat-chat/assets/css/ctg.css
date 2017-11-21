@@ -163,3 +163,30 @@
 }
 
 
+/*Ctg-violet: #ed53ed*/
+
+.filter-block .options li.ctg-violet a::before,
+.chat-container li.ctg-violet .btn-more,
+.chat-container li.ctg-violet.is-more .msg-text{
+	background-color: #ed53ed;
+}
+
+.chat-container li.ctg-violet .profile-img,
+.chat-container li.ctg-violet .chat-el .hide-el{
+	border-color: #ed53ed;
+}
+
+.chat-container li.ctg-violet .msg-text span,
+.chat-container li.ctg-violet.is-more .chat-el .btn-more,
+.chat-container li.ctg-violet .personal-details h4 label{ 
+	color: #ed53ed;
+}
+
+.chat-container li.ctg-violet.is-more .msg-text::after{
+	border-color: transparent #ed53ed transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-violet.is-more .msg-text::after{
+	border-color: transparent transparent #ed53ed transparent;
+}
+

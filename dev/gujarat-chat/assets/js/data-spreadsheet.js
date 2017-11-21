@@ -31,21 +31,27 @@ function showInfo(data) {
       var cat_class;
 
       switch (data[index].Category) {
-         case "caste":
+         case "GST":
             cat_class = "ctg-orange";
             break;
-         case "religion":
+         case "Education":
             cat_class = "ctg-blue";
             break;
-         case "business":
+         case "Healthcare":
             cat_class = "ctg-turquoise";
             break;
-         case "profession":
+         case "Prohibition":
             cat_class = "ctg-limegreen";
             break;
-         case "amenities":
-            cat_class = "ctg-red";
+         case "Unemployment":
+            cat_class = "ctg-violet";
             break;
+		case "Religion":
+            cat_class = "ctg-pink";
+            break;
+		case "Others":
+            cat_class = "ctg-red";
+            break;	  
 
          default:
             cat_class = "";
@@ -53,7 +59,7 @@ function showInfo(data) {
 			  
       }
 	   
-	   $("#listData").append("<li class='ctg-limegreen"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + data[index].Profile_Image + "'></div><div class='msg'><div class='msg-text'><blockquote>"+ data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h4><label>Age: </label>"+data[index].Age+"</h4><h4><label>Location: </label>"+data[index].Location+"</h4><p>"+data[index].Description+"</p></div></div></figure></li>");
+	   $("#listData").append("<li class='"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + data[index].Profile_Image + "' alt='"+data[index].Name+"'></div><div class='msg'><div class='msg-text'><blockquote>"+ data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h4><label>Age: </label>"+data[index].Age+"</h4><h4><label>Location: </label>"+data[index].Location+"</h4><p>"+data[index].Description+"</p></div></div></figure></li>");
 	     
    }
 	moreData();

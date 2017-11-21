@@ -188,8 +188,8 @@ h1, h2, h3, h4, h5, h6 {
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	top: 2px;
-	left: 0;
+	top: 3px;
+	left: 2px;
 	content: '';
 	border-radius: 100%;
 	border: 1px solid #fff;
@@ -199,8 +199,13 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	padding-left: 30px;
 }
-.filter-block .options li a:hover, .filter-block .options li.is-active a {
-	color: #F9920A;
+.filter-block .options li a:hover{
+	color: #fff;
+}
+ .filter-block .options li.is-active a {
+/*	color: #F9920A;*/
+	background: rgba(0,0,0,0.35);
+	color: #fff;
 }
 .chat-container {
 	margin: 30px 9% 0 9%;
@@ -545,7 +550,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	padding: 30px;
-	display: block;
+	display: none;
 	
 }
 
