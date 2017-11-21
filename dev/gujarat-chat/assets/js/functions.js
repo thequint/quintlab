@@ -40,7 +40,6 @@ $(document).ready(function () {
 		$('.embed-form').removeClass('is-open');
 	});
 	
-	
 });
 
 
