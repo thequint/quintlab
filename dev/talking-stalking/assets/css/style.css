@@ -891,12 +891,26 @@ a {
     position: relative;
     padding: 10px;
     color: #000;
-    min-height: 220px;
+    min-height: 245px;
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #fff;
 }
-
+.section.forth .col-left--content-box--impect {
+    position: relative;
+    padding: 15px 18px;
+    color: #000;
+    height: 218px;
+    margin-bottom: 20px;
+    overflow: auto;
+    background-color: #fff;
+}
+.section.forth .col-left--content-box--impect strong {
+    font-weight: 700;
+}
+.section.forth .col-left--content-box--impect li {
+    margin-bottom: 10px;
+}
 ul.safe {
     position: absolute;
     left: 0;
@@ -931,7 +945,7 @@ ul.safe.slide-forth {
 .section.forth .col-left--content-box .safe li {
     float: left;
     width: 20%;
-    padding: 50px 30px;
+    padding: 40px 30px;
 }
 .safe--headline {
     color: #3D4356;
@@ -947,11 +961,11 @@ ul.safe.slide-forth {
     color: red;
 }
 .section.forth .col-left--content-box .safe li.safe-last {
-    padding: 15px 30px;
+    padding: 10px 20px;
 }
 
 .safe--results .start-over {
-    margin: 15px auto;
+    margin: 12px auto;
     max-width: 165px;
     color: #fff;
     font-size: 24px;
@@ -1039,9 +1053,10 @@ select[type="select"] {
 }
 .section.forth .col-right--content-box {
     background-color: #fff;
-    min-height: 500px;
+    height: 500px;
     margin-bottom: 20px;
     color: #000;
+    overflow: auto;
 }
 
 .section.forth .circle--net {
