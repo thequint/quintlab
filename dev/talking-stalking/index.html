@@ -28,7 +28,6 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<!-- <script src="https://d1y1r594kapmgi.cloudfront.net/quintype/metype/assets/application.js" /></script> -->
 <script
 type='text/javascript'>
 window.talktype
@@ -37,9 +36,7 @@ window.talktype
 {
  (talktype.q = talktype.q || []).push(arguments);
  }; </script>
-<script
-src='https://fea.assettype.com/quintype-metype/assets/application.js'
-async/></script>
+<script src='https://fea.assettype.com/quintype-metype/assets/application.js'></script>
 
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -160,6 +157,7 @@ async/></script>
 
 
             <div class="more--testimonials">
+                <h3 class="more--testimonials__headline">More Testimonials</h3>
                 <div class="more--testimonials__content">
                     <ul id="more-testimonials">
 
@@ -392,16 +390,16 @@ async/></script>
                                 <form>
                                     <select type="select" id="commute">
                                         <option value="Walking">Walking</option>
-                                        <option value="Metro">Metro</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Cabs">Cabs</option>
+                                        <option value="Metro">Driving</option>
+                                        <option value="Bus">Cycling</option>
                                     </select><button class="safe-btn step04"><i class="fa fa-angle-right"></i></button>
                                 <form>
                             </div>
                         </li>
-                        <li>
+                        <li class="safe-last">
                             <div class="safe--results">
                                 <span class="value-name"></span>, at the age of <span class="value-age"></span>, you are <span class="highlight">not safe</span> <span class="value-commute"></span> to your office wearing <span class="value-wearing"></span>.
+                                <div class="start-over">Start Over</div>
                             </div>
                         </li>
                     </ul>
@@ -428,7 +426,7 @@ async/></script>
                      talktype(function()
                     {
                      talktype.contributionWidgetIframe(document.getElementById('contribution-container'));
-                     }); </script>form
+                     }); </script>
                     <!-- 
                     <script type='text/javascript'>
                      window.talktype = window.talktype || function(f) {
@@ -456,8 +454,8 @@ async/></script>
 
 </div>
 
-<div id="prev" class="prev-arrow">prev</div>
-<div id="click" class="next-arrow">Next</div>
+<div id="prev" class="prev-arrow"><img src="assets/images/arrow-prev.svg"></div>
+<div id="click" class="next-arrow"><img src="assets/images/arrow-next.svg"></div>
 
 <!-- Popup -->
 <div class="popup-box" style="display: none">
@@ -646,6 +644,10 @@ function v_slider(){
             $("ul.safe").addClass("slide-forth");
             var safe_commute = $('#commute option:selected').text();
             $(".value-commute").text(safe_commute);
+        });
+
+        $(".start-over").click(function(){
+            $("ul.safe").removeClass("slide-first slide-second slide-third slide-forth");
         });
 
 
