@@ -5,7 +5,7 @@ body {
     color: #fff;
     background-color: #3D4356;
     font-weight: 400;
-    font-family: 'Merriweather', serif;
+    font-family: 'Bitter', serif;
     
 }
 *, *::before, *::after {
@@ -17,7 +17,7 @@ body, html {
 }
 h1, h2, h3, h4 {
     font-weight: 400;
-    font-family: 'Merriweather', serif;
+    font-family: 'Bitter', serif;
 }
 a {
     outline: none;
@@ -571,7 +571,7 @@ a {
 .section.second .red-leaf-second {
     position: absolute;
     top: 39%;
-    left: 37%;
+    left: 26%;
     width: 12px;
 }
 .section.second .red-leaf-third {
@@ -625,7 +625,7 @@ a {
 .section.third {
     left: 50%;
     height: 100%;
-    background-color: rgba(255,255,255,0.2);
+    /*background-color: rgba(255,255,255,0.2);*/
 }
 
 .section.third .top-head {
@@ -734,7 +734,7 @@ a {
 
 
 .section.third .row-top .col-right--headline {
-    font-size: 22px;
+    font-size: 26px;
     color: #fff;
     margin-bottom: 20px;
     margin-top: -20px;
@@ -851,9 +851,16 @@ a {
     width: 35px;
 }
 
+.section.third .eye-second {
+    position: absolute;
+    top: 9%;
+    left: 86.5%;
+    width: 66px;
+}
+
 .section.third .yellow-dot-first {
     position: absolute;
-    top: 500px;
+    top: 465px;
     right: 18%;
     width: 12px;
 }
@@ -863,7 +870,7 @@ a {
 .section.forth {
     left: 75%;
     height: 100%;
-    background-color: rgba(255,255,255,0.1);
+    /*background-color: rgba(255,255,255,0.1);*/
 }
 
 
@@ -965,7 +972,7 @@ input[type="text"] {
     border-bottom: 2px #3D4356 solid;
     font-size: 22px;
     color: #3D4356;
-    font-family: 'Merriweather', serif;
+    font-family: 'Bitter', serif;
 }
 input:focus,
 button:focus,
@@ -984,7 +991,7 @@ select[type="select"] {
     font-size: 22px;
     color: #3D4356;
     background-color: #fff;
-    font-family: 'Merriweather', serif;
+    font-family: 'Bitter', serif;
 }
 .safe-btn {
     width: 50px;
@@ -996,7 +1003,7 @@ select[type="select"] {
     line-height: 40px;
     color: #fff;
     cursor: pointer;
-    font-family: 'Merriweather', serif;
+    font-family: 'Bitter', serif;
 }
 .error-message {
     display: none;
