@@ -10,7 +10,7 @@ function init() {
 
 window.addEventListener('DOMContentLoaded', init);
 
-var sheet_data;
+var sheet_data, sheet_data_all;
 
 function getParameterByName(name, url) {
    if (!url) url = window.location.href;
@@ -24,13 +24,25 @@ function getParameterByName(name, url) {
 
 function showInfo(data) {
 	
-	 
+	sheet_data = data;
+	 sheet_data_all = data;
+	//console.log(sheet_data);
+	 display_data();
 
-   for (var index = data.length - 1; index >= 0; index--) {
+	
+	//$( "#demo" ).customScroll({ scrollbarWidth: 5 });
+}
+
+
+function display_data()
+{
+	
+	  $("#listData").html("");
+   for (var index = sheet_data.length - 1; index >= 0; index--) {
 
       var cat_class;
 
-      switch (data[index].Category) {
+      switch (sheet_data[index].Category) {
          case "GST":
             cat_class = "ctg-orange";
             break;
@@ -58,11 +70,29 @@ function showInfo(data) {
 			  
 			  
       }
-	   
-	   $("#listData").append("<li class='"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + data[index].Profile_Image + "' alt='"+data[index].Name+"'></div><div class='msg'><div class='msg-text'><blockquote>"+ data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+data[index].Name+"</h4><h4><label>Age: </label>"+data[index].Age+"</h4><h4><label>Location: </label>"+data[index].Location+"</h4><p>"+data[index].Description+"</p></div></div></figure></li>");
+	 
+	   $("#listData").append("<li class='"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='"+sheet_data[index].Profile_Image+"' alt='"+sheet_data[index].Name+"'></div><div class='msg'><div class='msg-text'><blockquote>"+ sheet_data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+sheet_data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+sheet_data[index].Name+"</h4><h4><label>Age: </label>"+sheet_data[index].Age+"</h4><h4><label>Location: </label>"+sheet_data[index].Location+"</h4><p>"+sheet_data[index].Description+"</p></div></div></figure></li>");
 	     
    }
 	moreData();
-	
-	//$( "#demo" ).customScroll({ scrollbarWidth: 5 });
 }
+
+
+$(".filter-block .options li").click(function(){
+	
+	sheet_data=[]
+	$(".filter-block .options li").removeClass("is-active");
+	$(this).addClass("is-active");
+	for (var index = sheet_data_all.length - 1; index >= 0; index--) {
+		
+		if(sheet_data_all[index].Category==$(this).attr("data-category"))
+			{
+			sheet_data.push(sheet_data_all[index]);	
+			}
+		
+//		console.log(sheet_data_all[index].Category);
+	}
+console.log(sheet_data);	
+	display_data();
+	//alert($(this).attr("data-category"));
+})
