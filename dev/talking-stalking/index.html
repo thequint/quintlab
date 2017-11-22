@@ -16,15 +16,30 @@
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- Custom -->
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/jInvertScroll.css">
+<link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" href="assets/css/jInvertScroll.css" media="all">
 <link rel="stylesheet" href="assets/css/slick.css" media="all">
 <link rel="stylesheet" href="assets/css/slick-theme.css" media="all">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css" media="all">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<!-- <script src="https://d1y1r594kapmgi.cloudfront.net/quintype/metype/assets/application.js" /></script> -->
+<script
+type='text/javascript'>
+window.talktype
+ = window.talktype
+ || function(f)
+{
+ (talktype.q = talktype.q || []).push(arguments);
+ }; </script>
+<script
+src='https://fea.assettype.com/quintype-metype/assets/application.js'
+async/></script>
 
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,8 +88,8 @@
             <div class="first--logo"><img src="assets/images/talking-logo.svg"></div>
             <div class="first--content">
                 <h2>PETITION</h2>
-                <p>Stalking is designated as a bailable offence in Indian criminal law, which belies the seriousness of the offence and puts victims at further risk.</p>
-                <p>The Quint has collaborated with senior advocate and veteran activist Kamini Jaiswal to prepare a petition to MPs and the government to make stalking a non-bailable offence, which will help ensure that stalking is treated with the gravity it requires and ensures judicial scrutiny before perpetrators are allowed to roam free.</p>
+                <p>Did you know that stalking is a bailable offence in Indian criminal law? Are you aware of how this puts victims at further risk from the perpetrators? The Quint has collaborated with senior advocate and activist Kamini Jaiswal to prepare a proposal to amend the law to make stalking a non-bailable offence, which will be tabled in Parliament by MP Shashi Tharoor.</p>
+                <p>Join us in our campaign to help protect women from a crime they endure everyday – click here to register your support for this proposal.</p>
                 <div class="first--content__btn"><span class="btn-left"><a href="" class="btn download">Download PDF</a></span> <span class="btn-right"><a href="" class="btn signup">Sign The Petition</a></span></div>
             </div>
             <div class="first--testimonials">
@@ -143,10 +158,27 @@
                 </div>
             </div>
 
-            <div class="tweet--box">
-                <p>@PriyaSahani</p>
-                <p>#StalkingTalking Lorem ipsum dolor sit amet, co tetuer adipiscing elit, sed diam</p>
+
+            <div class="more--testimonials">
+                <div class="more--testimonials__content">
+                    <ul id="more-testimonials">
+
+                    </ul>
+                </div>
             </div>
+
+
+
+            <div class="tweet--box">
+                <!--<p>@PriyaSahani</p>
+                <p>#StalkingTalking Lorem ipsum dolor sit amet, co tetuer adipiscing elit, sed diam</p>-->
+                <h2 style="display:none">Query 1: My latest tweet</h2>
+                <div id="example3" style="display:none"></div>
+                <div class="temp_name"></div>
+                <div class="temp_tweet"></div>
+            </div>
+
+
 
             <div class="tweet--scroll">
                 <div class="tweet--scroll__bar"></div>
@@ -262,24 +294,25 @@
                 <div class="col-right">
                     <h3 class="col-right--headline"><span>Videos</span></h3>
                     <div class="col-right--slider">
-
-                        <ul class="vertical-slider">
-                            <li>
-                                <figure><img src="assets/images/slider-img.jpg">
-                                    <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure><img src="assets/images/slider-img.jpg">
-                                    <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure><img src="assets/images/slider-img.jpg">
-                                    <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
-                                </figure>
-                            </li>
-                        </ul>
+                        <div class="story-slider">
+                            <ul id="SlugType_4" class="vertical-slider">
+                                <!-- <li>
+                                    <figure><img src="assets/images/slider-img.jpg">
+                                        <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure><img src="assets/images/slider-img.jpg">
+                                        <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure><img src="assets/images/slider-img.jpg">
+                                        <figcaption>“Glad Barala Was Denied Bail,” Says Chandigarh Stalking Victim</figcaption>
+                                    </figure>
+                                </li> -->
+                            </ul>
+                        </div>
 
 
                     </div>
@@ -290,15 +323,21 @@
 
                 <div class="row-bottom--col-third">
                     <div class="row-bottom--col-third__sub-headline">CHANDIGARH STALKING</div>
-                    <div class="row-bottom--col-third__content">Accused in Judicial Custody till August 25</div>
+                    <div class="row-bottom--col-third__content">
+                        <div id="SlugType_1"></div>
+                    </div>
                 </div>
                  <div class="row-bottom--col-third">
                     <div class="row-bottom--col-third__sub-headline">CHANDIGARH STALKING</div>
-                    <div class="row-bottom--col-third__content">Accused in Judicial Custody till August 25</div>
+                    <div class="row-bottom--col-third__content">
+                        <div id="SlugType_2"></div>
+                    </div>
                 </div>
                  <div class="row-bottom--col-third">
                     <div class="row-bottom--col-third__sub-headline">CHANDIGARH STALKING</div>
-                    <div class="row-bottom--col-third__content">Accused in Judicial Custody till August 25</div>
+                    <div class="row-bottom--col-third__content">
+                        <div id="SlugType_3"></div>
+                    </div>
                 </div>
 
             </div>
@@ -317,14 +356,88 @@
         <sectipn class="section forth">
             <div class="col-left">
                 <div class="col-left--headline">Are You Safe?</div>
-                <div class="col-left--content-box">Are You Safe?</div>
+                <div class="col-left--content-box">
+
+                    <ul class="safe">
+                        <li>
+                            <div class="safe--headline">What is your name?</div>
+                            <div class="safe--form name-field">
+                                <form>
+                                    <input id="name" type="text" class="safe-field" required><button type="submit" class="safe-btn step01"><i class="fa fa-angle-right"></i></button></form>
+                                    <span class="error-message">This field is required</span>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="safe--headline">How old are you?</div>
+                            <div class="safe--form age-field">
+                                <form>
+                                    <input id="age" type="text" class="safe-field" required><button type="submit" class="safe-btn step02"><i class="fa fa-angle-right"></i></button>
+                                    <span class="error-message">This field is required</span>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="safe--headline">What are you wearing?</div>
+                            <div class="safe--form wearing-field">
+                                <form>
+                                    <input id="wearing" type="text" class="safe-field" required><button class="safe-btn step03"><i class="fa fa-angle-right"></i></button>
+                                    <span class="error-message">This field is required</span>
+                                <form>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="safe--headline">How do you commute?</div>
+                            <div class="safe--form commute-field">
+                                <form>
+                                    <select type="select" id="commute">
+                                        <option value="Walking">Walking</option>
+                                        <option value="Metro">Metro</option>
+                                        <option value="Bus">Bus</option>
+                                        <option value="Cabs">Cabs</option>
+                                    </select><button class="safe-btn step04"><i class="fa fa-angle-right"></i></button>
+                                <form>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="safe--results">
+                                <span class="value-name"></span>, at the age of <span class="value-age"></span>, you are <span class="highlight">not safe</span> <span class="value-commute"></span> to your office wearing <span class="value-wearing"></span>.
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
 
                 <div class="col-left--headline">Impact</div>
-                <div class="col-left--content-box second">Are You Safe?</div>
+                <div class="col-left--content-box second">
+
+                    abc
+
+                </div>
             </div>
             <div class="col-right">
                 <div class="col-right--headline">SHARE YOUR EXPERIENCE</div>
-                <div class="col-right--content-box">SHARE YOUR EXPERIENCE</div>
+                <div class="col-right--content-box">
+                    <div
+                    id='contribution-container'
+                    data-metype-account-id='1'
+                    data-metype-host='https://www.metype.com/'>
+                    </div>
+                    <script
+                    type='text/javascript'>
+                     talktype(function()
+                    {
+                     talktype.contributionWidgetIframe(document.getElementById('contribution-container'));
+                     }); </script>form
+                    <!-- 
+                    <script type='text/javascript'>
+                     window.talktype = window.talktype || function(f) {
+                       (talktype.q = talktype.q || []).push(arguments);
+                     };
+                    </script>
+                    <script src='https://fea.assettype.com/quintype-metype/assets/application.js' async/></script>
+                     -->
+                </div>
             </div>
 
             <div class="circle--net"><img src="assets/images/circle-net.svg"></div>
@@ -359,19 +472,124 @@
 
 
 
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
 <script type="text/javascript" src="assets/js/jquery.jInvertScroll.js"></script>
 <script type="text/javascript" src="assets/js/slick.min.js"></script>
 
+<script src="https://metype.com/quintype/metype/assets/application.js"></script>
+
 <script type="text/javascript" src="assets/js/functions.js"></script>
+<script type="text/javascript" src="assets/js/twitter.js"></script>
 
 <script>
-    
+function v_slider(){
+    $('.vertical-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            vertical: true
+        });
+    } 
 </script>
 
 <script type="text/javascript">
+
+    //Slug 1 
+    var collectionSlug = 'top-story---home'; //Needs to be replaced.
+    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+        var stories = res.items.filter(function(item) {
+        return item.type == 'story'
+        }).map(function(item) {
+        return item.story
+        }).slice(0,1);
+        var elements = stories.map(function(story) {
+        return '<a href="https://www.thequint.com/' + story.slug + '" target="blank">'+ story.headline +'</a>'
+        });
+        elements.forEach(function(element) {
+            $('#SlugType_1').append(element);
+            v_slider();
+        });
+    });
+
+    //Slug 2 
+    var collectionSlug = 'trending'; //Needs to be replaced.
+    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+        var stories = res.items.filter(function(item) {
+        return item.type == 'story'
+        }).map(function(item) {
+        return item.story
+        }).slice(0,1);
+        var elements = stories.map(function(story) {
+        return '<a href="https://www.thequint.com/' + story.slug + '" target="blank">'+ story.headline +'</a>'
+        });
+        elements.forEach(function(element) {
+        $('#SlugType_2').append(element);
+        });
+    });
+
+    // Slug 3
+    var collectionSlug = 'videos'; //Needs to be replaced.
+    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+        var stories = res.items.filter(function(item) {
+        return item.type == 'story'
+        }).map(function(item) {
+        return item.story
+        }).slice(0,1);
+        var elements = stories.map(function(story) {
+        return '<a href="https://www.thequint.com/' + story.slug + '" target="blank">'+ story.headline +'</a>'
+        });
+        elements.forEach(function(element) {
+        $('#SlugType_3').append(element);
+        });
+    });
+
+     //Slider
+    
+      var collectionSlug = 'videos'; //Needs to be replaced.
+      $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+        var stories = res.items.filter(function(item) {
+          return item.type == 'story'
+        }).map(function(item) {
+          return item.story
+        }).slice(0,3);
+        var elements = stories.map(function(story) {
+          return '<li><figure><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><figcaption>'+ story.headline +'</figcaption></a></figure></li>'
+        });
+        elements.forEach(function(element) {
+          $('#SlugType_4').append(element);
+        });
+      });
+
+
+
+      //  Testimonials
+
+    var collectionSlug = 'trending'; //Needs to be replaced.
+        $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+        var stories = res.items.filter(function(item) {
+          return item.type == 'story'
+        }).map(function(item) {
+          return item.story
+        }).slice(0,30);
+        var elements = stories.map(function(story) {
+          return '<li><a href="https://www.thequint.com/' + story.slug + '" target="blank">'+ story.headline +'</a></li>'
+        });
+        elements.forEach(function(element) {
+          $('#more-testimonials').append(element);
+        });
+          
+    });
+
+    
+    
+
+
+
+
     var section_numbers = 4;
-    $(".front").css({"width":4*window.innerWidth})
+    $(".front").css({"width":4*window.innerWidth});
 
     $(document).ready(function(){
         if ($(window).innerWidth() > 1024) {
@@ -384,37 +602,79 @@
             $("#sectipn_wrap").css({"width":"100%","height":"100%"});
             $(".horizon").hide();
         }
+
+        // 
+        $(".safe-btn.step01").click(function(e){
+            e.preventDefault();
+
+            if ($('#name').val() == ''){
+                $(".name-field .error-message").show();
+            }else {
+                $("ul.safe").addClass("slide-first");
+                var safe_name = $('#name').val();
+                $(".value-name").text(safe_name);
+            }
+        });
+
+        $(".safe-btn.step02").click(function(e){
+            e.preventDefault();
+
+            if ($('#age').val() == ''){
+                $(".age-field .error-message").show();
+            }else {
+                $("ul.safe").addClass("slide-second");
+                var safe_age = $('#age').val();
+                $(".value-age").text(safe_age);
+            }
+        });
+
+        $(".safe-btn.step03").click(function(e){
+            e.preventDefault();
+
+            if ($('#wearing').val() == ''){
+                $(".wearing-field .error-message").show();
+            }else {
+                $("ul.safe").addClass("slide-third");
+                var safe_wearing = $('#wearing').val();
+                $(".value-wearing").text(safe_wearing);
+            }
+        });
+
+        $(".safe-btn.step04").click(function(e){
+            e.preventDefault();
+
+            $("ul.safe").addClass("slide-forth");
+            var safe_commute = $('#commute option:selected').text();
+            $(".value-commute").text(safe_commute);
+        });
+
+
     });
 
-    $('.vertical-slider').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        vertical: true
-    });
+    
 
     var cur_section = 0;
     var click_flag=0;
 
     function repeatOften() {
   // Do whatever
- // console.log($(window).scrollTop());
+ console.log($(window).scrollTop() +"|"+ $(window).width());
 //console.log($(window).scrollTop()+"|"+1*($("body").height() - $(window).height())/( section_numbers-1))
   for(var i=section_numbers-1;i>=0;i--)
   {
    
-if($(window).scrollTop()>i*($("body").height() - $(window).height())/( section_numbers-1))
-{
-    console.log("i"+i);
+    if($(window).scrollTop()>i*($("body").height() - $(window).height())/( section_numbers-1))
+    {
+    //console.log("i"+i);
     //cur_section=i;
     break;
-}
+    }
   }
 
   requestAnimationFrame(repeatOften);
+    
     }
+    
     requestAnimationFrame(repeatOften);
 
     $(document).ready(function (){

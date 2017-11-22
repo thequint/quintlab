@@ -197,8 +197,8 @@ a {
     color: #b2b7b5;
     position: absolute;
     /*top: 250px;*/
-    top: 34%;
-    left: 73%;
+    top: 33%;
+    left: 76%;
     width: 200px;
     height: 200px;
     background-image: url(../images/quote-circle.svg);
@@ -303,8 +303,8 @@ a {
     font-size: 18px;
     color: #a9aaa9;
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 12%;
+    left: 4%;
     width: 210px;
     height: 210px;
     background-image: url(../images/talking-quote.svg);
@@ -329,8 +329,8 @@ a {
     font-size: 15px;
     color: #a9aaa9;
     position: absolute;
-    top: 34%;
-    left: 45%;
+    top: 19%;
+    left: 29%;
     width: 160px;
     height: 230px;
     background-image: url(../images/black-quote.svg);
@@ -355,8 +355,8 @@ a {
     font-size: 15px;
     color: #000;
     position: absolute;
-    top: 48%;
-    left: 75%;
+    top: 33%;
+    left: 48%;
     width: 160px;
     height: 230px;
     background-image: url(../images/colon-quote.svg);
@@ -376,16 +376,74 @@ a {
     display: block;
     margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+.section.second .more--testimonials {
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    top: 24%;
+    left: 71%;
+    
+}
+.section.second .more--testimonials__content {
+    background-color: #e5e5e5;
+    width: 270px;
+    height: 400px;
+    overflow: auto;
+}
+.section.second .more--testimonials__content li {
+    padding: 5px 10px;
+    color: #000;
+    background-color: #b2b7b5;
+    margin-bottom: 10px;
+}
+.section.second .more--testimonials__content li a {
+    color: #000;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section.second .tweet--box {
     position: absolute;
     bottom: 60px;
     left: 5%;
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    min-height: 180px;
     padding: 15px;
     color: #e5e5e5;
-    font-size: 11px;
+    font-size: 13px;
+    overflow-wrap: break-word;
     background-color: #646977;
+}
+.section.second .tweet--box a {
+    color: #fff;
+}
+.section.second .tweet--box a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+.section.second .tweet--box .temp_name { 
+    margin-bottom: 7px;
 }
 .section.second .tweet--box p {
     margin-bottom: 10px;
@@ -437,15 +495,19 @@ a {
 }
 .circle-slide {
     position: absolute;
-    left: -30px;
+    left: 5px;
+    
+}
+.circle-slide.anim
+{
     animation: circleSlide 30s linear infinite;
 }
 @keyframes circleSlide{
     0%{
-        transform: translate3d(76vw, 0, 0);
+        transform: translate3d(0vw, 0, 0);
     }
     100%{
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(76vw, 0, 0);
     }
 }
 
@@ -494,8 +556,8 @@ a {
 /* Red Leaf */
 .section.second .red-leaf-first {
     position: absolute;
-    top: 56%;
-    left: 11%;
+    top: 47%;
+    left: 9%;
     width: 25px;
 }
 .section.second .red-leaf-second {
@@ -519,7 +581,7 @@ a {
 .section.second .red-leaf-fifth {
     position: absolute;
     top: 32%;
-    left: 78%;
+    left: 95%;
     width: 15px;
 }
 
@@ -559,7 +621,7 @@ a {
 }
 
 .section.third .top-head {
-    margin: 20px auto 8px;
+    margin: 40px auto 10px;
     width: 84%;
 }
 .section.third .top-head--headline {
@@ -589,7 +651,7 @@ a {
 
 .section.third .row-top .col-left {
     position: relative;
-    width: 54%;
+    width: 50%;
     display: table-cell;
 }
 .section.third .row-top .col-left--headline {
@@ -656,7 +718,7 @@ a {
 
 /* */
 .section.third .row-top .col-right {
-    width: 46%;
+    width: 50%;
     /*float: left;*/
     display: table-cell;
     /*background-color: #ccc;*/
@@ -681,14 +743,14 @@ a {
     background-color: #fff;
 }
 
-.vertical-slider {
+.story-slider {
     position: relative;
     top: -15px;
     left: 15px;
     width: 85%;
 }
-.vertical-slider figcaption {
-    padding-top: 10px;
+.story-slider figcaption {
+    /*padding-top: 10px;*/
 }
 /* Slick Custom CSS */
 .slick-dots {
@@ -805,12 +867,127 @@ a {
     margin-bottom: 5px;
 }
 .section.forth .col-left--content-box {
+    position: relative;
     padding: 10px;
     color: #000;
-    min-height: 220px;
+    min-height: 280px;
     margin-bottom: 20px;
+    overflow: hidden;
     background-color: #fff;
 }
+
+ul.safe {
+    position: absolute;
+    left: 0;
+    width: 500%;
+    transition: 0.9s all ease-in-out;
+}
+ul.safe.slide-first {
+    /*transform: translate3d(-1, 1, 1.1);*/
+    transform: translateX(-20%);
+    transition: 0.9s all ease-in-out;
+}
+ul.safe.slide-second {
+    transform: translateX(-40%);
+    transition: 0.9s all ease-in-out;
+}
+ul.safe.slide-third {
+    transform: translateX(-60%);
+    transition: 0.9s all ease-in-out;
+}
+ul.safe.slide-forth {
+    transform: translateX(-80%);
+    transition: 0.9s all ease-in-out;
+}
+
+.section.forth .col-left--content-box .safe:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.section.forth .col-left--content-box .safe li {
+    float: left;
+    width: 20%;
+    padding: 50px 30px;
+}
+.safe--headline {
+    color: #3D4356;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.safe--results {
+    color: #3D4356;
+    font-size: 32px;
+}
+.safe--results .highlight {
+    font-weight: 700;
+    color: red;
+}
+
+input[type="text"] {
+    width: calc(100% - 50px);
+    width: -webkit-calc(100% - 50px);
+    height: 50px;
+    float: left;
+    padding-right: 50px;
+    border: 0;
+    border-bottom: 2px #3D4356 solid;
+    font-size: 22px;
+    color: #3D4356;
+    font-family: 'Merriweather', serif;
+}
+input:focus,
+button:focus,
+select:focus {
+    outline: none;
+}
+select[type="select"] {
+    width: calc(100% - 50px);
+    width: -webkit-calc(100% - 50px);
+    height: 50px;
+    float: left;
+    padding-right: 50px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px #3D4356 solid;
+    font-size: 22px;
+    color: #3D4356;
+    background-color: #fff;
+    font-family: 'Merriweather', serif;
+}
+.safe-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #3D4356;
+    border: none;
+    border-radius: 0;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+}
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    padding: 5px 0;
+    /*display: block;*/
+}
+/*input[type="button"] {
+    margin-left: -50px;
+    height: 25px;
+    width: 50px;
+    background: #3D4356;
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+}*/
+
+
+
 .section.forth .col-right {
     margin-top: 50px;
     float: left;
@@ -828,6 +1005,7 @@ a {
     background-color: #fff;
     min-height: 300px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .section.forth .circle--net {
@@ -1099,6 +1277,7 @@ a {
         width: 100vw;
         height: 100%;
         padding: 100% 0;
+        z-index: -1;
     }
     .section.second .yellow-dot-first {
         top: -23%;
@@ -1148,7 +1327,7 @@ a {
         height: 230px;
     }
     .section.second .colon--quote {
-        top: -75px;
+        top: -60px;
         width: 160px;
         height: 230px;
         left: calc(100% - 226px);
@@ -1157,10 +1336,10 @@ a {
     .section.second .tweet--box {
         margin-bottom: 50px;
         top: 0;
-        left: 10%;
+        left: 8%;
         right: 0;
-        width: 180px;
-        height: 180px;
+        width: 240px;
+        /*height: 180px;*/
     }
     .section.second .tweet--scroll {
         margin: 0 auto;
@@ -1169,6 +1348,25 @@ a {
         right: 0;
         width: 80%;
     }
+
+    .section.second .more--testimonials {
+        margin: 0 auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0 8% 40px;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .section.second .more--testimonials__content {
+        width: 100%;
+    }
+    .section.second .more--testimonials__content li {
+        padding: 15px;
+    }
+
 
     /* ///// */
     .section.third {
@@ -1247,7 +1445,7 @@ a {
         margin-bottom: 20px;
     }
     .section.third .top-head {
-        margin: 40px auto 10px;
+        margin: 20px auto 10px;
     }
 
     /* ///// */
@@ -1268,10 +1466,10 @@ a {
     }
     @keyframes circleSlide{
         0%{
-            transform: translate3d(91vw, 0, 0);
+            transform: translate3d(0, 0, 0);
         }
         100%{
-            transform: translate3d(0, 0, 0);
+            transform: translate3d(91vw, 0, 0);
         }
     }
 }
@@ -1341,10 +1539,10 @@ a {
         padding: 0 40px;
     }
     .section.forth .col-left {
-        padding: 40px;
+        padding: 40px 40px 0;
     }
     .section.forth .col-right {
-        padding: 40px;
+        padding: 30px 40px 40px;
     }
     .section.first .first--quote-comment {
         top: 0;
@@ -1356,21 +1554,25 @@ a {
         top: -60px;
     }
     .section.second .talking--quote {
-        top: -90px;
+        top: -70px;
     }
     .section.second .black--quote {
-        top: -100px;
+        top: -70px;
     }
     .section.second .colon--quote {
-        top: -150px;
+        top: -70px;
     }
     .section.second .tweet--box {
         margin-bottom: 0;
-        top: -80px
+        top: -40px;
+        left: 40px;
     }
     .section.second .tweet--scroll {
         top: -20px;
        width: 90%;
+    }
+    .section.second .more--testimonials {
+        padding: 0 40px 70px;
     }
 }
 
@@ -1380,6 +1582,9 @@ a {
     }
     .section.first .first--testimonials {
         padding: 20px;
+    }
+    .section.second .more--testimonials {
+        padding: 0 20px 30px;
     }
 
     .section.third .row-top {
@@ -1430,12 +1635,12 @@ a {
         left: -webkit-calc(100% - 200px);
     }
     .section.second .tweet--box {
-        margin-bottom: 0;
-        top: -70px;
-        left: 30px;
+        margin-bottom: 10px;
+        top: -7px;
+        left: 20px;
     }
     .section.second .tweet--scroll {
-        top: -20px;
+        top: 0;
         width: 90%;
     }
 }
@@ -1480,7 +1685,7 @@ a {
     }
 
     .section.second .black--quote {
-        top: -60px;
+        top: -30px;
         font-size: 14px;
         width: 140px;
         height: 200px;
@@ -1493,7 +1698,7 @@ a {
         font-size: 14px;
         width: 130px;
         height: 200px; 
-        top: -80px;
+        top: -30px;
         left: calc(100% - 150px);
         left: -webkit-calc(100% - 150px);
     }
@@ -1502,6 +1707,19 @@ a {
     }
     .section.second .colon--quote .txt-top {
         margin-bottom: 5px;
+    }
+
+    .section.forth .col-left--content-box {
+        min-height: 240px;
+    }
+    .section.forth .col-left--content-box .safe li {
+        padding: 30px 20px
+    }
+    .safe--headline {
+        font-size: 20px;
+    }
+    .safe--results {
+        font-size: 24px;
     }
 
 
