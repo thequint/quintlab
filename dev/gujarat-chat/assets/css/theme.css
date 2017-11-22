@@ -565,6 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 2px;
 	margin: 0 auto;
 	position: relative;
+	height: 100%;
 }
 .close-form {
 	position: absolute;
@@ -584,6 +585,12 @@ h1, h2, h3, h4, h5, h6 {
 .close-form:hover {
 	color: #9B0E18;
 }
+
+.form-content{
+	overflow: auto;
+	height: 100%;
+}
+
 /*Scroll CSS*/
 .phancy-scrollbar {
 	width: 5px;

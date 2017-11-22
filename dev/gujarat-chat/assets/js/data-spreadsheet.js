@@ -11,6 +11,9 @@ function init() {
 window.addEventListener('DOMContentLoaded', init);
 
 var sheet_data, sheet_data_all;
+var gender_filter="all";
+var category_filter ="all";
+
 
 function getParameterByName(name, url) {
    if (!url) url = window.location.href;
@@ -26,11 +29,8 @@ function showInfo(data) {
 	
 	sheet_data = data;
 	 sheet_data_all = data;
-	//console.log(sheet_data);
 	 display_data();
 
-	
-	//$( "#demo" ).customScroll({ scrollbarWidth: 5 });
 }
 
 
@@ -81,11 +81,25 @@ function display_data()
 $(".filter-block .options li").click(function(){
 	
 	sheet_data=[]
+	
+	
+	if($(this).hasClass("is-active"))
+		{
+	category_filter="all";
 	$(".filter-block .options li").removeClass("is-active");
-	$(this).addClass("is-active");
-	for (var index = sheet_data_all.length - 1; index >= 0; index--) {
+	$(this).removeClass("is-active");		
+		}
+	else
+		{
+	category_filter=$(this).attr("data-category");	
+	$(".filter-block .options li").removeClass("is-active");
+	$(this).addClass("is-active");		
+		}
+
+	
+	for (var index = 0; index <= sheet_data_all.length - 1; index++) {
 		
-		if(sheet_data_all[index].Category==$(this).attr("data-category"))
+		if((sheet_data_all[index].Category==category_filter || category_filter=="all" ) && ((gender_filter=="all") || gender_filter==sheet_data_all[index].Sex) )
 			{
 			sheet_data.push(sheet_data_all[index]);	
 			}
@@ -94,14 +108,25 @@ $(".filter-block .options li").click(function(){
 });
 
 
-$(".filter-block .gender li").click(function(){
+$(".filter-block .gender li.gender-item").click(function(){
 	
+	if($(this).hasClass("is-active"))
+		{
+	gender_filter="all";
+	$(".filter-block .gender li.gender-item").removeClass("is-active");
+	$(this).removeClass("is-active");
+			
+		}
+	else
+		{
+	$(".filter-block .gender li.gender-item").removeClass("is-active");
+	$(this).addClass("is-active");
+	gender_filter=$(this).attr("data-gender");		
+		}
 	sheet_data=[]
-	$(".filter-block .gender li").removeClass("is-active");
-	$(this).addClass("is-active");
-	for (var index = sheet_data_all.length - 1; index >= 0; index--) {
+	for (var index = 0; index <= sheet_data_all.length - 1; index++) {
 		
-		if(sheet_data_all[index].Sex==$(this).attr("data-gender"))
+		if((sheet_data_all[index].Category==category_filter || category_filter=="all" ) && ((gender_filter=="all") || gender_filter==sheet_data_all[index].Sex) )
 			{
 			sheet_data.push(sheet_data_all[index]);	
 			}
@@ -110,6 +135,7 @@ $(".filter-block .gender li").click(function(){
 	display_data();
 	
 });
+
 
 
 

@@ -64,6 +64,17 @@
 }
 
 @media (max-width:767px) {
+	
+	
+	.embed-form{
+		padding: 25px;
+	}
+	
+	.embed-form-container{
+		padding: 10px;
+	}
+	
+	
 .filter-block .options li a::before {
 	width: 18px;
 	height: 18px;
