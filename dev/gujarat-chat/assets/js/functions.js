@@ -72,5 +72,4 @@ $(".chat-el").click(function(){
 		
 	}
 });
-	 
-	 }
+}

@@ -87,13 +87,15 @@ $(".filter-block .options li").click(function(){
 		{
 	category_filter="all";
 	$(".filter-block .options li").removeClass("is-active");
-	$(this).removeClass("is-active");		
+	$(this).removeClass("is-active");	
+					$(".clear-filter").removeClass("is-filter");
 		}
 	else
 		{
 	category_filter=$(this).attr("data-category");	
 	$(".filter-block .options li").removeClass("is-active");
-	$(this).addClass("is-active");		
+	$(this).addClass("is-active");	
+			$(".clear-filter").addClass("is-filter");
 		}
 
 	
@@ -115,13 +117,15 @@ $(".filter-block .gender li.gender-item").click(function(){
 	gender_filter="all";
 	$(".filter-block .gender li.gender-item").removeClass("is-active");
 	$(this).removeClass("is-active");
+					$(".clear-filter").removeClass("is-filter");
 			
 		}
 	else
 		{
 	$(".filter-block .gender li.gender-item").removeClass("is-active");
 	$(this).addClass("is-active");
-	gender_filter=$(this).attr("data-gender");		
+	gender_filter=$(this).attr("data-gender");
+					$(".clear-filter").addClass("is-filter");
 		}
 	sheet_data=[]
 	for (var index = 0; index <= sheet_data_all.length - 1; index++) {
@@ -137,6 +141,14 @@ $(".filter-block .gender li.gender-item").click(function(){
 });
 
 
+$(".clear-filter").click(function(){
+	
+	sheet_data = sheet_data_all ;
+	display_data();
+	$(".filter-block .gender li.gender-item").removeClass("is-active");
+	$(this).removeClass("is-filter");
+	$(".filter-block .options li").removeClass("is-active");
+});
 
 
 

@@ -109,8 +109,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgba(255,255,255,0.5);
 }
 .text-logo {
-	max-width: 150px;
-	margin: 20px auto 0 auto;
+	max-width: 140px;
+	margin: 0px auto 0 auto;
 	display: block;
 }
 .share-chat {
@@ -121,17 +121,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 .filter-block {
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 .filter-block ul {
-	padding: 20px 8px;
+	padding: 18px 8px;
 	border-top: 1px solid #F9920B;
-	min-width: 200px;
+	min-width: 210px;
 	font-size: 22px;
 	text-transform: uppercase;
 	display: inline-block;
 	text-align: left;
 }
+
+.filter-block ul.gender{
+	border-top: 0;
+}
+
+.filter-block ul.send-voice{
+	border-bottom: 1px solid #F9920B;
+}
+.filter-block ul.send-voice.clear-filter{
+	border-bottom: 0;
+	padding-top: 15px;
+	padding-bottom: 0;
+}
+
+
 .filter-block ul li {
 	position: relative;
 }
@@ -157,6 +172,37 @@ h1, h2, h3, h4, h5, h6 {
 	content: '';
 	background: url(../images/send.svg) no-repeat 100%;
 }
+
+
+.filter-block ul.send-voice.clear-filter li{text-align: center;}
+
+.filter-block ul.send-voice.clear-filter{
+	display: none;
+}
+
+.filter-block ul.send-voice.clear-filter.is-filter{
+	display: block;
+}
+
+
+.filter-block ul.send-voice.clear-filter li a{
+	font-size: 15px;
+	display: inline-block;
+}
+
+.filter-block ul.send-voice.clear-filter li a::before {
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    top: 2px;
+    left: -6px;
+    content: '';
+    background: url(../images/close.svg) no-repeat 100%;
+}
+
+
+
+
 .filter-block .gender li {
 	float: left;
 	margin: 0px 4px;

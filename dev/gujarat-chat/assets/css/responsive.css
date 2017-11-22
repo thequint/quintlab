@@ -65,6 +65,11 @@
 
 @media (max-width:767px) {
 	
+	.filter-block ul.send-voice.clear-filter li {
+    text-align: left;
+    margin-left: 10px;
+}
+	
 	
 	.embed-form{
 		padding: 25px;
