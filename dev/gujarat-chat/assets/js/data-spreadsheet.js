@@ -144,6 +144,8 @@ $(".filter-block .gender li.gender-item").click(function(){
 $(".clear-filter").click(function(){
 	
 	sheet_data = sheet_data_all ;
+		gender_filter="all";
+		category_filter="all";
 	display_data();
 	$(".filter-block .gender li.gender-item").removeClass("is-active");
 	$(this).removeClass("is-filter");
