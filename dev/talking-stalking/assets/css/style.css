@@ -758,7 +758,10 @@ a {
     width: 85%;
 }
 .story-slider figcaption {
-    /*padding-top: 10px;*/
+    padding-top: 10px;
+}
+.story-slider a {
+    color: #000;
 }
 /* Slick Custom CSS */
 .slick-dots {
@@ -798,6 +801,9 @@ a {
     float: left;
     width: 33.33%;
 }
+.section.third .row-bottom--col-third a {
+    color: #000;
+}
 .section.third .row-bottom--col-third__sub-headline {
     padding: 8px 15px;
     color: #fff;
@@ -821,7 +827,7 @@ a {
 .section.third .red-leaf-second {
     position: absolute;
     top: 30%;
-    left: 49%;
+    left: 46%;
     width: 17px;
 }
 .section.third .red-leaf-third {
