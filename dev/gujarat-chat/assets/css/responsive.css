@@ -86,8 +86,17 @@
 .filter-block .gender li a {
 	width: 20px;
 }
+.filter-block .gender li.male a {
+	width: 15px;
+}
+.filter-block .gender li.female a {
+	width: 22px;
+}
+.filter-block .gender li.others a {
+	width: 25px;
+}
 .filter-block .gender li span {
-	margin: 10px 0 0 0px;
+	margin: 7px 0 0 0px;
 }
 .chat-container ul li {
 	margin-bottom: 20px;

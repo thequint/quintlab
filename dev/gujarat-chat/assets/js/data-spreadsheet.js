@@ -89,10 +89,28 @@ $(".filter-block .options li").click(function(){
 			{
 			sheet_data.push(sheet_data_all[index]);	
 			}
-		
-//		console.log(sheet_data_all[index].Category);
 	}
-console.log(sheet_data);	
 	display_data();
-	//alert($(this).attr("data-category"));
-})
+});
+
+
+$(".filter-block .gender li").click(function(){
+	
+	sheet_data=[]
+	$(".filter-block .gender li").removeClass("is-active");
+	$(this).addClass("is-active");
+	for (var index = sheet_data_all.length - 1; index >= 0; index--) {
+		
+		if(sheet_data_all[index].Sex==$(this).attr("data-gender"))
+			{
+			sheet_data.push(sheet_data_all[index]);	
+			}
+		
+	}
+	display_data();
+	
+});
+
+
+
+

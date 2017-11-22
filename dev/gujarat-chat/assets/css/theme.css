@@ -25,7 +25,6 @@ body {
 	width: 100%;
 	height: 100%;
 	transform: translateZ(0px);
-	
 }
 p {
 	line-height: 130%;
@@ -164,19 +163,27 @@ h1, h2, h3, h4, h5, h6 {
 	color: #F9920A;
 }
 .filter-block .gender li.female {
-	margin-top: 2px;
 }
 .filter-block .gender li a {
 	width: 24px;
 	display: inline-block;
 	opacity: 0.5;
 }
+.filter-block .gender li.male a {
+	width: 18px;
+}
+.filter-block .gender li.female a {
+	width: 25px;
+}
+.filter-block .gender li.others a {
+	width: 30px;
+}
 .filter-block .gender li:hover a, .filter-block .gender li.is-active a {
 	opacity: 1;
 }
 .filter-block .gender li span {
 	display: inline-block;
-	margin: 10px 0 0 5px;
+	margin: 3px 0 0 0px;
 }
 .filter-block .options li {
 	margin-bottom: 10px;
@@ -199,11 +206,11 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	padding-left: 30px;
 }
-.filter-block .options li a:hover{
+.filter-block .options li a:hover {
 	color: #fff;
 }
- .filter-block .options li.is-active a {
-/*	color: #F9920A;*/
+.filter-block .options li.is-active a {
+	/*	color: #F9920A;*/
 	background: rgba(0,0,0,0.35);
 	color: #fff;
 }
@@ -242,7 +249,10 @@ h1, h2, h3, h4, h5, h6 {
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
 	background: #fff;
 	font-size: 0px;
-	
+	background-image: url(../images/avatar.svg);
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: center bottom;
 }
 .chat-el .profile-img img {
 	border-radius: 100%;
@@ -454,8 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 	left: 15px;
 	transform: translateZ(0px);
 }
-
-.sticky-footer-wrapper{
+.sticky-footer-wrapper {
 	background: #9B0E18;
 	height: 55px;
 	text-align: center;
@@ -467,40 +476,36 @@ h1, h2, h3, h4, h5, h6 {
 	transform: translateZ(0px);
 	display: none;
 	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.5);
 	color: #fff;
 }
-
-
-.sticky-footer-wrapper li{
+.sticky-footer-wrapper li {
 	float: left;
 	width: 50%;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 15px;
 }
-.sticky-footer-wrapper li.send-voice{
+.sticky-footer-wrapper li.send-voice {
 	border-right: 1px solid #F9920B;
 }
-.sticky-footer-wrapper li.link-filter{
+.sticky-footer-wrapper li.link-filter {
 	border-left: 1px solid #F9920B;
 }
-
-
-.sticky-footer-wrapper li a{
+.sticky-footer-wrapper li a {
 	display: block;
 	line-height: 55px;
 	color: #fff;
 }
-.sticky-footer-wrapper li a:hover, .sticky-footer-wrapper li.is-active a{
+.sticky-footer-wrapper li a:hover, .sticky-footer-wrapper li.is-active a {
 	color: #F9920B;
 }
-
-.sticky-footer-wrapper li a span{
+.sticky-footer-wrapper li a span {
 	display: inline-block;
 	position: relative;
 }
-.sticky-footer-wrapper li.send-voice span{padding-left: 26px;}
+.sticky-footer-wrapper li.send-voice span {
+	padding-left: 26px;
+}
 .sticky-footer-wrapper li.send-voice span::before {
 	position: absolute;
 	width: 24px;
@@ -510,9 +515,9 @@ h1, h2, h3, h4, h5, h6 {
 	content: '';
 	background: url(../images/send.svg) no-repeat 100%;
 }
-
-
-.sticky-footer-wrapper li.link-filter span{padding-left: 26px;}
+.sticky-footer-wrapper li.link-filter span {
+	padding-left: 26px;
+}
 .sticky-footer-wrapper li.link-filter span::before {
 	position: absolute;
 	width: 21px;
@@ -522,8 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 	content: '';
 	background: url(../images/filter.svg) no-repeat 100%;
 }
-
-.close-filter{
+.close-filter {
 	display: none;
 	position: absolute;
 	width: 30px;
@@ -536,14 +540,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	line-height: 30px;
 }
-.close-filter:hover{
+.close-filter:hover {
 	color: #9B0E18;
 }
-
-
-
-
-.embed-form{
+.embed-form {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -554,23 +554,19 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	padding: 30px;
 	display: none;
-	
 }
-
-.embed-form.is-open{
+.embed-form.is-open {
 	display: block;
 }
-
-.embed-form-container{
+.embed-form-container {
 	max-width: 700px;
 	padding: 30px;
 	background: #fff;
 	border-radius: 2px;
 	margin: 0 auto;
 	position: relative;
-	
 }
-.close-form{
+.close-form {
 	position: absolute;
 	top: -18px;
 	right: -18px;
@@ -581,48 +577,39 @@ h1, h2, h3, h4, h5, h6 {
 	background: #F9920B;
 	color: #fff;
 }
-.close-form i{
+.close-form i {
 	line-height: 35px;
 	font-size: 20px;
-	
 }
-
-.close-form:hover{
+.close-form:hover {
 	color: #9B0E18;
 }
-
-
-
-
 /*Scroll CSS*/
 .phancy-scrollbar {
-width: 5px;
-border-radius: 4px;
-top: 0;
-position: absolute;
-background: #ccc;
--moz-transition: opacity .2s;
--webkit-transition: opacity .2s;
--o-transition: opacity .2s;
--ms-transition: opacity .2s;
-transition: opacity .2s;
--webkit-transition-delay: 1s;
-opacity: 0;
+	width: 5px;
+	border-radius: 4px;
+	top: 0;
+	position: absolute;
+	background: #ccc;
+	-moz-transition: opacity .2s;
+	-webkit-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	-ms-transition: opacity .2s;
+	transition: opacity .2s;
+	-webkit-transition-delay: 1s;
+	opacity: 0;
 }
-.phancy-scroller .phancy-scrollbar:active, .phancy-scroller:hover .phancy-scrollbar {
-opacity: 1;
--webkit-transition-delay: 0s;
+.phancy-scroller .phancy-scrollbar:active, 
+.phancy-scroller:hover .phancy-scrollbar {
+	opacity: 1;
+	-webkit-transition-delay: 0s;
 }
 .phancy-scrollbarbutton {
-width: 100%;
-border-radius: 4px;
-top: 0;
-position: absolute;
-background-color: #999;
+	width: 100%;
+	border-radius: 4px;
+	top: 0;
+	position: absolute;
+	background-color: #999;
 }
-
-.phancy-scrollbarbutton.chat-container{
-	
+.phancy-scrollbarbutton.chat-container {
 }
-
-
