@@ -11,8 +11,8 @@ function init() {
 window.addEventListener('DOMContentLoaded', init);
 
 var sheet_data, sheet_data_all;
-var gender_filter="all";
-var category_filter ="all";
+var gender_filter = "all";
+var category_filter = "all";
 
 
 function getParameterByName(name, url) {
@@ -26,18 +26,17 @@ function getParameterByName(name, url) {
 }
 
 function showInfo(data) {
-	
-	sheet_data = data;
-	 sheet_data_all = data;
-	 display_data();
+
+   sheet_data = data;
+   sheet_data_all = data;
+   display_data();
 
 }
 
 
-function display_data()
-{
-	
-	  $("#listData").html("");
+function display_data() {
+
+   $("#listData").html("");
    for (var index = sheet_data.length - 1; index >= 0; index--) {
 
       var cat_class;
@@ -58,99 +57,88 @@ function display_data()
          case "Unemployment":
             cat_class = "ctg-violet";
             break;
-		case "Religion":
+         case "Religion":
             cat_class = "ctg-pink";
             break;
-		case "Others":
+         case "Others":
             cat_class = "ctg-red";
-            break;	  
+            break;
 
          default:
             cat_class = "";
-			  
-			  
+
+
       }
-	 
-	   $("#listData").append("<li class='"+cat_class+"'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='"+sheet_data[index].Profile_Image+"' alt='"+sheet_data[index].Name+"'></div><div class='msg'><div class='msg-text'><blockquote>"+ sheet_data[index].Sub_Headline +"</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/"+sheet_data[index].Video+"' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>"+sheet_data[index].Name+"</h4><h4><label>Age: </label>"+sheet_data[index].Age+"</h4><h4><label>Location: </label>"+sheet_data[index].Location+"</h4><p>"+sheet_data[index].Description+"</p></div></div></figure></li>");
-	     
+
+      $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/" + sheet_data[index].Video + "' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+
    }
-	moreData();
+   moreData();
 }
 
 
-$(".filter-block .options li").click(function(){
-	
-	sheet_data=[]
-	
-	
-	if($(this).hasClass("is-active"))
-		{
-	category_filter="all";
-	$(".filter-block .options li").removeClass("is-active");
-	$(this).removeClass("is-active");	
-					$(".clear-filter").removeClass("is-filter");
-		}
-	else
-		{
-	category_filter=$(this).attr("data-category");	
-	$(".filter-block .options li").removeClass("is-active");
-	$(this).addClass("is-active");	
-			$(".clear-filter").addClass("is-filter");
-		}
+$(".filter-block .options li").click(function() {
 
-	
-	for (var index = 0; index <= sheet_data_all.length - 1; index++) {
-		
-		if((sheet_data_all[index].Category==category_filter || category_filter=="all" ) && ((gender_filter=="all") || gender_filter==sheet_data_all[index].Sex) )
-			{
-			sheet_data.push(sheet_data_all[index]);	
-			}
-	}
-	display_data();
+   sheet_data = []
+
+
+   if ($(this).hasClass("is-active")) {
+      category_filter = "all";
+      $(".filter-block .options li").removeClass("is-active");
+      $(this).removeClass("is-active");
+      $(".clear-filter").removeClass("is-filter");
+   } else {
+      category_filter = $(this).attr("data-category");
+      $(".filter-block .options li").removeClass("is-active");
+      $(this).addClass("is-active");
+      $(".clear-filter").addClass("is-filter");
+   }
+
+
+   for (var index = 0; index <= sheet_data_all.length - 1; index++) {
+
+      if ((sheet_data_all[index].Category == category_filter || category_filter == "all") && ((gender_filter == "all") || gender_filter == sheet_data_all[index].Sex)) {
+         sheet_data.push(sheet_data_all[index]);
+      }
+   }
+   display_data();
 });
 
 
-$(".filter-block .gender li.gender-item").click(function(){
-	
-	if($(this).hasClass("is-active"))
-		{
-	gender_filter="all";
-	$(".filter-block .gender li.gender-item").removeClass("is-active");
-	$(this).removeClass("is-active");
-					$(".clear-filter").removeClass("is-filter");
-			
-		}
-	else
-		{
-	$(".filter-block .gender li.gender-item").removeClass("is-active");
-	$(this).addClass("is-active");
-	gender_filter=$(this).attr("data-gender");
-					$(".clear-filter").addClass("is-filter");
-		}
-	sheet_data=[]
-	for (var index = 0; index <= sheet_data_all.length - 1; index++) {
-		
-		if((sheet_data_all[index].Category==category_filter || category_filter=="all" ) && ((gender_filter=="all") || gender_filter==sheet_data_all[index].Sex) )
-			{
-			sheet_data.push(sheet_data_all[index]);	
-			}
-		
-	}
-	display_data();
-	
+$(".filter-block .gender li.gender-item").click(function() {
+
+   if ($(this).hasClass("is-active")) {
+      gender_filter = "all";
+      $(".filter-block .gender li.gender-item").removeClass("is-active");
+      $(this).removeClass("is-active");
+      $(".clear-filter").removeClass("is-filter");
+
+   } else {
+      $(".filter-block .gender li.gender-item").removeClass("is-active");
+      $(this).addClass("is-active");
+      gender_filter = $(this).attr("data-gender");
+      $(".clear-filter").addClass("is-filter");
+   }
+   sheet_data = []
+   for (var index = 0; index <= sheet_data_all.length - 1; index++) {
+
+      if ((sheet_data_all[index].Category == category_filter || category_filter == "all") && ((gender_filter == "all") || gender_filter == sheet_data_all[index].Sex)) {
+         sheet_data.push(sheet_data_all[index]);
+      }
+
+   }
+   display_data();
+
 });
 
 
-$(".clear-filter").click(function(){
-	
-	sheet_data = sheet_data_all ;
-		gender_filter="all";
-		category_filter="all";
-	display_data();
-	$(".filter-block .gender li.gender-item").removeClass("is-active");
-	$(this).removeClass("is-filter");
-	$(".filter-block .options li").removeClass("is-active");
+$(".clear-filter").click(function() {
+
+   sheet_data = sheet_data_all;
+   gender_filter = "all";
+   category_filter = "all";
+   display_data();
+   $(".filter-block .gender li.gender-item").removeClass("is-active");
+   $(this).removeClass("is-filter");
+   $(".filter-block .options li").removeClass("is-active");
 });
-
-
-

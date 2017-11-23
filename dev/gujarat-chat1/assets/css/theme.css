@@ -132,21 +132,17 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 	text-align: left;
 }
-
-.filter-block ul.gender{
+.filter-block ul.gender {
 	border-top: 0;
 }
-
-.filter-block ul.send-voice{
+.filter-block ul.send-voice {
 	border-bottom: 1px solid #ffbf00;
 }
-.filter-block ul.send-voice.clear-filter{
+.filter-block ul.send-voice.clear-filter {
 	border-bottom: 0;
 	padding-top: 15px;
 	padding-bottom: 0;
 }
-
-
 .filter-block ul li {
 	position: relative;
 }
@@ -172,37 +168,28 @@ h1, h2, h3, h4, h5, h6 {
 	content: '';
 	background: url(../images/send.svg) no-repeat 100%;
 }
-
-
-.filter-block ul.send-voice.clear-filter li{text-align: center;}
-
-.filter-block ul.send-voice.clear-filter{
+.filter-block ul.send-voice.clear-filter li {
+	text-align: center;
+}
+.filter-block ul.send-voice.clear-filter {
 	display: none;
 }
-
-.filter-block ul.send-voice.clear-filter.is-filter{
+.filter-block ul.send-voice.clear-filter.is-filter {
 	display: block;
 }
-
-
-.filter-block ul.send-voice.clear-filter li a{
+.filter-block ul.send-voice.clear-filter li a {
 	font-size: 15px;
 	display: inline-block;
 }
-
 .filter-block ul.send-voice.clear-filter li a::before {
-    position: absolute;
-    width: 11px;
-    height: 13px;
-    top: 2px;
-    left: -6px;
-    content: '';
-    background: url(../images/close.svg) no-repeat 100%;
+	position: absolute;
+	width: 11px;
+	height: 13px;
+	top: 2px;
+	left: -6px;
+	content: '';
+	background: url(../images/close.svg) no-repeat 100%;
 }
-
-
-
-
 .filter-block .gender li {
 	float: left;
 	margin: 0px 4px;
@@ -224,7 +211,8 @@ h1, h2, h3, h4, h5, h6 {
 .filter-block .gender li.others a {
 	width: 30px;
 }
-.filter-block .gender li:hover a, .filter-block .gender li.is-active a {
+.filter-block .gender li:hover a, 
+.filter-block .gender li.is-active a {
 	opacity: 1;
 }
 .filter-block .gender li span {
@@ -370,7 +358,8 @@ h1, h2, h3, h4, h5, h6 {
 .personal-details h4 {
 	font-weight: 700;
 }
-.chat-container ul li.is-more .chat-el .msg-text, .chat-container ul li.is-more .chat-el .msg-text span {
+.chat-container ul li.is-more .chat-el .msg-text, 
+.chat-container ul li.is-more .chat-el .msg-text span {
 	color: #fff;
 }
 .chat-container ul li.is-more .chat-el .btn-more {
@@ -542,7 +531,8 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 55px;
 	color: #fff;
 }
-.sticky-footer-wrapper li a:hover, .sticky-footer-wrapper li.is-active a {
+.sticky-footer-wrapper li a:hover, 
+.sticky-footer-wrapper li.is-active a {
 	color: #ffbf00;
 }
 .sticky-footer-wrapper li a span {
@@ -631,38 +621,7 @@ h1, h2, h3, h4, h5, h6 {
 .close-form:hover {
 	color: #9B0E18;
 }
-
-.form-content{
+.form-content {
 	overflow: auto;
 	height: 100%;
-}
-
-/*Scroll CSS*/
-.phancy-scrollbar {
-	width: 5px;
-	border-radius: 4px;
-	top: 0;
-	position: absolute;
-	background: #ccc;
-	-moz-transition: opacity .2s;
-	-webkit-transition: opacity .2s;
-	-o-transition: opacity .2s;
-	-ms-transition: opacity .2s;
-	transition: opacity .2s;
-	-webkit-transition-delay: 1s;
-	opacity: 0;
-}
-.phancy-scroller .phancy-scrollbar:active, 
-.phancy-scroller:hover .phancy-scrollbar {
-	opacity: 1;
-	-webkit-transition-delay: 0s;
-}
-.phancy-scrollbarbutton {
-	width: 100%;
-	border-radius: 4px;
-	top: 0;
-	position: absolute;
-	background-color: #999;
-}
-.phancy-scrollbarbutton.chat-container {
 }
