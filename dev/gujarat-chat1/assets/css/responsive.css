@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+@media (max-width:1219px) {
+.chat-wrapper .container {
+	height: 100%;
+	top: 0;
+	border-radius: 0;
+}
+}
+
+@media (max-width:980px) {
+	
+	
+	
+	.share-ico {
+	background: #ffbf00 url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
+}
+
+.social-ico li a {
+	background: #ffbf00;
+	color: #fff;
+}
+	
+	.social-ico li a:hover {
+	color: #9B0E18;
+}
+	
+	
+.chat-wrapper .container {
+	height: calc(100% - 110px);
+	top: 55px;
+}
+.sticky-top-wrapper, .sticky-footer-wrapper {
+	display: block;
+}
+.share-chat {
+	position: fixed;
+	top: 8px;
+	right: 15px;
+}
+.window-header h1 {
+	display: none;
+}
+.chat-window {
+	float: none;
+	width: 100%;
+}
+/*Sidebar*/
+.mob-hide {
+	display: none !important;
+}
+.sidebar {
+	display: block;
+	width: 300px;
+	position: fixed;
+	height: auto;
+	z-index: 9999;
+	right: 0;
+	bottom: 0px;
+	transform: translate3d(0,100%,0);
+	border-radius: 20px 0 0 0;
+	transition: 0.5s all ease-in-out;
+}
+.sidebar.is-open {
+	transform: translate3d(0,-55px,0);
+	/*bottom: 55px;*/
+}
+.sidebar-iner {
+	padding: 10px 10px 0px 10px;
+}
+.filter-block {
+	margin: 0;
+}
+.filter-block ul {
+	padding: 10px 5px 15px 0;
+}
+.filter-block ul.gender {
+	border-top: 0;
+}
+.close-filter {
+	display: block;
+}
+}
+
+@media (max-width:767px) {
+	
+	
+	
+	.filter-block ul.send-voice.clear-filter li {
+    text-align: left;
+    margin-left: 10px;
+}
+	
+	
+	.embed-form{
+		padding: 25px;
+	}
+	
+	.embed-form-container{
+		padding: 10px;
+	}
+	
+	
+.filter-block .options li a::before {
+	width: 18px;
+	height: 18px;
+	top: 0px;
+}
+.filter-block .options li {
+	margin-bottom: 13px;
+}
+.filter-block .options li a {
+	display: block;
+	padding-left: 26px;
+}
+.sidebar {
+	width: 50%;
+	padding-top: 20px;
+}
+.filter-block ul {
+	font-size: 16px;
+}
+.filter-block .gender li a {
+	width: 20px;
+}
+.filter-block .gender li.male a {
+	width: 15px;
+}
+.filter-block .gender li.female a {
+	width: 22px;
+}
+.filter-block .gender li.others a {
+	width: 25px;
+}
+.filter-block .gender li span {
+	margin: 7px 0 0 0px;
+}
+.chat-container ul li {
+	margin-bottom: 20px;
+}
+.chat-container {
+	margin: 0 15px;
+}
+.inner-caption {
+	width: 400px;
+}
+.chat-el {
+	max-width: 100%;
+}
+.chat-el .profile-img {
+	width: 80px;
+	height: 80px;
+	bottom: 0;
+}
+.chat-el .msg {
+	margin-left: 88px;
+}
+.chat-container ul li:nth-child(2n) .chat-el .msg {
+	margin: 0 88px 0 0;
+}
+}
+
+@media (max-width:500px) {
+.filter-block ul {
+	min-width: 100%;
+}
+body {
+	font-size: 16px;
+}
+.sticky-top-wrapper h2 {
+	font-size: 26px;
+}
+.inner-caption {
+	width: 80%;
+}
+.inner-caption h2 {
+	line-height: 116%;
+	font-size: 14px;
+}
+.inner-caption h3 {
+	line-height: 110%;
+	margin-top: 6px;
+	font-size: 14px;
+}
+.chat-el .msg-text {
+	line-height: 120%;
+}
+.chat-el .msg-text {
+	padding: 8px 10px;
+}
+}
