@@ -75,6 +75,12 @@
 }
 
 @media (max-width:767px) {
+	
+	.voice-count{
+		font-size: 30px;
+		margin: 15px 0px 10px 0px;
+	}
+	
 .filter-block ul.send-voice.clear-filter li {
 	text-align: left;
 	margin-left: 10px;

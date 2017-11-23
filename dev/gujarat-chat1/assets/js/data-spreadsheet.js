@@ -30,12 +30,18 @@ function showInfo(data) {
    sheet_data = data;
    sheet_data_all = data;
    display_data();
+	
+ document.getElementById("countVoice").innerHTML = "<span>" + [sheet_data[0].Total_Voices] + ' Voices'+"</span>";	
+	
+	//console.log([sheet_data[0].Total_Voices]);
 
 }
 
 
 function display_data() {
-
+	
+	
+	
    $("#listData").html("");
    for (var index = sheet_data.length - 1; index >= 0; index--) {
 
@@ -71,9 +77,14 @@ function display_data() {
       }
 
       $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/" + sheet_data[index].Video + "' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+	   
+	   
+	   
 
    }
    moreData();
+	
+	
 }
 
 
@@ -142,3 +153,8 @@ $(".clear-filter").click(function() {
    $(this).removeClass("is-filter");
    $(".filter-block .options li").removeClass("is-active");
 });
+
+
+
+
+
