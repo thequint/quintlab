@@ -236,6 +236,9 @@ h1, h2, h3, h4, h5, h6 {
 	border: 1px solid #fff;
 	background: #fff;
 }
+.filter-block .options li h2{
+	font-weight: 400;
+}
 .filter-block .options li a {
 	display: block;
 	padding-left: 30px;
@@ -244,15 +247,13 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 .filter-block .options li.is-active a {
-	/*	color: #ffbf00;*/
 	background: rgba(0,0,0,0.35);
 	color: #fff;
 }
 .chat-container {
 	margin: 30px 9% 0 9%;
 }
-.chat-container ul li {
-}
+
 .chat-el {
 	max-width: 80%;
 	float: left;
@@ -484,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.5);
 	color: #fff;
 }
-.sticky-top-wrapper h2 {
+.sticky-top-wrapper h1 {
 	display: inline-block;
 	color: #fff;
 	font-size: 30px;
