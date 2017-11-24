@@ -51,6 +51,7 @@ $(".chat-el").click(function(){
 	
 	if($(this).parent().hasClass("is-more")){
 		$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
+		$(this).find(".frame-video").html("");
 	}
 	
 	else {
@@ -62,11 +63,14 @@ $(".chat-el").click(function(){
 		if($(this)!=this_var && $(this).parent().hasClass("is-more")){
 			
 			$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
+			$(this).find(".frame-video").html("");
 			
 		}
 	});
 	
 	$(this).parent().addClass("is-more").find(".hide-el").slideDown(350);
+	
+		$(this).find(".frame-video").html("<iframe src='https://www.youtube.com/embed/" + $(this).find(".frame-video").attr("data-video") + "' frameborder='0' allowfullscreen></iframe>");
 	
 		$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
 		

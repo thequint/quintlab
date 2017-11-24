@@ -151,6 +151,19 @@
 }
 
 @media (max-width:500px) {
+	
+	
+	
+	.ctg-story p a span{
+		padding: 10px;
+	}
+	
+	.ctg-story p{
+		width: 100%;
+		max-width: inherit;
+		display: block;
+	}
+	
 .filter-block ul {
 	min-width: 100%;
 }

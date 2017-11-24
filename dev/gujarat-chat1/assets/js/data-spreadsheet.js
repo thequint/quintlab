@@ -1,4 +1,9 @@
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
+//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
+
+//https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/edit#gid=0
+
+
 
 function init() {
    Tabletop.init({
@@ -69,22 +74,28 @@ function display_data() {
          case "Others":
             cat_class = "ctg-red";
             break;
+			  
+		case "Story":
+            cat_class = "ctg-story";
+            break;
 
          default:
             cat_class = "";
 
 
       }
-
-      $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video'><iframe src='https://www.youtube.com/embed/" + sheet_data[index].Video + "' frameborder='0' allowfullscreen></iframe></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+  
+	   if(cat_class=="ctg-story")
+		   {
+			  $("#listData").append("<li class='" + cat_class + "'><p><a href='"+ sheet_data[index].Story_URL +"' target='_blank'><span>" + sheet_data[index].Description + "</span></a></p></li>"); 
+		   }
+	   else
+		   {
+	   $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
 	   
-	   
-	   
-
+		   }
    }
    moreData();
-	
-	
 }
 
 
