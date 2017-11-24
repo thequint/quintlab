@@ -186,6 +186,10 @@ body {
 		letter-spacing: -1px;
 		white-space: nowrap;
 	}
+	
+	.sticky-top-wrapper h1 {
+	font-size: 23px;
+}
 }
 
 
