@@ -179,3 +179,13 @@ body {
 	padding: 8px 10px;
 }
 }
+
+@media (max-width:330px) {
+	
+	.sticky-footer-wrapper li a{
+		letter-spacing: -1px;
+		white-space: nowrap;
+	}
+}
+
+
