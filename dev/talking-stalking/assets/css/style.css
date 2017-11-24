@@ -2155,6 +2155,10 @@ select:focus {
         font-size: 15px;
         line-height: 15px;
     }
+    .section.second .eye-third,
+    .section.second .red-leaf-fifth {
+        display: none;
+    }
 }
 
 /* Bounce In */
