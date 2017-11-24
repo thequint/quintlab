@@ -215,7 +215,7 @@ $("#prev").click(function() {
 });
 
 $(window).load(function() {
-    $(".loader").css({ "display": "none" })
+    $(".loader").fadeOut();
     v_slider();
 });
 
