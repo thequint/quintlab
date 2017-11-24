@@ -26,13 +26,25 @@ a {
     -webkit-transition:all 0.3s ease-in-out;
 }
 
+.loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    /*background-color: #000;*/
+    background: url(../images/loading.gif) #15191f no-repeat center;
+    background-size: 400px;
+}
+
 /* Logo */
 .quint-logo {
     position: fixed;
     top: 15px;
     left: 15px;
     width: 30px;
-    z-index: 9999;
+    z-index: 99;
     display: block;
 }
 .quint-logo img {
@@ -94,18 +106,20 @@ a {
     left: 5%;
     max-width: 425px;
 }
+
 .section.first .first--content h2 {
     font-size: 30px;
     color: #fff;
     text-transform: uppercase;
-    /*letter-spacing: 1px;*/
 }
 .section.first .first--content p {
-    color: #fff;
+    color: #e5e5e5;
     font-size: 15px;
     margin-bottom: 20px;
 }
-
+.section.first .first--content strong {
+    color: #fff;
+}
 .section.first .first--content__btn {
 
 }
@@ -340,19 +354,6 @@ a {
     width: 60px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*     //////////////////////////////       */
 .section.second {
     left: 25%;
@@ -458,13 +459,16 @@ a {
 }
 .section.second .more--testimonials__content li {
     padding: 8px 10px 10px;
-    color: #000;
-    background-color: #b2b7b5;
-    margin-bottom: 10px;
-}
-.section.second .more--testimonials__content li a {
-    color: #000;
+    color: #fff;
     font-size: 13px;
+    background-color: #858b9c;
+    margin-bottom: 10px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+.section.second .more--testimonials__content li:hover {
+    background-color: #5a6175;
 }
 .section.second .tweet--box {
     position: absolute;
