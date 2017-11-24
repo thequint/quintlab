@@ -1387,6 +1387,41 @@ select:focus {
     transition: 0.1s all ease-in-out;
 }
 
+
+/*social*/
+.social--section {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    z-index: 999;
+    display: block;
+    text-align: center;
+}
+.social--section .social-back {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.social--section .social-icons {
+    display: none;
+}
+.social--section .social-icons.show {
+    display: block;
+}
+.social-icons .facebook,
+.social-icons .twitter,
+.social-icons .copyright {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.social img {
+    width: 100%;
+}
 .red-leaf-first,
 .red-leaf-second,
 .red-leaf-third,
