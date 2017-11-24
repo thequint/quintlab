@@ -177,17 +177,3 @@ template {
 ::-moz-selection {
  background: rgba(0, 0, 0, .2);
 }
-.wrapper, .container {
-	position: relative;
-}
-.clearfix:before,  .clearfix:after, .answers:before, .answers:after, .wrapper:before, .wrapper:after, .container:before, .container:after, .row:before, .row:after, .main-wrap:after {
-	display: table;
-	line-height: 0;
-	content: "";
-}
-.clearfix:after, .wrapper, .container:after, .row:after, .answers:after {
-	clear: both;
-}
-.clearfix {
- *zoom: 1;
-}
