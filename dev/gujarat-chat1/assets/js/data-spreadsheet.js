@@ -1,9 +1,7 @@
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
+
+//demo_sheet
 //var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
-
-//https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/edit#gid=0
-
-
 
 function init() {
    Tabletop.init({
@@ -68,7 +66,7 @@ function display_data() {
          case "Unemployment":
             cat_class = "ctg-violet";
             break;
-         case "Religion":
+         case "Vikas":
             cat_class = "ctg-pink";
             break;
          case "Others":
