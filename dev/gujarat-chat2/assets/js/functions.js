@@ -1,0 +1,79 @@
+$(document).ready(function () {
+	// share
+	$(".share-ico").click(function (e) {
+		$(".social-ico").slideToggle(400);
+		return false;
+	});
+	
+	$("body").click(function () {
+		$(".social-ico").slideUp();
+	});
+
+	// move down
+
+	$(".move-down").click(function () {
+		$('html, body').animate({
+			scrollTop: $("#grid").offset().top
+		}, 1000);
+
+	});
+	
+	//
+	
+	$('.link-filter').click(function(){
+		$('.sidebar').toggleClass('is-open');
+		$(this).toggleClass('is-active');
+	});
+	
+	$('.close-filter').click(function(){
+		$('.sidebar').removeClass('is-open');
+		$('.link-filter').removeClass('is-active');
+	});
+	
+	//
+	
+	$('.open-form').click(function(){
+		$('.embed-form').addClass('is-open');
+	});
+	
+	$('.close-form').click(function(){
+		$('.embed-form').removeClass('is-open');
+	});
+	
+});
+
+
+
+
+ function moreData(){
+
+$(".chat-el").click(function(){
+	
+	if($(this).parent().hasClass("is-more")){
+		$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
+		$(this).find(".frame-video").html("");
+	}
+	
+	else {
+		
+	var this_var = $(this);	
+		
+	$(".chat-el").each(function(){
+		
+		if($(this)!=this_var && $(this).parent().hasClass("is-more")){
+			
+			$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
+			$(this).find(".frame-video").html("");
+			
+		}
+	});
+	
+	$(this).parent().addClass("is-more").find(".hide-el").slideDown(350);
+	
+		$(this).find(".frame-video").html("<iframe src='https://www.youtube.com/embed/" + $(this).find(".frame-video").attr("data-video") + "' frameborder='0' allowfullscreen></iframe>");
+	
+		$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
+		
+	}
+});
+}
