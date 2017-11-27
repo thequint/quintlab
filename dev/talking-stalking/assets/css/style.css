@@ -2184,6 +2184,7 @@ select:focus {
         margin-bottom: 5px;
     }
     .section.first .first--quote-circle {
+        top: -30px;
         left: 20px;
         font-size: 14px;
         width: 155px;
@@ -2198,6 +2199,7 @@ select:focus {
     }
 
     .section.second .talking--quote {
+        top: -20px;
         font-size: 14px;
         width: 160px;
         height: 160px;
@@ -2212,7 +2214,7 @@ select:focus {
     }
 
     .section.second .black--quote {
-        top: -30px;
+        top: -20px;
         font-size: 14px;
         width: 140px;
         height: 200px;
