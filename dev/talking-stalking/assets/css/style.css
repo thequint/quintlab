@@ -1957,7 +1957,7 @@ select:focus {
     }
     .section.first .first--logo {
         margin: 0 auto;
-        width: 130px;
+        width: 170px;
         top: 0;
         left: 0;
         z-index: 1;
@@ -2268,8 +2268,51 @@ select:focus {
         font-size: 15px;
         line-height: 15px;
     }
+    
+    .section.first .red-dot-first {
+        top: 5%;
+        left: 4%;
+    }
+    .section.first .red-dot-second {
+        top: 80%;
+        left: 87.5%;
+    }
+    /* Red Leaf */
+    .section.first .red-leaf-first {
+        top: 99%;
+        left: 22%;
+    }
+    .section.first .red-leaf-second {
+        top: 168%;
+        left: 53%;
+    }
+    .section.first .red-leaf-third {
+        top: 116%;
+        left: 86.7%;
+    }
+    /* Yellow */
+    .section.first .yellow-dot-first {
+        top: 164%;
+        left: 89.5%;
+    }
+    .section.first .yellow-dot-second {
+        top: 187%;
+        left: 18.5%;
+    }
+    /* Eye */
+    .section.first .eye-first {
+        top: 104%;
+        left: 54%;
+    }
+    .section.first .eye-second {
+        top: 10%;
+        left: 84%;
+        width: 36px;
+    }
+
     .section.second .eye-third,
     .section.second .red-leaf-fifth {
         display: none;
     }
+
 }
