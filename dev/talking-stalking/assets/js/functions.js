@@ -90,13 +90,13 @@ $(".front").css({ "width": 4 * window.innerWidth });
 
 
 function init() {
-    if ($(window).innerWidth() > 1024) {
+    if ($(window).innerWidth() > 1100) {
         $.jInvertScroll(['.scroll']);
 
     } else {
 
     }
-    if ($(window).innerWidth() < 1024) {
+    if ($(window).innerWidth() < 1100) {
         $("#sectipn_wrap").removeClass("front scroll");
         $("#sectipn_wrap").css({ "width": "100%", "height": "100%" });
         $(".horizon").hide();
