@@ -1608,8 +1608,8 @@ select:focus {
         left: 54%;
     }
     .section.first .eye-second {
-        top: 5%;
-        left: 83%;
+        top: 6%;
+        left: 87%;
     }
 
     .prev-arrow,
@@ -2058,6 +2058,10 @@ select:focus {
 }
 
 @media only screen and (max-width: 640px) {
+    .section.first .first--logo {
+        top: 5px;
+        width: 140px;
+    }
     .section.first .first--content {
         padding: 20px;
     }
