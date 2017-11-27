@@ -58,6 +58,7 @@
     </div> -->
 
     <div id="sectipn_wrap" class="front scroll test">
+
         <sectipn class="section first">
             <div class="first-assets">
                 <div class="red-dot-first"><img src="assets/images/red-dot.svg"></div>
@@ -595,6 +596,22 @@
                     <div class="share--form">
                         <form id="foo">
                             <div class="form-group">
+                                <input id="Name" name="Name" type="text" value="" placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input id="Email" name="Email" type="email" value="" placeholder="Email ID" required>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="form-group align-right">
+                                <span id="result"></span><button type="submit" class="btn-submit">Send</button>
+                            </div>
+                        </form>
+                        <!-- <form id="foo">
+                            <div class="form-group">
                                 <input id="Name" name="Name" type="text" value="" placeholder="Name" required>
                             </div>
 
@@ -609,7 +626,7 @@
                                 <button type="submit" class="btn-submit">Send</button>
                                 <span id="result"></span>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
 
                 </div>
@@ -663,7 +680,12 @@
 <script type="text/javascript" src="assets/js/jquery.jInvertScroll.js"></script>
 <script type="text/javascript" src="assets/js/slick.min.js"></script>
 
-<script src="https://metype.com/quintype/metype/assets/application.js"></script>
+<!-- Spreadsheet API -->
+<script type="text/javascript" src="assets/api/spreadsheet.js"></script>
+<script type="text/javascript" src="assets/api/data-spreadsheet-loops.js"></script>
+<script type="text/javascript" src="assets/api/google-sheet.js"></script>
+
+<!-- <script src="https://metype.com/quintype/metype/assets/application.js"></script> -->
 <script type="text/javascript" src="assets/js/functions.js"></script>
 <script type="text/javascript" src="assets/js/twitter.js"></script>
 
