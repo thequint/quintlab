@@ -47,7 +47,7 @@ $("body").click(function() {
 
 function slug_2_init() {
     //  More Stories
-    var collectionSlug = 'trending'; //Needs to be replaced.
+    var collectionSlug = 'talkingstalking'; //Needs to be replaced.
     $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
         var stories = res.items.filter(function(item) {
             return item.type == 'story'
@@ -65,7 +65,7 @@ function slug_2_init() {
 
 //Slider
 function slug_3_init() {
-    var collectionSlug = 'videos'; //Needs to be replaced.
+    var collectionSlug = 'talking-stalking-videos'; //Needs to be replaced.
     $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
         var stories = res.items.filter(function(item) {
             return item.type == 'story'
@@ -76,9 +76,9 @@ function slug_3_init() {
             return '<li><figure><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><figcaption>' + story.headline + '</figcaption></a></figure></li>'
         });
         elements.forEach(function(element) {
-            $('#SlugType_4').append(element);
-
+            $('#SlugType_video').append(element);
         });
+        v_slider();
     });
 }
 //slug_1_init();
