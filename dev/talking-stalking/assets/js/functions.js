@@ -185,7 +185,7 @@ $("#click").click(function() {
         click_flag = 1;
         cur_section = cur_section + 1;
         $('html, body').animate({
-            scrollTop: ((($("body").height() - $(window).height()) / (section_numbers - 1)) * cur_section) + 10
+            scrollTop: ((($("body").height() - $(window).height()) / (section_numbers - 1)) * cur_section) + 3
         }, 500);
 
         setTimeout(function() {
@@ -212,6 +212,27 @@ $("#prev").click(function() {
         }, 500);
 
     }
+});
+
+$("#share_exp").click(function() {
+if(window.innerWidth>1100)
+{
+    if (click_flag == 0 && cur_section <= 2) {
+        click_flag = 1;
+        cur_section = 3;
+        $('html, body').animate({
+            scrollTop: ((($("body").height() - $(window).height()) / (section_numbers - 1)) * cur_section) + 3
+        }, 500);
+
+        setTimeout(function() {
+            click_flag = 0;
+        }, 500);
+    }
+}
+else
+{
+    $("html, body").animate({ scrollTop: $("#contact-section").offset().top });
+}
 });
 
 $(window).load(function() {

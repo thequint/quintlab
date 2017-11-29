@@ -136,7 +136,7 @@ a {
 .section.first .first--content p {
     color: #e5e5e5;
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .section.first .first--content strong {
     color: #fff;
@@ -246,7 +246,7 @@ a {
     display: none;
 }
 .section.first .first--quote-comment {
-    font-size: 15px;
+    font-size: 16px;
     color: #000;
     position: absolute;
     top: 42%;
@@ -263,7 +263,7 @@ a {
 
 .section.first .first--quote-comment__content {
     width: 100%;
-    padding: 18px 9px 22px 15px;
+    padding: 43px 9px 22px 15px;
     border-radius: 35px;
 }
 .section.first .first--quote-comment .txt-top {
@@ -271,7 +271,7 @@ a {
     margin-bottom: 10px;
 }
 .section.first .first--quote-circle {
-    font-size: 17px;
+    font-size: 20px;
     color: #b2b7b5;
     position: absolute;
     top: 33%;
@@ -288,7 +288,7 @@ a {
 .section.first .first--quote-circle__content {
     width: 100%;
     height: 200px;
-    padding: 45px 0 0 28px;
+    padding: 57px 0 0 28px;
     border-radius: 100%;
 }
 .section.first .first--quote-circle .txt-top {
@@ -365,7 +365,7 @@ a {
     height: 100%;
 }
 .section.second .talking--quote {
-    font-size: 18px;
+    font-size: 20px;
     color: #a9aaa9;
     position: absolute;
     top: 12%;
@@ -377,7 +377,7 @@ a {
     background-repeat: no-repeat;
 }
 .section.second .talking--quote__content {
-    padding-top: 58px;
+    padding-top: 73px;
     width: 100%;
     min-height: 110px;
 }
@@ -389,7 +389,7 @@ a {
     margin-bottom: 10px;
 }
 .section.second .black--quote {
-    font-size: 16px;
+    font-size: 20px;
     color: #a9aaa9;
     position: absolute;
     top: 19%;
@@ -402,7 +402,7 @@ a {
 }
 .section.second .black--quote__content {
     width: 100%;
-    padding: 49px 12px;
+    padding: 60px 15px;
     min-height: 110px;
 }
 .section.second .black--quote span {
@@ -413,7 +413,7 @@ a {
     margin-bottom: 20px;
 }
 .section.second .colon--quote {
-    font-size: 15px;
+    font-size: 20px;
     color: #000;
     position: absolute;
     top: 33%;
@@ -426,7 +426,7 @@ a {
 }
 .section.second .colon--quote__content {
     width: 100%;
-    padding: 118px 12px 12px 15px;
+    padding: 120px 12px 12px 15px;
     min-height: 125px;
 }
 .section.second .colon--quote span {
@@ -435,6 +435,23 @@ a {
 .section.second .colon--quote .txt-top {
     display: block;
     margin-bottom: 20px;
+}
+.section.second .share-experience {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #b2b8b4;
+    position: absolute;
+    top: 78%;
+    left: 47%;
+    width: 210px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #a12b2c;
+    font-family: 'Anton', sans-serif;
+}
+.section.second .share-experience span {
+    display: block;
 }
 .section.second .more--testimonials {
     font-size: 15px;
@@ -977,6 +994,17 @@ a {
     text-transform: uppercase;
     margin-bottom: 5px;
 }
+.section.forth .col-left--headline span {
+    float: left;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 5px;
+}
+.section.forth .col-left--headline span {
+
+}
+
 .section.forth .col-left--content-box {
     position: relative;
     padding: 10px;
@@ -1783,11 +1811,16 @@ select:focus {
         height: 230px;
     }
     .section.second .colon--quote {
-        top: -60px;
+        top: -50px;
         width: 160px;
         height: 230px;
         left: calc(100% - 226px);
         left: -webkit-calc(100% - 226px);
+    }
+    .section.second .share-experience {
+        position: relative;
+        top: -50px;
+        left: 8%;
     }
     .section.second .tweet--box {
         margin-bottom: 50px;
@@ -2041,7 +2074,11 @@ select:focus {
         top: -70px;
     }
     .section.second .colon--quote {
-        top: -70px;
+        top: -50px;
+    }
+    .section.second .share-experience {
+        top: -50px;
+        left: 40px;
     }
     .section.second .tweet--box {
         margin-bottom: 0;
@@ -2060,7 +2097,7 @@ select:focus {
 @media only screen and (max-width: 640px) {
     .section.first .first--logo {
         top: 5px;
-        width: 140px;
+        width: 170px;
     }
     .section.first .first--content {
         padding: 20px;
@@ -2144,9 +2181,13 @@ select:focus {
         left: 30px;
     }
     .section.second .colon--quote {
-        top: -110px;
+        top: -60px;
         left: calc(100% - 200px);
         left: -webkit-calc(100% - 200px);
+    }
+    .section.second .share-experience {
+        top: -60px;
+        left: 20px;
     }
     .section.second .tweet--box {
         margin-bottom: 10px;
@@ -2173,12 +2214,12 @@ select:focus {
         width: 130px;
         height: 144px;
         top: 0;
-        font-size: 13px;
+        font-size: 14px;
         left: calc(100% - 150px);
         left: -webkit-calc(100% - 150px);
     }
     .section.first .first--quote-comment__content {
-        padding: 16px 10px 0;
+        padding: 37px 12px 0;
     }
     .section.first .first--quote-comment .txt-top {
         margin-bottom: 5px;
@@ -2186,12 +2227,12 @@ select:focus {
     .section.first .first--quote-circle {
         top: -30px;
         left: 20px;
-        font-size: 14px;
+        font-size: 16px;
         width: 155px;
         height: 155px;
     }
     .section.first .first--quote-circle__content {
-        padding: 32px 0 0 21px;
+        padding: 40px 0 0 24px;
         height: 155px;
     }
     .section.first .first--quote-circle .txt-top {
@@ -2200,7 +2241,7 @@ select:focus {
 
     .section.second .talking--quote {
         top: -20px;
-        font-size: 14px;
+        font-size: 17px;
         width: 160px;
         height: 160px;
         left: calc(100% - 180px);
@@ -2210,28 +2251,35 @@ select:focus {
         margin-bottom: 7px;
     }
     .section.second .talking--quote__content {
-        padding-top: 42px;
+        padding-top: 50px;
     }
 
     .section.second .black--quote {
         top: -20px;
-        font-size: 14px;
+        font-size: 17px;
         width: 140px;
         height: 200px;
     }
     .section.second .black--quote__content {
-        padding: 40px 10px 0;
+        padding: 55px 15px 0;
     }
     .section.second .colon--quote {
-        font-size: 14px;
+        font-size: 17px;
         width: 140px;
         height: 200px;
         top: -30px;
         left: calc(100% - 160px);
         left: -webkit-calc(100% - 160px);
     }
+    .section.second .share-experience {
+        font-size: 14px;
+        top: 0px;
+        left: 20px;
+        margin-bottom: 30px
+    }
+
     .section.second .colon--quote__content {
-        padding: 100px 12px 12px 12px;
+        padding: 108px 12px 12px 17px;
     }
     .section.second .colon--quote .txt-top {
         margin-bottom: 5px;
