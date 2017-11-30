@@ -672,7 +672,7 @@ a {
 }
 .section.third .top-head {
     margin: 40px auto 15px;
-    width: 84%;
+    width: 92%;
 }
 .section.third .top-head--headline {
     width: 40%;
@@ -687,7 +687,7 @@ a {
 }
 .section.third .row-top {
     margin: 0 auto 0;
-    width: 84%;
+    width: 92%;
     display: table;
     min-height: 300px;
 }
@@ -857,6 +857,13 @@ a {
 .slick-vertical .slick-slide {
     border: none;
 }
+
+.slick-vertical .slick-slide img {
+    display: block;
+    width: 100%;
+}
+
+
 .section.third .row-bottom {
     margin: 10px auto 0;
     width: 96%;
