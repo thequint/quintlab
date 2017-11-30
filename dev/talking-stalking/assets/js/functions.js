@@ -237,7 +237,7 @@ else
 
 $(window).load(function() {
     $(".loader").fadeOut();
-    v_slider();
+    //v_slider();
 });
 
 $(window).resize(function() {

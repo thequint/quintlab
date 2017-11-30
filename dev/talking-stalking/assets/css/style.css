@@ -73,7 +73,7 @@ a {
     top: 15px;
     left: 15px;
     width: 30px;
-    z-index: 99;
+    z-index: 9999;
     display: block;
 }
 .quint-logo img {
@@ -1203,6 +1203,9 @@ select:focus {
     color: #fff;
     -webkit-box-shadow: inset 0 0 0px 9999px #646977;
 }
+
+
+
 ::-webkit-input-placeholder {
     color: #fff;
 }
@@ -1210,20 +1213,16 @@ select:focus {
     color: #fff;
     opacity: 1;
 }
-
 ::-moz-placeholder {
     color: #fff;
     opacity: 1;
 }
-
 :-ms-input-placeholder {
     color: #fff;
 }
-
 ::-ms-input-placeholder {
     color: #fff;
 }
-
 ::placeholder {
     color: #fff;
 }
