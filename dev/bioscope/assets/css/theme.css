@@ -1,0 +1,112 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'oleo_scriptregular';
+	src: url('../fonts/oleoscript-regular-webfont.woff2') format('woff2'),  url('../fonts/oleoscript-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'sancreekregular';
+	src: url('../fonts/sancreek-regular-webfont.woff2') format('woff2'),  url('../fonts/sancreek-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'sansita_vf_betaregular';
+	src: url('../fonts/sansitavfbeta-webfont.woff2') format('woff2'),  url('../fonts/sansitavfbeta-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: 'oleo_scriptregular';
+	font-weight: 400;
+	background-color: #f4f4f4;
+	background-repeat: repeat;
+	color: #4d4d4d;
+	font-size: 17px;
+	width: 100%;
+	height: 100%;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #4d4d4d;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #4d4d4d;
+	font-weight: 900;
+	font-size: 100%;
+}
+/*Start CSS*/
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.bioscope img.img-bioscope {
+	width: 100%;
+}
+.bioscope-elmnts {
+	position: absolute;
+	width: 100%;
+	bottom: 100px;
+	left: 0;
+}
+.bio-headline {
+	font-family: 'sancreekregular';
+	font-size: 65px;
+	line-height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 2px 2px 0px #C1272D;
+}
+.swiper-container {
+	width: 680px;
+	margin: 0 auto;
+}
+
+.swiper-container ul li a{display: block;}
+.swiper-container ul li a {
+	display: block;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 8px solid #fff;
+}
+
+
+/*
+
+
+.bio-slider ul li {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	padding: 70px;
+	
+}
+.bio-slider ul li.slick-current {
+	margin: 0;
+	padding: 0px;
+}
+.bio-slider ul li a {
+	display: block;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 5px solid #fff;
+}
+.bio-slider ul li.slick-current a {
+	margin: 0;
+}
+*/
