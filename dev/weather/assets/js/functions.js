@@ -10,7 +10,7 @@ function reset_dash() {
 
 function init_weather_slider() // to be called on forecast success
 {
-console.log($('.daily-weather--slider').html())
+//console.log($('.daily-weather--slider').html())
     $('.daily-weather--slider').slick({
         infinite: true,
         autoplay: false,
@@ -201,14 +201,7 @@ $(document).ready(function() {
 });
 
 
-
 $(window).resize(function(){
     reset_dash();
 });
-
-
-
-
-
-
 

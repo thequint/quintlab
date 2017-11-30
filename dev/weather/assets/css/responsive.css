@@ -127,6 +127,19 @@
 		max-width: 100%;
 	}
 	
+	
+	.accuweather-logo-footer {
+	width: 120px;
+	
+	margin: 17px 10px;
+}
+	
+	.update-text {
+	margin: 16px 10px;
+	font-size: 13px;
+}
+	
+	
 }
 
 @media only screen and (max-width: 479px) {

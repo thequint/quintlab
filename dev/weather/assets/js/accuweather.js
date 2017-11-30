@@ -221,7 +221,7 @@ function getIdByChangeCityName(city_name) { // For the city listing
         .done(function(data) {
             //get_weather_array(data[0].Key)
             //console.log(data[0].Key)
-            console.log(data);
+            //console.log(data);
 			
 			cur_city_name = data[0].LocalizedName;
 			city_id = data[0].Key;
