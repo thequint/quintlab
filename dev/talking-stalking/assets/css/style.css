@@ -192,6 +192,7 @@ a {
     position: absolute;
     top: 15%;
     left: 47%;
+    width: 84px;
 }
 .section.first .sig-top-counter:before {
     margin: 0 auto;
@@ -241,6 +242,8 @@ a {
 .section.first .sig--counter span {
     font-size: 30px;
     font-weight: 700;
+    height: 36px;
+    display: block;
 }
 .first--content .sig--counter-device {
     display: none;
@@ -1193,11 +1196,16 @@ select:focus {
 .share--form .form-group input:focus {
     background: #646977;
 }
-
+.share--form .form-group input {
+    background: #646977;
+}
+.share--form .form-group input:-webkit-autofill {
+    color: #fff;
+    -webkit-box-shadow: inset 0 0 0px 9999px #646977;
+}
 ::-webkit-input-placeholder {
     color: #fff;
 }
-
 :-moz-placeholder {
     color: #fff;
     opacity: 1;
@@ -1745,6 +1753,7 @@ select:focus {
         font-size: 30px;
         font-weight: 700;
         display: block;
+        height: 36px;
     }
 
     /* ///// */
