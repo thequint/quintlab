@@ -1,43 +1,24 @@
 $(document).ready(function () {
-	
-	// BioSlider
-	
-	
-//$('#BioSlider').slick({
-//  centerMode: true,
-//variableWidth: true,
-//  centerPadding: '0px',
-//  slidesToShow: 3,
-//  arrows: true
-//});
-	
-	
 	var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      //centeredSlides: true,
-      slidesPerView: 'auto',
-		 slidesPerView: 3,
-      coverflowEffect: {
-        rotate: 50,
-		 
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
-      },
-//      pagination: {
-//        el: '.swiper-pagination',
-//      },
-		navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
-	
-	
+		effect: 'coverflow',
+		grabCursor: true,
+		//centeredSlides: true,
+		slidesPerView: 'auto',
+		slidesPerView: 3,
+		loop: true,
+		coverflowEffect: {
+		rotate: 50,
 
-	
+		stretch: 0,
+		depth: 100,
+		modifier: 1,
+		slideShadows : true,
+	},
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		}
+	});
 });
 
 

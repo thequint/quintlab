@@ -190,7 +190,7 @@ template {
 .wrapper, .container {
 	position: relative;
 }
-.clearfix:before, 
+.clearfix:before,
 .clearfix:after, 
 .wrapper:before, 
 .wrapper:after, 
@@ -198,8 +198,8 @@ template {
 .container:after, 
 .row:before, 
 .row:after, 
-.chat-container li:after, 
-.chat-container li:before {
+.discussion-container li:after, 
+.discussion-container li:before {
 	display: table;
 	line-height: 0;
 	content: "";
@@ -208,7 +208,7 @@ template {
 .wrapper:after, 
 .container:after, 
 .row:after,  
-.chat-container li:after {
+.discussion-container li:after {
 	clear: both;
 }
 .clearfix {
