@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 .bioscope-elmnts {
 	position: absolute;
 	width: 100%;
-	bottom: 90px;
+	bottom: 14%;
 	left: 0;
 }
 .bio-headline {
@@ -74,15 +74,16 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	color: #fff;
 	text-shadow: 2px 2px 0px #C1272D;
-	margin: 0 0 20px 0;
+	margin: 0 auto 20px auto;
+	width: calc(100% - 18%);
 }
 .bio-slider{
 	position:relative;
 }
 
 .swiper-container {
-	width: 460px;
-	margin: 0 auto;/*	background: rgba(255,255,255,0.5);*/
+	width: calc(100% - 18%);
+	margin: 0 auto;
 }
 .swiper-container ul li a {
 	display: block;
@@ -222,13 +223,13 @@ h1, h2, h3, h4, h5, h6 {
 	
 }
 .swiper-button-prev{
-left: 23px;
+left: 5%;
 	background-image: url(../images/prev.svg);
 	background-position: 12px center;
 }
 
 .swiper-button-next{
-right: 23px;
+right: 5%;
 	background-image: url(../images/next.svg);
 	background-position: 18px center;
 }

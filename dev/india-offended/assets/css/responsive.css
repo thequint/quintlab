@@ -1,15 +1,33 @@
 @charset "utf-8";
 
-@media (max-width:1279px) {
-	.container{max-width:620px;}
+@media (max-width:549px) {
+.container {
+	max-width: 100%;
+	padding: 0px 10px;
 }
-
-
-@media (max-width:959px) {
-	.container{max-width:620px;}
+.swiper-button-prev, .swiper-button-next {
+	transform: scale(0.5);
 }
-
-@media (max-width:639px) {
-	.container{max-width:100%;}
+.bio-headline {
+	font-size: 25px;
+	margin-bottom: 10px;
 }
-
+.text-container h2 {
+	transform: scale(0.7);
+}
+.text-container p, .discussion-container li figcaption {
+	font-size: 22px;
+}
+.discussion-container {
+	padding: 0px 10px;
+}
+.discussion-container li .profile-pic {
+	width: 100px;
+}
+.discussion-container li figure {
+	padding: 0 0px 0 100px;
+}
+.discussion-container li:nth-child(even) figure {
+	padding: 0 100px 0 0px;
+}
+}
