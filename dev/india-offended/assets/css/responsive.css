@@ -26,6 +26,11 @@
 }
 .discussion-container li figure {
 	padding: 0 0px 0 100px;
+	width: 100%;
+	max-width: inherit;
+}
+.discussion-container li figcaption {
+	padding: 20px 15px;
 }
 .discussion-container li:nth-child(even) figure {
 	padding: 0 100px 0 0px;
