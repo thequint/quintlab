@@ -75,40 +75,30 @@ el.parentNode.insertBefore(s, el);
 			<div class="bioscope">
 				<img class="img-bioscope" src="assets/images/bioscope.svg" alt="bioscope">
 				<div class="bioscope-elmnts">
-					<h1 class="bio-headline">Padmavati</h1>
+					<h1 class="bio-headline loading" id="DisplayName"></h1>
 					<div class="bio-slider">
 					<div class="swiper-container">
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-1.jpg" alt=""></a></li>
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-2.jpg" alt=""></a></li>
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-3.jpg" alt=""></a></li>
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-1.jpg" alt=""></a></li>
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-2.jpg" alt=""></a></li>
-							<li class="swiper-slide"><a href="javascript:void(0);"><img src="assets/images/img-3.jpg" alt=""></a></li>
-						</ul>
-						
+						<ul class="swiper-wrapper" id="SwiperItems"></ul>
 						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
+						<div class="loading swiper-button swiper-button-next"></div>
+						<div class="loading swiper-button swiper-button-prev"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-	<section class="wrapper section-wrapper">
+	<section class="wrapper section-wrapper loading">
 		<div class="container">
 			<div class="inner-container">
 				<div class="text-container">
-					<h2><span>1975</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<h2><span id="DisplayYear"></span></h2>
+					<p id="DisplayDescription"></p>
 				</div>
 			</div>
 			
 			<div class="inner-container">
 				<div class="video-container">
-					<div class="frame-video">
-						<iframe src="https://www.youtube.com/embed/SJNTvAZNHGw" frameborder="0" allowfullscreen></iframe>
-					</div>
+					<div class="frame-video" id="DisplayVideo"></div>
 				</div>
 			</div>
 			
@@ -117,17 +107,13 @@ el.parentNode.insertBefore(s, el);
 					<li>
 						<figure>
 							<div class="profile-pic"><img src="assets/images/profile-2.png" alt=""></div>
-							<figcaption>
-								Padma Devi Humari Maa Hain. Hum Unki lajja bachaenge
-							</figcaption>
+							<figcaption id="DisplayDiscussion_1"></figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure>
 							<div class="profile-pic"><img src="assets/images/profile-1.png" alt=""></div>
-							<figcaption>
-								Padma Devi Humari Maa Hain. Hum Unki lajja bachaenge
-							</figcaption>
+							<figcaption id="DisplayDiscussion_2"></figcaption>
 						</figure>
 					</li>
 				</ul>
@@ -135,7 +121,6 @@ el.parentNode.insertBefore(s, el);
 		</div>
 	</section>
 </main>
-	
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/swiper.min.js"></script>
 <script type="text/javascript" src="assets/js/spreadsheet.js"></script> 
