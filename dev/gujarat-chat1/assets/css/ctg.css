@@ -191,6 +191,99 @@
 }
 
 
+/*key-cand: common class*/
+
+.chat-container li.key-cand .chat-el .btn-more{
+	background-color: #fff;
+}
+
+.chat-container li.key-cand .msg-text, 
+.chat-container li.key-cand .msg-text span{
+	color: #fff;
+}
+
+/*Ctg-bjp: #f15a25*/
+
+
+.filter-block .options li.ctg-bjp a::before,
+.chat-container li.ctg-bjp .btn-more,
+.chat-container li.ctg-bjp .msg-text{
+	background-color: #f15a25;
+}
+
+.chat-container li.ctg-bjp .profile-img,
+.chat-container li.ctg-bjp .chat-el .hide-el{
+	border-color: #f15a25;
+}
+
+.chat-container li.ctg-bjp .chat-el .btn-more,
+.chat-container li.ctg-bjp .personal-details h4 label{ 
+	color: #f15a25;
+}
+
+.chat-container li.ctg-bjp .msg-text::after{
+	border-color: transparent #f15a25 transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-bjp .msg-text::after{
+	border-color: transparent transparent #f15a25 transparent;
+}
+
+
+/*Ctg-inc: #0071bd*/
+
+.filter-block .options li.ctg-inc a::before,
+.chat-container li.ctg-inc .btn-more,
+.chat-container li.ctg-inc .msg-text{
+	background-color: #0071bd;
+}
+
+.chat-container li.ctg-inc .profile-img,
+.chat-container li.ctg-inc .chat-el .hide-el{
+	border-color: #0071bd;
+}
+
+.chat-container li.ctg-inc .chat-el .btn-more,
+.chat-container li.ctg-inc .personal-details h4 label{ 
+	color: #0071bd;
+}
+
+.chat-container li.ctg-inc .msg-text::after{
+	border-color: transparent #0071bd transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-inc .msg-text::after{
+	border-color: transparent transparent #0071bd transparent;
+}
+
+/*Ctg-ind: #006837*/
+
+.filter-block .options li.ctg-ind a::before,
+.chat-container li.ctg-ind .btn-more,
+.chat-container li.ctg-ind .msg-text{
+	background-color: #006837;
+}
+
+.chat-container li.ctg-ind .profile-img,
+.chat-container li.ctg-ind .chat-el .hide-el{
+	border-color: #006837;
+}
+
+.chat-container li.ctg-ind .chat-el .btn-more,
+.chat-container li.ctg-ind .personal-details h4 label{ 
+	color: #006837;
+}
+
+.chat-container li.ctg-ind .msg-text::after{
+	border-color: transparent #006837 transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-ind .msg-text::after{
+	border-color: transparent transparent #006837 transparent;
+}
+
+
+
 
 
 

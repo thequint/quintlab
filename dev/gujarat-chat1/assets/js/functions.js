@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	
+	
+	
 	// share
 	$(".share-ico").click(function (e) {
 		$(".social-ico").slideToggle(400);
@@ -97,7 +100,7 @@ $('#StorySlider_1').slick({
     elements.forEach(function(element) {
       if(element){
         $('#StorySlider_1').append(element);
-		 console.log(elements); 
+		 //console.log(elements); 
       }
     });
 	  
@@ -139,3 +142,31 @@ $(".chat-el").click(function(){
 	}
 });
 }
+
+function init()
+{
+	$(".sidebar").css("width",$(".container").width()*30/100);	
+}
+$(window).load(function(){
+init();
+})
+$(window).resize(function(){
+init();
+})
+
+
+function repeatOften() {
+  // Do whatever
+	var top_height = $('.top-wrapper').height();
+	console.log($(this).scrollTop() +"|"+ top_height)
+      if ($(this).scrollTop() > top_height) {
+          $('.sidebar').addClass('fixed');
+		  console.log("fixed");
+      } else {
+          $('.sidebar').removeClass('fixed');
+      }
+  requestAnimationFrame(repeatOften);
+}
+requestAnimationFrame(repeatOften);
+	
+

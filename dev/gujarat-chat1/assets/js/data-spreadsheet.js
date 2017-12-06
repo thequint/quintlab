@@ -29,28 +29,18 @@ function getParameterByName(name, url) {
 }
 
 function showInfo(data) {
-
    sheet_data = data;
    sheet_data_all = data;
    display_data();
-	
- document.getElementById("countVoice").innerHTML = "<span>" + [sheet_data[0].Total_Voices] + ' Voices'+"</span>";	
-	
-	//console.log([sheet_data[0].Total_Voices]);
+   document.getElementById("countVoice").innerHTML = "<span>" + [sheet_data[0].Total_Voices] + ' Voices'+"</span>";	
 
 }
-
-
 function display_data(check_clear) {
-	
-	
-	
    $("#listData").html("");
-	if(check_clear==1)
-		{
-		$("#KeyCandidtes").html("");	
-		}
-	 // 
+	if(check_clear==1){
+		$("#KeyCandidtes").html("");
+	}
+	
    for (var index = sheet_data.length - 1; index >= 0; index--) {
 
       var cat_class;
@@ -100,33 +90,26 @@ function display_data(check_clear) {
 
       }
 	   
-	   if(cat_class=="ctg-bjp" || cat_class=="ctg-inc" || cat_class=="ctg-ind" )
-		   {
-	   $("#KeyCandidtes").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
-	   
-		   }
+	   if(cat_class=="ctg-bjp" || cat_class=="ctg-inc" || cat_class=="ctg-ind" ){
+	   $("#KeyCandidtes").append("<li class='" + cat_class + " key-cand'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+	   }
 	   
   
-	   else if(cat_class=="ctg-story")
-		   {
+	   else if(cat_class=="ctg-story"){
 			  $("#listData").append("<li class='" + cat_class + "'><p><a href='"+ sheet_data[index].Story_URL +"' target='_blank'><span>" + sheet_data[index].Description + "</span></a></p></li>"); 
 		   }
-	   else
-		   {
-	   $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
 	   
-		   }
+	   else{
+	   $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+	   }
    }
    moreData();
-	
-	
 }
 
 
 $(".filter-block .options li").click(function() {
 
    sheet_data = []
-
 
    if ($(this).hasClass("is-active")) {
       category_filter = "all";
@@ -179,7 +162,6 @@ $(".filter-block .gender li.gender-item").click(function() {
 
 
 $(".clear-filter").click(function() {
-
    sheet_data = sheet_data_all;
    gender_filter = "all";
    category_filter = "all";
@@ -188,8 +170,4 @@ $(".clear-filter").click(function() {
    $(this).removeClass("is-filter");
    $(".filter-block .options li").removeClass("is-active");
 });
-
-
-
-
 
