@@ -1,0 +1,233 @@
+@media (max-width:1023px) {
+    .is-mobile {
+        display: block;
+    }
+    .is-desktop {
+        display: none;
+    }
+}
+
+@media (max-width:1023px) {
+
+    .mob-hide {
+        display: none;
+    }
+
+    .video-container.soundcloud {
+        margin-bottom: 0;
+    }
+    #tooltip {
+        padding: 15px 10px 10px 10px;
+    }
+    #tooltip::before {
+        display: block;
+    }
+    body {
+        padding: 0 0 54px 0;
+    }
+    ul.credits li {
+        float: left;
+        width: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .nav {
+        width: 100%;
+        height: inherit;
+        bottom: 0;
+        text-align: center;
+        right: 0;
+        top: inherit;
+        background: rgba(255, 255, 255, 0.3);
+        display: none;
+    }
+    .nav ul {
+        top: 0%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    .nav ul li {
+        float: left;
+        margin: 0px 10px;
+    }
+    .nav ul li a {
+        background: transparent;
+    }
+    .container {
+        max-width: 680px;
+    }
+    blockquote {
+        max-width: 550px;
+    }
+    .content.content-left,
+    .content.content-right {
+        float: none;
+        max-width: 100%;
+    }
+    .content .img-container {
+        width: 100%;
+    }
+    .content .img-container figure {
+        min-width: 100%
+    }
+    .content.content-left .img-container,
+    .content.content-right .img-container {
+        margin-bottom: 20px;
+    }
+    .content.content-right .img-container figure {
+        margin-left: 0;
+    }
+    /*Map Container*/
+    .map-container {
+        margin: 0 auto;
+    }
+    .info-container {
+        left: 255px;
+        width: 310px;
+        top: 0px;
+    }
+    .info-box {
+        border: 3px solid #fff;
+        padding: 10px;
+        min-height: 0;
+    }
+    .info-box h3 {
+        font-size: 20px;
+    }
+    .info-box h4 {
+        font-size: 24px;
+        padding-top: 5px;
+    }
+    .info-top {
+        padding-bottom: 10px;
+    }
+    .btn-more-state {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:679px) {
+    ul.credits li {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .headline-section h2 {
+        font-size: 36px;
+        line-height: 36px;
+        margin: 20px 0;
+    }
+    .fullbggrey2 {
+        margin: 15px 0px;
+    }
+    .more-thumb figure {
+        margin-bottom: 20px;
+    }
+    .soundcloud-wrapper {
+        padding: 50px 0;
+    }
+    .videoWrapper {
+        margin: 15px 0px 15px 0px;
+    }
+    .map-wrapper {
+        padding: 40px 0px 15px 0;
+        margin: 20px 0px 30px 0px;
+    }
+    .map-wrapper,
+    .map-wrapper .container {
+        height: auto;
+    }
+    .map-container {
+        width: 290px;
+        top: 0%;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    .info-container {
+        position: static;
+        width: 100%;
+        margin: 0px 0px 20px 0;
+    }
+    .nav ul li a {
+        width: 30px;
+        height: 30px;
+    }
+    .nav ul li:nth-child(3) a {
+        width: 30px;
+        height: 30px;
+        padding-left: 0;
+    }
+    .is-mobile {
+        display: block;
+    }
+    .is-desktop {
+        display: none;
+    }
+    body {
+        font-size: 17px;
+    }
+    p,
+    blockquote {
+        line-height: 140%;
+        margin-bottom: 20px;
+    }
+    blockquote {
+        font-size: 140%;
+        line-height: 120%;
+        padding: 10px 0px 0 0;
+        width: auto;
+        margin: 0px 0 20px 0;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0px 15px;
+    }
+    .content.content-left .img-container,
+    .content.content-right .img-container {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .text-justify {
+        text-align: left;
+    }
+    .banner-caption h1 {
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 50px;
+        text-align: center;
+        line-height: 50px;
+        text-shadow: 3px 3px 5px rgba(149, 150, 150, 1);
+    }
+    .banner-caption h2 {
+        font-family: 'Lora', serif;
+        font-size: 20px;
+        color: #fff;
+        line-height: normal;
+        margin-top: 0;
+        text-align: center;
+        padding-top: 20px;
+        text-shadow: 1px 1px 9px rgba(150, 150, 150, 0.71);
+    }
+
+    .logo-wrapper .logo-mp {
+        margin: 10px;
+        max-width: 58px;
+    }
+
+    .logo-wrapper .logo-jal {
+        margin: 10px 10px 10px 0px;
+        max-width: 104px;
+    }
+
+    .credits-wrapper .logo-mp {
+        margin-right: 20px;
+        max-width: 100px;
+    }
+
+    .credits-wrapper .logo-jal {
+        max-width: 160px;
+    }
+}
