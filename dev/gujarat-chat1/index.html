@@ -19,7 +19,7 @@
 <meta name="publisher" content="The Quint">
 
 <!-- OG -->
-<meta property="og:title" content="Voices Of Gujarat">
+<meta property="og:title" content="Voices of Gujarat: ‘GST Hurt Us’, ‘Modi Has Worked For Women’">
 <meta property="og:site_name" content="TheQuint">
 <meta property="og:url" content="https://www.thequint.com/quintlab/gujarat-elections-2017">
 <meta property="og:description" content="This election season, The Quint shifts the focus from the netas to the voters. ">
@@ -31,7 +31,7 @@
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@thequint">
-<meta name="twitter:title" content="Voices Of Gujarat">
+<meta name="twitter:title" content="Voices of Gujarat: ‘GST Hurt Us’, ‘Modi Has Worked For Women’">
 <meta name="twitter:description" content="This election season, The Quint shifts the focus from the netas to the voters. We ask the aam Gujarati, what will define your vote this election?">
 <meta name="twitter:image" content="https://www.thequint.com/quintlab/gujarat-elections-2017/assets/images/og.jpg">
 
@@ -41,6 +41,8 @@
 <!-- Custom styles for this template -->
 <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
 <link href="assets/css/base.css" rel="stylesheet" media="all">
+<link href="assets/css/slick.css" rel="stylesheet" media="all">
+<link href="assets/css/slick-theme.css" rel="stylesheet" media="all">
 <link href="assets/css/theme.css" rel="stylesheet" media="all">
 <link href="assets/css/responsive.css" rel="stylesheet" media="all">
 <link href="assets/css/ctg.css" rel="stylesheet" media="all">
@@ -67,7 +69,7 @@ el.parentNode.insertBefore(s, el);
 })();
 </script>
 <noscript>
-<img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" />
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" alt="" />
 </noscript>
 
 <!-- End comScore Tag -->
@@ -78,14 +80,46 @@ el.parentNode.insertBefore(s, el);
  <a class="logo-ico" href="https://www.thequint.com" target="_blank"> <img alt="The Quint" src="assets/images/tq-logo.svg"> </a>
   <h1>Voices Of Gujarat</h1>
 </header>
-<section class="wrapper chat-wrapper">
-  <div class="container">
-    <div class="share-chat"> <a class="share-ico" href="javascript:void(0);">share</a>
+	
+<section class="wrapper top-wrapper">
+	<div class="container">
+		
+		<div class="share-chat"> <a class="share-ico" href="javascript:void(0);">share</a>
       <ul class="social-ico">
         <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/gujarat-elections-2017/&t=Voices+Of+Gujarat"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/gujarat-elections-2017/&text=This election season, The Quint shifts the focus from the netas to the voters. We ask the aam Gujarati, what will define your vote this election? %20https%3A//thequint.com/quintlab/gujarat-elections-2017"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       </ul>
     </div>
+	<header class="window-header">
+		<h1>Voices Of Gujarat</h1>
+		<div class="header-caption">
+		  <div class="inner-caption">
+			<div class="caption-text">
+			  <div class="cap-z-index">
+				<h2>This election season, The Quint shifts the focus from the netas to the voters. We ask the aam Gujarati.</h2>
+				<h3>WHAT WILL DEFINE YOUR VOTE THIS ELECTION?</h3>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<h3 class="voice-count" id="countVoice"></h3>
+	  </header>
+	</div>
+	<div class="container slider-container">
+		<ul id="StorySlider_1"></ul>
+	</div>
+	<div class="container candidtes-container">
+		<aside class="candidtes-sidebar"></aside>
+		<div class="chat-window">
+			<div class="chat-container">
+				<ul id="KeyCandidtes"></ul>
+			</div>
+		</div>
+	</div>
+</section>	
+<section class="wrapper chat-wrapper">
+  <div class="container">
+    
     <aside class="sidebar"> <a class="close-filter" href="javascript:void();"><i class="fa fa-times"></i></a>
       <div class="sidebar-iner">
         <div class="inner-block mob-hide"> <a class="text-logo" href="https://www.thequint.com" target="_blank"><img alt="The Quint" src="assets/images/quint-logo.svg"></a> </div>
@@ -111,11 +145,8 @@ el.parentNode.insertBefore(s, el);
               <li class="ctg-orange" data-category="GST"><h2><a href="javascript:void(0);">GST</a></h2></li>
               <li class="ctg-violet" data-category="Unemployment"><h2><a href="javascript:void(0);">Unemployment</a></h2></li>
               <li class="ctg-blue" data-category="Education"><h2><a href="javascript:void(0);">Education</a></h2></li>
-
               <li class="ctg-limegreen" data-category="Prohibition"><h2><a href="javascript:void(0);">Prohibition</a></h2></li>
               <li class="ctg-pink" data-category="Vikas"><h2><a href="javascript:void(0);">Vikas</a></h2></li>
-             <!-- <li class="ctg-turquoise" data-category="Healthcare"><h2><a href="javascript:void(0);">Healthcare</a></h2></li>
--->
               <li class="ctg-red" data-category="Others"><h2><a href="javascript:void(0);">Others</a></h2></li>
             </ul>
           </div>
@@ -140,16 +171,24 @@ el.parentNode.insertBefore(s, el);
       <div class="chat-container">
         <ul id="listData">
         </ul>
+		  <footer>
+		  	<div class="footer-container">
+			 <p>The Gujarat Elections 2017 bugle has been sounded, and the key political contenders in the fray have left no stone unturned in preparation. Rahul Gandhi and Prime Minister Narendra Modi have carried out back-to-back rallies in Gujarat, grasping at every opportunity for potshots at the other. </p>
+<p>The Gujarat polls have prompted shifting alliances, with the Hardik Patel-led PAAS putting its weight behind the Congress. The Gujarat election schedule is packed, with the first phase of voting on 9 December, and the second on 14 December.</p>
+<p> The result will be declared on 18 December. While the Election Commission has disallowed any exit poll predictions before 14 December, most opinion polls have predicted a BJP victory. Which way will this Gujarat chunav go? Follow The Quint for any and all Gujarat election news.</p> 
+			 </div>
+		  </footer>
       </div>
     </div>
   </div>
 </section>
-<footer class="wrapper sticky-footer-wrapper">
+	
+<section class="wrapper sticky-footer-wrapper">
   <ul class="clearfix">
     <li class="send-voice"><a class="open-form" href="javascript:void(0);"><span>Send Your Voice</span></a></li>
     <li class="link-filter"><a href="javascript:void(0);"><span>Filter</span></a></li>
   </ul>
-</footer>
+</section>
 <section class="embed-form">
   <div class="embed-form-container"> <a class="close-form" href="javascript:void(0);"><i class="fa fa-close"></i></a>
     <div class="form-content">
@@ -163,6 +202,7 @@ el.parentNode.insertBefore(s, el);
   </div>
 </section>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+<script type="text/javascript" src="assets/js/slick.js"></script> 
 <script type="text/javascript" src="assets/js/spreadsheet.js"></script> 
 <script type="text/javascript" src="assets/js/data-spreadsheet.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script>

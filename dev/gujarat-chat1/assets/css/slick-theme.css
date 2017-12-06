@@ -43,6 +43,7 @@
     border: none;
     outline: none;
     background: transparent;
+	z-index: 9999;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -74,7 +75,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: #ffce03;
+    color: #9B0E18;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -82,11 +83,11 @@
 
 .slick-prev
 {
-    left: -50px;
+    left: -40px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -50px;
+    right: -40px;
     left: auto;
 }
 .slick-prev:before
@@ -100,12 +101,12 @@
 
 .slick-next
 {
-    right: -50px;
+    right: -40px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -50px;
+    left: -40px;
 }
 .slick-next:before
 {

@@ -1,7 +1,7 @@
-var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
+//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
 
 //demo_sheet
-//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
+var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
 
 function init() {
    Tabletop.init({
@@ -41,11 +41,16 @@ function showInfo(data) {
 }
 
 
-function display_data() {
+function display_data(check_clear) {
 	
 	
 	
    $("#listData").html("");
+	if(check_clear==1)
+		{
+		$("#KeyCandidtes").html("");	
+		}
+	 // 
    for (var index = sheet_data.length - 1; index >= 0; index--) {
 
       var cat_class;
@@ -76,14 +81,33 @@ function display_data() {
 		case "Story":
             cat_class = "ctg-story";
             break;
+			  
+		case "BJP":
+            cat_class = "ctg-bjp";
+            break;
+			  
+		case "INC":
+            cat_class = "ctg-inc";
+            break;
+			  
+		case "IND":
+            cat_class = "ctg-ind";
+            break;		  
 
          default:
             cat_class = "";
 
 
       }
+	   
+	   if(cat_class=="ctg-bjp" || cat_class=="ctg-inc" || cat_class=="ctg-ind" )
+		   {
+	   $("#KeyCandidtes").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
+	   
+		   }
+	   
   
-	   if(cat_class=="ctg-story")
+	   else if(cat_class=="ctg-story")
 		   {
 			  $("#listData").append("<li class='" + cat_class + "'><p><a href='"+ sheet_data[index].Story_URL +"' target='_blank'><span>" + sheet_data[index].Description + "</span></a></p></li>"); 
 		   }
@@ -94,6 +118,8 @@ function display_data() {
 		   }
    }
    moreData();
+	
+	
 }
 
 
@@ -157,7 +183,7 @@ $(".clear-filter").click(function() {
    sheet_data = sheet_data_all;
    gender_filter = "all";
    category_filter = "all";
-   display_data();
+   display_data(1);
    $(".filter-block .gender li.gender-item").removeClass("is-active");
    $(this).removeClass("is-filter");
    $(".filter-block .options li").removeClass("is-active");
