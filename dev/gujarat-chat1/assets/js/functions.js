@@ -143,30 +143,41 @@ $(".chat-el").click(function(){
 });
 }
 
-function init()
+
+
+
+ 
+	 
+	 
+	 function init()
 {
+	if($(window).width() > 980)
+		{
 	$(".sidebar").css("width",$(".container").width()*30/100);	
+			requestAnimationFrame(repeatOften);
+		}
 }
+
+	 
 $(window).load(function(){
 init();
 })
 $(window).resize(function(){
 init();
-})
-
+}) 
 
 function repeatOften() {
   // Do whatever
 	var top_height = $('.top-wrapper').height();
-	console.log($(this).scrollTop() +"|"+ top_height)
+	//console.log($(this).scrollTop() +"|"+ top_height)
       if ($(this).scrollTop() > top_height) {
           $('.sidebar').addClass('fixed');
-		  console.log("fixed");
+		  //console.log("fixed");
       } else {
           $('.sidebar').removeClass('fixed');
       }
   requestAnimationFrame(repeatOften);
 }
-requestAnimationFrame(repeatOften);
+
 	
 
