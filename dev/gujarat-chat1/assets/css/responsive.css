@@ -68,6 +68,9 @@ body {
 .sticky-top-wrapper, .sticky-footer-wrapper {
 	display: block;
 }
+.sticky-footer-wrapper.is-show {
+	transform: translate3d(0, 0px, 0);
+}
 .share-chat {
 	position: fixed;
 	top: 8px;

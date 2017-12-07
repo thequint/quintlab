@@ -156,28 +156,58 @@ $(".chat-el").click(function(){
 	$(".sidebar").css("width",$(".container").width()*30/100);	
 			requestAnimationFrame(repeatOften);
 		}
+	
+	
+	
+	
+	
 }
 
 	 
 $(window).load(function(){
 init();
+	filterOften();
+	
 })
 $(window).resize(function(){
 init();
+	filterOften();
 }) 
 
 function repeatOften() {
   // Do whatever
 	var top_height = $('.top-wrapper').height();
-	//console.log($(this).scrollTop() +"|"+ top_height)
       if ($(this).scrollTop() > top_height) {
           $('.sidebar').addClass('fixed');
-		  //console.log("fixed");
       } else {
           $('.sidebar').removeClass('fixed');
       }
   requestAnimationFrame(repeatOften);
 }
+
+
+
+// mobile filter
+function filterOften() {
+var top_height = $('.top-wrapper').height();
+      if ($(this).scrollTop() > top_height) {
+          $('.sticky-footer-wrapper').addClass('is-show');
+      } else {
+          $('.sticky-footer-wrapper').removeClass('is-show');
+      }
+  requestAnimationFrame(filterOften);
+
+}
+
+
+
+
+
+
+
+
+
+
 
 	
 
