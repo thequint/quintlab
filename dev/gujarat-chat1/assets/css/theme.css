@@ -792,3 +792,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.logo-desktop{
+	position:absolute;
+	top: 30px;
+	left: 30px;
+	max-width: 140px;
+	width: 100%;
+}
+
+
+.key-headline {
+	color: #C1272D;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 100%;
+	letter-spacing: -2px;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+	margin: 0 0 20px 0;
+	display: none;
+	text-align: center;
+}
+

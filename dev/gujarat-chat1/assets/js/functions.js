@@ -56,13 +56,13 @@ $('#StorySlider_1').slick({
       autoplaySpeed: 2000,
       responsive: [
         {
-          breakpoint: 600,
+          breakpoint: 980,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            //centerMode: true,
-            variableWidth: false
+            centerMode: false,
+            variableWidth: true
           }
         }
       ]
