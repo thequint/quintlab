@@ -148,7 +148,7 @@ chat_handler = $("#listData .chat-el");
 	
 		$(this).find(".frame-video").html("<iframe src='https://www.youtube.com/embed/" + $(this).find(".frame-video").attr("data-video") + "' frameborder='0' allowfullscreen></iframe>");
 	
-		$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
+		//$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
 		
 	}
 }
