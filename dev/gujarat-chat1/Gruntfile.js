@@ -9,9 +9,11 @@ module.exports = function(grunt) {
         },
         target: {
           files: {
-            '../../prod/gujarat-elections-2017/assets/css/style.min.css': [
+            '../../prod/gujarat-elections-2017-new/assets/css/style.min.css': [
 				'assets/css/font-awesome.min.css', 
 				'assets/css/base.css',
+				'assets/css/slick.css',
+				'assets/css/slick-theme.css',
 				'assets/css/theme.css',
 				'assets/css/responsive.css',
 				'assets/css/ctg.css'
@@ -26,8 +28,8 @@ module.exports = function(grunt) {
 		},
 		dist: {
 		  src: [
-			    'assets/js/jquery.min.js', 
-			    'assets/js/spreadsheet.js',
+			    'assets/js/jquery.min.js',
+			    'assets/js/slick.js',
 			    'assets/js/data-spreadsheet.js',
 			    'assets/js/functions.js'
 		  ],
@@ -38,7 +40,7 @@ module.exports = function(grunt) {
   uglify: {
     my_target: {
       files: {
-        '../../prod/gujarat-elections-2017/assets/js/site.min.js': ['assets/js/site.js']
+        '../../prod/gujarat-elections-2017-new/assets/js/site.min.js': ['assets/js/site.js']
       }
     }
   }
