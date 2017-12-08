@@ -256,6 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 .chat-el {
 	max-width: 80%;
 	float: left;
+	cursor: pointer;
 }
 .chat-el .show-el {
 	position: relative;
