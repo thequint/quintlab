@@ -717,8 +717,8 @@ h1, h2, h3, h4, h5, h6 {
 	transition: 0.2s all ease-in-out;
 }
 .slider-container li a:hover figcaption {
-	background: #9B0E18;
-	color: #ffbf00;
+	background: #FFBF00;
+	color: #333;
 }
 .slider-container li figcaption .story-headline {
 	margin: 0;
@@ -729,11 +729,12 @@ h1, h2, h3, h4, h5, h6 {
 	transition: 0.2s all ease-in-out;
 }
 .slider-container li a:hover .story-headline {
-	color: #ffbf00;
+	color: #333;
 }
 .candidtes-container {
 	background: #1b1464;
 }
+.candidtes-container .chat-window{min-height:150px;}
 .candidtes-container .candidtes-sidebar {
 	float: left;
 	width: 30%;
