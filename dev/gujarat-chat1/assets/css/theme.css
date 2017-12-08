@@ -399,12 +399,15 @@ h1, h2, h3, h4, h5, h6 {
 .window-header h1 {
 	color: #C1272D;
 	font-weight: 700;
-	font-size: 36px;
+	/*font-size: 36px;*/
+	font-size: 2px;
 	line-height: 100%;
 	letter-spacing: -2px;
 	text-shadow: 0px 1px 0px rgba(0,0,0,0.2);
 	margin: 0 0 15px 0;
 }
+.window-header h1 img{max-width:230px;}
+
 .voice-count {
 	color: #C1272D;
 	font-weight: 700;
@@ -496,11 +499,13 @@ h1, h2, h3, h4, h5, h6 {
 .sticky-top-wrapper h1 {
 	display: inline-block;
 	color: #fff;
-	font-size: 30px;
-	line-height: 53px;
+	font-size: 2px;
+	line-height: 55px;
 	font-weight: 700;
 	letter-spacing: -1px;
 }
+
+.sticky-top-wrapper h1 img{width:250px;}
 .logo-ico {
 	width: 40px;
 	position: fixed;

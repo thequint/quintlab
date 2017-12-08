@@ -211,9 +211,12 @@ body {
 body {
 	font-size: 16px;
 }
-.sticky-top-wrapper h1 {
-	font-size: 26px;
-}
+
+	
+	.sticky-top-wrapper h1 img{
+		width:200px;
+	}	
+	
 .inner-caption {
 	width: 80%;
 }
@@ -239,7 +242,5 @@ body {
 	letter-spacing: -1px;
 	white-space: nowrap;
 }
-.sticky-top-wrapper h1 {
-	font-size: 22px;
-}
+
 }
