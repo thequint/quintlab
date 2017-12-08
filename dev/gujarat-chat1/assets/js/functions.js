@@ -110,9 +110,20 @@ $('#StorySlider_1').slick({
 
 
 
- function moreData(){
-
-$(".chat-el").click(function(){
+ function moreData(x){
+var chat_handler;
+	 if(x==0)
+		 {
+chat_handler = $(".chat-el");
+}
+ else
+	 {
+		 
+chat_handler = $("#listData .chat-el");	 
+	 }
+	 
+	 
+	chat_handler.click(function(){
 	
 	if($(this).parent().hasClass("is-more")){
 		$(this).parent().removeClass("is-more").find(".hide-el").slideUp(350);
@@ -140,8 +151,14 @@ $(".chat-el").click(function(){
 		$('html, body').animate({scrollTop: $(this).offset().top}, 2000);
 		
 	}
-});
 }
+				   
+				   
+				   
+				   );
+ 
+ 
+ }
 
 
 

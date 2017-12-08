@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', init);
 var sheet_data, sheet_data_all;
 var gender_filter = "all";
 var category_filter = "all";
+var reset_handlers = 0;
 
 
 function getParameterByName(name, url) {
@@ -39,6 +40,7 @@ function display_data(check_clear) {
    $("#listData").html("");
 	if(check_clear==1){
 		$("#KeyCandidtes").html("");
+		reset_handlers=0;
 	}
 	
    for (var index = sheet_data.length - 1; index >= 0; index--) {
@@ -107,7 +109,8 @@ function display_data(check_clear) {
 	   $("#listData").append("<li class='" + cat_class + "'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
 	   }
    }
-   moreData();
+   moreData(reset_handlers);
+	reset_handlers=1;
 }
 
 

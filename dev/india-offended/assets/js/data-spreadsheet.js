@@ -36,14 +36,14 @@ function display_data() {
 
 	for (var index = sheet_data.length - 1; index >= 0; index--) {
 
-		$("#SwiperItems").append("<li class='swiper-slide' data-year='" + sheet_data[index].Year + "' data-description='" + sheet_data[index].Description + "' data-video='" + sheet_data[index].Video + "' data-discussion_1='" + sheet_data[index].Discussion_1 + "' data-discussion_2='" + sheet_data[index].Discussion_2 + "'><a href='javascript:void(0);'><img src='" + sheet_data[index].Image + "' alt='" + sheet_data[index].Name + "'></a></li>");
+		$("#SwiperItems").append("<li class='swiper-slide' data-year='" + sheet_data[index].Year + "' data-description='" + sheet_data[index].Description + "' data-video='" + sheet_data[index].Video + "' data-discussion_1='" + sheet_data[index].Discussion_1 + "' data-discussion_2='" + sheet_data[index].Discussion_2 + "'><a href='javascript:void(0);'><img src='assets/images/avatar.svg'><img class='real-img' src='" + sheet_data[index].Image + "' alt='" + sheet_data[index].Name + "'></a></li>");
 		
 		
 	}
 
 	Swiper_Slider();
 	
-	    var Display_Name = $('.swiper-slide-active img').attr('alt');
+	    var Display_Name = $('.swiper-slide-active img.real-img').attr('alt');
 	    var Display_Year = $('.swiper-slide-active').attr('data-year');
 	    var Display_Description = $('.swiper-slide-active').attr('data-description');
 		var Display_Video = $('.swiper-slide-active').attr('data-video');
@@ -62,7 +62,7 @@ function display_data() {
 	
 	
 	$('.swiper-button').click(function(){		
-		var Display_Name = $('.swiper-slide-active img').attr('alt');
+		var Display_Name = $('.swiper-slide-active img.real-img').attr('alt');
 		var Display_Year = $('.swiper-slide-active').attr('data-year');
 		var Display_Description = $('.swiper-slide-active').attr('data-description');
 		var Display_Video = $('.swiper-slide-active').attr('data-video');
