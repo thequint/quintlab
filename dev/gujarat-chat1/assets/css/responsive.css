@@ -9,6 +9,10 @@
 }
 
 @media (max-width:980px) {
+	.container, .chat-window {
+		background:none !important;
+		
+	}	
 body {
 	background-image: url(../images/chat-bg.jpg);
 	background-repeat: repeat;
