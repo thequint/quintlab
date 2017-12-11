@@ -1885,6 +1885,7 @@ select:focus {
         height: 230px;
     }
     .section.second .colon--quote {
+        line-height: 21px;
         top: -50px;
         width: 160px;
         height: 230px;
