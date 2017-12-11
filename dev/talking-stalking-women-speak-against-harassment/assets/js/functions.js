@@ -53,15 +53,15 @@ $("body").click(function() {
 
 function slug_2_init() {
     //  More Stories
-    var collectionSlug = 'talkingstalking'; //Needs to be replaced.
-    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+    var collectionSlug = 'talking-stalking'; //Needs to be replaced.
+    $.getJSON('https://hindi.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
         var stories = res.items.filter(function(item) {
             return item.type == 'story'
         }).map(function(item) {
             return item.story
         }).slice(0, 3);
         var elements = stories.map(function(story) {
-            return '<li><div class="story-txt"><span><a href="https://www.thequint.com/' + story.slug + '" target="blank">' + story.headline + '</a></span></div></li>'
+            return '<li><div class="story-txt"><span><a href="https://hindi.thequint.com/' + story.slug + '" target="blank">' + story.headline + '</a></span></div></li>'
         });
         elements.forEach(function(element) {
             $('#more-stories').append(element);
@@ -71,15 +71,15 @@ function slug_2_init() {
 
 //Slider
 function slug_3_init() {
-    var collectionSlug = 'talking-stalking-videos'; //Needs to be replaced.
-    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+    var collectionSlug = 'talking-stalking-video'; //Needs to be replaced.
+    $.getJSON('https://hindi.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
         var stories = res.items.filter(function(item) {
             return item.type == 'story'
         }).map(function(item) {
             return item.story
         }).slice(0, 3);
         var elements = stories.map(function(story) {
-            return '<li><figure><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><figcaption>' + story.headline + '</figcaption></a></figure></li>'
+            return '<li><figure><a href="https://hindi.thequint.com/' + story.slug + '" target="blank"><div><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><figcaption>' + story.headline + '</figcaption></a></figure></li>'
         });
         elements.forEach(function(element) {
             $('#SlugType_video').append(element);
