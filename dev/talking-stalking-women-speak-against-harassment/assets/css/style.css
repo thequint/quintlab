@@ -503,12 +503,12 @@ a {
 .section.second .share-experience {
     cursor: pointer;
     padding: 8px 10px;
-    font-size: 15px;
+    font-size: 16px;
     color: #b2b8b4;
     position: absolute;
     top: 78%;
     left: 47%;
-    width: 250px;
+    width: 280px;
     text-align: center;
     border-radius: 20px;
     background-color: #a12b2c;
@@ -815,13 +815,14 @@ a {
 .section.third .row-top .col-left--scroll__date {
     float: left;
     font-size: 15px;
-    width: 110px;
+    width: 120px;
     display: inline-block;
 }
 .section.third .row-top .col-left--scroll__content {
     float: left;
     font-size: 14px;
-    width: calc(100% - 110px);
+    width: calc(100% - 120px);
+    width: -webkit-calc(100% - 120px);
     display: inline-block;
 }
 
