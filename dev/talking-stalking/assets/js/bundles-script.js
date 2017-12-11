@@ -775,7 +775,13 @@ function handleTweets(tweets) {
    }, 10000);
 }
 twitterFetcher.fetch(config5);
-;$(".popup-btn").click(function(e) {
+;
+$(".intro-close").click(function(e) {
+    $(".intro-popup").fadeOut();
+    $('.intro-iframe iframe').attr('src', '');
+});
+
+$(".popup-btn").click(function(e) {
     $(".popup-box").show();
     //console.log(e.clientY +"|"+  window.screen.height+"|"+ $(".info-popup").height()+"|"+  $(window).scrollTop());
     //$(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() -  $(".info-popup").height()/2 });
