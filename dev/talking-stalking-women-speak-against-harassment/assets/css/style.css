@@ -6,6 +6,7 @@ body {
     background-color: #3D4356;
     font-weight: 400;
     /*line-height: 120%;*/
+    font-weight: 700;
     font-family: 'Bitter', serif;
 }
 *,
@@ -20,7 +21,7 @@ html {
     height: 100%;
 }
 h1, h2, h3, h4 {
-    font-weight: 400;
+    font-weight: 700;
     font-family: 'Bitter', serif;
 }
 a {
@@ -177,7 +178,7 @@ a {
     position: absolute;
     bottom: 15px;
     left: 5%;
-    max-width: 425px;
+    max-width: 550px;
 }
 #display_data {
     position: absolute;
@@ -192,9 +193,10 @@ a {
     text-transform: uppercase;
 }
 .section.first .first--content p {
-    color: #e5e5e5;
+    color: #cecaca;
+    /*color: #e5e5e5;*/
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 .section.first .first--content strong {
     color: #fff;
@@ -288,8 +290,8 @@ a {
 }
 .section.first .sig--counter {
     position: absolute;
-    bottom: 70px;
-    left: 39%;
+    bottom: 60px;
+    left: 49%;
     background-color: #000;
     /*width: 170px;*/
     color: #65aea1;
@@ -324,7 +326,7 @@ a {
 
 .section.first .first--quote-comment__content {
     width: 100%;
-    padding: 33px 9px 22px 15px;
+    padding: 20px 9px 22px 15px;
     border-radius: 35px;
 }
 .section.first .first--quote-comment .txt-top {
@@ -1086,7 +1088,7 @@ a {
 .section.forth .col-left--content-box--impect {
     position: relative;
     padding: 15px 18px;
-    color: #000;
+    color: #565656;
     height: 218px;
     margin-bottom: 20px;
     overflow: auto;
@@ -1094,6 +1096,7 @@ a {
 }
 .section.forth .col-left--content-box--impect strong {
     font-weight: 700;
+    color: #000;
 }
 
 .section.forth .col-left--content-box--impect li {
