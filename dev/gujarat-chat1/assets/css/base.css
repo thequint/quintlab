@@ -199,7 +199,9 @@ template {
 .row:before, 
 .row:after, 
 .chat-container li:after, 
-.chat-container li:before {
+.chat-container li:before,
+.side-cand-lists::after,
+.side-cand-lists::before{
 	display: table;
 	line-height: 0;
 	content: "";
@@ -208,7 +210,8 @@ template {
 .wrapper:after, 
 .container:after, 
 .row:after,  
-.chat-container li:after {
+.chat-container li:after,
+.side-cand-lists:after{
 	clear: both;
 }
 .clearfix {

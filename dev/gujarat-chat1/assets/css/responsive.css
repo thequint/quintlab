@@ -12,7 +12,9 @@
 	.container, .chat-window {
 		background:none !important;
 		
-	}	
+	}
+	
+
 body {
 	background-image: url(../images/chat-bg.jpg);
 	background-repeat: repeat;
@@ -46,12 +48,29 @@ body {
 	font-size: 16px;
 	line-height: 22px;
 }
-.side-line, .key-cand-text, .candidtes-sidebar {
+.side-line, .key-cand-text {
 	display: none;
 }
 .candidtes-container {
 	background-color: transparent;
 }
+	
+	.candidtes-container .candidtes-sidebar{
+		float: none;
+		width: 100%;
+		background: #1b1464;
+	}
+	.side-cand-lists img{
+		width:200px;
+		height: 200px;
+	}
+	
+	.side-cand-lists li{
+		float:left;
+		width: 33.333%;
+		padding: 0px 15px;
+	}
+	
 .slider-container {
 	padding: 20px 0 30px 0;
 }
@@ -127,6 +146,37 @@ body {
 }
 
 @media (max-width:767px) {
+	
+	.side-cand-lists li h3{
+		font-size: 22px;
+	}
+	
+	.side-cand-lists li h4{
+		font-size: 16px;
+	}
+	
+	.candidtes-sidebar-inner h2 {
+
+	font-size: 26px;
+	margin: 15px 0 5px 0;
+}
+	
+	.side-cand-lists figcaption {
+	margin: 10px 0px 0 0;
+}
+	
+	.side-cand-lists li{
+		float:left;
+		width: 100%;
+		padding: 0;
+	}
+	
+	.side-cand-lists img{
+		width:150px;
+		height: 150px;
+	}
+	
+	
 .voice-count {
 	font-size: 30px;
 	margin: 15px 0px 10px 0px;
@@ -180,7 +230,7 @@ body {
 	min-height: 70px;
 }
 .chat-container {
-	margin: 0 15px;
+	margin: 30px 15px;
 }
 .inner-caption {
 	width: 400px;
