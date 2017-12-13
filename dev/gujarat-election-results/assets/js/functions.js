@@ -34,16 +34,12 @@ $(document).ready(function () {
 		video_slide();
 	});
 
-
-
-
-
 	$.getJSON('https://www.thequint.com/api/v1/stories/887ca6fb-21fe-4a7e-aa0c-33f8c032e08b', function (res) {
 		var lastStory = res.story;
 		var cards = lastStory.cards;
 		var cardsWithImages = cards.filter(function (card) {
 			return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
-		}).slice(0, 10)
+		}).slice(0, 10);
 		elements = cardsWithImages.map(function (card) {
 			var imageKey;
 			var titleElement;
@@ -102,6 +98,7 @@ $(document).ready(function () {
 
 
 function key_event() {
+	"use strict";
 	$('.slider-1').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -119,11 +116,11 @@ function key_event() {
 			}
 		}]
 	});
-
 }
 
 
 function video_slide() {
+	"use strict";
 	$('.video-slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -144,10 +141,8 @@ function video_slide() {
 
 }
 
-
-
-
 $(window).resize(function () {
+	"use strict";
 	if (window.matchMedia('(max-width: 768px)').matches) {
 		$(".btn-share").show();
 		$(".share-icons").hide();
@@ -158,8 +153,9 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-
+"use strict";
 	$(".btn-share").click(function () {
+		
 		$(".share-icons").slideToggle(400);
 	});
 
