@@ -60,14 +60,11 @@ body {
 		width: 100%;
 		background: #1b1464;
 	}
-	.side-cand-lists img{
-		width:200px;
-		height: 200px;
-	}
+	
 	
 	.side-cand-lists li{
 		float:left;
-		width: 33.333%;
+		width: 50%;
 		padding: 0px 15px;
 	}
 	

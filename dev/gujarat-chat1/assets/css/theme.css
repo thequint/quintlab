@@ -803,10 +803,10 @@ h1, h2, h3, h4, h5, h6 {
 .candidtes-sidebar-inner{padding:15px;}
 .side-cand-lists{ color: rgba(255,255,255,0.7); margin-top: 20px;}
 .side-cand-lists li{display:block; text-align: center; padding-bottom: 15px;}
-.side-cand-lists img{width:230px; height: 230px; border-radius: 100%; border: 5px solid #fff; display: inline-block; background:#fff; }
+.side-cand-lists img{width:220px; height: 220px; border-radius: 100%; border: 5px solid #fff; display: inline-block; background:#fff; }
 .side-cand-lists li h3{color: #fff; font-size: 24px; margin: 0 0 0px 0;}
 .side-cand-lists li h4{color: #fff; font-size: 18px; margin: 0 0 5px 0;}
-.side-cand-lists figcaption{margin:20px 0px 0 0;}
+.side-cand-lists figcaption{margin:10px 0px 0 0;}
 
 .candidtes-sidebar-inner h2{
 	color: #fff; font-size: 30px; margin: 20px 0 5px 0;
