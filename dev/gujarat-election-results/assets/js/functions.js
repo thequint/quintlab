@@ -69,20 +69,11 @@ $(document).ready(function () {
 
 
 	var sections = [{
-		state: 'delhi',
+		state: 'gujarat',
 		id: "dd7a8420-651a-46a8-aacf-5f29d22707dc"
 	}, {
-		state: 'punjab',
+		state: 'himachal',
 		id: "6bed8234-bbad-4986-8976-53d7021e7c80"
-	}, {
-		state: 'goa',
-		id: "1210b806-9d33-4cd9-a34d-107dfac3c6ee"
-	}, {
-		state: 'uttarakhand',
-		id: "66de4c8a-9201-4b05-8e3b-51bdc41ea074"
-	}, {
-		state: 'manipur',
-		id: "2618b5c9-a03a-44b3-93ea-944d57546e8f"
 	}];
 	sections.forEach(function (section, index) {
 		$.getJSON('https://www.thequint.com/api/v1/stories/' + section.id, function (res) {

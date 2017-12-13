@@ -74,7 +74,7 @@ $('#StorySlider_1').slick({
 
 // KEY EVENTS
 
-
+/*
   $.getJSON('https://www.thequint.com/api/v1/stories/56300e5b-ca56-4ed2-9748-710139a98712', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
@@ -105,7 +105,7 @@ $('#StorySlider_1').slick({
     });
 	  
 	  StorySlider_1()
-  });
+  });*/
 
 
 

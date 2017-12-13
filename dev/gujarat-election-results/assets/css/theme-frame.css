@@ -144,6 +144,8 @@ tbody th {
 }
 .election-table ul li {
 	padding: 0px 10px;
+	float: left;
+	width: 50%;
 }
 .table-cont {
 	min-height: 150px;
@@ -188,4 +190,8 @@ tbody th {
 	background-color: #FFBF00;
 	padding: 0px 2px;
 }
+
+
+.table-data{width: 200px; margin: 0 auto;}
+.graph-data{width: 100%; height: 230px; overflow: hidden; margin-top: -40px;}
 

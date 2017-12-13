@@ -21,6 +21,10 @@
 	color: #383838;
 }
 
+.table-cont,.table-cont h3{
+	background: #383838;
+}
+
 .list-item h3,
 .election-data table,
 .carousel-wrapper h3,
@@ -36,8 +40,6 @@
 .logo,
 .election-banner,
 .list-item h3 span:last-child,
-.table-cont,
-.table-cont h3,
 .share-icons a:hover,
 .carousel-wrapper .story-item a:hover figcaption,
 .first-story a:hover figcaption, 

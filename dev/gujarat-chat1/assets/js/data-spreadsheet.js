@@ -1,7 +1,7 @@
-//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
+var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1TYaNIvwavphflUqrGqlZ7jt1JTjt-MAwwFdsEAnAinY/pubhtml';
 
 //demo_sheet
-var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
+//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18RrUpQs43I_FfdmqUYHoocnqF8Y2Tt6FYp6D_fc7iT4/pubhtml';
 
 function init() {
    Tabletop.init({

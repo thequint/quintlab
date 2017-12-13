@@ -48,6 +48,8 @@
 <![endif]-->
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script src="assets/js/highcharts.js"></script>
+
 
  <!-- OG Tag -->
 <meta property="og:title" content="MCD Delhi Elections 2017 - The Quint">
@@ -112,68 +114,11 @@ el.parentNode.insertBefore(s, el);
 <div class="wrapper election-banner-wrapper">
   <div class="container">
     <div class="election-banner clearfix">
-      <h2>MCD Elections <span>2017</span></h2>
-    </div>
-  </div>
-</div>
-<div class="wrapper liveblog-wrapper">
-  <div class="container">
-    <h2 class="">LIVE UPDATES</h2>
-    <div class="row liveblog">
-      <ul class="liveblog-list clearfix" id="live-events">
-        <li class="list-item" id="delhi-live-blog"></li>
-      </ul>
+      <h2>Elections <span>2017</span></h2>
     </div>
   </div>
 </div>
 
-<div class="wrapper frame-wrapper">
-  <div class="container election-table">
-  <div class="clearfix">
-   <h2 class="is-live">BJP gets 2/3rd majority</h2>
-   </div>
-    <div class="row table-row">
-      <ul class="slider-frame-1">
-        <li>
-          <div class="table-cont">
-            <h3>NORTH</h3>
-            <div class="election-data">
-              <table id="data_north">
-              </table>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="table-cont">
-			<h3>SOUTH</h3>
-            <div class="election-data">
-              <table id="data_south">
-              </table>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="table-cont">
-      		<h3>EAST</h3>
-            <div class="election-data">
-              <table id="data_east">
-              </table>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="table-cont">
-			<h3>OVERALL</h3>
-            <div class="election-data">
-              <table id="data_overall">
-              </table>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 <div class="wrapper carousel-wrapper">
   <div class="container">
@@ -185,6 +130,70 @@ el.parentNode.insertBefore(s, el);
     </div>
   </div>
 </div>
+	
+
+
+<div class="wrapper frame-wrapper">
+  <div class="container election-table">
+  <div class="clearfix">
+   <h2 class="is-live">BJP gets 2/3rd majority</h2>
+   </div>
+    <div class="row table-row">
+      <ul class="clearfix">
+        <li>
+          <div class="table-cont is-gujarat">
+            <h3>GUJARAT</h3>
+            <div class="election-data">
+				<div class="data-inner clearfix">
+					<div class="table-data"><table id="data_gujarat"></table></div>
+					<div class="graph-data">
+					
+					<div id="graph_data_gujarat" style="width:290px; height: 300px; margin: 0 auto" data-x='"BJP","congress","others"' ></div>
+					
+					</div>
+				</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="table-cont is-himachal">
+			<h3>HIMACHAL</h3>
+            <div class="election-data">
+              <div class="data-inner clearfix">
+					<div class="table-data"><table id="data_himachal"></table></div>
+					<div class="graph-data">
+				  
+				  <div id="graph_data_himachal" style="width:290px; height: 300px; margin: 0 auto" data-x='"BJP","congress","others"'></div>
+				  </div>
+				</div>
+            </div>
+          </div>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</div>
+	
+<div class="wrapper liveblog-wrapper">
+  <div class="container">
+    <h2 class="">LIVE UPDATES</h2>
+    <div class="row liveblog">
+      <div class="live-blog-inner clearfix">
+	  <ul class="liveblog-list clearfix">
+        <li class="list-item" id="gujarat-live-blog"></li>
+      </ul>
+		
+		<ul class="liveblog-list clearfix">
+        <li class="list-item" id="himachal-live-blog"></li>
+      </ul>
+		
+		</div>
+	
+    </div>
+  </div>
+</div>	
 
 <div class="wrapper">
   <div class="container">
@@ -196,9 +205,7 @@ el.parentNode.insertBefore(s, el);
         </div>
       </div>
       <div class="col col-1">
-      
         <div class="col-content-1">
-       
           <div class="" id="election-stories"></div>
         </div>
       </div>
@@ -206,16 +213,7 @@ el.parentNode.insertBefore(s, el);
   </div>
 </div>
 
-<div class="wrapper carousel-wrapper">
-  <div class="container">
-    <h3>Videos</h3>
-    <div class="row">
-      <div class="carosual">
-        <div class="video-slider" id="slider-election-stories"></div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- js files--> 
 <script type="text/javascript" src="assets/js/slick.min.js"></script> 
@@ -223,5 +221,13 @@ el.parentNode.insertBefore(s, el);
 <script src="assets/js/spreadsheet.js"></script> 
 <script src="assets/js/functions-frame.js"></script> 
 <script src="assets/js/data-frame.js"></script>
+	
+	<script type="text/javascript">
+	
+	
+
+
+	
+	</script>
 </body>
 </html>
