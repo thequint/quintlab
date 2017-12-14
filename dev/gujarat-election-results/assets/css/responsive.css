@@ -129,7 +129,9 @@
 
 	
 	.list-item{padding:0px;}
-	.list-item h3 span:first-child{display:inline-block; margin-right: 3px; padding: 0 0px;}
+	
+	
+	.list-item h3 span:first-child{display:inline-block; margin-right: 3px; padding: 0 0px; background: transparent !important;}
 	.list-item h3 span:last-child{display:inline-block; padding: 0 5px;}
 	
 	.list-item h3{padding: 0; margin-bottom: 3px;}
@@ -219,7 +221,10 @@ td, th {
 	float: none;
 	width: 100%;
 	padding: 0px 0px;
+		margin-top:15px;
 }
+	
+	
 	
 	.live-blog-inner{
 		margin: 0;

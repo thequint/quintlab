@@ -53,12 +53,12 @@
 	padding: 0;
 }
 
-	.election-table ul li:first-child{margin-bottom:20px;}
+	.election-table ul li:first-child{margin-bottom:15px;}
 	
 .row.table-row {
-	margin: 0px -10px 10px -10px;
+	margin: 0px;
 	background: #FFBF00;
-	padding-bottom: 5px;
+	padding-bottom: 0px;
 }
 .row {
 	margin-bottom: 0px;
@@ -68,9 +68,7 @@
 	width: 100% !important;
 	margin-bottom: 15px;
 }
-.frame-wrapper .container {
-	padding: 0px;
-}
+
 }
 
 @media (max-width: 480px) {
