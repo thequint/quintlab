@@ -49,6 +49,14 @@ function create_graph(id) {
 //alert(id);
 	
     $("#" + id).highcharts({
+		
+		colors: ['#f15a25', '#0071bd', '#006837', '#FFCC06', '#D9B89C', '#aaeeee', '#ff0066', '#eeaaee',
+      '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+		
+		
+		
+		
+		
 		chart: {
 			plotBackgroundColor: null,
 			plotBorderWidth: 0,
@@ -61,7 +69,10 @@ function create_graph(id) {
 			y: 40
 		},
 		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			//pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			formatter: function() {
+      			return '<b>'+ this.point.name +'</b>: '+ this.point.y ;
+   			}
 		},
 		plotOptions: {
 			pie: {
@@ -70,7 +81,9 @@ function create_graph(id) {
 					distance: -50,
 					style: {
 						fontWeight: 'bold',
-						color: 'white'
+						color: 'white',
+						fontSize:'14px'
+						
 					}
 				},
 				startAngle: -90,
@@ -94,60 +107,3 @@ function create_graph(id) {
 	
 }
 
-
-/*
-
-var selection_x = $("#graph_data_himachal").data("x").split(',').map(JSON.parse);
-var selection_y = $("#graph_data_himachal").data("y").split(',').map(JSON.parse);
-var graph_data=[];
-
-for(var i=0;i<selection_x.length;i++)
-{
-graph_data.push({"name":selection_x[i], "value":selection_y[i]});
-}
-
-Highcharts.chart('graph_data_himachal', {
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: 0,
-        plotShadow: false
-    },
-    title: {
-        text: '',
-        align: 'center',
-        verticalAlign: 'middle',
-        y: 40
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-        pie: {
-            dataLabels: {
-                enabled: true,
-                distance: -50,
-                style: {
-                    fontWeight: 'bold',
-                    color: 'white'
-                }
-            },
-            startAngle: -90,
-            endAngle: 90,
-            center: ['50%', '75%']
-        }
-    },
-    series: [{
-        type: 'pie',
-        name: 'Browser share',
-        innerSize: '50%',
-        data: [
-            [graph_data[0].name,  graph_data[0].value],
-            [graph_data[1].name,  graph_data[1].value],
-            [graph_data[2].name,  graph_data[2].value],
-           
-        ]
-    }]
-});
-
-
-*/

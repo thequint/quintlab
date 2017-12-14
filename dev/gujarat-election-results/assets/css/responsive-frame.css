@@ -82,4 +82,7 @@
 .col-content h3 {
 	font-size: 25px;
 }
+	
+	.is-graph{width:250px; height: 250px; margin: 0 auto;}
+	
 }

@@ -203,5 +203,8 @@ tbody th {
 	background: #007ed3;
 }
 
+.live-blink{
+	display: none;
+}
 
 

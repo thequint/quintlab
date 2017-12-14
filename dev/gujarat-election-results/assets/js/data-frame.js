@@ -54,8 +54,36 @@ $("#graph_data_gujarat").attr("data-y",[ data[0].gujaratseats,] +","+[ data[1].g
 	
 $("#graph_data_himachal").attr("data-y",[ data[0].himachalseats,] +","+[ data[1].himachalseats,] +","+[ data[2].himachalseats,] 	)
 //data-y=
+if(data[0].gujaratseats==0&data[1].gujaratseats==0&data[2].gujaratseats==0)
+	{
+		//do nothing
+		if(window.innerWidth<=600)
+			{
+		$(".gujarat-graph-data").hide();
+			}
+	}
+	else
+		{
 create_graph("graph_data_gujarat");
+		}
+	if(data[0].himachalseats==0&data[1].himachalseats==0&data[2].himachalseats==0)
+	{
+		//do nothing
+		if(window.innerWidth<=600)
+			{
+$(".himachal-graph-data").hide();
+			}
+			//$(".himachal-graph-data").hide();
+	}
+else{
 create_graph("graph_data_himachal");
+}
+
+if(data[0].gujaratseats==0&data[1].gujaratseats==0&data[2].gujaratseats==0&data[0].himachalseats==0&data[1].himachalseats==0&data[2].himachalseats==0 && window.innerWidth>601)
+	{
+	$(".graph-data").hide();	
+	}
+	
 }
 
 frame_slider();
