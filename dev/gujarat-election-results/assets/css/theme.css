@@ -848,4 +848,8 @@ h2.is-live{
 	color: #007ed3;
 }
 
+.is-himachal .list-item h3 span:last-child::after{
+	content: ' PRADESH'
+}
+
 
