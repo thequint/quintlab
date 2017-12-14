@@ -18,7 +18,6 @@
 body {
 	background-image: url(../images/chat-bg.jpg);
 	background-repeat: repeat;
-	background-attachment: fixed;
 	background-color: #fff;
 	background-position: center center;
 }
