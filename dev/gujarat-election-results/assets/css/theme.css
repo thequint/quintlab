@@ -161,46 +161,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .list-item h3 {
-  color: #4d086a;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 120%;
-   margin: 0px 10px 0px 0px;
-  padding: 0px;
-  text-transform: uppercase;
+	color: #4d086a;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 120%;
+	margin: 0 0 4px;
+	padding: 0px;
+	text-transform: uppercase;
 }
 
 
-.list-item h3 span:first-child{
-	background:#4D086A;
+.list-item h3 span:first-child {
+	background: #4D086A;
 	color: #fff;
 	display: none;
 }
 
 .list-item h3 span:last-child{background-color: #ffbf00; padding: 0px 4px;} 
-.list-item p{
+
+.list-item p {
 	line-height: 110%;
 	margin: 0;
 	color: #fff;
-	overflow: hidden;
-	text-overflow: ellipsis;
-
 }
 
-.list-item a{display: inline-block; font-size: 110%; position: absolute; top: 10px; left:100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 78%;}
+.list-item a{display: block; font-size: 110%; }
 
  
 .list-content{
 	
 	background: #4D086A;
 	position: relative;
+	padding: 10px;
 }
 
 .list-item h3 span:last-child{
 	display: inline-block;
-	padding: 10px;
-	width: 90px;
 	text-align: center;
 }
 
@@ -831,4 +828,24 @@ h2.is-live{
 .live-blog-inner{
 	margin: 0px -10px;
 }
+
+.is-gujarat .list-content{
+	background: #9B0E18;
+}
+
+.is-himachal .list-content{
+	background: #007ed3;
+}
+
+.is-gujarat .list-item h3 span:last-child{
+	background: #fff;
+	color: #9B0E18;
+}
+
+
+.is-himachal .list-item h3 span:last-child{
+	background: #fff;
+	color: #007ed3;
+}
+
 

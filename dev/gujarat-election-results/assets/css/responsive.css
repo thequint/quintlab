@@ -126,11 +126,9 @@
 	.carousel-wrapper{margin-bottom:15px;}
 	.liveblog-wrapper{background: #4D086A; margin: 0 0 15px}
 	.liveblog-wrapper h2{display: none;}
-.list-item {
-	padding: 0px 25px;
-}
+
 	
-	.list-item{padding:10px;}
+	.list-item{padding:0px;}
 	.list-item h3 span:first-child{display:inline-block; margin-right: 3px; padding: 0 0px;}
 	.list-item h3 span:last-child{display:inline-block; padding: 0 5px;}
 	
@@ -138,7 +136,7 @@
 	
 	
 .row.liveblog {
-	margin: 0px -10px;
+	margin: 0px 0px;
 }
 /*Responsive 5 stories*/	
 
@@ -206,6 +204,30 @@ td, th {
 .bottom-wrapper::after {
 	display: none;
 }
+	
+	.election-table ul li{
+		width:100%;
+		float: none;
+	}
+	
+	.row.table-row{
+		background-color: transparent !important;
+	}
+	
+	
+	.liveblog-list {
+	float: none;
+	width: 100%;
+	padding: 0px 0px;
+}
+	
+	.live-blog-inner{
+		margin: 0;
+	}
+
+	
+	
+	
 }
 
 @media (max-width: 480px) {

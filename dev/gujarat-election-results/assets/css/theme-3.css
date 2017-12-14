@@ -63,7 +63,7 @@
 
 @media (max-width: 600px){
 .liveblog-wrapper {
-    background: #007ed3;
+    background: transparent;
 }
-.row.table-row{background-color: #9B0E18;}
+.row.table-row{background-color: transparent;}
 }

@@ -37,7 +37,7 @@
 	letter-spacing: 0px;
 }
 .election-data {
-	margin: 0px 15%;
+	margin: 0px;
 }
 .election-data table {
 	font-size: 25px;
@@ -52,6 +52,9 @@
 .election-table ul li {
 	padding: 0;
 }
+
+	.election-table ul li:first-child{margin-bottom:20px;}
+	
 .row.table-row {
 	margin: 0px -10px 10px -10px;
 	background: #FFBF00;
