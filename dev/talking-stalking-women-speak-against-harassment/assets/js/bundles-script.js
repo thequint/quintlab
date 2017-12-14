@@ -777,12 +777,17 @@ function handleTweets(tweets) {
 twitterFetcher.fetch(config5);
 ;
 $(".intro-close").click(function(e) {
-    $(".intro-popup").fadeOut();
+    $(".intro-popup").hide();
     $('.intro-iframe iframe').attr('src', '');
-});
+    $(".scroll-up").show();
 
+    setTimeout(function(){
+        $(".scroll-up").fadeOut();
+    }, 3000);
+});
 $(".popup-btn").click(function(e) {
     $(".popup-box").show();
+
     //console.log(e.clientY +"|"+  window.screen.height+"|"+ $(".info-popup").height()+"|"+  $(window).scrollTop());
     //$(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() -  $(".info-popup").height()/2 });
 
@@ -944,6 +949,11 @@ var cur_section = 0;
 var click_flag = 0;
 
 function repeatOften() {
+
+    if($(window).scrollTop()>0) {
+        $(".scroll-up").fadeOut(100);
+    }
+
     if (-1 * parseInt($("#sectipn_wrap").css("left")) > 0 && -1 * parseInt($("#sectipn_wrap").css("left")) < $(window).width()) {
         cur_section = 0;
     } else if (-1 * parseInt($("#sectipn_wrap").css("left")) > $(window).width() && -1 * parseInt($("#sectipn_wrap").css("left")) < 2 * $(window).width()) {
@@ -1022,6 +1032,10 @@ $(window).load(function() {
     $(".loader").fadeOut();
     //v_slider();
 });
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 $(window).resize(function() {
     init();
