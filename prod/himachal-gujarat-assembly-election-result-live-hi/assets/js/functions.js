@@ -2,7 +2,7 @@ $(document).ready(function () {
 	
 	//TOP STORY
 	
-	var collectionSlug = 'mcd-elections-hindi'; 
+	var collectionSlug = 'himachal-pradesh-elections-2017'; 
 	$.getJSON('https://hindi.thequint.com/api/v1/collections/' + collectionSlug, function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
@@ -59,7 +59,7 @@ $(document).ready(function () {
 	
 	var sections = [{
 		state: 'गुजरात',
-		id: "0b3063b5-164d-45ce-aef7-d14e994bebac"
+		id: "0f90a191-1cfe-48fa-9500-42acd609fc89"
 	}, {
 		state: 'हिमाचल',
 		id: "18eefe99-6a71-4950-a0c7-99eb122ac0ec"
