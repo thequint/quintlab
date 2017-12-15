@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	
+	//TOP STORY
+	
 	var collectionSlug = 'mcd-elections-hindi'; 
 	$.getJSON('https://hindi.thequint.com/api/v1/collections/' + collectionSlug, function (res) {
 		var stories = res.items.filter(function (item) {
@@ -17,7 +20,7 @@ $(document).ready(function () {
 	});
 
 
-
+//KEY LEADS
 
 	$.getJSON('https://hindi.thequint.com/api/v1/stories/c5642e89-77c3-4f89-aad1-f4d0bd7d320c', function (res) {
 		var lastStory = res.story;
@@ -52,7 +55,8 @@ $(document).ready(function () {
 		key_event();
 	});
 
-
+//LIVE UPDATES
+	
 	var sections = [{
 		state: 'गुजरात',
 		id: "27f35859-27cf-40da-9150-50bccbcbd5a6"

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	
+	//TOP STORY
+	
 	var collectionSlug = 'mcd-polls'; 
 	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function (res) {
 		var stories = res.items.filter(function (item) {
@@ -17,7 +20,7 @@ $(document).ready(function () {
 	});
 
 
-
+//KEY LEADS
 
 	$.getJSON('https://www.thequint.com/api/v1/stories/887ca6fb-21fe-4a7e-aa0c-33f8c032e08b', function (res) {
 		var lastStory = res.story;
@@ -52,6 +55,7 @@ $(document).ready(function () {
 		key_event();
 	});
 
+	//LIVE UPDATES
 
 	var sections = [{
 		state: 'gujarat',
