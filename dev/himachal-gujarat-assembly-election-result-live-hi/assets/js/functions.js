@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 //KEY LEADS
 
-	$.getJSON('https://hindi.thequint.com/api/v1/stories/c5642e89-77c3-4f89-aad1-f4d0bd7d320c', function (res) {
+	$.getJSON('https://hindi.thequint.com/api/v1/stories/d868927a-9ea5-4f2d-aed0-77f6ed80586b', function (res) {
 		var lastStory = res.story;
 		var cards = lastStory.cards;
 		var cardsWithImages = cards.filter(function (card) {
@@ -59,10 +59,10 @@ $(document).ready(function () {
 	
 	var sections = [{
 		state: 'गुजरात',
-		id: "27f35859-27cf-40da-9150-50bccbcbd5a6"
+		id: "0b3063b5-164d-45ce-aef7-d14e994bebac"
 	}, {
 		state: 'हिमाचल',
-		id: "27f35859-27cf-40da-9150-50bccbcbd5a6"
+		id: "18eefe99-6a71-4950-a0c7-99eb122ac0ec"
 	}];
 	sections.forEach(function (section, index) {
 		$.getJSON('https://hindi.thequint.com/api/v1/stories/' + section.id, function (res) {

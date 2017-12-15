@@ -82,7 +82,7 @@ function create_graph(id) {
 					style: {
 						fontWeight: 'bold',
 						color: 'white',
-						fontSize:'14px'
+						fontSize:'18px'
 						
 					}
 				},
