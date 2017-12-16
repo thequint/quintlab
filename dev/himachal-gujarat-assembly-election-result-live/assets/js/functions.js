@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 //KEY LEADS
 
-	$.getJSON('https://www.thequint.com/api/v1/stories/887ca6fb-21fe-4a7e-aa0c-33f8c032e08b', function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/stories/ef493449-f7cd-4fee-8200-45838da42405', function (res) {
 		var lastStory = res.story;
 		var cards = lastStory.cards;
 		var cardsWithImages = cards.filter(function (card) {
@@ -59,10 +59,10 @@ $(document).ready(function () {
 
 	var sections = [{
 		state: 'gujarat',
-		id: "dd7a8420-651a-46a8-aacf-5f29d22707dc"
+		id: "ada21f86-4efa-42ef-aaf5-5751a21794f3"
 	}, {
 		state: 'himachal',
-		id: "6bed8234-bbad-4986-8976-53d7021e7c80"
+		id: "e1c78fbf-0c2c-4c39-b24e-35fffe23594a"
 	}];
 	sections.forEach(function (section, index) {
 		$.getJSON('https://www.thequint.com/api/v1/stories/' + section.id, function (res) {

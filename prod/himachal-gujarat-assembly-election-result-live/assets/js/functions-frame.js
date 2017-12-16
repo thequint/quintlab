@@ -13,7 +13,7 @@ $(document).ready(function () {
 function frame_slider() {
 
 	$('.slider-frame-1').slick({
-		slidesToShow: 4,
+		slidesToShow: 2,
 		slidesToScroll: 1,
 		autoplay: true,
 		arrows: false,
@@ -82,7 +82,7 @@ function create_graph(id) {
 					style: {
 						fontWeight: 'bold',
 						color: 'white',
-						fontSize:'14px'
+						fontSize:'18px'
 						
 					}
 				},
