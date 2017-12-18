@@ -2,7 +2,7 @@ $(document).ready(function () {
 	
 	//TOP STORY
 	
-	var collectionSlug = 'mcd-polls'; 
+	var collectionSlug = 'hp-and-gujarat-elections'; 
 	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
