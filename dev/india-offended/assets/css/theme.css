@@ -30,6 +30,11 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.swiper-wrapper
+{
+height: 165px;
+	margin-top: 20px;
+}
 p {
 	line-height: 130%;
 	margin-bottom: 25px;

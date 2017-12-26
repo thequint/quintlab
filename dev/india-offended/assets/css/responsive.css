@@ -35,4 +35,9 @@
 .discussion-container li:nth-child(even) figure {
 	padding: 0 100px 0 0px;
 }
+	
+.swiper-wrapper {
+	height: 96px;
+	margin-top: 10px;
+}
 }
