@@ -1,0 +1,249 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'oleo_scriptregular';
+	src: url('../fonts/oleoscript-regular-webfont.woff2') format('woff2'), 
+		 url('../fonts/oleoscript-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'sancreekregular';
+	src: url('../fonts/sancreek-regular-webfont.woff2') format('woff2'), 
+		 url('../fonts/sancreek-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'sansita_vf_betaregular';
+	src: url('../fonts/sansitavfbeta-webfont.woff2') format('woff2'), 
+		 url('../fonts/sansitavfbeta-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: 'oleo_scriptregular';
+	font-weight: 400;
+	background-color: transparent;
+	background-repeat: repeat;
+	color: #333333;
+	font-size: 17px;
+	width: 100%;
+	height: 100%;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #333333;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #333333;
+	font-weight: 900;
+	font-size: 100%;
+}
+/*Start CSS*/
+.container {
+	max-width: 550px;
+	margin: 0 auto;
+}
+.bioscope img.img-bioscope {
+	width: 100%;
+}
+.bioscope-elmnts {
+	position: absolute;
+	width: 100%;
+	bottom: 14%;
+	left: 0;
+}
+.bio-headline {
+	font-family: 'sancreekregular';
+	font-size: 40px;
+	line-height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 2px 2px 0px #C1272D;
+	margin: 0 auto 20px auto;
+	width: calc(100% - 18%);
+}
+.bio-slider{
+	position:relative;
+}
+
+.swiper-container {
+	width: calc(100% - 18%);
+	margin: 0 auto;
+}
+.swiper-container ul li a {
+	display: block;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 5px solid #fff;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.8);
+	position: relative;
+	background-color: #fff;
+}
+.text-container {
+	text-align: center;
+}
+.text-container h2 {
+	text-align: center;
+	font-family: 'sancreekregular';
+	font-size: 50px;
+	line-height: 100%;
+	color: #1A1A1A;
+	text-shadow: 2px 2px 0px #F7931E;
+	margin: 0 0 0px 0;
+}
+.text-container h2 span {
+	display: inline-block;
+	position: relative;
+}
+.text-container h2 span::before, .text-container h2 span::after {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	content: '';
+	top: 10px;
+	background: url(../images/star.svg) no-repeat;
+}
+.text-container h2 span::before {
+	left: -43px;
+}
+.text-container h2 span::after {
+	right: -43px;
+}
+.text-container p {
+	font-size: 26px;
+	line-height: 120%;
+}
+.video-container {
+	position: relative;
+	padding: 25px 0;
+}
+.video-container::before, .video-container::after {
+	position: absolute;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	height: 8px;
+	content: '';
+	background: url(../images/dots.svg) repeat-x;
+}
+.video-container::before {
+	top: 0;
+}
+.video-container::after {
+	bottom: 0;
+}
+.discussion-container {
+	padding: 0px 20px;
+}
+.discussion-container li {
+	display: block;
+	padding: 20px 0px;
+}
+.discussion-container li figure {
+	float: left;
+	max-width: 90%;
+	position: relative;
+	padding: 0 0 0 130px;
+}
+.discussion-container li figcaption {
+	background: #5F8015;
+	color: #fff;
+	font-size: 26px;
+	line-height: 100%;
+	padding: 25px 20px;
+	border-radius: 20px 20px 20px 0px;
+	position: relative;
+	min-height: 110px;
+}
+.discussion-container li figcaption::before {
+	position: absolute;
+	bottom: 0px;
+	left: -48px;
+	content: '';
+	width: 49px;
+	height: 50px;
+	background: url(../images/curve-odd.svg)no-repeat;
+}
+.discussion-container li .profile-pic {
+	position: absolute;
+	width: 100px;
+	bottom: 0px;
+	left: 0;
+	z-index: 99;
+}
+.discussion-container li .profile-pic img {
+	width: 100%;
+}
+/*All even*/
+
+.discussion-container li:nth-child(even) figure {
+	float: right;
+	padding: 0 130px 0 0px;
+}
+.discussion-container li:nth-child(even) figcaption {
+	background: #004B37;
+	border-radius: 20px 20px 0px 20px;
+}
+.discussion-container li:nth-child(even) .profile-pic {
+	right: 0;
+	left: inherit;
+}
+.discussion-container li:nth-child(even) figcaption::before {
+	left: inherit;
+	right: -48px;
+	background: url(../images/curve-even.svg)no-repeat;
+}
+
+.swiper-button-prev, .swiper-button-next{
+	background-color: #fff;
+	width:45px;
+	height: 45px;
+	border-radius: 100%;
+	text-align: center;
+	background-size: 16px;
+	background-repeat: no-repeat;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+	
+	
+}
+.swiper-button-prev{
+left: 5%;
+	background-image: url(../images/prev.svg);
+	background-position: 12px center;
+}
+
+.swiper-button-next{
+right: 5%;
+	background-image: url(../images/next.svg);
+	background-position: 18px center;
+}
+
+.swiper-button-prev:active, .swiper-button-next:active{
+	background-size: 14px;
+}
+
+.loading{display:none;}
+.real-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	
+}
+

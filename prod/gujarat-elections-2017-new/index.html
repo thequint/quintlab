@@ -84,9 +84,9 @@ el.parentNode.insertBefore(s, el);
         <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/gujarat-elections-2017/&text=Here's all the information you need about Phase 2 of the Gujarat election. %20https%3A//thequint.com/quintlab/gujarat-elections-2017"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       </ul>
     </div>
-	<header class="window-header top-window">
+	<header class="window-header top-window" style="padding-bottom: 0;">
 		<h1><img src="assets/images/kemcho-des.svg" alt="KEM CHO, GUJARAT?"></h1>
-		<div class="header-caption">
+		<div class="header-caption" style="display: none;">
 		  <div class="inner-caption">
 			<div class="caption-text">
 			  <div class="cap-z-index">
@@ -96,6 +96,10 @@ el.parentNode.insertBefore(s, el);
 			</div>
 		  </div>
 		</div>
+		<div class="iframe-himachal-gujarat">
+		<iframe style="border:0; height:390px; width:100%" src="https://www.thequint.com/quintlab/elections-2017-results/frame.html"></iframe>
+		</div>
+		
 	  </header>
 	</div>
 	<div class="container slider-container">
@@ -252,7 +256,7 @@ el.parentNode.insertBefore(s, el);
 <script type="text/javascript" src="assets/js/functions.js"></script>
 	<script type="text/javascript">
 	
-  $.getJSON('https://www.thequint.com/api/v1/stories/ad0b29a9-77d3-4a40-bdf7-f400d14dbcba', function(res) {
+  $.getJSON('https://www.thequint.com/api/v1/stories/ef493449-f7cd-4fee-8200-45838da42405', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
     var cardsWithImages = cards.filter(function(card) {
