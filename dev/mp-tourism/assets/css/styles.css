@@ -58,6 +58,22 @@ img {
 	right: 25%;
 	width: 67px;
 }
+
+.main-wrap--header .know-more {
+	position: absolute;
+    margin: 0 auto;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    width: 200px;
+    text-align: center;
+    font-size: 23px;
+    text-transform: uppercase;
+    line-height: 29px;
+    font-weight: 700;
+    color: #fffece;
+}
+
 .main-wrap--header .film-circle {
 	position: absolute;
 	top: 12.2%;
