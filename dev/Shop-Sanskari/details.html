@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Shop Sanakari</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" href="assets/css/animate.css" media="all">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="assets/css/slick.css" media="all">
+<link rel="stylesheet" href="assets/css/slick-theme.css" media="all">
+
+<link rel="stylesheet" href="assets/css/carts.css" media="all">
+
+<link rel="stylesheet" href="assets/css/themes.css" media="all">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:800|Playfair+Display:400,700|Roboto:300,900" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="product-details">
+
+<div class="loader"></div>
+
+<!-- <header class="header">
+	<div class="header__top-bar">Send ‘Aashirvaad’ to <strong>+91 9900181818</strong> <span>to get Aashirvaad from the elderly</span></div>
+
+	<div class="header__nav-bar">
+		<div class="nav-bar--left">
+			<h1 class="nav-bar--left__logo"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/quint-logo.svg"></a></h1>
+		</div>
+		<div class="nav-bar--right">
+			<div class="nav-bar--left__social">
+				<ul>
+					<li class="fa fa-facebook"></li>
+					<li class="fa fa-twitter"></li>
+					<li class="fa fa-google-plus"></li>
+					<li class="fa fa-youtube-play"></li>
+					<li class="fa fa-cart-arrow-down"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header> -->
+
+<div class="main-wrap">
+
+	<section class="section inner-header">
+        <div class="quint-logo"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/quint-purple-logo.svg"></a></div>
+		<div class="inner-header--sanskari-logo wow bounce"><a class="home_url" href="index.html"><img src="assets/images/shop-sanskari-logo.svg"></a></div>
+        <!-- Carts -->
+        <div class="header-cart">
+            <a id="header-cart-q" href="carts.html">
+                <span class="header-cart-item">10</span>
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="share"> <a class="share-ico" href="javascript:void(0);">share</a>
+            <ul class="social-ico">
+                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/phone-life-balance/&t=Check+your+phone-life+balance."><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/phone-life-balance/&text=Check your phone-life balance.%20https%3A//thequint.com/quintlab/phone-life-balance/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+	</section>
+
+	<!-- Quickbeam cart-->
+    <div id="quick-cart" quickbeam="cart">
+        <a id="quick-cart-pay" quickbeam="cart-pay 000" class="cart-ico">
+            <span>
+              <strong class="quick-cart-text">Pay<br></strong>
+              <span id="quick-cart-price">0</span>
+              <span id="quick-cart-pay-total-count">0</span>
+            </span>
+        </a>
+    </div>
+
+
+
+
+	<section aria-label="Main content" role="main" class="product-detail">
+        <div itemscope itemtype="http://schema.org/Product">
+            <div class="shadow">
+                <div class="_cont detail-top">
+                    <div class="cols">
+                        <div class="left-col">
+                            
+                            <div class="big">
+                                <span id="big-image" class="img" quickbeam="image" style="background-image: url('assets/images/video-img.jpg')" data-src="assets/images/video-img.jpg"></span>
+
+
+                                <!-- <span id="big-image" class="img"><img src="assets/images/video-img.jpg" data-src="assets/images/video-img.jpg"></span> -->
+
+                                <div class="detail-socials">
+                                    <div class="social-sharing" data-permalink="http://html-koder-test.myshopify.com/products/tommy-hilfiger-t-shirt-new-york">
+                                        <a target="_blank" class="share-facebook" title="Share"></a>
+                                        <a target="_blank" class="share-twitter" title="Tweet"></a>
+                                        <a target="_blank" class="share-pinterest" title="Pin it"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <h1 itemprop="name" id="product_title"></h1>
+                            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="USD">
+                                <link itemprop="availability" href="http://schema.org/InStock">
+                                <div class="price-shipping">
+                                    <div class="aashirwad-icon"></div>
+                                    <div class="price" id="price-preview" quickbeam="price" quickbeam-price="200">
+                                        <span class="price-rs">Rs.</span>
+                                        <span id="product_price"> </span>
+                                        <span class="aashirwads">aashirwads</span>
+                                    </div>
+                                </div>
+                                <div class="swatches">
+                                    <div class="swatch clearfix" data-option-index="0">
+                                        <div class="header">Size</div>
+                                        <div data-value="M" class="swatch-element plain m available">
+                                            <input id="swatch-0-m" type="radio" name="option-0" value="M" checked />
+                                            <label for="swatch-0-m">
+                                                M
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                            </label>
+                                        </div>
+                                        <div data-value="L" class="swatch-element plain l available">
+                                            <input id="swatch-0-l" type="radio" name="option-0" value="L" />
+                                            <label for="swatch-0-l">
+                                                L
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                            </label>
+                                        </div>
+                                        <div data-value="XL" class="swatch-element plain xl available">
+                                            <input id="swatch-0-xl" type="radio" name="option-0" value="XL" />
+                                            <label for="swatch-0-xl">
+                                                XL
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                            </label>
+                                        </div>
+                                        <div data-value="XXL" class="swatch-element plain xxl available">
+                                            <input id="swatch-0-xxl" type="radio" name="option-0" value="XXL" />
+                                            <label for="swatch-0-xxl">
+                                                XXL
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="swatch clearfix" data-option-index="1">
+                                        <div class="header">Color</div>
+                                        <div data-value="Blue" class="swatch-element color blue available">
+                                            <div class="tooltip">Blue</div>
+                                            <input quickbeam="color" id="swatch-1-blue" type="radio" name="option-1" value="Blue" checked />
+                                            <label for="swatch-1-blue" style="border-color: blue;">
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                                <span style="background-color: blue;"></span>
+                                            </label>
+                                        </div>
+                                        <div data-value="Red" class="swatch-element color red available">
+                                            <div class="tooltip">Red</div>
+                                            <input quickbeam="color" id="swatch-1-red" type="radio" name="option-1" value="Red" />
+                                            <label for="swatch-1-red" style="border-color: red;">
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                                <span style="background-color: red;"></span>
+                                            </label>
+                                        </div>
+                                        <div data-value="Yellow" class="swatch-element color yellow available">
+                                            <div class="tooltip">Yellow</div>
+                                            <input quickbeam="color" id="swatch-1-yellow" type="radio" name="option-1" value="Yellow" />
+                                            <label for="swatch-1-yellow" style="border-color: yellow;">
+                                                <img class="crossed-out" src="assets/images/soldout.png" alt="">
+                                                <span style="background-color: yellow;"></span>
+                                            </label>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="guide">
+                                        <a>Size guide</a>
+                                    </div> -->
+                                </div>
+                                
+                                <form id="AddToCartForm">
+                                    <div class="btn-and-quantity-wrap">
+                                        <div class="btn-and-quantity">
+                                            <div class="spinner">
+                                                <p>
+                                                    <span class="btn minus" data-id="2721888517"></span>
+                                                    <input type="text" id="updates_2721888517" name="quantity" value="1" class="quantity-selector qty">
+                                                    <input type="hidden" id="product_id" name="product_id" value="2721888517">
+                                                    <span class="q">Qty.</span>
+                                                    <span class="btn plus" data-id="2721888517"></span>
+                                                </p>
+                                            </div>
+                                            <div id="AddToCart" quickbeam="add-to-cart">
+                                                <span id="AddToCartText">Add to Cart</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="tabs">
+                                    <div class="tab-labels">
+                                        <span data-id="1" class="active">Info</span>
+                                        <!-- <span data-id="2">Brand</span> -->
+                                    </div>
+                                    <div class="tab-slides">
+                                        <div id="tab-slide-1" itemprop="description" class="slide active">
+                                            <div id="product_des"></div>
+                                        </div>
+                                        <!-- <div id="tab-slide-2" class="slide">
+                                            Tony Hunfinger
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="social-sharing-btn-wrapper">
+                                    <span id="social_sharing_btn">Share</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section recommended">
+        <div class="recommended--container">
+            <h3 class="recommended--container__headline">Recommended</h3>
+            <ul>
+                <li class="wow fadeInRight"><a href="index.html">
+                    <figure><img src="assets/images/video-img.jpg">
+                        <figcaption>Mum Loud Speaker</figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li class="wow fadeInRight"><a href="index.html">
+                    <figure><img src="assets/images/video-img.jpg">
+                        <figcaption>Mum Loud Speaker</figcaption>
+                    </figure>
+                    </a>
+                </li>
+                <li class="wow fadeInRight"><a href="index.html">
+                    <figure><img src="assets/images/video-img.jpg">
+                        <figcaption>Mum Loud Speaker</figcaption>
+                    </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section class="section reviews">
+        <div class="reviews--container">
+            <h3 class="reviews--container__headline">Reviews <span class="add-review"><a href="">Add Review</a></span></h3>
+            
+            <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <div class="Review_rating01">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </div>
+                </div>
+                <h4 class="reviews--container__content--heading">
+                    <strong class="Review_headline"></strong>
+                    <span class="Review_date"></span>
+                </h4>
+                <p class="Review_description"></p>
+            </div>
+
+            <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <div class="Review_rating02">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </div>
+                </div>
+                <h4 class="reviews--container__content--heading">
+                    <strong class="Review_headline02"></strong>
+                    <span class="Review_date02"></span>
+                </h4>
+                <p class="Review_description02"></p>
+            </div>
+
+            <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <div class="Review_rating03">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </div>
+                </div>
+                <h4 class="reviews--container__content--heading">
+                    <strong class="Review_headline03"></strong>
+                    <span class="Review_date03"></span>
+                </h4>
+                <p class="Review_description03"></p>
+            </div>
+
+
+            <!-- <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                </div>
+                <h4 class="reviews--container__content--heading">By Atif Karbelkaron <span>| 10 December 20</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div> -->
+            <!-- <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                </div>
+                <h4 class="reviews--container__content--heading">By Byomkesh Bakshi <span>| 6 December 20</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="reviews--container__content">
+                <div class="item-list--rating">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class=""></span>
+                </div>
+                <h4 class="reviews--container__content--heading">By Atif Karbelkaron <span>| 4 December 20</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div> -->
+        </div>
+    </section>
+	
+
+
+	<footer class="footer">
+		<div class="footer--section">
+			<div class="footer--section__left">
+				<ul class="footer--section__left--nav">
+					<h4>INFORMATION</h4>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Customer Service</a></li>
+					<li><a href="">New Collection</a></li>
+					<li><a href="">Best Sellers</a></li>
+					<li><a href="">Manufacturers</a></li>
+					<li><a href="">Privacy policy</a></li>
+					<li><a href="">Terms & condition</a></li>
+					<li><a href="">Blog</a></li>
+				</ul>
+				<ul class="footer--section__left--nav">
+					<h4>CUSTOMER SERVICE</h4>
+					<li><a href="">Search Terms</a></li>
+					<li><a href="">Advanced Search</a></li>
+					<li><a href="">Orders and Returns</a></li>
+					<li><a href="">Contact Us</a></li>
+					<li><a href="">RSS</a></li>
+					<li><a href="">Help & FAQs</a></li>
+					<li><a href="">Consultant</a></li>
+					<li><a href="">Store Locations</a></li>
+				</ul>
+			</div>
+			<div class="footer--section__right">
+				<h4>STAY CONNECTED</h4>
+				<div class="footer--section__right--social">
+					<ul>
+						<li class="fa fa-facebook"><a href=""></a></li>
+						<li class="fa fa-twitter"><a href=""></a></li>
+						<li class="fa fa-google-plus"><a href=""></a></li>
+						<li class="fa fa-youtube-play"><a href=""></a></li>
+					</ul>
+				</div>
+
+				<div class="footer--section__right--subscribe">
+					<h4>SUBSCRIBE <span>to</span> OUR NEWSLETTER</h4>
+					<form>
+						<input class="subscribe-field" type="text" placeholder="Enter Your Email Address"><input class="subscribe-btn" type="submit">
+					</form>
+				</div>
+			</div>
+			
+		</div>
+
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/slick.min.js"></script>
+<script type="text/javascript" src="assets/js/wow.min.js"></script>
+
+<!-- Spreadsheet API -->
+<script type="text/javascript" src="assets/api/spreadsheet.js"></script>
+<script type="text/javascript" src="assets/api/data-spreadsheet-loops.js"></script>
+
+<!-- Quickbeam cart end -->
+<script src='assets/js/quickbeam.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+<script src="assets/js/cart.js"></script>
+
+<script type="text/javascript" src="assets/js/functions.js"></script>
+
+</body>
+</html>
