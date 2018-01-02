@@ -468,6 +468,14 @@ img {
 		left: 5px;
 		width: 25px;
 	}
+	
+	.info-popup{
+		left:15px !important;
+		right: 15px !important;
+		
+	}
+	
+	
 }
 @media only screen and (max-width: 400px) {
 	.main-wrap--header .quint-logo {
