@@ -16,7 +16,8 @@ $(document).ready(function() {
 
     $(".popup-bt").click(function(e) {
         $(".info-popup").show();
-        $(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() -  $(".info-popup").height()/2  });
+        $(".info-popup").css({ "top": e.clientY+ $(window).scrollTop() - 220 /*$(".info-popup").height()/2*/ - 50 });
+		console.log($(".info-popup").height());
         if($(this).hasClass('click-even')) {
             $(".info-popup").css({ "left": $(".main-wrap").width()/20  });
         }else {

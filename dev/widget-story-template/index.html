@@ -22,47 +22,43 @@
   </div>
 </nav>
 <div class="container">
-  <h1 class="my-4">Create <small> a Story Widget</small> </h1>
+ 
   <div class="row">
     <div class="col-md-6">
+		 <h1 class="my-4">Create <small> a Story Widget</small></h1>
+		  <a id="ClickEvent" href="javascript:void(0);">Click Event</a>
       <form>
-		  
-        
-		  
-		  
-		  <div class="form-group">
-          <button id="addVideo" type="submit" class="btn btn-primary">Add video Section</button>
-		  <button id="addImage" type="submit" class="btn btn-primary">Add Image Section</button>
-		</div>
-		
-		<div id="formContainer">
-	   
-			<div class="form-group">
-          <label for="exampleInputEmail1">Story name</label>
-          <input type="text" class="form-control" id=""  placeholder="Enter story name">
-          <small class="form-text text-muted">We'll never share your email with anyone else.</small> 
-		</div>
-
-			
-		  
+        <div class="form-group">
+          <a href="javascript:void(0);" id="addVideo" type="submit" class="btn btn-primary">Add Video Section</a>
+          <a href="javascript:void(0);" id="addImage" type="submit" class="btn btn-primary">Add Image Section</a>
+			 <a href="javascript:void(0);" id="submit_form" type="submit" class="btn btn-primary">Submit</a>
         </div>
-		  
+        <div id="formContainer">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Story name</label>
+            <input type="text" class="form-control" id=""  placeholder="Enter story name">
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small> 
+		  </div>
+        </div>
       </form>
+    </div>
+    <div class="col-md-6">
+      <h1 class="my-4">Preview <small> Story Widget</small> </h1>
+		<iframe id="previewStory" src="template/index.html"></iframe>
     </div>
   </div>
 </div>
-
-<!--
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-    </footer>
---> 
+<footer class="py-3 mt-4 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your TheQuint 2018</p>
+  </div>
+</footer>
 
 <!-- Bootstrap core JavaScript --> 
 <script src="assets/js/jquery.min.js"></script> 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="assets/js/functions.js"></script>
+	
 </body>
 </html>

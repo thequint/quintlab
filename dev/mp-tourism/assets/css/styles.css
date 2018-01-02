@@ -41,6 +41,7 @@ img {
     position: relative;
     overflow: hidden;
     background-color: #dd4b26;
+	padding-bottom: 60px;
 }
 
 .main-wrap--header {
