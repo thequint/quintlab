@@ -14,7 +14,7 @@ Tabletop.init({
 window.addEventListener('DOMContentLoaded', init);
 
 function showInfo(data) {	
-document.getElementById("matchcentre_html").innerHTML = "<div class='simc-quint-container' id='siMtcContainer' data-matchcode='"+ [ data[0].MatchId] +"'></div>";
+document.getElementById("matchcentre_html").innerHTML = "<div class='simc-quint-container' id='siMtcContainer' data-matchcode='"+  data[0].MatchId +"'></div>";
 	
 	
 	
