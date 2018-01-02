@@ -61,7 +61,11 @@ function display_data() {
 	    $('#DisplayDiscussion_2').html(Display_Discussion_2);
 	
 	
-	$('.swiper-button').click(function(){		
+
+
+}
+
+function change_slide_data(){		
 		var Display_Name = $('.swiper-slide-active img.real-img').attr('alt');
 		var Display_Year = $('.swiper-slide-active').attr('data-year');
 		var Display_Description = $('.swiper-slide-active').attr('data-description');
@@ -82,6 +86,4 @@ function display_data() {
   			$('*').removeClass('animated fadeIn');
 		}, 1000);
 		
-	});
-
-}
+	}
