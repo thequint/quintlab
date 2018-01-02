@@ -23,14 +23,6 @@ document.getElementById("matchcentre_html").innerHTML = "<div class='simc-quint-
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
 
-
-	
-	
-	
-	
-
-	
-console.log(data);
 }
 
 
