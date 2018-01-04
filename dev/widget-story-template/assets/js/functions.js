@@ -70,17 +70,17 @@ $("#submit_form").click(function(){
 		//console.log(data_array[0].media_headline);
 	});
 	console.log(data_array);
-	$('#previewStory').contents().find('body').html('');
+	$('#previewStory').contents().find('body .swiper-wrapper').html('');
 	for(var i=0;i<data_array.length;i++)
 		{
 	if(data_array[i].section_type=="video_section")
 		{
-	$('#previewStory').contents().find('body').append('<div class="swiper-slide"><video  class="video-background" loop  src="'+data_array[i].media_source+'" webkit-playsinline poster="assets/data/poster/slide-4.jpg"></video><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div>');
+	$('#previewStory').contents().find('body .swiper-wrapper').append('<div class="swiper-slide"><video  class="video-background" loop  src="'+data_array[i].media_source+'" webkit-playsinline poster="assets/data/poster/slide-4.jpg"></video><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div>');
 		}
 			else
 				
 				{
-						$('#previewStory').contents().find('body').append('<div class="swiper-slide" style="background-image:url('+data_array[i].media_source+')"><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div></div>');
+						$('#previewStory').contents().find('body .swiper-wrapper').append('<div class="swiper-slide" style="background-image:url('+data_array[i].media_source+')"><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div></div>');
 				}
 	
 		}

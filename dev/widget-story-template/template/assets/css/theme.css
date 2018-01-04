@@ -189,34 +189,17 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 }
 
+.run-slider{
+	
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #f00;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+	botder-radius:3px;
+	z-index: 9999;
+}
 
-.swiper-slide.slide-1 {
-	background-image: url(../data/slide-1.jpg);
-}
-.swiper-slide.slide-2 {
-	background-image: url(../data/slide-2.jpg);
-}
-.swiper-slide.slide-3 {
-	background-image: url(../data/slide-3.jpg);
-}
-.swiper-slide.slide-8 {
-	background-image: url(../data/slide-8.jpg);
-}
-.swiper-slide.slide-11 {
-	background-image: url(../data/slide-11.jpg);
-}
-.swiper-slide.slide-12 {
-	background-image: url(../data/slide-12.jpg);
-}
-.swiper-slide.slide-15 {
-	background-image: url(../data/slide-15.jpg);
-}
-.swiper-slide.slide-16 {
-	background-image: url(../data/slide-16.jpg);
-}
-.swiper-slide.slide-17 {
-	background-image: url(../data/slide-17.jpg);
-}
-.swiper-slide.slide-18 {
-	background-image: url(../data/slide-18.jpg);
-}

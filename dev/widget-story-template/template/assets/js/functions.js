@@ -58,4 +58,9 @@ $(document).ready(function(){
    $("body").click(function(){
       $(".social-ico").slideUp();
    });
+	
+	
+	$('.run-slider').click(function(){
+		alert('yes');
+	});
 });
