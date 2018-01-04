@@ -469,11 +469,16 @@ img {
 .info-popup h3 {
 	font-size: 20px;
 	color: #550504;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Libre Baskerville', serif;
+	margin: 8px 0px 0 0;
 }
 .info-popup .img-box {
 	margin-bottom: 5px;
 	min-height: 170px;
+	background-color: rgba(0,0,0,0.2);
+	background-image: url(../images/loading.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .info-popup .img-box img {
 	width: 100%
@@ -482,7 +487,9 @@ img {
 	padding: 3px 0;
 	font-size: 16px;
 	color: #550504;
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Oswald', sans-serif;
+	line-height: 142%;
+	font-weight: 500;
 }
 .info-popup .content-box {
 	overflow: auto;
