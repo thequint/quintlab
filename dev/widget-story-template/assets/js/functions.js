@@ -83,7 +83,6 @@ $("#submit_form").click(function(){
 						$('#previewStory').contents().find('body .swiper-wrapper').append('<div class="swiper-slide" style="background-image:url('+data_array[i].media_source+')"><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div></div>');
 				}
 			
-			console.log(data_array);
 	
 		}
 });	

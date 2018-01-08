@@ -162,6 +162,7 @@ function get_weather_list(id) { // for current location
         .done(function(data) {
             //city_temp = data[0].Temperature.Metric.Value+ "°C";
             //city_cond= data[0].WeatherText;
+			$(".update-text").html("Updated at "+data[0].LocalObservationDateTime.substring(11, 16));
             city_weather_array.push(data[0].Temperature.Metric.Value + "°C");
             //console.log(city_weather_array);
             id_list_array_count = id_list_array_count + 1;
