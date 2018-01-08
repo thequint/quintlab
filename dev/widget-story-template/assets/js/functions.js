@@ -75,7 +75,7 @@ $("#submit_form").click(function(){
 		{
 	if(data_array[i].section_type=="video_section")
 		{
-	$('#previewStory').contents().find('body .swiper-wrapper').append('<div class="swiper-slide"><video  class="video-background" loop  src="'+data_array[i].media_source+'" webkit-playsinline poster="assets/data/poster/slide-4.jpg"></video><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div>');
+	$('#previewStory').contents().find('body .swiper-wrapper').append('<div class="swiper-slide"><video class="video-background" loop  src="'+data_array[i].media_source+'" webkit-playsinline poster="assets/data/poster/slide-4.jpg"></video><div class="video-caption byte-text"><div class="caption-container"><p><span>"The security arrangements are really tight. Were on duty from 12 (midnight), and around 2:30-3 am, the devotees started coming in. No untoward incidents like chain-snatching have been reported"</span></p></div></div><div class="caption"><h1>'+data_array[i].media_headline+'</h1><p><span>'+data_array[i].media_description+'</span></p></div><div class="loading"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="gooey"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix><feBlend in="SourceGraphic" in2="goo"></feBlend></filter></defs></svg><div class="blob blob-0"></div><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div><div class="blob blob-4"></div><div class="blob blob-5"></div></div>');
 		}
 			else
 				
@@ -91,6 +91,8 @@ $("#submit_form").click(function(){
 	
 	
 });
+
+
 
 
 
