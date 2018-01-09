@@ -29,27 +29,21 @@
 <![endif]-->
 
 <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-	
-			  
- <script>
+<script>
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
 </script>
-
 <script>
   googletag.cmd.push(function() {
     googletag.defineSlot('/175265624/quint_unit_300x600', [300, 600], 'div-gpt-ad-1512473066793-0').addService(googletag.pubads());
+	googletag.defineSlot('/175265624/quint_unit', [300, 250], 'div-gpt-ad-1512473125628-0').addService(googletag.pubads());
+	googletag.defineSlot('/175265624/quint_all_sizes', [[320, 50], [728, 90]], 'div-gpt-ad-1512473190572-0').addService(googletag.pubads());
+	googletag.defineSlot('/175265624/quint_all_sizes', [[320, 50], [728, 90]], 'div-gpt-ad-1512473190572-1').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
-	  googletag.pubads().collapseEmptyDivs();
-    googletag.enableServices();
-	  
-	  
-
-	  
-	  
+	googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();  
   });
 </script>
-
 </head>
 
 <body>
@@ -71,26 +65,19 @@
   <section class="section">
     <aside class="aside">
       <div class="aside--top-icon"><img src="assets/images/icons/27.png" alt=""></div>
-<!--      <a href="https://www.accuweather.com/" target="_blank" class="accuweather-logo"><span>More Info</span><img src="assets/images/AccuWeather_LogoOrange.svg"></a>-->
+      <!--      <a href="https://www.accuweather.com/" target="_blank" class="accuweather-logo"><span>More Info</span><img src="assets/images/AccuWeather_LogoOrange.svg"></a>-->
       <div class="aside--ver-ads"> 
-		  
-		  
-		  
-
-<!-- /175265624/quint_unit_300x600 -->
-<div id='div-gpt-ad-1512473066793-0' style='height:600px; width:300px;'>
-<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512473066793-0'); });</script>
-</div>
-		  
-		  
-		  
-		  
+        
+        <!-- /175265624/quint_unit_300x600 -->
+        <div id='div-gpt-ad-1512473066793-0' style='height:600px; width:300px;'> 
+          <script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512473066793-0'); });</script> 
+        </div>
       </div>
-      <div class="aside--squ-ads"> 
-       <iframe src="https://cdn.automatad.com/thequint/ad_300x250_mob.html" width="300" height="250" scrolling="no" frameborder="0" allowtransparency="true" class="_adSenceImagePush" loadstatus="0" data-width="300" data-height="250" style="height:250 !important; min-height:250px; width:300px !important; min-width: initial !important; overflow:hidden;margin:0 auto;position:relative; background: transparent; z-index: 999;max-width:initial !important;">
-</iframe>
-		  
-		  
+      <div class="aside--squ-ads">
+        <div id='div-gpt-ad-1512473125628-0' style='height:250px; width:300px;'> 
+          <script> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512473125628-0'); });</script> 
+        </div>
+        </iframe>
       </div>
     </aside>
     <article class="article">
@@ -98,41 +85,47 @@
         <h2 class="article--row__location" id="currentLoc" ><span id="currentLocation">New Delhi</span> Weather</h2>
         <h3 class="article--row__change"><span id="btnChangeLoc">Change Location</span></h3>
         <div class="loc-search" id="LocSearch" style="display: none;">
-			<div id="locationField">
-				<input class="input-loc" id="autocomplete" placeholder="Enter City Name" type="text"></input>
-				<i id="locClose" class="close-loc fa fa-times"></i>
-			</div>
-			<table id="address" style="display: none;">
-			  <tr>
-				<td class="label">Street address</td>
-				<td class="slimField"><input class="field" id="street_number"
-					  disabled="true"></input></td>
-				<td class="wideField" colspan="2"><input class="field" id="route"
-					  disabled="true"></input></td>
-			  </tr>
-			  <tr>
-				<td class="label">City</td>
-				<!-- Note: Selection of address components in this example is typical.
+          <div id="locationField">
+            <input class="input-loc" id="autocomplete" placeholder="Enter City Name" type="text">
+            </input>
+            <i id="locClose" class="close-loc fa fa-times"></i> </div>
+          <table id="address" style="display: none;">
+            <tr>
+              <td class="label">Street address</td>
+              <td class="slimField"><input class="field" id="street_number"
+					  disabled="true">
+                </input></td>
+              <td class="wideField" colspan="2"><input class="field" id="route"
+					  disabled="true">
+                </input></td>
+            </tr>
+            <tr>
+              <td class="label">City</td>
+              <!-- Note: Selection of address components in this example is typical.
 					 You may need to adjust it for the locations relevant to your app. See
 					 https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
 				-->
-				<td class="wideField" colspan="3"><input class="field" id="locality"
-					  disabled="true"></input></td>
-			  </tr>
-			  <tr>
-				<td class="label">State</td>
-				<td class="slimField"><input class="field"
-					  id="administrative_area_level_1" disabled="true"></input></td>
-				<td class="label">Zip code</td>
-				<td class="wideField"><input class="field" id="postal_code"
-					  disabled="true"></input></td>
-			  </tr>
-			  <tr>
-				<td class="label">Country</td>
-				<td class="wideField" colspan="3"><input class="field"
-					  id="country" disabled="true"></input></td>
-			  </tr>
-			</table>
+              <td class="wideField" colspan="3"><input class="field" id="locality"
+					  disabled="true">
+                </input></td>
+            </tr>
+            <tr>
+              <td class="label">State</td>
+              <td class="slimField"><input class="field"
+					  id="administrative_area_level_1" disabled="true">
+                </input></td>
+              <td class="label">Zip code</td>
+              <td class="wideField"><input class="field" id="postal_code"
+					  disabled="true">
+                </input></td>
+            </tr>
+            <tr>
+              <td class="label">Country</td>
+              <td class="wideField" colspan="3"><input class="field"
+					  id="country" disabled="true">
+                </input></td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="article--row">
@@ -180,9 +173,10 @@
     </article>
   </section>
   <section class="section">
-    <div class="horizontal-ads"> 
-      <iframe src="https://cdn.automatad.com/thequint/ad_728x90_web.html" width="728" height="90" scrolling="no" frameborder="0" allowtransparency="true" class="_adSenceImagePush" loadstatus="0" data-width="728" data-height="90" style="height:90 !important; min-height:90px; width:728px !important; min-width: initial !important; overflow:hidden;margin:0 auto;position:relative; background: transparent; z-index: 999;max-width:initial !important;">
-</iframe>
+    <div class="horizontal-ads">
+     <div id='div-gpt-ad-1512473190572-0'>
+		<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512473190572-0'); });</script>
+	</div>
     </div>
   </section>
   <section class="section">
@@ -195,34 +189,27 @@
     </div>
   </section>
   <section class="section">
-    <div class="horizontal-ads" style="display: none;" > 
-      <!-- 728x90-->
+    <div class="horizontal-ads"> 
+     <div id='div-gpt-ad-1512473190572-1'>
+		<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512473190572-1'); });</script>
+	</div>
       
     </div>
   </section>
 </div>
-
-
 <footer class="wrapper footer-wrapper">
-	<div class="container">
-		<a href="https://www.accuweather.com/" target="_blank" class="accuweather-logo-footer">
-			<img src="assets/images/AccuWeather_LogoWhite.svg" alt="Accu Weather">
-		</a>
-		
-		<div class="update-text">updated at 12:00am</div>
-	</div>
+  <div class="container"> <a href="https://www.accuweather.com/" target="_blank" class="accuweather-logo-footer"> <img src="assets/images/AccuWeather_LogoWhite.svg" alt="Accu Weather"> </a>
+    <div class="update-text">updated at 12:00am</div>
+  </div>
 </footer>
-
-
 
 <!-- Scripts --> 
 <script src="https://metype.com/quintype/metype/assets/application.js"></script> 
 <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script> 
 <script type="text/javascript" src="assets/js/slick.min.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script> 
-<script type="text/javascript" src="assets/js/accuweather.js"></script>
-
- <script>
+<script type="text/javascript" src="assets/js/accuweather.js"></script> 
+<script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -302,7 +289,7 @@
           });
         }
       }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5TLgbiWFO5Twk4xfgHR_EDctDmxAL3Q&libraries=places&callback=initAutocomplete" async defer></script>
+    </script> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5TLgbiWFO5Twk4xfgHR_EDctDmxAL3Q&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 </html>
