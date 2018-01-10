@@ -520,6 +520,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sticky-top-wrapper h1 img{width:250px;}
+
+
+/*
 .logo-ico {
 	width: 40px;
 	position: fixed;
@@ -527,6 +530,18 @@ h1, h2, h3, h4, h5, h6 {
 	left: 15px;
 	transform: translateZ(0px);
 }
+*/
+
+
+.logo-ico {
+	width: 95px;
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	transform: translateZ(0px);
+}
+
+
 .sticky-footer-wrapper {
 	background: #38464f;
 	height: 55px;
