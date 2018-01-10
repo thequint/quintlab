@@ -37,8 +37,18 @@
   googletag.cmd.push(function() {
     googletag.defineSlot('/175265624/quint_unit_300x600', [300, 600], 'div-gpt-ad-1512473066793-0').addService(googletag.pubads());
 	googletag.defineSlot('/175265624/quint_unit', [300, 250], 'div-gpt-ad-1512473125628-0').addService(googletag.pubads());
-	googletag.defineSlot('/175265624/quint_all_sizes', [[320, 50], [728, 90]], 'div-gpt-ad-1512473190572-0').addService(googletag.pubads());
-	googletag.defineSlot('/175265624/quint_all_sizes', [[320, 50], [728, 90]], 'div-gpt-ad-1512473190572-1').addService(googletag.pubads());
+	  
+	  if(window.innerWidth>=728)
+		  {
+	googletag.defineSlot('/175265624/quint_all_sizes',  [728, 90], 'div-gpt-ad-1512473190572-0').addService(googletag.pubads());
+	googletag.defineSlot('/175265624/quint_all_sizes',  [728, 90], 'div-gpt-ad-1512473190572-1').addService(googletag.pubads());		  
+		  }
+	  else
+		  {
+    googletag.defineSlot('/175265624/quint_all_sizes', [320, 50], 'div-gpt-ad-1512473190572-0').addService(googletag.pubads());
+	googletag.defineSlot('/175265624/quint_all_sizes', [320, 50], 'div-gpt-ad-1512473190572-1').addService(googletag.pubads());			  
+		  }
+	
     googletag.pubads().enableSingleRequest();
 	googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();  
@@ -199,7 +209,7 @@
 </div>
 <footer class="wrapper footer-wrapper">
   <div class="container"> <a href="https://www.accuweather.com/" target="_blank" class="accuweather-logo-footer"> <img src="assets/images/AccuWeather_LogoWhite.svg" alt="Accu Weather"> </a>
-    <div class="update-text">updated at 12:00am</div>
+    <div class="update-text"></div>
   </div>
 </footer>
 
