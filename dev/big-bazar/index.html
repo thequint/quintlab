@@ -9,7 +9,7 @@
     <meta name="description" content="While you’re lost in your phone, what are you losing in life?">
     <meta name="author" content="The Quint">
     <meta name="copyright" content="The Quint" />
-    <title>Tansen | The Quint</title>
+    <title>The story behind the event that changed how India shops | The Quint</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
     <!-- Custom styles for this template -->
@@ -24,20 +24,20 @@
     <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <!-- OG Tag -->
-    <meta property="og:title" content="Check your phone-life balance.">
+    <meta property="og:title" content="The story behind the event that changed how India shops">
     <meta property="og:site_name" content="TheQuint">
     <meta property="og:url" content="https://thequint.com/quintlab/quintlab/phone-life-balance/">
-    <meta property="og:description" content="While you’re lost in your phone, what are you losing in life?">
+    <meta property="og:description" content="Big Bazaar’s Sabse Saste Din has changed the way India shops and how.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://thequint.com/quintlab/phone-life-balance/assets/images/og.jpg">
+    <meta property="og:image" content="assets/images/BB-lab.jpg">
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="600" />
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@thequint">
-    <meta name="twitter:title" content="Check your phone-life balance.">
-    <meta name="twitter:description" content="While you’re lost in your phone, what are you losing in life?">
-    <meta name="twitter:image" content="https://thequint.com/quintlab/phone-life-balance/assets/images/og.jpg">
+    <meta name="twitter:title" content="Big Bazaar’s Sabse Saste Din has changed the way India shops and how">
+    <meta name="twitter:description" content="Big Bazaar’s Sabse Saste Din is a shopping carnival, preparations for which start months in advance.">
+    <meta name="twitter:image" content="assets/images/BB-lab.jpg">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -126,6 +126,11 @@
         <div class="full-image  wow zoomIn " data-wow-duration="1s">
             <div class="placeholder"> <img src="assets/images/BigBazaar5.JPG" class="is-desktop"> <img src="assets/images/BigBazaar5-mobile.JPG" class="is-mobile"> </div>
         </div>
+        <div class="headline-section">
+            <div class="container">
+                <h2>The story behind the event that changed how India shops</h2>
+            </div>
+        </div>
         <div class="share"> <a class="share-ico" href="javascript:void(0);">share</a>
             <ul class="social-ico">
                 <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/phone-life-balance/&t=Check+your+phone-life+balance."><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -136,7 +141,7 @@
     <section class="wrapper content-wrapper">
         <div class="container text-justify">
             <div class="content content-left">
-                <h3 class="sub-heading">The story behind the event that changed how India shops</h3>
+                <!-- <h3 class="sub-heading"></h3> -->
                 <div class="clearfix partner-logo">
                     <h4 class="partner">Partner</h4>
                     <img class="animated fadeIn is-desktop" width="15%" src="assets/images/big bazaar logo.png" alt="" style="margin: 0px 0px 10px 10px">
@@ -326,7 +331,7 @@
         <section class="wrapper content-wrapper">
             <div class="container text-justify">
                 <div class="content content-left">
-                    <p>Since its inception, the team behind Sabse Saste Din has been constantly innovating to keep its existing customers happy and attract new ones, and this year is no different. To be held between January 24 and 28, this year the team has introduced something called ‘Shop a day in advance’. This is like a preview to the sale that starts on January 24. It’s your chance of buying the same products at the lowest prices a day before everyone else. Exciting, isn’t it? That’s not all. This time, the top 100 offers will also be available online. So for some reason if you think you will not be able to visit a Big Bazaar store, just order it online and you’re sorted.</p>
+                    <p>Since its inception, the team behind Sabse Saste Din has been constantly innovating to keep its existing customers happy and attract new ones, and this year is no different. To be held between January 24 and 28, this year you can order the top 100 offers online and if you’re shopping at a store, you can enjoy fast billing. All you need to do is book your pass online for Rs 50 and turn up at the billing counter at the designated time. No wasting time in long queues. Moreover, this pass is fully redeemable at the time of shopping. They have also launched a Sabse Saste Din game this time. You just need to play and you stand a chance to win shopping vouchers upto Rs 1 crore. Exciting, innit?</p>
 
                     <span class="img-container wow slideInLeft" data-wow-duration="0.5s">
                       <figure> <img class="animated fadeIn" src="assets/images/BigBazaar8.JPG" alt="">
@@ -369,6 +374,20 @@
     <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="assets/js/wow.min.js"></script>
     <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script>
+        $('p').on('click',function(){
+            $('.para').remove();
+            $(this).after('<textarea rows="10" class="para">' + $(this).html() + '</textarea><a class="abc">Submit</a>');
+            $(this).hide();
+            var x = $(this);
+            $('.abc').on('click',function(){
+                $(x).html($('.para').val());
+                $('.para').remove();
+                $(this).remove();
+                $(x).show();
+            });
+        });        
+    </script>
 </body>
 
 </html>
