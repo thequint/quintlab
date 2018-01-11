@@ -76,7 +76,7 @@ blockquote2 img {
 	margin: 0 auto;
 }
 .credits-wrapper {
-	background-color: #eaeaea;
+	background-color: #d8d5d5;
 	margin: 0px;
 }
 .container .video-container {
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 	right: 10px;
 	top: 0;
 	z-index: 1000;
-	width: 50px;
+	/*width: 50px;*/
 	height: 100vh;
 	/*background: #dadada;*/
 	text-align: center;
@@ -338,8 +338,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 0px;
 }
 .nav ul li a {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	/*height: 50px;*/
 	display: block;
 	/*border-radius: 100%;*/
 	background: transparent;
@@ -353,9 +353,9 @@ h1, h2, h3, h4, h5, h6 {
 	-ms-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
 }
-.nav ul li:nth-child(3) a {
-	width: 48px;
-	height: 48px;
+.nav ul li:nth-child(2) a img {
+	width: 55px;
+	height: 50px;
 	padding-left: 5px;
 }
 
@@ -1130,8 +1130,13 @@ p a {
 
 .logo-wrapper .logo-mp{
 	float: left;
-	max-width: 85px;
-	margin: 15px;
+	max-width: 62px;
+	margin: 10px;
+}
+.logo-wrapper .logo-jal {
+    float: left;
+    max-width: 220px;
+    margin: 10px 10px 10px 0px;
 }
 .credits-wrapper{
 	text-align: center;
@@ -1141,8 +1146,8 @@ p a {
 }
 
 .credits-wrapper .logo-mp{
-	max-width: 122px;
-	margin-right: 50px;
+	max-width: 80px;
+	margin-right: 20px;
 }
 .content-left.quiz {
 	text-align: center;
