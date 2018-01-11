@@ -383,7 +383,7 @@
 
 		function showInfo(data) {
 
-		alert('yes');
+		// alert('yes');
 		// fire off the request to /form.php
         request = $.ajax({
             // url: "https://script.google.com/macros/s/AKfycbxsnZmBN13aS9kiQte-LZiDfsUnQnFIJ1aCaYVJLrr8UyRegGPw/exec",
@@ -415,7 +415,7 @@
 
         $('#foo').find('input, textarea').val('');
 		
-		var str = "<iframe src='quizzes/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
+		var str = "<iframe src='https://quintlab.herokuapp.com/dev/quintlab-portfolio/quizzes/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
 			$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
 
 		console.log();
