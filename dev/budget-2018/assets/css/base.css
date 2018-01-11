@@ -397,7 +397,7 @@ transform:translateY(4px) rotate(90deg)
 	
 }
 .share-ico {
-	background: #38464f url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
+	background: #0078BE url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
 	border-radius: 100%;
 	display: block;
 	font-size: 0;
@@ -414,7 +414,7 @@ transform:translateY(4px) rotate(90deg)
 	margin-top: 10px;
 }
 .social-ico li a {
-	background: #38464f;
+	background: #0078BE;
 	border-radius: 100%;
 	display: block;
 	font-size: 20px;
