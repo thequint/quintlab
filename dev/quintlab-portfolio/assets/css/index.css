@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+
+body{
+	font-family: 'Oswald', sans-serif;
+	background-color: #f4f4f4;
+	font-weight: 300; 
+}
+
+.slick-prev:before, .slick-next:before{
+    color: #36154f;
+}
+
+.navbar{
+	font-weight: 400; 
+}
+
+.navbar-brand{
+	display: inline;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.bg-dark{
+	background-color: #36154f!important;
+}
+
+#main-content{
+	margin-top: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+	font-size: 1.25em;
+	letter-spacing: 0.5px;
+}
+
+.display-4{
+	font-size: 3rem;
+}
+
+.grid{
+	margin-top: 10px;
+}
+
+.grid li h3{
+	background-color: #36154f!important;
+	color: #ffbf00;
+}
+
+.grid li.shown:hover > a::before{
+	border-color: #36154f!important;
+}
+
+.card-widget{
+	/*background-color: #ffbf00;.*/
+	border: none!important;
+	border-radius: 0px;
+	color: #36154f;
+	width: 200px;
+	float: left;
+}
+
+.card-body{
+	margin: 0px 0px 5px 0px;
+	background-color: white;
+}
+
+.btn-primary{
+	background-color: #36154f!important;
+	border-color: #36154f!important;
+}
+
+.slider .card:nth-child(2n){
+	background-image: -webkit-linear-gradient(right, #00ebff, #0050e6);
+}
+
+.slider .card:nth-child(2n+1){
+	background-image: -webkit-linear-gradient(right, #c1fe4b, #08a800);
+}
+
+.slider .card:nth-child(3n+0){
+	background-image: -webkit-linear-gradient(right, #ff8d8d, #e90079);
+}
+
+.slider .card:nth-child(3n+1){
+	background-image: -webkit-linear-gradient(right, #F4B82E, #E18018);
+}
+
+hr{
+	margin: 10px 0px;
+}
+
+#projectList{
+	margin-top: 70px;
+}
+
+/*li img{
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}*/
