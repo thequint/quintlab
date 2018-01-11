@@ -23,7 +23,7 @@
         display: block;
     }
     body {
-        padding: 0 0 54px 0;
+        padding: 0 0 74px 0;
     }
     ul.credits li {
         float: left;
@@ -152,13 +152,11 @@
         margin: 0px 0px 20px 0;
     }
     .nav ul li a {
-        width: 30px;
-        height: 30px;
+        width: 45px;
     }
-    .nav ul li:nth-child(3) a {
-        width: 30px;
-        height: 30px;
-        padding-left: 0;
+    .nav ul li:first-child a {
+        width: 60px;
+        padding-top: 8px;
     }
     .is-mobile {
         display: block;

@@ -1006,6 +1006,9 @@ transform:translateY(4px) rotate(90deg)
 	line-height: 70px;
 	margin: 30px 0;
 }
+.headline-section h2.banner-headline {
+	margin-bottom: 10px;
+}
 /*tooltip container*/
 
 /*
@@ -1264,5 +1267,13 @@ p a {
 	background-color: #000;
 	display: inline-block;
 	color: #fff;
+
+}
+.banner-partner {
+	padding: 3px 10px 6px;
+	margin: 0px 0 20px 0;
+	background-color: #fff;
+	display: inline-block;
+	color: #000;
 
 }
