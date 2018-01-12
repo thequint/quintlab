@@ -75,7 +75,7 @@
 			</div>
 		</div>
 		<div class="row widget-details">
-			<div class="col-lg-6 col-sm-12 question-cards">
+			<div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
 				<form>
 					<div class="form-group">
 						<input href="#" class="form-control tag-line tag-line-1" placeholder="Tag line for below 33%...">
@@ -84,6 +84,11 @@
 					</div>
 				</form>
 				<div class="card">
+					<div class="card-header">
+						<button type="button" class="close" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					</div>
 					<div class="card-body">
 						<form>
 							<div class="form-group">
@@ -114,7 +119,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="container options-container">
+								<div class="container options-container draggingOptions">
 									<div class="option">
 										<ul class="optionInputGroup">
 											<li class="optionRadioLi">
@@ -175,9 +180,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script src="quizzes/assets/js/spreadsheet.js"></script>
 	
 	<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>	
+
+	<script>
+		$( "#draggingQuestions" ).sortable();
+	    $( "#draggingQuestions" ).disableSelection();
+	    // $( ".draggingOptions" ).sortable();
+	    // $( ".draggingOptions" ).disableSelection();
+	    $('#draggingQuestions').on('click','.close',function() {
+		 	$(this).parent().parent().remove();
+		});
+		$('.draggingOptions').on('click','.close',function() {
+		 	$(this).parent().parent().remove();
+		});
+	</script>
 
 	<script>
 		var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1Tm-evipM7HZuMc0hiX6mpZ_QilShOugEsVZp5kHkYVg/pubhtml'; // New form quiz sheet
@@ -250,7 +270,7 @@
 				for(var j = 0; j < quiz_data[i].options.length; j++){
 					str = str + '<li><label class="lbl">' + (quiz_data[i].options[j].optionImageUrl == null ? (quiz_data[i].options[j].optionVideoUrl == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>' ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].optionVideoUrl + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i].options[j].optionImageUrl + '">') + '<input type="radio" name="option-input-group-' + i + '">' + quiz_data[i].options[j].optionText + '</label></li>';
 				}
-				$('.preview').append('<div class="question-box"><div class="question"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'] + '?</div>' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl'] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '">') + '<ul class="answer-type demo-list">' + str + '</ul></div>');
+				$('.preview').append('<div class="question-box"><div class="question"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'] + '</div>' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl'] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '">') + '<ul class="answer-type demo-list">' + str + '</ul></div>');
 				str = '';
 			}
 			$(".question-box").css({"background-color": "white", "border-radius": "0px", "border": "1px #d8d8d8 solid", "padding": "24px 12px 12px 24px", "margin" : "3.5em 0"});
@@ -263,7 +283,7 @@
 		}
 
 		function addQuestionUi(){
-			$('.question-cards').append('<div class="card"><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option 1"></li></ul><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
+			$('.question-cards').append('<div class="card"><div class="card-header"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container draggingOptions"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option 1"></li></ul><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
 			addAnotherOptionClick();
 			resetEvents();
 			return;
