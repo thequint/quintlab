@@ -78,7 +78,7 @@ function display_data() {
 			media = media + '<li>' + data_array[index].questionAudioUrl + '</li>';
 		}
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '?<ul>' + media + '</ul></div><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div>');
+		$('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '<ul>' + media + '</ul></div><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div>');
 		str = '';
 	}
 	$('.highlight').html(data_array.length-1);
