@@ -12,7 +12,8 @@
 	font-style: normal;
 }
 body {
-	font-family: 'allerregular';
+/*	font-family: 'allerregular';*/
+	font-family: 'Noto Sans', sans-serif;
 	font-weight: 400;
 	background-color: #ccc;
 	color: #4d4d4d;
