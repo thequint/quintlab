@@ -49,25 +49,25 @@ function display_data(check_clear) {
       var cat_class;
 
       switch (sheet_data[index].Category) {
-         case "Traders":
+         case "व्यापारी":
             cat_class = "ctg-orange";
             break;
-         case "Students":
+         case "छात्र":
             cat_class = "ctg-blue";
             break;
-         case "Salaried":
+         case "नौकरीपेशा":
             cat_class = "ctg-turquoise";
             break;
-         case "Retired":
+         case "रिटायर्ड कर्मचारी":
             cat_class = "ctg-limegreen";
             break;
-         case "Consumer":
+         case "उपभोक्ता":
             cat_class = "ctg-violet";
             break;
-         case "Homemaker":
+         case "गृहिणी":
             cat_class = "ctg-pink";
             break;
-         case "Investor":
+         case "निवेशक":
             cat_class = "ctg-red";
             break;
 			  
