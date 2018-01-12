@@ -58,7 +58,7 @@ function display_data(check_clear) {
          case "नौकरीपेशा":
             cat_class = "ctg-turquoise";
             break;
-         case "रिटायर्ड कर्मचारी":
+         case "रिटायर्ड":
             cat_class = "ctg-limegreen";
             break;
          case "उपभोक्ता":

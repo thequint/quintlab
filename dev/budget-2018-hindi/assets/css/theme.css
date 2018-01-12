@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #fff;
 	background-position: center center;
 	background-size: cover;
+	min-height: 100vh;
 }
 .sidebar-iner {
 	padding: 30px;
