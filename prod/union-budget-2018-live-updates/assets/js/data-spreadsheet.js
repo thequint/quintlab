@@ -43,35 +43,32 @@ function display_data(check_clear) {
 		reset_handlers=0;
 	}
 	
-
-	
-	
 	
    for (var index = sheet_data.length - 1; index >= 0; index--) {
 
       var cat_class;
 
       switch (sheet_data[index].Category) {
-         case "Traders":
+         case "Business":
             cat_class = "ctg-orange";
             break;
-         case "Students":
+         case "Experts":
             cat_class = "ctg-blue";
             break;
          case "Salaried":
             cat_class = "ctg-turquoise";
             break;
-         case "Retired":
+		 case "Investor":
             cat_class = "ctg-limegreen";
-            break;
-         case "Consumer":
-            cat_class = "ctg-violet";
-            break;
-         case "Homemaker":
+            break;	  
+         case "Homemakers":
             cat_class = "ctg-pink";
             break;
-         case "Investor":
+         case "Retired":
             cat_class = "ctg-red";
+            break;
+         case "Students":
+            cat_class = "ctg-violet";
             break;
 			  
 		case "Story":

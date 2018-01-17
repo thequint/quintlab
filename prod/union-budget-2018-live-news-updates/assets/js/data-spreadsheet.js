@@ -52,23 +52,23 @@ function display_data(check_clear) {
          case "व्यापारी":
             cat_class = "ctg-orange";
             break;
-         case "छात्र":
+         case "एक्सपर्ट्स":
             cat_class = "ctg-blue";
             break;
          case "नौकरीपेशा":
             cat_class = "ctg-turquoise";
             break;
-         case "रिटायर्ड":
+         case "निवेशक":
             cat_class = "ctg-limegreen";
             break;
-         case "उपभोक्ता":
-            cat_class = "ctg-violet";
-            break;
-         case "गृहिणी":
+         case "महिलाएं":
             cat_class = "ctg-pink";
             break;
-         case "निवेशक":
+         case "रिटायर्ड":
             cat_class = "ctg-red";
+            break;
+         case "स्टूडेंट्स":
+            cat_class = "ctg-violet";
             break;
 			  
 		case "Story":

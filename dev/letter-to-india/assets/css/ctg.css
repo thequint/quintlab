@@ -1,0 +1,206 @@
+@charset "utf-8";
+.chat-container li.key-cand .chat-el .btn-more{
+	background-color: #fff;
+}
+
+.chat-container li.key-cand .msg-text, 
+.chat-container li.key-cand .msg-text span{
+	color: #fff;
+}
+
+/* ======================= NEW CATG ======================= */
+
+/*Ctg-orange: #f8931f*/
+
+.filter-block .options li.ctg-orange a::before,
+.chat-container li.ctg-orange .btn-more,
+.chat-container li.ctg-orange .msg-text{
+	background-color: #f8931f;
+}
+
+.chat-container li.ctg-orange .profile-img,
+.chat-container li.ctg-orange .chat-el .hide-el{
+	border-color: #f8931f;
+}
+
+.chat-container li.ctg-orange .chat-el .btn-more,
+.chat-container li.ctg-orange .personal-details h4 label{ 
+	color: #f8931f;
+}
+
+.chat-container li.ctg-orange .msg-text::after{
+	border-color: transparent #f8931f transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-orange .msg-text::after{
+	border-color: transparent transparent #f8931f transparent;
+}
+
+
+/*Ctg-blue: #29aae3*/
+
+.filter-block .options li.ctg-blue a::before,
+.chat-container li.ctg-blue .btn-more,
+.chat-container li.ctg-blue .msg-text{
+	background-color: #29aae3;
+}
+
+.chat-container li.ctg-blue .profile-img,
+.chat-container li.ctg-blue .chat-el .hide-el{
+	border-color: #29aae3;
+}
+
+.chat-container li.ctg-blue .chat-el .btn-more,
+.chat-container li.ctg-blue .personal-details h4 label{ 
+	color: #29aae3;
+}
+
+.chat-container li.ctg-blue .msg-text::after{
+	border-color: transparent #29aae3 transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-blue .msg-text::after{
+	border-color: transparent transparent #29aae3 transparent;
+}
+
+
+/*Ctg-turquoise: #01a89e*/
+.filter-block .options li.ctg-turquoise a::before,
+.chat-container li.ctg-turquoise .btn-more,
+.chat-container li.ctg-turquoise .msg-text{
+	background-color: #01a89e;
+}
+
+.chat-container li.ctg-turquoise .profile-img,
+.chat-container li.ctg-turquoise .chat-el .hide-el{
+	border-color: #01a89e;
+}
+
+.chat-container li.ctg-turquoise .chat-el .btn-more,
+.chat-container li.ctg-turquoise .personal-details h4 label{ 
+	color: #01a89e;
+}
+
+.chat-container li.ctg-turquoise .msg-text::after{
+	border-color: transparent #01a89e transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-turquoise .msg-text::after{
+	border-color: transparent transparent #01a89e transparent;
+}
+
+
+/*Ctg-limegreen: #8cc63e*/
+
+.filter-block .options li.ctg-limegreen a::before,
+.chat-container li.ctg-limegreen .btn-more,
+.chat-container li.ctg-limegreen .msg-text{
+	background-color: #8cc63e;
+}
+
+.chat-container li.ctg-limegreen .profile-img,
+.chat-container li.ctg-limegreen .chat-el .hide-el{
+	border-color: #8cc63e;
+}
+
+.chat-container li.ctg-limegreen .chat-el .btn-more,
+.chat-container li.ctg-limegreen .personal-details h4 label{ 
+	color: #8cc63e;
+}
+
+.chat-container li.ctg-limegreen .msg-text::after{
+	border-color: transparent #8cc63e transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-limegreen .msg-text::after{
+	border-color: transparent transparent #8cc63e transparent;
+}
+
+/*Ctg-red: #9B0E18*/
+
+.filter-block .options li.ctg-red a::before,
+.chat-container li.ctg-red .btn-more,
+.chat-container li.ctg-red .msg-text{
+	background-color: #9B0E18;
+}
+
+.chat-container li.ctg-red .profile-img,
+.chat-container li.ctg-red .chat-el .hide-el{
+	border-color: #9B0E18;
+}
+
+.chat-container li.ctg-red .chat-el .btn-more,
+.chat-container li.ctg-red .personal-details h4 label{ 
+	color: #9B0E18;
+}
+
+.chat-container li.ctg-red .msg-text::after{
+	border-color: transparent #9B0E18 transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-red .msg-text::after{
+	border-color: transparent transparent #9B0E18 transparent;
+}
+
+/*Ctg-pink: #ed1e79*/
+
+.filter-block .options li.ctg-pink a::before,
+.chat-container li.ctg-pink .btn-more,
+.chat-container li.ctg-pink .msg-text{
+	background-color: #ed1e79;
+}
+
+.chat-container li.ctg-pink .profile-img,
+.chat-container li.ctg-pink .chat-el .hide-el{
+	border-color: #ed1e79;
+}
+
+.chat-container li.ctg-pink .chat-el .btn-more,
+.chat-container li.ctg-pink .personal-details h4 label{ 
+	color: #ed1e79;
+}
+
+.chat-container li.ctg-pink .msg-text::after{
+	border-color: transparent #ed1e79 transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-pink .msg-text::after{
+	border-color: transparent transparent #ed1e79 transparent;
+}
+
+/*Ctg-violet: #ed53ed*/
+
+.filter-block .options li.ctg-violet a::before,
+.chat-container li.ctg-violet .btn-more,
+.chat-container li.ctg-violet .msg-text{
+	background-color: #ed53ed;
+}
+
+.chat-container li.ctg-violet .profile-img,
+.chat-container li.ctg-violet .chat-el .hide-el{
+	border-color: #ed53ed;
+}
+
+.chat-container li.ctg-violet .chat-el .btn-more,
+.chat-container li.ctg-violet .personal-details h4 label{ 
+	color: #ed53ed;
+}
+
+.chat-container li.ctg-violet .msg-text::after{
+	border-color: transparent #ed53ed transparent transparent;
+}
+
+.chat-container ul li:nth-child(even).ctg-violet .msg-text::after{
+	border-color: transparent transparent #ed53ed transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
