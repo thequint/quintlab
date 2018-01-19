@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
-	padding: 20px 0;
+	padding: 40px 0;
 	overflow: hidden;
 }
 .satellite-container {
@@ -225,3 +225,127 @@ h1, h2, h3, h4, h5, h6 {
 	transform: translateX(50px);
 	
 }
+
+
+.fire{
+	z-index: 1;
+	background-image: url(../images/fire.png);
+	background-repeat: no-repeat;
+	background-size: 28px;
+	-webkit-animation: fire 0.2s steps(2) infinite;
+	-moz-animation: fire 0.2s steps(2) infinite;
+	-ms-animation: fire 0.2s steps(2) infinite;
+	-o-animation: fire 0.2s steps(2) infinite;
+	animation: fire 0.2s steps(2) infinite;
+}
+
+
+.fire-left {
+	position: absolute;
+	width: 14px;
+	height: 23px;
+	bottom: 10px;
+	left: 56px;
+	
+}
+
+.fire-right {
+	position: absolute;
+	width: 14px;
+	height: 23px;
+	bottom: 10px;
+	left: 131px;
+	transform: rotate3d(0,0,1,-38deg);
+}
+
+
+.fire-mid {
+	position: absolute;
+	width: 14px;
+	height: 23px;
+	bottom: 10px;
+	left: 95px;
+	transform: rotate3d(0,0,1,-20deg) scale(0.7);
+}
+
+
+.antina {
+	position: absolute;
+	top: -14px;
+	left: -16px;
+	width: 80px;
+}
+
+
+
+
+
+
+
+@-webkit-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-moz-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-ms-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-o-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+
+
+
+.glow{
+	-webkit-animation: glow .5s ease-in-out infinite alternate;
+  animation: glow .5s ease-in-out infinite alternate;
+	width: 10px;
+	height: 10px;
+	
+	position: absolute;
+	background: #fc8c65;
+	border-radius: 100%;
+	z-index: 9999;
+	
+	
+}
+
+.glow.glow-1 {
+	top: -4px;
+	left: 110px;
+	
+	
+}
+
+.glow.glow-2 {
+	top: -3px;
+	left: 137px;
+	animation-delay: .2s;
+}
+
+
+@keyframes glow {
+  from {
+   box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301;
+  }
+  to {
+    box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 20px #fc8c65, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301;
+  }
+}
+
+
+
