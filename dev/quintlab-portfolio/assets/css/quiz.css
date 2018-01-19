@@ -9,7 +9,6 @@
 }
 .clearfix {
  *zoom: 1;
-
 }
 
 #main-content{
@@ -99,9 +98,13 @@ button.close{
 .answer-type label{
 	padding: 0.5em;
 	color: black;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	width: 100%;
 	margin-bottom: 0px;
+}
+
+.answer-type label img{
+	width: 100%;
 }
 
 .answer-type label input{
@@ -132,7 +135,7 @@ button.close{
 }
 
 ul.optionInputGroup li{
-	margin-right: 10px;
+	/*margin-right: 10px;*/
 }
 
 .optionRadioLi{
@@ -145,15 +148,19 @@ ul.optionInputGroup li{
 	margin: 0px 0 0 20px;
 }
 
+.optionInputLi input{
+	width: 90%;
+}
+
 .addMediaBtn{
 	margin-bottom: 0px;
 }
 
-.generate-quiz-button{
+.generate-quiz{
 	position: relative;
 }
 
-.generate-quiz-button > a{
+.generate-quiz > a{
 	color: white!important;
 	position: absolute;
 	right: 0;
@@ -180,4 +187,36 @@ ul.optionInputGroup li{
 
 .tag-line{
 	margin-bottom: 5px;
+}
+
+.options-close-button{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.refresh-icon{
+	cursor: pointer;
+}
+
+/*.tagline-preview{
+	background-color: #f3b72a!important;
+	color: #ffffff;
+	margin-bottom: 10px;
+	padding: 0.65em 0.75em;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 5px;
+}*/
+
+.white-box{
+	background-color: #fff;
+    margin-bottom: 1.7em;
+    padding: 1.5em;
+    border: 1px #d8d8d8 solid;
+}
+
+.result-content{
+	float: left;
+    width: 50%;
 }

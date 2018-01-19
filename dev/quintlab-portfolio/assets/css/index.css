@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 
+.clearfix:before,
+.clearfix:after{
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after{
+	clear: both;
+}
+.clearfix {
+ *zoom: 1;
+}
+
 body{
 	font-family: 'Oswald', sans-serif;
 	background-color: #f4f4f4;
