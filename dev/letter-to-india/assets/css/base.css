@@ -455,3 +455,95 @@ transform:translateY(4px) rotate(90deg)
 }
 
 
+@-webkit-keyframes flying {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes flames {
+  0% {
+    transform: rotate3d(0,0,1,-5deg);
+  }
+  25% {
+    transform: rotate3d(0,0,1,5deg);
+  }
+  50% {
+    transform: rotate3d(0,0,1,-5deg);
+  }
+	75% {
+    transform: rotate3d(0,0,1,5deg);
+  }
+  100% {
+    transform: rotate3d(0,0,1,-5deg);
+  }
+}
+
+
+@-webkit-keyframes spin{
+   0%{
+    -moz-transform: rotate3d(0,0,1,0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    -o-transform: rotate3d(0,0,1,0deg);
+    -ms-transform: rotate3d(0,0,1,0deg);
+    }
+    100%{
+    -moz-transform: rotate3d(0,0,1,359deg);
+    -webkit-transform: rotate3d(0,0,1,359deg);
+    -o-transform: rotate3d(0,0,1,359deg);
+    -ms-transform: rotate3d(0,0,1,359deg);
+    }
+}
+
+@-moz-keyframes spin{
+  0%{
+    -moz-transform: rotate3d(0,0,1,0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    -o-transform: rotate3d(0,0,1,0deg);
+    -ms-transform: rotate3d(0,0,1,0deg);
+    }
+    100%{
+    -moz-transform: rotate3d(0,0,1,359deg);
+    -webkit-transform: rotate3d(0,0,1,359deg);
+    -o-transform: rotate3d(0,0,1,359deg);
+    -ms-transform: rotate3d(0,0,1,359deg);
+    }
+}
+
+@-o-keyframes spin{
+ 0%{
+    -moz-transform: rotate3d(0,0,1,0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    -o-transform: rotate3d(0,0,1,0deg);
+    -ms-transform: rotate3d(0,0,1,0deg);
+    }
+    100%{
+    -moz-transform: rotate3d(0,0,1,359deg);
+    -webkit-transform: rotate3d(0,0,1,359deg);
+    -o-transform: rotate3d(0,0,1,359deg);
+    -ms-transform: rotate3d(0,0,1,359deg);
+    }
+}
+
+@-ms-keyframes spin{
+   0%{
+    -moz-transform: rotate3d(0,0,1,0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    -o-transform: rotate3d(0,0,1,0deg);
+    -ms-transform: rotate3d(0,0,1,0deg);
+    }
+    100%{
+    -moz-transform: rotate3d(0,0,1,359deg);
+    -webkit-transform: rotate3d(0,0,1,359deg);
+    -o-transform: rotate3d(0,0,1,359deg);
+    -ms-transform: rotate3d(0,0,1,359deg);
+    }
+}
+
+
+/*animation: 40s linear 0s normal none infinite running spin;*/

@@ -9,11 +9,17 @@ $(document).ready(function () {
 	});
 });
 
+function load_slider() {
+
 $('.el-slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	autoplay: true,
+	autoplay: false,
 	arrows: true,
 	autoplaySpeed: 2000
 });
+
+}
+
+
 

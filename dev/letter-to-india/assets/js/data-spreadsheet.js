@@ -1,188 +1,112 @@
-var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1qwEjzuBzhdy31SeJqlDcbhEg3yL2kmOo92FwbCwAmnU/pubhtml';
+var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1QOwlhGzrSaAH_A6pUcPSFFf-lUIEruE68E2pM2kbKWc/pubhtml';
+
+
 function init() {
-   Tabletop.init({
-      key: public_spreadsheet_contact,
-      callback: showInfo,
-      simpleSheet: true
-   });
+	Tabletop.init({
+		key: public_spreadsheet_contact,
+		callback: showInfo,
+		simpleSheet: true
+	});
 }
 
 window.addEventListener('DOMContentLoaded', init);
 
-var sheet_data, sheet_data_all;
-var gender_filter = "all";
-var category_filter = "all";
-var reset_handlers = 0;
-
+var sheet_data;
 
 function getParameterByName(name, url) {
-   if (!url) url = window.location.href;
-   name = name.replace(/[\[\]]/g, "\\$&");
-   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-   if (!results) return null;
-   if (!results[2]) return '';
-   return decodeURIComponent(results[2].replace(/\+/g, " "));
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, "\\$&");
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 function showInfo(data) {
-   sheet_data = data;
-   sheet_data_all = data;
-   display_data();
-   document.getElementById("countVoice").innerHTML = "<span>" + [sheet_data[0].Total_Voices] + ' Voices'+"</span>";	
+
+	sheet_data = data;
+	
+	display_data();
 
 }
-function display_data(check_clear) {
-   $("#listData").html("");
-	if(check_clear==1){
-		$("#KeyCandidtes").html("");
-		reset_handlers=0;
-	}
-	
-
-	/*
-	
 
 
+function display_data() {
 
-
-
-
-	*/
-	
-	
-   for (var index = sheet_data.length - 1; index >= 0; index--) {
-
-      var cat_class;
+	for (var index = sheet_data.length - 1; index >= 0; index--) {
+		
+		var cat_class;
 
       switch (sheet_data[index].Category) {
-         case "Business":
-            cat_class = "ctg-orange";
+         case "Video":
+            cat_class = "ctg-video";
             break;
-         case "Experts":
-            cat_class = "ctg-blue";
+         case "Audio":
+            cat_class = "ctg-audio";
             break;
-         case "Salaried":
-            cat_class = "ctg-turquoise";
+         case "Text":
+            cat_class = "ctg-text";
             break;
-		 case "Investor":
-            cat_class = "ctg-limegreen";
-            break;	  
-         case "Homemakers":
-            cat_class = "ctg-pink";
-            break;
-         case "Retired":
-            cat_class = "ctg-red";
-            break;
-         case "Students":
-            cat_class = "ctg-violet";
-            break;
-			  
-		case "Story":
-            cat_class = "ctg-story";
-            break;
-			  
-		case "BJP":
-            cat_class = "ctg-bjp";
-            break;
-			  
-		case "INC":
-            cat_class = "ctg-inc";
-            break;
-			  
-		case "IND":
-            cat_class = "ctg-ind";
-            break;		  
-
          default:
             cat_class = "";
-
-
       }
-	   
-	   if(cat_class=="ctg-bjp" || cat_class=="ctg-inc" || cat_class=="ctg-ind" ){
-	   $("#KeyCandidtes").append("<li class='" + cat_class + " key-cand'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Party: </label>" + sheet_data[index].Age + "</h4><h4><label>Constituency: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
-	   }
-	   
-	   
-	   
+		
+		$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><h3>" + sheet_data[index].Topic + "</h3><h3>" + sheet_data[index].Location + "</h3></div></div>");
+		
+		/*if((sheet_data[index].Location) && (sheet_data[index].Topic))
+			{
+		  $("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Location + "</h3><h3>" + sheet_data[index].Topic + "</h3></div></div>");
+			}
+		else if(sheet_data[index].Location)
+			{
+			 $("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Location + "</h3></div></div>");	
+			}
+		else
+			{
+		$("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Topic + "</h3></div></div>");		
+			}*/
+		
+	}
 
-	   else if(cat_class=="ctg-story"){
-			  $("#listData").append("<li class='" + cat_class + "'><p><a href='"+ sheet_data[index].Story_URL +"' target='_blank'><span>" + sheet_data[index].Description + "</span></a></p></li>"); 
-		   }
-	   
-	   else{
-	   $("#listData").append("<li class='" + cat_class + " key-cand'><figure class='chat-el'><div class='show-el'><div class='profile-img'><img src='" + sheet_data[index].Profile_Image + "' alt='" + sheet_data[index].Name + "'></div><div class='msg'><div class='msg-text'><blockquote>" + sheet_data[index].Sub_Headline + "</blockquote><a class='btn-more' alt='Gujarat election 2017 - " + sheet_data[index].Alt_Tag + "' href='javascript:void(0);'>Read More</a></div></div></div><div class='hide-el'><div class='frame-video' data-video='" + sheet_data[index].Video + "'></div><div class='personal-details'><h4><label>Name: </label>" + sheet_data[index].Name + "</h4><h4><label>Age: </label>" + sheet_data[index].Age + "</h4><h4><label>Location: </label>" + sheet_data[index].Location + "</h4><p>" + sheet_data[index].Description + "</p></div></div></figure></li>");
-	   }
-   }
-   moreData(reset_handlers);
-	reset_handlers=1;
+	load_slider();
 	
-	$('*').removeClass('loading');
+	
+	$('.list-el').click(function(){
+		$('.card-modal').addClass('is-open');
+		var data_video = $(this).attr('data-video');
+		var data_message = $(this).attr('data-message');
+		var data_name = $(this).attr('data-name');
+		var data_deg = $(this).attr('data-deg');
+		var data_location = $(this).attr('data-location');
+		var data_story = $(this).attr('data-story');
+		
+		
+		$('.data-video .frame-video').html('<iframe src="https://www.youtube.com/embed/' + data_video + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		$('.data-message p span').html(data_message);
+		$('.data-name').html(data_name);
+		$('.data-deg').html(data_deg);
+		$('.data-location').html(data_location);
+		$('.data-story').attr('href', data_story);
+		
+		
+		/*$('.card-modal div').each(function() {
+			if ( $.trim( $(this).html() ).length == 0 ) {
+				if ( $(this).children().length == 0 ) {
+					$(this).remove(); 
+				}
+			}
+		});
+		*/
+			
+		
+	});
+	
+	
+	$('.close-card').click(function(){
+		$('.card-modal').removeClass('is-open');
+		$('.data-video .frame-video').html('');
+	});	
 }
 
-
-$(".filter-block .options li").click(function() {
-
-   sheet_data = []
-
-   if ($(this).hasClass("is-active")) {
-      category_filter = "all";
-      $(".filter-block .options li").removeClass("is-active");
-      $(this).removeClass("is-active");
-      $(".clear-filter").removeClass("is-filter");
-   } else {
-      category_filter = $(this).attr("data-category");
-      $(".filter-block .options li").removeClass("is-active");
-      $(this).addClass("is-active");
-      $(".clear-filter").addClass("is-filter");
-   }
-
-
-   for (var index = 0; index <= sheet_data_all.length - 1; index++) {
-
-      if ((sheet_data_all[index].Category == category_filter || category_filter == "all") && ((gender_filter == "all") || gender_filter == sheet_data_all[index].Sex)) {
-         sheet_data.push(sheet_data_all[index]);
-      }
-   }
-   display_data();
-});
-
-
-$(".filter-block .gender li.gender-item").click(function() {
-
-   if ($(this).hasClass("is-active")) {
-      gender_filter = "all";
-      $(".filter-block .gender li.gender-item").removeClass("is-active");
-      $(this).removeClass("is-active");
-      $(".clear-filter").removeClass("is-filter");
-
-   } else {
-      $(".filter-block .gender li.gender-item").removeClass("is-active");
-      $(this).addClass("is-active");
-      gender_filter = $(this).attr("data-gender");
-      $(".clear-filter").addClass("is-filter");
-   }
-   sheet_data = []
-   for (var index = 0; index <= sheet_data_all.length - 1; index++) {
-
-      if ((sheet_data_all[index].Category == category_filter || category_filter == "all") && ((gender_filter == "all") || gender_filter == sheet_data_all[index].Sex)) {
-         sheet_data.push(sheet_data_all[index]);
-      }
-
-   }
-   display_data();
-
-});
-
-
-$(".clear-filter").click(function() {
-   sheet_data = sheet_data_all;
-   gender_filter = "all";
-   category_filter = "all";
-   display_data(1);
-   $(".filter-block .gender li.gender-item").removeClass("is-active");
-   $(this).removeClass("is-filter");
-   $(".filter-block .options li").removeClass("is-active");
-});
 
