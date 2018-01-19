@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 .globe img {
 	width: 100%;
 	max-width: inherit;
-/*	animation: 150s linear 0s normal none infinite running spin;*/
+	animation: 150s linear 0s normal none infinite running spin;
 }
 .container.lti-container {
 	max-width: 800px;
@@ -66,10 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1000;
 }
 .satellite-inner-container {
-/*	-webkit-animation: flying 3s infinite;*/
+	-webkit-animation: flying 3s infinite;
 }
 .satellite-container {
-/*	-webkit-animation: flames 14s infinite;*/
+	-webkit-animation: flames 14s infinite;
 }
 .el-container {
 	position: absolute;
