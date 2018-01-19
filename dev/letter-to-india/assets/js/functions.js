@@ -7,6 +7,12 @@ $(document).ready(function () {
 	$("body").click(function () {
 		$(".social-ico").slideUp();
 	});
+	
+	$('.filter li').click(function(){
+		$(this).toggleClass('is-active');
+	});
+	
+	
 });
 
 function load_slider() {

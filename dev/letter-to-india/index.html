@@ -76,15 +76,25 @@ el.parentNode.insertBefore(s, el);
 <body>
 <div class="container lti-container">
   <div class="satellite-container">
-    <div class="satellite-inner-container"> <img class="satellite" src="assets/images/satellite.png" alt="satellite">
+    <div class="satellite-inner-container"> 
+	  <img class="satellite" src="assets/images/satellite.png" alt="satellite">
+	  <div class="light light-left">
+		
+	  </div>
+		
       <div class="el-container">
         <div class="slider-bg">
           <div class="el-slider" id="listData"> </div>
         </div>
       </div>
+	 <ul class="filter">
+		<li class="filter-audio"><a href="javascript:void(0);"><img src="assets/images/filter-audio.png" alt="Audio Filter"></a></li>
+		<li class="filter-video"><a href="javascript:void(0);"><img src="assets/images/filter-video.png" alt="Video Filter"></a></li>
+		<li class="filter-text"><a href="javascript:void(0);"><img src="assets/images/filter-text.png" alt="Text Filter"></a></li>
+	 </ul> 	
     </div>
   </div>
-  <div class="glove spin"> <img src="assets/images/globe.png" alt="glove"> </div>
+  <div class="globe spin"> <img src="assets/images/globe.png" alt="globe"> </div>
 </div>
 <div class="card-modal">
   <div class="modal-box"> <a class="close-card" href="javascript:void(0);"><i class="fa fa-times"></i></a>

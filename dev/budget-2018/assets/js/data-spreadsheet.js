@@ -69,7 +69,7 @@ function display_data(check_clear) {
          case "Salaried":
             cat_class = "ctg-turquoise";
             break;
-		 case "Investor":
+		 case "Investors":
             cat_class = "ctg-limegreen";
             break;	  
          case "Homemakers":
