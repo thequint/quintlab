@@ -152,6 +152,8 @@ h1, h2, h3, h4, h5, h6 {
 .list-el {
 	cursor: pointer;
 	word-wrap: break-word;
+	font-size: 80%;
+	height: 70px;
 }
 .data-message p {
 	margin-bottom: 20px;
