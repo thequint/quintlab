@@ -222,6 +222,18 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 999;
 	transition: all 0.2s ease-in-out;
 }
+.topic span{
+	background: #d53a24;
+	color: #fff;
+	display: inline-block;
+	padding: 2px 2px 0 2px; 
+	line-height: 100%;
+}
+.location{
+	margin-top:3px;
+}
+
+
 .filter li::before {
 	width: 100px;
 	height: 7px;
