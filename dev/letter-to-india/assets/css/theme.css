@@ -3,23 +3,26 @@
 	display:none;
 }
 #preloader{
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	top: 50%;
 	left: 50%;
-	margin-left: -25px;
-	margin-top: -25px;
+	margin-left: -20px;
+	margin-top: -20px;
 	z-index: 99999;
 	position: absolute;
 	text-align: center;
+	background-image: url(../images/loading-w.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 #preloader::after{
 position: absolute;
 	width: 100px;
 	content: 'Loading...';
 	color: #fff;
-	bottom: -30px;
-	left: -25px;
+	bottom: -25px;
+	left: -30px;
 	font-weight: 700;
 	
 }
@@ -138,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: rgba(0,0,0,0.5);
 	text-align: center;
 	display: none;
+	padding: 30px 20px;
 }
 .card-modal.is-open {
 	display: block
@@ -374,9 +378,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 .valign {
 	position: relative;
 	top: 50%;
@@ -384,6 +385,38 @@ h1, h2, h3, h4, h5, h6 {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	
+	
+}
+.list-el{
+	transition: all 0.2s;
+}
+
+.list-el:hover{
+	transform: scale3d(1.1,1.1,1.1) ; 
+	
+}
+
+.btn-write-letter {
+	position: absolute;
+	z-index: 1019;
+	top: 105px;
+	left: 66px;
+	width: 70px;
+	display: block;
+}
+
+.form-content {
+	overflow: auto;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 
 
+#ugc_Modal.card-modal{
+	height: 100%;
+}
+
+#ugc_Modal .modal-box{
+	height: 100%;
+	padding: 0 !important;
+}

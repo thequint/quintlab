@@ -13,6 +13,20 @@ $(document).ready(function () {
 	});
 	
 	
+	
+	$('#btn_ugc').click(function(){
+		$('#ugc_Modal').addClass('is-open');
+	});
+	
+	
+	
+	$('#close_ugc').click(function(){
+		$('#ugc_Modal').removeClass('is-open');
+	});
+	
+	
+	
+	
 });
 
 function load_slider() {
@@ -20,9 +34,9 @@ function load_slider() {
 $('.el-slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	autoplay: false,
+	autoplay: true,
 	arrows: true,
-	autoplaySpeed: 2000
+	autoplaySpeed: 3000
 });
 
 }

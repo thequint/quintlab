@@ -553,3 +553,39 @@ transform:translateY(4px) rotate(90deg)
 
 
 /*animation: 40s linear 0s normal none infinite running spin;*/
+
+
+
+
+
+
+@-webkit-keyframes hvr-pulse-grow {
+to {
+-webkit-transform:scale3d(1.1, 1.1, 1);
+transform:scale3d(1.1, 1.1, 1)
+}
+}
+@keyframes hvr-pulse-grow {
+to {
+-webkit-transform:scale3d(1.1, 1.1, 1);
+transform:scale3d(1.1, 1.1, 1)
+}
+}
+.hvr-pulse-grow {
+
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+
+}
+.hvr-pulse-grow {
+	-webkit-animation-name: hvr-pulse-grow;
+	animation-name: hvr-pulse-grow;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate
+}
