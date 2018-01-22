@@ -2,9 +2,11 @@
 body {
 	font-family: 'Special Elite', cursive;
 	font-weight: 400;
+/*
 	background-color: #ccc;
 	background-image: url(../images/bg.jpg);
 	background-repeat: repeat;
+*/
 	color: #000;
 	font-size: 17px;
 	width: 100%;
@@ -34,18 +36,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .globe {
 	position: absolute;
-	width: 100%;
+	width: 800px;
 	bottom: -760px;
-	left: 0;
+	left: 50%;
+	margin-left: -400px;
 	border-radius: 100%;
 	overflow: hidden;
 	z-index: -1;
 	padding: 0px;
+	
 }
 .globe img {
 	width: 100%;
 	max-width: inherit;
-	animation: 150s linear 0s normal none infinite running spin;
+/*	-webkit-animation: 150s infinite  spin;*/
+	-webkit-animation: spin 150s linear infinite;	
 }
 .container.lti-container {
 	max-width: 800px;
@@ -80,13 +85,13 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1002;
 }
 .slider-bg {
-	width: 85px;
-	height: 85px;
+	width: 106px;
+	height: 106px;
 	background-image: url(../images/slider-bg.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	bottom: 164px;
-	left: 63px;
+	bottom: 156px;
+	left: 51px;
 	position: absolute;
 	padding: 10px 10px 10px 7px;
 }
@@ -151,10 +156,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list-el {
 	cursor: pointer;
-	word-wrap: break-word;
-	font-size: 80%;
-	height: 70px;
+/*	word-wrap: break-word;*/
+	font-weight: 700;
+	font-size: 90%;
+	height: 85px;
+	text-align: center;
 }
+
+.list-el h3{
+	font-weight:700;
+}
+
 .data-message p {
 	margin-bottom: 20px;
 }
@@ -228,6 +240,11 @@ h1, h2, h3, h4, h5, h6 {
 	
 }
 
+.filter li.is-active{
+	-webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
 
 .fire{
 	z-index: 1;
@@ -284,30 +301,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-@-webkit-keyframes fire {
-   from { background-position:    0px; }
-     to { background-position: -28px; }
-}
-
-@-moz-keyframes fire {
-   from { background-position:    0px; }
-     to { background-position: -28px; }
-}
-
-@-ms-keyframes fire {
-   from { background-position:    0px; }
-     to { background-position: -28px; }
-}
-
-@-o-keyframes fire {
-   from { background-position:    0px; }
-     to { background-position: -500px; }
-}
-
-@keyframes fire {
-   from { background-position:    0px; }
-     to { background-position: -28px; }
-}
 
 
 
@@ -340,14 +333,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@keyframes glow {
-  from {
-   box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301;
-  }
-  to {
-    box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 20px #fc8c65, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301;
-  }
-}
 
+
+
+.valign {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+}
 
 

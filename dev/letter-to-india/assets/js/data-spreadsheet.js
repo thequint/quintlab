@@ -52,7 +52,7 @@ function display_data() {
             cat_class = "";
       }
 		
-		$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><h3>" + sheet_data[index].Topic + "</h3><h3>" + sheet_data[index].Location + "</h3></div></div>");
+		$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><div class='valign'><h3>" + sheet_data[index].Topic + "</h3><h3>" + sheet_data[index].Location + "</h3></div></div></div>");
 		
 		/*if((sheet_data[index].Location) && (sheet_data[index].Topic))
 			{

@@ -485,65 +485,71 @@ transform:translateY(4px) rotate(90deg)
 }
 
 
+/*
 @-webkit-keyframes spin{
    0%{
-    -moz-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -o-transform: rotate3d(0,0,1,0deg);
-    -ms-transform: rotate3d(0,0,1,0deg);
+
+	   transform: rotate3d(0,0,1,0deg);
+	   
     }
     100%{
-    -moz-transform: rotate3d(0,0,1,359deg);
-    -webkit-transform: rotate3d(0,0,1,359deg);
-    -o-transform: rotate3d(0,0,1,359deg);
-    -ms-transform: rotate3d(0,0,1,359deg);
+
+		transform: rotate3d(0,0,1,359deg);
     }
 }
+*/
 
-@-moz-keyframes spin{
-  0%{
-    -moz-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -o-transform: rotate3d(0,0,1,0deg);
-    -ms-transform: rotate3d(0,0,1,0deg);
-    }
-    100%{
-    -moz-transform: rotate3d(0,0,1,359deg);
-    -webkit-transform: rotate3d(0,0,1,359deg);
-    -o-transform: rotate3d(0,0,1,359deg);
-    -ms-transform: rotate3d(0,0,1,359deg);
-    }
-}
 
-@-o-keyframes spin{
- 0%{
-    -moz-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -o-transform: rotate3d(0,0,1,0deg);
-    -ms-transform: rotate3d(0,0,1,0deg);
-    }
-    100%{
-    -moz-transform: rotate3d(0,0,1,359deg);
-    -webkit-transform: rotate3d(0,0,1,359deg);
-    -o-transform: rotate3d(0,0,1,359deg);
-    -ms-transform: rotate3d(0,0,1,359deg);
-    }
-}
-
-@-ms-keyframes spin{
+@-webkit-keyframes spin{
    0%{
-    -moz-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -o-transform: rotate3d(0,0,1,0deg);
-    -ms-transform: rotate3d(0,0,1,0deg);
+
+	  -webkit-transform: rotateZ(0deg);
+	   
     }
     100%{
-    -moz-transform: rotate3d(0,0,1,359deg);
-    -webkit-transform: rotate3d(0,0,1,359deg);
-    -o-transform: rotate3d(0,0,1,359deg);
-    -ms-transform: rotate3d(0,0,1,359deg);
+
+		-webkit-transform: rotateZ(360deg);
     }
 }
+
+
+@keyframes glow {
+  from {
+   box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fc8c65, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301, 0 0 10px #fd4301;
+  }
+  to {
+    box-shadow: 0 0 5px #fc8c65, 0 0 10px #fc8c65, 0 0 20px #fc8c65, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301, 0 0 20px #fd4301;
+  }
+}
+
+
+
+
+@-webkit-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-moz-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-ms-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
+@-o-keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@keyframes fire {
+   from { background-position:    0px; }
+     to { background-position: -28px; }
+}
+
 
 
 /*animation: 40s linear 0s normal none infinite running spin;*/
