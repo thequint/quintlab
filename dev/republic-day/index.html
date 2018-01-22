@@ -94,7 +94,7 @@
 		<div class="republic-uc-box__txt">Happy Republic Day</div>
 		<div class="republic-uc__logo">
 			<div class="republic-uc__logo--quint"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/thequint-logo.svg" alt="The Quint"></a></div>
-			<div class="republic-uc__logo--uc"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/UC-logo.png" alt="UC Browser"></a></div>
+			<div class="republic-uc__logo--uc"><img src="assets/images/UC-logo.png" alt="UC Browser"></div>
 		</div>
 		<div class="republic-uc-box__shadow"><img src="assets/images/shadow.svg" alt=""></div>
 		<div class="republic-uc-box__flag"><img src="assets/images/flag.svg" alt=""></div>
@@ -125,7 +125,7 @@
 		<div class="republic-uc-box__txt">Happy Republic Day</div>
 		<div class="republic-uc__logo">
 			<div class="republic-uc__logo--quint"><a  href="https://www.thequint.com/" target="_blank"><img src="assets/images/thequint-logo.svg" alt="The Quint Logo"></a></div>
-			<div class="republic-uc__logo--uc"><a  href="https://www.thequint.com/" target="_blank"><img src="assets/images/UC-logo.png" alt="UC Browser Logo"></a></div>
+			<div class="republic-uc__logo--uc"><img src="assets/images/UC-logo.png" alt="UC Browser Logo"></div>
 		</div>
 		<div class="republic-uc-box__shadow"><img src="assets/images/shadow.svg" alt=""></div>
 		<div class="republic-uc-box__flag"><img src="assets/images/flag.svg" alt=""></div>
@@ -160,7 +160,7 @@
 	            return item.story
 	        }).slice(0, 3);
 	        var elements = stories.map(function(story) {
-	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--headline">' + story.headline + '</div><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div></a></div></li>'
+	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><div class="section-box__story--headline">' + story.headline + '</div></a></div></li>'
 	        });
 	        elements.forEach(function(element) {
 	            $('#top_stories').append(element);
@@ -178,7 +178,7 @@
 	            return item.story
 	        }).slice(0, 3);
 	        var elements = stories.map(function(story) {
-	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--headline">' + story.headline + '</div><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div></a></div></li>'
+	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><div class="section-box__story--headline">' + story.headline + '</div></a></div></li>'
 	        });
 	        elements.forEach(function(element) {
 	            $('#video_stories').append(element);
@@ -196,7 +196,7 @@
 	            return item.story
 	        }).slice(0, 3);
 	        var elements = stories.map(function(story) {
-	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--headline">' + story.headline + '</div><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div></a></div></li>'
+	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><div class="section-box__story--headline">' + story.headline + '</div></a></div></li>'
 	        });
 	        elements.forEach(function(element) {
 	            $('#other_stories').append(element);
