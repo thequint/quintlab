@@ -17,7 +17,7 @@
 	.globe {
 	width: 340px;
 	margin-left: -170px;	
-	bottom: -270px;
+	bottom: -300px;
 }
 	
 }
@@ -31,6 +31,12 @@
 	.data-video {
 	margin: -15px -15px 15px -15px;
 }
+	
+	.lti-container{
+		transform: scale(0.8,0.8); 
+		margin-top: -70px !important;
+	}
+	
 }
 
 	

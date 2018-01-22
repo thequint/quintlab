@@ -123,8 +123,9 @@ el.parentNode.insertBefore(s, el);
 	 </ul> 	
     </div>
   </div>
-  <div class="globe spin"> <img src="assets/images/globe.png" alt="globe"> </div>
+  
 </div>
+	<div class="globe spin loading"> <img src="assets/images/globe.png" alt="globe"> </div>
 <div class="card-modal">
   <div class="modal-box"> <a class="close-card" href="javascript:void(0);"><i class="fa fa-times"></i></a>
     <div class="modal-content">
@@ -152,7 +153,9 @@ jQuery(document).ready(function($) {
 	
 $(window).load(function(){
 	$('#preloader').fadeOut('slow',function(){$(this).remove();});
-	$('.lti-container').removeClass('loading')
+	$('.lti-container').removeClass('loading');
+	$('.globe').removeClass('loading');
+	
 });
 
 });	
