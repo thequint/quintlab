@@ -22,22 +22,10 @@ function getParameterByName(name, url) {
 window.addEventListener('DOMContentLoaded', init);
 
 function showInfo(data) {
+	
 	// sheet data
-	$("#total_length").html(data.length);
-	for(var index = data.length-1; index >= 0; index--) {
-		$("#product_show").append (
-			"<div class='section-box__iframe--container'>" +data[index].iframe_code +"</div>"
-		)
-		/*
-		if(data[index].iframe_code == "undefined" || data[index].iframe_code == "") {
-			$("#product_show").append (
-				+ "<div class='section-box__iframe--container'>" +data[index].iframe_code +"</div>"
-			)
-		}else {
-			$("#product_show").append (
-				+ "<div class='section-box__iframe--container'>" +data[index].iframe_code +"</div>"
-			)
-		}*/
-	}
+	$("#product_show").append (
+		"<div>" +data[0].iframe_code +"</div>"
+	)
 
 }
