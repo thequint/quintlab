@@ -12,6 +12,7 @@ function init() {
 window.addEventListener('DOMContentLoaded', init);
 
 var sheet_data;
+var cur_filter =[0,1,2];
 
 function getParameterByName(name, url) {
 	if (!url) url = window.location.href;
@@ -28,6 +29,7 @@ function showInfo(data) {
 	sheet_data = data;
 	
 	display_data();
+	console.log(sheet_data);
 
 }
 
@@ -37,21 +39,27 @@ function display_data() {
 	for (var index = sheet_data.length - 1; index >= 0; index--) {
 		
 		var cat_class;
+		var cat_no;
 
       switch (sheet_data[index].Category) {
          case "Video":
             cat_class = "ctg-video";
+			cat_no =1;
             break;
          case "Audio":
             cat_class = "ctg-audio";
+			cat_no =0;  
             break;
          case "Text":
             cat_class = "ctg-text";
+			cat_no =2;  
             break;
          default:
             cat_class = "";
       }
-		
+		console.log(cur_filter.indexOf(cat_no));
+		if(cur_filter.indexOf(cat_no)>-1)
+			{
 		$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><div class='valign'><h3 class='topic'><span>" + sheet_data[index].Topic + "</span></h3><h3 class='location'>" + sheet_data[index].Location + "</h3></div></div></div>");
 		
 		/*if((sheet_data[index].Location) && (sheet_data[index].Topic))
@@ -66,7 +74,7 @@ function display_data() {
 			{
 		$("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Topic + "</h3></div></div>");		
 			}*/
-		
+			}
 	}
 
 	load_slider();
@@ -88,6 +96,7 @@ function display_data() {
 		$('.data-deg').html(data_deg);
 		$('.data-location').html(data_location);
 		$('.data-story').attr('href', data_story);
+			
 		
 	});
 	
@@ -98,4 +107,21 @@ function display_data() {
 	});	
 }
 
-
+$(".filter li").click(function(){
+	$(".slider-bg").html("<div class='el-slider' id='listData'> </div>")
+		//$("#listData").html("");
+	//$(".el-slider").removeClass(".slick-initialized");
+	//$(".el-slider").removeClass(".slick-slider");
+	 
+	if(!$(this).hasClass("is-active"))// remove from array
+		{
+	cur_filter.splice(cur_filter.indexOf($(this).index()), 1);
+	console.log(cur_filter);		
+		}
+	else
+		{
+	cur_filter.splice($(this).index(), 0, $(this).index());
+	console.log(cur_filter);		
+		}
+	display_data();
+});
