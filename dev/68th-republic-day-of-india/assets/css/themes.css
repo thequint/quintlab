@@ -363,6 +363,10 @@ img {
         bottom: -70px;
         width: 570px;
     }
+    .section-box__iframe {
+        margin-bottom: 40px;
+    }
+
 }
 @media only screen and (max-width: 639px) {
     .section-wrap {
@@ -426,7 +430,7 @@ img {
     }
     .section-box__iframe {
         padding: 0 10px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .section-box__iframe--headline {
         font-size: 30px;
@@ -435,14 +439,14 @@ img {
 }
 @media only screen and (max-width: 480px) {
     body {
-        padding: 0 0 0px 0;
+        padding: 0 0 20px 0;
     }
     .section-wrap {
         max-width: 100%;
         padding: 0 5px;
     }
     .republic-uc-box {
-        margin: 30px auto 20px;
+        margin: 30px auto 40px;
         max-width: 300px;
         min-height: 270px;
     }
@@ -471,5 +475,9 @@ img {
     .republic-uc-box__flag {
         bottom: -30px;
         width: 100%;
+    }
+    .section-box__iframe--headline {
+        font-size: 24px;
+        line-height: 24px;
     }
 }
