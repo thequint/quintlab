@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 	vertical-align: middle;
 	padding: 20px;
 	line-height: 130%;
-	border: 16px solid transparent;
+	border: 16px solid #e38000;
 	border-image: 16 repeating-linear-gradient(45deg, #e38000 0, #e38000 1em, transparent 0, transparent 2em, #097c05 0, #097c05 3em, transparent 0, transparent 4em);
 	position: relative;
 }
@@ -413,11 +413,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#ugc_Modal.card-modal{
+#ugc_Modal.card-modal, #ugc_Modal .modal-content, #ugc_Modal .modal-box{
 	height: 100%;
 }
 
 #ugc_Modal .modal-box{
-	height: 100%;
 	padding: 0 !important;
 }
+
