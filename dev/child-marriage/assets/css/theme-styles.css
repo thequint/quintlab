@@ -180,7 +180,7 @@ img {
     margin-bottom: 20px;
 }
 .quintlab-details__content--iframe {
-	margin: 0 auto;
+	margin: 0 auto 15px;
 	width: 100%;
     max-width: 100%;
 	position: relative;
