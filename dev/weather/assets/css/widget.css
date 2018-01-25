@@ -1,9 +1,9 @@
 @charset "utf-8";
 .widget-container{
-	max-width: 1200px;
+	max-width: 1280px;
 	padding: 27px;
-	border: 2px solid rgba(255,255,255,0.4);
-	margin: 20px auto;
+	border: 0px solid rgba(255,255,255,0.4);
+	margin: 0px auto;
 	position: relative;
 	font-size: 28px;
 	text-transform: uppercase;
