@@ -60,7 +60,6 @@ img {
     font-size: 19px;
     font-weight: 400;
     line-height: 1.9375em;
-    letter-spacing: 1.15px;
 }
 .quintlab-story__hero {
 	position: relative;
@@ -195,9 +194,8 @@ img {
 	height: 100%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 619px) {
 	.quintlab-story {
-		letter-spacing: 0;
 		font-size: 17px;
     	line-height: 1.5625rem;
 	}
