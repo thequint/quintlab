@@ -12,24 +12,35 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#fff"/>
-<title>Weather – The Quint</title>
+<title>Weather Widget – The Quint</title>
 <meta name="description" content="Get latest weather forecast on The Quint">
 <meta name="keywords" content="">
 <meta name="copyright" content="The Quint">
 <meta name="publisher" content="The Quint">
 <style>
 	*{margin:0; padding: 0;}
+	body{background: #f7f7f7;}
+	
 	.iframe-container{
-		margin: 40px auto;
-		max-width: 1200px;
+		text-align: center;
 	}
 </style>
 </head>
 <body>
-
+	
 	<section class="iframe-container">
-		<iframe style="margin: 0; padding: 0; border: 0; width: 100%; overflow: hidden; height: 125px;" src="https://quintlab.herokuapp.com/dev/weather/widget.html"></iframe>
+		<iframe id="WeatherWidget" style="margin: 0 auto; padding: 0; border: 0; width: 100%; overflow: hidden; height: 125px;" src="widget.html"></iframe>
 	</section>
+	<style>
+	@media only screen and (max-width: 959px) {
+		#WeatherWidget{
+			width: 300px !important;
+			height: 250px !important;
+			
+		}
+	}
+	</style>
+	
 
 </body>
 </html>
