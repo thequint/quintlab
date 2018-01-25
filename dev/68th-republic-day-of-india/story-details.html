@@ -41,7 +41,8 @@
 
 <link rel="stylesheet" href="assets/css/base.css" media="all">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
-<link rel="stylesheet" href="assets/css/themes.css" media="all">
+<link rel="stylesheet" href="assets/css/story-details.css" media="all">
+<!-- <link rel="stylesheet" href="assets/css/themes.css" media="all"> -->
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
@@ -75,57 +76,26 @@
 
 <body>
 
-<!-- <div class="loader"></div> -->
 <nav class="republic-nav">
 	<div class="republic-nav--wrap">
 		<div class="republic-nav--wrap__logo"><h1><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/logo.svg" alt=""></a></h1></div>
-		<!-- <div class="republic-nav--wrap__social">
-			<ul>
-				<li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/68th-republic-day-of-india/&text=68th Republic Day of India. Meet People Who Witnessed 1st Republic Day of India%20https%3A//thequint.com/quintlab/68th-republic-day-of-india/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/68th-republic-day-of-india/&t=68th+Republic+Day"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-			</ul>
-		</div> -->
 	</div>
 </nav>
 
 <div class="section-wrap">
+	<div class="republic-story">
 
-	<section class="republic-uc-box">
-		<div class="republic-uc-box__txt">Happy Republic Day</div>
-		<div class="republic-uc__logo">
-			<div class="republic-uc__logo--quint"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/thequint-logo.svg" alt="The Quint"></a></div>
-			<div class="republic-uc__logo--uc"><img src="assets/images/UC-logo.png" alt="UC Browser"></div>
-		</div>
-		<div class="republic-uc-box__shadow"><img src="assets/images/shadow.svg" alt=""></div>
-		<div class="republic-uc-box__flag"><img src="assets/images/flag.svg" alt=""></div>
-	</section>
+		<span class="back-btn"><a href="index.html"><i class="fa fa-arrow-left"></i></a></span>
 
-	<section class="section-box">
+		<div id="data_hero" class="republic-story__hero-banner"></div>
 
-		<!-- <div id="product_show">fsfdsf</div> -->
-
-		<div class="section-box__iframe">
-			<div id="product_show" class="section-box__iframe--container">
+		<div class="republic-story__content">
+			<div class="republic-story__content--article">
+				<h1 id="data_headline" class="republic-story__content--article__headline"></h1>
+				<div id="data_txt" class="republic-story__content--article__headline__txt"></div>
 			</div>
-			<h2 class="section-box__iframe--headline">Happy 68th Republic Day </h2>
-			<!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fquintillion%2Fvideos%2F952929118207610%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> -->
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/yHHUxY-Be5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 		</div>
-		<div class="section-box__story">
-			<ul id="top_stories"></ul>
-		</div>
-	</section>
-
-	<section class="republic-uc-box btm-banner">
-		<div class="republic-uc-box__txt">Happy Republic Day</div>
-		<div class="republic-uc__logo">
-			<div class="republic-uc__logo--quint"><a  href="https://www.thequint.com/" target="_blank"><img src="assets/images/thequint-logo.svg" alt="The Quint Logo"></a></div>
-			<div class="republic-uc__logo--uc"><img src="assets/images/UC-logo.png" alt="UC Browser Logo"></div>
-		</div>
-		<div class="republic-uc-box__shadow"><img src="assets/images/shadow.svg" alt=""></div>
-		<div class="republic-uc-box__flag"><img src="assets/images/flag.svg" alt=""></div>
-	</section>
-
+	</div>
 </div>
 
 <!-- Scripts -->
@@ -135,46 +105,46 @@
 <script type="text/javascript" src="assets/api/spreadsheet.js"></script>
 <script type="text/javascript" src="assets/api/data-spreadsheet-loops.js"></script>
 
-
 <script type="text/javascript">
-	var globalID;
-	var load_check=0;
-	function repeatOften() {
-		console.log(load_check);
-		if(load_check==1){
-			$(".loader").fadeOut();
-			cancelAnimationFrame(globalID);
-		}
-		else {
-			globalID = requestAnimationFrame(repeatOften)
-		}
+
+	// 
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
-	globalID = requestAnimationFrame(repeatOften);
 
-	function slug_1_init() {
-	    var collectionSlug = 'republic-day-2018'; //Needs to be replaced.
-	    $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+	var cid_item = getParameterByName('id');
+	console.log(cid_item);
 
-	    	load_check=load_check+1;
-	        var stories = res.items.filter(function(item) {
-	            return item.type == 'story'
-	        }).map(function(item) {
-	            return item.story
-	        }).slice(0, 14);
-	        var index=-1;
-	        var elements = stories.map(function(story) {
-				console.log(index);
-				index=index+1;
-	            return '<li><div class="section-box__story--block"><a href="https://www.thequint.com/quintlab/68th-republic-day-of-india/story-details.html?id=' + index + '" target="blank"><div class="section-box__story--img"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><div class="section-box__story--headline">' + story.headline + '</div></a></div></li>'
+	$.getJSON('https://www.thequint.com/api/v1/collections/republic-day-2018/', function(data) {
+	    console.log(data);
 
-	        });
-	        elements.forEach(function(element) {
+		$("#data_hero").html("<img src='https://images.assettype.com/"+data.items[cid_item].story["hero-image-s3-key"]+"'>");
+	    $("#data_headline").html(data.items[cid_item].item.headline);
 
-	            $('#top_stories').append(element);
-	        });
-	    });
-	}
-	slug_1_init();
+		var text_var="";
+
+		for(var j=0;j<data.items[cid_item].story.cards.length;j++) {
+
+			for(var i = 0;i<data.items[cid_item].story.cards[j]["story-elements"].length;i++) {
+				//text_var+=data.items[1].story.cards[j]["story-elements"][i].text;
+				if(data.items[cid_item].story.cards[j]["story-elements"][i].text) {
+					text_var+=data.items[cid_item].story.cards[j]["story-elements"][i].text;
+				}
+				if(data.items[cid_item].story.cards[j]["story-elements"][i]["image-s3-key"]) {
+					text_var+="<img src='https://images.assettype.com/"+data.items[cid_item].story.cards[j]["story-elements"][i]["image-s3-key"]+"'>";
+				}
+			}
+		}
+  		console.log(text_var);
+    	$("#data_txt").html(text_var);
+
+	});
 </script>
 
 </body>

@@ -250,8 +250,22 @@ img {
 }
 .section-box__story--block {
     position: relative;
-    min-height: 337px;
+    height: 337px;
+    overflow: hidden;
     background-color: #fff;
+}
+.section-box__story--block img {
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+.section-box__story--block:hover img {
+    width: 105%;
+    max-width: 105%;
 }
 .section-box__story .section-box__story--headline {
     position: absolute;
@@ -262,6 +276,49 @@ img {
     letter-spacing: -.00625em;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+
+.republic-story {
+    width: 100%;
+}
+.republic-story h1,
+.republic-story h2,
+.republic-story h3,
+.republic-story h4 {
+    color: #333;
+}
+.republic-story__hero-banner {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.republic-story__content {
+    margin: 0 auto;
+    max-width: 800px;
+    color: #333;
+    background-color: #fff;
+}
+.republic-story__content img {
+    width: 100%;
+    display: block;
+}
+.republic-story__content p {
+    margin-bottom: 15px;
+}
+.republic-story__content--headline {
+    font-size: 64px;
+    line-height: 64px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.republic-story__content--txt {
+
+}
+
+
+
 
 @media (max-width:1279px) and (min-width:960px) {
     .section-box__story li:nth-child(2n) {
@@ -435,6 +492,10 @@ img {
     .section-box__iframe--headline {
         font-size: 30px;
         line-height: 30px;
+    }
+    .section-box__story--block:hover img {
+        width: 100%;
+        max-width: 100%;
     }
 }
 @media only screen and (max-width: 480px) {
