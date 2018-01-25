@@ -9,7 +9,6 @@ body {
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #f4f4f4;
     word-break: normal;
     font-family: 'Merriweather', 'georgia', serif;
 }
@@ -196,9 +195,3 @@ img {
 	height: 100%;
 }
 
-
-@media only screen and (max-width: 767px) {
-	body {
-	    background-color: #fff;
-	}
-}
