@@ -107,6 +107,14 @@ img {
 	margin: 0 auto;
     max-width: 100%;
 }
+.quintlab-story__section--container__slider .swipe-txt {
+	text-align: center;
+	font-size: 14px;
+	color: #737373;
+	display: block;
+	padding-top: 10px;
+}
+
 .flipster__item__content figure {
 	position: relative;
 }
