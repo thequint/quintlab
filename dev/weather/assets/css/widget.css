@@ -2,6 +2,7 @@
 html, body{height:100%;}
 .weather-widget-wrapper{
 	height:100%;
+	cursor: pointer;
 }
 .widget-container{
 	padding: 27px;
@@ -81,6 +82,7 @@ html, body{height:100%;}
 	display: block;
 	color: #fff;
 	padding-top: 25px;
+	cursor: default;
 }
 .weather-widget-accu-info a .help-text{
 	position: absolute;
