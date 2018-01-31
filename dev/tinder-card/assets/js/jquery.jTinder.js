@@ -62,20 +62,23 @@
 		},
 
 		dislike: function() {
-			panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width) + "px," + (pane_width*-1.5) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
+			panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
 				if($that.settings.onDislike) {
-					$that.settings.onDislike(panes.eq(current_pane));
+					
+					//$that.settings.onDislike(panes.eq(current_pane));
 				}
-				$that.next();
+				//$that.next();
 			});
 		},
 
 		like: function() {
-			panes.eq(current_pane).animate({"transform": "translate(" + (pane_width) + "px," + (pane_width*-1.5) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
+			
+			panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
 				if($that.settings.onLike) {
-					$that.settings.onLike(panes.eq(current_pane));
+					 
+					//$that.settings.onLike(panes.eq(current_pane));
 				}
-				$that.next();
+				//$that.next();
 			});
 		},
 
@@ -136,18 +139,18 @@
 
 					if (opa >= 1) {
 						if (posX > 0) {
-							panes.eq(current_pane).animate({"transform": "translate(" + (pane_width) + "px," + (posY + pane_width) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
+							panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
 								if($that.settings.onLike) {
-									$that.settings.onLike(panes.eq(current_pane));
+								//	$that.settings.onLike(panes.eq(current_pane));
 								}
-								$that.next();
+								//$that.next();
 							});
 						} else {
-							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width) + "px," + (posY + pane_width) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
+							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
 								if($that.settings.onDislike) {
-									$that.settings.onDislike(panes.eq(current_pane));
+									//$that.settings.onDislike(panes.eq(current_pane));
 								}
-								$that.next();
+								//$that.next();
 							});
 						}
 					} else {
