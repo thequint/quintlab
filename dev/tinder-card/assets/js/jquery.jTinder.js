@@ -68,6 +68,7 @@
 					//$that.settings.onDislike(panes.eq(current_pane));
 				}
 				//$that.next();
+				
 			});
 		},
 
@@ -79,6 +80,7 @@
 					//$that.settings.onLike(panes.eq(current_pane));
 				}
 				//$that.next();
+				
 			});
 		},
 
@@ -140,6 +142,7 @@
 					if (opa >= 1) {
 						if (posX > 0) {
 							panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
+								action_click();
 								if($that.settings.onLike) {
 								//	$that.settings.onLike(panes.eq(current_pane));
 								}
@@ -147,6 +150,7 @@
 							});
 						} else {
 							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
+								action_click();
 								if($that.settings.onDislike) {
 									//$that.settings.onDislike(panes.eq(current_pane));
 								}
