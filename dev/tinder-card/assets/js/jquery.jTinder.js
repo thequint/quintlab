@@ -62,9 +62,12 @@
 		},
 
 		dislike: function() {
+			action_click(0);
 			panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
+				
 				if($that.settings.onDislike) {
 					
+					      
 					//$that.settings.onDislike(panes.eq(current_pane));
 				}
 				//$that.next();
@@ -73,8 +76,9 @@
 		},
 
 		like: function() {
-			
+			 action_click(1);
 			panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
+				
 				if($that.settings.onLike) {
 					 
 					//$that.settings.onLike(panes.eq(current_pane));
@@ -103,6 +107,7 @@
 				case 'mousemove':
 				case 'touchmove':
 					if(touchStart === true) {
+						action_click(2);
 						var pageX = typeof ev.pageX == 'undefined' ? ev.originalEvent.touches[0].pageX : ev.pageX;
 						var pageY = typeof ev.pageY == 'undefined' ? ev.originalEvent.touches[0].pageY : ev.pageY;
 						var deltaX = parseInt(pageX) - parseInt(xStart);
@@ -142,7 +147,8 @@
 					if (opa >= 1) {
 						if (posX > 0) {
 							panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
-								action_click();
+								
+								action_click(1);
 								if($that.settings.onLike) {
 								//	$that.settings.onLike(panes.eq(current_pane));
 								}
@@ -150,7 +156,8 @@
 							});
 						} else {
 							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
-								action_click();
+								
+								action_click(0);
 								if($that.settings.onDislike) {
 									//$that.settings.onDislike(panes.eq(current_pane));
 								}

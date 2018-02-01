@@ -1,21 +1,14 @@
-/**
- * jTinder initialization
- */
+
+function call_tinder_cards(){
 $("#tinderslide").jTinder({
-    like: function (item) {
-        $('#status').show().html('Dislike image ');
-		
-    },
-    dislike: function (item) {
-        $('#status').show().html('Like image ');
-    },
+   
 	animationRevertSpeed: 200,
 	animationSpeed: 400,
 	threshold: 1,
 	likeSelector: '.like',
 	dislikeSelector: '.dislike'
 });
-
+}
 
 function reload_app(){
 	$('.dislike').removeClass('is-hide');
@@ -24,11 +17,27 @@ function reload_app(){
 	$('.reset-ops').css('opacity','0');
 }
 
-
-function action_click(){
+function action_click(arg){
+	
+	if(arg==2)
+		{
+			 $('#status').html('wait for it');
+		}
+	else
+		{
 	$('.reload').addClass('is-show');
 	$('.dislike').addClass('is-hide');
 	$('.like').addClass('is-hide');
+	
+	if(arg==0)//dislike
+		{
+			 $('#status').html("<li><figure><div class='img'><img src='"+ sheet_data[foo].Image_Left +"' alt='"+ sheet_data[foo].Title_Left +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Left +"</h2><h3>"+ sheet_data[foo].Subtitle_Left +"</h3><p>"+ sheet_data[foo].Description_Left +"</p></figcaption></figure></li>");
+		}
+	else// like
+		{
+			 $('#status').html("<li><figure><div class='img'><img src='"+ sheet_data[foo].Image_Right +"' alt='"+ sheet_data[foo].Title_Right +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Right +"</h2><h3>"+ sheet_data[foo].Subtitle_Right +"</h3><p>"+ sheet_data[foo].Description_Right +"</p></figcaption></figure></li>");
+		}
+		}
 }
 
 $(".reload").click(function(){
@@ -37,9 +46,7 @@ $(".reload").click(function(){
 });
 
 
-
 $('.actions .like, .actions .dislike').click(function(e){
 	$("#tinderslide").jTinder($(this).attr('class'));
-	action_click();
+	
 });
-
