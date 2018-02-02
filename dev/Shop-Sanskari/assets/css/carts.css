@@ -1401,7 +1401,7 @@ header #nav-icon {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 0 30px;
+  padding: 40px 0 20px;
 }
 
 .product-detail .cols:after {
@@ -1521,8 +1521,16 @@ header #nav-icon {
 
 .product-detail h1 {
   font-size: 30px;
+  line-height: 130%;
   color: #e81c9f;
-  line-height: 141.66667%;
+  font-family: "montserratregular", sans-serif;
+}
+.product-detail #product_tagline {
+  font-size: 14px;
+  line-height: 14px;
+  color: #ababab;
+  font-weight: 400;
+  margin-bottom: 10px;
   font-family: "montserratregular", sans-serif;
 }
 
@@ -1539,7 +1547,7 @@ header #nav-icon {
 
 .product-detail .price-shipping {
   border-bottom: 1px solid #edeff2;
-  padding-bottom: 14px;
+  padding-bottom: 5px;
 }
 
 .product-detail .price-shipping a {
@@ -1748,7 +1756,7 @@ header #nav-icon {
 }
 
 .tabs {
-  margin: 30px 0 0;
+  margin: 15px 0 0;
 }
 
 .tabs .tab-labels {
@@ -1781,10 +1789,10 @@ header #nav-icon {
 }
 
 .tabs .tab-slides {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 20px;
   border-top: 1px solid #edeff2;
-  padding-top: 10px;
+  padding-top: 5px;
   position: relative;
 }
 
@@ -3982,7 +3990,7 @@ footer .socials {
   }
 }
 .swatches {
-  margin: 17px 0 30px;
+  margin: 10px 0 15px;
 }
 
 .selector-wrapper,

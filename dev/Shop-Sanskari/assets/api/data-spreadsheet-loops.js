@@ -177,9 +177,10 @@ function showInfo(data) {
 					"<li class='wow fadeInUp'>"
 						+ "<figure>"
 							+ "<a href='details.html?id=" +index +"'>"
-								+ "<span class='item-list--item-img'><img src="+'assets/products/'+data[index].Product_image +'.jpg'+"></span>"
+								+ "<span class='item-list--item-img'><img src="+'assets/products/home/'+data[index].Product_image +'.jpg'+"></span>"
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
+									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
 									+ "<div class='item-list--item-price'><span>Rs.</span>" +data[index].Product_price +"</div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
@@ -199,9 +200,10 @@ function showInfo(data) {
 					"<li class='wow fadeInUp'>"
 						+ "<figure>"
 							+ "<a href='details.html?id=" +index +"&cid="+cid_item +"&q="+q_item +"'>"
-								+ "<span class='item-list--item-img'><img src="+'assets/products/'+data[index].Product_image +'.jpg'+"></span>"
+								+ "<span class='item-list--item-img'><img src="+'assets/products/home/'+data[index].Product_image +'.jpg'+"></span>"
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
+									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
 									+ "<div class='item-list--item-price'><span>Rs.</span>" +data[index].Product_price +"</div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
@@ -217,7 +219,7 @@ function showInfo(data) {
 				)
 			}
 
-			for (var j=0;j<data[index].Product_price;j++) {
+			for (var j=0;j<data[index].Product_rating;j++) {
 				//console.log(j+"|"+index);	
 				$("#product_show li:last-child .item-list--rating span").eq(j).addClass("active");
 			}
@@ -250,10 +252,10 @@ function showInfo(data) {
 
 		}else {
 			var q_item_array = q_item.split(",").map(Number);
-			console.log(q_item_array);
+			//console.log(q_item_array);
 
 			var q_item_sum = q_item_array.reduce(function(q_item_array, b) { return q_item_array + b; }, 0); // sum q_item value
-			console.log(q_item_sum);
+			//console.log(q_item_sum);
 
 			$("#header-cart-q .header-cart-item").text(q_item_sum);
 			$("#header-cart-q").attr("href","carts.html?cid="+cid_item+"&q="+q_item); // go to cart page
@@ -261,32 +263,98 @@ function showInfo(data) {
 			$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
 		}
 
+		
+
+		//var cid_item_array=cid_item;
+
+				
+		
 		// AddToCart BTN
 		$("#AddToCart").click(function(){ // AddToCart BTN 
-			setTimeout(function(){
 
-				if(cid_item==null) {
-					q_item = $('.count').text();	
-				} else {
-					id_item=cid_item+","+id_item;	
-					q_item = q_item+","+$('.count').text();
+			setTimeout(function(){
+				if(cid_item!=null) { // to check if its the first entry in the cart
+					var cid_item_array = cid_item.split(",");
 				}
 
-		    	$(".home_url").attr("href","index.html?cid="+id_item+"&q="+q_item); // back to home page
+				console.log(id_item +"|"+cid_item_array+"|"+jQuery.inArray(id_item, cid_item_array));
 
-		    	$("#quick-cart-pay").attr("href","carts.html?cid="+id_item+"&q="+q_item); // go to cart page
 
-		    	var q_item_sum =parseInt($("#header-cart-q .header-cart-item").text())+parseInt($(".count").html());
-		    	$("#header-cart-q .header-cart-item").text(q_item_sum );
-				$("#header-cart-q").attr("href","carts.html?cid="+id_item+"&q="+q_item); // go to cart page
+				if(jQuery.inArray(id_item, cid_item_array) !== -1){ // to check if product added already exists in the cart
+		            console.log("yes");
+
+		            $(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
+			    	$("#quick-cart-pay").attr("href","carts.html?cid="+cid_item+"&q="+q_item); // go to cart page
+
+			    	var q_item_sum =parseInt($("#header-cart-q .header-cart-item").text())+parseInt($(".count").html());
+			    	$("#header-cart-q .header-cart-item").text(q_item_sum );
+					$("#header-cart-q").attr("href","carts.html?cid="+cid_item+"&q="+q_item); // go to cart page
+
+		        }else { // if item does not exist in the cart 
+		        	if(cid_item==null) {
+						q_item = $('.count').text();	
+					} else {
+						cid_item=cid_item+","+id_item;	
+						q_item = q_item+","+$('.count').text();
+					}
+
+			    	$(".home_url").attr("href","index.html?cid="+id_item+"&q="+q_item); // back to home page
+
+			    	$("#quick-cart-pay").attr("href","carts.html?cid="+id_item+"&q="+q_item); // go to cart page
+
+			    	var q_item_sum =parseInt($("#header-cart-q .header-cart-item").text())+parseInt($(".count").html());
+			    	$("#header-cart-q .header-cart-item").text(q_item_sum );
+					$("#header-cart-q").attr("href","carts.html?cid="+id_item+"&q="+q_item); // go to cart page
+					//cid_item = id_item;
+					//id_item = getParameterByName('id');
+		        }
+
+				
 		    }, 2000);
 
 		});
 
 		// Sheet data
 		$("#product_title").html(data[id_item].Product_title);
+		$("#product_tagline").html(data[id_item].Product_tagline);
+
 	    $("#product_price").html(data[id_item].Product_price);
 	    $("#product_des").html(data[id_item].Product_description);
+	    //$("#productImage").css({"background-image",url})
+
+
+	    $("#big-image").css("background-image","url('assets/products/large/"+data[id_item].Product_image +".jpg')");
+
+	    $("#big-image").attr("src","'assets/products/large/"+data[id_item].Product_image +".jpg'"); // go to cart page
+
+	    //$("#big-image").css({"background-image",data[id_item].Product_image_large})
+
+	    // $("#Product_image_large").html (
+	    // 	"<img src="+'assets/products/large/'+data[id_item].Product_image_large +'.jpg'+">"
+	    // );
+		
+		/*
+		$("#Product_review").append (
+	
+			"<div class='reviews--container__content'>"
+                + "<div class='item-list--rating'>"
+                    + "<div class='Review_rating01'>"
+                        + "<span class=''></span>"
+                        + "<span class=''></span>"
+                        + "<span class=''></span>"
+                        + "<span class=''></span>"
+                        + "<span class=''></span>"
+                    + "</div>"
+                + "</div>"
+                + "<h4 class='reviews--container__content--heading'>"
+                    + "<strong class='Review_headline'>" + data[id_item].Review_headline_01 +"</strong>"
+                    + "<span class='Review_date'>" + data[id_item].Review_date_01 + "</span>"
+                + "</h4>"
+                + "<p class='Review_description'>" + data[id_item].Review_description_01 + "</p>"
+            + "</div>"
+        )*/
+
+		
 
 		for (var j=0;j<id_item_data.Review_rating_01;j++) {
 			$(".reviews--container__content .item-list--rating .Review_rating01 span").eq(j).addClass("active");
@@ -309,7 +377,57 @@ function showInfo(data) {
 	    $(".reviews--container__content .Review_date03").html(data[id_item].Review_date_03);
 	    $(".reviews--container__content .Review_description03").html(data[id_item].Review_description_03);
 
+	    console.log(data[id_item].Review_rating_01);
+	    console.log(data[id_item].Review_rating_02);
+	    console.log(data[id_item].Review_rating_03);
+
+	    if(data[id_item].Review_rating_01=="") {
+	    	$(".reviews--container__content:nth-child(2)").hide()
+	    }else {
+	    	$(".reviews--container__content:nth-child(2)").show()
+	    }
+
+	    if(data[id_item].Review_rating_02=="") {
+	    	$(".reviews--container__content:nth-child(3)").hide()
+	    }else {
+	    	$(".reviews--container__content:nth-child(3)").show()
+	    }
+
+	    if(data[id_item].Review_rating_03=="") {
+	    	$(".reviews--container__content:nth-child(4)").hide()
+	    }else {
+	    	$(".reviews--container__content:nth-child(4)").show()
+	    }
+
+
 	    cart_quantity_selction();
+
+	    for(var index = data.length-1; index >= 0; index--) {
+
+			if(id_item!=data[index].id){
+
+				console.log(id_item +"|"+data[index].id);
+
+				$("#recommended_item").append (
+					"<li class='wow fadeIn'>"
+						+ "<figure>"
+							+ "<a href='details.html?id=" + index +"'>"
+								+ "<span class='item-list--item-img'><img src="+'assets/products/recommended/'+data[index].Product_image +'.jpg'+"></span>"
+								+ "<figcaption>"
+									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
+								+ "</figcaption>"
+							+ "</a>"
+						+ "</figure>"
+					+ "</li>"
+				)
+			}else {
+				$("#recommended_item").append (
+
+				)
+			}
+		}
+
+
 	}
 
 
@@ -329,14 +447,13 @@ function showInfo(data) {
 			var cid_item_array = cid_item.split(",");
 			//console.log(cid_item_array);	
 			//console.log(cid_item_array[0]);
-
 			var q_item_array = q_item.split(",").map(Number);
-			console.log(q_item_array);
+			//console.log(q_item_array);
 
 			var q_item_sum = q_item_array.reduce(function(q_item_array, b) { return q_item_array + b; }, 0);
-			console.log(q_item_sum);
-
+			//console.log(q_item_sum);
 		}
+
 		$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
 
 		$("#header-cart-q").attr("href","carts.html?cid="+cid_item+"&q="+q_item); // go to cart page
@@ -372,25 +489,26 @@ function showInfo(data) {
 	                    + "<div class='item-content clearfix'>"
 	                        + "<div class='item-content--left'>"
 	                            + "<h2 class='item-content--left__headline'>"+ data[cid_item_array[index]].Product_title +"</h2>"
-	                            + "<div class='item-content--left__price'><strong class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</strong> <span>aashirwads</span></div>"
+	                            + "<div class='item-content--left__price'>Rs.<strong class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</strong> <span>aashirwads</span></div>"
 	                            + "<div class='item-content--left__description'>"+ data[cid_item_array[index]].Product_description +"</div>"
 	                        + "</div>"
 	                        + "<div class='item-content--right'>"
+	                            
 	                            + "<form id='AddToCartForm'>"
 	                                + "<div class='btn-and-quantity-wrap'>"
 	                                    + "<div class='spinner'>"
 	                                        + "<p>"
-	                                            + "<span class='btn minus'></span>"
+	                                            // + "<span class='btn minus'></span>"
 	                                            + "<input type='text' name='quantity' value='"+ q_item_array[index] +"' class='quantity-selector qty'>"
 	                                            + "<input type='hidden' name='product_id' value='2721888517'>"
 	                                            + "<span class='q'>Qty.</span>"
-	                                            + "<span class='btn plus'></span>"
+	                                            // + "<span class='btn plus'></span>"
 	                                        + "</p>"
 	                                    + "</div>"
 	                                + "</div>"
 	                            + "</form>"
-	                            + "<div class='sub-total'></div>"
-	                            + "<div class='add-review'><a href=''>Add Review</a></div>"
+	                            + "<div class='sub-total--container'>Sub Total <span class='sub-total'></span></div>"
+	                            //+ "<div class='add-review'><a href=''>Add Review</a></div>"
 	                        + "</div>"
 	                    + "</div>"
 	                    + "<span class='cart-close'></span>"

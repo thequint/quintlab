@@ -101,30 +101,27 @@
                         <div class="left-col">
                             
                             <div class="big">
+
                                 <span id="big-image" class="img" quickbeam="image" style="background-image: url('assets/images/video-img.jpg')" data-src="assets/images/video-img.jpg"></span>
 
 
-                                <!-- <span id="big-image" class="img"><img src="assets/images/video-img.jpg" data-src="assets/images/video-img.jpg"></span> -->
-
-                                <div class="detail-socials">
+                                <!-- <div class="detail-socials">
                                     <div class="social-sharing" data-permalink="http://html-koder-test.myshopify.com/products/tommy-hilfiger-t-shirt-new-york">
                                         <a target="_blank" class="share-facebook" title="Share"></a>
                                         <a target="_blank" class="share-twitter" title="Tweet"></a>
                                         <a target="_blank" class="share-pinterest" title="Pin it"></a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="right-col">
                             <h1 itemprop="name" id="product_title"></h1>
-                            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                <meta itemprop="priceCurrency" content="USD">
-                                <link itemprop="availability" href="http://schema.org/InStock">
+                            <h2 id="product_tagline"></h2>
+                            <div itemprop="offers">
                                 <div class="price-shipping">
                                     <div class="aashirwad-icon"></div>
                                     <div class="price" id="price-preview" quickbeam="price" quickbeam-price="200">
-                                        <span class="price-rs">Rs.</span>
-                                        <span id="product_price"> </span>
+                                        <span class="price-rs">Rs.</span><span id="product_price"></span>
                                         <span class="aashirwads">aashirwads</span>
                                     </div>
                                 </div>
@@ -238,8 +235,8 @@
     <section class="section recommended">
         <div class="recommended--container">
             <h3 class="recommended--container__headline">Recommended</h3>
-            <ul>
-                <li class="wow fadeInRight"><a href="index.html">
+            <ul id="recommended_item">
+                <!-- <li class="wow fadeInRight"><a href="index.html">
                     <figure><img src="assets/images/video-img.jpg">
                         <figcaption>Mum Loud Speaker</figcaption>
                     </figure>
@@ -256,7 +253,7 @@
                         <figcaption>Mum Loud Speaker</figcaption>
                     </figure>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
@@ -265,7 +262,12 @@
 
     <section class="section reviews">
         <div class="reviews--container">
-            <h3 class="reviews--container__headline">Reviews <span class="add-review"><a href="">Add Review</a></span></h3>
+            <h3 class="reviews--container__headline">Reviews <!-- <span class="add-review"><a href="">Add Review</a></span> --></h3>
+
+            <!-- <div id="Product_review">
+
+
+            </div> -->
             
             <div class="reviews--container__content">
                 <div class="item-list--rating">
@@ -318,40 +320,6 @@
                 <p class="Review_description03"></p>
             </div>
 
-
-            <!-- <div class="reviews--container__content">
-                <div class="item-list--rating">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class=""></span>
-                    <span class=""></span>
-                </div>
-                <h4 class="reviews--container__content--heading">By Atif Karbelkaron <span>| 10 December 20</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div> -->
-            <!-- <div class="reviews--container__content">
-                <div class="item-list--rating">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class=""></span>
-                    <span class=""></span>
-                    <span class=""></span>
-                </div>
-                <h4 class="reviews--container__content--heading">By Byomkesh Bakshi <span>| 6 December 20</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-            <div class="reviews--container__content">
-                <div class="item-list--rating">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class=""></span>
-                </div>
-                <h4 class="reviews--container__content--heading">By Atif Karbelkaron <span>| 4 December 20</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div> -->
         </div>
     </section>
 	
@@ -422,7 +390,7 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
 <script src="assets/js/cart.js"></script>
 
-<script type="text/javascript" src="assets/js/functions.js"></script>
+<!-- <script type="text/javascript" src="assets/js/functions.js"></script> -->
 
 </body>
 </html>
