@@ -484,7 +484,7 @@ function showInfo(data) {
 			for(var index =0; index <=  cid_item_array.length-1; index++) {
 				$("#cart_data").append (
 					"<li class='cart-item clearfix'>"
-	                    + "<div class='item-image'><img src="+'assets/products/'+ data[cid_item_array[index]].Product_image +'.jpg'+"></div>"
+	                    + "<div class='item-image'><img src="+'assets/products/home/'+ data[cid_item_array[index]].Product_image +'.jpg'+"></div>"
 
 	                    + "<div class='item-content clearfix'>"
 	                        + "<div class='item-content--left'>"
@@ -511,7 +511,7 @@ function showInfo(data) {
 	                            //+ "<div class='add-review'><a href=''>Add Review</a></div>"
 	                        + "</div>"
 	                    + "</div>"
-	                    + "<span class='cart-close'></span>"
+	                    // + "<span class='cart-close'></span>"
 	                + "</li>"
 				)
 			}

@@ -1503,8 +1503,8 @@ input:focus {
 .cart-item .item-content--left {
 	padding: 10px 0 0 20px;
 	float: left;
-	width: calc(100% - 180px);
-	width: -webkit-calc(100% - 180px);
+	width: calc(100% - 150px);
+	width: -webkit-calc(100% - 150px);
 }
 .cart-item .item-content--left__headline {
 	font-size: 26px;
@@ -1531,18 +1531,22 @@ input:focus {
 	line-height: 14px;
 }
 .item-content--left__description {
+	font-size: 15px;
 	float: left;
 	margin-bottom: 15px;
 	width: calc(100% - 120px);
 	width: -webkit-calc(100% - 120px);
 }
 .cart-item .item-content--right {
-	padding: 70px 20px 20px 10px;
+	padding: 57px 20px 20px;
 	float: left;
-	width: 180px;
+	width: 150px;
 	text-align: center;
 }
-
+.cart-item .item-content--right .spinner {
+	margin-left: 0;
+	padding: 15px 23px 0;
+}
 .cart-item .item-content--right .sub-total--container {
 	font-size: 14px;
 	color: #444;
