@@ -264,6 +264,7 @@ img {
 	background-color: #e81c9f;
 }*/
 .main-wrap {
+	overflow: hidden;
 	padding: 0 10px 10px;
 	margin: 0 10px 10px;
     /*width: 100%;*/
