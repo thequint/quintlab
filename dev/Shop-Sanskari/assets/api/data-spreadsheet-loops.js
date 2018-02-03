@@ -26,6 +26,12 @@ var wow = new WOW(
 
 wow.init();
 
+$("#buttonn").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".item-head").offset().top
+    }, 1000);
+});
+
 // Share Icon
 $(".share-ico").click(function(e){
     $(".social-ico").slideToggle(400);
@@ -507,7 +513,7 @@ function showInfo(data) {
 	                                    + "</div>"
 	                                + "</div>"
 	                            + "</form>"
-	                            + "<div class='sub-total--container'>Sub Total <span class='sub-total'></span></div>"
+	                            + "<div class='sub-total--container'>Sub Total: <span class='sub-total'></span></div>"
 	                            //+ "<div class='add-review'><a href=''>Add Review</a></div>"
 	                        + "</div>"
 	                    + "</div>"
@@ -526,6 +532,11 @@ function showInfo(data) {
 			
 		});
 		$(".grand-total").text(grand_total);
+
+
+		// $(".cart-btn--buy-now").attr("href","thank-you.html"); // back to home page
+
+
 		cart_quantity_selction();
 	}
 	

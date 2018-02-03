@@ -510,19 +510,23 @@ img {
 .second--header__shop-now {
 	margin-top: 120px;
 	display: inline-block;
-}
-.second--header__shop-now a {
-	padding: 6px 15px 10px;
+	padding: 12px 17px 15px;
 	font-size: 26px;
+	line-height: 26px;
 	color: #fff;
-	line-height: 48px;
+	cursor: pointer;
 	font-weight: 700;
 	font-style: italic;
 	background-color: #51156b;
 	border: 1px solid rgba(255,255,255,0.1);
 	font-family: 'Playfair Display', serif;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
 }
-.second--header__shop-now a:hover {
+.second--header__shop-now:hover {
 	background-color: #e81c9f;
 }
 .second--body {
@@ -1249,7 +1253,7 @@ img {
 .footer--section__right {
 	float: left;
 	width: 45%;
-	padding: 120px 20px 0 50px;
+	padding: 80px 20px 0 50px;
 }
 .footer--section__right h4 {
 	margin-bottom: 10px;
@@ -1599,6 +1603,7 @@ input:focus {
     position: absolute;
     left: 0;
     right: 0;
+    padding-left: 110px;
 }
 .cart-items-list .cart-btn .grand-total--container span {
     color: #444;
@@ -1998,6 +2003,7 @@ input:focus {
 		background-color: #fff;
 	}
 	.cart-item .item-image img {
+		max-width: 200px;
 		display: inline-block;
 	}
 	.cart-item .item-content {
@@ -2029,7 +2035,7 @@ input:focus {
 	}
 	.footer--section__right {
 		padding: 0;
-		margin-bottom: 80px;
+		margin-bottom: 50px;
 	}
 	.footer--section__right--social {
 	    margin-bottom: 20px;
@@ -2049,6 +2055,9 @@ input:focus {
 	}
 	.second--header__shop-now {
 		margin: 0;
+		padding: 10px 15px 15px;
+		font-size: 24px;
+		line-height: 24px;
 	}
 
 	.first--sanskari-woman .txt-left .special {
@@ -2106,6 +2115,14 @@ input:focus {
 		margin-bottom: 20px;
 		padding: 0 10px;
 	}
+	.cart-items-list .cart-btn {
+		padding: 0 0 40px;
+	}
+	.cart-items-list .cart-btn .grand-total--container {
+		position: relative;
+		padding: 20px 0 30px;
+	}
+
 
 }
 
@@ -2298,6 +2315,11 @@ input:focus {
 	.cart-items-list .cart-btn--buy-now a {
 		font-size: 22px;
 	}
+
+	.cart-items-list .cart-btn .grand-total--container {
+		position: relative;
+		padding: 0px 0 20px;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -2437,6 +2459,12 @@ input:focus {
 	.second--header__intro-txt {
 		font-size: 18px;
 		margin-bottom: 20px;
+	}
+
+	.second--header__shop-now {
+		padding: 8px 12px 10px;
+		font-size: 20px;
+		line-height: 20px;
 	}
 
 	.second--body .item-head {
