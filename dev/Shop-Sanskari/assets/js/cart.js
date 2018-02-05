@@ -28,6 +28,7 @@ var Quickbeam = (function () {
 
 
     (function main() {
+      
 
       window.onresize = function(event) {
         setPayButtonAction();
@@ -47,6 +48,7 @@ var Quickbeam = (function () {
 
       if (ProductImage) {
         imageUrl = ProductImage.getAttribute('src');
+        
 
         if (!imageUrl) {
           var patt = /url\(\s*(['"]?)(.*?)\1\s*\)/i
@@ -130,6 +132,7 @@ var Quickbeam = (function () {
 
       //Event delegation for cart
       cart.addEventListener("click",function(e) {
+        //console.log('yes');
         //calling callback if item of object have a match.
         for (var key in listeners) {
           if (listeners.hasOwnProperty(key) && e.target && e.target.matches(key)) {
@@ -144,6 +147,7 @@ var Quickbeam = (function () {
       }
 
       function start(e){
+        //alert('yes');
        // e.preventDefault();
         this.blur();
 
@@ -217,6 +221,7 @@ var Quickbeam = (function () {
     // Arguments: variantId, price, swatchesContent
     // Returning created DOM element.
     function createProductBox(data) {
+      
       var template = '<div class="quick-cart-product-wrap">'+
                         '<img src="' + data.image + '">'+
                         '<span class=" s1" style="background-color: '+data.color+'; opacity: .5">'+ data.price.trim() +'</span>'+
@@ -375,7 +380,8 @@ var Quickbeam = (function () {
     // Returning created DOM element.
     function createAnimatedObject(data) {
       var width = ProductImage.offsetWidth - 2;
-      var height = Math.round(parseInt(ProductImage.offsetWidth - 2) * 1.33);
+      //var height = Math.round(parseInt(ProductImage.offsetWidth - 2) * 1.33);
+      var height = width*9/16;
       var offset = ProductImage.getBoundingClientRect();
 
       var template =  '<div style="width:'+ width +'px; height:'+ height +'px;">'+

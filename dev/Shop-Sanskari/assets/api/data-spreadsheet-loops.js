@@ -1,5 +1,32 @@
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1SugZ2oqmcPKbTyQ-2nN5OIH3xG4ZaYUBcmLtbKqgJts/pubhtml';
 	
+
+	
+
+
+//this function will work cross-browser for loading scripts asynchronously
+function loadScript(src)
+{
+  var s,
+      r,
+      t;
+  r = false;
+  s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = src;
+  s.onload = s.onreadystatechange = function() {
+    //console.log( this.readyState ); //uncomment this line to see which ready states are called.
+    if ( !r && (!this.readyState || this.readyState == 'complete') )
+    {
+      r = true;
+      //callback();
+    }
+  };
+  t = document.getElementsByTagName('script')[0];
+  t.parentNode.insertBefore(s, t);
+}
+
+
 function init(){
 	Tabletop.init({
 		key: public_spreadsheet_contact,
@@ -329,9 +356,22 @@ function showInfo(data) {
 	    //$("#productImage").css({"background-image",url})
 
 
-	    $("#big-image").css("background-image","url('assets/products/large/"+data[id_item].Product_image +".jpg')");
+	    $("#big-image").css("background-image","url('assets/products/large/"+data[id_item].Product_image +".jpg')"); // change styel image
 
-	    $("#big-image").attr("src","'assets/products/large/"+data[id_item].Product_image +".jpg'"); // go to cart page
+	    $("#big-image").attr("data-src","assets/products/large/"+data[id_item].Product_image +".jpg"); // change data src
+
+	    $.getScript('assets/js/cart.js');
+
+
+	    
+
+	    $(".detail-top .big").append (
+			"<div class='product_video'>"
+                // + "<img src="+'assets/products/large/'+data[id_item].Product_image +'.jpg'+">"
+
+                + "<iframe width='560' height='315' src='https://www.youtube.com/embed/"+ data[id_item].Product_video +"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+            + "</div>"
+        )
 
 	    //$("#big-image").css({"background-image",data[id_item].Product_image_large})
 
@@ -495,7 +535,7 @@ function showInfo(data) {
 	                    + "<div class='item-content clearfix'>"
 	                        + "<div class='item-content--left'>"
 	                            + "<h2 class='item-content--left__headline'>"+ data[cid_item_array[index]].Product_title +"</h2>"
-	                            + "<div class='item-content--left__price'>Rs.<strong class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</strong> <span>aashirwads</span></div>"
+	                            + "<div class='item-content--left__price'>Rs.<strong class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</strong></div>"
 	                            + "<div class='item-content--left__description'>"+ data[cid_item_array[index]].Product_description +"</div>"
 	                        + "</div>"
 	                        + "<div class='item-content--right'>"
