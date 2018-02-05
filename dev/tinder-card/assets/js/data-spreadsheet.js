@@ -1,6 +1,5 @@
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/199JPak2DwRKr9X3XajdIFyHtvHe33NBFYghs8uqv6j8/pubhtml';
 
-// https://docs.google.com/spreadsheets/d/199JPak2DwRKr9X3XajdIFyHtvHe33NBFYghs8uqv6j8/edit#gid=0
 function init() {
 	Tabletop.init({
 		key: public_spreadsheet_contact,
@@ -31,7 +30,7 @@ function display_data() {
 	
 	for (var i=0;i<foo_array.length;i++)
 		{
-			$("#Cards").append("<li><figure><div class='img'><img src='"+ sheet_data[foo_array[i]].Image +"' alt='"+ sheet_data[foo_array[i]].Title +"'></div><figcaption><h2>"+ sheet_data[foo_array[i]].Title +"</h2><h3>"+ sheet_data[foo_array[i]].Subtitle +"</h3><p>"+ sheet_data[foo_array[i]].Description +"</p></figcaption></figure><div class='like reset-ops'></div><div class='dislike reset-ops'></div></li>");			
+			$("#Cards").append("<li class='card-item'><figure><div class='img'><img src='"+ sheet_data[foo_array[i]].Image +"' alt='"+ sheet_data[foo_array[i]].Title +"'><div class='title-el'><h2>"+ sheet_data[foo_array[i]].Title +"</h2><h3>"+ sheet_data[foo_array[i]].Subtitle +"<i class='fa fa-info-circle'></i></h3></div></div><figcaption><h2>"+ sheet_data[foo_array[i]].Title +"</h2><h3>"+ sheet_data[foo_array[i]].Subtitle +"</h3><p>"+ sheet_data[foo_array[i]].Description +"</p><i class='fa fa-arrow-down'></i></figcaption></figure><div class='like reset-ops'></div><div class='dislike reset-ops'></div></li>");			
 		}
 
 	call_tinder_cards();

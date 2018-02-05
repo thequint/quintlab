@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	z-index: 2;
 	left: 0;
-	text-align: center;
+	text-align: left;
 	-webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
 	-moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
 	-ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
@@ -71,6 +71,8 @@ h1, h2, h3, h4, h5, h6 {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+	transition: 0.2s all ease-in-out;
+	height: 400px;
 }
 .app-container li.init
 {
@@ -102,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: url("../images/nope.png") no-repeat scroll 0 0;
 }
 .app-container .img {
-	height: 300px;
+	height: 400px;
 	width: 100%;
 	position: relative;
 	-webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
@@ -115,7 +117,26 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 	-webkit-transform-style: preserve-3d;
+	background-image: url(../images/loading.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #ccc;
+	font-size: 0px;
+	
 }
+
+.title-el{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 30px 23px 15px 15px;
+	width: 100%;
+	background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,0.8));
+	background-image: -moz-linear-gradient(transparent, rgba(0,0,0,0.8));
+	background-image: -ms-linear-gradient(transparent, rgba(0,0,0,0.8));
+	background-image: -o-linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
 /* Action - buttons */
 .actions {
 	max-width: 300px;
@@ -123,26 +144,52 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+
+.app-container h2{
+	margin: 0 0 0px 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 900;
+	color: rgba(255,255,255,0.9);
+}
+
+.app-container h3{
+	margin: 0 0 0px 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 400;
+	color: rgba(255,255,255,0.8);
+	position: relative;
+}
+.app-container .title-el h3 i{
+	font-size:20px;
+	position: absolute;
+	top: 0;
+	right: -8px;
+	z-index: 99;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	
+}
+.app-container .title-el h3 i:hover{
+	color:#fff;
+}
+
 .app-container figcaption{
 	padding: 15px;
 	background: #fff;
+	display: none;
+	position: relative;
 	
 }
-.app-container figcaption h2{
-	margin: 0 0 3px 0;
-	padding: 0;
-	font-size: 22px;
-	font-weight: 900;
+
+.app-container figcaption h2,
+.app-container figcaption h3{
+	color:#333;
 }
 
-.app-container figcaption h3{
-	margin: 0 0 8px 0;
-	padding: 0;
-	font-size: 16px;
-	font-weight: 500;
-}
 .app-container figcaption p{
-	margin: 0 0 10px 0;
+	margin: 5px 0 10px 0;
 	line-height: 150%;
 }
 .actions a{
@@ -220,6 +267,41 @@ a.dislike.is-hide{
 a.like.is-hide{
 	display: none;
 }
+
+
+
+.app-container li.card-item.is-detail .title-el{
+	display:none;
+}
+
+.app-container li.card-item.is-detail{
+	overflow:auto;
+}
+
+
+.app-container figcaption i {
+	font-size: 20px;
+	position: absolute;
+	top: -42px;
+	right: 15px;
+	color: orangered;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	text-align: center;
+	border-radius: 100%;
+	line-height: 26px;
+	border: 2px solid orangered;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.app-container figcaption i:hover{
+	background: orangered;
+	color: #fff;
+}
+
+
 
 
 

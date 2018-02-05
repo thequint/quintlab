@@ -106,7 +106,7 @@
 					}
 				case 'mousemove':
 				case 'touchmove':
-					if(touchStart === true) {
+					if(touchStart === true && isSwipe==0) {
 						action_click(2);
 						var pageX = typeof ev.pageX == 'undefined' ? ev.originalEvent.touches[0].pageX : ev.pageX;
 						var pageY = typeof ev.pageY == 'undefined' ? ev.originalEvent.touches[0].pageY : ev.pageY;
@@ -115,7 +115,8 @@
 						var percent = ((100 / pane_width) * deltaX) / pane_count;
 						posX = deltaX + lastPosX;
 						posY = deltaY + lastPosY;
-
+						//alert("yes");
+						console.log(isSwipe);
 						panes.eq(current_pane).css("transform", "translate(" + posX + "px," + posY + "px) rotate(" + (percent / 2) + "deg)");
 
 						var opa = (Math.abs(deltaX) / $that.settings.threshold) / 100 + 0.2;
@@ -146,6 +147,8 @@
 
 					if (opa >= 1) {
 						if (posX > 0) {
+							if(isSwipe==0)
+							{	
 							panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
 								
 								action_click(1);
@@ -153,8 +156,10 @@
 								//	$that.settings.onLike(panes.eq(current_pane));
 								}
 								//$that.next();
-							});
+							});}
 						} else {
+							if(isSwipe==0)
+							{	
 							panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
 								
 								action_click(0);
@@ -162,14 +167,17 @@
 									//$that.settings.onDislike(panes.eq(current_pane));
 								}
 								//$that.next();
-							});
+							});}
 						}
 					} else {
 						lastPosX = 0;
 						lastPosY = 0;
+						if(isSwipe==0)
+							{	
 						panes.eq(current_pane).animate({"transform": "translate(0px,0px) rotate(0deg)"}, $that.settings.animationRevertSpeed);
 						panes.eq(current_pane).find($that.settings.likeSelector).animate({"opacity": 0}, $that.settings.animationRevertSpeed);
 						panes.eq(current_pane).find($that.settings.dislikeSelector).animate({"opacity": 0}, $that.settings.animationRevertSpeed);
+							}
 					}
 					break;
 			}
