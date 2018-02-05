@@ -2264,10 +2264,28 @@ input:focus {
 	    font-size: 10px;
 	    line-height: 12px;
 	}
+	.header-cart {
+		top: 41px;
+    	right: 8px;
+	}
+	.header-cart a {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+	.header-cart .header-cart-item {
+	    top: -5px;
+	    right: -5px;
+	    width: 16px;
+	    height: 16px;
+	    font-size: 9px;
+	    line-height: 14px;
+	}
 
 	.share {
-	    top: 16px;
-	    right: 10px;
+	    top: 5px;
+	    right: 8px;
 	}
 	.share-ico {
 		width: 30px;
@@ -2642,9 +2660,13 @@ input:focus {
 	.cart-inner {
 		top: 7px;
 	}
+	.header-cart {
+	    top: 37px;
+	    right: 8px;
+	}
 	.share {
-	    top: 7px;
-	    right: 10px;
+	    top: 3px;
+	    right: 8px;
 	}
 	.share-ico {
 		width: 30px;

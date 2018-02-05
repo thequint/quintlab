@@ -26,7 +26,7 @@ var wow = new WOW(
 
 wow.init();
 
-$("#buttonn").click(function() {
+$("#shop_now").click(function() {
     $('html, body').animate({
         scrollTop: $(".item-head").offset().top
     }, 1000);
