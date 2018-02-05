@@ -49,7 +49,7 @@ img {
     bottom: 0;
     left: 0;
     z-index: 99999;
-    background: url(../images/ajax-loader.gif) #fff no-repeat center;
+    background: url(../images/clock-loading.gif) #fff no-repeat center;
     /*background-size: 400px;*/
 }
 
