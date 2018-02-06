@@ -108,7 +108,7 @@
 					}
 				case 'mousemove':
 				case 'touchmove':
-					if(touchStart === true && isSwipe==0) {
+					if(touchStart === true && isSwipe==0 && isDetail==0) {
 						var this_target = $(event.target).attr('class');
 					//	console.log("this"+$(event.target).attr('class'));
 						action_click(2);
@@ -140,6 +140,8 @@
 					break;
 				case 'mouseup':
 				case 'touchend':
+					if(isDetail==0)
+					{
 					touchStart = false;
 					var pageX = (typeof ev.pageX == 'undefined') ? ev.originalEvent.changedTouches[0].pageX : ev.pageX;
 					var pageY = (typeof ev.pageY == 'undefined') ? ev.originalEvent.changedTouches[0].pageY : ev.pageY;
@@ -183,7 +185,7 @@
 						panes.eq(current_pane).find($that.settings.likeSelector).animate({"opacity": 0}, $that.settings.animationRevertSpeed);
 						panes.eq(current_pane).find($that.settings.dislikeSelector).animate({"opacity": 0}, $that.settings.animationRevertSpeed);
 							}
-					}
+					}}
 					break;
 			}
 		}

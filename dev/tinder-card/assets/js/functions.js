@@ -1,4 +1,5 @@
 var isSwipe =0;
+var isDetail=0;
 function call_tinder_cards(){
 	
 $("#tinderslide").jTinder({
@@ -14,6 +15,7 @@ $("#tinderslide").jTinder({
 		$('.card-item').addClass('is-detail');
 		$('.card-item .img').animate({height:250},200);
 		$('.app-container figcaption').show();
+		isDetail=1;
 	});
 	
 	
@@ -21,6 +23,7 @@ $("#tinderslide").jTinder({
 		$('.card-item').removeClass('is-detail');
 		$('.card-item .img').animate({height:400},200);
 		$('.app-container figcaption').hide();
+		isDetail=0;
 	});	
 }
 
