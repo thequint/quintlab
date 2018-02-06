@@ -42,6 +42,7 @@ function action_click(arg){
 	$('.reload').addClass('is-show');
 	$('.dislike').addClass('is-hide');
 	$('.like').addClass('is-hide');	
+	$('#status').addClass('is-front');		
 	
 	if(arg==0)//dislike
 		{
