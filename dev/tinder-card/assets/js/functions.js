@@ -10,11 +10,12 @@ $("#tinderslide").jTinder({
 	dislikeSelector: '.dislike'
 });
 	
-	$('.fa-info-circle').click(function(){
+	$('.fa-info-circle').bind('touchstart click',function(){
 		$('.card-item').addClass('is-detail');
 		$('.card-item .img').animate({height:250},200);
 		$('.app-container figcaption').show();
 	});
+	
 	
 	$('.fa-arrow-down').click(function(){
 		$('.card-item').removeClass('is-detail');

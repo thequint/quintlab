@@ -90,6 +90,7 @@
 		},
 
 		handler: function (ev) {
+			
 			ev.preventDefault();
 
 			switch (ev.type) {
@@ -108,6 +109,8 @@
 				case 'mousemove':
 				case 'touchmove':
 					if(touchStart === true && isSwipe==0) {
+						var this_target = $(event.target).attr('class');
+					//	console.log("this"+$(event.target).attr('class'));
 						action_click(2);
 						var pageX = typeof ev.pageX == 'undefined' ? ev.originalEvent.touches[0].pageX : ev.pageX;
 						var pageY = typeof ev.pageY == 'undefined' ? ev.originalEvent.touches[0].pageY : ev.pageY;
@@ -124,7 +127,8 @@
 						if(opa > 1.0) {
 							opa = 1.0;
 						}
-						if (posX >= 0) {
+						console.log(this_target);
+						if (posX >= 0 &&  this_target =="profile-img") {
 							panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', opa);
 							panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', 0);
 						} else if (posX < 0) {
