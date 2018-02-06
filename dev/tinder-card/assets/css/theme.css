@@ -120,9 +120,33 @@ h1, h2, h3, h4, h5, h6 {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #ccc;
-	font-size: 0px;
+	font-size: 0px;	
+}
+
+.app-container #status .img{
+	height:250px;
 	
 }
+
+.app-container #status figcaption{
+	display: block !important;
+	
+}
+
+#status.is-front{
+	z-index: 9999;
+}
+
+.app-container .img img{
+	transform: scale3d(1.1,1.1,1);
+	transition: 0.2s all ease-in-out;
+	transform-origin: top center;
+}
+
+.app-container .is-detail .img img{
+	transform: scale3d(1,1,1);	
+}
+
 
 .title-el{
 	position: absolute;
@@ -186,6 +210,11 @@ h1, h2, h3, h4, h5, h6 {
 .app-container figcaption h3{
 	color:#333;
 }
+.app-container figcaption h3{
+	font-weight:600;
+	margin: 0 0 5px 0;
+}
+
 
 .app-container figcaption p{
 	margin: 5px 0 10px 0;
@@ -266,7 +295,6 @@ a.dislike.is-hide{
 a.like.is-hide{
 	display: none;
 }
-
 
 
 .app-container li.card-item.is-detail .title-el{

@@ -41,15 +41,15 @@ function action_click(arg){
 		{
 	$('.reload').addClass('is-show');
 	$('.dislike').addClass('is-hide');
-	$('.like').addClass('is-hide');
+	$('.like').addClass('is-hide');	
 	
 	if(arg==0)//dislike
 		{
-			 $('#status').html("<li><figure><div class='img'><img src='"+ sheet_data[foo].Image_Left +"' alt='"+ sheet_data[foo].Title_Left +"'><div class='title-el'><h2>"+ sheet_data[foo].Title_Left +"</h2><h3>"+ sheet_data[foo].Subtitle_Left +"<i class='fa fa-info-circle'></i></h3></div></div><figcaption><p>"+ sheet_data[foo].Description_Left +"</p></figcaption></figure></li>");
+			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Image_Left +"' alt='"+ sheet_data[foo].Title_Left +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Left +"</h2><h3>"+ sheet_data[foo].Subtitle_Left +"</h3><p>"+ sheet_data[foo].Description_Left +"</p></figcaption></figure></li>");
 		}
 	else// like
 		{
-			 $('#status').html("<li><figure><div class='img'><img src='"+ sheet_data[foo].Image_Right +"' alt='"+ sheet_data[foo].Title_Right +"'><div class='title-el'><h2>"+ sheet_data[foo].Title_Right +"</h2><h3>"+ sheet_data[foo].Subtitle_Right +"<i class='fa fa-info-circle'></i></h3></div></div><figcaption><p>"+ sheet_data[foo].Description_Right +"</p></figcaption></figure></li>");
+			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Image_Right +"' alt='"+ sheet_data[foo].Title_Right +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Right +"</h2><h3>"+ sheet_data[foo].Subtitle_Right +"</h3><p>"+ sheet_data[foo].Description_Right +"</p></figcaption></figure></li>");
 		}
 			isSwipe=1;
 		}
@@ -58,19 +58,18 @@ function action_click(arg){
 
 $(".reload").click(function(){
 	$("li").animate({"transform": "translate(0px, 0px) rotate(0rad) skewX(0rad) scale(1, 1)"},400);
+	$('#status').removeClass('is-front');
 	reload_app();
 });
 
 
 $('.actions .like, .actions .dislike').click(function(e){
 	$("#tinderslide").jTinder($(this).attr('class'));
+	$('#status').addClass('is-front');
 	
 });
 
-
 // more info
-
-
 
 
 
