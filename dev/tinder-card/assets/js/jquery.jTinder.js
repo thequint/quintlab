@@ -64,6 +64,7 @@
 		dislike: function() {
 			action_click(0);
 			panes.eq(current_pane).animate({"transform": "translate(-" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(-60deg)"}, $that.settings.animationSpeed, function () {
+				$('#status').addClass('is-front');
 				
 				if($that.settings.onDislike) {
 					
@@ -78,7 +79,7 @@
 		like: function() {
 			 action_click(1);
 			panes.eq(current_pane).animate({"transform": "translate(" + (pane_width*1.5) + "px," + (pane_width*-2) + "px) rotate(60deg)"}, $that.settings.animationSpeed, function () {
-				
+				$('#status').addClass('is-front');
 				if($that.settings.onLike) {
 					 
 					//$that.settings.onLike(panes.eq(current_pane));

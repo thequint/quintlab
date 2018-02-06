@@ -65,12 +65,6 @@ $(".reload").click(function(){
 
 $('.actions .like, .actions .dislike').click(function(e){
 	$("#tinderslide").jTinder($(this).attr('class'));
-	$('#status').addClass('is-front');
 	
 });
-
-// more info
-
-
-
 
