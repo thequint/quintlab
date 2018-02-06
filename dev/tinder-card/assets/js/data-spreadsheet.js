@@ -24,7 +24,7 @@ function getParameterByName(name, url) {
 	var foo;
 
 function display_data() {
-	foo = getParameterByName('foo');
+	foo = getParameterByName('id');
 	var foo_array = foo.split(",");
 	//console.log(foo_array);	
 	
