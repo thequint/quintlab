@@ -17,7 +17,7 @@ $("#tinderslide").jTinder({
 	});
 	
 	
-	$('.fa-arrow-down').click(function(){
+	$('.fa-arrow-down').bind('touchstart click',function(){
 		$('.card-item').removeClass('is-detail');
 		$('.card-item .img').animate({height:400},200);
 		$('.app-container figcaption').hide();
