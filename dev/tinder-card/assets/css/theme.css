@@ -174,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 	font-weight: 900;
 	color: rgba(255,255,255,0.9);
+	display: block;
 }
 
 .app-container h3{
@@ -183,6 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	color: rgba(255,255,255,0.8);
 	position: relative;
+	display: block;
 }
 .app-container .title-el h3 i{
 	font-size:20px;
@@ -209,6 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 .app-container figcaption h2,
 .app-container figcaption h3{
 	color:#333;
+	display: block;
 }
 .app-container figcaption h3{
 	font-weight:600;
