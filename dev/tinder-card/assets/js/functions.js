@@ -52,11 +52,11 @@ function action_click(arg){
 	
 	if(arg==0)//dislike
 		{
-			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Image_Left +"' alt='"+ sheet_data[foo].Title_Left +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Left +"</h2><h3>"+ sheet_data[foo].Subtitle_Left +"</h3><p>"+ sheet_data[foo].Description_Left +"</p></figcaption></figure></li>");
+			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Swipe_Image_Left +"' alt='"+ sheet_data[foo].Swipe_Title_Left +"'></div><figcaption><h2>"+ sheet_data[foo].Swipe_Title_Left +"</h2><h3>"+ sheet_data[foo].Swipe_Subtitle_Left +"</h3><p>"+ sheet_data[foo].Swipe_Description_Left +"</p></figcaption></figure></li>");
 		}
 	else// like
 		{
-			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Image_Right +"' alt='"+ sheet_data[foo].Title_Right +"'></div><figcaption><h2>"+ sheet_data[foo].Title_Right +"</h2><h3>"+ sheet_data[foo].Subtitle_Right +"</h3><p>"+ sheet_data[foo].Description_Right +"</p></figcaption></figure></li>");
+			 $('#status').html("<li class='card-item is-detail'><figure><div class='img'><img src='"+ sheet_data[foo].Swipe_Image_Right +"' alt='"+ sheet_data[foo].Swipe_Title_Right +"'></div><figcaption><h2>"+ sheet_data[foo].Swipe_Title_Right +"</h2><h3>"+ sheet_data[foo].Swipe_Subtitle_Right +"</h3><p>"+ sheet_data[foo].Swipe_Description_Right +"</p></figcaption></figure></li>");
 		}
 			isSwipe=1;
 		}
