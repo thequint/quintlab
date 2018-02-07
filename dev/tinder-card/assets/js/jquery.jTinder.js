@@ -120,14 +120,14 @@
 						posX = deltaX + lastPosX;
 						posY = deltaY + lastPosY;
 						//alert("yes");
-						console.log(isSwipe);
+						//console.log(isSwipe);
 						panes.eq(current_pane).css("transform", "translate(" + posX + "px," + posY + "px) rotate(" + (percent / 2) + "deg)");
 
 						var opa = (Math.abs(deltaX) / $that.settings.threshold) / 100 + 0.2;
 						if(opa > 1.0) {
 							opa = 1.0;
 						}
-						console.log(this_target);
+						//console.log(this_target);
 						if (posX >= 0 &&  this_target =="profile-img") {
 							panes.eq(current_pane).find($that.settings.likeSelector).css('opacity', opa);
 							panes.eq(current_pane).find($that.settings.dislikeSelector).css('opacity', 0);
