@@ -1,77 +1,114 @@
 
-function ClearForm(form){
+$('#input-height').val('');
+$('#input-height-feet, #input-height-inch').val('');
+$('#input-weight').val('');
 
-    form.weight.value = "";
-    form.height.value = "";
-    form.bmi.value = "";
-    form.my_comment.value = "";
+$('#weight-kg').prop("checked", true);
+$('#height-cm').prop('checked',true); 
 
+//$("#weight-kg:checked").val();
+//$("#height-cm:checked").val();
+
+
+
+
+$('#weight-kg').bind('change', function () {
+	$('#input-weight').attr('placeholder', 'Your Weight in kg');
+});
+
+$('#weight-lb').bind('change', function () {
+	$('#input-weight').attr('placeholder', 'Your Weight in lb');
+});
+
+$('#height-cm').bind('change', function () {
+	$('.cm-height').show();
+	$('.feet-height').hide();
+	$('#input-height-feet, #input-height-inch').val('');
+	$('#input-height').val('');
+	
+});
+
+$('#height-feet').bind('change', function () {
+	$('.cm-height').hide();
+	$('.feet-height').show();
+	$('#input-height-feet, #input-height-inch').val('');
+	$('#input-height').val('');
+});
+
+$('.btn-reset').click(function () {
+	$('.cm-height').show();
+	$('.feet-height').hide();
+	
+});
+
+
+function calculateBmi() {
+	
+	var weight, height;
+	
+	
+	// For Weight
+	
+	
+	if($('#weight-kg').is(':checked')){ 
+		weight = $('#input-weight').val();
+	} 
+	
+	else{
+		weight = $('#input-weight').val() / 0.0022046;
+	}
+	
+	// For Height
+	
+	
+	if($('#height-cm').is(':checked')){ 
+		
+		height = $('#input-height').val();
+	} 
+	
+	else{
+		height = $('#input-height-feet').val()/0.032808+$('#input-height-inch').val()/0.39370;	
+	}
+	
+	
+	var finalBmi = weight/(height/100*height/100);
+	$('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
+	
+	
+	if(($('#input-height').val() != '' && $('#input-weight').val() != '') || ($('#input-height-feet').val() != '' && $('#input-weight').val() != '')){
+		
+	   $('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
+
+	}
+
+	else{
+		$('.final-bmi').removeClass('is-active').html('--.-');
+		
+	}
 }
 
-function bmi(weight, height) {
 
-          bmindx=weight/eval(height*height);
-          return bmindx;
+
+$("input").bind("keyup change", function(e) {
+	 calculateBmi();
+});
+
+
+
+
+var specialKeys = new Array();
+specialKeys.push(8); //Backspace
+function IsNumeric(e) {
+	var keyCode = e.which ? e.which : e.keyCode
+	var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+	//document.getElementById("error").style.display = ret ? "none" : "inline";
+	return ret;
 }
 
-function checkform(form) {
 
-       if (form.weight.value==null||form.weight.value.length==0 || form.height.value==null||form.height.value.length==0){
-            alert("\nPlease complete the form first");
-            return false;
-       }
 
-       else if (parseFloat(form.height.value) <= 0||
-                parseFloat(form.height.value) >=500||
-                parseFloat(form.weight.value) <= 0||
-                parseFloat(form.weight.value) >=500){
-                alert("\nReally know what you're doing? \nPlease enter values again. \nWeight in kilos and \nheight in cm");
-                ClearForm(form);
-                return false;
-       }
-       return true;
 
-}
 
-function computeform(form) {
 
-       if (checkform(form)) {
 
-       yourbmi=Math.round(bmi(form.weight.value, form.height.value/100));
-       form.bmi.value=yourbmi;
 
-       if (yourbmi >40) {
-          form.my_comment.value="You are grossly obese, consult your physician!";
-       }
-
-       else if (yourbmi >30 && yourbmi <=40) {
-          form.my_comment.value="Umm... You are obese, want some liposuction?";
-       }
-
-       else if (yourbmi >27 && yourbmi <=30) {
-          form.my_comment.value="You are very fat, do something before it's too late";
-       }
-
-       else if (yourbmi >22 && yourbmi <=27) {
-          form.my_comment.value="You are fat, need dieting and exercise";
-       }
-
-       else if (yourbmi >=21 && yourbmi <=22) {
-          form.my_comment.value="I envy you. Keep it up!!";
-       }
-
-       else if (yourbmi >=18 && yourbmi <21) {
-          form.my_comment.value="You are thin, eat more.";
-       }
-
-       else if (yourbmi >=16 && yourbmi <18) {
-          form.my_comment.value="You are starving. Go Find some food!";
-       }
-
-       else if (yourbmi <16) {
-          form.my_comment.value="You're grossly undernourished, need hospitalization ";
-       }
-
-       }
-       return;
-}

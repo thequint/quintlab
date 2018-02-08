@@ -50,51 +50,56 @@ el.parentNode.insertBefore(s, el);
 <!-- End comScore Tag -->
 </head>
 <body>
-	
 	<div class="container bmi-container">
 		<h1>Body mass index (BMI)</h1>
 		<div class="bmi-form-container">
 			<form name="BMI" method="post">
 				<div class="form-group">
-					<input type="text" id="input-weight" placeholder="Your Weight in kg" name="weight"><!-- onFocus="this.form.weight.value=''" -->
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in kg">
+					<span id="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
 					<div class="radio-group">
 						<span><input type="radio" id="weight-kg" checked name="select-weight"><label for="weight-kg">(kg)</label></span>
 						<span><input type="radio" id="weight-lb" name="select-weight"><label for="weight-lb">(lb)</label></span>
 					</div>
-					
 				</div>
 				<div class="form-group">
-					<input type="text" id="input-height" placeholder="Your Height in cm" name="height"><!-- onFocus="this.form.height.value=''" -->
+					<div class="cm-height">
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in cm">
+					</div>
+					
+					<div class="feet-height clearfix">
+						<div class="feet-input">
+						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-feet" placeholder="Feet">
+						</div>
+						
+						<div class="feet-input">
+						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-inch" placeholder="Inch">
+						</div>
+					</div>
 					<div class="radio-group">
 						<span><input type="radio" id="height-cm" checked name="select-height"><label for="height-cm">(cm)</label></span>
 						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(feet)</label></span>
 					</div>
-					
+				</div>
+				
+				<div class="final-bmi">--.-</div>
+				
+				
+<!--
+				<div class="form-group">
+					<input type="text" id="final_Bmi" placeholder="Your BMI" disabled>
 				</div>
 				<div class="form-group">
-<!--					<label>Your BMI</label>-->
-					<input type="text" placeholder="Your BMI" name="bmi" disabled>
-				</div>
-				<div class="form-group">
-<!--					<label>My Comment</label>-->
-					<input type="text" placeholder="My Comment" name="my_comment" disabled>
+					<input type="text" placeholder="My Comment" disabled>
 				</div>
 				<div class="btn-group clearfix">
-					<input class="btn btn-cal" type="button" value="Let's see" onClick="computeform(this.form)">
-					<input class="btn btn-reset" type="reset" value="Reset" onClick="ClearForm(this.form)">				
+					<input class="btn btn-cal" id="Btn_CalBmi" type="button" value="Let's see">
+					<input class="btn btn-reset" id="Btn_Reset" type="reset" value="Reset">				
 				</div>
+-->
 			</form>	
 		</div>
 	</div>
-	
-	
-	
-	
-	
-
-	
-	
-	
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>  
 <script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
