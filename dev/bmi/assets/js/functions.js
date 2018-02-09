@@ -78,6 +78,8 @@ function calculateBmi() {
 	if(($('#input-height').val() != '' && $('#input-weight').val() != '') || ($('#input-height-feet').val() != '' && $('#input-weight').val() != '')){
 		
 	   $('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
+		console.log((height-120)*100/(210-120));
+		$(".bmi-point").css({"left":((weight-45)*100/(120-45))+"%","top":((height-120)*100/(210-120))+"%"});
 
 	}
 

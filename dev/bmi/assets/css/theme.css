@@ -177,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	background:linear-gradient(45deg, #00b0f0 12%, #92d050 45%, #e7ff00 64%, #ffc000 86%, #ff0000);
 	margin-left: 75px;
+	overflow: hidden;
 }
 
 .scale-weight{
@@ -197,6 +198,18 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	bottom: 0px;
 	left: 0;
+}
+
+.bmi-point{
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+/*	transition: all 0.3s ease-in-out;*/
+	
+	
 }
 
 
