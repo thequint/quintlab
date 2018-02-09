@@ -1,0 +1,92 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'libel_suitregular';
+	src: url('../fonts/libel-suit-rg-webfont.woff2') format('woff2'),  url('../fonts/libel-suit-rg-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	color: #000;
+	font-size: 17px;
+	width: 100%;
+	height: auto;
+	background: #ffffff;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+	font-weight: 400;
+	font-size: 100%;
+}
+.wrapper.wrapper-doctors {
+	background-color: #e5e6e8;
+	padding: 30px 0px 40px 0;
+}
+.container {
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+.wrapper-headline {
+	font-family: 'libel_suitregular';
+	font-size: 48px;
+	line-height: 120%;
+	text-transform: capitalize;
+	margin-bottom: 24px;
+	color: #43dbc0;
+}
+.wrapper-headline a {
+	display: inline-block;
+	color: #43dbc0;
+}
+.doctors-slider figure{
+	position:relative;
+	min-height: 80px;
+	padding:2px 0 0 90px;
+}
+.doctors-slider figure .doctor-img{
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	border-radius: 100% 100% 100% 0%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.doctors-slider figcaption h3 {
+	color: #de346d;
+	font-family: 'libel_suitregular';
+	font-size: 21px;
+	line-height: 120%;
+	margin: 0 0 5px 0;
+}
+
+.doctors-slider figcaption h4 {
+	color: #333;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	line-height: 120%;
+	margin: 0 0 0px 0;
+}
+
+
+
+
+
