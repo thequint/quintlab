@@ -42,14 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 /*Start CSS*/
 
 .bmi-container{
-	max-width: 350px;
+	width: 300px;
+	height:700px; 
 	background:#fff;
-	margin: 30px auto;
+	margin: 10px auto;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
 }
 
 .bmi-container h1{
-	font-size:26px;
+	font-size:24px;
 	font-weight: 700;
 	margin: 0 0 0px 0;
 	padding: 20px;
@@ -148,7 +149,61 @@ h1, h2, h3, h4, h5, h6 {
 	color: #e1306c;
 }
 
+.bmi-chart{
+	font-size:13px;
+	color: #333;
+	position: relative;
+}
+.bmi-chart h2{
+	font-weight:700;
+	margin: 10px 0 10px 0;
+	font-size: 22px;
+	text-align: center;
+	line-height: 100%;
+	padding: 0px
+	
+}
 
+.bmi-chart h2 span{
+	display:inline-block;
+	border: 2px solid #333;
+	padding: 8px 20px;
+}
+
+
+.chart-box{
+	display:block;
+	height: 150px;
+	position: relative;
+	background:linear-gradient(45deg, #00b0f0 12%, #92d050 45%, #e7ff00 64%, #ffc000 86%, #ff0000);
+	margin-left: 75px;
+}
+
+.scale-weight{
+	margin: 0 0 10px 0;
+}
+.scale-weight .start{float: left; margin-right: 30px;}
+.scale-el span{font-weight:700;}
+.scale-weight .end{float: right; text-align: right;} 
+
+.scale-height{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	height: 150px;
+}
+
+.scale-height .end{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+}
+
+
+
+.scale-el{
+	position: relative;
+}
 
 
 
