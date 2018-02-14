@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Swtich Wedget</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav and Touch Icons -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Custom -->
+<link rel="stylesheet" href="assets/css/form.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="form-wrap">
+
+	<form>
+		<div class="form-group">
+			<label for="text">Before Image URL #01</label>
+			<input id="input1" type="text" class="form-control">
+		</div>
+		
+		<div class="form-group">
+			<label for="text">Before Image Caption</label>
+			<input id="inputCap1" type="text" class="form-control">
+		</div>	
+		
+		<div class="form-group">
+			<label for="text">After Image URL #02</label>
+			<input id="input2" type="text" class="form-control">
+		</div>
+		
+		<div class="form-group">
+			<label for="text">After Image Caption</label>
+			<input id="inputCap2" type="text" class="form-control">
+		</div>
+		
+		<div class="form-group clearfix">
+			<span type="" class="btn-submit">Generate code</span>
+			<span class="copy-val">Copy</span>
+		</div>
+
+		<div class="form-group">
+			<label for="text">Embedded Code</label>
+			<textarea type="text" class="text-area form-control"></textarea>
+		</div>
+		
+	</form>
+</div>
+
+<div id="preview">
+	
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var url = "https://thequint.herokuapp.com/quintlab/switch/"
+		$(".btn-submit").click(function(){
+			
+			var img_01 = $("#input1").val();
+			var img_02 = $("#input2").val();
+			
+			var img_01_cap = $("#inputCap1").val();
+			var img_02_cap = $("#inputCap2").val();
+			
+			$(".text-area").val("<iframe style='height:638px;' class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='100%' frameborder='0'></iframe>");
+			
+			$("#preview").html("<iframe class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='100%' frameborder='0'></iframe>");
+		});
+
+		$(".copy-val").click(function(){
+		    $(".text-area").select();
+		    document.execCommand('copy');
+		});
+	});
+</script>
+</body>
+
+</html>

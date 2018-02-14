@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Switch | Quint Lab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/css/form.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+    
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="#" class="navbar-brand mb-0 h1">
+			<img src="assets/images/qLabLogo.png" width="100" height="100%" class="d-inline-block align-top">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+	  	</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">			
+			<ul class="navbar-nav ml-auto">
+				<li class="navbar-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Your Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a href="#" class="dropdown-item">View</a>
+						<a href="#" class="dropdown-item">Edit</a>
+						<a href="#" class="dropdown-item">Some Action</a>
+						<a href="#" class="dropdown-item">Another Action</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" id="main-content">
+		<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+		  </ol>
+		</nav>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="display-4">Switch</h2>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-7 col-sm-12" align="center">
+				<h4 class="display-4 preview">Preview</h4>
+			</div>
+		</div>
+		<div class="row widget-details">
+			<div class="col-lg-7 col-sm-12 mr-auto" align="center">
+				<div id="preview" class="switch-iframe">
+					<iframe style='height:638px;' class='quiz-iframe' src='switch/index.html?x=https://www.chillcover.com/wp-content/uploads/2015/03/Water-Drop-Black-And-White_Background_Pictures_chillcover.com_.jpg&y=https://www.hdwallpapers.in/walls/autumn_bench-HD.jpg&cap1=&cap2=' width='100%' frameborder='0'></iframe>
+				</div>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="form-wrap">
+					<form>
+						<div class="form-group">
+							<label for="text">Before Image URL #01</label>
+							<input id="input1" type="text" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label for="text">Before Image Caption</label>
+							<input id="inputCap1" type="text" class="form-control">
+						</div>	
+						
+						<div class="form-group">
+							<label for="text">After Image URL #02</label>
+							<input id="input2" type="text" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label for="text">After Image Caption</label>
+							<input id="inputCap2" type="text" class="form-control">
+						</div>
+						
+						<div class="form-group clearfix">
+							<span type="" class="btn-submit">Generate code</span>
+							<span class="copy-val">Copy</span>
+						</div>
+
+						<div class="form-group">
+							<label for="text">Embedded Code</label>
+							<textarea type="text" class="text-area form-control"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/spreadsheet.js"></script>
+	<script type="text/javascript" src="assets/js/data-spreadsheet.js"></script>
+	<script>
+		// $(window).load(function(){
+		// 	var url = "https://thequint.herokuapp.com/quintlab/switch/"
+		// 	$(".btn-submit").click(function(){
+				
+		// 		var img_01 = $("#input1").val();
+		// 		var img_02 = $("#input2").val();
+				
+		// 		var img_01_cap = $("#inputCap1").val();
+		// 		var img_02_cap = $("#inputCap2").val();
+				
+		// 		$(".text-area").val("<iframe style='height:638px;' class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='100%' frameborder='0'></iframe>");
+				
+		// 		$("#preview").html("<iframe class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='80%' frameborder='0'></iframe>");
+		// 	});
+
+		// 	$(".copy-val").click(function(){
+		// 	    $(".text-area").select();
+		// 	    document.execCommand('copy');
+		// 	});
+		// });
+		$(document).ready(function(){
+			var url = "https://www.thequint.com/quintlab/dashboard/switch/index.html"
+			$(".btn-submit").click(function(){
+				
+				var img_01 = $("#input1").val();
+				var img_02 = $("#input2").val();
+				
+				var img_01_cap = $("#inputCap1").val();
+				var img_02_cap = $("#inputCap2").val();
+				
+				$(".text-area").val("<iframe style='height:638px;' class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='100%' frameborder='0'></iframe>");
+				
+				$("#preview").html("<iframe class='quiz-iframe' src='"+url+"?x="+img_01+"&y="+img_02+"&cap1="+img_01_cap+"&cap2="+img_02_cap+"' width='100%' frameborder='0'></iframe>");
+			});
+
+			$(".copy-val").click(function(){
+			    $(".text-area").select();
+			    document.execCommand('copy');
+			});
+		});
+	</script>
+</body>
+</html>

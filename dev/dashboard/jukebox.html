@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jukebox | Quint Lab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+	<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
+    
+</head>
+<body >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a href="#" class="navbar-brand mb-0 h1">
+		<img src="assets/images/tquint-white.svg" width="100" height="100%" class="d-inline-block align-top">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+  	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">			
+		<ul class="navbar-nav ml-auto">
+			<li class="navbar-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Your Account
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a href="#" class="dropdown-item">View</a>
+					<a href="#" class="dropdown-item">Edit</a>
+					<a href="#" class="dropdown-item">Some Action</a>
+					<a href="#" class="dropdown-item">Another Action</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Logout</a>€
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container" id="main-content">
+	<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+	  <ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+	  </ol>
+	</nav>
+
+	<div class="row">
+		<div class="col-lg-6 text-center">
+			Add Questions
+		</div>
+		<div class="col-lg-6 text-center">
+			Preview
+			<i class="fas fa-sync-alt ml-1 refresh-icon"></i>
+		</div>
+	</div>
+	<div class="row widget-details">
+		<div class="col-lg-6 col-sm-12" id="">
+			
+			<div id="moods_card" class="sortable">
+
+				<div class="card">
+					<div class="card-header">
+						<h4>
+							<span>Moods #1</span>
+							<button type="button" class="close question-close" aria-label="Close">
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						</h4>
+					</div>
+					<div class="form_data card-body">
+						<form>
+							<div class="form-group--main">
+								<div class="form-group">
+									<select class="select_category form-control"></select>
+								</div>
+								<div class="form-group">
+									<input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1">
+								</div>
+								<div class="form-group">
+									<input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1">
+								</div>
+							</div>
+							<div class="form-group">
+								<a href="javascript:void(0);" class="add_track">+ Add Track #2</a>
+							</div>
+							<!-- <button class="btn btn-primary clickMe">Add Mood</button> -->
+							<!-- <a href="javascript:void(0);" class="btn btn-primary">Add Mood</a> -->
+						</form>
+					</div>
+				</div>
+
+				<!-- adding cards -->
+
+			</div>
+
+			<div><a href="javascript:void(0);" class="add_card clickMe">+ Add another cards</a></div>
+
+		</div>
+
+
+
+		<div class="col-lg-6 col-sm-12">
+			<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+			<div class="display_results">Preview</div>
+			
+		</div>
+
+
+
+	</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="quizzes/assets/js/spreadsheet.js"></script>
+<script src="assets/js/jukebox.js"></script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	
+	
+</body>
+</html>

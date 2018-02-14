@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quiz | Quint Lab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/css/form.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+    
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="#" class="navbar-brand mb-0 h1">
+			<img src="assets/images/tquint-white.svg" width="100" height="100%" class="d-inline-block align-top">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+	  	</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">			
+			<ul class="navbar-nav ml-auto">
+				<li class="navbar-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Your Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a href="#" class="dropdown-item">View</a>
+						<a href="#" class="dropdown-item">Edit</a>
+						<a href="#" class="dropdown-item">Some Action</a>
+						<a href="#" class="dropdown-item">Another Action</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" id="main-content">
+		<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+		  </ol>
+		</nav>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="display-4">Quiz</h2>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-sm-12" align="center">
+				<h4 class="display-4 preview">Preview</h4>
+			</div>
+		</div>
+		<div class="row widget-details">
+			<div class="col-lg-5 col-sm-12 mr-auto" align="center">
+				<div id="preview">
+					<!-- <iframe class="preview-frame" src="periscope/index.html?foo=1,2,3" width="100%" frameborder="0"></iframe> -->
+				</div>
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<div class="form-wrap">
+					<form>
+						<div class="form-group">
+							<label for="text">Question</label>
+							<textarea type="text" class="text-area form-control" id="Question-text"></textarea>
+							<label for="text">Option 1</label>
+							<textarea type="text" class="text-area form-control" id="option-1"></textarea>
+							<label for="text">Option 2</label>
+							<textarea type="text" class="text-area form-control" id="option-2"></textarea>
+							<label for="text">Option 3</label>
+							<textarea type="text" class="text-area form-control" id="option-3"></textarea>
+							<label for="text">Option 4</label>
+							<textarea type="text" class="text-area form-control" id="option-4"></textarea>
+							<div id="newItemDiv">
+								
+							</div>
+							<div class="dropdown">
+								<button class="btn btn-warning btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Dropdown button
+								</button>								
+								<ul id="addNewItem" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<li><a class="dropdown-item" href="#">Add Option</a></li>
+									<li><a class="dropdown-item" href="#">Add Image</a></li>
+									<li><a class="dropdown-item" href="#">Add Video</a></li>
+									<li><a class="dropdown-item" href="#">Add Audio</a></li>
+								</ul>
+							</div>
+							<label for="text">Correct Option</label>
+							<textarea type="text" class="text-area form-control" id="correct-option"></textarea>
+						</div>
+					</form>
+					<a class="btn btn-primary btn-block btn-lg" id="addQuestionLink" href="#" role="button">Add Question</a>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	<script>
+		var questionNumber = 0;
+		var questions = [];
+		optionNumber = 4;
+		imageNumber = 0;
+		videoNumber = 0;
+		audioNumber = 0;
+		$("#addQuestionLink").click(function (event) {
+			questionNumber++;
+			questions.push("Do Something Here!!!!");
+		});
+		$("#addNewItem li a").on('click', function(){
+			var selectedValue = $(this).text();
+			switch(selectedValue){
+				case "Add Option":
+					optionNumber++;
+					$("#newItemDiv").append("<label for='text'>Option " + optionNumber + "</label>");
+					$("#newItemDiv").append("<textarea type='text' class='text-area form-control' id='option-" + optionNumber + "'></textarea>");
+					break;
+				case "Add Image":
+					imageNumber++;
+					$("#newItemDiv").append("<label for='text'>Add Image URL</label>");
+					$("#newItemDiv").append("<textarea type='text' class='text-area form-control' id='image-" + imageNumber + "'></textarea>");
+					break;
+				case "Add Video":
+					videoNumber++;
+					$("#newItemDiv").append("<label for='text'>Add Video URL</label>");
+					$("#newItemDiv").append("<textarea type='text' class='text-area form-control' id='image-" + videoNumber + "'></textarea>");
+					break;
+				case "Add Audio":
+					audioNumber++;
+					$("#newItemDiv").append("<label for='text'>Add Audio URL</label>");
+					$("#newItemDiv").append("<textarea type='text' class='text-area form-control' id='image-" + audioNumber + "'></textarea>");
+					break;
+			}
+		});
+	</script>
+</body>
+</html>
+
+
+<!-- 
+<div class='question-box'>
+	<div class='question'><span class='bullet'>" + questionNumber + ".</span> Which of the following makes your hangover worse?</div>
+	<ul class='answer-type demo-list'>
+		<li><label for='input-21' class='wrong'><input type='radio' name='ques06' value='0'> Dancing while drinking</label></li>
+		<li><label for='input-22' class='right'><input type='radio' name='ques06' value='1'> Smoking while drinking</label></li>
+		<li><label for='input-23' class='wrong'><input type='radio' name='ques06' value='0'> Laughing while drinking</label></li>
+		<li><label for='input-24' class='wrong'><input type='radio' name='ques06' value='0'> Keeping quiet while drinking</label></li>
+		<input type='hidden' id='ques06' value='0'>
+	</ul>
+</div> -->
