@@ -59,84 +59,125 @@ $(".add_card").click(function(){
 });
 
 
+var quiz_data={};
+
 function addQuestionFunc(){
-	quiz_data = [];
+	quiz_data = {};
+	quiz_data['size']=400;
+	quiz_data['sectors']=[];
 	//i = 0;
+	console.log($(".card").length);
+
+	var card_length = $(".card").length;
+
 	$(".card").each(function(index){
-		quiz_data.push({});
+		quiz_data['sectors'].push({});
+		
+		if(card_length==1) {
+			card_length=1/0.99999
+		}
+		quiz_data['sectors'][index]['percentage'] = 1/card_length;
+		quiz_data['sectors'][index]['moods'] = $(this).find(".select_category").val();
+		quiz_data['sectors'][index]['label'] = $(this).find(".song-title_1").val();
+		quiz_data['sectors'][index]['label 2'] = $(this).find(".song-track_1").val();
 
-		//quiz_data[index]['y'] = $(this).find(".song-title_1").val().toString();
-
-		quiz_data[index]['y'] = 20;
-		quiz_data[index]['label'] = $(this).find(".song-title_1").val().toString();
-		quiz_data[index]['embedCode'] = $(this).find(".song-track_1").val();
-
-		quiz_data[index]['songTilte2'] = $(this).find(".song-title_2").val();
-		quiz_data[index]['songTrack2'] = $(this).find(".song-track_2").val();
+		//quiz_data['sectors'][index]['songTilte2'] = $(this).find(".song-title_2").val();
+		//quiz_data['sectors'][index]['songTrack2'] = $(this).find(".song-track_2").val();
+		
 	});
+
 }
 
 $('.refresh-icon').click(function(){
 	addQuestionFunc();
-	console.log(quiz_data);
-	//$(".display_results").html(quiz_data);
-	$(".display_results").append(quiz_data);
-
-	$.each(quiz_data , function (index, value){
-	  	//console.log(index + ':' + value); 
-	  	//console.log(quiz_data);
-	  	$(".display_results").html( JSON.stringify(quiz_data));
-	});
-	
-
-	function create_pie() {
-	    var chart = new CanvasJS.Chart("chartContainer", {
-	        animationEnabled: true,
-	        title: {
-	            text: "Making the jukebox dynamic"
-	        },
-	        data: [{
-	            type: "pie",
-	            startAngle: 240,
-	            yValueFormatString: "##0.00\"%\"",
-	          /*  index"label": "{"label"} {y}",*/
-	            dataPoints: quiz_data,
-	        }]
-	    });
-	    chart.render();
-	}
-
 	create_pie();
+	$(".display_results").html( JSON.stringify(quiz_data));
 
+	
 });
 
+// create svg pie
+
+function calculateSectors(quiz_data) {
+    var sectors = [];
+    var colors = [
+        "#61C0BF", "#DA507A", "#BB3D49", "#DB4547",  "#cccccc"
+    ];
+
+    var l = quiz_data.size / 2
+    var a = 0 // Angle
+    var aRad = 0 // Angle in Rad
+    var z = 0 // Size z
+    var x = 0 // Side x
+    var y = 0 // Side y
+    var X = 0 // SVG X coordinate
+    var Y = 0 // SVG Y coordinate
+    var R = 0 // Rotation
 
 
+    quiz_data.sectors.map(function(item, key) {
+        a = 360 * item.percentage;
+        aCalc = (a > 180) ? 360 - a : a;
+        aRad = aCalc * Math.PI / 180;
+        z = Math.sqrt(2 * l * l - (2 * l * l * Math.cos(aRad)));
+        if (aCalc <= 90) {
+            x = l * Math.sin(aRad);
+        } else {
+            x = l * Math.sin((180 - aCalc) * Math.PI / 180);
+        }
 
+        y = Math.sqrt(z * z - x * x);
+        Y = y;
 
-// On change
-/*
-$(".form_data .input_1").bind("keyup change", function(e) {
-	var display_data = $(this).val();
+        if (a <= 180) {
+            X = l + x;
+            arcSweep = 0;
+        } else {
+            X = l - x;
+            arcSweep = 1;
+        }
 
-	$(".display_results").html(display_data);
+        sectors.push({
+            percentage: item.percentage,
+            label: item.label,
+            color: colors[key],
+            arcSweep: arcSweep,
+            L: l,
+            X: X,
+            Y: Y,
+            R: R
+        });
 
-	data_array=[];
+        R = R + a;
+    })
+    return sectors
+}
+    
+function create_pie() {
+	sectors = calculateSectors(quiz_data);
+	var newSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	newSVG.setAttributeNS(null, 'style', "width: " + quiz_data.size + "px; height: " + quiz_data.size + "px");
+	$("#svg_circle").html("")
+	$("#svg_circle")[0].appendChild(newSVG)// adding code to body
 
-	$(".form_data .input_1").each(function () {
-		console.log("yes");
-        data_array.push($(this).val());
-    });
-   console.log(data_array);
-});*/
+	sectors.map(function(sector) {
+		//console.log(sector);
+	    var newSector = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	    newSector.setAttributeNS(null, 'fill', sector.color);
+	    newSector.setAttributeNS(null, 'd', 'M' + sector.L + ',' + sector.L + ' L' + sector.L + ',0 A' + sector.L + ',' + sector.L + ' 0 ' + sector.arcSweep + ',1 ' + sector.X + ', ' + sector.Y + ' z');
+	    newSector.setAttributeNS(null, 'transform', 'rotate(' + sector.R + ', ' + sector.L + ', ' + sector.L + ')');
+	    newSector.setAttribute('id',sector.label);
+	    newSVG.appendChild(newSector);
+	    $("#svg-labels").append("<li>"+sector.label+"</li>")
+	})
 
-/*
-$("#update").click(function () {
-    x = [];
-    $('#input_value input').each(function () {
-        x.push($(this).val());
-    });
+	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	midCircle.setAttributeNS(null, 'cx', quiz_data.size * 0.5);
+	midCircle.setAttributeNS(null, 'cy', quiz_data.size * 0.5);
+	midCircle.setAttributeNS(null, 'r', quiz_data.size * 0.2);
+	midCircle.setAttributeNS(null, 'fill', '#42495B');
 
-    //x.push("Lemon");
-    console.log(x);
-});*/
+	newSVG.appendChild(midCircle);
+}
+
+    
