@@ -50,6 +50,8 @@ article, aside, footer, header, nav, section, figure, figcaption {
 .main-wrap .btn-down                            {background-image: url(../images/khatka-04.jpg);}
 
 .main-wrap .box-wrap .magnify                   {display: block;}
+.btn-01, .btn-02                                {cursor: pointer;}
+
 
 @media (max-width: 800px) {
    .main-wrap                                   {padding: 0 16px;}
