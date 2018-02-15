@@ -53,7 +53,7 @@ var moods_counter = 1;
 $(".add_card").click(function(){
 	moods_counter++;
 
-	$("#moods_card").append('<div class="card"><div class="card-header"><h4><span>Moods #'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1"></div></div><div class="form-group"><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
+	$("#moods_card").append('<div class="card"><div class="card-header"><h4><span>Moods #'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1"></div></div><div class=""><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
 
 	resetEvents();
 });
@@ -63,7 +63,7 @@ var quiz_data={};
 
 function addQuestionFunc(){
 	quiz_data = {};
-	quiz_data['size']=400;
+	quiz_data['size']=500;
 	quiz_data['sectors']=[];
 	//i = 0;
 	console.log($(".card").length);
@@ -77,12 +77,12 @@ function addQuestionFunc(){
 			card_length=1/0.99999
 		}
 		quiz_data['sectors'][index]['percentage'] = 1/card_length;
-		quiz_data['sectors'][index]['moods'] = $(this).find(".select_category").val();
-		quiz_data['sectors'][index]['label'] = $(this).find(".song-title_1").val();
+		quiz_data['sectors'][index]['label'] = $(this).find(".select_category").val();
+		quiz_data['sectors'][index]['label 1'] = $(this).find(".song-title_1").val();
 		quiz_data['sectors'][index]['label 2'] = $(this).find(".song-track_1").val();
 
-		//quiz_data['sectors'][index]['songTilte2'] = $(this).find(".song-title_2").val();
-		//quiz_data['sectors'][index]['songTrack2'] = $(this).find(".song-track_2").val();
+		quiz_data['sectors'][index]['songTilte2'] = $(this).find(".song-title_2").val();
+		quiz_data['sectors'][index]['songTrack2'] = $(this).find(".song-track_2").val();
 		
 	});
 
@@ -101,7 +101,7 @@ $('.refresh-icon').click(function(){
 function calculateSectors(quiz_data) {
     var sectors = [];
     var colors = [
-        "#61C0BF", "#DA507A", "#BB3D49", "#DB4547",  "#cccccc"
+        "#e94d4b", "#fdd44d", "#02a2a4", "#d3d1bc",  "#f29a99", "#e94d4b", "#fdd44d", "#02a2a4", "#d3d1bc",  "#f29a99"
     ];
 
     var l = quiz_data.size / 2
@@ -154,6 +154,7 @@ function calculateSectors(quiz_data) {
 }
     
 function create_pie() {
+	 $("#svg-labels").html("");
 	sectors = calculateSectors(quiz_data);
 	var newSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 	newSVG.setAttributeNS(null, 'style', "width: " + quiz_data.size + "px; height: " + quiz_data.size + "px");
@@ -168,14 +169,14 @@ function create_pie() {
 	    newSector.setAttributeNS(null, 'transform', 'rotate(' + sector.R + ', ' + sector.L + ', ' + sector.L + ')');
 	    newSector.setAttribute('id',sector.label);
 	    newSVG.appendChild(newSector);
-	    $("#svg-labels").append("<li>"+sector.label+"</li>")
+	    $("#svg-labels").append("<li>"+sector.label+"</li>");
 	})
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	midCircle.setAttributeNS(null, 'cx', quiz_data.size * 0.5);
 	midCircle.setAttributeNS(null, 'cy', quiz_data.size * 0.5);
-	midCircle.setAttributeNS(null, 'r', quiz_data.size * 0.2);
-	midCircle.setAttributeNS(null, 'fill', '#42495B');
+	midCircle.setAttributeNS(null, 'r', quiz_data.size * 0.14);
+	midCircle.setAttributeNS(null, 'fill', '#424149');
 
 	newSVG.appendChild(midCircle);
 }
