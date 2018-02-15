@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Jukebox | Quint Lab</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Jukebox | Quint Lab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
-	<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
+
+<style type="text/css">
+.main-wrap {
+	max-width: 740px;
+	margin: 0 auto;
+	position: relative;
+    background-color: #302f37;
+    border-radius: 60px;
+    overflow: hidden;
+}
+.main-wrap.show {
+    opacity: 1;
+}
+.main-wrap, #step01, #step02 {
+    height: 600px;
+}
+.main-wrap--container {
+    width: 200%;
+    transition: 0.9s all ease-in-out;
+}
+#step01 {
+    position: relative;
+    padding: 57px 0 17px;
+    width: 50%;
+    float: left;
+}
+#svg_circle {
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 0 20px;
+}
+</style>
     
 </head>
 <body >
@@ -64,7 +96,7 @@
 		</div>
 	</div>
 	<div class="row widget-details">
-		<div class="col-lg-6 col-sm-12" id="">
+		<div class="col-lg-6 col-sm-12" style="width:350px;max-width:350px;">
 			
 			<div id="moods_card" class="sortable">
 
@@ -109,8 +141,15 @@
 
 
 
-		<div class="col-lg-6 col-sm-12">
-			<div id="svg_circle"></div>
+		<div class="" style="width:790px;max-width:790px;">
+			<div class="main-wrap">
+				<div class="main-wrap--container">
+					<div id="step01">sdfs
+						<div id="svg_circle"></div>
+					</div>
+				</div>
+			</div>
+
 			<div id="moods_result">
 				<ul id="svg-labels"></ul>
 			</div>
