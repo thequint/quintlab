@@ -38,20 +38,24 @@ article, aside, footer, header, nav, section, figure, figcaption {
 
 .main-wrap .box-wrap .box-first  figure img,
 .main-wrap .box-wrap .box-second figure img     {display: block;}
-.main-wrap .box-wrap figcaption                 {position: relative;height:130px;}
-.main-wrap .box-wrap .box-first  figcaption     {background-color:#f4f2f2;font-size: 25px;color: #282526;text-transform: uppercase;font-weight: 700;}
-.main-wrap .box-wrap .box-second figcaption     {background-color:#282526;font-size: 20px;line-height:24px;letter-spacing: 0.7px;}
+.main-wrap .box-wrap figcaption                 {position: relative;height:110px;}
+.main-wrap .box-wrap .box-first  figcaption     {background-color:#f4f2f2;font-size: 28px;color: #282526;text-transform: uppercase;font-weight: 700;}
+.main-wrap .box-wrap .box-second figcaption     {background-color:#282526;font-size: 20px;line-height:26px;letter-spacing: 0.7px;}
 
-.main-wrap .box-wrap figcaption .content        {position: absolute;top: 51%;display:block;width:100%;padding: 15px 15px 15px 145px;
+.main-wrap .box-wrap figcaption .content        {position: absolute;top: 51%;display:block;width:100%;padding: 15px 15px 15px 130px;
 -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
 .main-wrap .box-wrap figcaption .content span   {color: #d2df67;font-size: 24px;font-weight: 700;}
-.main-wrap .btn-up, .main-wrap .btn-down        {cursor:pointer;width:130px;height:130px;background-size: cover;position: absolute;top: 0;left: 0;z-index: 2;}
+
+.main-wrap .box-wrap figcaption .mp-tourism-content        {position: absolute;top: 51%;display:block;width:100%;padding: 15px 15px 15px 20px;
+-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+.main-wrap .box-wrap figcaption .mp-tourism-content span   {color: #d2df67;font-size: 19px;font-weight: 700;padding-top: 10px;}
+
+.main-wrap .btn-up, .main-wrap .btn-down        {cursor:pointer;width:110px;height:110px;background-size: cover;position: absolute;top: 0;left: 0;z-index: 2;}
 .main-wrap .btn-up                              {background-image: url(../images/khatka-03.jpg);}
 .main-wrap .btn-down                            {background-image: url(../images/khatka-04.jpg);}
 
 .main-wrap .box-wrap .magnify                   {display: block;}
 .btn-01, .btn-02                                {cursor: pointer;}
-
 
 @media (max-width: 800px) {
    .main-wrap                                   {padding: 0 16px;}
