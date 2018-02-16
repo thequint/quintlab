@@ -12,24 +12,40 @@
 
 <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/quiz.css"> -->
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
 
+<link rel="stylesheet" type="text/css" href="jukebox/assets/css/styles.css">
+
 <style type="text/css">
-.main-wrap {
+/*.main-wrap {
 	max-width: 740px;
 	margin: 0 auto;
 	position: relative;
     background-color: #302f37;
     border-radius: 60px;
     overflow: hidden;
-}
+
+}*/
+
 .main-wrap.show {
     opacity: 1;
 }
-.main-wrap, #step01, #step02 {
+#svg_circle {
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 0 20px;
+}
+.bg-soulful {
+	background-color: #d3d1bc;
+}
+
+#Soulful:hover {
+	fill:#ccc;
+}
+/*.main-wrap, #step01, #step02 {
     height: 600px;
 }
 .main-wrap--container {
@@ -47,8 +63,29 @@
     max-width: 550px;
     padding: 0 20px;
 }
+.box-nut-top-left, .box-nut-top-right, .box-nut-btm-left, .box-nut-btm-right {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.box-nut-top-left {
+    top: 7%;
+    left: 7%;
+}
+.box-nut-top-right {
+    top: 7%;
+    right: 7%;
+}
+.box-nut-btm-left {
+    bottom: 7%;
+    left: 7%;
+}
+.box-nut-btm-right {
+    bottom: 7%;
+    right: 7%;
+}*/
 </style>
-    
+     
 </head>
 <body >
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -142,13 +179,43 @@
 
 
 		<div class="" style="width:790px;max-width:790px;">
-			<div class="main-wrap">
+			<div class="main-wrap show">
 				<div class="main-wrap--container">
-					<div id="step01">sdfs
-						<div id="svg_circle"></div>
+
+					<div id="step01">
+
+						<span class="box-nut-top-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-top-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-btm-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-btm-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+
+						<div class="step01--container">
+							<h1 class="main-wrap--headline"><img src="jukebox/assets/images/headline.svg"></h1>
+							<div class="pin-top"><img src="jukebox/assets/images/pin-top.svg"></div>
+							<div class="pin-bottom"><img src="jukebox/assets/images/pin-bottom.svg"></div>
+							
+							<div class="rotating" id="svg_circle"></div>
+						</div>
 					</div>
 				</div>
 			</div>
+
+
+
+			<!-- <div class="main-wrap">
+				<div class="main-wrap--container">
+					<div id="step01">
+
+						<span class="box-nut-top-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-top-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-btm-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+						<span class="box-nut-btm-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+
+						<div id="svg_circle"></div>
+
+					</div>
+				</div>
+			</div> -->
 
 			<div id="moods_result">
 				<ul id="svg-labels"></ul>

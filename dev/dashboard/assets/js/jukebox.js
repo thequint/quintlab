@@ -89,13 +89,40 @@ function addQuestionFunc(){
 }
 
 $('.refresh-icon').click(function(){
-	addQuestionFunc();
-	create_pie();
-	$(".display_results").html( JSON.stringify(quiz_data));
+	var check_mood_null=[];
+	$(".card").each(function(index){
+		if($(this).find(".select_category").val()==null){
+			check_mood_null.push("empty")
+		}
+	});
 
-	
+	if(jQuery.inArray("empty",check_mood_null) !== -1){
+		alert("Select Moods");
+	}
+	else {
+		addQuestionFunc();
+		create_pie();
+		$(".display_results").html( JSON.stringify(quiz_data));
+		pie_events();
+	}
 });
 
+
+function pie_events() {
+
+	//$("#svg_circle path").click(function(){
+		
+	console.log($("#svg_circle path").attr('fill'));
+	var color_attr = $("#svg_circle path").attr('fill');
+
+	$("#svg_circle path").mouseover(function(){
+		$(".main-wrap").css('background', color_attr);
+	});
+
+	$("#svg_circle path").mouseout(function(){
+		$(".main-wrap").css('background', color_attr);
+	});
+}
 // create svg pie
 
 function calculateSectors(quiz_data) {
@@ -180,5 +207,35 @@ function create_pie() {
 
 	newSVG.appendChild(midCircle);
 }
+
+
+// Jukebox animation
+var isPause = 0;
+//
+$("#svg_circle").mouseover(function(){
+    isPause=1;
+    $(".rotating").addClass("paused");
+})
+$("#svg_circle").mouseout(function(){
+    isPause=0;
+    $(".rotating").removeClass("paused");
+});
+
+$('#svg_circle').mouseover(function () {
+    $('.pin-bottom').addClass('pin-rotate');
+});
+$('#svg_circle').mouseout(function () {
+    $('.pin-bottom').removeClass('pin-rotate');
+});
+
+
+// $("#Soulful").click(function(){
+// 	alert("working");
+// });
+
+// $("#Soulful").mouseover(function(){
+// 	console.log("yes");
+//     $(".main-wrap").addClass("bg-soulful");
+// });
 
     
