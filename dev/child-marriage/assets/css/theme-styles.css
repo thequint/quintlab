@@ -157,13 +157,13 @@ img {
 	font-family: 'Merriweather', 'georgia', serif;
 }
 .quintlab-details__content--quote {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     position: relative;
-    border-left: 5px #DE6DC5 solid;
+    /*border-left: 5px #DE6DC5 solid;*/
 }
 .quintlab-details__content--quote blockquote {
 	font-style: italic;
-	font-size: 30px;
+	font-size: 26px;
 	color: #DE6DC5;
 	line-height: 1.5em;
 	font-weight: 400;
