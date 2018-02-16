@@ -30,11 +30,39 @@ ul, ol {
 article, aside, footer, header, nav, section, figure, figcaption {
    display: block;
 }
-.main-wrap                                      {margin: 0 auto;max-width: 800px;padding: 0}
-.main-wrap .box-wrap                            {width: 100%;height:533px;position: relative;}
+.main-wrap                                      {margin: 0 auto;max-width: 800px;padding: 0;overflow: hidden;}
+.main-wrap .box-wrap                            {width: 200%;position: relative;}
+
+.main-wrap--container123 {
+    width: 200%;
+    /*transition: 0.9s all ease-in-out;*/
+}
+
+.main-wrap:after,
+.main-wrap .box-wrap:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.box-first, .box-second {width: 50%;float: left;color:#fff;font-weight:600;background-color: #000}
+
+
+.box-wrap.slide {
+    /*transform: translate3d(-1, 1, 1.1);*/
+    transform: translateX(-50%);
+    /*transition: 0.9s all ease-in-out;*/
+    /*background-color: #302f37;*/
+    /*-webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;*/
+}
+
 .main-wrap .box-wrap img                        {width: 100%;display: block;}
-.main-wrap .box-wrap .box-first,
-.main-wrap .box-wrap .box-second                {width: 100%;color:#fff;font-weight:600;position: absolute;top: 0;left: 0;background-color: #000}
+/*.main-wrap .box-wrap .box-first,
+.main-wrap .box-wrap .box-second                {width: 100%;color:#fff;font-weight:600;position: absolute;top: 0;left: 0;background-color: #000}*/
 
 .main-wrap .box-wrap .box-first  figure img,
 .main-wrap .box-wrap .box-second figure img     {display: block;}
