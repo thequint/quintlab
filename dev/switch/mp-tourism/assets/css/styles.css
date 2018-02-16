@@ -74,7 +74,7 @@ article, aside, footer, header, nav, section, figure, figcaption {
 -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
 .main-wrap .box-wrap figcaption .content span   {color: #d2df67;font-size: 24px;font-weight: 700;}
 
-.main-wrap .box-wrap figcaption .mp-tourism-content        {position: absolute;top: 51%;display:block;width:100%;padding: 15px 15px 15px 20px;
+.main-wrap .box-wrap figcaption .mp-tourism-content        {position: absolute;top: 51%;display:block;width:100%;padding: 15px;
 -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
 .main-wrap .box-wrap figcaption .mp-tourism-content span   {color: #d2df67;font-size: 19px;font-weight: 700;padding-top: 10px;}
 
@@ -86,13 +86,13 @@ article, aside, footer, header, nav, section, figure, figcaption {
 .btn-01, .btn-02                                {cursor: pointer;}
 
 @media (max-width: 800px) {
-   .main-wrap                                   {padding: 0 16px;}
+   .main-wrap                                   {padding: 0;}
 }
 
 @media (max-width: 767px) {
    .main-wrap .box-wrap .box-first  figcaption  {}
 
-   .main-wrap .box-wrap figcaption              {height: 90px;}
+   /*.main-wrap .box-wrap figcaption              {height: 90px;}*/
    .main-wrap .btn-up, .main-wrap .btn-down     {width:90px;height:90px;}
    .main-wrap .box-wrap figcaption .content     {padding: 15px 15px 15px 105px;}
 
@@ -107,6 +107,7 @@ article, aside, footer, header, nav, section, figure, figcaption {
    .main-wrap .box-wrap figcaption .content span{font-size: 16px;}
 }
 @media (max-width: 480px) {
+   .main-wrap .box-wrap figcaption              {height: 90px;}
    .main-wrap .box-wrap .box-first  figcaption  {font-size: 20px;}
 
    .main-wrap .box-wrap .box-second figcaption,
@@ -119,7 +120,7 @@ article, aside, footer, header, nav, section, figure, figcaption {
    .main-wrap .box-wrap figcaption .content span{font-size: 12px;line-height:15px;}
    .main-wrap .box-wrap figcaption .content     {padding: 15px 15px 15px 102px;}
 }
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
    .main-wrap .box-wrap                         {height:495px;}
 }
 @media (max-width: 700px) {
@@ -136,6 +137,6 @@ article, aside, footer, header, nav, section, figure, figcaption {
 }
 @media (max-width: 375px) {
    .main-wrap .box-wrap                         {height:275px;}
-}
+}*/
 
 
