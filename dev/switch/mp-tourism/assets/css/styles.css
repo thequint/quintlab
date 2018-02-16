@@ -113,7 +113,7 @@ article, aside, footer, header, nav, section, figure, figcaption {
 
    .main-wrap .box-wrap .box-second figcaption,
    .main-wrap .box-wrap figcaption .content span,
-   .main-wrap .box-wrap figcaption .mp-tourism-content span{font-size: 14px;line-height:18px;}
+   .main-wrap .box-wrap figcaption .mp-tourism-content span{font-size: 14px;line-height:16px;}
 }
 @media (max-width: 375px) {
    .main-wrap .box-wrap .box-first  figcaption  {font-size: 18px;}
