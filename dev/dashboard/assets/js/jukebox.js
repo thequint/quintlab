@@ -77,12 +77,13 @@ function addQuestionFunc(){
 			card_length=1/0.99999
 		}
 		quiz_data['sectors'][index]['percentage'] = 1/card_length;
-		quiz_data['sectors'][index]['label'] = $(this).find(".select_category").val();
-		quiz_data['sectors'][index]['label 1'] = $(this).find(".song-title_1").val();
-		quiz_data['sectors'][index]['label 2'] = $(this).find(".song-track_1").val();
 
-		quiz_data['sectors'][index]['songTilte2'] = $(this).find(".song-title_2").val();
-		quiz_data['sectors'][index]['songTrack2'] = $(this).find(".song-track_2").val();
+		quiz_data['sectors'][index]['moods'] = $(this).find(".select_category").val();
+		quiz_data['sectors'][index]['title_1'] = $(this).find(".song-title_1").val();
+		quiz_data['sectors'][index]['track_1'] = $(this).find(".song-track_1").val();
+
+		quiz_data['sectors'][index]['title_2'] = $(this).find(".song-title_2").val();
+		quiz_data['sectors'][index]['track_2'] = $(this).find(".song-track_2").val();
 		
 	});
 
@@ -111,17 +112,26 @@ $('.refresh-icon').click(function(){
 function pie_events() {
 
 	//$("#svg_circle path").click(function(){
-		
-	console.log($("#svg_circle path").attr('fill'));
-	var color_attr = $("#svg_circle path").attr('fill');
+	//console.log($(this).attr('fill'));
+	var color_attr = $(this).attr('fill');
 
 	$("#svg_circle path").mouseover(function(){
+		var color_attr = $(this).attr('fill');
 		$(".main-wrap").css('background', color_attr);
 	});
 
 	$("#svg_circle path").mouseout(function(){
-		$(".main-wrap").css('background', color_attr);
+		$(".main-wrap").css('background', '#302f37');
 	});
+
+	$("#svg_circle path").click(function(){
+		console.log("yes");
+		$(".main-wrap--container").addClass("slide");
+	});
+
+	$(".back-btn").click(function(){
+        $(".main-wrap--container").removeClass("slide");
+    });
 }
 // create svg pie
 
@@ -166,7 +176,11 @@ function calculateSectors(quiz_data) {
 
         sectors.push({
             percentage: item.percentage,
-            label: item.label,
+            moods: item.moods,
+            title_1: item.title_1,
+            track_1: item.track_1,
+            title_2: item.title_2,
+            track_2: item.track_2,
             color: colors[key],
             arcSweep: arcSweep,
             L: l,
@@ -194,9 +208,19 @@ function create_pie() {
 	    newSector.setAttributeNS(null, 'fill', sector.color);
 	    newSector.setAttributeNS(null, 'd', 'M' + sector.L + ',' + sector.L + ' L' + sector.L + ',0 A' + sector.L + ',' + sector.L + ' 0 ' + sector.arcSweep + ',1 ' + sector.X + ', ' + sector.Y + ' z');
 	    newSector.setAttributeNS(null, 'transform', 'rotate(' + sector.R + ', ' + sector.L + ', ' + sector.L + ')');
-	    newSector.setAttribute('id',sector.label);
+
+	    newSector.setAttribute('id', sector.moods);
+
+	    newSector.setAttribute('data-mood', sector.moods);
+	    newSector.setAttribute('data-title_1', sector.title_1);
+	    newSector.setAttribute('data-track_1', sector.track_1);
+
+	    newSector.setAttribute('data-title_2', sector.title_2);
+	    newSector.setAttribute('data-track_2', sector.track_2);
+		//console.log(sector)
+
 	    newSVG.appendChild(newSector);
-	    $("#svg-labels").append("<li>"+sector.label+"</li>");
+	    $("#svg-labels").append("<li>"+sector.moods+"</li>");
 	})
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -228,6 +252,9 @@ $('#svg_circle').mouseout(function () {
     $('.pin-bottom').removeClass('pin-rotate');
 });
 
+
+
+// $(".main-wrap--container").addClass("slide");
 
 // $("#Soulful").click(function(){
 // 	alert("working");
