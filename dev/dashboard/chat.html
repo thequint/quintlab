@@ -1,253 +1,148 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chat Widget | Quint Lab</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chat Widget | Quint Lab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-	<!-- Fontawesome CSS -->
-	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<!-- Fontawesome CSS -->
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
-	<!-- Colorpicker CSS -->
-	<link rel="stylesheet" media="screen" type="text/css" href="assets/css/colorpicker.css" />
+<!-- Colorpicker CSS -->
+<link rel="stylesheet" media="screen" type="text/css" href="assets/css/colorpicker.css" />
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="assets/css/form.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-	<link rel="stylesheet" href="assets/css/chat.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/form.css">
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+<link rel="stylesheet" href="assets/css/chat.css">
 </head>
 <body>
-	<!-- <div style="max-width: 400px;">
-		<blockquote class="twitter-tweet" data-lang="en">
-				
-			<a href="https://twitter.com/msdevUK/status/796742966962483200?ref_src=twsrc%5Etfw"></a>
-		</blockquote>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="navbar-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Your Account </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a href="#" class="dropdown-item">View</a> <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Some Action</a> <a href="#" class="dropdown-item">Another Action</a> </div>
+      </li>
+      <li class="nav-item"> <a href="#" class="nav-link">Logout</a> </li>
+    </ul>
+  </div>
+</nav>
+<div class="container" id="main-content">
+  <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="display-4">Chat</h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 col-sm-12" align="center">
+      <h4 class="display-4">Build Chat</h4>
+    </div>
+    <div class="col-lg-7 col-sm-12" align="center">
+      <h4 class="display-4"> Preview <i class="fas fa-sync-alt ml-1 refresh-icon"></i> </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+	 <div class="inner-block">
+      <ul id="ProfileDetails">
+        <li>
+             <figure>
+				<div class="profile-img"><img alt="" src="assets/images/avatar.svg"></div>
+				 <figcaption>
+					<input type="text" name="Profile Name" class="form-control name"  placeholder="Enter Profile Name">
+					<input type="text" name="Profile Image" class="form-control url"  placeholder="Enter Image Url">
+				 </figcaption>
+			 </figure>
+        </li>
+        <li >
+		  <figure>
+			<div class="profile-img"><img alt="" src="assets/images/avatar.svg"></div>
+			 <figcaption>
+				<input type="text" name="Profile Name" class="form-control name"  placeholder="Enter Profile Name">
+				<input type="text" name="Profile Image" class="form-control url"  placeholder="Enter Image Url">
+			 </figcaption>
+		 </figure>
+        </li>
+      </ul>
+		 
+		 <div class="btn-area">
+		 	<a href="javascript:void(0);" class="btn-custom" id="BtnAddProfile"><i class="fa fa-plus"></i> Add Profile</a>
+		 </div>
+	</div>
 		
-		<blockquote class="twitter-tweet" data-lang="en">
-				
-			<a href="https://twitter.com/onmsft/status/953521144627417088?ref_src=twsrc%5Etfw"></a>
-		</blockquote>
+		
 
-		<blockquote class="twitter-tweet" data-lang="en">
-			<p lang="en" dir="ltr">
-				Revolut launches geolocation-powered travel insurance 
-				<a href="https://t.co/G5OtiGBa4G">https://t.co/G5OtiGBa4G</a> 
-				by 
-				<a href="https://twitter.com/romaindillet?ref_src=twsrc%5Etfw">@romaindillet</a>
-			</p>
-			&mdash; TechCrunch (@TechCrunch) 
-			<a href="https://twitter.com/TechCrunch/status/953522568929140736?ref_src=twsrc%5Etfw">January 17, 2018</a>
-		</blockquote>
-	</div> -->
-
-
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a href="#" class="navbar-brand mb-0 h1">
-			<img src="assets/images/qLabLogo.png" width="100" height="100%" class="d-inline-block align-top">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-	  	</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">			
-			<ul class="navbar-nav ml-auto">
-				<li class="navbar-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Your Account
+		
+		
+		<div class="inner-block">
+			<ul id="ProfileList" class="clearfix">
+				<li>
+					<a href="javascript:void(0);">
+						<figure>
+							<div class="profile-img"><img alt="" src="assets/images/avatar.svg"></div>
+							<figcaption class="profle-des"></figcaption>
+						</figure>
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a href="#" class="dropdown-item">View</a>
-						<a href="#" class="dropdown-item">Edit</a>
-						<a href="#" class="dropdown-item">Some Action</a>
-						<a href="#" class="dropdown-item">Another Action</a>
-					</div>
 				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Logout</a>
+				<li>
+					<a href="javascript:void(0);">
+						<figure>
+							<div class="profile-img"><img alt="" src="assets/images/avatar.svg"></div>
+							<figcaption class="profle-des"></figcaption>
+						</figure>
+					</a>
 				</li>
 			</ul>
 		</div>
-	</nav>
-
-	<div class="container" id="main-content">
-
-		<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
-		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
-		  </ol>
-		</nav>
-
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="display-4">Chat</h2>
-				<hr>
-			</div>
+		
+		
+		
+		
+		
+        <div class="message-bulder-section inner-block">
+			<ul class="dynamic-list" id="MessageBulder">
+				
+			</ul>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-5 col-sm-12" align="center">
-				<h4 class="display-4">Build Chat</h4>
-			</div>
-			<div class="col-lg-7 col-sm-12" align="center">
-				<h4 class="display-4">
-					Preview
-					<i class="fas fa-sync-alt ml-1 refresh-icon"></i>
-				</h4>
-			</div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+		<div class="btn-area clearfix">
+			<a href="javascript:void(0);" id="BtnPreview" class="btn-custom">Lets Preview Discusson</a>
+			<a href="javascript:void(0);" id="BtnPushData" class="btn-custom">Create Conversation</a>
 		</div>
+		<div class="inner-block">
+			<ul class="dynamic-list" id="preview"></ul>
+		</div>
+    </div>
+  </div>
+</div>
 
-		<div class="row widget-details">
-			<div class="col-lg-5 col-sm-12 mr-auto">
+<!-- Bootstrap JS --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> 
 
-				<div class="player-details-section">
+<!-- Twitter JS --> 
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --> 
 
-					<div class="player-left clearfix">
-						<div class="player-image">
-							<form>
-								<input type="text" name="playerImage" class="player-image-input" id="player-image-input" placeholder="Enter image Url.....">
-								<label for="player-image-input"><i class="fas fa-user-plus"></i></label>
-							</form>
-						</div>
-						<div class="player-name">
-							<div class="row">
-								<div class="col-lg-10">
-									<form>
-										<input type="text" name="playerName" class="player-name-input" id="player-name-input" placeholder="Enter name of the player">
-									</form>								
-								</div>
-								<div class="col-lg-2">
-									<div id="colorSelector">
-										<div style="background-color: purple">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+<!-- Colorpicker JS --> 
+<script type="text/javascript" src="assets/js/colorpicker.js"></script> 
 
-					<div class="player-right clearfix">
-						<div class="player-name">
-							<div class="row">
-								<div class="col-lg-2">
-									<div id="colorSelector">
-										<div style="background-color: yellow">
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-10">
-									<form>
-										<input type="text" name="playerName" class="player-name-input" id="player-name-input" placeholder="Enter name of the player">
-									</form>								
-								</div>
-							</div>
-						</div>
-						<div class="player-image">
-							<form>
-								<input type="text" name="playerImage" class="player-image-input" id="player-image-input" placeholder="Enter image Url.....">
-								<label for="player-image-input"><i class="fas fa-user-plus"></i></label>
-							</form>
-						</div>
-					</div>
-				</div>
-
-				<div class="chat-builder-section">
-					<div class="player-selection-buttons">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-lg-12 mt-5" align="center">
-									<a class="btn btn-lg btn-warning start-btn">Start</a>
-								</div>
-							</div>
-							<div class="row player-buttons">
-								<div class="col-lg-6" align="center">
-									<a class="btn btn-lg btn-success player1">Player 1</a>
-								</div>
-								<div class="col-lg-6" align="center">
-									<a class="btn btn-lg btn-danger player2">Player 2</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="message-bulder-section">
-						<!-- <div class="message-left clearfix">
-							<div class="player-image">
-								<form>
-									<input type="text" name="playerImage" class="player-image-input" id="player-image-input" placeholder="Enter image Url.....">
-									<label for="player-image-input"><i class="fas fa-user-plus"></i></label>
-								</form>
-							</div>
-							<div class="message-text">
-								<div class="row">
-									<div class="col-lg-10">
-										<form>
-											<input type="text" name="messageText" class="message-text-input" id="message-text-input" placeholder="Paste the embed code here...">
-										</form>								
-									</div>
-									<div class="col-lg-2">
-										<div id="colorSelector">
-											<div style="background-color: purple">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="message-right clearfix">
-							<div class="message-text">
-								<div class="row">
-									<div class="col-lg-2">
-										<div id="colorSelector">
-											<div style="background-color: yellow">
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-10">
-										<form>
-											<input type="text" name="messageText" class="message-text-input" id="message-text-input" placeholder="Paste the embed code here...">
-										</form>								
-									</div>
-								</div>
-							</div>
-							<div class="player-image">
-								<form>
-									<input type="text" name="playerImage" class="player-image-input" id="player-image-input" placeholder="Enter image Url.....">
-									<label for="player-image-input"><i class="fas fa-user-plus"></i></label>
-								</form>
-							</div>
-						</div> -->
-
-					</div>
-
-				</div>
-			</div>
-			<div class="col-lg-7 col-sm-12">
-				<div id="preview">
-					
-				</div>
-			</div>
-		</div>	
-
-	</div>
-
-	<!-- Bootstrap JS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-	<!-- Twitter JS -->
-	<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
-	<!-- Colorpicker JS -->
-	<script type="text/javascript" src="assets/js/colorpicker.js"></script>
-
-	<!-- Custom JS -->
-	<script type="text/javascript" src="assets/js/chat.js"></script>
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/chat-dashboard.js"></script>	
+<script type="text/javascript" src="assets/js/chat.js"></script>
 </body>
 </html>
