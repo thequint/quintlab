@@ -39,6 +39,43 @@ function reset_index() {
 
 // update profile image
 
+function reset_profile_image()
+
+
+{
+	console.log('yes');
+	
+	$("#MessageBulder li").each(function(index){
+		console.log(index+"|" +$(this).find(".profile-img").length)
+		// if it is the first chat in the list, then it should have an image
+		if(index==0 && $(this).find(".profile-img").length==0 )
+			{
+				
+				$(this).find('figure').prepend('<div class="profile-img"><img src="'+$("#ProfileDetails li").eq($(this).attr("data-index")-1).find(".url").val()+'"</div>');// dynamic image source
+			}
+		else
+			{
+				console.log(index+"|" +$(this).find(".profile-img").length)
+				//console.log($(this).attr('data-index')+"|"+$("#MessageBulder li").eq(index-1).attr('data-index'))
+				//console.log(index+"|"+$(this).find("profile-img").length)
+				if($(this).attr('data-index')!=$("#MessageBulder li").eq(index-1).attr('data-index') && $(this).find(".profile-img").length==0 )
+					{
+						
+						$(this).find('figure').prepend('<div class="profile-img"><img src="'+$("#ProfileDetails li").eq($(this).attr("data-index")-1).find(".url").val()+'"</div>');// dynamic image source
+					}
+				else if($(this).attr('data-index')==$("#MessageBulder li").eq(index-1).attr('data-index') && $(this).find(".profile-img").length!=0)
+					{
+						$(this).find('figure .profile-img').remove();
+					}
+			//	console.log($(this).attr('data-index')+"|"+$("#MessageBulder li").eq(index-1).attr('data-index'))
+				//
+			}
+		
+		
+		
+	})
+}
+
 
 function update_profile_images(this_var) {
 
@@ -113,8 +150,11 @@ $('#ProfileDetails li .name').bind("keyup change", function () {
 // Remove Only Message
 
 function remove_message() {
-	$('#MessageBulder li .remove-profile').click(function () {
+	
+	$('#MessageBulder li:last-child .remove-profile').click(function () {
 		$(this).closest("li").remove();
+		reset_profile_image();
+		
 	});
 }
 
@@ -123,6 +163,7 @@ function remove_message() {
 $('#ProfileList li:first-child').click(function () {
 	message_bulder($(this).attr('data-index'));
 	remove_message();
+	
 });
 
 
@@ -205,6 +246,7 @@ function init() {
 		});
 
 		reset_index();
+
 
 	});
 

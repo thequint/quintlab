@@ -1,10 +1,10 @@
 function preview_data() {
 	$('#preview').html('');
-	var profile_msz;
+	for (var i = 0; i < chat_data.discussion.length; i++) {
+		var profile_msz;
 	var profile_img = '';
 	var profile_img_src = '';
-	for (var i = 0; i < chat_data.discussion.length; i++) {
-
+	
 		if ($('#preview li').length === 0) {
 			//console.log(chat_data.discussion[i].profile - 1);
 			profile_msz = '<li data-index="' + chat_data.discussion[i].profile + '" class="message-left">';
