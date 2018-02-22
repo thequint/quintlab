@@ -153,7 +153,7 @@ function remove_message() {
 	
 	$('#MessageBulder li:last-child .remove-profile').click(function () {
 		$(this).closest("li").remove();
-		reset_profile_image();
+		//reset_profile_image();
 		
 	});
 }
@@ -191,11 +191,13 @@ function message_bulder(index) {
 
 			if ($('#MessageBulder li:last-child').hasClass('message-left')) {
 				profile_msz = '<li data-index="' + index + '" class="message-left">';
+				profile_img = ' <div class="profile-img"><img alt="avatar" src="' + profile_img_src + '"></div>';
 			}
 
 			// else assign right
 			else {
 				profile_msz = '<li data-index="' + index + '" class="message-right">';
+				profile_img = ' <div class="profile-img"><img alt="avatar" src="' + profile_img_src + '"></div>';
 			}
 
 
