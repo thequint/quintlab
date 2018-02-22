@@ -10,8 +10,8 @@
 
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/index.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css"> -->
 <!-- <link rel="stylesheet" type="text/css" href="assets/css/quiz.css"> -->
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
@@ -22,19 +22,13 @@
 <style type="text/css">
 body {
 	background: none;
+	/*font-family: 'Oswald', sans-serif;*/
 }
-/*.main-wrap {
-	max-width: 740px;
-	margin: 0 auto;
-	position: relative;
-    background-color: #302f37;
-    border-radius: 60px;
-    overflow: hidden;
-
-}*/
-
 .main-wrap.show {
     opacity: 1;
+}
+.card {
+	margin-bottom: 20px;
 }
 #svg_circle {
     margin: 0 auto;
@@ -51,45 +45,9 @@ body {
 	left: 0;
 	background: rgba(0,0,0, 0.1);
 }
-/*.main-wrap, #step01, #step02 {
-    height: 600px;
+#step02 .song-footer .play-icon li {
+	background-color: #ccc;
 }
-.main-wrap--container {
-    width: 200%;
-    transition: 0.9s all ease-in-out;
-}
-#step01 {
-    position: relative;
-    padding: 57px 0 17px;
-    width: 50%;
-    float: left;
-}
-#svg_circle {
-    margin: 0 auto;
-    max-width: 550px;
-    padding: 0 20px;
-}
-.box-nut-top-left, .box-nut-top-right, .box-nut-btm-left, .box-nut-btm-right {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-}
-.box-nut-top-left {
-    top: 7%;
-    left: 7%;
-}
-.box-nut-top-right {
-    top: 7%;
-    right: 7%;
-}
-.box-nut-btm-left {
-    bottom: 7%;
-    left: 7%;
-}
-.box-nut-btm-right {
-    bottom: 7%;
-    right: 7%;
-}*/
 </style>
      
 </head>
@@ -135,11 +93,11 @@ body {
 		</div>
 		<div class="col-lg-6 text-center">
 			Preview
-			<i class="fas fa-sync-alt ml-1 refresh-icon"></i>
+			<i id="jukebox_preview" class="fa fa-sync-alt"></i>
 		</div>
 	</div>
 	<div class="row widget-details">
-		<div class="col-lg-6 col-sm-12" style="width:350px;max-width:350px;">
+		<div class="col-lg-6 col-sm-12" style="width:350px;max-width:350px;margin-bottom:20px;">
 			
 			<div id="moods_card" class="sortable">
 
@@ -185,7 +143,7 @@ body {
 
 
 		<div class="" style="width:790px;max-width:790px;">
-			<div class="main-wrap show">
+			<div class="main-wrap">
 				<div class="main-wrap--overlay"></div>
 				<div class="main-wrap--container">
 
@@ -207,32 +165,49 @@ body {
 
 					<!-- Step 02 -->
 					<div id="step02">
-						<div class="step02--container">Step 02</div>
-						<span class="back-btn">back-btn</span>
+						<div class="step02--container">
+							<div class="back-btn"><img src="jukebox/assets/images/back-btn.svg"></div>
+
+							<div class="iframe-section track-love">
+								<div class="song-name">
+									<span>Now Playing</span>
+									<marquee class="open"><!-- Jab se tere naina mere naino se laage re --></marquee>
+								</div>
+								<div class="song-iframe"></div>
+							</div>
+							<footer class="song-footer">
+								<h2><span>Click to play your mood</span></h2>
+
+								<span class="btn-track01 track-btn active">Track 1</span>
+								<span class="btn-track02 track-btn">Track 2</span>
+
+								<ul class="play-icon">
+
+								</ul>
+							</footer>
+
+						
+
+							<!-- <footer class="song-footer">
+								<h2><span>Click to play your mood</span></h2>
+
+								<span class="btn-track01 track-btn active">Track 1</span>
+								<span class="btn-track02 track-btn">Track 2</span>
+
+								<ul class="play-icon">
+									<li class="heart-icon" data-video="vkKqVE9d_zw" data-videoname="Jab se tere naina mere naino se laage re"><img src="jukebox/assets/images/heart-icon.svg"></li>
+									<li class="soulful-icon" data-video="Mo5tQDcs__g" data-videoname="Hum Jo Chal Ne Lage..Chal Ne Lage Hai"><img src="jukebox/assets/images/soulful-icon.svg"></li>
+									<li class="heartbreak-icon" data-video="XdbjtoMkerU" data-videoname="Behati Hawa Sa Tha Woh, Udati Patang Sa Tha Woh"><img src="jukebox/assets/images/heartbreak-icon.svg"></li>
+									<li class="party-icon" data-video="VzLG6OqOcn8" data-videoname="Deewangi Deewangi Deewangi Hai"><img src="jukebox/assets/images/party-icon.svg"></li>
+									<li class="surprise-icon" data-video="IIg8H60bRJo" data-videoname="Woh Ladki Hai Kahan"><img src="jukebox/assets/images/surprise-icon.svg"></li>
+								</ul>
+							</footer> -->
+						</div>
 					</div>
-
-
 
 
 				</div>
 			</div>
-
-
-
-			<!-- <div class="main-wrap">
-				<div class="main-wrap--container">
-					<div id="step01">
-
-						<span class="box-nut-top-left"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-top-right"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-btm-left"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-btm-right"><img src="jukebox/assets/images/box-nut.svg"></span>
-
-						<div id="svg_circle"></div>
-
-					</div>
-				</div>
-			</div> -->
 
 			<div id="moods_result">
 				<ul id="svg-labels"></ul>
@@ -254,8 +229,10 @@ body {
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<!-- <script src="quizzes/assets/js/spreadsheet.js"></script> -->
+<script src="quizzes/assets/js/spreadsheet.js"></script>
+<script src="jukebox/assets/js/dynamic_functions.js"></script>
 <script src="assets/js/jukebox.js"></script>
+
 <!-- <script src="jukebox/assets/js/functions.js"></script> -->
 
 
