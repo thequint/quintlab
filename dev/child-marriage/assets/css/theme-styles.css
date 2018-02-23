@@ -179,16 +179,20 @@ img {
     text-transform: capitalize;
     /*font-family: "Merriweathersans",sans-serif !important;*/
 }
-.quintlab-details__content--headline.first {
+.slide-first,
+.slide-first blockquote {
 	color: #a95bbb;
 }
-.quintlab-details__content--headline.second {
+.slide-second,
+.slide-second blockquote {
 	color: #bd4d34;
 }
-.quintlab-details__content--headline.third {
+.slide-third,
+.slide-third blockquote {
 	color: #02a0b9;
 }
-.quintlab-details__content--headline.forth {
+.slide-forth,
+.slide-forth blockquote {
 	color: #ce3c65;
 }
 
