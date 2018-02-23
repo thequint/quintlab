@@ -179,11 +179,38 @@ img {
     text-transform: capitalize;
     /*font-family: "Merriweathersans",sans-serif !important;*/
 }
+.quintlab-details__content--headline.first {
+	color: #a95bbb;
+}
+.quintlab-details__content--headline.second {
+	color: #bd4d34;
+}
+.quintlab-details__content--headline.third {
+	color: #02a0b9;
+}
+.quintlab-details__content--headline.forth {
+	color: #ce3c65;
+}
+
 .quintlab-details__content--media {
 	margin: 0 auto;
 	width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
+}
+.quintlab-details__content--media figcaption {
+	font-size: 12px;
+	line-height: 18px;
+	color: #333;
+	padding-top: 5px;
+	/*letter-spacing: 1.15px;*/
+	font-family: "Merriweather","Georgia",serif !important;
+    font-weight: 700 !important;
+    text-align: center;
+}
+.quintlab-details__content--media figcaption em {
+	font-style: italic;
+	display: block;
 }
 .quintlab-details__content--iframe {
 	margin: 0 auto 15px;
