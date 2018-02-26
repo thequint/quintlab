@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.si-mi-st-wrap .si-mi-st-header{
+	padding:0;
+	border:0px;
+}
+
+.si-mi-st-wrap .si-mi-st-header .si-st-heading{
+	font-size:26px;
+	height: 34px;
+	line-height: 100%;
+	padding: 4px 8px 4px 6px;
+}
+
+.si-mi-st-wrap .si-mi-st-header .si-st-heading span{
+	display: block;
+	line-height: 100%;
+}
+
+.si-mi-st-wrap .si-mi-st-header:before{display: none;}
+
+.si-mi-st-wrap .si-mi-st-header .si-st-heading span::after {
+	background-color: #333;
+	content: "";
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	right: -9px;
+	top: -9px;
+	z-index: 2;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td{
+	font-size: 16px;
+	padding:13px 6px;
+	line-height: 100%;
+	text-align: left;
+}
+
+.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td.st-td-team .si-mi-st-teamName{
+	margin: 0;
+}
+
+
+
+.topPerformer-bat-wrap{
+	padding:0;
+}
+
+.topPerformer-bat-wrap .topPerformer-title{
+	font-size:18px;
+	padding: 3px 6px;
+}
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-head .td-name, 
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-head .td-runs{
+	font-size:20px;
+}
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-head .tP-tbl-tr .tP-tbl-td.td-name .plyr-name, 
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-body .tP-tbl-tr .tP-tbl-td.td-name .plyr-name{
+	font-size:18px;
+}
+
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-body .tP-tbl-tr .tP-tbl-td{
+	font-size:18px;
+}
+
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-head .tP-tbl-tr .tP-tbl-td, 
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-body .tP-tbl-tr .tP-tbl-td{
+	padding:7px 0px;
+	line-height: 100%;
+}
+
+.topPerformer-bat-wrap.topPerformer-batting{
+	margin-bottom:0;
+}
+
+@media (max-width: 1199px) {
+	.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td {
+	padding: 11px 6px;
+	font-size: 15px;
+}
+}
+
+@media (max-width: 991px) {
+	.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td {
+	padding: 13px 6px;
+	font-size: 16px;
+}
+	
+	
+	
+}
+
+
+
+@media screen and (max-width: 767px){
+.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td.st-td-team {
+     width: 50%; 
+}
+	
+.si-mi-st-wrap .si-mi-st-body .si-mi-st-tbl .si-mi-st-tr .si-mi-st-td.st-td-m{
+	width: 25%; 
+		
+	}
+}
+
+/*Bootstrap Custom Score*/
+.simc-container{margin: 0 auto !important;}
+.simc-left-sidebar{border:0px solid #DAD8D8 !important;}
+.col-sm-6{
+	float: left;
+	width: 50%;
+}
+
+

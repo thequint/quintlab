@@ -43,10 +43,10 @@ function reset_profile_image()
 
 
 {
-	console.log('yes');
+	//console.log('yes');
 	
 	$("#MessageBulder li").each(function(index){
-		console.log(index+"|" +$(this).find(".profile-img").length)
+		//console.log(index+"|" +$(this).find(".profile-img").length)
 		// if it is the first chat in the list, then it should have an image
 		if(index==0 && $(this).find(".profile-img").length==0 )
 			{
@@ -55,7 +55,7 @@ function reset_profile_image()
 			}
 		else
 			{
-				console.log(index+"|" +$(this).find(".profile-img").length)
+				//console.log(index+"|" +$(this).find(".profile-img").length)
 				//console.log($(this).attr('data-index')+"|"+$("#MessageBulder li").eq(index-1).attr('data-index'))
 				//console.log(index+"|"+$(this).find("profile-img").length)
 				if($(this).attr('data-index')!=$("#MessageBulder li").eq(index-1).attr('data-index') && $(this).find(".profile-img").length==0 )
@@ -130,16 +130,16 @@ function update_profile_name(this_var) {
 
 
 $('#ProfileDetails li .url').bind("keyup change", function () {
-
-	update_profile_images($(this))
+"use strict";
+	update_profile_images($(this));
 });
 
 
 
 
 $('#ProfileDetails li .name').bind("keyup change", function () {
-
-	update_profile_name($(this))
+"use strict";
+	update_profile_name($(this));
 });
 
 
@@ -342,5 +342,32 @@ function build_array() {
 $('#BtnPreview').click(function () {
 	"use strict";
 	build_array();
-	console.log(chat_data);
+	//console.log(chat_data);
+	
+	setInterval(function(){
+		$('#preview li').each(function(){
+			
+		if($(this).find('iframe').hasClass('twitter-tweet'))
+			
+		{
+			//do nothing
+		}
+			
+		else if(!$(this).find('figcaption').hasClass('embed-16_9') && $(this).find('iframe').length>0 )
+			
+		{
+			//console.log("yes");
+			$(this).find('figcaption').addClass('embed-16_9');
+		}
+			
+	});
+	
+	
+	}, 500);
+
 });
+
+
+
+
+
