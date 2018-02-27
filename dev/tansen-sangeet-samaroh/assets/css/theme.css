@@ -1022,7 +1022,10 @@ transform:translateY(4px) rotate(90deg)
 */
 
 p a {
-	color: #393185;
+	color: #0093C6;transition: 0.2s all ease-in-out;
+}
+p a:hover {
+	color: #222;
 }
 #tooltip {
 	text-align: left;
