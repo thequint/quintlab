@@ -21,7 +21,11 @@
 <body>
 <div class="main-wrap--form">
     <form id="foo">
-        <div class="form-group">
+        <p><label>Name</label>
+            <input id='Comments' name='Comments' type='text'>
+        </p>
+
+        <!-- <div class="form-group">
             <label for="Tinder_Id">Id:</label>
             <input id="Tinder_Id" name="Tinder_Id" type="text" value="" placeholder="Id">
         </div>
@@ -44,12 +48,15 @@
         <div class="form-group">
             <label for="Tinder_Description">Description:</label>
             <input id="Tinder_Description" name="Tinder_Description" type="text" value="" placeholder="Description">
-        </div>
+        </div> -->
 
 
         <div class="form-group">
+            <div id='success'></div>
+            <button type='submit'>Send</button>
+            <!-- <div id='success'></div>
             <button type="submit" class="btn-submit">Send</button>
-            <span id="result"></span>
+            <span id="result"></span> -->
         </div>
     </form>
 </div>
@@ -58,59 +65,64 @@
 
 <!-- JS Libraries -->
 <script type="text/javascript">
-jQuery( document ).ready(function( $ ) {
-    // variable to hold request
+$(document).ready(function(){
+    // Variable to hold request
     var request;
-    
+
+    // Bind to the submit event of our form
     $("#foo").submit(function(event){
-        // abort any pending request
+
+        // Abort any pending request
         if (request) {
             request.abort();
         }
         // setup some local variables
         var $form = $(this);
-        // let's select and cache all the fields
+
+        // Let's select and cache all the fields
         var $inputs = $form.find("input, select, button, textarea");
-        // serialize the data in the form
+
+        // Serialize the data in the form
         var serializedData = $form.serialize();
-    
+
+        // Let's disable the inputs for the duration of the Ajax request.
+        // Note: we disable elements AFTER the form data has been serialized.
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
-        $('#result').text('Sending data...');
-    
-        // fire off the request to /form.php
+
+        // Fire off the request to /form.php
         request = $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbzhUtCuc8pzkZ6KQXmN0w0IsJTZ1IvuLpVHjI8Awks1zuEywJxJ/exec",
+            url: "https://script.google.com/macros/s/AKfycbylU1wHMhmLt0Xwx5yRWgzFxrkE9iXcM5VCC86kpHFCVeu7Y2s/exec",
             type: "post",
             data: serializedData
         });
-    
-        // callback handler that will be called on success
+
+        // Callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
-            // log a message to the console
-            //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
-            $('#result').html('<span class="success">Success</span>');
+            // Log a message to the console
             console.log("Hooray, it worked!");
+            console.log(response);
+            console.log(textStatus);
+            console.log(jqXHR);
         });
-    
-        // callback handler that will be called on failure
+
+        // Callback handler that will be called on failure
         request.fail(function (jqXHR, textStatus, errorThrown){
-            // log the error to the console
+            // Log the error to the console
             console.error(
-                "The following error occured: "+
+                "The following error occurred: "+
                 textStatus, errorThrown
             );
         });
-    
+
+        // Callback handler that will be called regardless
         // if the request failed or succeeded
         request.always(function () {
-            // reenable the inputs
+            // Reenable the inputs
             $inputs.prop("disabled", false);
         });
 
-        $('#foo').find('input, textarea').val('');
-    
-        // prevent default posting of form
+        // Prevent default posting of form
         event.preventDefault();
     });
 });
