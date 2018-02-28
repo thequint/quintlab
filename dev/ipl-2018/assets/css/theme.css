@@ -14,7 +14,8 @@ body {
 /*	background-color: #333333;*/
 	margin: 0 !important;
 	padding: 0 !important;
-	background-image:radial-gradient(circle at -40% -10%, #4f76f2, #0f1b41 60%);
+/*	background-image:radial-gradient(circle at -40% -10%, #4f76f2, #0f1b41 60%);*/
+	background:#243056;
 	background-attachment: fixed;
 }
 
@@ -35,7 +36,7 @@ button, a {
 	-ms-transition: all 0.2s ease-in-out;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #333;
+	color: #fff;
 	font-weight: normal;
 	font-family: 'coolveticaregular';
 }
@@ -59,20 +60,20 @@ h1, h2, h3, h4, h5, h6 {
 	width: 33.333%;
 }
 .headline {
-	color: #333;
+	color: #fff;
 	font-size: 26px;
 	line-height: 100%;
 	height: 34px;
 }
 .headline span {
-	background-color: #f4c70c;
+	background-color: #ef4224;
 	display: inline-block;
 	padding: 4px 8px 4px 6px;
 	overflow: hidden;
 	position: relative;
 }
 .headline span::after {
-	background-color: #333;
+	background-color: #243056;
 	content: "";
 	height: 15px;
 	width: 15px;
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 .top-news li a {
-	color: #333;
+	color: #fff;
 	display: block;
 	position: relative;
 	overflow: hidden;
@@ -179,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	content: '';
 	position: absolute;
-	background: #f4c70c;
+/*	background: #f4c70c;*/background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	top: 0;
 	left: -26px;
 	transform: skew(-34deg);
@@ -237,7 +238,8 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	content: '';
 	position: absolute;
-	background: #f4c70c;
+/*	background: #f4c70c;*/
+	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	top: 0;
 	left: 0;
 	transform: skew(-34deg);
@@ -357,7 +359,8 @@ table {
 	padding: 6px 5px 3px;
 }
 .mvp-list figcaption {
-	background: #F4C70C;
+/*	background: #F4C70C;*/
+	background-image: linear-gradient(to right, #ef4224, #e07c5e);                 
 	padding: 10px;
 	color: #333;
 	min-height: 141px;
@@ -369,8 +372,8 @@ table {
 	margin-bottom: 10px;
 }
 .mvp-list figcaption h4 span {
-	background: #333 none repeat scroll 0 0;
-	color: #F4C70C;
+	background: #4f76f2 none repeat scroll 0 0;
+	color: #fff;
 	display: inline-block;
 	font-size: 18px;
 	padding: 6px 5px 3px;
@@ -383,6 +386,7 @@ table {
 .mvp-list figcaption p {
 	margin: 0;
 	line-height: 120%;
+	color: rgba(255,255,255,0.8);
 }
 .wrapper-carousel .container {
 /*	overflow: hidden;*/
@@ -392,7 +396,7 @@ table {
 }
 .more-news figure {
 	margin: 0px 5px;
-	background: #F4C70C;
+	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 }
 .more-news figcaption {
 	padding: 10px;
@@ -401,7 +405,7 @@ table {
 }
 .more-news a {
 	display: inline-block;
-	color: #333;
+	color: #fff;
 }
 .single-news {
 	overflow: hidden;
@@ -427,8 +431,9 @@ table {
 	max-width: 100%;
 	top: inherit;
 	position: relative;
-	color: #333;
-	background-color:#F4C70C;
+	color: rgba(255,255,255,0.8);
+/*	background-color:#F4C70C;*/
+	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	
 	transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -497,14 +502,15 @@ table {
 	overflow: hidden;
 }
 .wrapper.footer-wrapper {
-	background-color: #F4C70C;
-	color: #333;
+/*	background-color: #F4C70C;*/
+	background-image: linear-gradient(to right, #ef4224, #e07c5e);
+	color: #fff;
 	padding: 20px 0;
 	text-align: center;
 }
 .wrapper.footer-wrapper a {
 	display: inline-block;
-	color: #333;
+	color: #fff;
 }
 .others-ners .more-list a {
 	position: relative;
