@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 	position: relative;
 	z-index: 100;
+	pointer-events: none;
 }
 .assets a {
 	display: block;
@@ -66,6 +67,15 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
+	cursor: default;
+}
+.assets a path,
+.assets a circle,
+.assets a polygon,
+.assets a text,
+.assets a rect{
+	
+	cursor: pointer;
 }
 .assets a.tea-cup {
 	bottom: 66%;
@@ -103,7 +113,26 @@ h1, h2, h3, h4, h5, h6 {
 	width: 41%;
 	z-index: 99;
 }
-.assets a:hover {
+
+.assets a.laptop-bg {
+	width: 40%;
+	left: 30%;
+	bottom: 20%;
+	z-index: 9999;
+}
+
+
+.hands {
+	position: absolute;
+	z-index: 9999;
+	pointer-events: none;
+	width: 54%;
+	bottom: -3%;
+	left: 22%;
+}
+
+
+.assets a.hover_class {
 	transform: scale(1.2) rotateZ(-5deg);
 	-moz-transform: scale(1.2) rotateZ(-5deg);
 	-webkit-transform: scale(1.2) rotateZ(-5deg);
@@ -164,3 +193,6 @@ h1, h2, h3, h4, h5, h6 {
 .modal-container p {
 	margin: 0;
 }
+
+
+
