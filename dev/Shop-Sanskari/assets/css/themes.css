@@ -2109,8 +2109,6 @@ input:focus {
     animation-duration: 15s;
 }
 
-
-
 @keyframes flower_ani {
 	0%{
 		transform: translate3d(0, -10vh, 0);
