@@ -268,6 +268,12 @@
   top: 0;
   width: 100%;
 }
+.quick-cart-product > div .s1  #product_price {
+  font-weight: bold;
+}
+.quick-cart-product > div .s1 .price-rs {
+  font-size: 12px;
+}
 
 .quick-cart-product > div del {
   display: none;

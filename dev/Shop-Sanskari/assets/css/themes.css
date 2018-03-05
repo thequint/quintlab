@@ -1343,6 +1343,123 @@ input:focus {
 	background-size: 150px;
 	background-position: center top;
 }
+
+#AddToCart {
+	cursor: pointer;
+}
+
+
+
+.section.inner-header.thank-you-header {
+	position: relative;
+	border-top: 5px #fcd10e solid;
+    background-color: #6d387e;
+    width: 100%;
+    height: auto;
+	background-image: url(../images/line-pattern2.png);
+	background-repeat: repeat-y;
+	background-size: 100%;
+	background-position: top;
+	padding-bottom: 130px;
+}
+.section.inner-header.thank-you-header:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	content: " ";
+	width: 100%;
+	height: 130px;
+	z-index: 1;
+	background-image: url(../images/header-pattern.png);
+	background-repeat: repeat-x;
+	background-size: 150px;
+	background-position: center top;
+}
+.thank-you--container {
+	position: relative;
+	top: -125px;
+	z-index: 0;
+	margin: 0 auto;
+	max-width: 800px;
+	color: #000;
+	/*background-color: #fff;*/
+	/*min-height: 500px;
+	background-image: url(../images/thank-up-bg.png);
+	background-repeat: repeat-y;
+	background-size: 100%;
+	background-position: top left;*/
+}
+.thank-you--container:after {
+	content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    width: 100%;
+    clear: both;
+}
+.thank-you--content {
+	position: relative;
+	margin: 0 auto;
+	padding: 150px 15px 0;
+	max-width: 550px;
+	z-index: 5;
+	text-align: center;
+}
+.thank-you--content h2 {
+	color: #ff49ff;
+	padding: 0 20px;
+	/*font-size: 18px;*/
+	font-style: italic;
+	margin-bottom: 20px;
+	/*min-height: 50px;*/
+	/*background-color: #ccc;*/
+}
+/*.thank-you--content__title {
+	min-height: 50px;
+}*/
+.thank-you--content h1 {
+	margin: 0 auto;
+	color: #fff;
+	max-width: 350px;
+	font-size: 26px;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 20px;
+}
+.thank-you--content h1 span {
+	padding: 0 10px;
+	background-color: #fcd20e;
+}
+.thank-you--content p {
+	color: #743878;
+	font-size: 15px;
+	margin-bottom: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.thank-you--bg-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	background-image: url(../images/thank-up-bg.png);
+	background-repeat: repeat-y;
+	background-size: 100%;
+	background-position: top left;
+}
+
+.thank-you--bg-btm {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform:translate(0,70%);
+}
+
+
+
+
 .inner-header .quint-logo {
 	position: absolute;
 	top: 18px;
@@ -1779,6 +1896,9 @@ input:focus {
 	color: #333;
 	font-weight: 700;
 }
+.recommended--container figure figcaption h4 {
+	font-family: 'Roboto', sans-serif;
+}
 .section.reviews {
 	background-color: #fff;
 }
@@ -1895,6 +2015,110 @@ input:focus {
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
+
+.flower-animation {
+	animation: flower_ani 15s linear infinite;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    /*background-color: #ccc;*/
+    z-index: 5;
+}
+.flower-animation img {
+	width: 100%;
+}
+
+
+
+.flower-first {
+	width: 30px;
+    left: 4%;
+    animation-duration: 20s;
+}
+.flower-second {
+	width: 50px;
+    left: 8%;
+    animation-duration: 10s;
+}
+.flower-third {
+	width: 20px;
+    left: 15%;
+    animation-duration: 12s;
+}
+.flower-forth {
+	width: 30px;
+    left: 22%;
+    animation-duration: 17s;
+}
+.flower-fifth {
+	width: 18px;
+    left: 29%;
+    animation-duration: 15s;
+}
+
+
+.flower-sixth {
+	width: 65px;
+    left: 34%;
+    animation-duration: 9s;
+}
+.flower-seventh {
+	width: 30px;
+    left: 43%;
+}
+.flower-eighth {
+	width: 45px;
+    left: 50%;
+    animation-duration: 12s;
+}
+.flower-ninth {
+	width: 20px;
+    left: 58%;
+    animation-duration: 17s;
+}
+.flower-tenth {
+	width: 60px;
+    left: 66%;
+    animation-duration: 11s;
+}
+
+.flower-eleven {
+	width: 25px;
+    left: 75%;
+    animation-duration: 15s;
+}
+.flower-twelve {
+	width: 40px;
+    left: 80%;
+    animation-duration: 12s;
+}
+.flower-thirteen {
+	width: 30px;
+    left: 85%;
+    animation-duration: 15s;
+}
+.flower-forteen {
+	width: 50px;
+    left: 90%;
+    animation-duration: 7s;
+}
+.flower-fifteen {
+	width: 30px;
+    left: 97%;
+    animation-duration: 15s;
+}
+
+
+
+@keyframes flower_ani {
+	0%{
+		transform: translate3d(0, -10vh, 0);
+	}
+	100%{
+		transform: translate3d(0, 120vh, 0);
+	}
+}
 
 @media only screen and (max-width: 1279px) {
 
@@ -2605,6 +2829,12 @@ input:focus {
 	/*.cart-item .item-content--right {
 		padding: 10px 30px 20px;
 	}*/
+	.thank-you--content h1 {
+		font-size: 20px;
+	}
+	.thank-you--content h1 span {
+		padding: 0 7px;
+	}
 }
 @media only screen and (max-width: 400px) {
 

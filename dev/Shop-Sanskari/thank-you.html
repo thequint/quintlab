@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Cart page</title>
+<title>Thank You</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
@@ -33,31 +33,69 @@
 <![endif]-->
 </head>
 
-<body class="product-cart">
-<div class="loader"></div>
+<body class="thank-you">
+<!-- <div class="loader"></div> -->
 
 <div class="main-wrap">
+    <span class="flower-animation flower-first"><img src="assets/images/flowers/flowers01.png"></span>
+    <span class="flower-animation flower-second"><img src="assets/images/flowers/flowers02.png"></span>
+    <span class="flower-animation flower-third"><img src="assets/images/flowers/flowers03.png"></span>
+    <span class="flower-animation flower-forth"><img src="assets/images/flowers/flowers04.png"></span>
+    <span class="flower-animation flower-fifth"><img src="assets/images/flowers/flowers05.png"></span>
 
-    <section class="section inner-header cart-header">
+    <span class="flower-animation flower-sixth"><img src="assets/images/flowers/flowers01.png"></span>
+    <span class="flower-animation flower-seventh"><img src="assets/images/flowers/flowers02.png"></span>
+    <span class="flower-animation flower-eighth"><img src="assets/images/flowers/flowers03.png"></span>
+    <span class="flower-animation flower-ninth"><img src="assets/images/flowers/flowers04.png"></span>
+    <span class="flower-animation flower-tenth"><img src="assets/images/flowers/flowers05.png"></span>
+
+    <span class="flower-animation flower-eleven"><img src="assets/images/flowers/flowers01.png"></span>
+    <span class="flower-animation flower-twelve"><img src="assets/images/flowers/flowers02.png"></span>
+    <span class="flower-animation flower-thirteen"><img src="assets/images/flowers/flowers03.png"></span>
+    <span class="flower-animation flower-forteen"><img src="assets/images/flowers/flowers04.png"></span>
+    <span class="flower-animation flower-fifteen"><img src="assets/images/flowers/flowers05.png"></span>
+
+    <section class="section inner-header thank-you-header">
         <div class="quint-logo"><img src="assets/images/quint-purple-logo.svg"></div>
         <div class="inner-header--sanskari-logo wow bounce"><a class="home_url" href="index.html"><img src="assets/images/shop-sanskari-logo.svg"></a></div>
         <!-- Carts -->
-        <div class="header-cart">
+        <!-- <div class="header-cart">
             <a id="header-cart-q" href="carts.html">
                 <span class="header-cart-item">10</span>
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
             </a>
-        </div>
+        </div> -->
         <div class="share"> <a class="share-ico" href="javascript:void(0);">share</a>
             <ul class="social-ico">
                 <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/phone-life-balance/&t=Check+your+phone-life+balance."><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/phone-life-balance/&text=Check your phone-life balance.%20https%3A//thequint.com/quintlab/phone-life-balance/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
         </div>
+
+        <div class="thank-you--container">
+            <div class="thank-you--content">
+
+                <!-- <div id="product_title"></div> -->
+
+                <h2 class="thank-you--content__title">You have successfully added <span id="product_title"></span> to your cart.</h2>
+                <!-- <h2 id="#product_title"></h2> -->
+
+                <h1><span>PAR ITNE SANSKAAR KA</span><br><span>AAP KARENGE KYA?</span></h1>
+                <p>Apart from force-fitting yourself into society's idea of an 'adarsh' citizen?
+                Good job in effectively wasting important time of your life by letting us be your 'sanskaar ka thekedaar'.</p>
+                <p>Wearing the clothes you like, going to places that you enjoy, putting on red lipstick and post your unfiltered thoughts on social media doesn't make you the least bit <strong>UNSANSKARI</strong>. It's a free country that respects your individual choices.</p>
+                <p>Don't let anyone (including us) judge your sanskaar.</p>
+                <h2>Just be the way you are!</h2>
+
+            </div>
+            <div class="thank-you--bg-top"></div>
+            <div class="thank-you--bg-btm"><img src="assets/images/thank-btm-bg.png"></div>
+        </div>
+        
     </section>
 
 
-    <section class="section add-cart">
+    <!-- <section class="section add-cart">
         <div class="add-cart--container">
 
             <div class="cart-items-list">
@@ -69,7 +107,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     
 
 
@@ -140,6 +178,14 @@
 <script src="assets/js/cart.js"></script>
 
 <script type="text/javascript" src="assets/js/functions.js"></script>
-
+<script>
+function resize_cont(){
+    $(".thank-you--bg-top").css("height",$(".thank-you--content").height()+parseInt($(".thank-you--content").css("padding-top"))-($(".thank-you--bg-btm").height()*0.3)+1)
+}
+resize_cont();
+$(window).resize(function(){
+    resize_cont();
+});
+</script>
 </body>
 </html>
