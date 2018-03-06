@@ -680,6 +680,21 @@ img {
 	position: relative;
 }
 
+.product-detail .price span {
+	float: left;
+}
+.product-detail .price .details-coin {
+	margin: 4px 0 0 6px;
+    display: block;
+    width: 40px;
+    height: 40px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
+
+
 .second--body .item-head--headline::before {
 	position: absolute;
 	top: 0;
@@ -1648,19 +1663,38 @@ input:focus {
 	width: 120px;
 	font-size: 24px;
 }
-.cart-item .item-content--left__price strong {
+.cart-item .item-content--left__price .product_cart_price {
 	color: #444;
 	font-size: 40px;
 	line-height: 40px;
 	font-weight: 700;
 }
-.cart-item .item-content--left__price span {
+/*.cart-item .item-content--left__price span {
 	display: block;
 	color: #afaeae;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 14px;
+}*/
+.cart-item .item-content--left__price span {
+	float: left;
 }
+.cart-item .item-content--left__price .carts-coin {
+	margin: 4px 0 0 4px;
+    display: block;
+    width: 36px;
+    height: 36px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
+
+
+
+
+
+
 .item-content--left__description {
 	font-size: 15px;
 	float: left;
@@ -1679,16 +1713,35 @@ input:focus {
 	padding: 15px 23px 0;
 }
 .cart-item .item-content--right .sub-total--container {
-	font-size: 14px;
-	color: #444;
-	margin-top: 25px;
-	text-align: center;
-}
-.cart-item .item-content--right .sub-total--container span {
+	padding-left: 31%;
 	font-size: 16px;
 	color: #444;
 	font-weight: 700;
+	margin-top: 25px;
+	text-align: center;
 }
+/*.cart-item .item-content--right .sub-total--container span {
+	font-size: 16px;
+	color: #444;
+	font-weight: 700;
+}*/
+
+.cart-item .item-content--right .sub-total--container span {
+	float: left;
+	/*display: inline-block;*/
+}
+.cart-item .item-content--right .sub-total--container .sub-total-coin {
+	margin: 4px 0 0 3px;
+    display: block;
+    width: 16px;
+    height: 16px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
+
+
 
 .cart-item .item-content--right .add-review {
 	font-size: 16px;
