@@ -2625,6 +2625,13 @@ input:focus {
 		width: -webkit-calc(100% - 0px);
 		margin: 0 0 30px;
 	}
+	.flower-third,
+	.flower-fifth,
+	.flower-eighth,
+	.flower-tenth,
+	.flower-thirteen {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 480px) {
