@@ -219,7 +219,7 @@ function showInfo(data) {
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>Rs.</span>" +data[index].Product_price +"</div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin'></span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"
@@ -383,7 +383,10 @@ function showInfo(data) {
 			"<div class='product_video'>"
                 // + "<img src="+'assets/products/large/'+data[id_item].Product_image +'.jpg'+">"
 
-                + "<iframe width='560' height='315' src='https://www.youtube.com/embed/"+ data[id_item].Product_video +"' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+                + "<iframe width='560' height='315' src='https://www.youtube.com/embed/"+ data[id_item].Product_video +"?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+
+                //'<iframe width="560" height="315" src="//www.youtube.com/embed/qHn0SJHL6Sk?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen>'
+
             + "</div>"
         )
 

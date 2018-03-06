@@ -835,15 +835,25 @@ img {
 	line-height: 24px;
 	/*margin-bottom: 3px;*/
 }
+.second--body .item-list--item-price .home-coin {
+	margin: 2px 0 0 4px;
+	display: block;
+	width: 23px;
+	height: 23px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
 .second--body .item-list--item-price span {
-	font-size: 16px;
-	font-weight: 400;
+	float: left;
 }
 
 /* Rating */
 
 .item-list--rating {
-	/*width: 300px;*/
+	width: 100%;
+	float: left;
 	height: 20px;
 	margin-left: -5px;
 	margin-top: 4px;
@@ -1837,13 +1847,9 @@ input:focus {
 	position: relative;
 }
 .big .product_video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: block;
+	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	/*padding-top: 25px;*/
+	padding-top: 25px;
 	height: 0;
 }
 .big .product_video iframe {
@@ -1853,11 +1859,6 @@ input:focus {
 	width: 100%;
 	height: 100%;
 }
-
-
-
-
-
 .section.recommended {
 	background-color: #fcd10e;
 }
