@@ -3,6 +3,7 @@
 
 
 $('input').val('');
+$('textarea').val('');
 
 // Create profile
 
@@ -341,9 +342,22 @@ function build_array() {
 
 $('#BtnPreview').click(function () {
 	"use strict";
-	build_array();
-	//console.log(chat_data);
+	//console.log(validation());
 	
+	if(validation())
+		{
+	update_preview();
+		}
+});
+
+
+function update_preview()
+{
+
+	
+	$('.create_conversation').show();		
+	build_array();
+	$("#message").val(JSON.stringify(chat_data));
 	setInterval(function(){
 		$('#preview li').each(function(){
 			
@@ -364,8 +378,50 @@ $('#BtnPreview').click(function () {
 	
 	
 	}, 500);
+		
+}
 
-});
+
+// form validation
+
+function validation(){
+	"use strict";
+	var i=1;
+	$('#ProfileDetails input, #MessageBulder textarea').each(function(){
+		
+		if($(this).val()==='' && i==1){
+			
+			alert('Please fill out all field');
+			i=0;
+			
+		} 
+		
+	});
+	//console.log($(".inner-block li figcaption textarea.form-control").length);
+	if($(".inner-block li figcaption textarea.form-control").length<=0)
+		{
+		alert('Please enter chat');
+			i=0;	
+		}
+	
+	
+	if(i==0)
+	return 0;
+	else
+	return 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

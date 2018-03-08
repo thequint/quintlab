@@ -91,6 +91,7 @@ a, a:hover{
 	font-weight: 500;
 	color: #333;
 	transition:0.2s all ease-in-out;
+	border: 0;
 }
 
 .btn-custom:hover{
@@ -262,6 +263,16 @@ ul#preview li figcaption {
 	height: 100%;
 }
 
+.iframe-url {
+	display:none1;
+}
+
+.iframe-url label{
+	font-weight:600;
+	display: block;
+	margin: 0 0 10px 0;
+}
+.iframe-url textarea{resize: none; height: 70px;}
 
 /*
 
