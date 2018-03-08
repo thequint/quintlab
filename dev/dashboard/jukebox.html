@@ -94,7 +94,22 @@ body {
 		<div class="col-lg-6 text-center">
 			Preview
 			<i id="jukebox_preview" class="fa fa-sync-alt"></i>
+			<form id='foo'>
+				<input id='jukeboxPushArray' name='jukeboxPushArray' type='text'><button type='submit'>Generate iFrame</button>
+			</form>
+
+			<form>
+				<div class="form-group">
+					<label for="text">Embedded Code</label>
+					<textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
+					<span class="copy-val">Copy</span>
+				</div>
+			</form>
+
+			<div class="preview"></div>
+			<!-- <div class="jukebox_pull"></div> -->
 		</div>
+
 	</div>
 	<div class="row widget-details">
 		<div class="col-lg-6 col-sm-12" style="width:350px;max-width:350px;margin-bottom:20px;">
@@ -213,7 +228,7 @@ body {
 				<ul id="svg-labels"></ul>
 			</div>
 			<!-- <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
-			<div class="display_results">Preview</div>
+			<div class="display_results"></div>
 			
 		</div>
 
@@ -229,12 +244,136 @@ body {
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<script src="quizzes/assets/js/spreadsheet.js"></script>
+<script src="jukebox/assets/js/spreadsheet.js"></script>
 <script src="jukebox/assets/js/dynamic_functions.js"></script>
 <script src="assets/js/jukebox.js"></script>
 
 <!-- <script src="jukebox/assets/js/functions.js"></script> -->
 
+<script data-cfasync="false" type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+
+	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
+
+	function copyHandler(){
+		$(".copy-val").click(function(){
+			console.log("click");
+		    $(".iframe-link").select();
+		    document.execCommand('copy');
+		});
+	}
+
+    // variable to hold request
+    var request;
+    
+    $("#foo").submit(function(event){
+    	event.preventDefault();
+
+    	copyHandler();
+
+        // Form Validation
+        // if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
+        //     alert('Please insert all fields');
+        // }
+
+         //$("#Comments").val( JSON.stringify(dashboard_data));	
+        //dashboard_data.push({});
+
+        // Display Date
+        var myDate = new Date();
+        var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
+        $('#default_block .que-block .timestamp').text(displayDate);
+
+        // abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+        // let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea");
+        // serialize the data in the form
+        var serializedData = $form.serialize();
+    
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+        $('#result').text('Sending data...');
+    
+
+    	Tabletop.init({
+			key: public_spreadsheet_contact,
+			callback: showInfo,
+			simpleSheet: true
+		});
+
+
+		function showInfo(data) {
+
+			$(".card").each(function(index){
+				if($(this).find(".select_category").val()==null){
+					alert("Select Moods");
+					return 0;
+
+				}else if($(this).find(".song-title_1").val() =="") {
+					alert("Insert Title");
+					return 0;
+
+				}else if($(this).find(".song-track_1").val() =="") {
+					alert("Insert Track");
+					return 0;
+				}else {
+					var embed_url = "<iframe class='quiz-iframe' src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
+
+					$(".iframe-link").val(embed_url);
+
+
+					//$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+				}
+			});
+
+			//console.log(data);
+
+	        // fire off the request to /form.php
+	        request = $.ajax({
+	            url: "https://script.google.com/macros/s/AKfycbx1b1UDkqU7Fq1fCSi7XzVG-lspj5t6CYBc8XsMtyB46uL6lcqz/exec",
+	            type: "post",
+	            data: serializedData
+	        });
+	    
+	        // callback handler that will be called on success
+	        request.done(function (response, textStatus, jqXHR){
+	            // log a message to the console
+	            //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+	            $('#result').html('<span class="success">Success</span>');
+	            console.log("Hooray, it worked!");
+	        });
+	    
+	        // callback handler that will be called on failure
+	        request.fail(function (jqXHR, textStatus, errorThrown){
+	            // log the error to the console
+	            console.error(
+	                "The following error occured: "+
+	                textStatus, errorThrown
+	            );
+	        });
+	    
+	        // if the request failed or succeeded
+	        request.always(function () {
+	            // reenable the inputs
+	            $inputs.prop("disabled", false);
+	        });
+
+	        $('#foo').find('input, textarea').val('');
+
+	        //var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
+			//$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+		}
+    
+        // prevent default posting of form
+        
+    });
+});
+</script>
 
 	
 </body>

@@ -1,132 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Quiz Form</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="description" content="">
-<meta name="author" content="">
-
-
-<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
 </head>
 
 <body>
-<div class="main-wrap--form">
-    <form id="foo">
-        <p><label>Name</label>
-            <input id='Comments' name='Comments' type='text'>
-        </p>
-
-        <!-- <div class="form-group">
-            <label for="Tinder_Id">Id:</label>
-            <input id="Tinder_Id" name="Tinder_Id" type="text" value="" placeholder="Id">
-        </div>
-
-        <div class="form-group">
-            <label for="Tinder_Image">Image:</label>
-            <input id="Tinder_Image" name="Tinder_Image" type="text" value="" placeholder="Image URL">
-        </div>
-
-        <div class="form-group">
-            <label for="Tinder_Title">Title:</label>
-            <input id="Tinder_Title" name="Tinder_Title" type="text" value="" placeholder="Title">
-        </div>
-
-        <div class="form-group">
-            <label for="Tinder_Subtitle">Subtitle:</label>
-            <input id="Tinder_Subtitle" name="Tinder_Subtitle" type="text" value="" placeholder="Subtitle">
-        </div>
-
-        <div class="form-group">
-            <label for="Tinder_Description">Description:</label>
-            <input id="Tinder_Description" name="Tinder_Description" type="text" value="" placeholder="Description">
-        </div> -->
-
-
-        <div class="form-group">
-            <div id='success'></div>
-            <button type='submit'>Send</button>
-            <!-- <div id='success'></div>
-            <button type="submit" class="btn-submit">Send</button>
-            <span id="result"></span> -->
-        </div>
-    </form>
-</div>
-
+<!-- Contact Form - sent to a Google Sheet -->
+<form id='foo'>
+    <p>
+        <label>Name</label>
+        <input id='name' name='name' type='text'>
+    </p>
+    <p>
+        <label>Email Address</label>
+        <input id='email' name='email' type='email'>
+    </p>
+    <p>
+        <label>Phone Number</label>
+        <input id='phone' name='phone' type='tel'>
+    </p>
+    <p>
+        <label>Message</label>
+        <textarea id='message' name='message' rows='5'></textarea>
+    </p>
+    
+    <button type='submit'>Send</button>
+    <div id="result"></div>
+    <div id='success'></div>
+</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- JS Libraries -->
-<script type="text/javascript">
-$(document).ready(function(){
-    // Variable to hold request
+<script data-cfasync="false" type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+    // variable to hold request
     var request;
-
-    // Bind to the submit event of our form
+    
     $("#foo").submit(function(event){
 
-        // Abort any pending request
+        // Form Validation
+        // if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
+        //     alert('Please insert all fields');
+        // }
+
+        // Display Date
+        var myDate = new Date();
+        var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
+        $('#default_block .que-block .timestamp').text(displayDate);
+
+        // abort any pending request
         if (request) {
             request.abort();
         }
         // setup some local variables
         var $form = $(this);
-
-        // Let's select and cache all the fields
+        // let's select and cache all the fields
         var $inputs = $form.find("input, select, button, textarea");
-
-        // Serialize the data in the form
+        // serialize the data in the form
         var serializedData = $form.serialize();
-
-        // Let's disable the inputs for the duration of the Ajax request.
-        // Note: we disable elements AFTER the form data has been serialized.
+    
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
-
-        // Fire off the request to /form.php
+        $('#result').text('Sending data...');
+    
+        // fire off the request to /form.php
         request = $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbylU1wHMhmLt0Xwx5yRWgzFxrkE9iXcM5VCC86kpHFCVeu7Y2s/exec",
+            url: "https://script.google.com/macros/s/AKfycbx1b1UDkqU7Fq1fCSi7XzVG-lspj5t6CYBc8XsMtyB46uL6lcqz/exec",
             type: "post",
             data: serializedData
         });
-
-        // Callback handler that will be called on success
+    
+        // callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
-            // Log a message to the console
+            // log a message to the console
+            //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+            $('#result').html('<span class="success">Success</span>');
             console.log("Hooray, it worked!");
-            console.log(response);
-            console.log(textStatus);
-            console.log(jqXHR);
         });
-
-        // Callback handler that will be called on failure
+    
+        // callback handler that will be called on failure
         request.fail(function (jqXHR, textStatus, errorThrown){
-            // Log the error to the console
+            // log the error to the console
             console.error(
-                "The following error occurred: "+
+                "The following error occured: "+
                 textStatus, errorThrown
             );
         });
-
-        // Callback handler that will be called regardless
+    
         // if the request failed or succeeded
         request.always(function () {
-            // Reenable the inputs
+            // reenable the inputs
             $inputs.prop("disabled", false);
         });
 
-        // Prevent default posting of form
+        $('#foo').find('input, textarea').val('');
+    
+        // prevent default posting of form
         event.preventDefault();
     });
 });
 </script>
 
 </body>
+
 </html>

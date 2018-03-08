@@ -111,7 +111,8 @@ $('#jukebox_preview').click(function(){
 		pie_events();
 	}
 	*/
-
+	console.log(dashboard_data);
+	$("#jukeboxPushArray").val(JSON.stringify(dashboard_data));
 });
 
 function jukeboxFormValidation(){
@@ -137,6 +138,25 @@ function jukeboxFormValidation(){
 		}
 	});
 }
+
+
+// function generateFormValidation(){
+
+// 	$(".card").each(function(index){
+// 		if($(this).find(".select_category").val()==null){
+// 			alert("Select Moods");
+// 			return 0;
+
+// 		}else if($(this).find(".song-title_1").val() =="") {
+// 			alert("Insert Title");
+// 			return 0;
+
+// 		}else if($(this).find(".song-track_1").val() =="") {
+// 			alert("Insert Track");
+// 			return 0;
+// 		}
+// 	});
+// }
 
 /*
 function pie_events() {

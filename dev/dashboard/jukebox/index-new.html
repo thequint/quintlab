@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Jukebox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Custom -->
+<link href="assets/css/base.css" rel="stylesheet">
+<link href="assets/css/svg-styles.css" rel="stylesheet">
+<link href="assets/css/styles.css" rel="stylesheet"> 
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+body {
+	/*background: none;*/
+	/*font-family: 'Oswald', sans-serif;*/
+}
+/*.main-wrap.show {
+    opacity: 1;
+}
+.card {
+	margin-bottom: 20px;
+}*/
+#svg_circle {
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 0 20px;
+}
+.main-wrap--overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0, 0.1);
+}
+#step02 .song-footer .play-icon li {
+	background-color: #ccc;
+}
+</style>
+</head>
+
+<body onload="adjust_iframe_height()">
+	
+<div class="main-wrap show">
+	<div class="main-wrap--overlay"></div>
+	<div class="main-wrap--container">
+
+		<div id="step01">
+
+			<span class="box-nut-top-left"><img src="assets/images/box-nut.svg"></span>
+			<span class="box-nut-top-right"><img src="assets/images/box-nut.svg"></span>
+			<span class="box-nut-btm-left"><img src="assets/images/box-nut.svg"></span>
+			<span class="box-nut-btm-right"><img src="assets/images/box-nut.svg"></span>
+
+			<div class="step01--container">
+				<h1 class="main-wrap--headline"><img src="assets/images/headline.svg"></h1>
+				<div class="pin-top"><img src="assets/images/pin-top.svg"></div>
+				<div class="pin-bottom"><img src="assets/images/pin-bottom.svg"></div>
+				
+				<div class="rotating" id="svg_circle"></div>
+			</div>
+		</div>
+
+		<!-- Step 02 -->
+		<div id="step02">
+			<div class="step02--container">
+				<div class="back-btn"><img src="assets/images/back-btn.svg"></div>
+
+				<div class="iframe-section track-love">
+					<div class="song-name">
+						<span>Now Playing</span>
+						<marquee class="open"><!-- Jab se tere naina mere naino se laage re --></marquee>
+					</div>
+					<div class="song-iframe"></div>
+				</div>
+				<footer class="song-footer">
+					<h2><span>Click to play your mood</span></h2>
+
+					<span class="btn-track01 track-btn active">Track 1</span>
+					<span class="btn-track02 track-btn">Track 2</span>
+
+					<ul class="play-icon">
+
+					</ul>
+				</footer>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+    
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/spreadsheet.js"></script> 
+<script src="assets/js/dynamic_functions.js"></script>
+<!-- <script src="assets/js/functions.js"></script> -->
+
+<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+<script>
+
+var dashboard_data;
+
+var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
+
+
+
+Tabletop.init({
+	key: public_spreadsheet_contact,
+	callback: showInfo,
+	simpleSheet: true
+});
+
+var juke_data;
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function showInfo(data) {
+
+	console.log(data);
+	
+	console.log(getParameterByName('id'));
+
+	//juke_data = data[getParameterByName('id')];
+
+	console.log(JSON.parse(data[getParameterByName('id')].jukeboxPushArray));
+
+	$("#data_show").append ("<p class=''>"+ data[getParameterByName('id')].jukeboxPushArray +"</p>");
+	dashboard_data = JSON.parse(data[getParameterByName('id')].jukeboxPushArray);
+
+
+	create_pie();
+	pie_events();
+	
+}
+
+
+
+function adjust_iframe_height() {
+    var actual_height = document.body.scrollHeight;
+    console.log("height is", actual_height);
+    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
+}
+
+
+</script>
+</body>
+</html>

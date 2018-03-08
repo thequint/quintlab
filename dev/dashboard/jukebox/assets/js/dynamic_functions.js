@@ -9,6 +9,7 @@ var category_array = [
 ];
 
 function pie_events() {
+	
 
 	//$("#svg_circle path").click(function(){
 	//console.log($(this).attr('fill'));
@@ -24,6 +25,8 @@ function pie_events() {
 	});
 
 	$("#svg_circle path").click(function(){
+
+		console.log("yes")
 
 		if(($(this).attr("data-title-2") =="undefined") && ($(this).attr("data-track-2") =="undefined")){
 
