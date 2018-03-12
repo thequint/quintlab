@@ -382,42 +382,9 @@ function showInfo(data) {
 	    $(".detail-top .big").append (
 			"<div class='product_video'>"
                 // + "<img src="+'assets/products/large/'+data[id_item].Product_image +'.jpg'+">"
-
                 + "<iframe width='560' height='315' src='https://www.youtube.com/embed/"+ data[id_item].Product_video +"?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
-
-                //'<iframe width="560" height="315" src="//www.youtube.com/embed/qHn0SJHL6Sk?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen>'
-
             + "</div>"
         )
-
-	    //$("#big-image").css({"background-image",data[id_item].Product_image_large})
-
-	    // $("#Product_image_large").html (
-	    // 	"<img src="+'assets/products/large/'+data[id_item].Product_image_large +'.jpg'+">"
-	    // );
-		
-		/*
-		$("#Product_review").append (
-	
-			"<div class='reviews--container__content'>"
-                + "<div class='item-list--rating'>"
-                    + "<div class='Review_rating01'>"
-                        + "<span class=''></span>"
-                        + "<span class=''></span>"
-                        + "<span class=''></span>"
-                        + "<span class=''></span>"
-                        + "<span class=''></span>"
-                    + "</div>"
-                + "</div>"
-                + "<h4 class='reviews--container__content--heading'>"
-                    + "<strong class='Review_headline'>" + data[id_item].Review_headline_01 +"</strong>"
-                    + "<span class='Review_date'>" + data[id_item].Review_date_01 + "</span>"
-                + "</h4>"
-                + "<p class='Review_description'>" + data[id_item].Review_description_01 + "</p>"
-            + "</div>"
-        )*/
-
-		
 
 		for (var j=0;j<id_item_data.Review_rating_01;j++) {
 			$(".reviews--container__content .item-list--rating .Review_rating01 span").eq(j).addClass("active");
@@ -475,19 +442,33 @@ function showInfo(data) {
 			if(id_item!=data[index].id){
 
 				console.log(id_item +"|"+data[index].id);
-
-				$("#recommended_item").append (
-					"<li class='wow fadeIn'>"
-						+ "<figure>"
-							+ "<a href='details.html?id=" + index +"'>"
-								+ "<span class='item-list--item-img'><img src="+'assets/products/recommended/'+data[index].Product_image +'.jpg'+"></span>"
-								+ "<figcaption>"
-									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
-								+ "</figcaption>"
-							+ "</a>"
-						+ "</figure>"
-					+ "</li>"
-				)
+				if(cid_item==null) {
+					$("#recommended_item").append (
+						"<li class='wow fadeIn'>"
+							+ "<figure>"
+								+ "<a href='details.html?id=" + index +"'>"
+									+ "<span class='item-list--item-img'><img src="+'assets/products/recommended/'+data[index].Product_image +'.jpg'+"></span>"
+									+ "<figcaption>"
+										+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
+									+ "</figcaption>"
+								+ "</a>"
+							+ "</figure>"
+						+ "</li>"
+					)
+				}else{
+					$("#recommended_item").append (
+						"<li class='wow fadeIn'>"
+							+ "<figure>"
+								+ "<a href='details.html?id=" + index +"&cid="+cid_item+"&q="+q_item+"'>"
+									+ "<span class='item-list--item-img'><img src="+'assets/products/recommended/'+data[index].Product_image +'.jpg'+"></span>"
+									+ "<figcaption>"
+										+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
+									+ "</figcaption>"
+								+ "</a>"
+							+ "</figure>"
+						+ "</li>"
+					)
+				}
 			}else {
 				$("#recommended_item").append (
 
@@ -498,6 +479,7 @@ function showInfo(data) {
 
 	}
 
+	$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
 
 
 	// Carts Page
@@ -522,6 +504,10 @@ function showInfo(data) {
 			//console.log(q_item_sum);
 		}
 
+		
+
+
+
 		$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
 		$(".thanks_url").attr("href","thank-you.html?cid="+cid_item+"&q="+q_item); // go to thank you page
 
@@ -544,6 +530,7 @@ function showInfo(data) {
 
 		// 
 		if(q_item==null){
+			$(".congrats-block").hide();
 			$(".cart-btn").hide();
 			$("#cart_data").append (
 					"<li class='cart-item clearfix'>"
@@ -551,6 +538,7 @@ function showInfo(data) {
 	                + "</li>"
 				)
 		}else {
+			$(".congrats-block").show();
 			$(".cart-btn").show();
 			for(var index =0; index <=  cid_item_array.length-1; index++) {
 				$("#cart_data").append (
@@ -587,6 +575,31 @@ function showInfo(data) {
 				)
 			}
 		}
+
+		// successfully added items title
+		for(var index =0; index <=  cid_item_array.length-1; index++) {
+			if(index == cid_item_array.length-1 && cid_item_array.length!=1){
+				$(".added-items").append (
+					"<span class=''>and "+ data[cid_item_array[index]].Product_title +"</span>"
+				)
+			}else if( cid_item_array.length==1) {
+				$(".added-items").append (
+					"<span class=''>"+ data[cid_item_array[index]].Product_title +"</span>"
+				)
+			}else{
+				$(".added-items").append (
+					"<span class=''>"+ data[cid_item_array[index]].Product_title +", </span>"
+				)	
+			}
+			//resize_cont();
+			//console.log(data[cid_item_array[index]].Product_title);
+		}
+
+		$(".items-length").html(""+ cid_item_array.length*25 +"%");
+
+		console.log(cid_item_array.length);
+
+
 
 		// cart item quantity 
 		var grand_total=0;
@@ -630,15 +643,15 @@ function showInfo(data) {
 			//console.log(index);
 			
 			if(index == cid_item_array.length-1 && cid_item_array.length!=1){
-				$("#product_title").append (
+				$(".added-items").append (
 					"<span class=''>and "+ data[cid_item_array[index]].Product_title +"</span>"
 				)
 			}else if( cid_item_array.length==1) {
-				$("#product_title").append (
+				$(".added-items").append (
 					"<span class=''>"+ data[cid_item_array[index]].Product_title +"</span>"
 				)
 			}else{
-				$("#product_title").append (
+				$(".added-items").append (
 					"<span class=''>"+ data[cid_item_array[index]].Product_title +", </span>"
 				)	
 			}

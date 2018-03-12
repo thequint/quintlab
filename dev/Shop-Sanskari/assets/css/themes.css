@@ -1408,13 +1408,6 @@ input:focus {
 	z-index: 0;
 	margin: 0 auto;
 	max-width: 800px;
-	color: #000;
-	/*background-color: #fff;*/
-	/*min-height: 500px;
-	background-image: url(../images/thank-up-bg.png);
-	background-repeat: repeat-y;
-	background-size: 100%;
-	background-position: top left;*/
 }
 .thank-you--container:after {
 	content: " ";
@@ -1427,7 +1420,7 @@ input:focus {
 .thank-you--content {
 	position: relative;
 	margin: 0 auto;
-	padding: 150px 15px 0;
+	padding: 140px 15px 0;
 	max-width: 550px;
 	z-index: 5;
 	text-align: center;
@@ -1559,6 +1552,7 @@ input:focus {
 
 
 .cart-items-list {
+	background-color: #f3f3f3;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 }
@@ -1574,6 +1568,34 @@ input:focus {
     width: 100%;
     clear: both;
 }
+.congrats-block {
+	border-top: 15px #75d4da solid;
+	padding: 20px;
+	background-color: #eae9e4;
+}
+.congrats-block__headline {
+	margin-bottom: 5px;
+	font-size: 22px;
+	color: #e81c9f;
+    font-family: 'Roboto', sans-serif;
+}
+.congrats-block p {
+	margin-bottom: 10px
+}
+.congrats-block p strong {
+	color: #222;
+}
+.congrats-block h2 {
+	color: #fff;
+	font-size: 22px;
+	margin: 25px 0 15px;
+	font-family: 'Roboto', sans-serif;
+}
+.congrats-block h2 span {
+	padding: 3px 8px;
+	background-color: #e81c9f;
+}
+
 
 .cart-item {
 	color: #474546;
