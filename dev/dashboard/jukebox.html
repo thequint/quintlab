@@ -1,209 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <title>Jukebox | Quint Lab</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-
-<!-- <link rel="stylesheet" type="text/css" href="assets/css/index.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css"> -->
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
 <!-- <link rel="stylesheet" type="text/css" href="assets/css/quiz.css"> -->
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
 
-<link rel="stylesheet" type="text/css" href="jukebox/assets/css/styles.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
 
+<!-- Custom -->
+<link href="jukebox/assets/css/base.css" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="jukebox/assets/css/styles.css">
 <style type="text/css">
 body {
-	background: none;
-	/*font-family: 'Oswald', sans-serif;*/
-}
-.main-wrap.show {
-    opacity: 1;
-}
-.card {
-	margin-bottom: 20px;
-}
-#svg_circle {
-    margin: 0 auto;
-    max-width: 550px;
-    padding: 0 20px;
-}
-.main-wrap--overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0, 0.1);
-}
-#step02 .song-footer .play-icon li {
-	background-color: #ccc;
+    background: none;
+    font-family: 'Oswald', sans-serif;
 }
 </style>
-     
 </head>
-<body >
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a href="#" class="navbar-brand mb-0 h1">
-		<img src="assets/images/tquint-white.svg" width="100" height="100%" class="d-inline-block align-top">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-  	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">			
-		<ul class="navbar-nav ml-auto">
-			<li class="navbar-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Your Account
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a href="#" class="dropdown-item">View</a>
-					<a href="#" class="dropdown-item">Edit</a>
-					<a href="#" class="dropdown-item">Some Action</a>
-					<a href="#" class="dropdown-item">Another Action</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Logout</a>€
-			</li>
-		</ul>
-	</div>
-</nav>
 
-<div class="container" id="main-content">
-	<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
-	  <ol class="breadcrumb">
-	    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
-	  </ol>
-	</nav>
-
-	<div class="row">
-		<div class="col-lg-6 text-center">
-			Add Questions
-		</div>
-		<div class="col-lg-6 text-center">
-			Preview
-			<i id="jukebox_preview" class="fa fa-sync-alt"></i>
-			<form id='foo'>
-				<input id='jukeboxPushArray' name='jukeboxPushArray' type='text'><button type='submit'>Generate iFrame</button>
-			</form>
-
-			<form>
-				<div class="form-group">
-					<label for="text">Embedded Code</label>
-					<textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
-					<span class="copy-val">Copy</span>
-				</div>
-			</form>
-
-			<div class="preview"></div>
-			<!-- <div class="jukebox_pull"></div> -->
-		</div>
-
-	</div>
-	<div class="row widget-details">
-		<div class="col-lg-6 col-sm-12" style="width:350px;max-width:350px;margin-bottom:20px;">
-			
-			<div id="moods_card" class="sortable">
-
-				<div class="card">
-					<div class="card-header">
-						<h4>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Your Account </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a href="#" class="dropdown-item">View</a> <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Some Action</a> <a href="#" class="dropdown-item">Another Action</a> </div>
+                </li>
+                <li class="nav-item"> <a href="#" class="nav-link">Logout</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="main-content">
+        <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="display-4">Jukebox</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" align="center">
+                <h4 class="display-4">Add Moods</h4>
+            </div>
+            <div class="col-lg-8" align="center">
+                <h4 class="display-4"> Preview </h4>
+            </div>
+        </div>
+        <!-- <div class="row">
+            
+            <div class="col-lg-6 text-center">
+                Preview
+                <i id="jukebox_preview" class="fa fa-sync-alt"></i>
+                <form id='foo'>
+                    <input id='jukeboxPushArray' name='jukeboxPushArray' type='text'>
+                    <button type='submit'>Generate iFrame</button>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <label for="text">Embedded Code</label>
+                        <textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
+                        <span class="copy-val">Copy</span>
+                    </div>
+                </form>
+                <div class="preview"></div>
+            </div>
+        </div> -->
+        <div class="row widget-details">
+            <div class="col-lg-4">
+                <div id="moods_card" class="sortable">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>
 							<span>Moods #1</span>
 							<button type="button" class="close question-close" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 							</button>
 						</h4>
+                        </div>
+                        <div class="form_data card-body">
+                            <form>
+                                <div class="form-group--main">
+                                    <div class="form-group">
+                                        <select class="select_category form-control"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1">
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0);" class="add_track">+ Add Track #2</a>
+                                </div>
+                                <!-- <button class="btn btn-primary clickMe">Add Mood</button> -->
+                                <!-- <a href="javascript:void(0);" class="btn btn-primary">Add Mood</a> -->
+                            </form>
+                        </div>
+                    </div>
+                    <!-- adding cards -->
+                </div>
+                <div><a href="javascript:void(0);" class="add_card clickMe">+ Add another cards</a></div>
+            </div>
+
+
+            <div class="col-lg-8">
+            	
+
+            	<div class="">
+					<div class="btn-preview-block clearfix">
+						<button id="jukebox_preview" class="btn btn-primary" type='submit'>Preview Jukebox</button>
+						<form id='foo' style="display:inline-block">
+		                    <button class="btn btn-primary" type='submit'>Generate iFrame</button>
+		                    <input id='jukeboxPushArray' name='jukeboxPushArray' type='text'>
+		                </form>
 					</div>
-					<div class="form_data card-body">
+					<div class="generate-iframe-block">
 						<form>
-							<div class="form-group--main">
-								<div class="form-group">
-									<select class="select_category form-control"></select>
-								</div>
-								<div class="form-group">
-									<input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1">
-								</div>
-								<div class="form-group">
-									<input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1">
-								</div>
-							</div>
-							<div>
-								<a href="javascript:void(0);" class="add_track">+ Add Track #2</a>
-							</div>
-							<!-- <button class="btn btn-primary clickMe">Add Mood</button> -->
-							<!-- <a href="javascript:void(0);" class="btn btn-primary">Add Mood</a> -->
-						</form>
+		                    <div class="form-group">
+		                        <label for="text">Embedded Code</label>
+		                        <textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
+		                        <span class="copy-val">Copy</span>
+		                    </div>
+		                </form>
 					</div>
-				</div>
+			    </div>
 
-				<!-- adding cards -->
-
-			</div>
-
-			<div><a href="javascript:void(0);" class="add_card clickMe">+ Add another cards</a></div>
-
-		</div>
+			    
 
 
 
-		<div class="" style="width:790px;max-width:790px;">
-			<div class="main-wrap">
-				<div class="main-wrap--overlay"></div>
-				<div class="main-wrap--container">
 
-					<div id="step01">
 
-						<span class="box-nut-top-left"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-top-right"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-btm-left"><img src="jukebox/assets/images/box-nut.svg"></span>
-						<span class="box-nut-btm-right"><img src="jukebox/assets/images/box-nut.svg"></span>
 
-						<div class="step01--container">
-							<h1 class="main-wrap--headline"><img src="jukebox/assets/images/headline.svg"></h1>
-							<div class="pin-top"><img src="jukebox/assets/images/pin-top.svg"></div>
-							<div class="pin-bottom"><img src="jukebox/assets/images/pin-bottom.svg"></div>
-							
-							<div class="rotating" id="svg_circle"></div>
-						</div>
-					</div>
-
-					<!-- Step 02 -->
-					<div id="step02">
-						<div class="step02--container">
-							<div class="back-btn"><img src="jukebox/assets/images/back-btn.svg"></div>
-
-							<div class="iframe-section track-love">
-								<div class="song-name">
-									<span>Now Playing</span>
-									<marquee class="open"><!-- Jab se tere naina mere naino se laage re --></marquee>
-								</div>
-								<div class="song-iframe"></div>
-							</div>
-							<footer class="song-footer">
-								<h2><span>Click to play your mood</span></h2>
-
-								<span class="btn-track01 track-btn active">Track 1</span>
-								<span class="btn-track02 track-btn">Track 2</span>
-
-								<ul class="play-icon">
-
-								</ul>
-							</footer>
-
-						
-
-							<!-- <footer class="song-footer">
+                <div class="main-wrap">
+                    <div class="main-wrap--overlay"></div>
+                    <div class="main-wrap--container">
+                        <div id="step01">
+                            <span class="box-nut-top-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+                            <span class="box-nut-top-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+                            <span class="box-nut-btm-left"><img src="jukebox/assets/images/box-nut.svg"></span>
+                            <span class="box-nut-btm-right"><img src="jukebox/assets/images/box-nut.svg"></span>
+                            <div class="step01--container">
+                                <h1 class="main-wrap--headline"><img src="jukebox/assets/images/headline.svg"></h1>
+                                <div class="pin-top"><img src="jukebox/assets/images/pin-top.svg"></div>
+                                <div class="pin-bottom"><img src="jukebox/assets/images/pin-bottom.svg"></div>
+                                <div class="rotating" id="svg_circle"></div>
+                            </div>
+                        </div>
+                        <!-- Step 02 -->
+                        <div id="step02">
+                            <div class="step02--container">
+                                <div class="back-btn"><img src="jukebox/assets/images/back-btn.svg"></div>
+                                <div class="iframe-section track-love">
+                                    <div class="song-name">
+                                        <span>Now Playing</span>
+                                        <marquee class="open">
+                                            <!-- Jab se tere naina mere naino se laage re -->
+                                        </marquee>
+                                    </div>
+                                    <div class="song-iframe"></div>
+                                </div>
+                                <footer class="song-footer">
+                                    <h2><span>Click to play your mood</span></h2>
+                                    <span class="btn-track01 track-btn active">Track 1</span>
+                                    <span class="btn-track02 track-btn">Track 2</span>
+                                    <ul class="play-icon">
+                                    </ul>
+                                </footer>
+                                <!-- <footer class="song-footer">
 								<h2><span>Click to play your mood</span></h2>
 
 								<span class="btn-track01 track-btn active">Track 1</span>
@@ -217,164 +200,153 @@ body {
 									<li class="surprise-icon" data-video="IIg8H60bRJo" data-videoname="Woh Ladki Hai Kahan"><img src="jukebox/assets/images/surprise-icon.svg"></li>
 								</ul>
 							</footer> -->
-						</div>
-					</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="moods_result">
+                    <ul id="svg-labels"></ul>
+                </div>
+                <!-- <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
+                <!-- <div class="display_results"></div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jukebox/assets/js/spreadsheet.js"></script>
+    <script src="jukebox/assets/js/dynamic_functions.js"></script>
+    <script src="assets/js/jukebox.js"></script>
+    <!-- <script src="jukebox/assets/js/functions.js"></script> -->
+    <script data-cfasync="false" type="text/javascript">
+    jQuery(document).ready(function($) {
 
+        var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
 
-				</div>
-			</div>
-
-			<div id="moods_result">
-				<ul id="svg-labels"></ul>
-			</div>
-			<!-- <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div> -->
-			<div class="display_results"></div>
-			
-		</div>
-
-
-
-	</div>
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<script src="jukebox/assets/js/spreadsheet.js"></script>
-<script src="jukebox/assets/js/dynamic_functions.js"></script>
-<script src="assets/js/jukebox.js"></script>
-
-<!-- <script src="jukebox/assets/js/functions.js"></script> -->
-
-<script data-cfasync="false" type="text/javascript">
-jQuery( document ).ready(function( $ ) {
-
-	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
-
-	function copyHandler(){
-		$(".copy-val").click(function(){
-			console.log("click");
-		    $(".iframe-link").select();
-		    document.execCommand('copy');
-		});
-	}
-
-    // variable to hold request
-    var request;
-    
-    $("#foo").submit(function(event){
-    	event.preventDefault();
-
-    	copyHandler();
-
-        // Form Validation
-        // if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
-        //     alert('Please insert all fields');
-        // }
-
-         //$("#Comments").val( JSON.stringify(dashboard_data));	
-        //dashboard_data.push({});
-
-        // Display Date
-        var myDate = new Date();
-        var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
-        $('#default_block .que-block .timestamp').text(displayDate);
-
-        // abort any pending request
-        if (request) {
-            request.abort();
+        function copyHandler() {
+            $(".copy-val").click(function() {
+                console.log("click");
+                $(".iframe-link").select();
+                document.execCommand('copy');
+            });
         }
-        // setup some local variables
-        var $form = $(this);
-        // let's select and cache all the fields
-        var $inputs = $form.find("input, select, button, textarea");
-        // serialize the data in the form
-        var serializedData = $form.serialize();
-    
-        // Disabled form elements will not be serialized.
-        $inputs.prop("disabled", true);
-        $('#result').text('Sending data...');
-    
 
-    	Tabletop.init({
-			key: public_spreadsheet_contact,
-			callback: showInfo,
-			simpleSheet: true
-		});
+        // variable to hold request
+        var request;
+
+        $("#foo").submit(function(event) {
+            event.preventDefault();
+
+            copyHandler();
+
+            // Form Validation
+            // if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
+            //     alert('Please insert all fields');
+            // }
+
+            //$("#Comments").val( JSON.stringify(dashboard_data));	
+            //dashboard_data.push({});
+
+            // Display Date
+            var myDate = new Date();
+            var displayDate = (myDate.getMonth() + 1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
+            $('#default_block .que-block .timestamp').text(displayDate);
+
+            // abort any pending request
+            if (request) {
+                request.abort();
+            }
+            // setup some local variables
+            var $form = $(this);
+            // let's select and cache all the fields
+            var $inputs = $form.find("input, select, button, textarea");
+            // serialize the data in the form
+            var serializedData = $form.serialize();
+
+            // Disabled form elements will not be serialized.
+            $inputs.prop("disabled", true);
+            $('#result').text('Sending data...');
 
 
-		function showInfo(data) {
-
-			$(".card").each(function(index){
-				if($(this).find(".select_category").val()==null){
-					alert("Select Moods");
-					return 0;
-
-				}else if($(this).find(".song-title_1").val() =="") {
-					alert("Insert Title");
-					return 0;
-
-				}else if($(this).find(".song-track_1").val() =="") {
-					alert("Insert Track");
-					return 0;
-				}else {
-					var embed_url = "<iframe class='quiz-iframe' src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
-
-					$(".iframe-link").val(embed_url);
+            Tabletop.init({
+                key: public_spreadsheet_contact,
+                callback: showInfo,
+                simpleSheet: true
+            });
 
 
-					//$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
-				}
-			});
+            function showInfo(data) {
 
-			//console.log(data);
+                $(".card").each(function(index) {
+                    if ($(this).find(".select_category").val() == null) {
+                        alert("Select Moods");
+                        return 0;
 
-	        // fire off the request to /form.php
-	        request = $.ajax({
-	            url: "https://script.google.com/macros/s/AKfycbx1b1UDkqU7Fq1fCSi7XzVG-lspj5t6CYBc8XsMtyB46uL6lcqz/exec",
-	            type: "post",
-	            data: serializedData
-	        });
-	    
-	        // callback handler that will be called on success
-	        request.done(function (response, textStatus, jqXHR){
-	            // log a message to the console
-	            //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
-	            $('#result').html('<span class="success">Success</span>');
-	            console.log("Hooray, it worked!");
-	        });
-	    
-	        // callback handler that will be called on failure
-	        request.fail(function (jqXHR, textStatus, errorThrown){
-	            // log the error to the console
-	            console.error(
-	                "The following error occured: "+
-	                textStatus, errorThrown
-	            );
-	        });
-	    
-	        // if the request failed or succeeded
-	        request.always(function () {
-	            // reenable the inputs
-	            $inputs.prop("disabled", false);
-	        });
+                    } else if ($(this).find(".song-title_1").val() == "") {
+                        alert("Insert Title");
+                        return 0;
 
-	        $('#foo').find('input, textarea').val('');
+                    } else if ($(this).find(".song-track_1").val() == "") {
+                        alert("Insert Track");
+                        return 0;
+                    } else {
 
-	        //var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
-			//$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
-		}
-    
-        // prevent default posting of form
-        
+                    	$(".generate-iframe-block").show();
+
+                        var embed_url = "<iframe class='quiz-iframe' src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/index.html?id=" + parseInt(data.length) + "' width='100%' frameborder='0'></iframe>";
+
+                        $(".iframe-link").val(embed_url);
+
+
+                        //$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+                    }
+                });
+
+                //console.log(data);
+
+                // fire off the request to /form.php
+                request = $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbx1b1UDkqU7Fq1fCSi7XzVG-lspj5t6CYBc8XsMtyB46uL6lcqz/exec",
+                    type: "post",
+                    data: serializedData
+                });
+
+                // callback handler that will be called on success
+                request.done(function(response, textStatus, jqXHR) {
+                    // log a message to the console
+                    //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+                    $('#result').html('<span class="success">Success</span>');
+                    console.log("Hooray, it worked!");
+                });
+
+                // callback handler that will be called on failure
+                request.fail(function(jqXHR, textStatus, errorThrown) {
+                    // log the error to the console
+                    console.error(
+                        "The following error occured: " +
+                        textStatus, errorThrown
+                    );
+                });
+
+                // if the request failed or succeeded
+                request.always(function() {
+                    // reenable the inputs
+                    $inputs.prop("disabled", false);
+                });
+
+                $('#foo').find('input, textarea').val('');
+
+                //var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
+                //$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+            }
+
+            // prevent default posting of form
+
+        });
     });
-});
-</script>
-
-	
+    </script>
 </body>
+
 </html>

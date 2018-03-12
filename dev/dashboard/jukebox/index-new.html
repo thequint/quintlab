@@ -10,13 +10,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
 <!-- Custom -->
 <link href="assets/css/base.css" rel="stylesheet">
 <link href="assets/css/svg-styles.css" rel="stylesheet">
 <link href="assets/css/styles.css" rel="stylesheet"> 
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
 
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,40 +24,11 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<style type="text/css">
-body {
-	/*background: none;*/
-	/*font-family: 'Oswald', sans-serif;*/
-}
-/*.main-wrap.show {
-    opacity: 1;
-}
-.card {
-	margin-bottom: 20px;
-}*/
-#svg_circle {
-    margin: 0 auto;
-    max-width: 550px;
-    padding: 0 20px;
-}
-.main-wrap--overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0, 0.1);
-}
-#step02 .song-footer .play-icon li {
-	background-color: #ccc;
-}
-</style>
+
 </head>
 
 <body onload="adjust_iframe_height()">
-	
+
 <div class="main-wrap show">
 	<div class="main-wrap--overlay"></div>
 	<div class="main-wrap--container">
@@ -114,60 +85,45 @@ body {
 <!-- <script src="assets/js/functions.js"></script> -->
 
 <script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+
 <script>
+	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
 
-var dashboard_data;
+	Tabletop.init({
+		key: public_spreadsheet_contact,
+		callback: showInfo,
+		simpleSheet: true
+	});
 
-var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
 
+	var dashboard_data;
 
+	function showInfo(data) {
+		//console.log(data);
+		//console.log(getParameterByName('id'));
+		//console.log(JSON.parse(data[getParameterByName('id')].jukeboxPushArray));
+		//$("#data_show").append ("<p class=''>"+ data[getParameterByName('id')].jukeboxPushArray +"</p>");
 
-Tabletop.init({
-	key: public_spreadsheet_contact,
-	callback: showInfo,
-	simpleSheet: true
-});
+		dashboard_data = JSON.parse(data[getParameterByName('id')].jukeboxPushArray);
 
-var juke_data;
+		create_pie();
+		pie_events();
+	}
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function showInfo(data) {
-
-	console.log(data);
-	
-	console.log(getParameterByName('id'));
-
-	//juke_data = data[getParameterByName('id')];
-
-	console.log(JSON.parse(data[getParameterByName('id')].jukeboxPushArray));
-
-	$("#data_show").append ("<p class=''>"+ data[getParameterByName('id')].jukeboxPushArray +"</p>");
-	dashboard_data = JSON.parse(data[getParameterByName('id')].jukeboxPushArray);
-
-
-	create_pie();
-	pie_events();
-	
-}
-
-
-
-function adjust_iframe_height() {
-    var actual_height = document.body.scrollHeight;
-    console.log("height is", actual_height);
-    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
-}
-
-
+	function adjust_iframe_height() {
+	    var actual_height = document.body.scrollHeight;
+	    //console.log("height is", actual_height);
+	    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
+	}
 </script>
 </body>
 </html>

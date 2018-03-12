@@ -400,6 +400,16 @@ visibility: visible;
     opacity: 1;
 }
 
+
+.generate-iframe-block {
+    display: none;
+    margin: 10px 0 40px;
+}
+
+.generate-iframe-block textarea {
+    height: 80px;
+}
+
 @media only screen and (min-width: 768px) {
     /* Ripple Out */
     @-webkit-keyframes hvr-ripple-out {
@@ -500,10 +510,14 @@ visibility: visible;
 #step02 {
     height: 600px;
 }
-.svg-wrap {
+.svg-wrap,
+#svg_circle {
     margin: 0 auto;
     max-width: 550px;
     padding: 0 20px;
+}
+#svg_circle svg {
+    width: 500px;
 }
 .svg-wrap svg {
     width: 100%;
@@ -581,6 +595,40 @@ visibility: visible;
     color: #e94d4b;
     background-color: #fff;
 }
+.main-wrap--overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+.btn-preview-block {
+    margin-bottom: 20px;
+}
+.iframe-link{
+    margin-bottom: 5px;
+    overflow: hidden; 
+}
+.copy-val {
+    float: right;
+    border: none;
+    border-radius: .25rem;
+    background-color: #36154f!important;
+    padding: .375rem .75rem;
+    /*font-size: 20px;*/
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.navbar,
+.display-4 {
+    font-family: 'Oswald', sans-serif;
+}
 
 /*  ///// */
 
@@ -590,7 +638,8 @@ visibility: visible;
     #step02 {
         height: 570px;
     }
-    .svg-wrap {
+    .svg-wrap,
+    #svg_circle {
         max-width: 550px;
     }
     .step01--container {
@@ -606,7 +655,8 @@ visibility: visible;
     #step02 {
         height: 550px;
     }
-    .svg-wrap {
+    .svg-wrap,
+    #svg_circle {
         max-width: 550px;
     }
     .pin-top {
@@ -629,7 +679,8 @@ visibility: visible;
     #step02 {
         height: 500px;
     }
-    .svg-wrap {
+    .svg-wrap,
+    #svg_circle {
         max-width: 500px;
     }
     .pin-top {
@@ -669,7 +720,8 @@ visibility: visible;
     #step02 {
         height: 430px;
     }
-    .svg-wrap {
+    .svg-wrap,
+    #svg_circle {
         max-width: 430px;
     }
     .pin-top {
@@ -719,7 +771,8 @@ visibility: visible;
     #step02 {
         height: 380px;
     }
-    .svg-wrap {
+    .svg-wrap,
+    #svg_circle {
         max-width: 380px;
     }
     .pin-top {

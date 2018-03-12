@@ -9,7 +9,7 @@ var category_array = [
 ];
 
 function pie_events() {
-	
+
 
 	//$("#svg_circle path").click(function(){
 	//console.log($(this).attr('fill'));
@@ -65,10 +65,22 @@ function pie_events() {
 		var data_mood_icon = $(this).attr('data-mood-icon');
 		//$(".play-icon li").attr('data-mood-icon', data_mood_icon);
 
+		$(".play-icon li").removeClass("hvr-ripple-out");
+
 		$(".play-icon li").eq($(this).index()).addClass("hvr-ripple-out");
 		
-
 	});
+
+
+
+	$("#svg_circle path").mouseover(function () {
+        $('.pin-bottom').addClass('pin-rotate');
+    });
+    $("#svg_circle path").mouseout(function () {
+        $('.pin-bottom').removeClass('pin-rotate');
+    });
+
+    
 	$(".play-icon li").click(function(){
 
 		$(".btn-track02.track-btn").removeClass("active");
@@ -80,6 +92,20 @@ function pie_events() {
 		var data_title_1 = $(this).attr('data-title-1');
 		console.log(data_title_1);
 		$(".iframe-section .song-name marquee").html(data_title_1);
+
+		$(".song-footer .btn-track01").attr('data-title-1', data_title_1);
+
+		var data_track_1 = $(this).attr('data-track-1');
+		$(".song-footer .btn-track01").attr('data-track-1', data_track_1);
+
+		// Data Title #2
+		var data_title_2 = $(this).attr('data-title-2');
+		console.log(data_title_2);
+		$(".song-footer .btn-track02").attr('data-title-2', data_title_2);
+
+		var data_track_2 = $(this).attr('data-track-2');
+		console.log(data_track_2);
+		$(".song-footer .btn-track02").attr('data-track-2', data_track_2);
 
 		var data_track_1 = $(this).attr('data-track-1');
 		console.log(data_track_1);
@@ -94,6 +120,8 @@ function pie_events() {
 	});
 
 	$(".song-footer .btn-track01").click(function(){
+
+		console.log(data_title_1);
 
 		$(".track-btn").removeClass("active");
 		$(this).addClass("active");
@@ -164,7 +192,7 @@ function create_pie() {
 
 	    //$(".play-icon").append("<li data-title-1="+sector.title_1+"data-track-1="+sector.track_1+">"+"<img src='jukebox/assets/images/"+sector.moods_icon+"'>"+"</li>");
 
-	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='jukebox/assets/images/"+sector.moods_icon+"'></li>");
+	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+sector.moods_icon+"'></li>");
 	})
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
