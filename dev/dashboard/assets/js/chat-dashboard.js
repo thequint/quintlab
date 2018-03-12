@@ -133,7 +133,15 @@ function update_profile_name(this_var) {
 $('#ProfileDetails li .url').bind("keyup change", function () {
 "use strict";
 	update_profile_images($(this));
+	
 });
+
+
+
+
+
+
+
 
 
 

@@ -254,6 +254,18 @@ button {
 	font-size: 30px;
 	padding: 0 0 10px;
 }
+.dialog p{
+	margin-bottom: 10px;
+}
+
+.dialog span{
+	display:block;
+	font-size: 80%;
+	color: #8c8c8c;
+	margin-bottom: 20px;
+}
+
+
 .dialog--open .dialog__overlay {
 	-webkit-transition-duration: 0.8s;
 	transition-duration: 0.8s;

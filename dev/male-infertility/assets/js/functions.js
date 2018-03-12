@@ -5,6 +5,7 @@ $(document).ready(function () {
 		
 		$('.dialog-inner').find('h2').html($(this).closest('a').attr('data-headline'));
 		$('.dialog-inner').find('p').html($(this).closest('a').attr('data-description'));
+		$('.dialog-inner').find('span').html($(this).closest('a').attr('data-source'));
 		
 	});
 
