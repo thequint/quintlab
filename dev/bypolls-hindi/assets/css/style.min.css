@@ -5130,7 +5130,7 @@ transform:translate3d(0, -100%, 0)
 	font-size: 20px;
 	line-height: 1;
 	opacity: .75;
-	color: #ffbf00;
+	color: #333;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
@@ -5285,7 +5285,6 @@ transform:translate3d(0, -100%, 0)
 	height: auto
 }
 .frame-wrapper .table-cont, .liveblog-wrapper .list-content {
-	height: 100%;
 	width: 100%
 }
 *, :after, :before {
@@ -6627,7 +6626,9 @@ tbody th {
 .election-table ul li {
 	padding: 0 10px;
 	float: left;
-	width: 50%
+	width: 50%;
+	padding-bottom: 10px;
+		
 }
 .table-cont {
 	font-family: 'Roboto', sans-serif;;
@@ -6637,7 +6638,7 @@ tbody th {
 .table-cont h3 {
 	background: #ffbf00 none repeat scroll 0 0;
 	color: #333;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 100%;
 	margin: 0;
@@ -6651,8 +6652,8 @@ tbody th {
 	text-align: right;
 	float: right;
 	color: #0d5dd5;
-	font-weight: 400;
-	text-transform: none;
+	font-size: 13px;
+
 }
 
 .table-cont h3 a:hover{
@@ -6688,9 +6689,10 @@ tbody th {
 	margin: 0 auto
 }
 
-.table-cont{
-	border:1px solid #d1d1d1;
+.table-cont {
+	border: 1px solid #d1d1d1;
 	background: #ffffff;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
 }
 
 /*
@@ -6801,9 +6803,7 @@ tbody th {
 	width: 100%;
 	float: none
 }
-	.table-data{
-		margin-bottom:30px;
-	}
+	
 	
 }
 
@@ -6929,10 +6929,7 @@ tbody th {
 .tabs-menu li a {
 	font-size: 15px
 }
-td, th {
-	padding: 5px 12px;
-	text-align: left
-}
+
 .bottom-wrapper {
 	overflow: visible;
 	background-image: url(../images/top-banner.jpg);
@@ -7049,16 +7046,9 @@ td, th {
 .election-data {
 	margin: 0
 }
-.election-data table {
-	font-size: 25px
-}
-.election-data {
-	padding-bottom: 0
-}
-.election-data table {
-	font-size: 25px;
-	line-height: 110%
-}
+
+
+
 .election-table ul li {
 	padding: 0
 }
@@ -7139,16 +7129,75 @@ td, th {
 /*Custom CSS*/
 
 .headlines h2 {
-	text-align: center;
-	color: #333;
-	font-size: 26px;
+	color: #fff;
+	font-size: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	float: none;
 	display: block;
 	margin: 0;
-	padding: 10px 0px;
+	padding: 0;
 }
+
+.headlines h2 span::after {
+	background-color: #f4f4f4;
+	content: "";
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	right: -8px;
+	top: -9px;
+	z-index: 2;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+
+.headlines h2 span{
+	display:inline-block;
+	position: relative;
+	padding: 10px;
+	background: #36154F;
+}
+
+
+.mob-headline span::after {
+	background-color: #fff;
+	content: "";
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	right: -8px;
+	top: -9px;
+	z-index: 2;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+
+
+.mob-headline{
+	
+	display: none;
+	width: 100%;
+	float: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0;
+	
+}
+
+.mob-headline span{
+	display:inline-block;
+	position: relative;
+	padding: 10px;
+	background: #36154F;
+}
+
 
 
 .headline-left{
@@ -7159,6 +7208,7 @@ td, th {
 .headline-right{
 	float: left;
 	width: 33.33%;
+	padding-left: 13px;
 }
 
 .election-data table{
@@ -7182,28 +7232,64 @@ td, th {
 	top: 3px;
 	left: 0px;
 }
-.table-data tr td span.is-bjp::before{
+.table-data tr td span.is-bjp::before, .scale span.is-bjp{
 	background: #ED5A11;
 }
 
-.table-data tr td span.is-inc::before{
+.table-data tr td span.is-inc::before, .scale span.is-inc{
 	background: #245DE7;
 }
 
-.table-data tr td span.is-sp::before{
+.table-data tr td span.is-sp::before, .scale span.is-sp{
 	background: #138D25;
 }
 
+.table-data tr td span.is-ot::before, .scale span.is-ot{
+	background: #9a9a9a;
+}
 
+.table-data tr td span.is-rjd::before, .scale span.is-rjd{
+	background: #F2D50B;
+}
+
+.slider-cont{
+	width:100%;
+}
 
 
 @media (max-width:767px) {
 	.headlines{
 		display: none;
 	}
+	
+	.mob-headline{
+		display:block;
+	}
+	
+	
+}
+.scale {
+	margin: 10px 0 0 0;
+	display: none;
+}
+.scale span{
+	display: inline-block;
+	width: 33.333%;
+	float: left;
+	background: #ccc;
+	height: 10px;
 }
 
 
+.slick-next{
+	top: 70% !important;
+	right: 5px !important;
+}
+
+.slick-prev{
+	top: 70% !important;
+	left: 5px !important;
+}
 
 
 

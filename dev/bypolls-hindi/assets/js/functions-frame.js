@@ -15,10 +15,10 @@ function frame_slider() {
 	$('.slider-frame-1').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		autoplay: false,
-		arrows: false,
+		autoplay: true,
+		arrows: true,
 		autoplaySpeed: 2000,
-		dots: true,
+		dots: false,
 		responsive: [
 
 			{
