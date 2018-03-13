@@ -19,9 +19,9 @@ function showInfo(data) {
 	
 document.getElementById("data_gorakhpur").innerHTML = 
 	"<tr>" 
-	+ "<td><span class='is-bjp'>" + [ data[0].gorakhpurparty,] + "</span></td>" 
-	+ "<td><span class='is-inc'>" + [ data[1].gorakhpurparty,] + "</span></td>" 
-	+ "<td><span class='is-sp'>" + [ data[2].gorakhpurparty,] + "</span></td>" 
+	+ "<td><span class='is-bjp'>" + [ data[0].gorakhpurhindi,] + "</span></td>" 
+	+ "<td><span class='is-inc'>" + [ data[1].gorakhpurhindi,] + "</span></td>" 
+	+ "<td><span class='is-sp'>" + [ data[2].gorakhpurhindi,] + "</span></td>" 
 	+ "</tr>"
 
 	+"<tr>" 
@@ -33,9 +33,9 @@ document.getElementById("data_gorakhpur").innerHTML =
 	
 document.getElementById("data_phulpur").innerHTML = 
 	"<tr>" 
-	+ "<td><span class='is-bjp'>" + [ data[0].phulpurparty,] + "</span></td>"
-	+ "<td><span class='is-inc'>" + [ data[1].phulpurparty,] + "</span></td>" 
-	+ "<td><span class='is-sp'>" + [ data[2].phulpurparty,] + "</span></td>" 
+	+ "<td><span class='is-bjp'>" + [ data[0].phulpurhindi,] + "</span></td>"
+	+ "<td><span class='is-inc'>" + [ data[1].phulpurhindi,] + "</span></td>" 
+	+ "<td><span class='is-sp'>" + [ data[2].phulpurhindi,] + "</span></td>" 
 	+ "</tr>"
 
 	+"<tr>" 
@@ -47,9 +47,9 @@ document.getElementById("data_phulpur").innerHTML =
 	
 	document.getElementById("data_araria").innerHTML = 
 	"<tr>" 
-	+ "<td><span class='is-bjp'>" + [ data[0].arariaparty,] + "</span></td>"
-	+ "<td><span class='is-rjd'>" + [ data[1].arariaparty,] + "</span></td>"  
-	+ "<td><span class='is-ot'>" + [ data[2].arariaparty,] + "</span></td>"  
+	+ "<td><span class='is-bjp'>" + [ data[0].arariahindi,] + "</span></td>"
+	+ "<td><span class='is-rjd'>" + [ data[1].arariahindi,] + "</span></td>"  
+	+ "<td><span class='is-ot'>" + [ data[2].arariahindi,] + "</span></td>"  
 	+ "</tr>"
 
 	+"<tr>" 

@@ -5677,7 +5677,7 @@ transform:translateY(4px) rotate(90deg)
 	display: none
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #6d6e70;
@@ -5704,7 +5704,7 @@ a, button {
 h1, h2, h3, h4, h5, h6 {
 	color: #6d6e70;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .top-wrapper {
 	background-color: #4d086a;
@@ -5729,7 +5729,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	display: inline-block;
 	float: left;
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	font-size: 23px;
 	font-weight: 500;
 	padding: 10px 0 0 10px;
@@ -5762,7 +5762,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .election-banner h2 {
 	color: #fff;
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	font-size: 47px;
 	font-weight: 500;
 	line-height: 100%;
@@ -5805,7 +5805,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .liveblog-wrapper {
 	padding: 0 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .liveblog-wrapper .container .liveblog {
 	padding: 0;
@@ -5919,7 +5919,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	border-left: 1px solid #fff;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .tabs-menu li:first-child {
 	border-left: 0
@@ -6010,7 +6010,7 @@ p.caption {
 	display: block;
 	padding: 8px 0;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	font-weight: 500;
 	text-transform: uppercase;
 	color: #333;
@@ -6130,7 +6130,7 @@ input.search-data {
 .tab .story-item a {
 	display: block;
 	background: #fff;
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	text-transform: uppercase;
 	font-weight: 500;
 	margin: 0
@@ -6173,7 +6173,7 @@ input.search-data {
 	clear: both
 }
 .election-stories {
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	text-transform: uppercase;
 	font-weight: 500
 }
@@ -6231,7 +6231,7 @@ input.search-data {
 	background: #ffbf00
 }
 .carousel-wrapper {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .carousel-wrapper .story-list img {
 	width: 100%
@@ -6489,7 +6489,7 @@ h2.is-live {
 	content: ' PRADESH'
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #6d6e70;
@@ -6515,7 +6515,7 @@ a, button {
 h1, h2, h3, h4, h5, h6 {
 	color: #6d6e70;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .container {
 	position: relative;
@@ -6631,7 +6631,7 @@ tbody th {
 		
 }
 .table-cont {
-	font-family: 'Roboto', sans-serif;;
+	font-family: 'Noto Sans', sans-serif;;
 	border: 0 solid #ffbf00;
 	background: #ffbf00
 }
@@ -6639,7 +6639,7 @@ tbody th {
 	background: #ffbf00 none repeat scroll 0 0;
 	color: #333;
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 100%;
 	margin: 0;
 	padding: 10px;
@@ -7216,7 +7216,7 @@ tbody th {
 }
 
 .table-data tr td span {
-	font-weight: 500;
+	font-weight: 700;
 	position: relative;
 	display: inline-block;
 	padding-left: 16px;
