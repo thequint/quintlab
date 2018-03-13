@@ -7248,6 +7248,10 @@ tbody th {
 	background: #9a9a9a;
 }
 
+.table-data tr td span.is-rjd::before, .scale span.is-rjd{
+	background: #F2D50B;
+}
+
 .slider-cont{
 	width:100%;
 }
