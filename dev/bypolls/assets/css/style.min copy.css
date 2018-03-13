@@ -5462,8 +5462,7 @@ template {
 	display: none
 }
 table tr td {
-	vertical-align: top;
-    text-align: center;
+	vertical-align: top
 }
 ::selection {
 	background: rgba(0,0,0,.2)
@@ -5678,7 +5677,7 @@ transform:translateY(4px) rotate(90deg)
 	display: none
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #6d6e70;
@@ -5705,7 +5704,7 @@ a, button {
 h1, h2, h3, h4, h5, h6 {
 	color: #6d6e70;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Fira Sans Extra Condensed", sans-serif
 }
 .top-wrapper {
 	background-color: #4d086a;
@@ -5730,7 +5729,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	display: inline-block;
 	float: left;
-	font-family: 'Roboto', sans-serif;;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
 	font-size: 23px;
 	font-weight: 500;
 	padding: 10px 0 0 10px;
@@ -5763,7 +5762,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .election-banner h2 {
 	color: #fff;
-	font-family: 'Roboto', sans-serif;;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
 	font-size: 47px;
 	font-weight: 500;
 	line-height: 100%;
@@ -5806,7 +5805,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .liveblog-wrapper {
 	padding: 0 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Fira Sans Extra Condensed", sans-serif
 }
 .liveblog-wrapper .container .liveblog {
 	padding: 0;
@@ -5920,7 +5919,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	border-left: 1px solid #fff;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Fira Sans Extra Condensed", sans-serif
 }
 .tabs-menu li:first-child {
 	border-left: 0
@@ -6011,7 +6010,7 @@ p.caption {
 	display: block;
 	padding: 8px 0;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 	color: #333;
@@ -6131,7 +6130,7 @@ input.search-data {
 .tab .story-item a {
 	display: block;
 	background: #fff;
-	font-family: 'Roboto', sans-serif;;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
 	text-transform: uppercase;
 	font-weight: 500;
 	margin: 0
@@ -6174,7 +6173,7 @@ input.search-data {
 	clear: both
 }
 .election-stories {
-	font-family: 'Roboto', sans-serif;;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
 	text-transform: uppercase;
 	font-weight: 500
 }
@@ -6232,7 +6231,7 @@ input.search-data {
 	background: #ffbf00
 }
 .carousel-wrapper {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Fira Sans Extra Condensed", sans-serif
 }
 .carousel-wrapper .story-list img {
 	width: 100%
@@ -6490,7 +6489,7 @@ h2.is-live {
 	content: ' PRADESH'
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	color: #6d6e70;
@@ -6516,7 +6515,7 @@ a, button {
 h1, h2, h3, h4, h5, h6 {
 	color: #6d6e70;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Fira Sans Extra Condensed", sans-serif
 }
 .container {
 	position: relative;
@@ -6630,33 +6629,27 @@ tbody th {
 	width: 50%
 }
 .table-cont {
-	font-family: 'Roboto', sans-serif;;
+	min-height: 150px;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
+	font-weight: 500;
 	border: 0 solid #ffbf00;
 	background: #ffbf00
 }
 .table-cont h3 {
 	background: #ffbf00 none repeat scroll 0 0;
-	color: #333;
-	font-size: 14px;
+	color: #fff;
+	font-size: 25px;
 	font-weight: 500;
 	line-height: 100%;
 	margin: 0;
-	padding: 10px;
-	text-align: left;
-	text-transform: uppercase;
-	border-bottom: 0px solid #f3f3f3
+	padding: 15px 0;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+	border-bottom: 1px solid #f3f3f3
 }
 .table-cont h3 a {
-	display: inline-block;
-	text-align: right;
-	float: right;
-	color: #0d5dd5;
-	font-weight: 400;
-	text-transform: none;
-}
-
-.table-cont h3 a:hover{
-	text-decoration:underline;
+	color: #fff;
+	display: block
 }
 .row.table-row {
 	margin: 0 -10px 30px -10px
@@ -6666,14 +6659,20 @@ tbody th {
 }
 .election-data table {
 	width: 100%;
+	font-size: 25px;
 	color: #4d086a;
 	line-height: 130%
 }
 .hi .election-data table tr td:first-child {
 	font-size: 24px
 }
-
+.election-data table tr td:last-child span {
+	text-align: left;
+	background-color: #ffbf00;
+	padding: 0 2px
+}
 .table-data {
+	width: 200px;
 	margin: 0 auto
 }
 .graph-data {
@@ -6688,12 +6687,6 @@ tbody th {
 	margin: 0 auto
 }
 
-.table-cont{
-	border:1px solid #d1d1d1;
-	background: #ffffff;
-}
-
-/*
 
 .table-cont.is-phulpur {
 	background: #3c4c6e;
@@ -6714,6 +6707,12 @@ tbody th {
 }
 
 
+
+
+
+
+
+
 .table-cont.is-araria {
 	background: #ff6f6f;
 	border: 3px solid #3c4c6e;
@@ -6722,7 +6721,6 @@ tbody th {
 .table-cont.is-araria h3{
 	border-bottom: 3px solid #3c4c6e;
 }
-*/
 
 
 
@@ -6735,7 +6733,9 @@ tbody th {
 
 
 
-
+.table-cont h3 {
+	background: transparent !important;
+}
 
 .live-blink {
 	display: none
@@ -7012,10 +7012,11 @@ td, th {
 
 @media (max-width:1023px) {
 .table-cont h3 {
-	
+	font-size: 17px;
+	white-space: nowrap
 }
 .election-data table {
-	
+	font-size: 17px
 }
 .chart-content {
 	width: 200px;
@@ -7043,7 +7044,7 @@ td, th {
 	margin: 0 auto
 }
 .table-cont h3 {
-	
+	font-size: 25px;
 	letter-spacing: 0
 }
 .election-data {
@@ -7106,14 +7107,10 @@ td, th {
 .block-title2, .first-story a figcaption, .frame-wrapper h2, .liveblog-wrapper h2, .story-frame a, .story-item a {
 	color: #383838
 }
-.table-cont {
-	background: #fff;
+.table-cont, .table-cont h3 {
+	background: #383838;
+	text-transform: uppercase;
 }
-.table-cont h3{
-	background: #f1f1f1;
-	color: #333;
-}
-
 .carousel-wrapper .story-item a:hover figcaption, .carousel-wrapper h3, .election-banner h2 span, .election-data table, .election-text a, .first-story a:hover figcaption, .list-item h3, .share-icons a:hover, .story-frame a:hover {
 	color: #fff
 }
@@ -7138,16 +7135,16 @@ td, th {
 
 /*Custom CSS*/
 
-.headlines h2 {
+.headlines h2{
 	text-align: center;
-	color: #333;
-	font-size: 26px;
+	color: #3c4c6e;
+	font-size: 30px;
 	font-weight: 600;
 	text-transform: uppercase;
 	float: none;
 	display: block;
 	margin: 0;
-	padding: 10px 0px;
+	padding: 20px 0px;
 }
 
 
@@ -7161,49 +7158,8 @@ td, th {
 	width: 33.33%;
 }
 
-.election-data table{
-	color:#333;
-}
-
-.table-data tr td span {
-	font-weight: 500;
-	position: relative;
-	display: inline-block;
-	padding-left: 16px;
-}
-
-.table-data tr td span::before {
-	width: 12px;
-	height: 12px;
-	border-radius: 100%;
-	position: absolute;
-	background: #333;
-	content: '';
-	top: 3px;
-	left: 0px;
-}
-.table-data tr td span.is-bjp::before{
-	background: #ED5A11;
-}
-
-.table-data tr td span.is-inc::before{
-	background: #245DE7;
-}
-
-.table-data tr td span.is-sp::before{
-	background: #138D25;
-}
-
-
-
-
 @media (max-width:767px) {
 	.headlines{
 		display: none;
 	}
 }
-
-
-
-
-
