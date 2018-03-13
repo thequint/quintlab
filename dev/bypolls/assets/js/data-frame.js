@@ -16,6 +16,21 @@ Tabletop.init({
 window.addEventListener('DOMContentLoaded', init);
 
 function showInfo(data) {	
+	
+document.getElementById("data_gorakhpur").innerHTML = 
+	"<tr>" 
+	+ "<td><span class='is-bjp'>" + [ data[0].gorakhpurparty,] + "</span></td>" 
+	+ "<td><span class='is-inc'>" + [ data[1].gorakhpurparty,] + "</span></td>" 
+	+ "<td><span class='is-sp'>" + [ data[2].gorakhpurparty,] + "</span></td>" 
+	+ "</tr>"
+
+	+"<tr>" 
+	+ "<td class='seat-bjp'>" + [ data[0].gorakhpurseats,] + "</td>" 
+	+ "<td class='seat-inc'>" + [ data[1].gorakhpurseats,] + "</td>"  
+	+ "<td class='seat-sp'>" + [ data[2].gorakhpurseats,] + "</td>"  
+	+ "</tr>";
+	
+	
 document.getElementById("data_phulpur").innerHTML = 
 	"<tr>" 
 	+ "<td><span class='is-bjp'>" + [ data[0].phulpurparty,] + "</span></td>"
@@ -24,9 +39,9 @@ document.getElementById("data_phulpur").innerHTML =
 	+ "</tr>"
 
 	+"<tr>" 
-	+ "<td>" + [ data[0].phulpurseats,] + "</td>"
-	+ "<td>" + [ data[1].phulpurseats,] + "</td>" 
-	+ "<td>" + [ data[2].phulpurseats,] + "</td>"  
+	+ "<td class='seat-bjp'>" + [ data[0].phulpurseats,] + "</td>"
+	+ "<td class='seat-inc'>" + [ data[1].phulpurseats,] + "</td>" 
+	+ "<td class='seat-sp'>" + [ data[2].phulpurseats,] + "</td>"  
 	+ "</tr>";
 	
 	
@@ -37,64 +52,73 @@ document.getElementById("data_phulpur").innerHTML =
 	+ "</tr>"
 
 	+"<tr>" 
-	+ "<td>" + [ data[0].arariaseats,] + "</td>"  
-	+ "<td>" + [ data[1].arariaseats,] + "</td>"  
+	+ "<td class='seat-bjp'>" + [ data[0].arariaseats,] + "</td>"  
+	+ "<td class='seat-inc'>" + [ data[1].arariaseats,] + "</td>"  
 	+ "</tr>";
 	
 
 	
-	document.getElementById("data_gorakhpur").innerHTML = 
-	"<tr>" 
-	+ "<td><span class='is-bjp'>" + [ data[0].gorakhpurparty,] + "</span></td>" 
-	+ "<td><span class='is-inc'>" + [ data[1].gorakhpurparty,] + "</span></td>" 
-	+ "<td><span class='is-sp'>" + [ data[2].gorakhpurparty,] + "</span></td>" 
-	+ "</tr>"
-
-	+"<tr>" 
-	+ "<td>" + [ data[0].gorakhpurseats,] + "</td>" 
-	+ "<td>" + [ data[1].gorakhpurseats,] + "</td>"  
-	+ "<td>" + [ data[2].gorakhpurseats,] + "</td>"  
-	+ "</tr>";
+	$('.scale').show();
 	
-/*	
-$("#graph_data_gujarat").attr("data-y",[ data[0].gujaratseats,] +","+[ data[1].gujaratseats,] +","+[ data[2].gujaratseats,] 	)
+	scale_gorakhpur();
 	
-$("#graph_data_himachal").attr("data-y",[ data[0].himachalseats,] +","+[ data[1].himachalseats,] +","+[ data[2].himachalseats,] 	)
-//data-y=
-if(data[0].gujaratseats==0&data[1].gujaratseats==0&data[2].gujaratseats==0)
-	{
-		//do nothing
-		if(window.innerWidth<=600)
-			{
-		$(".gujarat-graph-data").hide();
-			}
-	}
-	else
-		{
-create_graph("graph_data_gujarat");
-		}
-	if(data[0].himachalseats==0&data[1].himachalseats==0&data[2].himachalseats==0)
-	{
-		//do nothing
-		if(window.innerWidth<=600)
-			{
-$(".himachal-graph-data").hide();
-			}
-			//$(".himachal-graph-data").hide();
-	}
-else{
-create_graph("graph_data_himachal");
-}
-
-if(data[0].gujaratseats==0&data[1].gujaratseats==0&data[2].gujaratseats==0&data[0].himachalseats==0&data[1].himachalseats==0&data[2].himachalseats==0 && window.innerWidth>601)
-	{
-	$(".graph-data").hide();	
-	}*/
+	scale_phulpur();
+	
+	scale_araria();
 	
 }
 
 frame_slider();
 
+//https://stackoverflow.com/questions/22619531/create-a-percentage-with-three-numbers
+
+
+	function scale_gorakhpur(){
+	
+		var x = parseInt($('#data_gorakhpur .seat-bjp').text());
+		var y = parseInt($('#data_gorakhpur .seat-inc').text());
+		var z = parseInt($('#data_gorakhpur .seat-sp').text());
+		
+		var total = x+y+z;
+		
+		
+		$(".is-gorakhpur .scale .is-bjp").css('width', (x/total)*100+'%');
+		$(".is-gorakhpur .scale .is-inc").css('width', (y/total)*100+'%');
+		$(".is-gorakhpur .scale .is-sp").css('width', (z/total)*100+'%');	
+		
+	}
+
+
+
+
+	function scale_phulpur(){
+	
+		var x = parseInt($('#data_phulpur .seat-bjp').text());
+		var y = parseInt($('#data_phulpur .seat-inc').text());
+		var z = parseInt($('#data_phulpur .seat-sp').text());
+		
+		var total = x+y+z;
+		
+		
+		$(".is-phulpur .scale .is-bjp").css('width', (x/total)*100+'%');
+		$(".is-phulpur .scale .is-inc").css('width', (y/total)*100+'%');
+		$(".is-phulpur .scale .is-sp").css('width', (z/total)*100+'%');	
+		
+	}
+
+
+	function scale_araria(){
+	
+		var x = parseInt($('#data_araria .seat-bjp').text());
+		var y = parseInt($('#data_araria .seat-inc').text());
+		
+		var total = x+y;
+		
+		
+		$(".is-araria .scale .is-bjp").css('width', (x/total)*100+'%');
+		$(".is-araria .scale .is-inc").css('width', (y/total)*100+'%');	
+		
+	}
 
 
 
