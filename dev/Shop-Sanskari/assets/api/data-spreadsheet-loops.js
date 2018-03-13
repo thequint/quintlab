@@ -178,7 +178,7 @@ function showInfo(data) {
 		//console.log(id_item);
 
 		var cid_item = getParameterByName('cid');
-		console.log(cid_item);
+		//console.log(cid_item);
 
 		var q_item = getParameterByName('q');
 		//console.log(q_item);
@@ -220,7 +220,7 @@ function showInfo(data) {
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Tooltip text</span></span></div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Spend Aashirwaad to buy this.</span></span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"
@@ -243,7 +243,7 @@ function showInfo(data) {
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Spend Aashirwaad to buy this.</span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"
@@ -549,7 +549,7 @@ function showInfo(data) {
 	                    + "<div class='item-content clearfix'>"
 	                        + "<div class='item-content--left'>"
 	                            + "<h2 class='item-content--left__headline'>"+ data[cid_item_array[index]].Product_title +"</h2>"
-	                            + "<div class='item-content--left__price'><span class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</span><span class='carts-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
+	                            + "<div class='item-content--left__price'><span class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</span><span class='carts-coin tooltip'><span class='tooltiptext'>Spend Aashirwaad to buy this.</span></div>"
 	                            + "<div class='item-content--left__description'>"+ data[cid_item_array[index]].Product_description +"</div>"
 	                        + "</div>"
 	                        + "<div class='item-content--right'>"
@@ -567,7 +567,7 @@ function showInfo(data) {
 	                                    + "</div>"
 	                                + "</div>"
 	                            + "</form>"
-	                            + "<div class='sub-total--container'><span class='sub-total'></span><span class='sub-total-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
+	                            + "<div class='sub-total--container'><span class='sub-total'></span><span class='sub-total-coin tooltip'><span class='tooltiptext'>Spend Aashirwaad to buy this.</span></div>"
 	                            //+ "<div class='add-review'><a href=''>Add Review</a></div>"
 	                        + "</div>"
 	                    + "</div>"
