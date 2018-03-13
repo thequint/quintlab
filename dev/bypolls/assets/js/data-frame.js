@@ -112,15 +112,15 @@ frame_slider();
 	function scale_araria(){
 	
 		var x = parseInt($('#data_araria .seat-bjp').text());
-		var y = parseInt($('#data_araria .seat-inc').text());
-		var y = parseInt($('#data_araria .seat-ot').text());
+		var y = parseInt($('#data_araria .seat-rjd').text());
+		var z = parseInt($('#data_araria .seat-ot').text());
 		
 		var total = x+y+z;
 		
 		
 		$(".is-araria .scale .is-bjp").css('width', (x/total)*100+'%');
 		$(".is-araria .scale .is-rjd").css('width', (y/total)*100+'%');	
-		$(".is-araria .scale .is-ot").css('width', (y/total)*100+'%');	
+		$(".is-araria .scale .is-ot").css('width', (z/total)*100+'%');	
 		
 	}
 
