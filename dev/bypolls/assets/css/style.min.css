@@ -5130,7 +5130,7 @@ transform:translate3d(0, -100%, 0)
 	font-size: 20px;
 	line-height: 1;
 	opacity: .75;
-	color: #ffbf00;
+	color: #333;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
@@ -5285,7 +5285,6 @@ transform:translate3d(0, -100%, 0)
 	height: auto
 }
 .frame-wrapper .table-cont, .liveblog-wrapper .list-content {
-	height: 100%;
 	width: 100%
 }
 *, :after, :before {
@@ -6804,9 +6803,7 @@ tbody th {
 	width: 100%;
 	float: none
 }
-	.table-data{
-		margin-bottom:30px;
-	}
+	
 	
 }
 
@@ -7050,9 +7047,7 @@ tbody th {
 	margin: 0
 }
 
-.election-data {
-	padding-bottom: 0
-}
+
 
 .election-table ul li {
 	padding: 0
@@ -7134,15 +7129,75 @@ tbody th {
 /*Custom CSS*/
 
 .headlines h2 {
-	color: #333;
+	color: #fff;
 	font-size: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	float: none;
 	display: block;
 	margin: 0;
-	padding: 10px 0px;
+	padding: 0;
 }
+
+.headlines h2 span::after {
+	background-color: #f4f4f4;
+	content: "";
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	right: -8px;
+	top: -9px;
+	z-index: 2;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+
+.headlines h2 span{
+	display:inline-block;
+	position: relative;
+	padding: 10px;
+	background: #36154F;
+}
+
+
+.mob-headline span::after {
+	background-color: #fff;
+	content: "";
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	right: -8px;
+	top: -9px;
+	z-index: 2;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+
+
+.mob-headline{
+	
+	display: none;
+	width: 100%;
+	float: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0;
+	
+}
+
+.mob-headline span{
+	display:inline-block;
+	position: relative;
+	padding: 10px;
+	background: #36154F;
+}
+
 
 
 .headline-left{
@@ -7189,13 +7244,25 @@ tbody th {
 	background: #138D25;
 }
 
+.table-data tr td span.is-ot::before, .scale span.is-ot{
+	background: #9a9a9a;
+}
 
+.slider-cont{
+	width:100%;
+}
 
 
 @media (max-width:767px) {
 	.headlines{
 		display: none;
 	}
+	
+	.mob-headline{
+		display:block;
+	}
+	
+	
 }
 .scale {
 	margin: 10px 0 0 0;
@@ -7210,7 +7277,15 @@ tbody th {
 }
 
 
+.slick-next{
+	top: 70% !important;
+	right: 5px !important;
+}
 
+.slick-prev{
+	top: 70% !important;
+	left: 5px !important;
+}
 
 
 
