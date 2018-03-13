@@ -6689,10 +6689,10 @@ tbody th {
 	margin: 0 auto
 }
 
-.table-cont{
-	border:1px solid #d1d1d1;
+.table-cont {
+	border: 1px solid #d1d1d1;
 	background: #ffffff;
-	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
 }
 
 /*
