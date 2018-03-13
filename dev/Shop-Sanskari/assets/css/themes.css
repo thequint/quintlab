@@ -1022,6 +1022,10 @@ img {
 	display: inline-block;
 	padding: 5px 15px 10px;
 	height: 193px;
+	outline: none;
+}
+.third--partners__slider li img:focus {
+	outline: none;
 }
 .third--partners__slider .slick-prev {
 	left: -15px;
@@ -1034,16 +1038,6 @@ img {
 	color: #6e397f;
 	font-size: 28px;
 }
-
-
-
-
-
-
-
-
-
-
 .third--partners .partner-say {
 	margin: 20px auto 0;
 	max-width: 1170px;
@@ -1343,11 +1337,6 @@ img {
 input:focus {
 	outline: none;
 }
-
-
-
-
-
 /* Cart Details Page */
 .section.inner-header {
 	position: relative;
@@ -1764,7 +1753,7 @@ input:focus {
 	/*display: inline-block;*/
 }
 .cart-item .item-content--right .sub-total--container .sub-total-coin {
-	margin: 2px 0 0 3px;
+	margin: 3px 0 0 3px;
     display: block;
     width: 16px;
     height: 16px;
@@ -2203,6 +2192,48 @@ input:focus {
 	100%{
 		transform: translate3d(0, 120vh, 0);
 	}
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+	font-size: 13px;
+	line-height: 20px;
+    visibility: hidden;
+    width: 126px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 @media only screen and (max-width: 1279px) {

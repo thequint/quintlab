@@ -212,14 +212,15 @@ function showInfo(data) {
 			if(cid_item==null || q_item==null){
 				$("#product_show").append (
 
-					"<li class='wow fadeInUp'>"
+					//"<li class='wow fadeInUp'>"
+					"<li class='wow fadeIn'>"
 						+ "<figure>"
 							+ "<a href='details.html?id=" +index +"'>"
 								+ "<span class='item-list--item-img'><img src="+'assets/products/home/'+data[index].Product_image +'.jpg'+"></span>"
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin'></span></div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Tooltip text</span></span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"
@@ -235,14 +236,14 @@ function showInfo(data) {
 			}else {
 				$("#product_show").append (
 
-					"<li class='wow fadeInUp'>"
+					"<li class='wow fadeIn'>"
 						+ "<figure>"
 							+ "<a href='details.html?id=" +index +"&cid="+cid_item +"&q="+q_item +"'>"
 								+ "<span class='item-list--item-img'><img src="+'assets/products/home/'+data[index].Product_image +'.jpg'+"></span>"
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin'></span></div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"
@@ -548,7 +549,7 @@ function showInfo(data) {
 	                    + "<div class='item-content clearfix'>"
 	                        + "<div class='item-content--left'>"
 	                            + "<h2 class='item-content--left__headline'>"+ data[cid_item_array[index]].Product_title +"</h2>"
-	                            + "<div class='item-content--left__price'><span class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</span><span class='carts-coin'></span></div>"
+	                            + "<div class='item-content--left__price'><span class='product_cart_price'>"+ data[cid_item_array[index]].Product_price +"</span><span class='carts-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
 	                            + "<div class='item-content--left__description'>"+ data[cid_item_array[index]].Product_description +"</div>"
 	                        + "</div>"
 	                        + "<div class='item-content--right'>"
@@ -566,7 +567,7 @@ function showInfo(data) {
 	                                    + "</div>"
 	                                + "</div>"
 	                            + "</form>"
-	                            + "<div class='sub-total--container'><span class='sub-total'></span><span class='sub-total-coin'></span></div>"
+	                            + "<div class='sub-total--container'><span class='sub-total'></span><span class='sub-total-coin tooltip'><span class='tooltiptext'>Buy the Aashirwaad</span></div>"
 	                            //+ "<div class='add-review'><a href=''>Add Review</a></div>"
 	                        + "</div>"
 	                    + "</div>"
