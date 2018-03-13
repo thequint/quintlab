@@ -242,7 +242,7 @@ function showInfo(data) {
 								+ "<figcaption>"
 									+ "<h4 class='item-list--item-name'>" +data[index].Product_title +"</h4>"
 									+ "<h5 class='item-list--item-tagline'>" +data[index].Product_tagline +"</h5>"
-									+ "<div class='item-list--item-price'><span>Rs.</span>" +data[index].Product_price +"</div>"
+									+ "<div class='item-list--item-price'><span>" +data[index].Product_price +"</span><span class='home-coin'></span></div>"
 									+ "<div class='item-list--rating'>"
 										+ "<span class=''></span>"
 										+ "<span class=''></span>"

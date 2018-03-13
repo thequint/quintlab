@@ -1595,10 +1595,17 @@ input:focus {
 	font-family: 'Roboto', sans-serif;
 }
 .congrats-block h2 span {
+
+}
+.congrats-block h2 span a {
 	padding: 3px 8px;
+	color: #fff;
 	background-color: #e81c9f;
 }
-
+/*.congrats-block h2 span:hover a {
+	color: #232373
+	background-color: rgba(252,209,14,1.0);
+}*/
 
 .cart-item {
 	color: #474546;
