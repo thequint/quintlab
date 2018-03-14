@@ -483,6 +483,10 @@ img {
 	background-size: 100%;
 	background-position: top left;
 }
+.first--sanskari-woman .txt-right .discount .more .more-home-coin .tooltiptext {
+	width: 84px;
+	margin-left: -40px;
+}
 
 .section.second {
 	background-color: #fcd10e;
@@ -657,6 +661,10 @@ img {
 }
 .second--body .item-nav .aashirwaad-coin-small {
     display: inline-block;
+}
+.second--body .item-nav .aashirwaad-coin-small .tooltiptext {
+	width: 84px;
+	margin-left: -40px;
 }
 .second--body .item-nav li a {
 	color: #b79cbf;
@@ -1829,6 +1837,10 @@ input:focus {
 	background-size: 100%;
 	background-position: top left;
 }
+.aashirwaad-coin-small .tooltiptext {
+	width: 84px !important;
+	margin-left: -40px !important;
+}
 
 .cart-item .item-content--right .add-review {
 	font-size: 16px;
@@ -2319,10 +2331,10 @@ input:focus {
     color: #232373;
     text-align: center;
     border-radius: 4px;
-    padding: 6px 3px 8px 3px;
+    padding: 6px 3px 6px 3px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 130%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
