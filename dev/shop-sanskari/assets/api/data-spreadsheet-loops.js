@@ -268,6 +268,7 @@ function showInfo(data) {
 			}
 			
 		}
+		$(".items-loading").fadeOut();
 	}
 
 
@@ -480,7 +481,7 @@ function showInfo(data) {
 				)
 			}
 		}
-
+		$(".items-loading").fadeOut();
 
 	}
 
