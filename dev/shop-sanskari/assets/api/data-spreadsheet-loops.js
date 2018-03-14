@@ -53,7 +53,7 @@ var wow = new WOW(
 
 wow.init();
 
-$("#shop_now").click(function() {
+$(".scroll_to_products").click(function() {
     $('html, body').animate({
         scrollTop: $(".item-head").offset().top
     }, 1000);
@@ -183,12 +183,16 @@ function showInfo(data) {
 		var q_item = getParameterByName('q');
 		//console.log(q_item);
 
+		console.log(q_item);
 
 		if(q_item==null){
 			$("#header-cart-q .header-cart-item").text(0);
 			$("#header-cart-q").attr("href","carts.html"); // go to cart page
 
 			$(".home_url").attr("href","index.html"); // back to home page
+
+			console.log(q_item);
+
 			$(".thanks_url").attr("href","thank-you.html"); // go to thank you page
 		}else {
 			var q_item_array = q_item.split(",").map(Number);
@@ -480,7 +484,7 @@ function showInfo(data) {
 
 	}
 
-	$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
+	//$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item); // back to home page
 
 
 	// Carts Page
