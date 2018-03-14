@@ -2,6 +2,11 @@
 .loading {
 	display: none;
 }
+
+body, a:hover, textarea, input {
+	cursor: url(../images/cur.ani), url(../images/cur.png), default !important;
+}
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -379,3 +384,23 @@ opacity: 1;
 transform: translate3d(0, 0, 0);
 }
 }
+
+
+
+
+
+
+svg.loader-svg{
+  position:absolute;
+
+}
+
+#loaderContainer{
+  position:absolute;
+  width:182.6px;
+  height:182.6px;
+}
+
+
+
+

@@ -1,3 +1,28 @@
+
+
+$(window).load(function(){
+	$('.inner-container').show();
+	$('#preloader').hide();
+})
+
+
+$('.assets a').click(function() {
+ //  $(this).attr('data-audio')
+	console.log("audio");
+	$("#"+$(this).attr("data-audio"))[0].play();
+});
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
 	$('.assets a path,.assets a circle,.assets a polygon,.assets a text,.assets a rect').click(function () {
 		//$('.modal-outer').show();
@@ -22,7 +47,7 @@ $(document).ready(function () {
 	$("a").mouseleave(function () {
 		console.log("leave");
 		$(this).removeClass("hover_class");
-	})
+	});
 });
 
 
