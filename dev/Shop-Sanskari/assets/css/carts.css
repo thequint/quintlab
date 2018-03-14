@@ -2607,11 +2607,11 @@ header #nav-icon {
   max-height: 200px;
 }
 
-footer {
+/*footer {
   background-color: #16161a;
   color: #fff;
   padding: 42px 0 66px;
-}
+}*/
 
 footer ._cont {
   position: relative;

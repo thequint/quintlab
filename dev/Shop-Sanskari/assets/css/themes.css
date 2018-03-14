@@ -449,29 +449,40 @@ img {
 }
 .first--sanskari-woman .txt-right .upto {
 	font-weight: 700;
-	padding-left: 30px;
+	padding-left: 15px;
 	font-size: 23px;
 	font-family: 'Roboto', sans-serif;
 }
 .first--sanskari-woman .txt-right .discount {
 	font-weight: 700;
-	padding: 10px 30px 30px 30px;
+	padding: 12px 10px 10px 10px;
 	background-color: #51156b;
 }
 .first--sanskari-woman .txt-right .discount .percentage {
 	color: #fc0de0;
-	font-size: 90px;
-	line-height: 60px;
-	
+	font-size: 94px;
+	line-height: 70px;
 	letter-spacing: -2px;
 	font-family: 'Abhaya Libre', serif;
 }
 .first--sanskari-woman .txt-right .discount .more {
 	padding-left: 5px;
-	font-size: 23px;
+	font-size: 18px;
 	font-family: 'Roboto', sans-serif;
 }
 
+
+.first--sanskari-woman .txt-right .discount .more .more-home-coin {
+	margin: -1px 0 0 2px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
 
 .section.second {
 	background-color: #fcd10e;
@@ -644,6 +655,9 @@ img {
 	line-height: 14px;
 	transition: all 0.2s ease-in-out;
 }
+.second--body .item-nav .aashirwaad-coin-small {
+    display: inline-block;
+}
 .second--body .item-nav li a {
 	color: #b79cbf;
 	display: block;
@@ -654,6 +668,10 @@ img {
 }
 .second--body .item-nav li a:hover span {
 	color: #f178ab;
+}
+
+.second--body .item-nav li a:hover span.tooltiptext {
+	color: #232373;
 }
 
 .second--body .item-nav li a.active {
@@ -810,7 +828,7 @@ img {
 	background-position: top center; 
 }
 .second--body .item-list li a {
-	padding: 10px;
+	padding: 10px 10px 0;
 	color: #333;
 	font-weight: 900;
 	display: block;
@@ -1251,7 +1269,8 @@ img {
 	color: #fff;
 	padding: 0 20px;
 }
-.footer--section::after {
+.footer--section::after,
+.footer--section-row::after {
     content: " ";
     visibility: hidden;
     display: block;
@@ -1261,20 +1280,24 @@ img {
 }
 .footer--section h4 {
 	font-size: 15px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: 'Roboto', sans-serif;
 }
 
+.footer--section-row {
+	width: 100%;
+}
+
 .footer--section__left {
 	float: left;
-	width: 55%;
+	width: 65%;
 }
 .footer--section__left--nav {
 	float: left;
 	width: 50%;
-	padding: 80px 0;
+	padding: 40px 0 20px;
 }
 .footer--section__left--nav a {
 	color: #bab9b9;
@@ -1287,14 +1310,14 @@ img {
 
 .footer--section__right {
 	float: left;
-	width: 45%;
-	padding: 80px 20px 0 50px;
+	width: 35%;
+	padding: 40px 20px 0 50px;
 }
 .footer--section__right h4 {
 	margin-bottom: 10px;
 }
 .footer--section__right--social {
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 .footer--section__right--social li {
 	margin: 0 20px 0 0;
@@ -1346,6 +1369,15 @@ img {
 }
 input:focus {
 	outline: none;
+}
+.footer--section__disclaimer {
+	margin: 0 auto;
+	max-width: 920px;
+	color: #bab9b9;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 15px 0 40px;
+    text-align: center;
 }
 /* Cart Details Page */
 .section.inner-header {
@@ -1779,6 +1811,17 @@ input:focus {
 }
 
 
+.aashirwaad-coin-small {
+	margin: -1px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
 
 .cart-item .item-content--right .add-review {
 	font-size: 16px;
@@ -2433,6 +2476,11 @@ input:focus {
 		top: 0;
 	}
 
+	.footer--section__disclaimer {
+		max-width: 600px;
+	    padding: 15px 0 70px;
+	}
+
 }
 
 
@@ -2477,10 +2525,9 @@ input:focus {
 	}
 	.footer--section__right {
 		padding: 0;
-		margin-bottom: 50px;
 	}
 	.footer--section__right--social {
-	    margin-bottom: 20px;
+	    /*margin-bottom: 20px;*/
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -3038,6 +3085,9 @@ input:focus {
 	.footer--section__left--nav {
 		padding: 20px 0;
 		width: 100%;
+	}
+	.footer--section__left--nav:first-child {
+		padding-bottom: 0;
 	}
 	.footer--section h4 {
 		margin-bottom: 5px;
