@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Shop Sanakari</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" href="assets/css/animate.css" media="all">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="assets/css/slick.css" media="all">
+<link rel="stylesheet" href="assets/css/slick-theme.css" media="all">
+
+<link rel="stylesheet" href="assets/css/carts.css" media="all">
+
+<link rel="stylesheet" href="assets/css/themes.css" media="all">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:800|Playfair+Display:400,700|Roboto:300,900" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+<button id="btn">Try it</button>
+<p id="demo"></p>
+
+==============================================
+<br>
+<input id="name" type="text">
+<input id="check" type="button" value="Check">
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    $("#demo").html(fruits);
+
+
+    $('#btn').click(function() {
+
+        console.log(jQuery.inArray("Kiwi", fruits));
+
+        if(jQuery.inArray("Kiwi", fruits) != -1){
+            console.log("test");
+            
+        }
+        else
+        {
+            fruits.push("Kiwi");
+            $("#demo").html(fruits);
+        }
+    });
+
+    //document.getElementById("demo").innerHTML = fruits;
+    // function myFunction() {
+    //     fruits.push("Kiwi");
+    //     document.getElementById("demo").innerHTML = fruits;
+    // }
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var names = ['vadim', 'thomas', 'tanya', 'timur', 'eve', 'kate', 'karen', 'peter'];
+
+    $('#check').click(function() {
+        var name = $('#name').val();
+        if (jQuery.inArray(name, names)!='-1') {
+            alert(name + ' is in the array!');
+        } else {
+            alert(name + ' is NOT in the array...');
+        }
+    });
+
+
+});
+</script>
+
+<!-- <script type="text/javascript" src="assets/js/functions.js"></script> -->
+
+</body>
+</html>
