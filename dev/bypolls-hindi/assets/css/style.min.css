@@ -7298,6 +7298,7 @@ tbody th {
 	left: 5px !important;
 }
 
+.slick-slider { display: table; table-layout: fixed; width: 100%; }
 
 
 
