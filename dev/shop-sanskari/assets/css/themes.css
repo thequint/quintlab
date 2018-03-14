@@ -1770,7 +1770,6 @@ input:focus {
 
 
 
-
 .item-content--left__description {
 	font-size: 15px;
 	float: left;
@@ -1816,6 +1815,7 @@ input:focus {
 	background-size: 100%;
 	background-position: top left;
 }
+
 
 
 .aashirwaad-coin-small {
@@ -1877,6 +1877,21 @@ input:focus {
     font-size: 34px;
     /*font-weight: 700;*/
     letter-spacing: -1px;
+}
+.cart-btn .total-carts-coin {
+	margin: -10px 0 0 4px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+	background-image: url(../images/home-coin.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+}
+.cart-btn .total-carts-coin span.tooltiptext {
+	font-size: 14px;
+	letter-spacing: 0;
 }
 
 .cart-items-list .cart-btn--shopping {
