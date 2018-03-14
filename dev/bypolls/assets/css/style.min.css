@@ -6642,23 +6642,31 @@ tbody th {
 	font-weight: 500;
 	line-height: 100%;
 	margin: 0;
-	padding: 10px;
+	padding: 0px;
 	text-align: left;
 	text-transform: uppercase;
 	border-bottom: 0px solid #f3f3f3
 }
-.table-cont h3 a {
+.table-cont h3 span {
 	display: inline-block;
 	text-align: right;
 	float: right;
-	color: #0d5dd5;
 	font-size: 13px;
+	color: #0d5dd5;
 
 }
 
-.table-cont h3 a:hover{
-	text-decoration:underline;
+.table-cont h3 a{
+	color: #333;
+	display: block;
+	padding: 10px;
 }
+
+.table-cont h3 a:hover span{
+	text-decoration: underline;
+}
+
+
 .row.table-row {
 	margin: 0 -10px 30px -10px
 }
