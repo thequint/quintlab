@@ -49,13 +49,13 @@ document.getElementById("data_phulpur").innerHTML =
 	"<tr>" 
 	+ "<td><span class='is-bjp'>" + [ data[0].arariahindi,] + "</span></td>"
 	+ "<td><span class='is-rjd'>" + [ data[1].arariahindi,] + "</span></td>"  
-	+ "<td><span class='is-ot'>" + [ data[2].arariahindi,] + "</span></td>"  
+	//+ "<td><span class='is-ot'>" + [ data[2].arariahindi,] + "</span></td>"  
 	+ "</tr>"
 
 	+"<tr>" 
 	+ "<td class='seat-bjp'>" + [ data[0].arariaseats,] + "</td>"  
 	+ "<td class='seat-rjd'>" + [ data[1].arariaseats,] + "</td>"  
-	+ "<td class='seat-ot'>" + [ data[2].arariaseats,] + "</td>"  
+	//+ "<td class='seat-ot'>" + [ data[2].arariaseats,] + "</td>"  
 	+ "</tr>";
 	
 
@@ -113,14 +113,15 @@ frame_slider();
 	
 		var x = parseInt($('#data_araria .seat-bjp').text());
 		var y = parseInt($('#data_araria .seat-rjd').text());
-		var z = parseInt($('#data_araria .seat-ot').text());
+		//var z = parseInt($('#data_araria .seat-ot').text());
 		
-		var total = x+y+z;
+		//var total = x+y+z;
+		var total = x+y;
 		
 		
 		$(".is-araria .scale .is-bjp").css('width', (x/total)*100+'%');
 		$(".is-araria .scale .is-rjd").css('width', (y/total)*100+'%');	
-		$(".is-araria .scale .is-ot").css('width', (z/total)*100+'%');	
+		//$(".is-araria .scale .is-ot").css('width', (z/total)*100+'%');	
 		
 	}
 

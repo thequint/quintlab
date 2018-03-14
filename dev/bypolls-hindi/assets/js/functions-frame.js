@@ -17,7 +17,7 @@ function frame_slider() {
 		slidesToScroll: 1,
 		autoplay: true,
 		arrows: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 5000,
 		dots: false,
 		responsive: [
 
