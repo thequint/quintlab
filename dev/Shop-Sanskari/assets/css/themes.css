@@ -1320,7 +1320,11 @@ img {
 	/*margin-bottom: 50px;*/
 }
 .footer--section__right--social li {
-	margin: 0 20px 0 0;
+	margin: 0 12px 0 0;
+	float: left;
+}
+.footer--section__right--social li a {
+	display: block;
 	color: #212544;
 	width: 32px;
 	height: 32px;
@@ -1332,10 +1336,13 @@ img {
 	background-color: #fcd10e;
 	transition: all 0.2s ease-in-out;
 }
-.footer--section__right--social li:hover {
+.footer--section__right--social li a:hover {
 	color: #fff;
 	background-color: #e81c9f;
 }
+
+
+
 .footer--section__right--subscribe h4 {
 	font-size: 11px;
 	margin-bottom: 7px;
