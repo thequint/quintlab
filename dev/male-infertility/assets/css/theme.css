@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*Start CSS*/
 .app-container {
-	max-width: 600px;
+	max-width: 100%;
 	background-color: #85c4d7;
 	margin: 0px auto;
 	position: relative;
