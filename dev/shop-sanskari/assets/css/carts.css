@@ -1474,6 +1474,7 @@ header #nav-icon {
 
 .product-detail .left-col .big {
   /*width: 83.05085%;*/
+  font-size: 0;
   width: 100%;
   float: right;
   margin-right: 0;

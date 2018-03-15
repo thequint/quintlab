@@ -371,10 +371,15 @@ function showInfo(data) {
         $.getScript('assets/js/cart.js');
 
         $(".detail-top .big").append(
-            "<div class='product_video'>"
-            // + "<img src="+'assets/images/products/large/'+data[id_item].Product_image +'.jpg'+">"
-            + "<iframe width='560' height='315' src='https://www.youtube.com/embed/" + data[id_item].Product_video + "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>" +
-            "</div>"
+            + "<div class='product_video'>"
+                // + "<img src="+'assets/images/products/large/'+data[id_item].Product_image +'.jpg'+">"
+                // + "<iframe width='560' height='315' src='https://www.youtube.com/embed/" + data[id_item].Product_video + "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>" +
+                + "<div style='position: relative; display: block; max-width: 1280px;'>"
+                    + "<div style='padding-top: 56.25%;'>"
+                        + "<iframe src='//players.brightcove.net/5653786008001/default_default/index.html?videoId="+ data[id_item].Product_video + "' allowfullscreen webkitallowfullscreen mozallowfullscreen style='position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; border: 0 none;'></iframe>"
+                    + "</div>"
+                + "</div>"
+            + "</div>"
         )
 
         for (var j = 0; j < id_item_data.Review_rating_01; j++) {
