@@ -1,15 +1,11 @@
 
 
-$(window).load(function(){
-	$('.inner-container').show();
-	$('#preloader').hide();
-})
-
 
 $('.assets a').click(function() {
  //  $(this).attr('data-audio')
 	console.log("audio");
 	$("#"+$(this).attr("data-audio"))[0].play();
+	
 });
 
 
@@ -23,7 +19,7 @@ $('.assets a').click(function() {
 
 
 
-$(document).ready(function () {
+
 	$('.assets a path,.assets a circle,.assets a polygon,.assets a text,.assets a rect').click(function () {
 		//$('.modal-outer').show();
 	
@@ -48,7 +44,7 @@ $(document).ready(function () {
 		console.log("leave");
 		$(this).removeClass("hover_class");
 	});
-});
+
 
 
 
@@ -56,8 +52,8 @@ $(document).ready(function () {
  * dialog box v0.1
  * Ashwin Saxena
  */
-;
-(function (window) {
+
+
 
 	'use strict';
 
@@ -159,13 +155,11 @@ $(document).ready(function () {
 	// add to global namespace
 	window.DialogFx = DialogFx;
 
-})(window);
+
 
 /* call */
 
 
-(function () {
-	
 	var  dlgtrigger=[];
 	var  somedialog=[];
 	var  dlg;
@@ -189,8 +183,28 @@ $(document).ready(function () {
 	somedialog[1] = document.getElementById(dlgtrigger[1].getAttribute('data-dialog')),
 	dlg[1] = new DialogFx(somedialog[1]);
 	dlgtrigger[1].addEventListener('click', dlg[1].toggle.bind(dlg[1]));*/
+	function getRandomInt(min, max) {
+   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+	function getRandomInt_2(min, max) {
+   return Math.random() * (max - min + 1) + min;
+}
+$(".sperm-bg li").each(function(){
+var random_no=	getRandomInt(0, $(".sperm-bg li").length);
+var random_no_2=	getRandomInt_2(2,8);	
+$(this).css("top", random_no*100/$(".sperm-bg li").length+"%")
+$(this).css("animation-duration", random_no_2+"s")
 	
+})
+
+
+$(window).load(function(){
+	$('.inner-container').show();
+	$('#preloader').hide();
+})
+
 	
 	
 
-})();
+

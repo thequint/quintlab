@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .app-container {
 	max-width: 600px;
 	background-color: #85c4d7;
-	margin: 20px auto;
+	margin: 0px auto;
 	position: relative;
 	overflow: hidden;
 }
@@ -65,6 +65,9 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 100;
 	pointer-events: none;
 }
+
+
+
 .assets a {
 	display: block;
 	position: absolute;
@@ -123,6 +126,20 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 20%;
 	z-index: 9999;
 }
+
+.assets a.cold-drink {
+	bottom: 67%;
+	right: 3%;
+	width: 12%;
+	z-index: 99;
+	transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	-webkit-transform: rotateZ(-9deg);
+	-o-transform: rotateZ(15deg);
+}
+
+
+
 .hands {
 	position: absolute;
 	z-index: 9999;
@@ -189,6 +206,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 7px 0;
 	line-height: 120%;
 }
+
+
+
+
+
 .modal-container p {
 	margin: 0;
 }
@@ -212,6 +234,10 @@ button {
 	left: 0;
 	z-index: 0;
 }
+
+
+
+
 .dialog {
 	position: absolute;
 	display: -webkit-flex;
@@ -385,22 +411,57 @@ transform: translate3d(0, 0, 0);
 }
 }
 
-
-
-
-
-
 svg.loader-svg{
   position:absolute;
 
 }
 
-#loaderContainer{
-  position:absolute;
-  width:182.6px;
-  height:182.6px;
+#preloader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	font-size: 0px;
+	height: 100%;
+}
+
+.loader{
+	max-width: 250px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 
+.sperm-bg{
+	
+}
 
+.sperm-bg li {
+	width: 20%;
+	opacity: 0.4;
+	position: absolute;
+animation: xAxis infinite linear;
+	   transform: translateX(-20vw);
+} 
+
+.sperm-bg.anim li 
+{
+	
+}
+
+
+@keyframes xAxis {
+  0% {
+    transform: translateX(-20vw);
+  }
+
+  100% {
+    transform: translateX(110vw);
+  }
+}
 
