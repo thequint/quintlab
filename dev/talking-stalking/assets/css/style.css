@@ -906,7 +906,7 @@ a {
     z-index: 5;
 }
 .slick-dots li button {
-    padding: 32px;
+    padding: 16px;
 }
 .slick-dots li button:before {
     font-size: 22px;
@@ -2107,6 +2107,11 @@ select:focus {
         top: 50px;
     }
 
+    .slick-dots {
+        right: -25px;
+        top: 30%;
+    }
+
     .section.third .row-top {
         padding: 0 40px 40px;
         margin-top: 20px;
@@ -2219,11 +2224,11 @@ select:focus {
         width: 40px;
     }
     .slick-dots li button {
-        padding: 23px;
+        padding: 13px;
     }
     .slick-dots {
         right: -25px;
-        top: 33%;
+        top: 30%;
     }
     .slick-dots li button:before {
         font-size: 18px;
@@ -2440,6 +2445,14 @@ select:focus {
     .section.second .eye-third,
     .section.second .red-leaf-fifth {
         display: none;
+    }
+    .slick-dots li button {
+        padding: 6px;
+        height: 15px;
+    }
+    .slick-dots {
+        right: -25px;
+        top: 24%;
     }
 
 }

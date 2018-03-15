@@ -81,7 +81,7 @@ function slug_3_init() {
             return item.type == 'story'
         }).map(function(item) {
             return item.story
-        }).slice(0, 3);
+        }).slice(0, 5);
         var elements = stories.map(function(story) {
             return '<li><figure><a href="https://www.thequint.com/' + story.slug + '" target="blank"><div><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=70&w=672&fm=pjpg"></div><figcaption>' + story.headline + '</figcaption></a></figure></li>'
         });
