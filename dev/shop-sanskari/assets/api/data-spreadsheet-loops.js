@@ -224,7 +224,7 @@ function showInfo(data) {
                     "<li class='wow fadeIn'>" +
                     "<figure>" +
                     "<a href='details.html?id=" + index + "'>" +
-                    "<span class='item-list--item-img'><img src=" + 'assets/products/home/' + data[index].Product_image + '.jpg' + "></span>" +
+                    "<span class='item-list--item-img'><img src=" + 'assets/images/products/home/' + data[index].Product_image + '.jpg' + "></span>" +
                     "<figcaption>" +
                     "<h4 class='item-list--item-name'>" + data[index].Product_title + "</h4>" +
                     "<h5 class='item-list--item-tagline'>" + data[index].Product_tagline + "</h5>" +
@@ -247,7 +247,7 @@ function showInfo(data) {
                     "<li class='wow fadeIn'>" +
                     "<figure>" +
                     "<a href='details.html?id=" + index + "&cid=" + cid_item + "&q=" + q_item + "'>" +
-                    "<span class='item-list--item-img'><img src=" + 'assets/products/home/' + data[index].Product_image + '.jpg' + "></span>" +
+                    "<span class='item-list--item-img'><img src=" + 'assets/images/products/home/' + data[index].Product_image + '.jpg' + "></span>" +
                     "<figcaption>" +
                     "<h4 class='item-list--item-name'>" + data[index].Product_title + "</h4>" +
                     "<h5 class='item-list--item-tagline'>" + data[index].Product_tagline + "</h5>" +
@@ -366,13 +366,13 @@ function showInfo(data) {
         $("#product_price").html(data[id_item].Product_price);
         $("#product_des").html(data[id_item].Product_description);
         //$("#productImage").css({"background-image",url})
-        $("#big-image").css("background-image", "url('assets/products/large/" + data[id_item].Product_image + ".jpg')"); // change styel image
-        $("#big-image").attr("data-src", "assets/products/large/" + data[id_item].Product_image + ".jpg"); // change data src
+        $("#big-image").css("background-image", "url('assets/images/products/large/" + data[id_item].Product_image + ".jpg')"); // change styel image
+        $("#big-image").attr("data-src", "assets/images/products/large/" + data[id_item].Product_image + ".jpg"); // change data src
         $.getScript('assets/js/cart.js');
 
         $(".detail-top .big").append(
             "<div class='product_video'>"
-            // + "<img src="+'assets/products/large/'+data[id_item].Product_image +'.jpg'+">"
+            // + "<img src="+'assets/images/products/large/'+data[id_item].Product_image +'.jpg'+">"
             + "<iframe width='560' height='315' src='https://www.youtube.com/embed/" + data[id_item].Product_video + "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>" +
             "</div>"
         )
@@ -438,7 +438,7 @@ function showInfo(data) {
                         "<li class='wow fadeIn'>" +
                         "<figure>" +
                         "<a href='details.html?id=" + index + "'>" +
-                        "<span class='item-list--item-img'><img src=" + 'assets/products/recommended/' + data[index].Product_image + '.jpg' + "></span>" +
+                        "<span class='item-list--item-img'><img src=" + 'assets/images/products/recommended/' + data[index].Product_image + '.jpg' + "></span>" +
                         "<figcaption>" +
                         "<h4 class='item-list--item-name'>" + data[index].Product_title + "</h4>" +
                         "</figcaption>" +
@@ -451,7 +451,7 @@ function showInfo(data) {
                         "<li class='wow fadeIn'>" +
                         "<figure>" +
                         "<a href='details.html?id=" + index + "&cid=" + cid_item + "&q=" + q_item + "'>" +
-                        "<span class='item-list--item-img'><img src=" + 'assets/products/recommended/' + data[index].Product_image + '.jpg' + "></span>" +
+                        "<span class='item-list--item-img'><img src=" + 'assets/images/products/recommended/' + data[index].Product_image + '.jpg' + "></span>" +
                         "<figcaption>" +
                         "<h4 class='item-list--item-name'>" + data[index].Product_title + "</h4>" +
                         "</figcaption>" +
@@ -527,7 +527,7 @@ function showInfo(data) {
             for (var index = 0; index <= cid_item_array.length - 1; index++) {
                 $("#cart_data").append(
                     "<li class='cart-item clearfix'>" +
-                    "<div class='item-image'><img src=" + 'assets/products/home/' + data[cid_item_array[index]].Product_image + '.jpg' + "></div>"
+                    "<div class='item-image'><img src=" + 'assets/images/products/home/' + data[cid_item_array[index]].Product_image + '.jpg' + "></div>"
 
                     +
                     "<div class='item-content clearfix'>" +
