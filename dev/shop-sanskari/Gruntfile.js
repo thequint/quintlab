@@ -8,12 +8,13 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    '../../prod/tansen-sangeet-samaroh/assets/css/bundles-style.min.css': [
-                        'assets/css/font-awesome.min.css',
-                        'assets/css/animate.css',
+                    '../../prod/shop-sanskari/assets/css/bundles-style.min.css': [
                         'assets/css/base.css',
-                        'assets/css/theme.css',
-                        'assets/css/responsive.css'
+                        'assets/css/animate.css',
+                        'assets/css/font-awesome.min.css',
+                        'assets/css/slick.css',
+                        'assets/css/slick-theme.css',
+                        'assets/css/themes.css'
                     ]
                 }
             }
@@ -25,10 +26,10 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'assets/js/jquery.min.js',
-                    'assets/js/jquery.easing.min.js',
+                    'assets/js/jquery-1.10.2.min.js',
+                    'assets/js/slick.min.js',
                     'assets/js/wow.min.js',
-                    'assets/api/functions.js'
+                    'assets/api/spreadsheet.js'
                 ],
                 dest: 'assets/js/bundles-script.js',
             },
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    '../../prod/tansen-sangeet-samaroh/assets/js/bundles-script.min.js': ['assets/js/bundles-script.js']
+                    '../../prod/shop-sanskari/assets/js/bundles-script.min.js': ['assets/js/bundles-script.js']
                 }
             }
         },
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'assets/images/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: '../../prod/tansen-sangeet-samaroh/assets/images/'
+                    dest: '../../prod/shop-sanskari/assets/images/'
                 }]
             }
         }
