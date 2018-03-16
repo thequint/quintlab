@@ -2,11 +2,9 @@
 .loading {
 	display: none;
 }
-
 body, a:hover, textarea, input {
 	cursor: url(../images/cur.ani), url(../images/cur.png), default !important;
 }
-
 html, body {
 	padding: 0;
 	margin: 0;
@@ -15,7 +13,7 @@ html, body {
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	background-color: #fff;
+	background-color: transparent;
 	color: #565656;
 	font-size: 17px;
 	width: 100%;
@@ -65,9 +63,6 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 100;
 	pointer-events: none;
 }
-
-
-
 .assets a {
 	display: block;
 	position: absolute;
@@ -126,7 +121,6 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 20%;
 	z-index: 9999;
 }
-
 .assets a.cold-drink {
 	bottom: 67%;
 	right: 3%;
@@ -137,9 +131,6 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-transform: rotateZ(-9deg);
 	-o-transform: rotateZ(15deg);
 }
-
-
-
 .hands {
 	position: absolute;
 	z-index: 9999;
@@ -206,11 +197,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 7px 0;
 	line-height: 120%;
 }
-
-
-
-
-
 .modal-container p {
 	margin: 0;
 }
@@ -234,10 +220,6 @@ button {
 	left: 0;
 	z-index: 0;
 }
-
-
-
-
 .dialog {
 	position: absolute;
 	display: -webkit-flex;
@@ -285,18 +267,15 @@ button {
 	font-size: 30px;
 	padding: 0 0 10px;
 }
-.dialog p{
+.dialog p {
 	margin-bottom: 10px;
 }
-
-.dialog span{
-	display:block;
+.dialog span {
+	display: block;
 	font-size: 80%;
 	color: #8c8c8c;
 	margin-bottom: 20px;
 }
-
-
 .dialog--open .dialog__overlay {
 	-webkit-transition-duration: 0.8s;
 	transition-duration: 0.8s;
@@ -410,13 +389,10 @@ opacity: 1;
 transform: translate3d(0, 0, 0);
 }
 }
-
-svg.loader-svg{
-  position:absolute;
-
+svg.loader-svg {
+	position: absolute;
 }
-
-#preloader{
+#preloader {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -425,8 +401,7 @@ svg.loader-svg{
 	font-size: 0px;
 	height: 100%;
 }
-
-.loader{
+.loader {
 	max-width: 250px;
 	margin: 0 auto;
 	position: relative;
@@ -435,33 +410,34 @@ svg.loader-svg{
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-
-
-.sperm-bg{
-	
+.sperm-bg {
 }
-
 .sperm-bg li {
 	width: 20%;
 	opacity: 0.4;
 	position: absolute;
-animation: xAxis infinite linear;
-	   transform: translateX(-20vw);
-} 
-
-.sperm-bg.anim li 
-{
-	
+	animation: xAxis infinite linear;
+	transform: translateX(-20vw);
+}
+.sperm-bg.anim li {
+}
+ @keyframes xAxis {
+ 0% {
+ transform: translateX(-20vw);
+}
+ 100% {
+ transform: translateX(110vw);
+}
 }
 
-
-@keyframes xAxis {
-  0% {
-    transform: translateX(-20vw);
-  }
-
-  100% {
-    transform: translateX(110vw);
-  }
+@media (max-width:480px) {
+.dialog h2 {
+	font-size: 24px;
 }
-
+.dialog--open .dialog-inner {
+	padding: 15px;
+}
+.dialog__content {
+	width: 90%;
+}
+}
