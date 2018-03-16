@@ -1,210 +1,147 @@
-
-
-
-$('.assets a').click(function() {
- //  $(this).attr('data-audio')
-	console.log("audio");
-	$("#"+$(this).attr("data-audio"))[0].play();
-	
+$('.assets a').click(function () {
+	$("#" + $(this).attr("data-audio"))[0].play();
 });
 
 
+$('.assets a path,.assets a circle,.assets a polygon,.assets a text,.assets a rect').click(function () {
+	$('.dialog-inner').find('h2').html($(this).closest('a').attr('data-headline'));
+	$('.dialog-inner').find('p').html($(this).closest('a').attr('data-description'));
+	$('.dialog-inner').find('span').html($(this).closest('a').attr('data-source'));
+
+});
+
+$("path,circle,polygon,text,rect").mouseenter(function () {
+	console.log("hover");
+	$(this).closest("a").addClass("hover_class");
+})
+$("a").mouseleave(function () {
+	console.log("leave");
+	$(this).removeClass("hover_class");
+});
 
 
-
-
-
-
-
-
-
-
-
-	$('.assets a path,.assets a circle,.assets a polygon,.assets a text,.assets a rect').click(function () {
-		//$('.modal-outer').show();
-	
-		
-		$('.dialog-inner').find('h2').html($(this).closest('a').attr('data-headline'));
-		$('.dialog-inner').find('p').html($(this).closest('a').attr('data-description'));
-		$('.dialog-inner').find('span').html($(this).closest('a').attr('data-source'));
-		
-	});
-
-	$('.modal-close').click(function () {
-		//$('.modal-outer').hide();
-		
-		
-	});
-
-	$("path,circle,polygon,text,rect").mouseenter(function () {
-		console.log("hover");
-		$(this).closest("a").addClass("hover_class");
-	})
-	$("a").mouseleave(function () {
-		console.log("leave");
-		$(this).removeClass("hover_class");
-	});
-
-
-
-
-/**
- * dialog box v0.1
- * Ashwin Saxena
- */
-
-
-
-	'use strict';
-
-	var support = {
-			animations: Modernizr.cssanimations
-		},
-		animEndEventNames = {
-			'WebkitAnimation': 'webkitAnimationEnd',
-			'OAnimation': 'oAnimationEnd',
-			'msAnimation': 'MSAnimationEnd',
-			'animation': 'animationend'
-		},
-		animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
-		onEndAnimation = function (el, callback) {
-			var onEndCallbackFn = function (ev) {
-				if (support.animations) {
-					if (ev.target != this) return;
-					this.removeEventListener(animEndEventName, onEndCallbackFn);
-				}
-				if (callback && typeof callback === 'function') {
-					callback.call();
-				}
-			};
+var support = {
+		animations: Modernizr.cssanimations
+	},
+	animEndEventNames = {
+		'WebkitAnimation': 'webkitAnimationEnd',
+		'OAnimation': 'oAnimationEnd',
+		'msAnimation': 'MSAnimationEnd',
+		'animation': 'animationend'
+	},
+	animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
+	onEndAnimation = function (el, callback) {
+		var onEndCallbackFn = function (ev) {
 			if (support.animations) {
-				el.addEventListener(animEndEventName, onEndCallbackFn);
-			} else {
-				onEndCallbackFn();
+				if (ev.target != this) return;
+				this.removeEventListener(animEndEventName, onEndCallbackFn);
+			}
+			if (callback && typeof callback === 'function') {
+				callback.call();
 			}
 		};
-
-	function extend(a, b) {
-		for (var key in b) {
-			if (b.hasOwnProperty(key)) {
-				a[key] = b[key];
-			}
-		}
-		return a;
-	}
-
-	function DialogFx(el, options) {
-		this.el = el;
-		this.options = extend({}, this.options);
-		extend(this.options, options);
-		this.ctrlClose = this.el.querySelector('[data-dialog-close]');
-		this.isOpen = false;
-		this._initEvents();
-	}
-
-	DialogFx.prototype.options = {
-		// callbacks
-		onOpenDialog: function () {
-			return false;
-		},
-		onCloseDialog: function () {
-			return false;
-		}
-	}
-
-	DialogFx.prototype._initEvents = function () {
-		var self = this;
-
-		// close action
-		this.ctrlClose.addEventListener('click', this.toggle.bind(this));
-
-		// esc key closes dialog
-		document.addEventListener('keydown', function (ev) {
-			var keyCode = ev.keyCode || ev.which;
-			if (keyCode === 27 && self.isOpen) {
-				self.toggle();
-			}
-		});
-
-		this.el.querySelector('.dialog__overlay').addEventListener('click', this.toggle.bind(this));
-	}
-
-	DialogFx.prototype.toggle = function () {
-		var self = this;
-		if (this.isOpen) {
-			console.log("close");
-			classie.remove(this.el, 'dialog--open');
-			classie.add(self.el, 'dialog--close');
-
-			onEndAnimation(this.el.querySelector('.dialog__content'), function () {
-				classie.remove(self.el, 'dialog--close');
-			});
-
-			// callback on close
-			this.options.onCloseDialog(this);
+		if (support.animations) {
+			el.addEventListener(animEndEventName, onEndCallbackFn);
 		} else {
-			
-			classie.add(this.el, 'dialog--open');
-
-			// callback on open
-			this.options.onOpenDialog(this);
+			onEndCallbackFn();
 		}
-		this.isOpen = !this.isOpen;
 	};
 
-	// add to global namespace
-	window.DialogFx = DialogFx;
+function extend(a, b) {
+	for (var key in b) {
+		if (b.hasOwnProperty(key)) {
+			a[key] = b[key];
+		}
+	}
+	return a;
+}
 
+function DialogFx(el, options) {
+	this.el = el;
+	this.options = extend({}, this.options);
+	extend(this.options, options);
+	this.ctrlClose = this.el.querySelector('[data-dialog-close]');
+	this.isOpen = false;
+	this._initEvents();
+}
 
+DialogFx.prototype.options = {
+	onOpenDialog: function () {
+		return false;
+	},
+	onCloseDialog: function () {
+		return false;
+	}
+}
 
-/* call */
+DialogFx.prototype._initEvents = function () {
+	var self = this;
+	this.ctrlClose.addEventListener('click', this.toggle.bind(this));
 
+	document.addEventListener('keydown', function (ev) {
+		var keyCode = ev.keyCode || ev.which;
+		if (keyCode === 27 && self.isOpen) {
+			self.toggle();
+		}
+	});
 
-	var  dlgtrigger=[];
-	var  somedialog=[];
-	var  dlg;
-	
-	console.log(document.querySelector('[data-dialog]'));
-	console.log( document.getElementById("test1"));
-	 
-	for ( var i=1;i<=$('.assets a').length;i++)
-		{
-	dlgtrigger[i] = document.getElementById("element"+i),
-	somedialog[i] = document.getElementById(dlgtrigger[i].getAttribute('data-dialog'));
-	if(i==1)
-			{
+	this.el.querySelector('.dialog__overlay').addEventListener('click', this.toggle.bind(this));
+}
+
+DialogFx.prototype.toggle = function () {
+	var self = this;
+	if (this.isOpen) {
+		console.log("close");
+		classie.remove(this.el, 'dialog--open');
+		classie.add(self.el, 'dialog--close');
+
+		onEndAnimation(this.el.querySelector('.dialog__content'), function () {
+			classie.remove(self.el, 'dialog--close');
+		});
+		this.options.onCloseDialog(this);
+	} else {
+
+		classie.add(this.el, 'dialog--open');
+		this.options.onOpenDialog(this);
+	}
+	this.isOpen = !this.isOpen;
+};
+
+window.DialogFx = DialogFx;
+var dlgtrigger = [];
+var somedialog = [];
+var dlg;
+
+console.log(document.querySelector('[data-dialog]'));
+console.log(document.getElementById("test1"));
+
+for (var i = 1; i <= $('.assets a').length; i++) {
+	dlgtrigger[i] = document.getElementById("element" + i),
+		somedialog[i] = document.getElementById(dlgtrigger[i].getAttribute('data-dialog'));
+	if (i == 1) {
 		dlg = new DialogFx(somedialog[i]);
-		
-		}
-		dlgtrigger[i].addEventListener('click', dlg.toggle.bind(dlg));		
-		}
-	/*
-	dlgtrigger[1] = document.getElementById("test2"),
-	somedialog[1] = document.getElementById(dlgtrigger[1].getAttribute('data-dialog')),
-	dlg[1] = new DialogFx(somedialog[1]);
-	dlgtrigger[1].addEventListener('click', dlg[1].toggle.bind(dlg[1]));*/
-	function getRandomInt(min, max) {
-   return Math.floor(Math.random() * (max - min + 1)) + min;
+
+	}
+	dlgtrigger[i].addEventListener('click', dlg.toggle.bind(dlg));
 }
 
-	function getRandomInt_2(min, max) {
-   return Math.random() * (max - min + 1) + min;
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-$(".sperm-bg li").each(function(){
-var random_no=	getRandomInt(0, $(".sperm-bg li").length);
-var random_no_2=	getRandomInt_2(2,8);	
-$(this).css("top", random_no*100/$(".sperm-bg li").length+"%")
-$(this).css("animation-duration", random_no_2+"s")
-	
-})
+
+function getRandomInt_2(min, max) {
+	return Math.random() * (max - min + 1) + min;
+}
+$(".sperm-bg li").each(function () {
+	var random_no = getRandomInt(0, $(".sperm-bg li").length);
+	var random_no_2 = getRandomInt_2(2, 8);
+	$(this).css("top", random_no * 100 / $(".sperm-bg li").length + "%")
+	$(this).css("animation-duration", random_no_2 + "s")
+
+});
 
 
-$(window).load(function(){
+$(window).load(function () {
 	$('.inner-container').show();
 	$('#preloader').hide();
-})
-
-	
-	
-
-
+});
