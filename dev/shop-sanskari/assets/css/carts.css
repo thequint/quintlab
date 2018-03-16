@@ -3672,7 +3672,9 @@ footer .socials {
   .product-detail .left-col .big #big-image {
     /*display: none;*/
   }
-
+  #big-image.img {
+    display: none;
+  }
   .product-detail .left-col .big #banner-gallery {
     display: block;
     position: relative;

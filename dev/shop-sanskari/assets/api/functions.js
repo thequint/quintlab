@@ -151,7 +151,7 @@ function update_cart_value() { // used only in cart page
     var grand_total = 0;
     $('.cart-item').each(function(i) {
         q_item_sum = q_item_sum + parseInt($(this).find(".qty").val());
-        console.log($(this).find(".qty").val());
+        //console.log($(this).find(".qty").val());
         q_item_array.push($(this).find(".qty").val());
         $(this).find(".sub-total").html(parseInt($(this).find(".qty").val()) * parseInt($(this).find(".product_cart_price").html()));
         grand_total = grand_total + parseInt($(this).find(".sub-total").html());
@@ -160,7 +160,7 @@ function update_cart_value() { // used only in cart page
 
     $(".grand-total").text(grand_total);
 
-    console.log(grand_total);
+    //console.log(grand_total);
 
     $("#header-cart-q .header-cart-item").text(q_item_sum);
 
@@ -187,7 +187,7 @@ function showInfo(data) {
         var q_item = getParameterByName('q');
         //console.log(q_item);
 
-        console.log(q_item);
+        //console.log(q_item);
 
         if (q_item == null) {
             $("#header-cart-q .header-cart-item").text(0);
@@ -195,15 +195,15 @@ function showInfo(data) {
 
             $(".home_url").attr("href", "index.html"); // back to home page
 
-            console.log(q_item);
+            //console.log(q_item);
 
             $(".thanks_url").attr("href", "thank-you.html"); // go to thank you page
         } else {
             var q_item_array = q_item.split(",").map(Number);
-            console.log(q_item_array);
+            //console.log(q_item_array);
 
             var q_item_sum = q_item_array.reduce(function(q_item_array, b) { return q_item_array + b; }, 0);
-            console.log(q_item_sum);
+            //console.log(q_item_sum);
 
             $("#header-cart-q .header-cart-item").text(q_item_sum);
             $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
@@ -320,7 +320,7 @@ function showInfo(data) {
                 }
                 //console.log(id_item +"|"+cid_item_array+"|"+jQuery.inArray(id_item, cid_item_array));
                 if (jQuery.inArray(id_item, cid_item_array) !== -1) { // to check if product added already exists in the cart
-                    console.log("firts");
+                    //console.log("firts");
 
                     $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
                     //$(".thanks_url").attr("href","thank-you.html"); // go to thank you page
@@ -332,7 +332,7 @@ function showInfo(data) {
                     $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
 
                 } else { // if item does not exist in the cart 
-                    console.log("second");
+                    //console.log("second");
                     if (cid_item == null) {
                         cid_item = id_item;
                         q_item = $('.count').text();
@@ -403,9 +403,9 @@ function showInfo(data) {
         $(".reviews--container__content .Review_date03").html(data[id_item].Review_date_03);
         $(".reviews--container__content .Review_description03").html(data[id_item].Review_description_03);
 
-        console.log(data[id_item].Review_rating_01);
-        console.log(data[id_item].Review_rating_02);
-        console.log(data[id_item].Review_rating_03);
+        //console.log(data[id_item].Review_rating_01);
+        //console.log(data[id_item].Review_rating_02);
+        //console.log(data[id_item].Review_rating_03);
 
         if (data[id_item].Review_rating_01 == "") {
             $(".reviews--container__content:nth-child(2)").hide()
@@ -437,7 +437,7 @@ function showInfo(data) {
 
             if (id_item != data[index].id) {
 
-                console.log(id_item + "|" + data[index].id);
+                //console.log(id_item + "|" + data[index].id);
                 if (cid_item == null) {
                     $("#recommended_item").append(
                         "<li class='wow fadeIn'>" +
@@ -591,7 +591,7 @@ function showInfo(data) {
         }
 
         $(".items-length").html("" + cid_item_array.length * 25 + "%");
-        console.log(cid_item_array.length);
+        //console.log(cid_item_array.length);
         // cart item quantity 
         var grand_total = 0;
 
@@ -605,17 +605,17 @@ function showInfo(data) {
     }
     if ($('body').hasClass('thank-you')) {
         var cid_item = getParameterByName('cid');
-        console.log(cid_item);
+        //console.log(cid_item);
 
         var q_item = getParameterByName('q');
-        console.log(q_item);
+        //console.log(q_item);
 
         if (q_item == null) {
             //
         } else {
             var cid_item_array = cid_item.split(",");
             var q_item_array = q_item.split(",").map(Number);
-            console.log(q_item_array);
+            //console.log(q_item_array);
         }
         //var cid_item = getParameterByName('cid');
         //$(".home_url").attr("href","index.html?cid="+cid_item+"&q="+q_item_array);
@@ -637,7 +637,7 @@ function showInfo(data) {
                 )
             }
             resize_cont();
-            console.log(data[cid_item_array[index]].Product_title);
+            //console.log(data[cid_item_array[index]].Product_title);
         }
     }
     // if ($('body').hasClass('thank-you')) {
