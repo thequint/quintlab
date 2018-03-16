@@ -1479,6 +1479,7 @@ header #nav-icon {
   float: right;
   margin-right: 0;
   position: relative;
+  min-height: 130px;
 }
 
 .product-detail .left-col .big .img {
@@ -1531,6 +1532,7 @@ header #nav-icon {
 }
 
 .product-detail h1 {
+  text-align: left;
   font-size: 30px;
   line-height: 130%;
   color: #e81c9f;
@@ -3675,7 +3677,6 @@ footer .socials {
   #big-image.img {
     display: none;
   }
-
   .product-detail .left-col .big #banner-gallery {
     display: block;
     position: relative;

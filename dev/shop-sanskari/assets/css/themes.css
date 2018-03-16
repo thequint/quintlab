@@ -657,6 +657,7 @@ img {
 	display: block;
 	font-size: 14px;
 	line-height: 14px;
+	letter-spacing: -0.5px;
 	transition: all 0.2s ease-in-out;
 }
 .second--body .item-nav .aashirwaad-coin-small {
@@ -2526,6 +2527,13 @@ input:focus {
 		font-size: 20px;
 	}
 
+	.second--body .item-nav div.free-shipping {
+		padding-left: 11%;
+	}
+	.second--body .item-nav div.support {
+		padding-right: 11%;
+	}
+
 	.third--partners .partner-say--left,
 	.third--partners .partner-say--right {
 		width: 100%;
@@ -2567,11 +2575,18 @@ input:focus {
 		max-width: 600px;
 	    padding: 15px 0 70px;
 	}
+	.big .items-loading {
+		padding-top: 60px;
+	}
 
 }
 
 
 @media only screen and (max-width: 800px) {
+	.second--body .item-nav li a.active span {
+		font-size: 13px;
+    	line-height: 13px;
+	}
 	.cart-item .item-image {
 		float: none;
 		width: 100%;
@@ -2667,11 +2682,18 @@ input:focus {
 		width: 50%;
 		padding: 0 40px;
 	}
+	.second--body .item-nav li h4 {
+		font-size: 16px;
+	}
+	.second--body .item-nav li span {
+		font-size: 13px;
+		line-height: 13px;
+	}
 	.second--body .item-nav div.free-shipping {
-		padding-left: 14%;
+		padding-left: 10%;
 	}
 	.second--body .item-nav div.support {
-	    padding-right: 14%;
+	    padding-right: 10%;
 	}
 
 	.second--body .item-list {
@@ -3208,7 +3230,7 @@ input:focus {
 		padding: 0 7px;
 	}
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 
 	.second--body .item-nav li div {
 		height: auto;
@@ -3238,6 +3260,37 @@ input:focus {
 	.second--body .item-nav li span {
 		font-size: 11px;
 	}
+}
+@media only screen and (max-width: 400px) {
+
+	/*.second--body .item-nav li div {
+		height: auto;
+		min-height: 0
+	}
+	.second--body .item-nav li a {
+		padding: 10px 0;
+	}
+	.second--body .item-nav li:first-child {
+	    padding: 0 5px 0 8px;
+	}
+	.second--body .item-nav li:last-child {
+	    padding: 0 8px 0 5px;
+	}
+	.second--body .item-nav div.free-shipping:after,
+	.second--body .item-nav div.support:before {
+		display: none;
+	}
+	.second--body .item-nav div.free-shipping,
+	.second--body .item-nav div.support {
+		padding: 0;
+		text-align: center;
+	}
+	.second--body .item-nav li h4 {
+		font-size: 14px;
+	}
+	.second--body .item-nav li span {
+		font-size: 11px;
+	}*/
 
 	/* Inner page */
 
