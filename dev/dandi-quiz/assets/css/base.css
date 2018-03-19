@@ -144,7 +144,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+font-family: 'Oswald', sans-serif;
   font-size: 100%; 
   line-height: 1.15; 
   margin: 0; 
@@ -375,125 +375,6 @@ template {
 
 
 
-/*screen*/
-.rotate_screen
-{
-	width:100%;
-	height:100%;
-	position:fixed;
-	background:#8c58a5;
-	top:0px;
-	left:0px;
-	bottom: 0;
-	right: 0;
-	z-index:10000;
-	display:none;
-}
-.rotate_screen h1
-{
-	    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-	color:white;
-}
-.rotate_container
-{
-	    top: 50%;
-    position: absolute;
-    transform: translateY(-50%) translateX(-50%);
-	-o-transform: translateY(-50%) translateX(-50%);
-	-ms-transform: translateY(-50%) translateX(-50%);
-	-webkit-transform: translateY(-50%) translateX(-50%);
-	-moz-transform: translateY(-50%) translateX(-50%);
-    left: 50%;
-}
-.rotate_screen svg
-{
-width: 220px;
-    height: 220px;
-    margin: auto;
-    left: 50%;
-    margin-left: -110px;
-    position: relative;
-		animation: rotate_phone 2s ease-in-out infinite;
-		-o-animation: rotate_phone 2s  ease-in-out infinite;
-		-ms-animation: rotate_phone 2s  ease-in-out infinite;
-		-webkit-animation: rotate_phone 2s  ease-in-out infinite;
-		-moz-animation: rotate_phone 2s  ease-in-out infinite;
-}
-
-.rotate_screen h1
-{
-	font-size:20px;
-}
-.rotate_screen svg
-{
-	width:110px;
-	height:110px;
-	margin-left:-55px;
-}
-
-@keyframes rotate_phone{
- 0% {
-transform: rotate(0deg);
-}
-
- 50% {
-transform: rotate(90deg);
-}
-
- 100% {
-transform: rotate(90deg);
-}
-}
- @-webkit-keyframes rotate_phone {
- 0% {
-transform: rotate(0deg);
--webkit-transform: rotate(0deg);;
-}
-50% {
-transform: rotate(90deg);
--webkit-transform: rotate(90deg);
-}
- 100% {
-transform: rotate(90deg);
--webkit-transform: rotate(90deg);
-}
-}
-@-webkit-keyframes hvr-bob {
-0%, 100% {
--webkit-transform:translateY(0) rotate(90deg);
-transform:translateY(0) rotate(90deg)
-}
-50% {
--webkit-transform:translateY(4px) rotate(90deg);
-transform:translateY(4px) rotate(90deg)
-}
-}
-@keyframes hvr-bob {
-0%, 100% {
--webkit-transform:translateY(0) rotate(90deg);
-transform:translateY(0) rotate(90deg)
-}
-50% {
--webkit-transform:translateY(4px) rotate(90deg);
-transform:translateY(4px) rotate(90deg)
-}
-}
-
-/**/
-
-
-
-
-@media all and (orientation:landscape)  and (max-width:768px){
-  .rotate_screen
-  {
-	  display:block;
-  }
-	
-	
-}
 
 
 

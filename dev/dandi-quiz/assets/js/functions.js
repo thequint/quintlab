@@ -23,9 +23,9 @@ $(document).ready(function () {
 	});
 	
 	
-	$('.answers li.ans0').append('<div class="hammer"></div>').attr('onclick', 'PlaySound_1()');
+	/*$('.answers li.ans0').append('<div class="hammer"></div>').attr('onclick', 'PlaySound_1()');
 	$('.answers li.ans1').append('<div class="hammer"></div>').attr('onclick', 'PlaySound_2()');
-	$('.answers li.ans2').append('<div class="hammer"></div>').attr('onclick', 'PlaySound_2()');
+	$('.answers li.ans2').append('<div class="hammer"></div>').attr('onclick', 'PlaySound_2()');*/
 	
 	
 	
