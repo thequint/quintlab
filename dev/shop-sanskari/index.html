@@ -10,6 +10,7 @@
 <meta name="description" content="Shop Sankari: Online shopping for sanskari clothes, sanskari makeup, sanskari footwear, troll-free keyboards. Buy everything you need to be Sanskari at Shopsanskari.com by Quint Neon.">
 <meta name="author" content="The Quint">
 <meta name="copyright" content="The Quint">
+<link rel="canonical" href="https://www.thequint.com/quintlab/shop-sanskari">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
@@ -28,10 +29,10 @@
 <!-- OG Tag -->
 <meta property="og:title" content="Shop Sanskari">
 <meta property="og:site_name" content="TheQuint">
-<meta property="og:url" content="https://thequint.com/quintlab/quintlab/shop-sanskari/">
+<meta property="og:url" content="https://www.thequint.com/quintlab/shop-sanskari/">
 <meta property="og:description" content="Online shop for all things sanskari: Shop for sanskari clothes, sanskari makeup, sanskari footwear, troll-free keyboards and more at Shopsanskari.com.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://thequint.com/quintlab/shop-sanskari/assets/images/og.jpg">
+<meta property="og:image" content="https://www.thequint.com/quintlab/shop-sanskari/assets/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="600">
 
@@ -40,7 +41,7 @@
 <meta name="twitter:site" content="@thequint">
 <meta name="twitter:title" content="Shop Sanskari">
 <meta name="twitter:description" content="Online shop for all things sanskari: Shop for sanskari clothes, sanskari makeup, sanskari footwear, troll-free keyboards and more at Shopsanskari.com.">
-<meta name="twitter:image" content="https://thequint.com/quintlab/shop-sanskari/assets/images/og.jpg">
+<meta name="twitter:image" content="https://www.thequint.com/quintlab/shop-sanskari/assets/images/og.jpg">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,7 +84,7 @@ _comscore.push(COMSCORE_OPTS);
 <noscript>
     <img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1">
 </noscript>
-<link rel="standout" href="https://thequint.com/quintlab/shop-sanskari/">
+<link rel="standout" href="https://www.thequint.com/quintlab/shop-sanskari/">
 </head>
 
 <body class="home">
@@ -111,6 +112,15 @@ _comscore.push(COMSCORE_OPTS);
 
 <!-- <div class="loader"></div> -->
 
+<div id="video_popup" class="intro-popup" style="display:none">
+    <div class="intro-box">
+        <div class="intro-iframe">
+            <div id="video_cont"></div>
+            <span class="intro-close"><i class="fa fa-close"></i></span>
+        </div>
+    </div>
+</div>
+
 <header class="header">
     <div class="header__top-bar">Send ‘Aashirwaad’ to <strong>+91 9999008335</strong> <span>to get Aashirwaad from the elderly</span></div>
     <div class="header__nav-bar">
@@ -124,9 +134,9 @@ _comscore.push(COMSCORE_OPTS);
                     <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/shop-sanskari/&text=Shop with Aashirwaad and earn Sanskar! Free Shipping and Aashirwaad on Delivery Available.%20https%3A//thequint.com/quintlab/shop-sanskari/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/shop-sanskari/&t=Online+shop+for+all+things+sanskari:+Shop+for+sanskari+clothes,+sanskari+makeup,+sanskari+footwear,+troll-free keyboards+and+more+at+Shopsanskari.com."><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <!-- <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-				<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-				<li><a href=""><i class="fa fa-twitter"></i></a></li>
-				<li><a href=""><i class="fa fa-facebook"></i></a></li> -->
+    				<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+    				<li><a href=""><i class="fa fa-twitter"></i></a></li>
+    				<li><a href=""><i class="fa fa-facebook"></i></a></li> -->
                 </ul>
             </div>
         </div>
@@ -344,6 +354,40 @@ _comscore.push(COMSCORE_OPTS);
 <!-- Spreadsheet API -->
 <script src="assets/api/spreadsheet.js"></script>
 <script src="assets/api/functions.js"></script>
+
+<script type="text/javascript">
+    var heroVideo;
+    var src;
+    var myArray = [
+        "5751257853001",
+        "5751244980001",
+        "5751241983001",
+        "5751243387001"
+    ];
+    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    //console.log(randomItem);
+
+    $("#video_cont").html('<video id="heroPlayerID" data-video-id="'+ randomItem +'" data-account="5653786008001" data-player="default" data-embed="default" controls class="video-js" autoplay></video>')
+</script>
+<script src="https://players.brightcove.net/5653786008001/default_default/index.min.js"></script>
+<script>
+    videojs('heroPlayerID').ready(function() {
+        heroVideo = this;
+        src=heroVideo.currentSrc();
+        //heroVideo.poster('http://animal-dream.com/data_images/tiger/tiger8.jpg');
+        heroVideo.on('ended', resetOnEnded);
+        var video_id = getParameterByName("v");
+        
+        if(video_id==null){
+            document.getElementById("video_popup").style.display = "block";
+        }else {
+            document.getElementById("video_popup").style.display = "none";
+        }
+    });
+    function resetOnEnded() {
+        document.getElementById("video_popup").style.display = "none";
+    }
+</script>
 </body>
 
 </html>
