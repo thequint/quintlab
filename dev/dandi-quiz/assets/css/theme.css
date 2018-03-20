@@ -6,18 +6,15 @@ body {
 	color: #1a1a1a;
 	padding-bottom: 60px;
 	overflow-x: hidden;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 	background-color: #fff;
 	font-family: 'Oswald', sans-serif;
 }
-.container{
+.container {
 	background-color: #9fe5fd;
 }
-
-
-
 p {
 	line-height: 160%;
 	margin-bottom: 25px;
@@ -57,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .quiz-container .quiz-headline {
 	color: #f3cc2f;
-	line-height:100%;
+	line-height: 100%;
 	margin: 0px 0px 6px 0px;
 }
 .quiz-container .quiz-headline span {
@@ -71,8 +68,6 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	padding: 13px 0px 16px 0px;
 }
-
-
 .quiz-container a {
 	text-decoration: none;
 }
@@ -82,8 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 18px;
 	padding: 0px 20px;
 }
-
-
 .question {
 	text-align: left;
 	font-size: 16px;
@@ -91,7 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0 15px;
 	margin-bottom: 8px;
 }
-
 .answers {
 	list-style: none;
 	padding: 0;
@@ -115,7 +107,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0px 0 10px 0;
 	position: relative;
 }
-
 .answers li a {
 	text-align: left;
 	background-image: url(../images/option-bg.svg);
@@ -144,14 +135,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 #quiz-controls p {
 	margin: 0px 10px 14px 10px;
-	line-height:35px;
+	line-height: 35px;
 }
-
-
-#quiz-response .correct{color:#090}
-#quiz-response .incorrect{color:#c00}
-
-
+#quiz-response .correct {
+	color: #090
+}
+#quiz-response .incorrect {
+	color: #c00
+}
 .quiz-button {
 	color: #e94b63;
 	background-image: url(../images/btn-bg.svg);
@@ -164,26 +155,19 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 	padding: 12px 0px 16px 0px;
 }
-
-
-
-
 #quiz-buttons a {
 	display: inline-block;
 	background-image: url(../images/headline-bg.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	font-size: 16px;
-	line-height: 85%;
-	width: 95px;
+	font-size: 18px;
+	line-height: 79%;
+	width: 110px;
 	text-align: center;
-	padding: 8px 0px 9px 0px;
+	padding: 10px 0px 10px 0px;
 	color: #f3cc2f;
 	text-transform: uppercase;
 }
-
-
-
 #quiz-results {
 	font-size: 25px;
 	line-height: 125%;
@@ -215,10 +199,9 @@ h1, h2, h3, h4, h5, h6 {
 	width: 36px;
 	text-align: center;
 }
-.social-share a i{
-	line-height:36px;
+.social-share a i {
+	line-height: 36px;
 }
-
 /*Animation*/
 
 .answers li.frame .hammer {
@@ -275,95 +258,94 @@ background-position:    0px;
 background-position: -1072px;
 }
 }
-
 #quiz-counter {
 	display: none;
 	padding-bottom: 8px;
 }
-
-
-.twittershare{
-	display:none;}
-
-
+.twittershare {
+	display: none;
+}
 /*End responsive*/
 
 
 
-.dandi-track{
-	
+.dandi-track {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 }
-
-.dandi-track img{
+.dandi-track img {
 	max-width: 150px;
 }
 
 /*Walking*/
 @-webkit-keyframes walk {
-    from { background-position: 0px; }
-    to { background-position: -1233px; } 
+ from {
+background-position: 0px;
 }
-
-@-moz-keyframes walk {
-    from { background-position: 0px; }
-    to { background-position: -1233px; } 
+ to {
+background-position: -1233px;
 }
-
-@-o-keyframes walk {
-    from { background-position: 0px; }
-    to { background-position: -1233px; }
 }
-
-@keyframes walk {
-    from { background-position: 0px; }
-    to { background-position: -1233px; } 
+ @-moz-keyframes walk {
+ from {
+background-position: 0px;
 }
-
+ to {
+background-position: -1233px;
+}
+}
+ @-o-keyframes walk {
+ from {
+background-position: 0px;
+}
+ to {
+background-position: -1233px;
+}
+}
+ @keyframes walk {
+ from {
+background-position: 0px;
+}
+ to {
+background-position: -1233px;
+}
+}
 .gandhi {
-    width:157px; height: 280px; 
-    background-image: url("../images/css-sprite-combined.png"); 
-    margin: 0;    
+	width: 157px;
+	height: 280px;
+	background-image: url("../images/css-sprite-combined.png");
+	margin: 0;
 	position: relative;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	
 }
-
-.gandhi{
+.gandhi {
 	transform: scale(0.65);
 	bottom: -50px;
 	left: -19px;
-	background-position: -911px 0px;	
+	background-position: -911px 0px;
 	z-index: 110;
 }
-
-.gandhi.move{
-	 animation: walk 2s steps(8) infinite; 
+.gandhi.move {
+	animation: walk 2s steps(8) infinite;
 }
-
-
-.bg{
-	position:absolute;
+.bg {
+	position: absolute;
 	width: 100%;
 	left: 0;
 	bottom: 0;
 	height: 240px;
 	z-index: 99;
-	
 }
-
 .bg img {
 	min-width: inherit;
 	max-width: inherit;
 	height: inherit;
 	transition: all 2s ease-in-out;
 }
-
 .mile-stone {
 	width: 115px;
 	position: absolute;
@@ -372,7 +354,6 @@ background-position: -1072px;
 	display: none;
 	z-index: 120;
 }
-
 .counter {
 	position: absolute;
 	top: 31px;
@@ -381,50 +362,39 @@ background-position: -1072px;
 	width: 55px;
 	font-size: 40px;
 	line-height: 80%;
-	
 }
-
-.counter span{
+.counter span {
 	display: block;
 	font-size: 14px;
 }
-
-
-
-
 /*Custom CSS*/
-#quiz-response{
+#quiz-response {
 	display: none !important;
 }
-#quiz-counter{
+#quiz-counter {
 	display: none !important;
 }
-
-@keyframes slide {
-    from { background-position: 0%; }
-    to { background-position:100% ; }
+ @keyframes slide {
+ from {
+background-position: 0%;
 }
-
-
-
+ to {
+background-position:100%;
+}
+}
 .cloud {
 	position: absolute;
 	width: 100%;
 	opacity: 0.5;
 	z-index: 100;
-	
 	bottom: 120px;
 }
-.cloud img{
+.cloud img {
 	min-width: 300px;
 }
-
-
 .cloud {
-	
 	-webkit-transform: translateX(-100%);
 	transform: translateX(-100%);
-	
 	-webkit-animation-name: cloud;
 	animation-name: cloud;
 	-webkit-animation-duration: 50.5s;
@@ -441,7 +411,6 @@ background-position: -1072px;
 	animation-duration: 85.5s;
 	bottom: 185px;
 }
-
  @-webkit-keyframes cloud {
  0% {
  -webkit-transform: translateX(-100%);
@@ -462,11 +431,7 @@ background-position: -1072px;
  transform: translateX(100%);
 }
 }
-
-
-
-
-@keyframes ChangeStone {
+ @keyframes ChangeStone {
  0% {
  -webkit-transform: translateY(0%);
  transform: translateY(0%);
@@ -479,11 +444,7 @@ background-position: -1072px;
  -webkit-transform: translateY(0%);
  transform: translateY(0%);
 }
-
 }
-
-.is-change{
+.is-change {
 	animation: ChangeStone 0.4s linear;
 }
-
-
