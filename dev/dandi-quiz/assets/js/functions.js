@@ -67,6 +67,3 @@ function PlaySound_2() {
 
 
 
-console.log(PlaySound_2());
-
-
