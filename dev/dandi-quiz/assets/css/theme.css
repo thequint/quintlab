@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .container {
 	position: relative;
-	max-width: 500px;
+	max-width: 400px;
 	padding: 0px 0px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -50,24 +50,26 @@ h1, h2, h3, h4, h5, h6 {
 /*Quiz*/
 
 .quiz-container {
-	padding: 30px 0px 0px 0px;
+	padding: 5px 0px 0px 0px;
 	text-align: center;
+	position: relative;
+	z-index: 9999;
 }
 .quiz-container .quiz-headline {
 	color: #f3cc2f;
 	line-height:100%;
-	margin: 0px 0px 10px 0px;
+	margin: 0px 0px 6px 0px;
 }
 .quiz-container .quiz-headline span {
 	display: inline-block;
 	background-image: url(../images/headline-bg.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	font-size: 30px;
+	font-size: 20px;
 	line-height: 90%;
-	width: 225px;
+	width: 150px;
 	text-align: center;
-	padding: 20px 0px 23px 0px;
+	padding: 13px 0px 16px 0px;
 }
 
 
@@ -75,25 +77,26 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 }
 .start-content {
-	font-size: 26px;
-	line-height: 130%;
-	margin-bottom: 20px;
-	padding: 0px 30px;
+	font-size: 18px;
+	line-height: 127%;
+	margin-bottom: 18px;
+	padding: 0px 20px;
 }
 
 
 .question {
 	text-align: left;
-	font-size: 26px;
-	line-height: 130%; 
-	padding:0 20px;
+	font-size: 16px;
+	line-height: 127%;
+	padding: 0 15px;
+	margin-bottom: 8px;
 }
 
 .answers {
 	list-style: none;
 	padding: 0;
 	text-align: left;
-	max-width: 380px;
+	max-width: 255px;
 	margin: 0 0 0 -2px;
 	position: relative;
 }
@@ -120,9 +123,9 @@ h1, h2, h3, h4, h5, h6 {
 	background-size: 100%;
 	display: block;
 	color: #1a1a1a;
-	font-size: 22px;
-	line-height: 120%;
-	padding: 13px 37px 20px 20px;
+	font-size: 16px;
+	line-height: 112%;
+	padding: 7px 18px 12px 15px;
 }
 .answers a.correct {
 	background-image: url(../images/option-bg-correct.svg);
@@ -134,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 #quiz-controls {
-	padding: 15px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	text-align: center;
 	font-weight: 400;
 	font-size: 25px;
@@ -155,14 +158,11 @@ h1, h2, h3, h4, h5, h6 {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	text-transform: uppercase;
-	font-size: 28px;
+	font-size: 18px;
 	line-height: 66%;
-}
-
-.quiz-button#quiz-start-btn {
-	width: 290px;
+	width: 195px;
 	display: inline-block;
-	padding: 18px 0px 20px 0px;
+	padding: 12px 0px 16px 0px;
 }
 
 
@@ -173,11 +173,11 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: url(../images/headline-bg.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	font-size: 26px;
-	line-height: 90%;
-	width: 165px;
+	font-size: 16px;
+	line-height: 85%;
+	width: 95px;
 	text-align: center;
-	padding: 13px 0px 17px 0px;
+	padding: 8px 0px 9px 0px;
 	color: #f3cc2f;
 	text-transform: uppercase;
 }
@@ -185,35 +185,40 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #quiz-results {
-	font-size: 30px;
+	font-size: 25px;
 	line-height: 125%;
 	font-weight: 500;
 	min-height: 100px;
 	padding: 0px 20px;
+	margin-bottom: 10px;
 }
 #quiz-results div.result-text {
 	display: none;
 	font-weight: 400;
-	font-size: 26px;
+	font-size: 18px;
 	line-height: 120%;
 	margin-top: 5px;
 }
 .social-share {
 	display: block;
-	margin-top: 20px;
+	margin-top: 15px;
 }
 .social-share a {
 	background: #e94b63;
 	border-radius: 100%;
 	color: #f3cc2f;
 	display: inline-block;
-	font-size: 24px;
-	height: 40px;
+	font-size: 20px;
+	height: 36px;
 	line-height: inherit;
 	margin: 0px 5px 0;
-	width: 40px;
+	width: 36px;
 	text-align: center;
 }
+.social-share a i{
+	line-height:36px;
+}
+
 /*Animation*/
 
 .answers li.frame .hammer {
@@ -300,45 +305,49 @@ background-position: -1072px;
 /*Walking*/
 @-webkit-keyframes walk {
     from { background-position: 0px; }
-    to { background-position: -2000px; } 
+    to { background-position: -1233px; } 
 }
 
 @-moz-keyframes walk {
     from { background-position: 0px; }
-    to { background-position: -2000px; } 
+    to { background-position: -1233px; } 
 }
 
 @-o-keyframes walk {
     from { background-position: 0px; }
-    to { background-position: -2000px; }
+    to { background-position: -1233px; }
 }
 
 @keyframes walk {
     from { background-position: 0px; }
-    to { background-position: -2000px; } 
+    to { background-position: -1233px; } 
 }
 
 .gandhi {
-    width: 240px; height: 440px; 
+    width:157px; height: 280px; 
     background-image: url("../images/css-sprite-combined.png"); 
     margin: 0;    
     animation: walk 2s steps(8) infinite; 
 	position: relative;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	
 }
+
+.gandhi{
+	transform: scale(0.65);
+	bottom: -50px;
+	left: -19px
+}
+
 
 .bg{
 	position:absolute;
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	height: 300px;
-/*
-	background-image: url(../images/bg.svg);
-	background-repeat: repeat-x;
-	background-size: cover;
-	animation: slide 20s infinite;
-*/
+	height: 240px;
 	
 }
 
@@ -349,11 +358,27 @@ background-position: -1072px;
 }
 
 .mile-stone {
-	width: 170px;
+	width: 115px;
 	position: absolute;
-	bottom: 9px;
-	right: -33px;
+	bottom: 4px;
+	right: -20px;
 }
+
+.counter {
+	position: absolute;
+	top: 31px;
+	left: 34px;
+	text-align: center;
+	width: 55px;
+	font-size: 40px;
+	line-height: 80%;
+}
+
+.counter span{
+	display: block;
+	font-size: 14px;
+}
+
 
 
 
