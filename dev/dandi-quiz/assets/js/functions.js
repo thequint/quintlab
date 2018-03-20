@@ -41,6 +41,13 @@ $(document).ready(function () {
 
 	$('#quiz-next-btn').click(function () {
 		$('.answers').removeClass('disable');
+		$('.gandhi').addClass('move');
+				
+				setTimeout(function() {
+  					$('.gandhi').removeClass('move');
+				}, 2000);
+		
+		
 	});
 	
 	$('#quiz-restart-btn').click(function () {
@@ -50,6 +57,7 @@ $(document).ready(function () {
 	
 	$('#quiz-start-btn').click(function () {
 		$('.start-content').hide();
+		$('.mile-stone').show();
 	});
 
 });

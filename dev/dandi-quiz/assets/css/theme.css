@@ -327,7 +327,6 @@ background-position: -1072px;
     width:157px; height: 280px; 
     background-image: url("../images/css-sprite-combined.png"); 
     margin: 0;    
-    animation: walk 2s steps(8) infinite; 
 	position: relative;
 	position: absolute;
 	bottom: 0;
@@ -338,7 +337,13 @@ background-position: -1072px;
 .gandhi{
 	transform: scale(0.65);
 	bottom: -50px;
-	left: -19px
+	left: -19px;
+	background-position: -911px 0px;	
+	z-index: 110;
+}
+
+.gandhi.move{
+	 animation: walk 2s steps(8) infinite; 
 }
 
 
@@ -348,6 +353,7 @@ background-position: -1072px;
 	left: 0;
 	bottom: 0;
 	height: 240px;
+	z-index: 99;
 	
 }
 
@@ -355,6 +361,7 @@ background-position: -1072px;
 	min-width: inherit;
 	max-width: inherit;
 	height: inherit;
+	transition: all 2s ease-in-out;
 }
 
 .mile-stone {
@@ -362,6 +369,8 @@ background-position: -1072px;
 	position: absolute;
 	bottom: 4px;
 	right: -20px;
+	display: none;
+	z-index: 120;
 }
 
 .counter {
@@ -372,6 +381,7 @@ background-position: -1072px;
 	width: 55px;
 	font-size: 40px;
 	line-height: 80%;
+	
 }
 
 .counter span{
@@ -396,4 +406,60 @@ background-position: -1072px;
 }
 
 
+
+.cloud {
+	position: absolute;
+	width: 100%;
+	opacity: 0.5;
+	z-index: 100;
+	
+	bottom: 120px;
+}
+.cloud img{
+	min-width: 300px;
+}
+
+
+.cloud {
+	
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	
+	-webkit-animation-name: cloud;
+	animation-name: cloud;
+	-webkit-animation-duration: 50.5s;
+	animation-duration: 50.5s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.cloud-2 {
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+	-webkit-animation-duration: 85.5s;
+	animation-duration: 85.5s;
+	bottom: 185px;
+}
+
+ @-webkit-keyframes cloud {
+ 0% {
+ -webkit-transform: translateX(-100%);
+ transform: translateX(-100%);
+}
+ 100% {
+ -webkit-transform: translateX(100%);
+ transform: translateX(100%);
+}
+}
+@keyframes cloud {
+ 0% {
+ -webkit-transform: translateX(-100%);
+ transform: translateX(-100%);
+}
+ 100% {
+ -webkit-transform: translateX(100%);
+ transform: translateX(100%);
+}
+}
 
