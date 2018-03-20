@@ -113,7 +113,9 @@
 			updateCounter: function () {
 				var b = e.options.counterFormat.replace("%current", m).replace("%total", g);
 				a("#quiz-counter").html(b)
+				setTimeout(function() {
 				$(".counter").html("<span>Question</span>"+m);
+				}, 300);
 				//console.log(((((m-1)*100)/g)*(400-$(".bg img").width())/100) +"|"+ $(".bg img").width());
 				var dist = ((((m-1)*100)/g)*($(".container").width()-$(".bg img").width())/100) 
 				$(".bg img").css("transform","translateX("+dist+"px)");

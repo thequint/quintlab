@@ -42,10 +42,15 @@ $(document).ready(function () {
 	$('#quiz-next-btn').click(function () {
 		$('.answers').removeClass('disable');
 		$('.gandhi').addClass('move');
+		$('.mile-stone').addClass('is-change');
 				
 				setTimeout(function() {
   					$('.gandhi').removeClass('move');
 				}, 2000);
+		
+				setTimeout(function() {
+					$('.mile-stone').removeClass('is-change');
+				}, 600);
 		
 		
 	});
