@@ -1,11 +1,15 @@
 
 var category_array = [
-	{name:"In Love", icon:"heart-icon.svg"}, 
-	{name:"Soulful", icon:"soulful-icon.svg"}, 
-	{name:"Let's party", icon:"party-icon.svg"},
-	{name:"Love Hell", icon:"heartbreak-icon.svg"},
-	{name:"Surprise Me", icon:"surprise-icon.svg"}, 
-	{name:"Filmy", icon:"filmy-icon.svg"}
+	{name:"In Love", icon:"heart-icon.svg", colors:"#e74e4f"}, 
+	{name:"Soulful", icon:"soulful-icon.svg", colors:"#d3d1bd"}, 
+	{name:"Let's party", icon:"party-icon.svg", colors:"#fcd359"},
+	{name:"Love Hell", icon:"heartbreak-icon.svg", colors:"#19a2a3"},
+	{name:"Surprise Me", icon:"surprise-icon.svg", colors:"#f09a9a"}, 
+	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff6f6a"},
+	{name:"Peaceful", icon:"default-icon.svg", colors:"#85d4ad"},
+	{name:"Confident", icon:"default-icon.svg", colors:"#41d660"},
+	{name:"Sad", icon:"default-icon.svg", colors:"#44434a"},
+	{name:"Determined", icon:"default-icon.svg", colors:"#6d387e"}
 ];
 
 function pie_events() {
@@ -176,6 +180,9 @@ function create_pie() {
 
 	    newSector.setAttribute('data-mood', sector.moods);
 	    newSector.setAttribute('data-mood-icon', sector.moods_icon);
+
+		newSector.setAttribute('fill',sector.moods_color);
+		
 	    newSector.setAttribute('data-title-1', sector.title_1);
 	    newSector.setAttribute('data-track-1', sector.track_1);
 
@@ -249,6 +256,9 @@ function calculateSectors(dashboard_data) {
             percentage: item.percentage,
             moods: item.moods,
             moods_icon:item.moods_icon,
+
+            moods_color:item.moods_color,
+
             title_1: item.title_1,
             track_1: item.track_1,
             title_2: item.title_2,

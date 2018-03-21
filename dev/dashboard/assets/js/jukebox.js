@@ -4,6 +4,16 @@ $(".sortable").disableSelection();
 
 // Select category array
 
+function resetIndex(){
+	$(".card").each(function(index){
+		console.log(index);
+		$(this).find(".card-header .moods_counter").html(index+1);
+	});
+
+	//console.log($(this).parent(".card").find(".select_category option").val());
+	//category_array.push("new");
+	//console.log(category_array);
+}
 
 function resetEvents(){
 
@@ -18,6 +28,8 @@ function resetEvents(){
 	    }
 	    //alert(category_array[i].icon);
 	    $(this).attr("data-icon",$("option:selected", this).attr("data-icon"));
+	    $(this).attr("data-fill-color",$("option:selected", this).attr("data-fill-color"));
+
     });
 
     // Default add "Select mood"
@@ -25,8 +37,11 @@ function resetEvents(){
 
 	// select category call in select option
 	$.each(category_array , function (index, value){
-	  	console.log(index + ':' + value.name); 
-	  	$(".card:last-child").find(".select_category").append('<option value="'+ value.name +'" data-icon="'+value.icon+'">'+ value.name +'</option>');
+	  	//console.log(index + ':' + value.name); 
+
+	  	//console.log(index + ':' + value.colors);
+
+	  	$(".card:last-child").find(".select_category").append('<option value="'+ value.name +'" data-icon="'+value.icon+'" data-fill-color="'+value.colors+'">'+ value.name +'</option>');
 	});
 
 	// $('.clickMe').on('click', function() { 
@@ -35,8 +50,22 @@ function resetEvents(){
 
 	// onclick remove cards
 	$(".card:last-child").find(".question-close").click(function(){
-		console.log("click");
+
+		//category_array.push($(this).closest(".card").find(".select_category option:selected").attr("data-icon"));
+		//console.log(category_array);
+
+		category_array.push({});
+		if($(this).closest(".card").find(".select_category option:selected").attr("data-icon")==null){
+			//alert("test");
+		}else {
+			category_array[category_array.length-1]['name'] = $(this).closest(".card").find(".select_category option:selected").val();
+			category_array[category_array.length-1]['icon'] = $(this).closest(".card").find(".select_category option:selected").attr("data-icon");
+			category_array[category_array.length-1]['colors'] = $(this).closest(".card").find(".select_category option:selected").attr("data-fill-color");
+			console.log(category_array);
+		}
+
 		$(this).closest(".card").remove();
+		resetIndex();
 	});
 
 	// on click add track #2
@@ -48,16 +77,23 @@ function resetEvents(){
 
 resetEvents();
 
-
 // Adding moods card
-var moods_counter = 1;
 
 $(".add_card").click(function(){
-	moods_counter++;
+	if($(".card:last-child").find(".select_category").val()==null){
+		alert("Select Moods");
+		return 0;
+	}else {	
+		var moods_counter = $(".card").length+1 ;
+		$("#moods_card").append('<div class="card"><div class="card-header"><h4>Moods #<span class="moods_counter">'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1"></div></div><div class=""><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
+		resetEvents();
+	}
+	if($(".card").length==10){
+		$(this).hide();
+	}else{
+		$(this).show();
+	}
 
-	$("#moods_card").append('<div class="card"><div class="card-header"><h4><span>Moods #'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1"></div></div><div class=""><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
-
-	resetEvents();
 });
 
 
@@ -82,6 +118,9 @@ function addQuestionFunc(){
 
 		dashboard_data['sectors'][index]['moods'] = $(this).find(".select_category").val();
 		dashboard_data['sectors'][index]['moods_icon'] = $(this).find(".select_category").attr("data-icon");
+
+		dashboard_data['sectors'][index]['moods_color'] = $(this).find(".select_category").attr("data-fill-color");
+
 		dashboard_data['sectors'][index]['title_1'] = $(this).find(".song-title_1").val();
 		dashboard_data['sectors'][index]['track_1'] = $(this).find(".song-track_1").val();
 
@@ -117,7 +156,7 @@ $('#jukebox_preview').click(function(){
 
 function jukeboxFormValidation(){
 
-	$(".card").each(function(index){
+	$(".card:last-child").each(function(index){
 		if($(this).find(".select_category").val()==null){
 			alert("Select Moods");
 			return 0;
@@ -130,11 +169,13 @@ function jukeboxFormValidation(){
 			alert("Insert Track");
 			return 0;
 		}else {
+			console.log("Validation");
 			$(".main-wrap").addClass("show");
 			addQuestionFunc();
 			create_pie();
-			$(".display_results").html( JSON.stringify(dashboard_data));
+			
 			pie_events();
+			$(".display_results").html( JSON.stringify(dashboard_data));
 		}
 	});
 }

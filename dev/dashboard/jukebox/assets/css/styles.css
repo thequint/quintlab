@@ -50,6 +50,12 @@ body {
     -moz-border-radius: 60px;
     border-radius: 60px;
 }
+.add-cards {
+    margin-bottom: 20px;
+}
+#moods_card .card:first-child .question-close {
+    display: none;
+}
 
 #step01 {
     position: relative;
@@ -522,6 +528,11 @@ visibility: visible;
 .svg-wrap svg {
     width: 100%;
 }
+#svg_circle path {
+    cursor: pointer;
+}
+
+
 .step01--container {
     margin: 0 auto;
     width: 100%;
