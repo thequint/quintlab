@@ -101,8 +101,13 @@ var dashboard_data={};
 
 function addQuestionFunc(){
 	dashboard_data = {};
-	dashboard_data['size']=500;
+	dashboard_data['size']=510;
 	dashboard_data['sectors']=[];
+
+	if(){
+		
+	}
+
 	//i = 0;
 	//console.log($(".card").length);
 
