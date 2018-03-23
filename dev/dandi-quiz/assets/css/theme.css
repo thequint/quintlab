@@ -119,17 +119,14 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 18px 12px 15px;
 	height: 63px;
 }
-
-.answers li a span{
-position: relative;
-top: 50%;
--webkit-transform: translateY(-50%);
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-display: block;
+.answers li a span {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: block;
 }
-
-
 .answers a.correct {
 	background-image: url(../images/option-bg-correct.svg);
 }

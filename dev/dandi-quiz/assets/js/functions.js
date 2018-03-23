@@ -1,10 +1,27 @@
 $(document).ready(function () {
 
 	$('#getValue').click(function () {
-		if ($('#showResult').val() <= 6) {
-			$('#quiz-results div.result-text').text(' LOL, we understand Indian laws are not easy to crack. Play again, and challenge your friends too.').fadeIn();
-		} else {
-			$('#quiz-results div.result-text').text('Congratulations, you are on the right side of the law. Share your score with your friends, and challenge them too!').fadeIn();
+		if ($('#showResult').val() <= 3) 
+		{
+			$('#quiz-results div.result-text').text('Would you like to for a quick walk, and retry the quiz?').fadeIn();
+		}
+		
+		else if ($('#showResult').val() > 3 && $('#showResult').val() <= 7) 
+			
+		{
+			$('#quiz-results div.result-text').text('You had a good run. Jog your mind a little more. and take the quiz again.').fadeIn();
+		}
+		
+		else if ($('#showResult').val() > 7 && $('#showResult').val() < 10) 
+			
+		{
+			$('#quiz-results div.result-text').text('Oh! You almost reached the finish line. Success is sweet, and salty!').fadeIn();
+		}
+		
+		
+		else 
+		{
+			$('#quiz-results div.result-text').text("10/10! You've sprinted through the quiz! Jai Ho.").fadeIn();
 		}
 
 	});
