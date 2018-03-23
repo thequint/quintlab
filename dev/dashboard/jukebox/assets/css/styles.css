@@ -751,12 +751,12 @@ visibility: visible;
     .main-wrap,
     #step01,
     #step02 {
-        min-height: 530px;
+        min-height: 560px;
     }
     .svg-wrap,
     #svg_circle {
-        width: 500px;
-        height: 500px;
+        width: 540px;
+        height: 540px;
     }
 }
 @media only screen and (max-width: 550px) {
@@ -767,8 +767,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 460px;
-        height: 460px;
+        width: 98%;
+        height: 98%;
     }
     #step02 .song-footer .play-icon li {
         /*margin: 0 1.5% 8px;*/
@@ -815,8 +815,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 400px;
-        height: 400px;
+        /*width: 400px;*/
+        /*height: 400px;*/
     }
     .pin-top {
         width: 30px;
@@ -874,8 +874,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 360px;
-        height: 360px;
+        /*width: 360px;*/
+        /*height: 360px;*/
     }
     #pie_labels li span {
         font-size: 12px;
@@ -889,8 +889,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 310px;
-        height: 310px;
+        /*width: 310px;*/
+        /*height: 310px;*/
     }
     #pie_labels li span {
         font-size: 11px;
