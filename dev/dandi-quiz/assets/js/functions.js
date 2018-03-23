@@ -68,8 +68,6 @@ $(document).ready(function () {
 				setTimeout(function() {
 					$('.mile-stone').removeClass('is-change');
 				}, 600);
-		
-		
 	});
 	
 	$('#quiz-restart-btn').click(function () {

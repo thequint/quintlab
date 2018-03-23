@@ -62,7 +62,7 @@
 						h = m - 1,
 						i = f[h].correctIndex;
 					if (g === i) c.addClass("correct"), d = f[h].correctResponse, n++;
-					else if (c.addClass("incorrect"), d = f[h].incorrectResponse, !e.options.allowIncorrect) return void e.methods.gameOver(d);
+					else if (c.addClass("incorrect"),$(".active-question").find(".answers li").eq(i).find("a").addClass("correct"), d = f[h].incorrectResponse, !e.options.allowIncorrect) return void e.methods.gameOver(d);
 					a("#quiz-response").html(d), a("#quiz-controls").fadeIn(), "function" == typeof e.options.answerCallback && e.options.answerCallback(m, g === i)
 				}
 			},
