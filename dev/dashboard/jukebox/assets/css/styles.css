@@ -522,8 +522,8 @@ visibility: visible;
 .svg-wrap,
 #svg_circle {
     margin: 0 auto;
-    width: 510px;
-    height: 510px;
+    width: 540px;
+    height: 540px;
     /*padding: 0 20px;*/
 }
 #svg_circle svg {
@@ -652,7 +652,7 @@ visibility: visible;
 #pie_labels,
 #pie_icons {
     position: absolute;
-    color: white;
+    color: rgba(255,255,255, 0.8);
     text-align: center;
     top: 0px;
     /*left: 20px;*/
@@ -681,6 +681,8 @@ visibility: visible;
 }
 #pie_labels li span {
     font: 16px Monaco, MonoSpace;
+    text-transform: uppercase;
+    font-weight: 900;
     height: 200px;
     position: absolute;
     width: 20px;
@@ -704,8 +706,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 510px;
-        height: 510px;
+        width: 540px;
+        height: 540px;
     }
     .step01--container {
         top: 50%;
@@ -728,8 +730,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 500px;
-        height: 500px;
+        width: 540px;
+        height: 540px;
     }
     .pin-top {
         width: 38px;
@@ -745,6 +747,18 @@ visibility: visible;
         transform: rotate(-41deg);
     }
 }
+@media only screen and (max-width: 600px) {
+    .main-wrap,
+    #step01,
+    #step02 {
+        min-height: 530px;
+    }
+    .svg-wrap,
+    #svg_circle {
+        width: 500px;
+        height: 500px;
+    }
+}
 @media only screen and (max-width: 550px) {
     .main-wrap,
     #step01,
@@ -753,8 +767,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 430px;
-        height: 430px;
+        width: 460px;
+        height: 460px;
     }
     #step02 .song-footer .play-icon li {
         /*margin: 0 1.5% 8px;*/
@@ -801,8 +815,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 375px;
-        height: 375px;
+        width: 400px;
+        height: 400px;
     }
     .pin-top {
         width: 30px;
@@ -846,7 +860,7 @@ visibility: visible;
         padding: 2px 8px 2px 10px;
     }
     #pie_labels li span {
-        font: 10px Monaco, MonoSpace;
+        font-size: 13px;
     }
     #pie_icons li img {
         max-width: 25px;
@@ -860,8 +874,11 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 330px;
-        height: 330px;
+        width: 360px;
+        height: 360px;
+    }
+    #pie_labels li span {
+        font-size: 12px;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -872,8 +889,11 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 280px;
-        height: 280px;
+        width: 310px;
+        height: 310px;
+    }
+    #pie_labels li span {
+        font-size: 11px;
     }
     .pin-top {
         right: 50px;

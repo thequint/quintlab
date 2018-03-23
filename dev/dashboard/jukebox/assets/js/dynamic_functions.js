@@ -227,12 +227,29 @@ function create_pie() {
         
     })
     $("#svg_circle ul li").lettering();
+    set_angle();
     
-    var char_angle;
-    if ($(window).width() < 480) {
-	   	char_angle=2.5;
+	$("#pie_labels").css("width",$("#svg_circle").width())
+	$("#pie_labels").css("height",$("#svg_circle").width())
+	$("#pie_icons").css("width",0.7*$("#svg_circle").width())
+	$("#pie_icons").css("height",0.7*$("#svg_circle").width())  
+	$("#pie_icons").css("top",77*$("#svg_circle").width()/510)  
+	$("#pie_icons").css("left",77*$("#svg_circle").width()/510)  
+	$("#pie_labels li span").css("top",10*$("#svg_circle").width()/510)  
+	$("#pie_labels li span").css("left",250*$("#svg_circle").width()/510)  
+}
+
+function set_angle()
+{
+	var char_angle;
+    if ($(window).width() < 375) {
+	   	char_angle=2.8;
+	}else if ($(window).width() < 420) {
+	   	char_angle=3.1;
+	}else if ($(window).width() < 480) {
+	   	char_angle=3.5;
 	}else {
-	   	char_angle=4;
+	   	char_angle=4.2;
 	}
     $("#pie_labels li").each(function(index){
         var char_length= $(this).find("span").length; 
@@ -241,16 +258,7 @@ function create_pie() {
         $(this).css("transform","rotate("+(index-(char_length/2))*char_angle+"deg)")
         })
     });
-	$("#pie_labels").css("width",$("#svg_circle").width())
-	$("#pie_labels").css("height",$("#svg_circle").width())
-	$("#pie_icons").css("width",0.7*$("#svg_circle").width())
-	$("#pie_icons").css("height",0.7*$("#svg_circle").width())  
-	$("#pie_icons").css("top",77*$("#svg_circle").width()/510)  
-	$("#pie_icons").css("left",77*$("#svg_circle").width()/510)  
-	$("#pie_labels li span").css("top",15*$("#svg_circle").width()/510)  
-	$("#pie_labels li span").css("left",250*$("#svg_circle").width()/510)  
 }
-
 
 
 function calculateSectors(dashboard_data) {
