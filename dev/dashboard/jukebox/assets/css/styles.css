@@ -522,7 +522,8 @@ visibility: visible;
 .svg-wrap,
 #svg_circle {
     margin: 0 auto;
-    max-width: 510px;
+    width: 510px;
+    height: 510px;
     /*padding: 0 20px;*/
 }
 #svg_circle svg {
@@ -703,7 +704,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 550px;
+        width: 510px;
+        height: 510px;
     }
     .step01--container {
         top: 50%;
@@ -726,7 +728,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 500px;
+        width: 500px;
+        height: 500px;
     }
     .pin-top {
         width: 38px;
@@ -750,7 +753,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 430px;
+        width: 430px;
+        height: 430px;
     }
     #step02 .song-footer .play-icon li {
         /*margin: 0 1.5% 8px;*/
@@ -797,7 +801,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 375px;
+        width: 375px;
+        height: 375px;
     }
     .pin-top {
         width: 30px;
@@ -855,7 +860,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 330px;
+        width: 330px;
+        height: 330px;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -866,7 +872,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 280px;
+        width: 280px;
+        height: 280px;
     }
     .pin-top {
         right: 50px;
