@@ -46,7 +46,7 @@
 				var b = "";
 				e.options.counter && (b += '<div id="quiz-counter"></div>'), b += '<div id="questions">', a.each(f, function (c, d) {
 					b += '<div class="question-container">', b += '<p class="question">' + d.q + "</p>", b += '<ul class="answers">', a.each(d.options, function (a, c) {
-						b += '<li class="ans'+a+'"><a href="javascript:void(0);" data-index="' + a + '"><span>' + c + "</span></a></li>"
+						b += '<li class="ans'+a+'"><a href="javascript:void(0);" data-index="' + a + '">' + c + "</a></li>"
 					}), b += "</ul>", b += "</div>"
 				}), b += "</div>", 0 === a(k).length && (b += '<div id="' + k.substr(1) + '">', b += '<p id="quiz-results"></p>', b += "</div>"), b += '<div id="quiz-controls">', b += '<p id="quiz-response"></p>', b += '<div id="quiz-buttons">', b += '<a href="javascript:void(0);" id="quiz-next-btn">Next</a>', b += '<a href="javascript:void(0);" id="quiz-finish-btn">Finish</a>', b += '<a href="javascript:void(0);" id="quiz-restart-btn">Restart</a>', b += "</div>", b += "</div>", e.$el.append(b).addClass("quiz-container quiz-start-state"), a("#quiz-counter").hide(), a(".question-container").hide(), a(l).hide(), a(k).hide(), a("#quiz-controls").hide()
 			},
@@ -113,12 +113,13 @@
 			updateCounter: function () {
 				var b = e.options.counterFormat.replace("%current", m).replace("%total", g);
 				a("#quiz-counter").html(b)
-				setTimeout(function() {
+				
+				/*setTimeout(function() {
 				$(".counter").html("<span>Question</span>"+m);
 				}, 300);
 				//console.log(((((m-1)*100)/g)*(400-$(".bg img").width())/100) +"|"+ $(".bg img").width());
 				var dist = ((((m-1)*100)/g)*($(".container").width()-$(".bg img").width())/100) 
-				$(".bg img").css("transform","translateX("+dist+"px)");
+				$(".bg img").css("transform","translateX("+dist+"px)");*/
 				
 				
 				
