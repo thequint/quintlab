@@ -84,7 +84,7 @@ $(document).ready(function () {
 
 });
 
-function PlaySound_1() {
+/*function PlaySound_1() {
 	var sound = document.getElementById("audio_1");
 	sound.play();
 }
@@ -92,7 +92,7 @@ function PlaySound_1() {
 function PlaySound_2() {
 	var sound = document.getElementById("audio_2");
 	sound.play();
-}
+}*/
 
 
 
