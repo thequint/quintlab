@@ -644,6 +644,55 @@ visibility: visible;
     font-family: 'Oswald', sans-serif;
 }
 
+
+
+
+
+#pie_labels,
+#pie_icons {
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 0px;
+    /*left: 20px;*/
+    width: 510px;
+    height: 510px;
+    pointer-events: none;
+}
+#pie_icons {
+    width: 350px;
+    height: 350px;
+    top: 80px;
+    left: 90px;
+}
+#pie_labels li,#pie_icons li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+#pie_labels li:nth-child(2) {
+    transform: rotate(90deg);
+}
+#pie_icons li img {
+    max-width: 40px;
+}
+#pie_labels li span {
+    font: 16px Monaco, MonoSpace;
+    height: 200px;
+    position: absolute;
+    width: 20px;
+    left: 250px;
+    top: 30px;
+    transform-origin: bottom center;
+    height: 150px;
+    letter-spacing: 0;
+}
+
+
+
+
 /*  ///// */
 
 @media only screen and (max-width: 767px) {
@@ -677,7 +726,7 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 550px;
+        max-width: 500px;
     }
     .pin-top {
         width: 38px;
@@ -701,7 +750,7 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 500px;
+        max-width: 430px;
     }
     #step02 .song-footer .play-icon li {
         /*margin: 0 1.5% 8px;*/
@@ -748,7 +797,7 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 430px;
+        max-width: 375px;
     }
     .pin-top {
         width: 30px;
@@ -779,15 +828,6 @@ visibility: visible;
         width: 40px;
         height: 40px;
     }
-
-    /*#step02 .song-footer .play-icon {
-        width: 380px;
-    }
-    #step02 .song-footer .play-icon li {
-        margin: 0 10px 8px;
-    }*/
-
-
     #step02 .song-footer h2 span::before,
     #step02 .song-footer h2 span::after {
         display: none;
@@ -800,12 +840,22 @@ visibility: visible;
         font-size: 13px;
         padding: 2px 8px 2px 10px;
     }
+    #pie_labels li span {
+        font: 10px Monaco, MonoSpace;
+    }
+    #pie_icons li img {
+        max-width: 25px;
+    }
 }
 @media only screen and (max-width: 420px) {
     .main-wrap,
     #step01,
     #step02 {
         min-height: 430px;
+    }
+    .svg-wrap,
+    #svg_circle {
+        max-width: 330px;
     }
 }
 @media only screen and (max-width: 375px) {
@@ -816,7 +866,7 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        max-width: 380px;
+        max-width: 280px;
     }
     .pin-top {
         right: 50px;

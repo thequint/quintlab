@@ -84,9 +84,20 @@
 <script src="assets/js/dynamic_functions.js"></script>
 <!-- <script src="assets/js/functions.js"></script> -->
 
+<script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
+
 <script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
 
+
+
 <script>
+
+	$(window).resize(function() {
+	  	create_pie();
+	  	
+	  	pie_events();
+	});
+
 	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
 
 	Tabletop.init({

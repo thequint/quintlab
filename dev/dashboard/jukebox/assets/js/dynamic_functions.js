@@ -163,6 +163,7 @@ function pie_events() {
 function create_pie() {
 	 $("#svg-labels").html("");
 	 $(".play-icon").html("");
+	 dashboard_data.size =$("#svg_circle").width(); // to assign dynamic width to the container based on the screen size
 	sectors = calculateSectors(dashboard_data);
 	var newSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 	newSVG.setAttributeNS(null, 'style', "width: " + dashboard_data.size + "px; height: " + dashboard_data.size + "px");
@@ -209,6 +210,45 @@ function create_pie() {
 	midCircle.setAttributeNS(null, 'fill', '#424149');
 
 	newSVG.appendChild(midCircle);
+
+
+
+	$("#svg_circle").append("<ul id='pie_labels'></ul>")
+    $("#svg_circle").append("<ul id='pie_icons'></ul>")
+    
+    var n = $("#svg_circle path").length;
+    $("#svg_circle path").each(function(index){
+        var angle=((360/(n*2))+(360*index/n))
+        console.log(n+"|"+angle);
+        $("#svg_circle ul#pie_labels").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'>"+$(this).attr("data-mood")+"</li>")
+        
+        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='assets/images/"+$(this).attr("data-mood-icon")+"'></li>")
+        console.log($(this).attr("data-mood"));
+        
+    })
+    $("#svg_circle ul li").lettering();
+    
+    var char_angle;
+    if ($(window).width() < 480) {
+	   	char_angle=2.5;
+	}else {
+	   	char_angle=4;
+	}
+    $("#pie_labels li").each(function(index){
+        var char_length= $(this).find("span").length; 
+        console.log(char_length);
+        $(this).find("span").each(function(index){
+        $(this).css("transform","rotate("+(index-(char_length/2))*char_angle+"deg)")
+        })
+    });
+	$("#pie_labels").css("width",$("#svg_circle").width())
+	$("#pie_labels").css("height",$("#svg_circle").width())
+	$("#pie_icons").css("width",0.7*$("#svg_circle").width())
+	$("#pie_icons").css("height",0.7*$("#svg_circle").width())  
+	$("#pie_icons").css("top",77*$("#svg_circle").width()/510)  
+	$("#pie_icons").css("left",77*$("#svg_circle").width()/510)  
+	$("#pie_labels li span").css("top",15*$("#svg_circle").width()/510)  
+	$("#pie_labels li span").css("left",250*$("#svg_circle").width()/510)  
 }
 
 

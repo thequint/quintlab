@@ -218,8 +218,16 @@ body {
     <script src="jukebox/assets/js/spreadsheet.js"></script>
     <script src="jukebox/assets/js/dynamic_functions.js"></script>
     <script src="assets/js/jukebox.js"></script>
+
+    <script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
+
+    
     <!-- <script src="jukebox/assets/js/functions.js"></script> -->
     <script data-cfasync="false" type="text/javascript">
+    $(window).resize(function() {
+        create_pie();
+        pie_events();
+    });
     jQuery(document).ready(function($) {
 
         var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
