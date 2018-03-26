@@ -1152,8 +1152,11 @@ p a:hover {
 }
 
 .credits-wrapper .logo-mp{
-	max-width: 80px;
-	margin-right: 20px;
+	max-width: 120px;
+	/*margin-right: 20px;*/
+}
+.credits-wrapper .logo-mp img {
+	/*min-width: 200px;*/
 }
 .content-left.quiz {
 	text-align: center;
