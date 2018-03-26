@@ -222,7 +222,7 @@ function create_pie() {
         console.log(n+"|"+angle);
         $("#svg_circle ul#pie_labels").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'>"+$(this).attr("data-mood")+"</li>")
         
-        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='assets/images/"+$(this).attr("data-mood-icon")+"'></li>")
+        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+$(this).attr("data-mood-icon")+"'></li>")
         console.log($(this).attr("data-mood"));
         
     })
