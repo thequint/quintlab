@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('#DrSlider').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
 		arrows: false,
 		autoplaySpeed: 2000,
 		dots: false,
