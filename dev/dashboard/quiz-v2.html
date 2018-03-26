@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quiz Widget | Quint Lab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+	<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
+    
+</head>
+<body >
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="#" class="navbar-brand mb-0 h1">
+			<img src="assets/images/tquint-white.svg" width="100" height="100%" class="d-inline-block align-top">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+	  	</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">			
+			<ul class="navbar-nav ml-auto">
+				<li class="navbar-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Your Account
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a href="#" class="dropdown-item">View</a>
+						<a href="#" class="dropdown-item">Edit</a>
+						<a href="#" class="dropdown-item">Some Action</a>
+						<a href="#" class="dropdown-item">Another Action</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" id="main-content">
+		<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+		  </ol>
+		</nav>
+
+
+		<div class="row generate-quiz">
+			<div class="display-4 col-sm-6"><h2 class="display-4">Quiz</h2></div>
+			<div class="display-4 col-sm-6 text-right">
+				<form id="foo">
+			        <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="visibility:hidden;display:none"></textarea>
+			        <!-- <a class="btn btn-primary float-right generate-quiz">Generate Quiz</a> -->
+			        <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
+			    </form>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-lg-6 text-center">
+				Add Questions
+			</div>
+			<div class="col-lg-6 text-center">
+				Preview
+				<i class="fas fa-sync-alt ml-1 refresh-icon"></i>
+			</div>
+		</div>
+		<div class="row widget-details">
+			<div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
+				<form>
+					<div class="form-group">
+						<input class="form-control tag-line tag-line-1" placeholder="Tag line for below 33%...">
+						<input class="form-control tag-line tag-line-2" placeholder="Tag line for between 33% & 65%...">
+						<input class="form-control tag-line tag-line-3" placeholder="Tag line for above 65%...">
+					</div>
+				</form>
+				<div class="card">
+					<div class="card-header">
+						<div>
+							<h3>
+								Question 1
+								<button type="button" class="close question-close" aria-label="Close">
+								  <span aria-hidden="true">&times;</span>
+								</button>
+							</h3>
+						</div>						
+					</div>
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea>
+								<p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
+								    + Add media
+							  	</p>
+							  	<div class="collapse container media-container">
+							  		<div class="media-thumbnails-div">
+							  			<ul class="mediaPlaceholderList">
+							  				<li class="placeholderImage"></li>
+							  				<li class="placeholderVideo"></li>
+							  				<li class="placeholderAudio"></li>
+							  			</ul>
+							  		</div>
+							  		<div class="media-input-container">
+							  			<input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url...">
+							  		</div>
+
+							  		<div class="media-input-container">
+							  			<input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url...">
+							  		</div>
+
+							  		<div class="media-input-container">
+							  			<input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url...">
+							  		</div>
+									
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="container options-container">
+									<div class="option">
+										<ul class="optionInputGroup">
+											<li class="optionRadioLi">
+												<input type="radio" name="optionsRadio" class="optionsRadioInput">
+											</li>
+											<li class="optionInputLi">
+												<input class="form-control optionInput" type="text" id="option-1" placeholder="Option">
+											</li>
+											<li class="options-close-button">
+												<button type="button" class="close option-close" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</li>
+											<li>
+												<p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
+													+ Add media
+											  	</p>
+											  	<div class="collapse container media-container">
+											  		<div class="media-thumbnails-div">
+											  			<ul class="mediaPlaceholderList">
+											  				<li class="placeholderImage"></li>
+											  				<li class="placeholderVideo"></li>
+											  				<li class="placeholderAudio"></li>
+											  			</ul>
+											  		</div>
+											  		<div class="media-input-container">
+											  			<input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url...">
+											  		</div>
+
+											  		<div class="media-input-container">
+											  			<input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url...">
+											  		</div>
+
+											  		<div class="media-input-container">
+											  			<input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url...">
+											  		</div>												
+												</div>											
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="text-right">
+									<a href="#" class="addAnotherOption">+ Add another option</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-sm-12 preview">
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<a class="btn btn-primary btn-block btn-lg" id="addQuestionLink" href="javascript:void(0);" role="button">Add Question</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script src="quizzes-v2/assets/js/spreadsheet.js"></script>
+	
+	<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>	
+
+	<script>
+		$( "#draggingQuestions" ).sortable();
+	    $( "#draggingQuestions" ).disableSelection();
+	    // $( ".draggingOptions" ).sortable();
+	    // $( ".draggingOptions" ).disableSelection();
+	 	// $('#draggingQuestions').on('click','.close',function() {
+		//  	$(this).parent().parent().remove();
+		// });
+		// $('.draggingOptions').on('click','.close',function() {
+		//  	$(this).parent().parent().remove();
+		// });
+	</script>
+
+	<script>
+		// var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1Tm-evipM7HZuMc0hiX6mpZ_QilShOugEsVZp5kHkYVg/pubhtml'; // New form quiz sheet
+		var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/16ryxF_1uxrtDwc6GWqUaJCs_CjE_cJ8Ab8ZjrkIafG4/pubhtml'; // New form quiz sheet
+
+
+		var questionNumber = 0;
+		var quiz_data = [];
+		var option_data = [];
+		optionNumber = 1;
+		imageNumber = 0;
+		videoNumber = 0;
+		audioNumber = 0;
+
+		
+		addAnotherOptionClick();
+
+
+		function buildPreview(){
+			$('.preview').html("");
+			var str = '';
+			for(var i = 0; i < quiz_data.length; i++){
+				// console.log(i);
+				for(var j = 0; j < quiz_data[i].options.length; j++){
+					str = str + '<li' + ((quiz_data[i].options[j].isCorrect == true) ? ' class="bg-success"' : '') + '><label class="lbl' + ((quiz_data[i].options[j].isCorrect == true) ? ' text-white"' : '') + '">' + (quiz_data[i].options[j].optionImageUrl == null ? (quiz_data[i].options[j].optionVideoUrl == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>' ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].optionVideoUrl + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i].options[j].optionImageUrl + '">') + '' + quiz_data[i].options[j].optionText.toString() + '</label></li>';
+				}
+				$('.preview').append('<div class="question-box"><div class="question"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'].toString() + '</div>' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl'] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '">') + '<ul class="answer-type demo-list">' + str + '</ul></div>');
+				str = '';
+			}
+			if($('.tag-line-1').val() != ""){
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-1.gif"></span></div>');
+			}
+			if($('.tag-line-2').val() != ""){
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-2').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-2.gif"></span></div>');
+			}
+			if($('.tag-line-3').val() != ""){
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-3').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-3.gif"></span></div>');
+			}
+			$(".question-box").css({"background-color": "white", "border-radius": "0px", "border": "1px #d8d8d8 solid", "padding": "24px 12px 12px 24px", "margin" : "3.5em 0"});
+
+			// $('.lbl').click(function () {
+			//     $('.hli').toggleClass('hli');
+			//     $(this).toggleClass('hli');
+			// });
+			return;
+		}
+
+		function addAnotherOptionClick(){
+			$(".card:last-child").find(".addAnotherOption").on('click', function(e){
+				e.preventDefault();
+				// optionNumber++;
+				$(this).parent().parent().find(".options-container").append('<div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div>');
+				resetEvents();
+			});
+		}
+
+		
+
+		function resetEvents(){
+			// $(".addImage,.addOptionImage").on('click', function(){
+			// 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+			// 	closeButton();
+			// });
+			// $(".addAudio,.addOptionAudio").on('click', function(){
+			// 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+			// 	closeButton();
+			// });
+			// $(".addVideo,.addOptionVideo").on('click', function(){
+			// 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-warning mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+			// 	closeButton();
+			// });
+			$(".option-close").on('click', function(){
+				$(this).closest(".option").remove();
+				// console.log("clicked again");
+				// addQuestionFunc();
+			});
+
+			$(".question-close").on('click', function(){
+				$(this).closest(".card").remove();
+				// console.log("clicked");
+				// addQuestionFunc();
+			});
+
+			$(".addMediaBtn").on("click", function(e){
+				e.preventDefault();
+				$(this).next().collapse('toggle');
+			});
+
+			$(".imageInput").on("change", function(){
+				$(this).closest(".media-container").find(".placeholderImage").html("<img src='" + $(this).val() + "'>");
+			});
+			$(".videoInput").on("change", function(){
+				$(this).closest(".media-container").find(".placeholderVideo").html("<iframe src='https://www.youtube.com/embed/" + $(this).val() + "' frameborder='0' gesture='media' allow='encrypted-media' allowfullscreen></iframe>");
+			});
+			$(".audioInput").on("change", function(){
+				$(this).closest(".media-container").find(".placeholderAudio").html($(this).val());
+			});
+
+		}
+		resetEvents();
+
+		var i = 0, x;
+
+		function addQuestionUi(){
+			$('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
+			resetEvents();
+			addAnotherOptionClick();
+			return;
+		}
+
+		var flag = 0, correctInputSelectedFlag = -1;
+
+		function addQuestionFunc(){
+			var j = 0;
+			flag = 0;
+			correctInputSelectedFlag = -1;
+			quiz_data = [];
+			$(".card").each(function(){
+
+				quiz_data.push({});
+				//quiz_data[i].push( new Array());
+				if($(this).find(".question-text").val() == ""){
+					alert("Please Enter some text for questions");
+					flag = -1;
+					return;
+				}
+				quiz_data[i]['questionText'] = $(this).find(".question-text").val().toString();
+				quiz_data[i]['questionImageUrl'] = $(this).find(".imageInput").val();
+				quiz_data[i]['questionVideoUrl'] = $(this).find(".videoInput").val();
+				quiz_data[i]['questionAudioUrl'] = $(this).find(".audioInput").val();
+
+				// console.log(quiz_data);
+
+				$(this).find(".option").each(function(){
+					// console.log(j);
+					if($(this).find(".optionInput").val() == ""){
+						alert("Option text cannot be null...");
+						option_data = [];
+						quiz_data[i] = [];
+						flag = -1;
+						return;
+					}
+					option_data.push({});
+					// option_data[j].push(new Array());
+					option_data[j]['optionText'] = $(this).find(".optionInput").val().toString();
+					option_data[j]['optionImageUrl'] = $(this).find(".imageInput").val();
+					option_data[j]['optionVideoUrl'] = $(this).find(".videoInput").val();
+
+					var abc = $(this).find(".audioInput").val().substring(($(this).find(".audioInput").val().indexOf('src="') + 5), ($(this).find(".audioInput").val().indexOf('" title')));
+					// console.log( $(this).find(".audioInput").val());
+					//option_data[j]['optionAudioUrl'] = abc;
+					if($(this).find("input:radio[name='optionsRadio']").is(":checked")) {
+						// console.log("true")
+						option_data[j]['isCorrect'] = true;
+						correctInputSelectedFlag = 0;
+					}
+					else{
+						option_data[j]['isCorrect'] = false;
+					}
+					//option_data[j]['isCorrect'] = $(this).find(".optionsRadioInput").val() ? true : false;
+					// console.log($(this).find(".optionsRadioInput").val());
+					j++;
+					console.log(option_data.length);
+				});
+				if(j < 2 || option_data.length < 0){
+					alert("Add atleast two options...!!!");
+					quiz_data = [];
+					option_data = [];
+					j = 0;
+					flag = -1;
+					return;
+				}
+				if(correctInputSelectedFlag != 0){
+					alert("One of the options must be marked true...!!!");
+					quiz_data = [];
+					option_data = [];
+					flag = -1;
+					return;
+				}
+				j = 0;
+				quiz_data[i]['options'] = option_data;
+				option_data = [];
+				i++;
+				x = i;
+			});
+			i = 0;
+			// console.log(flag);
+			// alert(quiz_data[0].options.length);
+			if(quiz_data.length > 0 && flag != -1){
+				buildPreview();
+				$("#Comments").val( JSON.stringify(quiz_data));
+			}
+		}
+
+		$("#addQuestionLink").click(function(){
+			addQuestionFunc();
+			if(quiz_data.length > 0 && flag != -1){
+				addQuestionUi();
+			}
+		});
+
+		// $('.generate-quiz-button').on('click', function(){
+
+		// });
+
+		$('.refresh-icon').click(function(){addQuestionFunc()});
+
+		function copyHandler(){
+			$(".copy-val").click(function(){
+			    $(".iframe-link").select();
+			    document.execCommand('copy');
+			});
+		}
+
+		var request;
+
+
+    $("#foo").submit(function(event){		
+			// console.log("init");		
+		event.preventDefault();
+		if($('.tag-line-1').val() == ""){
+			alert("Add tag line 1...");
+			return;
+		}
+		else if($('.tag-line-2').val() == ""){
+			alert("Add tag line 2...");
+			return;
+		}
+		else if($('.tag-line-3').val() == ""){
+			alert("Add tag line 3...");
+			return;
+		}
+		else if(quiz_data.length <= 0){
+			alert("Please Enter questions first...!!!");
+			return;
+		}
+		console.log(quiz_data);
+		if(!confirm("Are You sure?\n Quiz once generated could not be edited...")){
+			return;
+		}
+
+    	quiz_data.push({});
+			quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
+			quiz_data[x]['tagLine2'] = $('.tag-line-2').val();
+			quiz_data[x]['tagLine3'] = $('.tag-line-3').val();
+			$("#Comments").val( JSON.stringify(quiz_data));	
+			
+			copyHandler();
+
+        // add value to the textarea
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+        // let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea");
+        // serialize the data in the form
+        var serializedData = $form.serialize();
+    
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+        $('#result').text('Sending data...');
+
+		Tabletop.init({
+				key: public_spreadsheet_contact,
+				callback: showInfo,
+				simpleSheet: true
+		});
+		
+
+		function showInfo(data) {
+
+		// alert('yes');
+		// fire off the request to /form.php
+        request = $.ajax({
+            // url: "https://script.google.com/macros/s/AKfycbxsnZmBN13aS9kiQte-LZiDfsUnQnFIJ1aCaYVJLrr8UyRegGPw/exec",
+            // url: "https://script.google.com/macros/s/AKfycbwiRwxDqkOK1A5S1bb5T993rnKL3kiUQOKgz3sjpen_oIgFiwAF/exec",
+            url: "https://script.google.com/macros/s/AKfycbxoiuirNr4kIlH-z0QMrSRq7_SVsDmvW3f3MVq2Ov0GR-jbByB2/exec",
+            type: "get",
+            data: serializedData
+        });
+    
+        // callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            $('#result').html('<span class="success">Success</span>');
+            console.log("Hooray, it worked!");
+        });
+    
+        // callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // log the error to the console
+            console.error(
+                "The following error occured: "+
+                textStatus, errorThrown
+            );
+        });
+    
+        // if the request failed or succeeded
+        request.always(function () {
+            // reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+
+        $('#foo').find('input, textarea').val('');
+		
+		var str = "<iframe src='https://quintlab.herokuapp.com/dev/dashboard/quizzes-v2/index.html?id=" + parseInt(data.length+2) + "' width='100%' frameborder='0'></iframe>";
+			$('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');		
+		}
+        // prevent default posting of form
+      //  event.preventDefault();
+    });	
+
+	</script>
+</body>
+</html>
