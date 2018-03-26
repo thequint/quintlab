@@ -896,10 +896,12 @@ visibility: visible;
         font-size: 11px;
     }
     .pin-top {
-        right: 50px;
+        right: 65px;
+        top: 0;
     }
     .pin-bottom {
-        right: 60px;
+        right: 75px;
+        top: 38px;
     }
     #step02 .song-footer .play-icon {
         padding: 10px 0;
