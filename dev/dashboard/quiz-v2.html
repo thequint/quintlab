@@ -13,6 +13,16 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+
+	<link href="quizzes-v2/assets/css/theme.css" rel="stylesheet">
+	<style type="text/css">
+	body {
+	    font-family: 'Oswald', sans-serif;
+	    background-color: #f4f4f4;
+	    font-weight: 300;
+	}
+	</style>
+
 	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 	<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
@@ -101,6 +111,8 @@
 						<form>
 							<div class="form-group">
 								<textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea>
+
+								<textarea type="text" rows="3" class="form-control description-text" placeholder="Enter description"></textarea>
 								<p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
 								    + Add media
 							  	</p>
@@ -110,6 +122,7 @@
 							  				<li class="placeholderImage"></li>
 							  				<li class="placeholderVideo"></li>
 							  				<li class="placeholderAudio"></li>
+							  				<!-- <li class="placeholderCaption"></li> -->
 							  			</ul>
 							  		</div>
 							  		<div class="media-input-container">
@@ -122,6 +135,9 @@
 
 							  		<div class="media-input-container">
 							  			<input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url...">
+							  		</div>
+							  		<div class="media-input-container">
+							  			<input href="#" class="form-control border-danger mediaCaptionInput" placeholder="Media Caption...">
 							  		</div>
 									
 								</div>
@@ -151,6 +167,7 @@
 											  				<li class="placeholderImage"></li>
 											  				<li class="placeholderVideo"></li>
 											  				<li class="placeholderAudio"></li>
+											  				<!-- <li class="placeholderCaption"></li> -->
 											  			</ul>
 											  		</div>
 											  		<div class="media-input-container">
@@ -163,6 +180,9 @@
 
 											  		<div class="media-input-container">
 											  			<input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url...">
+											  		</div>
+											  		<div class="media-input-container">
+											  			<input href="#" class="form-control border-danger mediaCaptionInput" placeholder="Media Caption...">
 											  		</div>												
 												</div>											
 											</li>
@@ -237,8 +257,13 @@
 				for(var j = 0; j < quiz_data[i].options.length; j++){
 					str = str + '<li' + ((quiz_data[i].options[j].isCorrect == true) ? ' class="bg-success"' : '') + '><label class="lbl' + ((quiz_data[i].options[j].isCorrect == true) ? ' text-white"' : '') + '">' + (quiz_data[i].options[j].optionImageUrl == null ? (quiz_data[i].options[j].optionVideoUrl == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>' ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].optionVideoUrl + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i].options[j].optionImageUrl + '">') + '' + quiz_data[i].options[j].optionText.toString() + '</label></li>';
 				}
-				$('.preview').append('<div class="question-box"><div class="question"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'].toString() + '</div>' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl'] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '">') + '<ul class="answer-type demo-list">' + str + '</ul></div>');
-				str = '';
+				$('.preview').append('<div class="question-box"><div class="question-headline"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'].toString() + '</div><div class="description-text">' + quiz_data[i]['descriptionText'] + '</div><div class="question-media">' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ? '' : quiz_data[i]['mediaCaption'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl '] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '"></div>') + '<div class="question-media--caption">' + quiz_data[i]['mediaCaption'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul></div></div>');
+
+					str = '';
+
+
+				// $('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div></div>');
+		str = '';
 			}
 			if($('.tag-line-1').val() != ""){
 				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-1.gif"></span></div>');
@@ -262,7 +287,7 @@
 			$(".card:last-child").find(".addAnotherOption").on('click', function(e){
 				e.preventDefault();
 				// optionNumber++;
-				$(this).parent().parent().find(".options-container").append('<div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div>');
+				$(this).parent().parent().find(".options-container").append('<div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li><li class="placeholderCaption"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger mediaCaptionInput" placeholder="Media Caption..."></div></div></li></ul></div>');
 				resetEvents();
 			});
 		}
@@ -308,6 +333,9 @@
 			$(".audioInput").on("change", function(){
 				$(this).closest(".media-container").find(".placeholderAudio").html($(this).val());
 			});
+			$(".mediaCaptionInput").on("change", function(){
+				$(this).closest(".media-container").find(".placeholderCaption").html($(this).val());
+			});
 
 		}
 		resetEvents();
@@ -315,7 +343,7 @@
 		var i = 0, x;
 
 		function addQuestionUi(){
-			$('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
+			$('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><textarea type="text" rows="3" class="form-control description-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger mediaCaptionInput" placeholder="Media Caption..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li><li class="placeholderCaption"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
 			resetEvents();
 			addAnotherOptionClick();
 			return;
@@ -338,6 +366,9 @@
 					return;
 				}
 				quiz_data[i]['questionText'] = $(this).find(".question-text").val().toString();
+				quiz_data[i]['descriptionText'] = $(this).find(".description-text").val();
+				quiz_data[i]['mediaCaption'] = $(this).find(".mediaCaptionInput").val();
+
 				quiz_data[i]['questionImageUrl'] = $(this).find(".imageInput").val();
 				quiz_data[i]['questionVideoUrl'] = $(this).find(".videoInput").val();
 				quiz_data[i]['questionAudioUrl'] = $(this).find(".audioInput").val();

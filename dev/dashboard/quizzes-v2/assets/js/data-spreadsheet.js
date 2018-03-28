@@ -61,7 +61,10 @@ function display_data() {
 			{
 				media = media + '<li><iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + data_array[index].options[j].optionAudioUrl + '" title="Audioboom player"></iframe></li>';
 			}
-			str = str + '<li><label for="input-' + (index + 1) + '" class="' + ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+ '"><input type="radio" name="ques' + index + '" value="' + ((data_array[index].options[j].isCorrect == true) ? 1: 0) + '"> ' + data_array[index].options[j].optionText + '</label><ul class="options-media">' + media + '</ul></li>';
+			// str = str + '<li><label for="input-' + (index + 1) + '" class="' + ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+ '"><input type="radio" name="ques' + index + '" value="' + ((data_array[index].options[j].isCorrect == true) ? 1: 0) + '"> ' + data_array[index].options[j].optionText + '</label><ul class="options-media">' + media + '</ul></li>'; //commented li checkbox
+
+			str = str + '<li>' + data_array[index].options[j].optionText + '<ul class="options-media">' + media + '</ul></li>';
+
 			// console.log((data_array[index].options[j].isCorrect == true) ? 1: 0);
 			// console.log((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong');
 		}
@@ -69,18 +72,18 @@ function display_data() {
 		var media = '';
 		if(data_array[index].questionImageUrl)//image
 		{
-			media = media + '<li><img src = "' + data_array[index].questionImageUrl + '"></li>';
+			media = media + '<div class="question-media--image"><img src = "' + data_array[index].questionImageUrl + '"></div>';
 		}
 		if(data_array[index].questionVideoUrl)// video
 		{
-			media = media + '<li><iframe src="https://www.youtube.com/embed/' + data_array[index].questionVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></li>';
+			media = media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].questionVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 		}	
 		if(data_array[index].questionAudioUrl)//Audio
 		{
-			media = media + '<li>' + data_array[index].questionAudioUrl + '</li>';
+			media = media + '<div class="question-media--audio">' + data_array[index].questionAudioUrl + '</div>';
 		}
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '<ul>' + media + '</ul></div><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div>');
+		$('.questions').append('<div class="question-box"><div class="question-headline"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answer-options" style="display:none">The New York Times and The Observer of London revealed how Cambridge Analytica, a firm with ties to Mr. Trump’s campaign, harvested private information from the Facebook profiles of more than 50 million users without their permission.</div></div></div>');
 		str = '';
 	}
 	$('.highlight').html(data_array.length-1);
@@ -88,6 +91,17 @@ function display_data() {
 	$('.tag-line-2').html(data_array[data_array.length-1].tagLine2);
 	$('.tag-line-3').html(data_array[data_array.length-1].tagLine3);
 	initNew();
+	listClick();
+}
+
+function listClick(){
+	$(".demo-list li").click(function(){
+		if(!$(this).closest("ul").hasClass("answered")){
+			$(this).closest("ul").addClass("answered");
+			$(this).addClass("active");
+		}
+		$(this).closest(".question-options").find(".answer-options").fadeIn();
+   	});
 }
 
 function initNew(){
@@ -151,6 +165,8 @@ function initNew(){
       	$(this).parents("label").click();
    	});
 }
+
+
 
 function adjust_iframe_height(){
     var actual_height = document.body.scrollHeight; 
