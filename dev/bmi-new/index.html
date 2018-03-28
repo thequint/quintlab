@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no" />	
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#fff" />
+<title>Body Mass Index Calculator - The Quint</title>
+<meta name="description" content="Body Mass Index Calculator">
+<meta name="keywords" content="Body Mass Index Calculator">
+<meta name="copyright" content="The Quint">
+<meta name="publisher" content="The Quint">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Custom styles for this template -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="assets/css/base.css" rel="stylesheet" media="all">
+<link href="assets/css/theme.css" rel="stylesheet" media="all">
+
+
+<!-- Google Analytics -->
+<script> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script>
+
+<!-- Begin comScoreTag -->
+<script>
+window.COMSCORE_OPTS = { c1: "2", c2: "20519288" };
+var _comscore = _comscore || [];
+_comscore.push(COMSCORE_OPTS);
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" alt="" />
+</noscript>
+
+<!-- End comScore Tag -->
+</head>
+<body>
+	<div class="container bmi-container">
+		<h1>Body mass index (BMI)</h1>
+		<div class="bmi-form-container">
+			<form name="BMI" method="post">
+				<div class="form-group">
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in kg">
+					<span id="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
+					<div class="radio-group">
+						<span><input type="radio" id="weight-kg" checked name="select-weight"><label for="weight-kg">(kg)</label></span>
+						<span><input type="radio" id="weight-lb" name="select-weight"><label for="weight-lb">(lb)</label></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="cm-height">
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in cm">
+					</div>
+					
+					<div class="feet-height clearfix">
+						<div class="feet-input">
+						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-feet" placeholder="Feet">
+						</div>
+						
+						<div class="feet-input">
+						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-inch" placeholder="Inch">
+						</div>
+					</div>
+					<div class="radio-group">
+						<span><input type="radio" id="height-cm" checked name="select-height"><label for="height-cm">(cm)</label></span>
+						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(feet)</label></span>
+					</div>
+				</div>
+				
+				<div class="final-bmi">--.-</div>
+				<div class="bmi-chart">
+					<h2><span>BMI Chart</span></h2>
+					<div class="scale-el">
+					<div class="scale-weight clearfix">
+						<div class="start">
+							<div><span>W</span> = lbs</div>
+							<div><span>W</span> = kgs</div>
+						</div>
+						<div class="start">
+							<div>100</div>
+							<div>45</div>
+						</div>
+						<div class="end">
+							<div>265</div>
+							<div>120</div>
+						</div>
+					</div>
+					<div class="scale-height">
+						<div class="start">
+							<div><span>H</span> = cm/feet</div>
+							<div>4 &nbsp; 120</div>
+						</div>
+						
+						<div class="end">
+							<div>6'8" &nbsp; 210</div>
+						</div>
+					</div>
+					</div>
+					<div class="chart-box">
+						<span class="bmi-point"></span>
+					</div>
+				</div>
+				
+				
+<!--
+				<div class="form-group">
+					<input type="text" id="final_Bmi" placeholder="Your BMI" disabled>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="My Comment" disabled>
+				</div>
+				<div class="btn-group clearfix">
+					<input class="btn btn-cal" id="Btn_CalBmi" type="button" value="Let's see">
+					<input class="btn btn-reset" id="Btn_Reset" type="reset" value="Reset">				
+				</div>
+-->
+			</form>	
+		</div>
+	</div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>  
+<script type="text/javascript" src="assets/js/functions.js"></script>
+</body>
+</html>
