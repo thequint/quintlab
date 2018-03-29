@@ -1,0 +1,267 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 16px;
+   /*font-family: 'Exo', sans-serif;*/
+   font-family: 'Chewy', cursive;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+   font-family: sans-serif;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   height: 100%;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*, *:after, *:before {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+   color:#6a357f;transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;}
+ul, ol {
+   list-style-type: none;
+}
+article, aside, footer, header, nav, section, figure, figcaption {
+   display: block;
+}
+
+/* ------------------------------------------------------------ *\
+|* Styles
+\* ------------------------------------------------------------ */
+.body-wrap {
+   padding: 40px 0 20px;
+   margin: 0 auto;
+   max-width: 800px;
+   min-height:565px;
+}
+.body-wrap.first {
+   background-color: #4dc058;
+}
+.body-wrap.second {
+   background-color: #ffe037;
+}
+.body-wrap.third {
+   background-color: #63dbff;
+}
+.body-wrap.forth {
+   background-color: #e9428a;
+}
+.body-wrap.fifth {
+   background-color: #aa4dd9;
+}
+
+.body-wrap .egg-top {
+   margin: 0 auto 15px;
+   max-width:350px;
+   min-height:467px;
+   position:relative;
+   cursor: pointer;
+}
+/*.body-wrap .egg-top:after {
+   margin: 0 auto;
+   position: absolute;
+   bottom: -38px;
+   left: -20px;
+   right: 0;
+   display: block;
+   width:400px;
+   height:67px;
+   content: " ";
+   background: url(../images/shadow.png) no-repeat bottom center;
+   background-size: 100%;
+}*/
+.egg-top .egg-half-full {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   max-width:350px;
+   min-height:475px;
+   transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;
+}
+.egg-top .egg-half-full .egg-up {
+   position: absolute;
+   top: 1px;
+   right: 0;
+   left: 0;
+   max-width:350px;
+   /*min-height:268px;*/
+   min-height:312px;
+   background-size: 100%;
+   /*background: url(../images/egg-up.png) no-repeat top center;*/
+}
+.egg-top .egg-half-full .egg-down {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   max-width:350px;
+   /*min-height:235px;*/
+   min-height:188px;
+   z-index: 1;
+   background-size: 100%;
+   /*background: url(../images/egg-down.png) no-repeat bottom center;*/
+}
+.egg-top .egg-crack {
+   position: absolute;
+   bottom: 147px;
+   right: 0;
+   left: 0;
+   max-width:350px;
+   height:57px;
+   z-index: 9;
+   opacity: 0;
+   background: url(../images/egg-crack.png) no-repeat bottom center;
+   background-size: 100%;
+   transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;
+}
+.egg-top:hover .egg-crack {
+   opacity: 1;
+}
+.egg-top .egg-crack.fixed {
+   opacity: 1;
+}
+.egg-top .egg-half-full .egg-poster {
+   position: absolute;
+   top: 268px;
+   right: 0;
+   left: 0;
+   max-width:307px;
+   height:0;
+   z-index: 0;
+   margin: 0 auto;
+   background-size: 100%;
+   /*background: url(../images/egg-poster.png) no-repeat top center;*/
+}
+.body-wrap .egg-content {
+   max-width: 420px;
+   margin: 0 auto;
+   display: none;
+   padding: 15px;
+   color: #fff;
+   font-size: 25px;
+   font-weight: normal;
+   letter-spacing: 1px;
+   border-radius: 10px;
+   text-align: center;
+   text-transform: uppercase;
+}
+.body-wrap .egg-content span {
+   color: #ffcd00;
+}
+
+/* Egg 01 */
+.egg-up.egg-up01 {
+   background: url(../images/egg-up.png) no-repeat top center;
+}
+.egg-down.egg-down01 {
+   background: url(../images/egg-down.png) no-repeat bottom center;
+}
+.egg-poster.egg-poster01 {
+   background: url(../images/manish-pandey.png) no-repeat top center;
+}
+.body-wrap .egg-content.bg-color01 {
+   background-color: #49b2e1;
+}
+
+/* Egg 02 */
+.egg-up.egg-up02 {
+   background: url(../images/egg-up02.png) no-repeat top center;
+}
+.egg-down.egg-down02 {
+   background: url(../images/egg-down02.png) no-repeat bottom center;
+}
+.egg-poster.egg-poster02 {
+   background: url(../images/sandeep-sharma.png) no-repeat top center;
+}
+.body-wrap .egg-content.bg-color02 {
+   background-color: #e74c32;
+}
+
+/* Egg 03 */
+.egg-up.egg-up03 {
+   background: url(../images/egg-up03.png) no-repeat top center;
+}
+.egg-down.egg-down03 {
+   background: url(../images/egg-down03.png) no-repeat bottom center;
+}
+.egg-poster.egg-poster03 {
+   background: url(../images/washington-sundar.png) no-repeat top center;
+}
+.body-wrap .egg-content.bg-color03 {
+   background-color: #f16386;
+}
+
+/* Egg 04 */
+.egg-up.egg-up04 {
+   background: url(../images/egg-up04.png) no-repeat top center;
+}
+.egg-down.egg-down04 {
+   background: url(../images/egg-down04.png) no-repeat bottom center;
+}
+.egg-poster.egg-poster04 {
+   background: url(../images/shreyas-iyer.png) no-repeat top center;
+}
+.body-wrap .egg-content.bg-color04 {
+   background-color: #c02826;
+}
+
+/* Egg 05 */
+.egg-up.egg-up05 {
+   background: url(../images/egg-up05.png) no-repeat top center;
+}
+.egg-down.egg-down05 {
+   background: url(../images/egg-down05.png) no-repeat bottom center;
+}
+.egg-poster.egg-poster05 {
+   background: url(../images/darcy-short.png) no-repeat top center;
+}
+.body-wrap .egg-content.bg-color05 {
+   background-color: #a6c336;
+}
+
+/* ------------------------------------------------------------ *\
+|* Media Queries
+\* ------------------------------------------------------------ */
+@media only screen and (max-width: 375px) {
+   .body-wrap {
+      margin: 10px auto;
+   }
+   .body-wrap .egg-top,
+   .egg-top .egg-half-full,
+   .egg-top .egg-half-full .egg-up,
+   .egg-top .egg-half-full .egg-down,
+   .egg-top .egg-crack {
+      max-width:310px;
+   }
+   .body-wrap .egg-top,
+   .egg-top .egg-half-full {
+      min-height: 413px;
+   }
+   .egg-top .egg-half-full .egg-up {
+      min-height: 230px;
+   }
+   .egg-top .egg-half-full .egg-down {
+      min-height: 210px;
+   }
+   .egg-top .egg-crack {
+      bottom: 181px;
+   }
+   .egg-top .egg-half-full .egg-poster {
+      max-width: 275px;
+   }
+   .body-wrap .egg-content {
+      padding: 10px 15px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 6px;
+   }
+}

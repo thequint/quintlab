@@ -1,0 +1,70 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Shreyas Iyer</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta name="format-detection" content="telephone=no" />
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- Google Fonts -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Exo:400,600,700" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+
+   <!-- Custom -->
+   <link href="assets/css/styles.css" rel="stylesheet">
+
+   <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+   </head>
+
+   <body>
+   <div class="body-wrap forth">
+      <div class="egg-top" onclick="playAudio()">
+         <div class="egg-half-full">
+            <div class="egg-up egg-up04"></div>
+            <div class="egg-down egg-down04"></div>
+            <div class="egg-poster egg-poster04"></div>
+         </div>
+         <div class="egg-crack"></div>
+      </div>
+      <div class="egg-content bg-color04">Bagged the IPL Emerging Player of the Year award in 2015. He scored <span>439 runs in 14 matches.</span></div>
+   </div>
+
+   <audio id="myAudio">
+      <source src="assets/audio/Egg-cracking-sound02.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+   </audio>
+
+   <!-- jQuery -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/custom.js"></script>
+   <script>
+      var btnAudio = document.getElementById("myAudio"); 
+      function playAudio() { 
+         btnAudio.play(); 
+      } 
+      function pauseAudio() { 
+         btnAudio.pause(); 
+      } 
+   </script>
+
+   <script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+
+   <script type="text/javascript">
+   function adjust_iframe_height(){
+      var actual_height = document.body.scrollHeight; 
+      console.log("height is",actual_height);
+      parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
+      //* allows this to post to any parent iframe regardless of domain
+   }
+   </script>
+
+   </body>
+   </html>
