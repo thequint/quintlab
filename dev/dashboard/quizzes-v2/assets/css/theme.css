@@ -2,7 +2,7 @@ body {
     
     font-size: 19px;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 170%;
     text-rendering: auto;
     color: #333;
     font-family: 'Merriweather', 'georgia', serif;
@@ -30,7 +30,9 @@ a:hover,
 a:active {
     outline: none;
 }
-
+p {
+    margin-bottom: 15px;
+}
 input:focus,
 button:focus {
     outline: none;
@@ -40,6 +42,7 @@ button:focus {
     max-width: 650px;
     margin: 0 auto;
 }
+
 .buzz-wrap img {
     width: 100%;
     display: block;
@@ -89,8 +92,7 @@ button:focus {
 }
 
 .buzz-wrap .question-box .description-text {
-	margin: 30px 0;
-	line-height: 170%;
+	margin: 20px 0 30px;
 }
 .buzz-wrap .question-box .question-options {
 
@@ -101,17 +103,58 @@ button:focus {
 	background-color: #f7f7f7;
     margin-bottom: 15px;
     cursor: pointer;
-    line-height: 150%;
+    
     border-radius: 5px;
     color: #656565;
 }
-.buzz-wrap .question-box .question-options .demo-list li.active {
+.buzz-wrap .question-box .question-options .demo-list li.right.active {
 	color: #fff;
 	background-color: #95c198;
 }
 
+.buzz-wrap .question-box .question-options .demo-list li.wrong.active {
+    color: #fff;
+    background-color: #e27676;
+}
 
+.buzz-wrap .question-box .question-options .answered li.right {
+    color: #95c198;
+}
 
+.card-body .question-text,
+.card-body .answered-text,
+.card-body .hyperlink-text {
+    margin-bottom: 10px;
+}
+
+.answered-text {
+    font-size: 16px;
+    line-height: 150%;
+    color: #777;
+    padding: 0 3%;
+    border-left:1px #ccc solid;
+}
+
+.answered-text a {
+    color: #0093C6  
+}
+.answered-text a:hover {
+    color: #222
+}
+.answered-text .answered-description {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.answered-text .hyperlink-link {
+    margin-bottom: 30px;
+}
+
+.answered-text .answered-caption {
+    color: #888;
+    font-size: 12px;
+    line-height: 100%;
+    padding: 5px 0;
+}
 
 
 

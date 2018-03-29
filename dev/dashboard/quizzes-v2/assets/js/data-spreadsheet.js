@@ -63,7 +63,7 @@ function display_data() {
 			}
 			// str = str + '<li><label for="input-' + (index + 1) + '" class="' + ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+ '"><input type="radio" name="ques' + index + '" value="' + ((data_array[index].options[j].isCorrect == true) ? 1: 0) + '"> ' + data_array[index].options[j].optionText + '</label><ul class="options-media">' + media + '</ul></li>'; //commented li checkbox
 
-			str = str + '<li>' + data_array[index].options[j].optionText + '<ul class="options-media">' + media + '</ul></li>';
+			str = str + '<li class="'+ ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+'">' + data_array[index].options[j].optionText + '<ul class="options-media">' + media + '</ul></li>';
 
 			// console.log((data_array[index].options[j].isCorrect == true) ? 1: 0);
 			// console.log((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong');
@@ -82,8 +82,25 @@ function display_data() {
 		{
 			media = media + '<div class="question-media--audio">' + data_array[index].questionAudioUrl + '</div>';
 		}
+
+
+		var ans_media = '';
+		if(data_array[index].answeredImageUrl)//image
+		{
+			ans_media = ans_media + '<div class="question-media--image"><img src = "' + data_array[index].answeredImageUrl + '"></div>';
+		}
+		if(data_array[index].answeredVideoUrl)// video
+		{
+			ans_media = ans_media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].answeredVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+		}	
+		if(data_array[index].answeredAudioUrl)//Audio
+		{
+			ans_media = ans_media + '<div class="question-media--audio">' + data_array[index].answeredAudioUrl + '</div>';
+		}
+
+
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question-headline"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answer-options" style="display:none">The New York Times and The Observer of London revealed how Cambridge Analytica, a firm with ties to Mr. Trump’s campaign, harvested private information from the Facebook profiles of more than 50 million users without their permission.</div></div></div>');
+		$('.questions').append('<div class="question-box"><div class="question-headline"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="description-text">' + data_array[index].descriptionText + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].answeredText + '</div><div class="hyperlink-link">Read about: <a href='+data_array[index].hyperlinkLink+' target="_blank">' + data_array[index].hyperlinkText + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].answeredCaption + '</div></div></div></div>');
 		str = '';
 	}
 	$('.highlight').html(data_array.length-1);
@@ -100,7 +117,7 @@ function listClick(){
 			$(this).closest("ul").addClass("answered");
 			$(this).addClass("active");
 		}
-		$(this).closest(".question-options").find(".answer-options").fadeIn();
+		$(this).closest(".question-options").find(".answered-text").fadeIn();
    	});
 }
 
