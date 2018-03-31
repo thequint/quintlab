@@ -232,31 +232,35 @@ article, aside, footer, header, nav, section, figure, figcaption {
 |* Media Queries
 \* ------------------------------------------------------------ */
 @media only screen and (max-width: 375px) {
+
    .body-wrap {
-      margin: 10px auto;
+       padding: 30px 0 20px;
+       margin: 0 auto;
+       max-width: 800px;
+       min-height: 380px;
    }
    .body-wrap .egg-top,
    .egg-top .egg-half-full,
    .egg-top .egg-half-full .egg-up,
    .egg-top .egg-half-full .egg-down,
    .egg-top .egg-crack {
-      max-width:310px;
+      max-width:270px;
    }
    .body-wrap .egg-top,
    .egg-top .egg-half-full {
-      min-height: 420px;
+      min-height: 366px;
    }
    .egg-top .egg-half-full .egg-up {
-      min-height: 272px;
+      min-height: 240px;
    }
    .egg-top .egg-half-full .egg-down {
-      min-height: 210px;
+      min-height: 142px;
    }
    .egg-top .egg-crack {
-      bottom: 138px;
+      bottom: 120px;
    }
    .egg-top .egg-half-full .egg-poster {
-      max-width: 275px;
+      max-width: 230px;
    }
    .body-wrap .egg-content {
       padding: 10px 15px;
