@@ -2,7 +2,7 @@ body {
     
     font-size: 19px;
     font-weight: 400;
-    line-height: 170%;
+    line-height: 150%;
     text-rendering: auto;
     color: #333;
     font-family: 'Merriweather', 'georgia', serif;
@@ -74,6 +74,33 @@ button:focus {
     font-weight: 900;
     font-family: 'Merriweather', 'georgia', serif;
 }
+.buzz-wrap .question-box .question-headline span {
+    float: left;
+    display: inline-block;
+}
+.buzz-wrap .question-box .question-headline span.bullet {
+    width: 30px;
+    height: 30px;
+    /*color: #fff;*/
+    font-size: 30px;
+    font-weight: 900;
+    /*text-align: center;*/
+    /*line-height: 40px;*/
+    /*background-color: #ffbf00;*/
+}
+.buzz-wrap .question-box .question-headline span.headline-text {
+    width: calc(100% - 30px);
+    width: -webkit-calc(100% - 30px);
+    /*background-color: #ccc;*/
+}
+.buzz-wrap .question-box .question-headline:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 
 .buzz-wrap .question-box .question-media {
 
@@ -84,6 +111,21 @@ button:focus {
 .buzz-wrap .question-box .question-media--image {
 
 }
+
+.buzz-wrap .question-box .question-media--video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.buzz-wrap .question-box .question-media--video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .buzz-wrap .question-box .question-media--caption {
 	color: #888;
 	font-size: 12px;
@@ -103,22 +145,52 @@ button:focus {
 	background-color: #f7f7f7;
     margin-bottom: 15px;
     cursor: pointer;
-    
     border-radius: 5px;
     color: #656565;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 .buzz-wrap .question-box .question-options .demo-list li.right.active {
-	color: #fff;
-	background-color: #95c198;
+    position: relative;
 }
-
+.buzz-wrap .question-box .question-options .demo-list li.right.active:after {
+    position: absolute;
+    right: 15px;
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    top: 15px;
+    font-size: 24px;
+}
+.buzz-wrap .question-box .question-options .demo-list li.wrong.active {
+    position: relative;
+}
+.buzz-wrap .question-box .question-options .demo-list li.wrong.active:after {
+    position: absolute;
+    right: 15px;
+    content: "\f00d";
+    font-family: 'FontAwesome';
+    top: 15px;
+    font-size: 24px;
+}
+.buzz-wrap .question-box .question-options .demo-list li:hover {
+    color: #fff;
+    background-color: #36154f;
+}
+.buzz-wrap .question-box .question-options .demo-list.answered li:hover {
+    color: #656565;
+    background-color: #f7f7f7;
+}
+.buzz-wrap .question-box .question-options .demo-list.answered li {
+    cursor: default;
+}
+.buzz-wrap .question-box .question-options .demo-list li.right.active {
+    color: #fff;
+    background-color: #95c198;
+}
 .buzz-wrap .question-box .question-options .demo-list li.wrong.active {
     color: #fff;
     background-color: #e27676;
-}
-
-.buzz-wrap .question-box .question-options .answered li.right {
-    color: #95c198;
 }
 
 .card-body .question-text,

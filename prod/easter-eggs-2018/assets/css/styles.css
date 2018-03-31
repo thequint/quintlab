@@ -244,16 +244,16 @@ article, aside, footer, header, nav, section, figure, figcaption {
    }
    .body-wrap .egg-top,
    .egg-top .egg-half-full {
-      min-height: 413px;
+      min-height: 420px;
    }
    .egg-top .egg-half-full .egg-up {
-      min-height: 230px;
+      min-height: 272px;
    }
    .egg-top .egg-half-full .egg-down {
       min-height: 210px;
    }
    .egg-top .egg-crack {
-      bottom: 181px;
+      bottom: 138px;
    }
    .egg-top .egg-half-full .egg-poster {
       max-width: 275px;
