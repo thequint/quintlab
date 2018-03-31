@@ -90,14 +90,14 @@ body{
 	background-color: white;
 }
 
-/*.card-body .btn.btn-primary {
+.card-body .btn.btn-primary {
 	position: absolute;
 	bottom: 15px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 	width: 100px;
-}*/
+}
 
 .btn-primary {
 	background-color: #36154f!important;
