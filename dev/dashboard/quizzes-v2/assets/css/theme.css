@@ -115,7 +115,6 @@ button:focus {
 .buzz-wrap .question-box .question-media--video {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
     height: 0;
 }
 .buzz-wrap .question-box .question-media--video iframe {
