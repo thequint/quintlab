@@ -1,9 +1,5 @@
-// var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1qqj7U6s20hDVYmreaL3Id1-VAxLW4_kFFymm8p1mJTs/pubhtml'; // Old quiz sheet
-
-
-// var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1Tm-evipM7HZuMc0hiX6mpZ_QilShOugEsVZp5kHkYVg/pubhtml'; // New form quiz sheet
+// New form quiz sheet
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/16ryxF_1uxrtDwc6GWqUaJCs_CjE_cJ8Ab8ZjrkIafG4/pubhtml'; // New form quiz sheet
-
 
 function init() {
 	Tabletop.init({
@@ -137,10 +133,6 @@ function listClick(){
    	});
 }
 
-
-
-
-
 function initNew(){
 	 var total=0;
     $('input').on('ifChecked', function(event){
@@ -203,18 +195,9 @@ function initNew(){
    	});
 }
 
-
-
 function adjust_iframe_height(){
     var actual_height = document.body.scrollHeight; 
     // console.log("height is",actual_height);
     parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
     //* allows this to post to any parent iframe regardless of domain
 }
-
-
-
-
-
-
-

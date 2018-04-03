@@ -1,0 +1,57 @@
+
+.card {
+	margin-bottom: 20px;
+}
+.tag-line {
+    margin-bottom: 5px;
+}
+.optionInputGroup {
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+}
+.optionInputLi {
+    margin: 0px 0 0 20px;
+}
+.optionInputLi input {
+    width: 90%;
+}
+.optionRadioLi {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.card-body textarea,
+.card-body input {
+	margin-bottom: 10px;
+}
+
+.mediaPlaceholderList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.mediaPlaceholderList li {
+    width: 33.333%;
+    float: left;
+    padding: 0px 10px 20px 0px;
+}
+
+.white-box{
+	background-color: #fff;
+    margin-bottom: 1.7em;
+    padding: 1.5em;
+    border: 1px #d8d8d8 solid;
+}
+.white-box:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.result-content{
+	float: left;
+    width: 50%;
+}
