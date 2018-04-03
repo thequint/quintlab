@@ -99,6 +99,21 @@ function display_data() {
 		$('.questions').append('<div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].questionText + '</h1></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].answeredText + '</div><div class="hyperlink-link">Read More: <a href='+data_array[index].hyperlinkLink+' target="_blank">' + data_array[index].hyperlinkText + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].answeredCaption + '</div></div></div></div>');
 		str = '';
 	}
+
+	$(".question-media").each(function(){
+		if($(this).html()=="")
+		{
+			$(this).remove();
+		}
+	});
+
+	$(".question-media--caption").each(function(){
+		if($(this).html()=="")
+		{
+			$(this).remove();
+		}
+	});
+
 	$('.highlight').html(data_array.length-1);
 	$('.tag-line-1').html(data_array[data_array.length-1].tagLine1);
 	$('.tag-line-2').html(data_array[data_array.length-1].tagLine2);

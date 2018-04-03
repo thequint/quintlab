@@ -1,5 +1,4 @@
 body {
-    
     font-size: 19px;
     font-weight: 400;
     text-rendering: auto;
@@ -94,9 +93,9 @@ img {
     border-bottom: 1px #d8d8d8 solid;
 }
 .quiz-template-02 .question-box:last-child {
-	padding-bottom: 20px;
+	padding-bottom: 30px;
     margin-bottom: 0;
-    border-bottom: 0;
+    /*border-bottom: 0;*/
 }
 .quiz-template-02 .question-box:after {
     content: " ";
@@ -178,7 +177,7 @@ img {
 }
 .quiz-template-02 .question-box .question-options .demo-list li {
 	padding: 15px;
-	background-color: #f7f7f7;
+	background-color: #ebebeb;
     margin-bottom: 15px;
     cursor: pointer;
     border-radius: 5px;
@@ -215,7 +214,7 @@ img {
 }
 .quiz-template-02 .question-box .question-options .demo-list.answered li:hover {
     color: #656565;
-    background-color: #f7f7f7;
+    background-color: #ebebeb;
 }
 .quiz-template-02 .question-box .question-options .demo-list.answered li {
     cursor: default;
