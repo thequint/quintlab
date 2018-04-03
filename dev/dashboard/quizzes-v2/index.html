@@ -21,8 +21,8 @@
     <link href="assets/css/theme.css" rel="stylesheet">
     <link href="assets/css/index.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'> -->
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,8 +33,21 @@
 
 <body onload="adjust_iframe_height()">
 <!-- Quiz Start Here -->
-<div class="buzz-wrap">
-    <div class="questions">
+<div class="quiz-template-02">
+
+    <header class="quiz-header">
+        <img src="assets/images/quiz-header.jpg">
+        <h1 class="quiz-headline"><span>NEWS THIS WEEK</span></h1>
+    </header>
+    
+    <div class="questions"> </div>
+
+    <div class="score-card" style="display:none">
+        <h2 class="score-card--headline"><span class="score_length">3</span> out of <span class="total_length">11</span></h2>
+        <p>Nice try, but you definitely have room for improvement.</p>
+        <p>Be prepared for next week’s quiz by signing up for our Morning and Evening Briefings.</p>
+        <p>For other weeks’ quizzes, click here. The Learning Network at The Times also offers a weekly news quiz for students, which publishes every Tuesday.</p>
+        <p>Do you have feedback or questions about the quiz? Email us.</p>
     </div>
 
     <!-- Button -->

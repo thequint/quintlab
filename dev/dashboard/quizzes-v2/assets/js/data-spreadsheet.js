@@ -35,7 +35,7 @@ function showInfo(data) {
 	//data_array = JSON.parse(data[id].array); //when pulling from the sheet
 
 	data_array = JSON.parse(data[parseInt(getParameterByName('id'))-2].Comments); //when feting the array directly from the url
-	console.log(data_array);
+	//console.log(data_array);
 
 	display_data();
 	// console.log(data_array[0].questionText);
@@ -43,7 +43,7 @@ function showInfo(data) {
 
 function display_data() {
 
-	console.log(data_array.length);
+	//console.log(data_array.length);
 	var str = '';
 	for (var index = 0; index < data_array.length - 1; index++) {
 
@@ -100,7 +100,7 @@ function display_data() {
 
 
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question-headline"><span class="bullet">' + (index + 1) + '.</span> <span class="headline-text">' + data_array[index].questionText + '</span></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="description-text">' + data_array[index].descriptionText + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].answeredText + '</div><div class="hyperlink-link">Read about: <a href='+data_array[index].hyperlinkLink+' target="_blank">' + data_array[index].hyperlinkText + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].answeredCaption + '</div></div></div></div>');
+		$('.questions').append('<div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].questionText + '</h1></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].answeredText + '</div><div class="hyperlink-link">Read More: <a href='+data_array[index].hyperlinkLink+' target="_blank">' + data_array[index].hyperlinkText + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].answeredCaption + '</div></div></div></div>');
 		str = '';
 	}
 	$('.highlight').html(data_array.length-1);
@@ -116,10 +116,30 @@ function listClick(){
 		if(!$(this).closest("ul").hasClass("answered")){
 			$(this).closest("ul").addClass("answered");
 			$(this).addClass("active");
+
+			console.log($(".answer-type").length+ "|" +$(".answered").length);
+
+			if($(".answer-type").length == $(".answered").length) {
+				$(".score-card").fadeIn();
+				//console.log($("li.right.active").length);
+
+				var total_length = $(".answer-type").length;
+				var score_length = $("li.right.active").length;
+
+				console.log(total_length);
+				console.log(score_length);
+				$(".total_length").html(total_length);
+				$(".score_length").html(score_length);
+
+			}
 		}
 		$(this).closest(".question-options").find(".answered-text").fadeIn();
    	});
 }
+
+
+
+
 
 function initNew(){
 	 var total=0;
