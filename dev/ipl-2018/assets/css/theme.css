@@ -322,7 +322,7 @@ table {
 	padding: 0px 5px;
 }
 .best-box {
-	background: #2b2a2a;
+	background: #0b2444;
 	margin-top: 10px;
 	padding: 10px;
 }
@@ -628,6 +628,18 @@ table {
 	background-color: #ef4224;
 }
 
+.topPerformer-bat-wrap.topPerformer-batting .topPerformer-title {
+	color: #fff;
+}
+
+
+.topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-head .tP-tbl-tr .tP-tbl-td.td-name .plyr-name, .topPerformer-bat-wrap .topPerformer-body .tP-tbl-body .tP-tbl-body .tP-tbl-tr .tP-tbl-td.td-name .plyr-name {
+	color: #ef4224;
+}
+
+.topPerformer-bat-wrap {
+   background-color: transparent;
+}
 
 
 
