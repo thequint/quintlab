@@ -623,6 +623,11 @@ table {
   text-transform: uppercase;
 }
 
+/*Custom color CSS*/
+.topPerformer-bat-wrap .topPerformer-title {
+	background-color: #ef4224;
+}
+
 
 
 
