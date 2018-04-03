@@ -12,7 +12,8 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 }
 .container {
-	background-color: #9fe5fd;
+/*	background-color: #9fe5fd;*/
+	background-color: #FFFFE9;
 }
 p {
 	line-height: 160%;
@@ -138,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 #quiz-controls {
 	padding: 0px 0px 0px 0px;
 	text-align: center;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 25px;
 }
 #quiz-controls p {
@@ -176,11 +177,19 @@ h1, h2, h3, h4, h5, h6 {
 	color: #f3cc2f;
 	text-transform: uppercase;
 }
+
+#quiz-buttons a#quiz-restart-btn {
+	line-height: 88%;
+	width: 158px;
+	text-align: center;
+	padding: 16px 0px 20px 0px;
+}
+
 #quiz-results {
 	font-size: 25px;
 	line-height: 125%;
-	font-weight: 500;
-	min-height: 100px;
+	font-weight: 600;
+	
 	padding: 0px 20px;
 	margin-bottom: 10px;
 }
@@ -192,8 +201,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 5px;
 }
 .social-share {
-	display: block;
 	margin-top: 15px;
+	display: none !important;
 }
 .social-share a {
 	background: #e94b63;
