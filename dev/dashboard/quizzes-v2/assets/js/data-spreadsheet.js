@@ -137,6 +137,16 @@ function listClick(){
 				var total_length = $(".answer-type").length;
 				var score_length = $("li.right.active").length;
 
+				var percent = score_length*100/total_length
+
+				if(percent<33.33) {
+					$(".score-message").html(data_array[data_array.length-1].tagLine1);
+				}else if(percent<65) {
+					$(".score-message").html(data_array[data_array.length-1].tagLine2);
+				}else {
+					$(".score-message").html(data_array[data_array.length-1].tagLine3);
+				}
+
 				console.log(total_length);
 				console.log(score_length);
 				$(".total_length").html(total_length);
