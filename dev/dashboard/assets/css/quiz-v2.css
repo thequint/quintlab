@@ -63,3 +63,31 @@ button.close {
 	float: left;
     width: 50%;
 }
+
+.generate-quiz-button,
+.refresh-icon {
+    cursor: pointer;
+}
+
+.iframe-link {
+    margin-bottom: 5px;
+    overflow: hidden;
+    height: 76px;
+    padding: 12px 16px;
+}
+.copy-val {
+    /*float: right;*/
+    border: none;
+    border-radius: .25rem;
+    background-color: #36154f;
+    padding: 3px 13px 6px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.copy-val:hover {
+    background-color: #F7A500;
+}
