@@ -41,6 +41,9 @@ function display_data() {
 
 	//console.log(data_array.length);
 	var str = '';
+
+	$('.quiz-headline').html('<span>' + data_array[data_array.length-1].quizHeadline + '</span>');
+
 	for (var index = 0; index < data_array.length - 1; index++) {
 
 		for(var j = 0; j < data_array[index].options.length; j++){
@@ -111,6 +114,12 @@ function display_data() {
 		if($(this).html()=="")
 		{
 			$(this).remove();
+		}
+	});
+	$(".hyperlink-link a").each(function(){
+		if($(this).html()=="")
+		{
+			$(this).closest(".hyperlink-link").remove();
 		}
 	});
 

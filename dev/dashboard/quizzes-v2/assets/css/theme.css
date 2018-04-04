@@ -85,6 +85,7 @@ img {
     font-size: 24px;
     letter-spacing: 2px;
     line-height: 24px;
+    text-transform: uppercase;
 }
 .quiz-template-02 .quiz-headline span {
     padding: 10px 15px;
