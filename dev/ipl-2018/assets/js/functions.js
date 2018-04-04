@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 // Others
 $(document).ready(function() {
-  var collectionSlug = 'other-sports-news'; //temporary slug. Needs to be changed.
+  var collectionSlug = 'ipl-videos'; // 'other-sports-news' temporary slug. Needs to be changed.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
