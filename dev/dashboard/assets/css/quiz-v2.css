@@ -2,6 +2,14 @@
 .card {
 	margin-bottom: 20px;
 }
+button.close {
+    padding: .375rem .75rem;
+}
+.options-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .tag-line {
     margin-bottom: 5px;
 }
