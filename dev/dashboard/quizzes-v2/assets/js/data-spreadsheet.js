@@ -140,7 +140,7 @@ function listClick(){
 			console.log($(".answer-type").length+ "|" +$(".answered").length);
 
 			if($(".answer-type").length == $(".answered").length) {
-				$(".score-card").fadeIn();
+				$(".score-card").slideDown();
 				//console.log($("li.right.active").length);
 
 				var total_length = $(".answer-type").length;
@@ -163,7 +163,7 @@ function listClick(){
 
 			}
 		}
-		$(this).closest(".question-options").find(".answered-text").fadeIn();
+		$(this).closest(".question-options").find(".answered-text").slideDown();
    	});
 }
 
