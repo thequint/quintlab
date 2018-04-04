@@ -232,7 +232,7 @@ img {
 }
 .quiz-template-02 .question-box .question-options .demo-list li:hover {
     color: #fff;
-    background-color: #f7931e;
+    background-color: #F7A500;
 }
 .quiz-template-02 .question-box .question-options .demo-list.answered li:hover {
     color: #656565;
