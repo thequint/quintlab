@@ -3,25 +3,25 @@ $(document).ready(function () {
 	$('#getValue').click(function () {
 		if ($('#showResult').val() <= 3) 
 		{
-			$('#quiz-results div.result-text').text('पड़ोस तक मार्च कर आओ, फिर ट्राय कर लेना').fadeIn();
+			$('#quiz-results div.result-text').text('"अगर कोई एक गाल पर थप्पड़ मारे तो दूसरा आगे कर देना" क्योंकि तुम्हें तो पड़ना चाहिए. पक्का!').fadeIn();
 		}
 		
 		else if ($('#showResult').val() > 3 && $('#showResult').val() <= 7) 
 			
 		{
-			$('#quiz-results div.result-text').text('अच्छा है, थोड़ा और याद करो').fadeIn();
+			$('#quiz-results div.result-text').text('"कायरता से अच्छा है लड़ते-लड़ते मर जाना" समझे? तो  ये टेस्ट बार-बार लेते रहो, सीखते रहो!').fadeIn();
 		}
 		
 		else if ($('#showResult').val() > 7 && $('#showResult').val() < 10) 
 			
 		{
-			$('#quiz-results div.result-text').text('जीत से बस एक कदम दूर..').fadeIn();
+			$('#quiz-results div.result-text').text('"खुद में वो बदलाव लाओ जो दुनिया में देखना चाहते हो" गांधीजी के बारे में थोड़ा और पढ़ लो').fadeIn();
 		}
 		
 		
 		else 
 		{
-			$('#quiz-results div.result-text').text("वाह-वाह क्या बात है! जय हो!!").fadeIn();
+			$('#quiz-results div.result-text').text('"ऐसे सीखें जैसे आपको हमेशा जीना हो" जय हो.').fadeIn();
 		}
 
 	});

@@ -1,0 +1,117 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	font-size: 26px;
+	font-weight: normal;
+	color: #4d4d4d;
+	overflow-x: hidden;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #f4f4f4;
+	font-family: 'bebas_neueregular';
+	
+}
+
+p {
+	line-height: 160%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #4d4d4d;
+	font-weight: normal;
+	font-family: 'bebas_neueregular';
+	
+}
+.container {
+	position: relative;
+	max-width: 800px;
+	padding: 0px 0px;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 0px 100px 50px rgba(0,0,0,0.5);
+	overflow-y: hidden;
+	
+}
+
+.headline{
+	
+}
+.headline h1 {
+	margin: 0 auto;
+	text-align: center;
+	background: #ea2048;
+	color: #fff;
+	padding: 12px 0px;
+	font-size: 34px;
+	line-height: 100%;
+	max-width: 530px;
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+	
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #e5e5e5; 
+}
+tr:nth-of-type(even) { 
+  background: #f0f0f0; 
+}
+th { 
+  background: #333; 
+  color: white; 
+
+}
+td, th { 
+  padding: 15px 12px; 
+  border: 0px solid #ccc; 
+  text-align: left; 
+  text-align: center;
+ line-height: 100%;
+}
+
+table tr th:nth-child(1) {
+    background: #4d4d4d;
+}
+
+table tr th:nth-child(2) {
+    background: #1b1862;
+}
+
+table tr th:nth-child(3) {
+    background: #e8a12b;
+}
+
+table tr th:nth-child(4) {
+    background: #b4b1b5;
+}
+
+table tr th:nth-child(5) {
+    background: #9e2c14;
+}
+
+table tr th:nth-child(6) {
+    background: #4d4d4d;
+}
+

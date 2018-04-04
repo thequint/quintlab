@@ -3,25 +3,25 @@ $(document).ready(function () {
 	$('#getValue').click(function () {
 		if ($('#showResult').val() <= 3) 
 		{
-			$('#quiz-results div.result-text').text('Would you like to for a quick walk, and retry the quiz?').fadeIn();
+			$('#quiz-results div.result-text').text('"If someone slaps you on one side of your face, turn the other one to him" Because you qualify, pakka!').fadeIn();
 		}
 		
 		else if ($('#showResult').val() > 3 && $('#showResult').val() <= 7) 
 			
 		{
-			$('#quiz-results div.result-text').text('You had a good run. Jog your mind a little more. and take the quiz again.').fadeIn();
+			$('#quiz-results div.result-text').text('"An ounce of practice is worth a thousand words" Samjhe? Now keep practising dil laga ke to get better.').fadeIn();
 		}
 		
 		else if ($('#showResult').val() > 7 && $('#showResult').val() < 10) 
 			
 		{
-			$('#quiz-results div.result-text').text('Oh! You almost reached the finish line. Success is sweet, and salty!').fadeIn();
+			$('#quiz-results div.result-text').text('"Be the change you wish to see in the world". Please study about Bapu ji thoda aur.').fadeIn();
 		}
 		
 		
 		else 
 		{
-			$('#quiz-results div.result-text').text("10/10! You've sprinted through the quiz! Jai Ho.").fadeIn();
+			$('#quiz-results div.result-text').text('Arey krantikaari! "Learn as if you were to live forever" Jai ho. ').fadeIn();
 		}
 
 	});
