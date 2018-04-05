@@ -104,7 +104,7 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..."></textarea>
+                                <textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..." maxlength="175"></textarea>
                                 <!-- <input class="form-control question-text" placeholder="Enter Question"> -->
                                 <!-- <textarea type="text" rows="3" class="form-control description-text" placeholder="Enter description"></textarea> -->
                                 <p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
@@ -198,9 +198,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..."></textarea>
-                                <input class="form-control hyperlink-text" placeholder="Hyperlink text...">
-                                <input class="form-control hyperlink-link" placeholder="Hyperlink link...">
+                                <textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="225"></textarea>
+                                <!-- <input class="form-control hyperlink-text" placeholder="Hyperlink text..."> -->
+                                <!-- <input class="form-control hyperlink-link" placeholder="Hyperlink link..."> -->
                                 <p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
                                     + Add media
                                 </p>
@@ -285,49 +285,58 @@ $("#draggingQuestions").disableSelection();
         for (var i = 0; i < quiz_data.length; i++) {
             // console.log(i);
             for (var j = 0; j < quiz_data[i].options.length; j++) {
-                str = str + '<li' + ((quiz_data[i].options[j].isCorrect == true) ? ' class="bg-success"' : '') + '><label class="lbl' + ((quiz_data[i].options[j].isCorrect == true) ? ' text-white"' : '') + '">' + (quiz_data[i].options[j].optionImageUrl == null ? (quiz_data[i].options[j].optionVideoUrl == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>') : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].optionVideoUrl + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>') : '<img src="' + quiz_data[i].options[j].optionImageUrl + '">') + '' + quiz_data[i].options[j].optionText.toString() + '</label></li>';
+                str = str + '<li' + ((quiz_data[i].options[j].isC == true) ? ' class="bg-success"' : '') + '><label class="lbl' + ((quiz_data[i].options[j].isC == true) ? ' text-white"' : '') + '">' + (quiz_data[i].options[j].oIU == null ? (quiz_data[i].options[j].oVU == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>') : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].oVU + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>') : '<img src="' + quiz_data[i].options[j].oIU + '">') + '' + quiz_data[i].options[j].oT.toString() + '</label></li>';
             }
 
             var media = '';
-            if (quiz_data[i]['questionImageUrl']) //image
+            if (quiz_data[i]['qIU']) //image
             {
-                media = media + '<div class="question-media--image"><img src = "' + quiz_data[i]['questionImageUrl'] + '"></div>';
+                media = media + '<div class="question-media--image"><img src = "' + quiz_data[i]['qIU'] + '"></div>';
             }
-            if (quiz_data[i]['questionVideoUrl']) // video
+            if (quiz_data[i]['qVU']) // video
             {
-                media = media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + quiz_data[i]['questionVideoUrl'] + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+                media = media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + quiz_data[i]['qVU'] + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
             }
-            if (quiz_data[i]['questionAudioUrl']) //Audio
+            if (quiz_data[i]['qAU']) //Audio
             {
-                media = media + '<div class="question-media--audio">' + quiz_data[i]['questionAudioUrl'] + '</div>';
+                media = media + '<div class="question-media--audio">' + quiz_data[i]['qAU'] + '</div>';
             }
 
             var ans_media = '';
-            if (quiz_data[i]['answeredImageUrl']) //image
+            if (quiz_data[i]['aIU']) //image
             {
-                ans_media = ans_media + '<div class="question-media--image"><img src = "' + quiz_data[i]['answeredImageUrl'] + '"></div>';
+                ans_media = ans_media + '<div class="question-media--image"><img src = "' + quiz_data[i]['aIU'] + '"></div>';
             }
-            if (quiz_data[i]['answeredVideoUrl']) // video
+            if (quiz_data[i]['aVU']) // video
             {
-                ans_media = ans_media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + quiz_data[i]['answeredVideoUrl'] + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+                ans_media = ans_media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + quiz_data[i]['aVU'] + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
             }
-            if (quiz_data[i]['answeredAudioUrl']) //Audio
+            if (quiz_data[i]['aAU']) //Audio
             {
-                ans_media = ans_media + '<div class="question-media--audio">' + quiz_data[i]['answeredAudioUrl'] + '</div>';
+                ans_media = ans_media + '<div class="question-media--audio">' + quiz_data[i]['aAU'] + '</div>';
             }
 
-            $('.preview').append('<div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['questionText'].toString() + '</h1></div><div class="question-media"></div>' + media + '<div class="question-media--caption">' + quiz_data[i]['mediaCaption'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['answeredText'] + '</div><div class="hyperlink-link">Read More: <a href=' + quiz_data[i]['hyperlinkText'] + ' target="_blank">' + quiz_data[i]['hyperlinkLink'] + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + quiz_data[i]['answeredCaption'] + '</div>  </div></div></div></div>');
+            $('.preview').append('<div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div><div class="question-media"></div>' + media + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + quiz_data[i]['aC'] + '</div>  </div></div></div></div>');
             str = '';
 
-            // $('.preview').append('<div class="quiz-template-02"><div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['questionText'].toString() + '</h1></div><div class="question-media">' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ? '' : quiz_data[i]['mediaCaption'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl '] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '"></div>') + '<div class="question-media--caption">' + quiz_data[i]['mediaCaption'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['answeredText'] + '</div><div class="hyperlink-text">' + quiz_data[i]['hyperlinkText'] + '</div><div class="hyperlink-link">' + quiz_data[i]['hyperlinkLink'] + '</div> </div></div></div></div></div>');
+            // $('.preview').append('<div class="quiz-template-02"><div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div><div class="question-media">' + (quiz_data[i]['qIU'] == null ? (quiz_data[i]['qVU'] == null ? (quiz_data[i]['qAU'] == null ? '' : quiz_data[i]['qAU'] ? '' : quiz_data[i]['mC'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['qVU '] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['qIU'] + '"></div>') + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="hyperlink-text">' + quiz_data[i]['hyperlinkText'] + '</div><div class="hyperlink-link">' + quiz_data[i]['hyperlinkLink'] + '</div> </div></div></div></div></div>');
 
-            // $('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].questionText + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div></div>');
+            // $('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].qT + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mC + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div></div>');
 
-            $(".hyperlink-link a").each(function() {
-                if ($(this).html() == "") {
-                    $(this).closest(".hyperlink-link").remove();
-                }
-            });
+            
+            $(".question-media, .answered-media").each(function(){
+				if($(this).html()=="")
+				{
+					$(this).remove();
+				}
+			});
+
+			$(".question-media--caption, .answered-caption").each(function(){
+				if($(this).html()=="" || $(this).html()=="undefined")
+				{
+					$(this).remove();
+				}
+			});
         }
         // if($('.tag-line-1').val() != ""){
         // 	$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-1.gif"></span></div>');
@@ -424,7 +433,7 @@ $("#draggingQuestions").disableSelection();
         x;
 
     function addQuestionUi() {
-        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..."></textarea></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control mediaCaptionInput" placeholder="Media Caption..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div>  <div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div></div><div class="text-right"><a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a></div></div><div class="form-group"><textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..."></textarea><input class="form-control hyperlink-text" placeholder="Hyperlink text..."><input class="form-control hyperlink-link" placeholder="Hyperlink link..."><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control answeredImageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control answeredVideoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control answeredAudioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control answeredCaptionInput" placeholder="Media Caption..."></div></div></div></form></div></div>');
+        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..."maxlength="175"></textarea></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control mediaCaptionInput" placeholder="Media Caption..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div>  <div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div></div><div class="text-right"><a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a></div></div><div class="form-group"><textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="225"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control answeredImageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control answeredVideoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control answeredAudioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control answeredCaptionInput" placeholder="Media Caption..."></div></div></div></form></div></div>');
         resetEvents();
         addAnotherOptionClick();
         return;
@@ -458,23 +467,49 @@ $("#draggingQuestions").disableSelection();
 
             $(".quiz-template-02").show();
 
-            quiz_data[i]['questionText'] = $(this).find(".question-text").val().toString();
-            // quiz_data[i]['descriptionText'] = $(this).find(".description-text").val();
+            // == Shorterners Name == // 
+            // quizHeadline		= qH
+			// tagLine1			= tL1
+			// tagLine2			= tL2
+			// tagLine3 		= tL3
 
-            quiz_data[i]['questionImageUrl'] = $(this).find(".imageInput").val();
-            quiz_data[i]['questionVideoUrl'] = $(this).find(".videoInput").val();
-            quiz_data[i]['questionAudioUrl'] = $(this).find(".audioInput").val();
-            quiz_data[i]['mediaCaption'] = $(this).find(".mediaCaptionInput").val();
+			// questionText     = qT
+			// questionImageUrl	= qIU
+			// questionVideoUrl = qVU
+			// questionAudioUrl = qAU
+			// mediaCaption     = mC
 
-            quiz_data[i]['answeredText'] = $(this).find(".answered-text").val();
+			// answeredText     = aT
+			// answeredImageUrl	= aIU
+			// answeredVideoUrl = aVU
+			// answeredAudioUrl = aAU
+			// answeredCaption  = aC
 
-            quiz_data[i]['answeredImageUrl'] = $(this).find(".answeredImageInput").val();
-            quiz_data[i]['answeredVideoUrl'] = $(this).find(".answeredVideoInput").val();
-            quiz_data[i]['answeredAudioUrl'] = $(this).find(".answeredAudioInput").val();
-            quiz_data[i]['answeredCaption'] = $(this).find(".answeredCaptionInput").val();
+			// optionText       = oT 
+			// optionImageUrl	= oIU
+			// optionVideoUrl	= oVU
+			// isCorrect 		= isC
 
-            quiz_data[i]['hyperlinkText'] = $(this).find(".hyperlink-text").val();
-            quiz_data[i]['hyperlinkLink'] = $(this).find(".hyperlink-link").val();
+            quiz_data[i]['qT'] = $(this).find(".question-text").val().toString();
+
+            if($(this).find(".imageInput").val()!="") 
+			quiz_data[i]['qIU'] = $(this).find(".imageInput").val();
+            if($(this).find(".videoInput").val()!="")
+            quiz_data[i]['qVU'] = $(this).find(".videoInput").val();
+			if($(this).find(".audioInput").val()!="")
+            quiz_data[i]['qAU'] = $(this).find(".audioInput").val();
+            if($(this).find(".mediaCaptionInput").val()!="")
+            quiz_data[i]['mC'] = $(this).find(".mediaCaptionInput").val();
+
+            quiz_data[i]['aT'] = $(this).find(".answered-text").val();
+
+            quiz_data[i]['aIU'] = $(this).find(".answeredImageInput").val();
+            quiz_data[i]['aVU'] = $(this).find(".answeredVideoInput").val();
+            quiz_data[i]['aAU'] = $(this).find(".answeredAudioInput").val();
+            quiz_data[i]['aC'] = $(this).find(".answeredCaptionInput").val();
+
+            //quiz_data[i]['hyperlinkText'] = $(this).find(".hyperlink-text").val();
+            //quiz_data[i]['hyperlinkLink'] = $(this).find(".hyperlink-link").val();
 
             // console.log(quiz_data);
 
@@ -489,19 +524,19 @@ $("#draggingQuestions").disableSelection();
                 }
                 option_data.push({});
                 // option_data[j].push(new Array());
-                option_data[j]['optionText'] = $(this).find(".optionInput").val().toString();
-                option_data[j]['optionImageUrl'] = $(this).find(".imageInput").val();
-                option_data[j]['optionVideoUrl'] = $(this).find(".videoInput").val();
+                option_data[j]['oT'] = $(this).find(".optionInput").val().toString();
+                option_data[j]['oIU'] = $(this).find(".imageInput").val();
+                option_data[j]['oVU'] = $(this).find(".videoInput").val();
 
                 /*var abc = $(this).find(".audioInput").val().substring(($(this).find(".audioInput").val().indexOf('src="') + 5), ($(this).find(".audioInput").val().indexOf('" title')));*/
                 // console.log( $(this).find(".audioInput").val());
                 //option_data[j]['optionAudioUrl'] = abc;
                 if ($(this).find("input:radio[name='optionsRadio']").is(":checked")) {
                     // console.log("true")
-                    option_data[j]['isCorrect'] = true;
+                    option_data[j]['isC'] = true;
                     correctInputSelectedFlag = 0;
                 } else {
-                    option_data[j]['isCorrect'] = false;
+                    option_data[j]['isC'] = false;
                 }
                 //option_data[j]['isCorrect'] = $(this).find(".optionsRadioInput").val() ? true : false;
                 // console.log($(this).find(".optionsRadioInput").val());
@@ -582,11 +617,11 @@ $("#draggingQuestions").disableSelection();
 
         quiz_data.push({});
 
-        quiz_data[x]['quizHeadline'] = $('.quizHeadlineInput').val();
+        quiz_data[x]['qH'] = $('.quizHeadlineInput').val();
 
-        quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
-        quiz_data[x]['tagLine2'] = $('.tag-line-2').val();
-        quiz_data[x]['tagLine3'] = $('.tag-line-3').val();
+        quiz_data[x]['tL1'] = $('.tag-line-1').val();
+        quiz_data[x]['tL2'] = $('.tag-line-2').val();
+        quiz_data[x]['tL3'] = $('.tag-line-3').val();
         $("#Comments").val(JSON.stringify(quiz_data));
 
         
@@ -611,7 +646,7 @@ $("#draggingQuestions").disableSelection();
             callback: showInfo,
             simpleSheet: true
         });
-
+        console.log(serializedData);
         function showInfo(data) {
 
             // alert('yes');
@@ -637,6 +672,7 @@ $("#draggingQuestions").disableSelection();
                     "The following error occured: " +
                     textStatus, errorThrown
                 );
+                alert("The data is huge to submit. Please shorten the text/ use URL shorterners etc and generate again");
             });
 
             // if the request failed or succeeded

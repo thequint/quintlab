@@ -34,7 +34,7 @@ function showInfo(data) {
 	//console.log(data_array);
 
 	display_data();
-	// console.log(data_array[0].questionText);
+	// console.log(data_array[0].qT);
 }
 
 function display_data() {
@@ -42,91 +42,90 @@ function display_data() {
 	//console.log(data_array.length);
 	var str = '';
 
-	$('.quiz-headline').html('<span>' + data_array[data_array.length-1].quizHeadline + '</span>');
+	$('.quiz-headline').html('<span>' + data_array[data_array.length-1].qH + '</span>');
 
 	for (var index = 0; index < data_array.length - 1; index++) {
 
 		for(var j = 0; j < data_array[index].options.length; j++){
 			var media = '';
-			if(data_array[index].options[j].optionImageUrl)//image
+			if(data_array[index].options[j].oIU)//image
 			{
-				media = media + '<li><img src = "' + data_array[index].options[j].optionImageUrl + '"></li>';
+				media = media + '<li><img src = "' + data_array[index].options[j].oIU + '"></li>';
 			}
-			if(data_array[index].options[j].optionVideoUrl)// video
+			if(data_array[index].options[j].oVU)// video
 			{
-				media = media + '<li><iframe src="https://www.youtube.com/embed/' + data_array[index].options[j].optionVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></li>';
+				media = media + '<li><iframe src="https://www.youtube.com/embed/' + data_array[index].options[j].oVU + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></li>';
 			}
 			if(data_array[index].options[j].optionAudioUrl)//Audio
 			{
 				media = media + '<li><iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + data_array[index].options[j].optionAudioUrl + '" title="Audioboom player"></iframe></li>';
 			}
-			// str = str + '<li><label for="input-' + (index + 1) + '" class="' + ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+ '"><input type="radio" name="ques' + index + '" value="' + ((data_array[index].options[j].isCorrect == true) ? 1: 0) + '"> ' + data_array[index].options[j].optionText + '</label><ul class="options-media">' + media + '</ul></li>'; //commented li checkbox
+			// str = str + '<li><label for="input-' + (index + 1) + '" class="' + ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+ '"><input type="radio" name="ques' + index + '" value="' + ((data_array[index].options[j].isCorrect == true) ? 1: 0) + '"> ' + data_array[index].options[j].oT + '</label><ul class="options-media">' + media + '</ul></li>'; //commented li checkbox
 
-			str = str + '<li class="'+ ((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong')+'">' + data_array[index].options[j].optionText + '<ul class="options-media">' + media + '</ul></li>';
+			str = str + '<li class="'+ ((data_array[index].options[j].isC == true) ? 'right': 'wrong')+'">' + data_array[index].options[j].oT + '<ul class="options-media">' + media + '</ul></li>';
 
 			// console.log((data_array[index].options[j].isCorrect == true) ? 1: 0);
 			// console.log((data_array[index].options[j].isCorrect == true) ? 'right': 'wrong');
 		}
 
 		var media = '';
-		if(data_array[index].questionImageUrl)//image
+		if(data_array[index].qIU)//image
 		{
-			media = media + '<div class="question-media--image"><img src = "' + data_array[index].questionImageUrl + '"></div>';
+			media = media + '<div class="question-media--image"><img src = "' + data_array[index].qIU + '"></div>';
 		}
-		if(data_array[index].questionVideoUrl)// video
+		if(data_array[index].qVU)// video
 		{
-			media = media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].questionVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+			media = media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].qVU + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 		}	
-		if(data_array[index].questionAudioUrl)//Audio
+		if(data_array[index].qAU)//Audio
 		{
-			media = media + '<div class="question-media--audio">' + data_array[index].questionAudioUrl + '</div>';
+			media = media + '<div class="question-media--audio">' + data_array[index].qAU + '</div>';
 		}
 
 
 		var ans_media = '';
-		if(data_array[index].answeredImageUrl)//image
+		if(data_array[index].aIU)//image
 		{
-			ans_media = ans_media + '<div class="question-media--image"><img src = "' + data_array[index].answeredImageUrl + '"></div>';
+			ans_media = ans_media + '<div class="question-media--image"><img src = "' + data_array[index].aIU + '"></div>';
 		}
-		if(data_array[index].answeredVideoUrl)// video
+		if(data_array[index].aVU)// video
 		{
-			ans_media = ans_media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].answeredVideoUrl + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
+			ans_media = ans_media + '<div class="question-media--video"><iframe src="https://www.youtube.com/embed/' + data_array[index].aVU + '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div>';
 		}	
-		if(data_array[index].answeredAudioUrl)//Audio
+		if(data_array[index].aAU)//Audio
 		{
-			ans_media = ans_media + '<div class="question-media--audio">' + data_array[index].answeredAudioUrl + '</div>';
+			ans_media = ans_media + '<div class="question-media--audio">' + data_array[index].aAU + '</div>';
 		}
 
 
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].questionText + '</h1></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mediaCaption + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].answeredText + '</div><div class="hyperlink-link">Read More: <a href='+data_array[index].hyperlinkLink+' target="_blank">' + data_array[index].hyperlinkText + '</a></div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].answeredCaption + '</div></div></div></div>');
+		$('.questions').append('<div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].qT + '</h1></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mC + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].aT + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].aC + '</div></div></div></div>');
 		str = '';
 	}
 
-	$(".question-media").each(function(){
+	$(".question-media, .answered-media").each(function(){
 		if($(this).html()=="")
 		{
 			$(this).remove();
 		}
 	});
 
-	$(".question-media--caption").each(function(){
-		if($(this).html()=="")
+	$(".question-media--caption, .answered-caption").each(function(){
+		if($(this).html()=="" || $(this).html()=="undefined")
 		{
 			$(this).remove();
 		}
 	});
-	$(".hyperlink-link a").each(function(){
-		if($(this).html()=="")
-		{
-			$(this).closest(".hyperlink-link").remove();
-		}
-	});
+	// $(".answered-media").each(function(){
+	// 	if($(this).html()==""){
+	// 		$(this).remove();
+	// 	}
+	// });
 
 	$('.highlight').html(data_array.length-1);
-	$('.tag-line-1').html(data_array[data_array.length-1].tagLine1);
-	$('.tag-line-2').html(data_array[data_array.length-1].tagLine2);
-	$('.tag-line-3').html(data_array[data_array.length-1].tagLine3);
+	$('.tag-line-1').html(data_array[data_array.length-1].tL1);
+	$('.tag-line-2').html(data_array[data_array.length-1].tL2);
+	$('.tag-line-3').html(data_array[data_array.length-1].tL3);
 	initNew();
 	listClick();
 }
@@ -149,11 +148,11 @@ function listClick(){
 				var percent = score_length*100/total_length
 
 				if(percent<33.33) {
-					$(".score-message").html(data_array[data_array.length-1].tagLine1);
+					$(".score-message").html(data_array[data_array.length-1].tL1);
 				}else if(percent<65) {
-					$(".score-message").html(data_array[data_array.length-1].tagLine2);
+					$(".score-message").html(data_array[data_array.length-1].tL2);
 				}else {
-					$(".score-message").html(data_array[data_array.length-1].tagLine3);
+					$(".score-message").html(data_array[data_array.length-1].tL3);
 				}
 
 				console.log(total_length);
