@@ -130,6 +130,15 @@ hr{
 #projectList{
 	margin-top: 70px;
 }
+
+.grid-wrap .grid.swipe-down li img {
+	transform: translate(-25%);
+}
+.grid li h3 {
+	text-align: left;
+}
+
+
 .form-wrap .form-group.clearfix {
 	margin-bottom: 40px;
 }
