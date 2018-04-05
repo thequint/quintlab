@@ -68,6 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 34px;
 	line-height: 100%;
 	max-width: 530px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 table { 
   width: 100%; 
@@ -105,23 +107,22 @@ td, th {
 table tr th:nth-child(1) {
     background: #4d4d4d;
 	width: 12%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 
 table tr th:nth-child(2) {
     background: #1b1862;
 	width: 22%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 
 table tr th:nth-child(3) {
     background: #e8a12b;
 	width: 22%;
-	
-/*
-	background-image: url(../images/gold.svg);
-	background-repeat: no-repeat;
-	background-position: 22px 15px;
-	background-size: 24px;
-*/
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 	
 }
 
@@ -156,17 +157,23 @@ table tr th:nth-child(5)::after {
 table tr th:nth-child(4) {
     background: #b4b1b5;
 	width: 22%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 
 table tr th:nth-child(5) {
     background: #9e2c14;
 	width: 22%;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 
 table tr th:nth-child(6) {
     background: #4d4d4d;
 	width: 10%;
 	display: none;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
 }
 
 tr td:nth-child(2) {
@@ -214,7 +221,7 @@ display: none;
 
 @media (max-width:799px) {
 	body{
-		font-size:20px;
+		font-size:18px;
 	}
 	.headline h1{
 		max-width: inherit;
@@ -237,12 +244,8 @@ td, th {
 	table tr th:nth-child(4)::after,
 	table tr th:nth-child(5)::after{
 		display: none;
-	}
-	
-	
+	}	
 }
-
-
 
 
 

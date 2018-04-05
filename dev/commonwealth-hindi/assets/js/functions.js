@@ -79,7 +79,12 @@ $(document).ready(function() {
 
 		})
 		
-	  $('table tr th:nth-child(2)').html('Country');	
+	  $('table tr th:nth-child(1)').html('रैंक');	
+	  $('table tr th:nth-child(2)').html('देश');	
+	  $('table tr th:nth-child(3)').html('गोल्ड');	
+	  $('table tr th:nth-child(4)').html('सिल्वर');
+	  $('table tr th:nth-child(5)').html('ब्रॉन्ज');
+		
 	  $("span, caption").remove();
       $("img").remove();
       $("a").removeAttr("href");
