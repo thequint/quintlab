@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 }
 .social-share .social-icons li a:hover {
-	color: #F4C70C;
+	color: #ef4224;
 }
 .top-news li {
 	float: left;
@@ -180,16 +180,16 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	content: '';
 	position: absolute;
-/*	background: #f4c70c;*/background-image: linear-gradient(to right, #ef4224, #e07c5e);
+/*	background: #ef4224;*/background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	top: 0;
 	left: -26px;
 	transform: skew(-34deg);
 	-ms-transform: skew(-34deg);
 	-webkit-transform: skew(-34deg);
-	box-shadow: 5px 0px #2B2A2A;
-	-webkit-box-shadow: 5px 0px #2B2A2A;
-	-ms-box-shadow: 5px 0px #2B2A2A;
-	-moz-box-shadow: 5px 0px #2B2A2A;
+	box-shadow: 5px 0px #0B2444;
+	-webkit-box-shadow: 5px 0px #0B2444;
+	-ms-box-shadow: 5px 0px #0B2444;
+	-moz-box-shadow: 5px 0px #0B2444;
 }
 .news-pic {
 	width: 90px;
@@ -238,17 +238,17 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	content: '';
 	position: absolute;
-/*	background: #f4c70c;*/
+/*	background: #ef4224;*/
 	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	top: 0;
 	left: 0;
 	transform: skew(-34deg);
 	-ms-transform: skew(-34deg);
 	-webkit-transform: skew(-34deg);
-	box-shadow: 5px 0px #2B2A2A;
-	-webkit-box-shadow: 5px 0px #2B2A2A;
-	-ms-box-shadow: 5px 0px #2B2A2A;
-	-moz-box-shadow: 5px 0px #2B2A2A;
+	box-shadow: 5px 0px #0B2444;
+	-webkit-box-shadow: 5px 0px #0B2444;
+	-ms-box-shadow: 5px 0px #0B2444;
+	-moz-box-shadow: 5px 0px #0B2444;
 }
 .top-news li:first-child figcaption span {
 	position: relative;
@@ -275,9 +275,9 @@ table {
 	font-size: 16px;
 }
 .point-table table thead tr {
-	background-color: #2B2A2A;
+	background-color: #0B2444;
 	text-transform: uppercase;
-	color: #F4C70C;
+	color: #ef4224;
 }
 .point-table table tr {
 	position: relative;
@@ -287,10 +287,10 @@ table {
 	background-color: #494848;
 }
 .point-table table tbody tr:nth-child(even) td:last-child span::after, .point-table table tbody tr:nth-child(even) {
-	background-color: #2b2a2a;
+	background-color: #0B2444;
 }
 .point-table table thead tr th:last-child span::after, .point-table table thead tr {
-	background-color: #2b2a2a;
+	background-color: #0B2444;
 }
 .point-table table tr th:last-child span, .point-table table tr td:last-child span {
 	overflow: hidden;
@@ -340,7 +340,7 @@ table {
 }
 .best-box table tr td, .best-box table tr th {
 	padding: 10px 0;
-	color: #F4C70C;
+	color: #ef4224;
 	font-size: 18px;
 	line-height: 100%
 }
@@ -353,13 +353,13 @@ table {
 	margin-bottom: 4px;
 }
 .best-box h4 span {
-	background: #f4c70c none repeat scroll 0 0;
+	background: #ef4224 none repeat scroll 0 0;
 	display: inline-block;
 	font-size: 18px;
 	padding: 6px 5px 3px;
 }
 .mvp-list figcaption {
-/*	background: #F4C70C;*/
+/*	background: #ef4224;*/
 	background-image: linear-gradient(to right, #ef4224, #e07c5e);                 
 	padding: 10px;
 	color: #333;
@@ -432,7 +432,7 @@ table {
 	top: inherit;
 	position: relative;
 	color: rgba(255,255,255,0.8);
-/*	background-color:#F4C70C;*/
+/*	background-color:#ef4224;*/
 	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	
 	transition: all 0.2s ease-in-out;
@@ -441,10 +441,10 @@ table {
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 }
-.single-news li a:hover figcaption {background: #2B2A2A; color: #333;}
+.single-news li a:hover figcaption {background: #0B2444; color: #333;}
 .single-news ul li figcaption::after {
-	background: #f4c70c none repeat scroll 0 0;
-	box-shadow: 5px 0 #2b2a2a;
+	background: #ef4224 none repeat scroll 0 0;
+	box-shadow: 5px 0 #0B2444;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -467,25 +467,25 @@ table {
 }
 /*All Hover State*/
 .top-news li:hover::after {
-	background: #2B2A2A;
-	box-shadow: 5px 0 #F4C70C;
+	background: #0B2444;
+	box-shadow: 5px 0 #ef4224;
 }
 .top-news li:hover a {
-	color: #F4C70C;
+	color: #ef4224;
 }
 .top-news li:first-child:hover figcaption::after {
-	background: #2B2A2A;
-	box-shadow: 5px 0 #F4C70C;
+	background: #0B2444;
+	box-shadow: 5px 0 #ef4224;
 }
 .more-news figure:hover a {
-	background: #2B2A2A;
-	color: #F4C70C;
+	background: #0B2444;
+	color: #ef4224;
 }
 .single-news ul li:hover a, .single-news ul li:hover a figcaption, .single-news ul li:hover a figcaption h5 {
-	color: #F4C70C;
+	color: #ef4224;
 }
 .single-news ul li:hover a figcaption::after {
-	background: #2B2A2A;
+	background: #0B2444;
 }
 
 .single-news.center-text ul li figcaption .caption{
@@ -502,7 +502,7 @@ table {
 	overflow: hidden;
 }
 .wrapper.footer-wrapper {
-/*	background-color: #F4C70C;*/
+/*	background-color: #ef4224;*/
 	background-image: linear-gradient(to right, #ef4224, #e07c5e);
 	color: #fff;
 	padding: 20px 0;
@@ -535,16 +535,16 @@ table {
 	height: 100%;
 	content: '';
 	position: absolute;
-	background: #f4c70c;
+	background: #ef4224;
 	top: 0;
 	left: 0;
 	transform: skew(-34deg);
 	-ms-transform: skew(-34deg);
 	-webkit-transform: skew(-34deg);
-	box-shadow: 5px 0px #2B2A2A;
-	-webkit-box-shadow: 5px 0px #2B2A2A;
-	-ms-box-shadow: 5px 0px #2B2A2A;
-	-moz-box-shadow: 5px 0px #2B2A2A;
+	box-shadow: 5px 0px #0B2444;
+	-webkit-box-shadow: 5px 0px #0B2444;
+	-ms-box-shadow: 5px 0px #0B2444;
+	-moz-box-shadow: 5px 0px #0B2444;
 }
 .others-ners .more-list figcaption span {
 	position: relative;
@@ -553,8 +553,8 @@ table {
 	display: block;
 }
 .others-ners .more-list a:hover figcaption::after {
-	background: #2B2A2A;
-	box-shadow: 5px 0 #F4C70C;
+	background: #0B2444;
+	box-shadow: 5px 0 #ef4224;
 }
 .ad-wrapper {
 	padding: 0px 0px 30px 0;
@@ -599,7 +599,7 @@ table {
 	right: 15px;
 	z-index: 1000;
 }
-.share-card a{color:#F4C70C !important; display:block; width: 20px;
+.share-card a{color:#ef4224 !important; display:block; width: 20px;
     text-align: center;
     height: auto; margin: 0px 0px 5px 0px}
 

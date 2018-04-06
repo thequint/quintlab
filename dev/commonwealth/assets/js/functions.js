@@ -22,7 +22,7 @@ $(document).ready(function() {
           // console.log(x);
           if (x > 5) {
             $("tr").each(function(index) {
-              if (index > 5 && index!==x)                {
+              if (index > 5 && index!=x)                {
                 //console.log($(this).index())
                 $(this).remove();
               }

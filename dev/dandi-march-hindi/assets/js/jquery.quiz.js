@@ -88,7 +88,7 @@
 					a("#quiz-restart-btn").show(), 
 					a(k).show(),
 					
-				    a("#quiz-results").html("<div class='share-tweet-text'><span class='twittershare'> LAW or LOL?</span> आपने " + n + " में से " + g + " सही जवाब दिए! <span class='twittershare'> Share your scores and challenge your friends https://www.thequint.com/quintlab/law-or-lol-quiz/ </span> </div> <div class='result-text'></div>" + "<div class='social-share'><a target='_blank' class='twitter-share-button' href='javascript:void(0)'><i class='fa fa-twitter'></i></a><a target='_blank' class='facebook-share-button' href='https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/law-or-lol-quiz/&amp;t=Can+you+tell+our+actual+laws+from+bogus+ones+we+made+up?'><i class='fa fa-facebook'></i></a></div>"),
+				    a("#quiz-results").html("<div class='share-tweet-text'><span class='twittershare'> LAW or LOL?</span> आपने " + g + " में से " + n + " सही जवाब दिए! <span class='twittershare'> Share your scores and challenge your friends https://www.thequint.com/quintlab/law-or-lol-quiz/ </span> </div> <div class='result-text'></div>" + "<div class='social-share'><a target='_blank' class='twitter-share-button' href='javascript:void(0)'><i class='fa fa-twitter'></i></a><a target='_blank' class='facebook-share-button' href='https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/law-or-lol-quiz/&amp;t=Can+you+tell+our+actual+laws+from+bogus+ones+we+made+up?'><i class='fa fa-facebook'></i></a></div>"),
 					
 					a('#showResult').val(n);
 					

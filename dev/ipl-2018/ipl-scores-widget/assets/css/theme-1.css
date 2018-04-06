@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.simc-ipl-widgets .simc-highlights .simc-head {
+	background-color: #ef4224 !important;
+	color: #fff !important;
+}
+.simc-ipl-widgets .simc-highlights{
+	padding: 0;
+	border-bottom: 2px solid #ef4224 !important;
+}
+
+
+
+.simc-ipl-widgets .simc-highlights .simc-body, .simc-ipl-widgets .simc-left-sidebar {
+	background-color: #0b2444 !important;
+}
+

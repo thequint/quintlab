@@ -1,29 +1,50 @@
-
-// Sections stories
 $(document).ready(function() {
-  var sections = [
-  // {ipl: 'videos', id:2666},
-  // {ipl: 'nishant', id:1031},
-  {ipl: 'top', id:2790}
-  ];
-
-  sections.forEach(function(section) {
-    $.getJSON('https://www.thequint.com/api/v1/stories?limit=5&section-id=' + section.id, function(res) {
-      var stories = res.stories;
-      var elements = stories.map(function(story) { 
-		  return '<li><a href="http://www.thequint.com/' + story.slug + '" target="blank"><figure><div class="img-holder"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=35&w=800&fm=pjpg" /></div><figcaption><div class="caption"><span><h5>' + story.headline + '</h5></span></figcaption></div></figure></a></li>'});
-      elements.forEach(function(element) {
-        var id = '#' + section.ipl + '-section-stories';
-        $(id).append(element);
-      });
-    });
+	
+	//WhatsApp Share
+	
+	$(document).on("click", '#btnWp', function() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      var text = $(this).attr("data-text");
+      var url = $(this).attr("data-link");
+      var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+      var whatsapp_url = "whatsapp://send?text=" + message;
+      window.location.href = whatsapp_url;
+    } else {
+      alert("Please use an Mobile Device to Share this Article");
+    }
   });
+	
+	
+	load_stories();
+	
+	
 });
 
 
-//Nishant's Dugout
-$(document).ready(function() {
-  var collectionSlug = 'nishants-dugout'; //temporary slug. Needs to be changed.
+
+function load_stories(){	
+	
+// ipl top story	
+  var collectionSlug = 'ipl-top-story'; //temporary slug. Needs to be changed.
+  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+    var stories = res.items.filter(function(item) {
+      return item.type == 'story'
+    }).map(function(item) {
+      return item.story
+    }).slice(0,3);
+    var elements = stories.map(function(story) {
+      return '<li><a href="http://www.thequint.com/' + story.slug + '" target="blank"><figure><div class="img-holder"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=35&w=800&fm=pjpg" /></div><figcaption><div class="caption"><span><h5>' + story.headline + '</h5></span></figcaption></div></figure></a></li>'
+    });
+    elements.forEach(function(element) {
+      $('#top-section-stories').append(element);
+    });
+	  load_slider_5()
+  });	
+	
+	
+//ipl dugout
+
+  var collectionSlug = 'ipl-dugout'; //temporary slug. Needs to be changed.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -35,12 +56,12 @@ $(document).ready(function() {
     });
     elements.forEach(function(element) {
       $('#nishant-section-stories').append(element);
-    })
-  })
-})
+    });
+  });
 
-//Videos' section
-$(document).ready(function() {
+
+//ipl videos
+
   var collectionSlug = 'ipl-videos'; //Needs to be replaced.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
@@ -53,13 +74,13 @@ $(document).ready(function() {
     });
     elements.forEach(function(element) {
       $('#videos-section-stories').append(element);
-    })
-  })
-})
+    });
+  });
 
-// Others
-$(document).ready(function() {
-  var collectionSlug = 'ipl-videos'; // 'other-sports-news' temporary slug. Needs to be changed.
+
+// ipl social buzz
+
+  var collectionSlug = 'ipl-social-buzz'; // 'other-sports-news' temporary slug. Needs to be changed.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -71,12 +92,13 @@ $(document).ready(function() {
     });
     elements.forEach(function(element) {
       $('#other-section-stories').append(element);
-    })
-  })
-})
+    });
+	 load_slider_3();
+  });
+
 
 //QUINT's MVP
-$(document).ready(function() {
+
   $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/902037b1-6d5b-4a6d-bb64-67cbdc534b41', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
@@ -102,13 +124,11 @@ $(document).ready(function() {
         $('#key-events-1').append(element);
       }
     });
+	  load_slider_1();
   });
-});
 
 
-
-//Arun’s Dugout
-$(document).ready(function() {
+//Arunâ€™s Dugout
   $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/9e3c5172-b3f1-4fcf-ac3d-08140013dda9', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
@@ -134,11 +154,11 @@ $(document).ready(function() {
         $('#key-events-2').append(element);
       }
     });
+	 load_slider_2();
   });
-});
+
 
 //Sideline Sightings
-$(document).ready(function() {
   $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/068838a0-30f8-467a-8d95-dba9cc91caeb', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
@@ -164,14 +184,12 @@ $(document).ready(function() {
         $('#key-events-3').append(element);
       }
     });
+	  load_slider_4();
   });
-});
 
+}
 
-$(document).ready(function() {
-	setTimeout(function(){
-	
-	// Slider 1
+function load_slider_1(){
 	$('.slider-1').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -180,26 +198,8 @@ $(document).ready(function() {
 	  dots: false,
       autoplaySpeed: 4000,
     });
-		
-	$('.slider-4').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-	  dots: false,
-      autoplaySpeed: 4000,
-    });
-		
-	$('.slider-5').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-	  dots: false,
-      autoplaySpeed: 4000,
-    });
-		
-		
+}
+function load_slider_2(){
 	$('.slider-2').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -219,7 +219,8 @@ $(document).ready(function() {
         }
       ]
     });
-
+}
+function load_slider_3(){
 	$('.slider-3').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -238,30 +239,28 @@ $(document).ready(function() {
         }
       ]
     });
+}
+function load_slider_4(){
+	$('.slider-4').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+	  dots: false,
+      autoplaySpeed: 4000,
+    });
+}
+function load_slider_5(){
+	$('.slider-5').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+	  dots: false,
+      autoplaySpeed: 4000,
+    });
+}
 	
-	$('.slider-1').removeClass('load-slider');
-	$('.slider-2').removeClass('load-slider');
-	$('.slider-3').removeClass('load-slider');
-	$('.slider-4').removeClass('load-slider');
-	$('.slider-5').removeClass('load-slider');
 	
-	}, 4000);
-});
-
-
-//WhatsApp
-$(document).ready(function() {
-  $(document).on("click", '#btnWp', function() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      var text = $(this).attr("data-text");
-      var url = $(this).attr("data-link");
-      var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
-      var whatsapp_url = "whatsapp://send?text=" + message;
-      window.location.href = whatsapp_url;
-    } else {
-      alert("Please use an Mobile Device to Share this Article");
-    }
-  });
-});
 
 

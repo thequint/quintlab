@@ -47,7 +47,7 @@
 	font-size: 20px;
 	line-height: 1;
 	opacity: .75;
-	color: #F4C70C;
+	color: #ef4224;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -162,7 +162,7 @@
 	font-size: 25px;
 	line-height: 1;
 	opacity: .75;
-	color: #F4C70C;
+	color: #ef4224;
 }
 .liveblog .slick-prev {
 	left: 2px;
