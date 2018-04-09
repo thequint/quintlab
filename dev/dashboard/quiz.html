@@ -81,9 +81,18 @@
 			<div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
 				<form>
 					<div class="form-group">
-						<input class="form-control tag-line tag-line-1" placeholder="Tag line for below 33%...">
-						<input class="form-control tag-line tag-line-2" placeholder="Tag line for between 33% & 65%...">
-						<input class="form-control tag-line tag-line-3" placeholder="Tag line for above 65%...">
+						<input href="#" class="form-control tag-line tag-line-1" placeholder="Tag line for below 33%...">
+						<input href="#" class="form-control tag-line tag-line-img-input-1" placeholder="Tag line image url...">
+					</div>
+
+					<div class="form-group">
+						<input href="#" class="form-control tag-line tag-line-2" placeholder="Tag line for between 33% & 65%...">
+						<input href="#" class="form-control tag-line tag-line-img-input-2" placeholder="Tag line image url...">
+					</div>
+
+					<div class="form-group">
+						<input href="#" class="form-control tag-line tag-line-3" placeholder="Tag line for above 65%...">
+						<input href="#" class="form-control tag-line tag-line-img-input-3" placeholder="Tag line image url...">
 					</div>
 				</form>
 				<div class="card">
@@ -240,15 +249,31 @@
 				$('.preview').append('<div class="question-box"><div class="question"><span class="bullet">' + (i + 1) + '. </span>' + quiz_data[i]['questionText'].toString() + '</div>' + (quiz_data[i]['questionImageUrl'] == null ? (quiz_data[i]['questionVideoUrl'] == null ? (quiz_data[i]['questionAudioUrl'] == null ? '' : quiz_data[i]['questionAudioUrl'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['questionVideoUrl'] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['questionImageUrl'] + '">') + '<ul class="answer-type demo-list">' + str + '</ul></div>');
 				str = '';
 			}
+
 			if($('.tag-line-1').val() != ""){
-				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-1.gif"></span></div>');
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img class="tag-line-img-1" alt="" src="assets/images/fitness-test-1.gif"></span></div>');
 			}
 			if($('.tag-line-2').val() != ""){
-				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-2').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-2.gif"></span></div>');
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-2').val() + '</span></p></span><span class="result-img"><img class="tag-line-img-2" alt="" src="assets/images/fitness-test-2.gif"></span></div>');
 			}
 			if($('.tag-line-3').val() != ""){
-				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-3').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-3.gif"></span></div>');
+				$('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-3').val() + '</span></p></span><span class="result-img"><img class="tag-line-img-3" alt="" src="assets/images/fitness-test-3.gif"></span></div>');
 			}
+
+			if($('.tag-line-img-input-1').val() != ""){
+				alert($('.tag-line-img-input-1').val());
+				$('.tag-line-img-1').attr('src',$('.tag-line-img-input-1').val());
+			}
+			if($('.tag-line-img-input-2').val() != ""){
+				$('.tag-line-img-2').attr('src',$('.tag-line-img-input-2').val());
+			}
+			if($('.tag-line-img-input-3').val() != ""){
+				$('.tag-line-img-3').attr('src',$('.tag-line-img-input-3').val());
+			}
+
+
+			
+
 			$(".question-box").css({"background-color": "white", "border-radius": "0px", "border": "1px #d8d8d8 solid", "padding": "24px 12px 12px 24px", "margin" : "3.5em 0"});
 
 			// $('.lbl').click(function () {
@@ -453,12 +478,19 @@
 		}
 
     	quiz_data.push({});
-			quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
-			quiz_data[x]['tagLine2'] = $('.tag-line-2').val();
-			quiz_data[x]['tagLine3'] = $('.tag-line-3').val();
-			$("#Comments").val( JSON.stringify(quiz_data));	
-			
-			copyHandler();
+
+		quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
+		quiz_data[x]['tagLineImg1'] = $('.tag-line-img-input-1').val();
+
+		quiz_data[x]['tagLine2'] = $('.tag-line-2').val();
+		quiz_data[x]['tagLineImg2'] = $('.tag-line-img-input-2').val();
+
+		quiz_data[x]['tagLine3'] = $('.tag-line-3').val();
+		quiz_data[x]['tagLineImg3'] = $('.tag-line-img-input-3').val();
+
+		$("#Comments").val( JSON.stringify(quiz_data));	
+		
+		copyHandler();
 
         // add value to the textarea
         if (request) {

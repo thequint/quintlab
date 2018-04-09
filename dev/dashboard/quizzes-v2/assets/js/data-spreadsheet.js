@@ -134,6 +134,9 @@ function listClick(){
 	$(".demo-list li").click(function(){
 		if(!$(this).closest("ul").hasClass("answered")){
 			$(this).closest("ul").addClass("answered");
+
+			$(".answered li").addClass("option-list");
+
 			$(this).addClass("active");
 
 			console.log($(".answer-type").length+ "|" +$(".answered").length);

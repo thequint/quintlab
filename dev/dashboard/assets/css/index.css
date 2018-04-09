@@ -19,7 +19,9 @@ body{
 	background-color: #f4f4f4;
 	font-weight: 300; 
 }
-
+.card {
+	margin-bottom: 20px;
+}
 .slick-prev:before, .slick-next:before{
     color: #36154f;
 }

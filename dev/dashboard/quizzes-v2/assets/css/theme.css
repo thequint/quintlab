@@ -209,6 +209,9 @@ img {
 .quiz-template-02 .question-box .question-options .demo-list li.bg-success {
     background-color: #95c198!important;
 }
+.quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
+    color: #95c198;
+}
 .quiz-template-02 .question-box .question-options .demo-list li.right.active {
     position: relative;
 }

@@ -85,6 +85,19 @@ function display_data() {
 	$('.tag-line-1').html(data_array[data_array.length-1].tagLine1);
 	$('.tag-line-2').html(data_array[data_array.length-1].tagLine2);
 	$('.tag-line-3').html(data_array[data_array.length-1].tagLine3);
+
+	if(data_array[data_array.length-1].tagLineImg1 != ""){
+		$('.tag-line-img-1').attr("src",data_array[data_array.length-1].tagLineImg1);
+	}
+
+	if(data_array[data_array.length-1].tagLineImg2 != ""){
+		$('.tag-line-img-2').attr("src",data_array[data_array.length-1].tagLineImg2);
+	}
+
+	if(data_array[data_array.length-1].tagLineImg3 != ""){
+		$('.tag-line-img-3').attr("src",data_array[data_array.length-1].tagLineImg3);
+	}
+
 	initNew();
 }
 
