@@ -22,6 +22,25 @@ body{
 .card {
 	margin-bottom: 20px;
 }
+
+.select-template {
+	margin: 25px auto 10px;
+	/*width: 90%;*/
+}
+.select-template .select-tmp-label {
+	float:left;
+	width:115px;
+	font-weight: 500;
+	line-height: 40px;
+}
+.select-template .select-tmp-field {
+	float:left;
+	width: 250px;
+	/*width: calc(100% - 300px);*/
+	/*width: -webkit-calc(100% - 300px);*/
+}
+
+
 .slick-prev:before, .slick-next:before{
     color: #36154f;
 }
