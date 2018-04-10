@@ -214,7 +214,7 @@ function load_slider_1(){
       autoplay: true,
       arrows: true,
 	  dots: false,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 2500,
     });
 }
 function load_slider_2(){
@@ -223,7 +223,7 @@ function load_slider_2(){
       slidesToScroll: 1,
       autoplay: true,
       arrows: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 2500,
       responsive: [
         {
           breakpoint: 575,
@@ -244,7 +244,7 @@ function load_slider_3(){
       slidesToScroll: 1,
       autoplay: true,
       arrows: true,
-      autoplaySpeed: 6000,
+      autoplaySpeed: 2500,
       responsive: [
         {
           breakpoint: 600,
@@ -265,7 +265,7 @@ function load_slider_4(){
       autoplay: true,
       arrows: true,
 	  dots: false,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 2500,
     });
 }
 function load_slider_5(){
@@ -275,7 +275,7 @@ function load_slider_5(){
       autoplay: true,
       arrows: true,
 	  dots: false,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 2500,
     });
 }
 	
