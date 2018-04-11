@@ -338,9 +338,12 @@ h1, h2, h3, h4, h5, h6 {
 .result{
 	padding-top: 44px;
 	display: none;
+	margin: 0 auto;
+	width: 170px;
 }
 
 .message {
 	font-weight: 600;
 	color: rgba(255,255,255,0.9);
+	line-height: 110%;
 }

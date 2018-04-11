@@ -96,12 +96,33 @@ function calculateBmi() {
 		$(".cal-bmi").removeClass("is-active");
 		$(".cal-bmi").off("click");
 	}
+
+
+	if (finalBmi < 18.5) {
+		$('.message').html("That you are too thin.");
+	}
+	else if (finalBmi >= 18.5 && finalBmi < 25) {
+
+		$('.message').html("That you are healthy.");
+	}
+	else if (finalBmi >= 25) {
+		$('.message').html("That you have overweight.");
+	} else {
+		$('.message').html("Please Fill in everything correctly");
+	}
+
 }
 
 
 $("input").bind("keyup change", function (e) {
 	calculateBmi();
 });
+
+
+
+
+
+
 
 
 
