@@ -61,7 +61,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bmi-container .bmi-form-container{
-	padding: 16px 40px 16px 16px;
+	margin: 16px;
+	position: relative;
+	overflow: hidden;
 }
 
 .form-group{
@@ -147,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .final-bmi.is-active{
-	color: #e1306c;
+	color: #fff;
 }
 
 .bmi-chart{
@@ -276,3 +278,69 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/*BTN BMI*/
+
+.bmi-inner-container{
+	position: relative;
+	padding: 0px 82px 0px 0px;
+}
+.cal-bmi {
+	display: inline-block;
+	background-color: #EEEEEE;
+	color: #fff;
+	width: 268px;
+	height: 172px;
+	position: absolute;
+	top: 0px;
+	right: 16px;
+	text-align: center;
+	
+	transform: translateX(217px);
+	transition: 0.2s all ease-in-out;
+}
+
+.cal-bmi.is-active{
+	background-color: #e1306c;
+	cursor: pointer;
+}
+
+.cal-bmi i{
+	font-size:35px;
+	position: absolute;
+	top: 50%;
+	left: 18px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	
+	
+}
+
+.cal-bmi i.fa-arrow-circle-right{
+	display: block;
+}
+
+.cal-bmi i.fa-arrow-circle-left{
+	display: none;
+}
+
+.cal-bmi.is-slide{
+	transform: translateX(16px);
+}
+.cal-bmi.is-slide i.fa-arrow-circle-right{
+	display: none;
+}
+
+.cal-bmi.is-slide i.fa-arrow-circle-left{
+	display: block;
+}
+
+
+.result{
+	padding-top: 44px;
+	display: none;
+}
+
+.message {
+	font-weight: 600;
+	color: rgba(255,255,255,0.9);
+}

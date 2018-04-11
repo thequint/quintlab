@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="address=no" />	
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="email=no">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="apple-mobile-web-app-title" content="">
@@ -13,11 +15,15 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#fff" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="copyright" content="">
+<meta name="publisher" content="">
+<meta name="standout" content=""/>
+<meta name="robots" content="noindex, nofollow" />
 <title>Body Mass Index Calculator - The Quint</title>
-<meta name="description" content="Body Mass Index Calculator">
-<meta name="keywords" content="Body Mass Index Calculator">
-<meta name="copyright" content="The Quint">
-<meta name="publisher" content="The Quint">
+
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
@@ -53,6 +59,7 @@ el.parentNode.insertBefore(s, el);
 	<div class="container bmi-container">
 		<h1>Body mass index (BMI)</h1>
 		<div class="bmi-form-container">
+			<div class="bmi-inner-container">
 			<form name="BMI" method="post">
 				<div class="form-group">
 					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in kg">
@@ -80,9 +87,18 @@ el.parentNode.insertBefore(s, el);
 						<span><input type="radio" id="height-cm" checked name="select-height"><label for="height-cm">(cm)</label></span>
 						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(feet)</label></span>
 					</div>
+					
+					<div class="cal-bmi" href="javascript:void(0);">
+						<i class="fa fa-arrow-circle-left"></i>
+						<i class="fa fa-arrow-circle-right"></i>
+						<div class="result">
+							<div class="final-bmi">--.-</div>
+							<div class="message">That you are healthy</div>
+						</div>	
+					</div>
 				</div>
 				
-				<div class="final-bmi">--.-</div>
+				
 				<div class="bmi-chart">
 					<h2><span>BMI Chart</span></h2>
 					<div class="scale-el">
@@ -131,6 +147,7 @@ el.parentNode.insertBefore(s, el);
 -->
 			</form>	
 		</div>
+		</div>	
 	</div>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>  
 <script type="text/javascript" src="assets/js/functions.js"></script>

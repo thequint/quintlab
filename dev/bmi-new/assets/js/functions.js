@@ -1,10 +1,9 @@
-
 $('#input-height').val('');
 $('#input-height-feet, #input-height-inch').val('');
 $('#input-weight').val('');
 
 $('#weight-kg').prop("checked", true);
-$('#height-cm').prop('checked',true); 
+$('#height-cm').prop('checked', true);
 
 //$("#weight-kg:checked").val();
 //$("#height-cm:checked").val();
@@ -25,7 +24,7 @@ $('#height-cm').bind('change', function () {
 	$('.feet-height').hide();
 	$('#input-height-feet, #input-height-inch').val('');
 	$('#input-height').val('');
-	
+
 });
 
 $('#height-feet').bind('change', function () {
@@ -38,62 +37,71 @@ $('#height-feet').bind('change', function () {
 $('.btn-reset').click(function () {
 	$('.cm-height').show();
 	$('.feet-height').hide();
-	
+
 });
 
 
 function calculateBmi() {
-	
+
 	var weight, height;
-	
-	
+
+
 	// For Weight
-	
-	
-	if($('#weight-kg').is(':checked')){ 
+
+
+	if ($('#weight-kg').is(':checked')) {
 		weight = $('#input-weight').val();
-	} 
-	
-	else{
+	} else {
 		weight = $('#input-weight').val() / 0.0022046;
 	}
-	
+
 	// For Height
-	
-	
-	if($('#height-cm').is(':checked')){ 
-		
+
+
+	if ($('#height-cm').is(':checked')) {
+
 		height = $('#input-height').val();
-	} 
-	
-	else{
-		height = $('#input-height-feet').val()/0.032808+$('#input-height-inch').val()/0.39370;	
+	} else {
+		height = $('#input-height-feet').val() / 0.032808 + $('#input-height-inch').val() / 0.39370;
 	}
-	
-	
-	var finalBmi = weight/(height/100*height/100);
+
+
+	var finalBmi = weight / (height / 100 * height / 100);
 	$('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
-	
-	
-	if(($('#input-height').val() != '' && $('#input-weight').val() != '') || ($('#input-height-feet').val() != '' && $('#input-weight').val() != '')){
-		
-	   $('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
-		$(".bmi-point").css({"left":((weight-45)*100/(120-45))+"%","top":((height-120)*100/(210-120))+"%"});
+
+
+	if (($('#input-height').val() != '' && $('#input-weight').val() != '') || ($('#input-height-feet').val() != '' && $('#input-weight').val() != '')) {
+
+		$('.final-bmi').addClass('is-active').html(finalBmi.toFixed(2));
+		$(".bmi-point").css({
+			"left": ((weight - 45) * 100 / (120 - 45)) + "%",
+			"top": ((height - 120) * 100 / (210 - 120)) + "%"
+		});
+
+	} else {
+		$('.final-bmi').removeClass('is-active').html('--.-');
 
 	}
+	if (weight != "" && height != "") {
+		if (!$(".cal-bmi").hasClass("is-active")) {
+			$(".cal-bmi").addClass("is-active");
+			$('.cal-bmi.is-active').click(function () {
+				$(this).toggleClass('is-slide');
+				$('.result').toggle();
+			});
+		}
 
-	else{
-		$('.final-bmi').removeClass('is-active').html('--.-');
-		
+
+	} else {
+		$(".cal-bmi").removeClass("is-active");
+		$(".cal-bmi").off("click");
 	}
 }
 
 
-
-$("input").bind("keyup change", function(e) {
-	 calculateBmi();
+$("input").bind("keyup change", function (e) {
+	calculateBmi();
 });
-
 
 
 
@@ -105,9 +113,3 @@ function IsNumeric(e) {
 	//document.getElementById("error").style.display = ret ? "none" : "inline";
 	return ret;
 }
-
-
-
-
-
-
