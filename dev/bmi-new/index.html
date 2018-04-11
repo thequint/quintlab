@@ -57,21 +57,21 @@ el.parentNode.insertBefore(s, el);
 </head>
 <body>
 	<div class="container bmi-container">
-		<h1>Body mass index (BMI)</h1>
+		<h1>Body Mass Index Calculator</h1>
 		<div class="bmi-form-container">
 			<div class="bmi-inner-container">
 			<form name="BMI" method="post">
 				<div class="form-group">
-					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in kg">
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in Kg">
 					<span id="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
 					<div class="radio-group">
-						<span><input type="radio" id="weight-kg" checked name="select-weight"><label for="weight-kg">(kg)</label></span>
-						<span><input type="radio" id="weight-lb" name="select-weight"><label for="weight-lb">(lb)</label></span>
+						<span><input type="radio" id="weight-kg" checked name="select-weight"><label for="weight-kg">(Kg)</label></span>
+						<span><input type="radio" id="weight-lb" name="select-weight"><label for="weight-lb">(Lb)</label></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="cm-height">
-					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in cm">
+					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in Cm">
 					</div>
 					
 					<div class="feet-height clearfix">
@@ -84,8 +84,8 @@ el.parentNode.insertBefore(s, el);
 						</div>
 					</div>
 					<div class="radio-group">
-						<span><input type="radio" id="height-cm" checked name="select-height"><label for="height-cm">(cm)</label></span>
-						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(feet)</label></span>
+						<span><input type="radio" id="height-cm" checked name="select-height"><label for="height-cm">(Cm)</label></span>
+						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(Ft)</label></span>
 					</div>
 					
 					<div class="cal-bmi" href="javascript:void(0);">

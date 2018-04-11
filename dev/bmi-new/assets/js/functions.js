@@ -12,11 +12,11 @@ $('#height-cm').prop('checked', true);
 
 
 $('#weight-kg').bind('change', function () {
-	$('#input-weight').attr('placeholder', 'Your Weight in kg');
+	$('#input-weight').attr('placeholder', 'Your Weight in Kg');
 });
 
 $('#weight-lb').bind('change', function () {
-	$('#input-weight').attr('placeholder', 'Your Weight in lb');
+	$('#input-weight').attr('placeholder', 'Your Weight in Lb');
 });
 
 $('#height-cm').bind('change', function () {
@@ -99,19 +99,29 @@ function calculateBmi() {
 
 
 	if (finalBmi < 18.5) {
-		$('.message').html("That you are too thin.");
+		$('.message').html("Underweight");
 	}
 	else if (finalBmi >= 18.5 && finalBmi < 25) {
 
-		$('.message').html("That you are healthy.");
+		$('.message').html("Normal Weight");
 	}
 	else if (finalBmi >= 25) {
-		$('.message').html("That you have overweight.");
+		$('.message').html("Overweight");
 	} else {
-		$('.message').html("Please Fill in everything correctly");
+		$('.message').html("Obesity");
 	}
 
 }
+
+
+/*
+
+Underweight = <18.5
+Normal weight = 18.5–24.9 
+Overweight = 25–29.9 
+Obesity = BMI of 30 or greater
+*/
+
 
 
 $("input").bind("keyup change", function (e) {
