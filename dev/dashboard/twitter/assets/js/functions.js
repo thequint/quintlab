@@ -30,4 +30,14 @@ var chat_data;
 		preview_data();
 			//alert("yes");
 			
+			
 		}
+
+
+
+adjust_iframe_height();
+
+function adjust_iframe_height(){
+    var actual_height = document.body.scrollHeight; 
+    parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*");
+}
