@@ -5,11 +5,6 @@ $('#input-weight').val('');
 $('#weight-kg').prop("checked", true);
 $('#height-cm').prop('checked', true);
 
-//$("#weight-kg:checked").val();
-//$("#height-cm:checked").val();
-
-
-
 
 $('#weight-kg').bind('change', function () {
 	$('#input-weight').attr('placeholder', 'Your Weight in Kg');
@@ -104,21 +99,23 @@ function calculateBmi() {
 		$('.message').html("Underweight");
 		new_weight = 18.5 * height * height / 10000;
 		new_weight = new_weight - weight
-		$(".weight-change").html(new_weight.toFixed(2));
+		$(".weight-change").html('<span>Normal Weight Range: 18.5-24.9</span> You need to gain ' + new_weight.toFixed(2));
 
-	} else if (finalBmi >= 18.5 && finalBmi < 25) {
+	} else if (finalBmi >= 18.5 && finalBmi < 24.9) {
 		$('.message').html("Normal Weight");
-		$('.weight-change').html("");
-	} else if (finalBmi >= 25) {
-		new_weight = 25 * height * height / 10000;
+		$(".weight-change").html('<span>Normal Weight Range: 18.5-24.9</span>');
+	} else if (finalBmi > 24.9 && finalBmi < 30) {
+		new_weight = 24.9 * height * height / 10000;
 		new_weight = weight - new_weight
-		$(".weight-change").html(new_weight.toFixed(2));
+		$(".weight-change").html('<span>Normal Weight Range: 18.5-24.9</span> You need to lose ' + new_weight.toFixed(2));
 		$('.message').html("Overweight");
-	} else {
-		new_weight = 25 * height * height / 10000;
+	} 
+	else {
+		new_weight = 24.9 * height * height / 10000;
 		new_weight = weight - new_weight
 		$(".weight-change").html(new_weight.toFixed(2));
 		$('.message').html("Obesity");
+		$(".weight-change").html('<span>Normal Weight Range: 18.5-24.9</span>');
 	}
 }
 

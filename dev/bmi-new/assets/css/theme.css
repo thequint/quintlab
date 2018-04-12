@@ -298,10 +298,13 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 }
 .result {
-	padding-top: 44px;
 	display: none;
 	margin: 0 auto;
-	width: 170px;
+	width: 230px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 .message {
 	font-weight: 600;
@@ -334,4 +337,15 @@ h1, h2, h3, h4, h5, h6 {
 	right: 20px;
 	top: 1px;
 	display: none;
+}
+
+.weight-change {
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 5px;
+	color: rgba(255,255,255,0.9);
+}
+
+.weight-change span{
+	display: block;
 }
