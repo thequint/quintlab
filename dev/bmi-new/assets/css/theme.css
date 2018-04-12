@@ -1,6 +1,6 @@
 @charset "utf-8";
-.loading{
-	display:none;
+.loading {
+	display: none;
 }
 html, body {
 	padding: 0;
@@ -41,55 +41,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*Start CSS*/
 
-.bmi-container{
+.bmi-container {
 	width: 300px;
-	height:250px; 
-	background:#fff;
+	height: 250px;
+	background: #fff;
 	margin: 0px auto;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
 	position: relative;
 }
-
-.bmi-container h1{
-	font-size:20px;
+.bmi-container h1 {
+	font-size: 20px;
 	font-weight: 700;
 	margin: 0 0 0px 0;
-	padding:12px 16px;
+	padding: 12px 16px;
 	background: #54d9c0;
 	color: #fff;
 	line-height: 100%;
 	text-align: center;
 }
-
-.bmi-container .bmi-form-container{
+.bmi-container .bmi-form-container {
 	margin: 16px;
 	position: relative;
 	overflow: hidden;
 }
-
-.form-group{
-	margin:0 0 16px 0;
+.form-group {
+	margin: 0 0 16px 0;
 }
-.radio-group{
-	margin:8px 0px 0px 0px;
+.radio-group {
+	margin: 8px 0px 0px 0px;
 }
-
 .form-group label {
 	display: block;
 	font-weight: 500;
 	margin: 0px 10px 0px 0px;
-	
 	font-size: 14px;
 	color: #989898 !important;
 }
-.form-group label span{
-	display:inline-block;
+.form-group label span {
+	display: inline-block;
 	overflow: hidden;
 }
-
-
-.form-group input[type='text']{
-	width:100%;
+.form-group input[type='text'] {
+	width: 100%;
 	height: 45px;
 	padding: 0px 10px;
 	background: #EEEEEE;
@@ -98,17 +91,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	transition: all 0.2s ease-in-out;
 }
-.form-group input[type='text']:focus{
+.form-group input[type='text']:focus {
 	border: 1px solid #54d9c0;
 	background: #f7f7f7;
 }
-
-.btn-group{padding: 0px 0 0 0;}
-.btn-group .btn{
-	float:left;
+.btn-group {
+	padding: 0px 0 0 0;
+}
+.btn-group .btn {
+	float: left;
 	margin-right: 10px;
 }
-.btn{
+.btn {
 	height: 43px;
 	padding: 0 20px;
 	text-align: center;
@@ -121,167 +115,145 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-size: 16px;
 }
-.btn.btn-cal{
+.btn.btn-cal {
 	background: #e1306c;
 	border: 1px solid #e1306c;
 	color: #fff;
 }
-
-.btn.btn-reset{
+.btn.btn-reset {
 	background: #333;
 	border: 1px solid #333;
 	color: #fff;
 }
-
-.feet-height{
-	margin:0px -10px;
+.feet-height {
+	margin: 0px -10px;
 	display: none;
 }
-
-.feet-height .feet-input{
-	float:left;
+.feet-height .feet-input {
+	float: left;
 	width: 50%;
-	padding:0px 10px;
+	padding: 0px 10px;
 }
-
-.final-bmi{
-	font-size:45px;
+.final-bmi {
+	font-size: 45px;
 	font-weight: 700;
 }
-
-.final-bmi.is-active{
+.final-bmi.is-active {
 	color: #fff;
 }
-
-.bmi-chart{
-	font-size:13px;
+.bmi-chart {
+	font-size: 13px;
 	color: #333;
 	position: relative;
 	display: none;
 }
-.bmi-chart h2{
-	font-weight:700;
+.bmi-chart h2 {
+	font-weight: 700;
 	margin: 10px 0 10px 0;
 	font-size: 22px;
 	text-align: center;
 	line-height: 100%;
 	padding: 0px
-	
 }
-
-.bmi-chart h2 span{
-	display:inline-block;
+.bmi-chart h2 span {
+	display: inline-block;
 	border: 2px solid #333;
 	padding: 8px 20px;
 }
-
-
-.chart-box{
-	display:block;
+.chart-box {
+	display: block;
 	height: 150px;
 	position: relative;
-	background:linear-gradient(45deg, #00b0f0 12%, #92d050 45%, #e7ff00 64%, #ffc000 86%, #ff0000);
+	background: linear-gradient(45deg, #00b0f0 12%, #92d050 45%, #e7ff00 64%, #ffc000 86%, #ff0000);
 	margin-left: 75px;
 	overflow: hidden;
 }
-
-.scale-weight{
+.scale-weight {
 	margin: 0 0 10px 0;
 }
-.scale-weight .start{float: left; margin-right: 30px;}
-.scale-el span{font-weight:700;}
-.scale-weight .end{float: right; text-align: right;} 
-
-.scale-height{
+.scale-weight .start {
+	float: left;
+	margin-right: 30px;
+}
+.scale-el span {
+	font-weight: 700;
+}
+.scale-weight .end {
+	float: right;
+	text-align: right;
+}
+.scale-height {
 	position: absolute;
 	top: 40px;
 	left: 0;
 	height: 150px;
 }
-
-.scale-height .end{
+.scale-height .end {
 	position: absolute;
 	bottom: 0px;
 	left: 0;
 }
-
-.bmi-point{
-	width:10px;
-	height:10px;
+.bmi-point {
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
 	background: #fff;
 	position: absolute;
-	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-/*	transition: all 0.3s ease-in-out;*/
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);/*	transition: all 0.3s ease-in-out;*/
 	
 	
 }
-
-
-
-.scale-el{
+.scale-el {
 	position: relative;
 }
-
-
-
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
+[type="radio"]:checked, [type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
 }
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
-    position: relative;
-    padding-left: 28px;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
-    color: #666;
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #666;
 }
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ddd;
-    border-radius: 100%;
-    background: #fff;
+[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #ddd;
+	border-radius: 100%;
+	background: #fff;
 }
-[type="radio"]:checked + label:after,
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	background: #e1306c;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
 [type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #e1306c;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
-
-[type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
 }
 [type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
-
-
-
 /*BTN BMI*/
 
-.bmi-inner-container{
+.bmi-inner-container {
 	position: relative;
 	padding: 0px 82px 0px 0px;
 }
@@ -295,62 +267,47 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0px;
 	right: 16px;
 	text-align: center;
-	
 	transform: translateX(217px);
 	transition: 0.2s all ease-in-out;
 }
-
-.cal-bmi.is-active{
+.cal-bmi.is-active {
 	background-color: #e1306c;
 	cursor: pointer;
 }
-
-
-.cal-bmi i.toggle-icon{
-	font-size:35px;
+.cal-bmi i.toggle-icon {
+	font-size: 35px;
 	position: absolute;
 	top: 50%;
 	left: 18px;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
-	
-	
 }
-
-.cal-bmi i.fa-arrow-circle-right{
+.cal-bmi i.fa-arrow-circle-right {
 	display: block;
 }
-
-.cal-bmi i.fa-arrow-circle-left{
+.cal-bmi i.fa-arrow-circle-left {
 	display: none;
 }
-
-.cal-bmi.is-slide{
+.cal-bmi.is-slide {
 	transform: translateX(16px);
 }
-.cal-bmi.is-slide i.fa-arrow-circle-right{
+.cal-bmi.is-slide i.fa-arrow-circle-right {
 	display: none;
 }
-
-.cal-bmi.is-slide i.fa-arrow-circle-left{
+.cal-bmi.is-slide i.fa-arrow-circle-left {
 	display: block;
 }
-
-
-.result{
+.result {
 	padding-top: 44px;
 	display: none;
 	margin: 0 auto;
 	width: 170px;
 }
-
 .message {
 	font-weight: 600;
 	color: rgba(255,255,255,0.9);
 	line-height: 110%;
 }
-
-
 .info {
 	font-size: 13px;
 	font-weight: 600;
@@ -361,15 +318,13 @@ h1, h2, h3, h4, h5, h6 {
 	cursor: pointer;
 	z-index: 999;
 }
-
-.info , .info a{
+.info, .info a {
 	color: rgba(255,255,255,0.9);
 }
-.info:hover, .info a:hover{
+.info:hover, .info a:hover {
 	color: #fff;
 }
-
-.info i{
+.info i {
 	font-size: 17px;
 	display: inline-block;
 }
@@ -380,4 +335,3 @@ h1, h2, h3, h4, h5, h6 {
 	top: 1px;
 	display: none;
 }
-

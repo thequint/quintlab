@@ -103,23 +103,19 @@ function calculateBmi() {
 	if (finalBmi < 18.5) {
 		$('.message').html("Underweight");
 		new_weight = 18.5 * height * height / 10000;
-		console.log(new_weight + "|" + weight);
 		new_weight = new_weight - weight
 		$(".weight-change").html(new_weight.toFixed(2));
 
 	} else if (finalBmi >= 18.5 && finalBmi < 25) {
-
 		$('.message').html("Normal Weight");
 		$('.weight-change').html("");
 	} else if (finalBmi >= 25) {
 		new_weight = 25 * height * height / 10000;
-		console.log(new_weight + "|" + weight);
 		new_weight = weight - new_weight
 		$(".weight-change").html(new_weight.toFixed(2));
 		$('.message').html("Overweight");
 	} else {
 		new_weight = 25 * height * height / 10000;
-		console.log(new_weight + "|" + weight);
 		new_weight = weight - new_weight
 		$(".weight-change").html(new_weight.toFixed(2));
 		$('.message').html("Obesity");
