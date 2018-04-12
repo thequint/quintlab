@@ -23,8 +23,6 @@
 <meta name="standout" content=""/>
 <meta name="robots" content="noindex, nofollow" />
 <title>Body Mass Index Calculator - The Quint</title>
-
-
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 
@@ -88,24 +86,25 @@ el.parentNode.insertBefore(s, el);
 						<span><input type="radio" id="height-feet" name="select-height"><label for="height-feet">(Ft)</label></span>
 					</div>
 					
-					<div class="cal-bmi" href="javascript:void(0);">
-						<i class="fa fa-arrow-circle-left"></i>
-						<i class="fa fa-arrow-circle-right"></i>
+					<div class="cal-bmi">
+						<i class="fa toggle-icon fa-arrow-circle-left"></i>
+						<i class="fa toggle-icon fa-arrow-circle-right"></i>
 						<div class="result">
 							<div class="final-bmi">--.-</div>
 							<div class="message"></div>
-						</div>	
+							<div class="weight-change"></div>
+						</div>
+						
 					</div>
+					<div class="info"><span>Source: WHO</span> <i class="fa fa-info-circle"></i></div>
 				</div>
-				
-				
 				<div class="bmi-chart">
 					<h2><span>BMI Chart</span></h2>
 					<div class="scale-el">
 					<div class="scale-weight clearfix">
 						<div class="start">
-							<div><span>W</span> = lbs</div>
-							<div><span>W</span> = kgs</div>
+							<div><span>W</span> = Lbs</div>
+							<div><span>W</span> = Kgs</div>
 						</div>
 						<div class="start">
 							<div>100</div>
@@ -118,7 +117,7 @@ el.parentNode.insertBefore(s, el);
 					</div>
 					<div class="scale-height">
 						<div class="start">
-							<div><span>H</span> = cm/feet</div>
+							<div><span>H</span> = cm/Feet</div>
 							<div>4 &nbsp; 120</div>
 						</div>
 						
@@ -131,20 +130,6 @@ el.parentNode.insertBefore(s, el);
 						<span class="bmi-point"></span>
 					</div>
 				</div>
-				
-				
-<!--
-				<div class="form-group">
-					<input type="text" id="final_Bmi" placeholder="Your BMI" disabled>
-				</div>
-				<div class="form-group">
-					<input type="text" placeholder="My Comment" disabled>
-				</div>
-				<div class="btn-group clearfix">
-					<input class="btn btn-cal" id="Btn_CalBmi" type="button" value="Let's see">
-					<input class="btn btn-reset" id="Btn_Reset" type="reset" value="Reset">				
-				</div>
--->
 			</form>	
 		</div>
 		</div>	

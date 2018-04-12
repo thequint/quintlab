@@ -88,6 +88,8 @@ function calculateBmi() {
 			$('.cal-bmi.is-active').click(function () {
 				$(this).toggleClass('is-slide');
 				$('.result').toggle();
+				$('.info').toggle();
+				
 			});
 		}
 
@@ -100,44 +102,45 @@ function calculateBmi() {
 
 	if (finalBmi < 18.5) {
 		$('.message').html("Underweight");
-	}
-	else if (finalBmi >= 18.5 && finalBmi < 25) {
+		new_weight = 18.5 * height * height / 10000;
+		console.log(new_weight + "|" + weight);
+		new_weight = new_weight - weight
+		$(".weight-change").html(new_weight.toFixed(2));
+
+	} else if (finalBmi >= 18.5 && finalBmi < 25) {
 
 		$('.message').html("Normal Weight");
-	}
-	else if (finalBmi >= 25) {
+		$('.weight-change').html("");
+	} else if (finalBmi >= 25) {
+		new_weight = 25 * height * height / 10000;
+		console.log(new_weight + "|" + weight);
+		new_weight = weight - new_weight
+		$(".weight-change").html(new_weight.toFixed(2));
 		$('.message').html("Overweight");
 	} else {
+		new_weight = 25 * height * height / 10000;
+		console.log(new_weight + "|" + weight);
+		new_weight = weight - new_weight
+		$(".weight-change").html(new_weight.toFixed(2));
 		$('.message').html("Obesity");
 	}
-
 }
-
-
-/*
-
-Underweight = <18.5
-Normal weight = 18.5–24.9 
-Overweight = 25–29.9 
-Obesity = BMI of 30 or greater
-*/
-
 
 
 $("input").bind("keyup change", function (e) {
 	calculateBmi();
 });
 
-
-
-
-
-
-
+$(".info i").click(function () {
+	$('.info span').toggle(100);
+});
 
 
 var specialKeys = new Array();
-specialKeys.push(8); //Backspace
+specialKeys.push(8);
+specialKeys.push(37);
+specialKeys.push(39);
+specialKeys.push(9); //Backspace
 function IsNumeric(e) {
 	var keyCode = e.which ? e.which : e.keyCode
 	var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);

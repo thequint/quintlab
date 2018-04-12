@@ -1,0 +1,287 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900');
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #446eb5;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+}
+p {
+    line-height: 160%;
+    margin-bottom: 25px;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+button,
+a {
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+}
+.footer-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    background-color: #000;
+    text-align: center;
+    font-size: 12px;
+    line-height: 35px;
+    z-index: 10;
+    padding: 0px 5%;
+}
+.footer-wrapper a {
+    color: #fff;
+}
+.copy {
+    float: left;
+}
+.credits {
+    float: right;
+    cursor: pointer;
+}
+.creditsModal {
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+.modal-content {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 14px;
+}
+.modal-content span {
+    display: block;
+    padding: 4px 0px
+}
+.modalClose {
+    display: inline-block;
+    ;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+.top-wrapper {
+    padding: 15px 5%;
+}
+.top-left {
+    float: left;
+}
+.top-right {
+    float: right;
+}
+.volume {
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    ;
+}
+.logo {
+    max-width: 97px;
+}
+.pm-photo {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 50px;
+    left: -230px;
+    border-radius: 100%;
+    text-overflow: hidden;
+    border: 4px solid #fff;
+}
+.pm-photo img {
+    border-radius: 100%
+}
+.container {
+    margin: 0 auto;
+}
+.container.app-container {
+    text-align: center;
+    max-width: 320px;
+}
+.page-heading {
+    font-size: 32px;
+    font-family: Helvetica Neue;
+    line-height: 32px;
+    letter-spacing: -0.9px;
+    font-weight: 300;
+    margin: 10px 0px 10px 0px;
+}
+.page-heading span {
+    font-weight: 600;
+}
+.quote-container {
+    min-height: 140px;
+}
+.quote-section {
+    max-width: 320px;
+    display: inline-block;
+    position: relative;
+    font-family: Futura;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    margin-top: 30px;
+}
+.quote-section::before,
+.quote-section::after {
+    position: absolute;
+    font-family: Euphemia UCAS;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 0px;
+}
+.quote-section::before {
+    top: 12px;
+    left: -18px;
+    content: '“';
+}
+.quote-section::after {
+    position: absolute;
+    content: '”';
+    bottom: 6px;
+    right: -20px;
+}
+.button-section {
+    font-family: PT Sans;
+    margin: 40px 0px 0px 0px;
+}
+.btn-generator {
+    height: 45px;
+    border: 2px solid #fff;
+    background-color: #f1a31f;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 45px;
+    color: #446eb5;
+    padding: 0px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-generator:hover {
+    background-color: #ff9626;
+    color: #fff;
+}
+.sharea {
+    margin-top: 50px
+}
+.sharea ul {
+    margin: 0;
+    padding: 0;
+}
+.sharea ul li {
+    display: inline-block;
+    position: relative;
+}
+.sharea ul li a,
+.sharea ul li span {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    color: #446EB5;
+    border-radius: 100%;
+    margin: 0px 2px;
+}
+.sharea ul li span {
+    background-color: transparent;
+    font-weight: bold;
+    color: #fff;
+}
+.sharea ul li small {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 12px;
+}
+.button-section .btn-generator {
+    display: none;
+}
+.button-section#btnShow_1 #btnRand_1,
+.button-section#btnShow_2 #btnRand_2,
+.button-section#btnShow_3 #btnRand_3,
+.button-section#btnShow_4 #btnRand_4,
+.button-section#btnShow_5 #btnRand_5,
+.button-section#btnShow_6 #btnRand_6,
+.button-section#btnShow_7 #btnRand_7,
+.button-section#btnShow_8 #btnRand_8,
+.button-section#btnShow_9 #btnRand_9 {
+    display: inline-block;
+}
+/*Responsive CSS*/
+
+@media (max-width: 800px) {
+    .pm-photo {
+        display: inline-block;
+        position: static;
+    }
+}
+@media (max-width: 360px) {
+    .container.app-container {
+        max-width: 270px;
+    }
+    .btn-generator {
+        font-size: 16px;
+        line-height: 40px;
+        height: 40px;
+    }
+    .quote-section {
+        font-size: 20px;
+        margin-top: 18px;
+    }
+    .page-heading {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .pm-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .quote-container {
+        min-height: 120px;
+    }
+    .button-section {
+        margin-top: 10px;
+    }
+    .sharea ul li a,
+    .sharea ul li span {
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+    }
+}

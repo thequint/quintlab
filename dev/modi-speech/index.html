@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="copyright" content="" />
+		<title>Sample Page</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+		<!-- Custom styles for this template -->
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+		<link href="assets/css/animate.css" rel="stylesheet" media="all">
+		<link href="assets/css/base.css" rel="stylesheet" media="all">
+		<link href="assets/css/theme.css" rel="stylesheet" media="all">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+	</head>
+	<body>
+		<section class="wrapper top-wrapper">
+			<div class="container">
+				<div class="top-left">
+					<div class="logo">
+						<a href="http://thequint.com" target="_blank">
+							<img src="assets/images/logo.png" alt="theQuint">
+						</a>
+					</div>
+				</div>
+				<div class="top-right">
+					<a class="volume" id="playPause" href="javascript:void(0);"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			</section><!--/.top-wrapper-->
+			<section class="wrapper">
+				<div class="container app-container">
+					<div class="pm-photo">
+						<img src="assets/images/narendra-modi.png" alt="Narendra Modi">
+					</div>
+					<h1 class="page-heading animated fadeInDown">Narendra<span>Modi</span><br><span>Speech</span>Generator</h1>
+					<div class="quote-container">
+						<div class="quote-section animated bounceIn" id="copyShare">
+							Mitron, main aapse aaj bahut kuch kehna chaahta hu
+						</div>
+					</div>
+					<div class="button-section" id="btnShow_1">
+						<button type="button" class="btn-generator" id="btnRand_1" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_2" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_3" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+                        <button type="button" class="btn-generator" id="btnRand_4" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_5" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_6" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+                        <button type="button" class="btn-generator" id="btnRand_7" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_8" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+						<button type="button" class="btn-generator" id="btnRand_9" onclick="PlaySound()">GENERATE MODI SPEECH</button>
+                        
+                        
+                        
+					</div>
+				<audio id="audio" src="assets/media/gameOver.mp3" autostart="false" ></audio>
+				<div class="sharea animated fadeInUp">
+					<ul>
+						<li><small id="msg">Copy</small>
+							<a id="btnCopy" href="javascript:void(0)"><i class="fa fa-copy"></i></a>
+						</li>
+						<li><span>&</span></li>
+						<li>
+							<small>share</small>
+							<a target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;aaa?"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" class="twitter-share-button" href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer class="wrapper footer-wrapper" role="contentinfo">
+			<span class="copy"><a href="https://www.thequint.com/terms-and-conditions" target="_blank">2016 &copy; Copyright TheQuint</a></span>
+			<span class="credits">Credits</span>
+		</footer>
+		<div class="creditsModal animated">
+			<a class="modalClose" href="javascript:void(0)"><i class="fa fa-close" aria-hidden="true"></i></a>
+			<div class="modal-content">
+				<span>Production: Ritu Kapur</span>
+				<span>Concept: Aman Sethi</span>
+				<span>Content: Tejas Alhat</span>
+				<span>UI/UX: Jaivardhan Singh Channey</span>
+				<span>Programming: Achintya De</span>
+			</div>
+		</div>
+		<!--/.footer-wrapper-->
+		<div class="sentence" style="display: none;"><span class="word-1"></span> <span class="word-2"></span> <span class="word-3"></span> <span class="word-4"></span> <span class="word-5"></span> <span class="word-6"></span></div>
+		
+		<div class="data-container" style="display: none;">
+			<div class="word-list" id="setup_1">
+				<ul class="words_1">
+					<li>Sarkar</li>
+					<li>Congress</li>
+					<li>Aam Aadmi Party</li>
+					<li>RBI</li>
+                    <li>Amriki Sarkar</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>Mahatma Gandhi</li>
+					<li>Hitler</li>
+					<li>May the force be with you</li>
+					<li>mere mitron</li>
+                    <li>gau rakshako</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>ki vichar dhaara</li>
+					<li>ke kadmo</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>par chal rahi</li>
+					<li>pe aage badh rahi</li>
+					<li>ko badnaam kar rahi</li>
+					<li>ka naam kharaab kar rahi</li>
+					<li>main pakode tal rahi</li>
+				</ul>
+                
+                	<ul class="words_5">
+					<li>hai</li>
+					
+				</ul>
+                
+                	<ul class="words_6">
+					<li></li>
+					
+				</ul>
+			</div>
+			<div class="word-list" id="setup_2">
+				<ul class="words_1">
+					<li>MNREGA</li>
+					<li>demonetisation</li>
+					<li>Jan Dhan Yojana</li>
+					<li>Lok Pal</li>
+					<li>Gau rakshak</li>
+					<li>yeh GDP</li>
+					<li>Lok sankhya</li>
+					<li>Kisaan aatma hatya</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>aap ki</li>
+					<li>humari</li>
+					<li>Congress ki</li>
+					<li>Sarkar ki</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>vifalta ka</li>
+					<li>safalta ka</li>
+					<li>dur dasha ka</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>jeeta jaagta</li>
+					<li>sabse bada</li>
+				</ul>
+                
+                	<ul class="words_5">
+					<li>saboot</li>
+					<li>smaarak</li>
+				</ul>
+                
+                	<ul class="words_6">
+					<li>hai</li>
+				</ul>
+			</div>
+			<div class="word-list" id="setup_3">
+				<ul class="words_1">
+					<li>yeh pehli</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>sarkar</li>
+					<li>bar</li>
+					<li>scheme</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>hai jo</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>pal pal</li>
+					<li>pai pai</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>ka hisaab</li>
+					<li>aam aadmi ki jaan</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li>de rahi hai</li>
+					<li>le rahi hai</li>
+				</ul>
+			</div>
+            
+            <div class="word-list" id="setup_4">
+				<ul class="words_1">
+					<li>Kaale dhan</li>
+					<li>Pakistan</li>
+					<li>Corruption</li>
+					<li>Aatankwaad</li>
+					<li>Kejriwal</li>
+					<li>China</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>ko rokne ke liye</li>
+					<li>ke khilaaf</li>
+					<li>ko sharminda karne ke liye</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>hum milkar</li>
+					<li>hum sab saath mein</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>kadam uthaenge</li>
+					<li>ladenge</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li></li>
+				</ul>
+                
+                <ul class="words_6">
+					<li></li>
+				</ul>
+			</div>
+            
+            <div class="word-list" id="setup_5">
+				<ul class="words_1">
+					<li>kya</li>
+					<li>kyun</li>
+					<li>aapko pata hai,</li>
+					<li>janta ko pata hai ki</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>hum</li>
+					<li>opposition wale</li>
+					<li>congress wale</li>
+					<li>BJP</li>
+					<li>vipaksh k log</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>sansad</li>
+					<li>lok sabha</li>
+					<li>Vidhaan Sabha</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>behas karne</li>
+					<li>chori karne</li>
+					<li>mazaak karne</li>
+					<li>blue film dekhne</li>
+					<li>porn dekhne</li>
+					<li>ashleelta failaane</li>
+					<li>sone</li>
+					<li>time pass karne</li>
+					<li>khaana khaane</li>
+					<li>mann ki baat karne</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>aate</li>
+					<li>jaate</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li>hain</li>
+				</ul>
+			</div>
+            
+            <div class="word-list" id="setup_6">
+				<ul class="words_1">
+					<li>Modi</li>
+					<li>Nawaaz</li>
+					<li>Kejriwal</li>
+					<li>Hillary</li>
+					<li>Trump</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>ke mann ki baat</li>
+					<li>ke dil ki baat</li>
+					<li>ki har baat</li>
+					<li>ke pet ki baat</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>desh</li>
+					<li>Pakistan</li>
+					<li>har koi</li>
+					<li>America</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>jaanta</li>
+					<li>maanta</li>
+					<li>sunta</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>hai</li>
+					<li>tha</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li></li>
+					
+				</ul>
+			</div>
+            
+             <div class="word-list" id="setup_7">
+				<ul class="words_1">
+					<li>Itne saalon ke baad bhi</li>
+					<li>aajtak</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>gareeb ko gaddhe khodne</li>
+					<li>kisaano ko aatmahatya</li>
+					<li>bachcho ko padhne</li>
+					<li>Sunny Deol ko dance karne</li>
+					<li>Katrina ko acting karne</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>ke liye</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>kisne</li>
+					<li>humne</li>
+					<li>UPA ne</li>
+					<li>NDA ne</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>majboor</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li>kiya hai</li>
+				</ul>
+			</div>
+            
+             <div class="word-list" id="setup_8">
+				<ul class="words_1">
+					<li>Duniya</li>
+					<li>Desh</li>
+					<li>China</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>ke har kone mein</li>
+					<li>tak</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>yeh baat</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>pohochni</li>
+					<li>goonjni</li>
+					<li>sunayi jaani</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>chahiye ki</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li>Make in India</li>
+					<li>this happens only in India</li>
+					<li>Baba ko bheem pasand hai</li>
+					<li>Congress corrupt hai</li>
+					<li>mujhe bhi base pasand hai</li>
+				</ul>
+			</div>
+            
+             <div class="word-list" id="setup_9">
+				<ul class="words_1">
+					<li>Humari</li>
+				</ul>
+				
+				<ul class="words_2">
+					<li>Beti Bachao Yojna</li>
+					<li>Jan Dhan Yojna</li>
+					<li>schemes</li>
+				</ul>
+				
+				<ul class="words_3">
+					<li>iss desh ki betiyon ke liye</li>
+					<li>lonely engineers ke liye</li>
+					<li>UP aur Bihar ke liye</li>
+					<li>Punjab aur Haryana ke liye</li>
+				</ul>
+				
+				<ul class="words_4">
+					<li>bhaagya deep</li>
+					<li>vikas deep</li>
+					<li>bahut zaroori</li>
+				</ul>
+                
+                <ul class="words_5">
+					<li>saabit hongi</li>
+					<li>hai</li>
+				</ul>
+                
+                <ul class="words_6">
+					<li></li>
+				</ul>
+			</div>
+            
+		</div>
+		<!-- js files-->
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/functions.js"></script>
+	</body>
+</html>

@@ -10,7 +10,7 @@ html, body {
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	background-color: #eeeeee;
+	background-color: transparent;
 	color: #989898;
 	font-size: 17px;
 	width: 100%;
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 300px;
 	height:250px; 
 	background:#fff;
-	margin: 10px auto;
+	margin: 0px auto;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
 	position: relative;
 }
@@ -305,7 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 	cursor: pointer;
 }
 
-.cal-bmi i{
+
+.cal-bmi i.toggle-icon{
 	font-size:35px;
 	position: absolute;
 	top: 50%;
@@ -348,3 +349,35 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgba(255,255,255,0.9);
 	line-height: 110%;
 }
+
+
+.info {
+	font-size: 13px;
+	font-weight: 600;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: none;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.info , .info a{
+	color: rgba(255,255,255,0.9);
+}
+.info:hover, .info a:hover{
+	color: #fff;
+}
+
+.info i{
+	font-size: 17px;
+	display: inline-block;
+}
+.info span {
+	position: absolute;
+	white-space: nowrap;
+	right: 20px;
+	top: 1px;
+	display: none;
+}
+

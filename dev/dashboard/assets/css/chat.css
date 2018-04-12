@@ -146,15 +146,28 @@ li:nth-child(even) .remove-profile{
 }
 
 
+ul#preview li{}
+
 ul#preview li figcaption {
-/*
-	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
-	padding: 10px;
-*/
 	border-radius: 4px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
+	max-width: 350px;
+	width: 100%;
+}
+
+ul#preview li figcaption iframe{
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+li.message-right figcaption{
+	float: right;
+}
+
+.message-bulder-section li.message-right figcaption{
+	float: none;
 }
 
 
@@ -280,5 +293,17 @@ ul#preview li figcaption {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qAotsoDnhsc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 */
+
+
+.inner-block .dynamic-list li:before,  .inner-block .dynamic-list li:after{
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.inner-block .dynamic-list li:after {
+	clear: both;
+}
+
+
 
 
