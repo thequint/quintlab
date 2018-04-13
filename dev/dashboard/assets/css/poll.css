@@ -1,0 +1,182 @@
+.draggable-wrap {
+    margin:0 auto;
+    width:350px;
+    position:relative;
+}
+.drag-inputs {
+    margin-bottom: 10px;
+}
+
+.drag-inputs input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #87d7b0;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+.drag-inputs button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #87d7b0;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #87d7b0;
+    border-left: none;
+    cursor: pointer;
+}
+.drag-inputs button:hover {
+    background: #0b7dda;
+}
+
+.drag-inputs::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.drag-container {
+    width:100%;
+    background-color: #87d7b0;
+}
+
+
+.drag-content {
+    width: 230px;
+    font-size: 18px;
+}
+.drag-content .drag-question {
+    padding: 0 0 7px 0;
+    width: 100%;
+    color: #fff;
+    
+    font-weight: 500;
+    text-transform: uppercase;  
+}
+.drag-content .drag-answer {
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase; 
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 5px;
+}
+.drag-content .drag-answer:before {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+
+}
+.drag-content .drag-answer span {
+    width: 46%;
+    line-height: 50px;
+    display: inline-block;
+}
+.resize-container {
+    display: inline-block;
+    width: 100%;
+}
+.resize-drag {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cropit-preview {
+    background-color: #ff6f6a;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.cropit-preview-image-container {
+    cursor: move;
+}
+
+.image-size-label {
+    margin-top: 10px;
+}
+
+
+
+
+
+.controls-wrapper {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+}
+.controls-wrapper button {
+    border: none;
+    cursor: pointer;
+}
+.controls-wrapper input:focus,
+.controls-wrapper button:focus {
+    outline: none;
+}
+.controls-wrapper .rotation-btns {
+    
+    display: inline-block;
+}
+.controls-wrapper .slider-wrapper {
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+.controls-wrapper .slider-wrapper * {
+    vertical-align: middle;
+}
+.controls-wrapper .slider-wrapper .small-image {
+    font-size: 16px;
+}
+.controls-wrapper .slider-wrapper .large-image {
+    font-size: 24px;
+}
+
+.controls-wrapper .slider-wrapper .cropit-image-zoom-input {
+    width: 150px;
+    margin: 0 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #eee;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.controls-wrapper .export-wrapper {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
