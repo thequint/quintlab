@@ -39,23 +39,44 @@ button:focus {
     clear: both;
     display: table;
 }
+
 .drag-container {
     width:100%;
+    /*background-color: #87d7b0;*/
+}
+.drag-preview {
+    position: relative;
+}
+.image-editor {
     background-color: #87d7b0;
 }
 
-
 .drag-content {
+    display: none;
     width: 230px;
     font-size: 18px;
 }
+.drag-content input {
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+    color: #212529;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+}
+
 .drag-content .drag-question {
     padding: 0 0 7px 0;
     width: 100%;
     color: #fff;
-    
     font-weight: 500;
     text-transform: uppercase;  
+}
+.drag-content .drag-question input {
+    color: #fff;
 }
 .drag-content .drag-answer {
     position: relative;
@@ -65,7 +86,9 @@ button:focus {
     background-color: #f1f1f1;
     text-align: center;
     border-radius: 5px;
+    padding: 10px 0;
 }
+
 .drag-content .drag-answer:before {
     margin: 0 auto;
     position: absolute;
@@ -76,12 +99,17 @@ button:focus {
     width: 2px;
     height: 100%;
     background-color: #ccc;
-
 }
-.drag-content .drag-answer span {
-    width: 46%;
-    line-height: 50px;
-    display: inline-block;
+.drag-content .drag-answer::after {
+    content: "";
+    clear: both;
+    display: table;
+    font-size:0;
+}
+.drag-answer--left,
+.drag-answer--right {
+    float: left;
+    width: 50%;
 }
 .resize-container {
     display: inline-block;
@@ -120,8 +148,9 @@ button:focus {
 
 
 .controls-wrapper {
+    display: none;
     font-size: 16px;
-    margin: 10px 0;
+    padding: 10px 0;
     text-align: center;
     position: relative;
 }
@@ -168,8 +197,43 @@ button:focus {
 .controls-wrapper .export-wrapper {
     display: inline-block;
 }
+.drag-btns {
+    /*background-color: #ccc;*/
+    padding: 2px 0;
+    display: none;
+}
 
-
+.drag-btns .btn-prev,
+.drag-btns .btn-next {
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: #ff6f6a;
+    display: inline-block;
+    padding: 2px 7px 3px;
+    cursor: pointer;
+}
+.drag-btns .btn-next {
+    text-align: right;
+    float: right;
+}
+.drag-submit {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #36154f;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.drag-submit:hover {
+    background-color: #fbc042;
+}
 
 
 
