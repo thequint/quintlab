@@ -32,7 +32,6 @@
 <link href="assets/css/base.css" rel="stylesheet" media="all">
 <link href="assets/css/theme.css" rel="stylesheet" media="all">
 
-
 <!-- Google Analytics -->
 <script> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script>
 
@@ -54,46 +53,33 @@ el.parentNode.insertBefore(s, el);
 <!-- End comScore Tag -->
 </head>
 <body>
-	
 <div class="container app-container">
-	<div class="app-inner-container">
-		<figure>
-			<div class="avatar"><img src="assets/images/avatar.jpg" alt=""></div>
-			<figcaption>
-				<div class="textarea str" id="copyShare">
-					<span class="placeholder-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</span> 
-				</div>
-				<div class="buttons clearfix">
-					<div class="buttons-left">
-						<ul class="clearfix">
-							<li><a class="btn-filter btn-circle" data-filter="men" href="javascript:void(0);"><i class="fa fa-male"></i></a></li>
-							<li><a class="btn-filter btn-circle" data-filter="women" href="javascript:void(0);"><i class="fa fa-female"></i></a></li>
-						</ul>
-					</div>
-					<div class="buttons-right">
-						<ul class="clearfix">
-							
-							<li><span id="msg"></span><a id="btnCopy" class="btn-copy btn-circle" href="javascript:void(0);"><i class="fa fa-copy"></i></a></li>
-							<li><button class="btn-generator">Generate Tweet</button></li>
-						</ul>
-					</div>
-				</div>
-			</figcaption>
-		</figure>
-	</div>	
-</div>	
-	
-	
-<!--
-<div class="str"></div><br>
-<button>click</button>
-<ul>
-	<li data-filter="men">men</li>
-	<li data-filter="women">women</li>
-</ul>
--->
-
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>  
+  <div class="app-inner-container">
+    <figure>
+      <div class="avatar"><img src="assets/images/avatar.jpg" alt=""></div>
+      <figcaption>
+        <div class="textarea str" id="copyShare"> 
+			<span class="placeholder-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</span> 
+		</div>
+        <div class="buttons clearfix">
+          <div class="buttons-left">
+            <ul class="clearfix">
+              <li><a class="btn-filter btn-circle" data-filter="men" href="javascript:void(0);"><i class="fa fa-male"></i></a></li>
+              <li><a class="btn-filter btn-circle" data-filter="women" href="javascript:void(0);"><i class="fa fa-female"></i></a></li>
+            </ul>
+          </div>
+          <div class="buttons-right">
+            <ul class="clearfix">
+              <li><span id="msg"></span><a id="btnCopy" class="btn-copy btn-circle" href="javascript:void(0);"><i class="fa fa-copy"></i></a></li>
+              <li><button class="btn-generator">Generate Tweet</button></li>
+            </ul>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 </html>
