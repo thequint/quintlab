@@ -1,0 +1,153 @@
+@charset "utf-8";
+.loading {
+	display: none;
+}
+html, body {
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background-color: transparent;
+	color: #14171a;;
+	font-size: 16px;
+	width: 100%;
+	height: auto;
+	overflow-x: hidden;
+}
+p {
+	line-height: 130%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #4d4d4d;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	font-weight: 900;
+	font-size: 100%;
+}
+/*Start CSS*/
+.container{
+	max-width: 600px;
+	margin: 50px auto;
+	background: #e8f4fb;
+	border-radius: 4px;
+/*	box-shadow: 0px 0px 2px rgba(0,0,0,0.3);*/
+	border: 1px solid rgba(72,170,230,0.1);
+}
+
+.app-inner-container{
+	position: relative;
+	margin: 20px;
+}
+
+.avatar{
+	width: 60px;
+	height:60px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.textarea{
+	border: 2px solid #a3d4f2;
+	padding: 15px 18px;
+	border-radius: 8px;
+	background: #fff;
+	min-height: 100px;
+	font-size: 17px;
+}
+.placeholder-text{
+	color: #c0cbd2;
+}
+
+.app-inner-container figcaption{
+	padding: 3px 0px 0px 75px;
+	
+}
+.buttons{
+	padding-top: 15px;
+}
+.buttons-left{
+	float: left;
+}
+
+.buttons-right{
+	float: right;
+}
+
+.btn-generator {
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	background: #48aae6;
+	height: 38px;
+	padding: 0px 13px;
+	border-radius: 32px;
+	line-height: 38px;
+	font-weight: 600;
+}
+
+.btn-generator:hover{
+	background: #1B95E0;
+}
+
+.buttons ul li{
+	float: left;
+	margin-left: 10px;
+	position: relative;
+}
+.buttons-left ul li:first-child{
+	margin-left:0;
+}
+
+
+.btn-circle{
+	width: 38px;
+	height: 38px;
+	display: block;
+	border: 1px solid #48aae6;;
+	background: #fff;
+	border-radius: 100%;
+	text-align: center;
+	color: #48aae6;
+}
+.btn-circle i{
+	line-height: 36px;
+	font-size: 18px;
+}
+
+.buttons-left .btn-circle i{
+	font-size:22px;
+}
+
+.btn-circle:hover{
+	background: #48aae6;
+	color: #fff;
+}
+
+#msg {
+	position: absolute;
+	top: 11px;
+	left: -51px;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+
+
