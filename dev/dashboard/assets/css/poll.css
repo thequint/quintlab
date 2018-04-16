@@ -55,7 +55,37 @@ button:focus {
     display: none;
     width: 230px;
     font-size: 18px;
+
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 10px;
+    border-radius: 6px;
 }
+
+
+.resize-container {
+    display: inline-block;
+    width: 100%;
+}
+/*.resize-drag {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+}*/
+
 .drag-content input {
     width: 100%;
     height: 20px;
@@ -111,22 +141,7 @@ button:focus {
     float: left;
     width: 50%;
 }
-.resize-container {
-    display: inline-block;
-    width: 100%;
-}
-.resize-drag {
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: rgba(255,255,255, 0.3);
-    padding: 10px;
-    border-radius: 6px;
-}
+
 
 .cropit-preview {
     background-color: #ff6f6a;
