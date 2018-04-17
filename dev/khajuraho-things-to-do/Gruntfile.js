@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    '../../prod/tansen-sangeet-samaroh/assets/css/bundles-style.min.css': [
+                    '../../prod/khajuraho-things-to-do/assets/css/bundles-style.min.css': [
                         'assets/css/font-awesome.min.css',
                         'assets/css/animate.css',
                         'assets/css/base.css',
@@ -27,8 +27,7 @@ module.exports = function(grunt) {
                 src: [
                     'assets/js/jquery.min.js',
                     'assets/js/jquery.easing.min.js',
-                    'assets/js/wow.min.js',
-                    'assets/api/functions.js'
+                    'assets/js/wow.min.js'
                 ],
                 dest: 'assets/js/bundles-script.js',
             },
@@ -37,7 +36,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    '../../prod/tansen-sangeet-samaroh/assets/js/bundles-script.min.js': ['assets/js/bundles-script.js']
+                    '../../prod/khajuraho-things-to-do/assets/js/bundles-script.min.js': ['assets/js/bundles-script.js']
                 }
             }
         },
@@ -49,7 +48,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'assets/images/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: '../../prod/tansen-sangeet-samaroh/assets/images/'
+                    dest: '../../prod/khajuraho-things-to-do/assets/images/'
                 }]
             }
         }
