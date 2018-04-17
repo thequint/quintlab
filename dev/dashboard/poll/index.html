@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Polls</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
+<!-- Custom -->
+<link href="assets/css/base.css" rel="stylesheet">
+<link href="assets/css/poll.css" rel="stylesheet"> 
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body onload="adjust_iframe_height()">
+<div class="main-wrap">
+	
+
+	<div class="draggable-wrap">
+
+        <div class="drag-container resize-container">
+            <div class="image-editor">
+                <!-- <div class="drag-preview">
+                    <div class="cropit-preview"></div>
+                    <div class="drag-content resize-drag">
+                        <div class="drag-question"><span class="makeEditable">Apples or Oranges</span></div>
+                        <div class="drag-answer">
+                            <div class="drag-answer--left"><span class="makeEditable">Apples</span></div>
+                            <div class="drag-answer--right"><span class="makeEditable">Oranges</span></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="drag-preview">
+				    <div class="cropit-preview cropit-image-loaded" style="position: relative; width: 350px; height: 350px;">
+				        <div class="cropit-preview-image-container" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 100%;"><img class="cropit-preview-image" alt="" src="assets/images/thumb.jpg" style="transform-origin: left top 0px; will-change: transform; transform: translate(-236.9px, -110.9px) scale(0.635) rotate(0deg);"></div>
+				    </div>
+				    <div class="drag-content resize-drag" style="display: block; transform: translate(43.758px, -24.273px); width: 240.175px; height: 116.535px;" data-x="43.75799560546875" data-y="-24.27301025390625">
+				        <div class="drag-question">
+				        	<span>Apples or Oranges</span>
+				        </div>
+				        <div class="drag-answer">
+				            <div class="drag-answer--left">
+				            	<span>Apples</span>
+				            </div>
+				            <div class="drag-answer--right">
+				            	<span>Oranges</span>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+
+
+            </div>
+        </div>
+
+
+        <!-- <form id="foo">
+            <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
+            <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
+        </form> -->
+
+
+
+
+    </div>
+
+
+</div>
+    
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/spreadsheet.js"></script> 
+<!-- <script src="assets/js/dynamic_functions.js"></script> -->
+<!-- <script src="assets/js/functions.js"></script> -->
+
+<script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
+
+<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+
+
+
+<script>
+
+	// var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
+
+	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1vDgiznBMahleOg-UdIStijlMiVr_29ijnbgNmNuGRrI/pubhtml'; // New form quiz sheet
+
+	Tabletop.init({
+		key: public_spreadsheet_contact,
+		callback: showInfo,
+		simpleSheet: true
+	});
+
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+	var dashboard_data;
+
+	function showInfo(data) {
+		//console.log( JSON.parse(data[18].Comments)[0]);
+
+		
+
+		dashboard_data = JSON.parse(data[getParameterByName('id')].Comments)[0];
+		console.log(dashboard_data);
+	}
+
+	function adjust_iframe_height() {
+	    var actual_height = document.body.scrollHeight;
+	    //console.log("height is", actual_height);
+	    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
+	}
+</script>
+</body>
+</html>

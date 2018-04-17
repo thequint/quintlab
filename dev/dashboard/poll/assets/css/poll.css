@@ -1,3 +1,31 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: auto;
+    color: #3c3c3c;
+    background-color: #f4f4f4;
+    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Quicksand', sans-serif;*/
+    /*background: url(../images/loading-body.gif) no-repeat center;*/
+    background-size: 100px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.main-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 350px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
 .draggable-wrap {
     margin:0 auto;
     width:350px;
@@ -46,6 +74,10 @@ button:focus {
 }
 .drag-preview {
     position: relative;
+}
+
+.drag-preview img {
+    max-width: inherit;
 }
 .image-editor {
     background-color: #87d7b0;
@@ -233,6 +265,7 @@ button:focus {
     float: right;
 }
 .drag-submit {
+    width: 100%;
     color: #fff;
     font-size: 20px;
     padding: 10px 0;
@@ -242,6 +275,7 @@ button:focus {
     text-align: center;
     text-transform: uppercase;
     background-color: #36154f;
+    border: none;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;

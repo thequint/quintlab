@@ -16,7 +16,7 @@
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
 
-<link rel="stylesheet" type="text/css" href="assets/css/poll.css">
+<link rel="stylesheet" type="text/css" href="poll/assets/css/poll.css">
 
 </head>
 
@@ -107,17 +107,22 @@
                         </div>
                     </div>
                     <div class="drag-btns">
-                        <span class="drag-submit">Submit</span>
+                        <!-- <span class="drag-submit">Submit</span> -->
+                        <form id="foo">
+                            
+                            <button type="submit" class="drag-submit">Submit</button>
+                            <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
+                        </form>
                         <!-- <span class="btn-prev">Prev</span>
                         <span class="btn-next">Next</span> -->
                     </div>
                 </div>
 
 
-                <form id="foo">
+                <!-- <form id="foo">
                     <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
                     <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
-                </form>
+                </form> -->
 
 
 
@@ -158,15 +163,8 @@
 
 <script type="text/javascript">
 
-    var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1Tm-evipM7HZuMc0hiX6mpZ_QilShOugEsVZp5kHkYVg/pubhtml'; // New form quiz sheet
+    var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1vDgiznBMahleOg-UdIStijlMiVr_29ijnbgNmNuGRrI/pubhtml'; // New form quiz sheet
 
-    var poll_data = [];
-
-    function arrayFunction() {
-        poll_data.push({});
-        poll_data['imgURL'] = $(".upload_input").val();
-        poll_data['imgTransform'] = $(".cropit-preview-image").attr("style", );
-    }
 
     // Upload BTN
     $(".upload_btn").click(function(e){
@@ -181,8 +179,6 @@
             $(".controls-wrapper").fadeIn();
             $(".drag-btns").fadeIn();
             reloadFunc();
-            arrayFunction();
-            console.log(poll_data);
         }
     });
 
@@ -206,10 +202,10 @@
         });
     }
 
-    $(".drag-submit").click(function(){
-        $(".drag-preview").find(".resize-drag").removeClass("resize-drag");
-        $(".drag-preview").find(".makeEditable").removeClass("makeEditable");
-    });
+    // $(".drag-submit").click(function(){
+    //     $(".drag-preview").find(".resize-drag").removeClass("resize-drag");
+    //     $(".drag-preview").find(".makeEditable").removeClass("makeEditable");
+    // });
 
 
     // editable
@@ -336,25 +332,33 @@
 <script>
 
 
+    var poll_data = [];
 
+    function arrayFunction() {
+        poll_data.push({});
+        poll_data[0]['imgURL'] = $(".upload_input").val();
+        poll_data[0]['imgTransform'] = $(".cropit-preview-image").attr("style", );
+
+        poll_data[0]['resizeDrag'] = $(".resize-drag").attr("style", );
+        // poll_data[0]['resizeDragX'] = $(".resize-drag").attr("data-x", );
+        // poll_data[0]['resizeDragY'] = $(".resize-drag").attr("data-y", );
+
+    }
 
 
     var request;
 
-
-
-
     $("#foo").submit(function(event) {
         // console.log("init");		
         event.preventDefault();
-        console.log(poll_data);
 
-        poll_data.push({});
+        arrayFunction();
+        console.log(poll_data);
 
         // quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
 
         
-        // $("#Comments").val(JSON.stringify(quiz_data));
+        $("#Comments").val(JSON.stringify(poll_data));
 
 
         // add value to the textarea
@@ -411,13 +415,13 @@
                 $inputs.prop("disabled", false);
             });
 
-            $('#foo').find('input, textarea').val('');
+            //$('#foo').find('input, textarea').val('');
 
             // var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/quizzes/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
             // $('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
         }
         // prevent default posting of form
-        //  event.preventDefault();
+         // event.preventDefault();
     });
 </script>
 </body>
