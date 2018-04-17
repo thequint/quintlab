@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
 	font-family: 'libel_suitregular';
-	src: url('../fonts/libel-suit-rg-webfont.woff2') format('woff2'),  url('../fonts/libel-suit-rg-webfont.woff') format('woff');
+	src: url('../fonts/libel-suit-rg-webfont.woff2') format('woff2'), url('../fonts/libel-suit-rg-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -12,7 +12,7 @@ body {
 	font-size: 17px;
 	width: 100%;
 	height: auto;
-	background: #ffffff;
+	background-color: #e5e6e8;
 }
 p {
 	line-height: 130%;
@@ -56,12 +56,12 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 	color: #43dbc0;
 }
-.doctors-slider figure{
-	position:relative;
+.doctors-slider figure {
+	position: relative;
 	min-height: 80px;
-	padding:2px 0 0 90px;
+	padding: 2px 0 0 90px;
 }
-.doctors-slider figure .doctor-img{
+.doctors-slider figure .doctor-img {
 	width: 80px;
 	height: 80px;
 	overflow: hidden;
@@ -78,7 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 120%;
 	margin: 0 0 5px 0;
 }
-
 .doctors-slider figcaption h4 {
 	color: #333;
 	font-family: 'Oswald', sans-serif;
@@ -86,8 +85,3 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 120%;
 	margin: 0 0 0px 0;
 }
-
-
-
-
-

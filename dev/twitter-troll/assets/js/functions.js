@@ -159,5 +159,11 @@ function copyToClipboard(elem) {
 }
 
 
+// Toltip
+
+$('.btn-circle').darkTooltip({
+    animation:'fadeIn'
+});
+
 
 

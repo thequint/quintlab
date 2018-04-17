@@ -64,13 +64,14 @@ el.parentNode.insertBefore(s, el);
         <div class="buttons clearfix">
           <div class="buttons-left">
             <ul class="clearfix">
-              <li><a class="btn-filter btn-circle" data-filter="men" href="javascript:void(0);"><i class="fa fa-male"></i></a></li>
-              <li><a class="btn-filter btn-circle" data-filter="women" href="javascript:void(0);"><i class="fa fa-female"></i></a></li>
+              <li><a class="btn-filter btn-circle" data-tooltip="Filter Men" data-filter="men" href="javascript:void(0);"><i class="fa fa-male"></i></a></li>
+              <li><a class="btn-filter btn-circle" data-tooltip="Filter Women" data-filter="women" href="javascript:void(0);"><i class="fa fa-female"></i></a></li>
+              <li><a class="btn-circle" data-tooltip="Filter All" data-filter="" href="javascript:void(0);"><i class="fa fa-users"></i></a></li>
             </ul>
           </div>
           <div class="buttons-right">
             <ul class="clearfix">
-              <li><span id="msg"></span><a id="btnCopy" class="btn-copy btn-circle" href="javascript:void(0);"><i class="fa fa-copy"></i></a></li>
+              <li><span id="msg"></span><a id="btnCopy" class="btn-copy btn-circle" data-tooltip="Copy" href="javascript:void(0);"><i class="fa fa-copy"></i></a></li>
               <li><button class="btn-generator">Generate Tweet</button></li>
             </ul>
           </div>
@@ -80,6 +81,7 @@ el.parentNode.insertBefore(s, el);
   </div>
 </div>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.darktooltip.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 </html>
