@@ -531,7 +531,7 @@ opacity: 1;
 	animation-name: fadeIn;
 }
 .dark-tooltip.dark {
-	margin-top: -60px;
+/*	margin-top: -60px;*/
 }
 
 /*Responsive CSS*/
