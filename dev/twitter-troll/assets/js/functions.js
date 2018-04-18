@@ -187,6 +187,3 @@ $('.filter-all').click(function(){
 	$('.filter-men').parent().removeClass('is-active');
 	$('.filter-women').parent().removeClass('is-active');
 });
-
-
-
