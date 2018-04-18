@@ -30,7 +30,7 @@ var content_array = [
     ]
   }
 ];
-
+var data_filter;
 function random(filter) {
   $(".str").html("");
   var choose_setup = Math.floor(Math.random() * content_array.length);
@@ -74,10 +74,17 @@ function random(filter) {
 
 
 $(".btn-generator").click(function() {
+	if(data_filter=="null")
+		{
   random();
+		}
+	else
+		{
+	  random(data_filter);		
+		}
 });
 $(".btn-filter").click(function() {
-  random($(this).attr("data-filter"));
+ data_filter=$(this).attr("data-filter");
 });
 
 
@@ -166,15 +173,20 @@ $('.btn-circle').darkTooltip({
 });
 
 
-$('.buttons-left ul li').click(function(){
-	$('.buttons-left ul li').removeClass('is-active');
-	$(this).addClass('is-active');
+$('.filter-men').click(function(){
+	$('.filter-women').parent().removeClass('is-active');
+	$(this).parent().addClass('is-active');
+});
+
+$('.filter-women').click(function(){
+	$('.filter-men').parent().removeClass('is-active');
+	$(this).parent().addClass('is-active');
+});
+
+$('.filter-all').click(function(){
+	$('.filter-men').parent().removeClass('is-active');
+	$('.filter-women').parent().removeClass('is-active');
 });
 
 
-
-
-$('.btn-generator').click(function(){
-	$('.buttons-left ul li').removeClass('is-active');
-});
 

@@ -60,7 +60,7 @@ el.parentNode.insertBefore(s, el);
 			<div class="bmi-inner-container">
 			<form name="BMI" method="post">
 				<div class="form-group">
-					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in Kg">
+					<input type="text" maxlength="5" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-weight" placeholder="Your Weight in Kg">
 					<span id="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
 					<div class="radio-group">
 						<span><input type="radio" id="weight-kg" checked name="select-weight"><label for="weight-kg">(Kg)</label></span>
@@ -69,16 +69,16 @@ el.parentNode.insertBefore(s, el);
 				</div>
 				<div class="form-group">
 					<div class="cm-height">
-					<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in Cm">
+					<input type="text" maxlength="3" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height" placeholder="Your Height in Cm">
 					</div>
 					
 					<div class="feet-height clearfix">
 						<div class="feet-input">
-						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-feet" placeholder="Feet">
+						<input type="text" maxlength="2" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-feet" placeholder="Feet">
 						</div>
 						
 						<div class="feet-input">
-						<input type="text" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-inch" placeholder="Inch">
+						<input type="text" maxlength="2" onkeypress="return IsNumeric(event);" onpaste="return false;" ondrop="return false;" id="input-height-inch" placeholder="Inch">
 						</div>
 					</div>
 					<div class="radio-group">

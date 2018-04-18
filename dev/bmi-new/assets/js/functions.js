@@ -137,6 +137,7 @@ $(".info i").click(function () {
 
 var specialKeys = new Array();
 specialKeys.push(8);
+specialKeys.push(46);
 specialKeys.push(37);
 specialKeys.push(39);
 specialKeys.push(9); //Backspace
