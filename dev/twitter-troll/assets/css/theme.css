@@ -123,10 +123,13 @@ h1, h2, h3, h4, h5, h6 {
 .buttons-left .btn-circle i {
 	font-size: 22px;
 }
-.btn-circle:hover {
+.btn-circle:hover, li.is-active .btn-circle {
 	background: #48aae6;
 	color: #fff;
 }
+
+
+
 #msg {
 	position: absolute;
 	top: 11px;
@@ -534,6 +537,9 @@ opacity: 1;
 /*Responsive CSS*/
 
 @media (max-width: 480px) {
+#msg{
+	display: none !important;
+	}	
 .app-inner-container {
 	margin: 10px;
 }
@@ -541,10 +547,10 @@ opacity: 1;
 	width: 32px;
 	height: 32px;
 }
-	.app-inner-container figcaption {
+.app-inner-container figcaption {
 	padding: 3px 0px 0px 38px;
 }
-	.textarea {
+.textarea {
 	padding: 8px 8px;
 	min-height: 100px;
 	font-size: 16px;
@@ -562,7 +568,7 @@ opacity: 1;
 	margin-left: 8px;
 }
 
-	.buttons-left .btn-circle i {
+.buttons-left .btn-circle i {
 	font-size: 19px;
 }
 
@@ -583,5 +589,9 @@ opacity: 1;
 	.buttons ul li {
 	margin-left: 3px;
 }
+			
 }
+
+
+
 

@@ -35,7 +35,7 @@ function random(filter) {
   $(".str").html("");
   var choose_setup = Math.floor(Math.random() * content_array.length);
   if (filter != null) {
-    console.log(content_array[choose_setup].set[0].category +"|"+ filter);
+    //console.log(content_array[choose_setup].set[0].category +"|"+ filter);
     if(content_array[choose_setup].set[0].category!=filter)
       {
         random(filter);
@@ -166,4 +166,15 @@ $('.btn-circle').darkTooltip({
 });
 
 
+$('.buttons-left ul li').click(function(){
+	$('.buttons-left ul li').removeClass('is-active');
+	$(this).addClass('is-active');
+});
+
+
+
+
+$('.btn-generator').click(function(){
+	$('.buttons-left ul li').removeClass('is-active');
+});
 
