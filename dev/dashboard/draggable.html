@@ -111,7 +111,7 @@
                         <form id="foo">
                             
                             <button type="submit" class="drag-submit">Submit</button>
-                            <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
+                            <textarea id="pollSheetData" name="pollSheetData" cols="40" placeholder="Your Message" ></textarea>
                         </form>
                         <!-- <span class="btn-prev">Prev</span>
                         <span class="btn-next">Next</span> -->
@@ -332,14 +332,14 @@
 <script>
 
 
-    var poll_data = [];
+    var poll_data_push = [];
 
     function arrayFunction() {
-        poll_data.push({});
-        poll_data[0]['imgURL'] = $(".upload_input").val();
-        poll_data[0]['imgTransform'] = $(".cropit-preview-image").attr("style", );
+        poll_data_push.push({});
+        poll_data_push[0]['imgURL'] = $(".upload_input").val();
+        poll_data_push[0]['imgTransform'] = $(".cropit-preview-image").attr("style", );
 
-        poll_data[0]['resizeDrag'] = $(".resize-drag").attr("style", );
+        poll_data_push[0]['resizeDrag'] = $(".resize-drag").attr("style", );
         // poll_data[0]['resizeDragX'] = $(".resize-drag").attr("data-x", );
         // poll_data[0]['resizeDragY'] = $(".resize-drag").attr("data-y", );
 
@@ -353,13 +353,11 @@
         event.preventDefault();
 
         arrayFunction();
-        console.log(poll_data);
+        console.log(poll_data_push);
 
-        // quiz_data[x]['tagLine1'] = $('.tag-line-1').val();
+        console.log(poll_data_push[0]['resizeDrag']);
 
-        
-        $("#Comments").val(JSON.stringify(poll_data));
-
+        $("#pollSheetData").val(JSON.stringify(poll_data_push));
 
         // add value to the textarea
         if (request) {

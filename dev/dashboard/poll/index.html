@@ -115,15 +115,21 @@
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 
-	var dashboard_data;
+	var poll_data_pull;
 
 	function showInfo(data) {
-		//console.log( JSON.parse(data[18].Comments)[0]);
+		// console.log( JSON.parse(data[10].pollSheetData)[0]);
+
+		// dashboard_data = JSON.parse(data[10].pollSheetData)[0];
 
 		
 
-		dashboard_data = JSON.parse(data[getParameterByName('id')].Comments)[0];
-		console.log(dashboard_data);
+		console.log(data[getParameterByName('id')-2].pollSheetData);
+
+		poll_data_pull = JSON.parse(data[getParameterByName('id')-2].pollSheetData);
+		console.log(poll_data_pull[0].imgURL);
+
+		// data[getParameterByName('id')].jukeboxPushArray
 	}
 
 	function adjust_iframe_height() {
