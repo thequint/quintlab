@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Subscribe to Newsletter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Google Fonts -->
+<link rel="stylesheet"  href="https://fea.assettype.com/thequint/assets/fonts-86f8c78cce.css" type="text/css">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet"> -->
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.subs-wrapper {
+    margin: 0 auto;
+    padding: 15px;
+    width: 300px;
+    height: 260px;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-family: "Cooper-hewitt-semibold",sans-serif !important;
+    font-weight: 600 !important;
+    border: 1px #e2e2e2 solid;
+}
+.subs-wrapper__header {
+    color: #36154f;
+    margin: 5px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.subs-wrapper__header img {
+    width: 80px;
+    vertical-align: middle;
+    margin-top: -10px;
+}
+.subs-wrapper__sub-headline {
+    padding-top: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.subs-wrapper__subscribe-box {
+    margin-bottom: 8px;
+}
+.subs-wrapper__subscribe-box input {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    border: none;
+    font-size: 14px;
+    color: #36154f;
+    padding: 0 10px;
+    padding-right: 90px;
+    background: #ccc;
+    font-family: "Cooper-hewitt-semibold",sans-serif !important;
+}
+.subs-wrapper__subscribe-box button {
+    margin-left: -90px;
+    height: 34px;
+    line-height: 34px;
+    width: 90px;
+    background: #ffbf00;
+    color: white;
+    font-size: 12px;
+    border: 0;
+    font-weight: 600 !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Cooper-hewitt-semibold",sans-serif !important;
+    -webkit-appearance: none;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.subs-wrapper__subscribe-box button:hover {
+    background: #36154f
+}
+
+.subs-wrapper__subscribe-box input:focus {
+    outline: none;
+}
+
+.subs-wrapper__other-update::after {
+    content: "";
+    clear: both;
+    display: table;
+    font-size:0;
+}
+.subs-wrapper__other-update a {
+    color: #333;
+}
+.subs-wrapper__other-update a span.update-btn {
+    color: #fff;
+}
+.subs-wrapper__other-update .whatsapp-update,
+.subs-wrapper__other-update .facebook-update {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    text-align: left;
+}
+.subs-wrapper__other-update span {
+    display: block;
+    float: left;
+}
+.subs-wrapper__other-update .update-icon {
+    padding-top: 4px;
+    width: 25px;
+    margin-left: 10px;
+}
+.subs-wrapper__other-update .update-icon img {
+    width: 25px;
+}
+.subs-wrapper__other-update .update-txt {
+    padding-left: 5px;
+    min-height: 34px;
+    width: calc(100% - 35px);
+    width: -webkit-calc(100% - 35px);
+}
+.subs-wrapper__other-update .whatsapp-update .update-txt {
+    padding-top: 8px;
+}
+.subs-wrapper__other-update .update-btn {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    display: block;
+    line-height: 30px;
+    background-color: #58cb66;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.subs-wrapper__other-update .facebook-update .update-btn {
+    background-color: #1683fc;
+}
+.subs-wrapper__other-update a:hover .update-btn {
+    background: #36154f;
+}
+</style>
+</head>
+
+<body>
+
+<div class="subs-wrapper">
+    <div class="subs-wrapper__header">Subscribe to <img src="quint-logo.svg"></div>
+    <div class="subs-wrapper__sub-headline">The Daily Newsletter</div>
+    <div class="subs-wrapper__subscribe-box">
+        <form>
+            <input type="text" placeholder="Enter email address"><button>Subscribe</button>
+        </form>
+    </div>
+    <div class="subs-wrapper__sub-headline">News and Other Updates</div>
+    <div class="subs-wrapper__other-update">
+        <div class="whatsapp-update">
+            <a href="">
+                <span class="update-icon"><img src="icon-whatsapp.svg"></span>
+                <span class="update-txt">Whatsapp</span>
+                <span class="update-btn">Subscribe</span>
+            </a>
+        </div>
+        <div class="facebook-update">
+            <a href="">
+                <span class="update-icon"><img src="icon-facebook.svg"></span>
+                <span class="update-txt">Facebook Messenger</span>
+                <span class="update-btn">Subscribe</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
