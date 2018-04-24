@@ -26,7 +26,7 @@
 
 </head>
 
-<body onload="adjust_iframe_height()">
+<body>
 <div class="main-wrap">
 	
 
@@ -34,32 +34,45 @@
 
         <div class="drag-container resize-container">
             <div class="image-editor">
-                <!-- <div class="drag-preview">
-                    <div class="cropit-preview"></div>
-                    <div class="drag-content resize-drag">
-                        <div class="drag-question"><span class="makeEditable">Apples or Oranges</span></div>
-                        <div class="drag-answer">
-                            <div class="drag-answer--left"><span class="makeEditable">Apples</span></div>
-                            <div class="drag-answer--right"><span class="makeEditable">Oranges</span></div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="drag-preview">
 				    <div class="cropit-preview cropit-image-loaded" style="position: relative; width: 350px; height: 350px;">
-				        <div class="cropit-preview-image-container" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 100%;"><img class="cropit-preview-image" alt="" src="assets/images/thumb.jpg" style="transform-origin: left top 0px; will-change: transform; transform: translate(-236.9px, -110.9px) scale(0.635) rotate(0deg);"></div>
+				        <div class="cropit-preview-image-container" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 100%;"><img class="cropit-preview-image" alt="" src="" style=""></div>
 				    </div>
-				    <div class="drag-content resize-drag" style="display: block; transform: translate(43.758px, -24.273px); width: 240.175px; height: 116.535px;" data-x="43.75799560546875" data-y="-24.27301025390625">
-				        <div class="drag-question">
-				        	<span>Apples or Oranges</span>
+				    <div class="drag-content resize-drag" style="" data-x="43.75799560546875" data-y="-24.27301025390625">
+
+				    	<div class="question-wrap">
+					        <div class="drag-question">
+					        	<span id="question_txt"></span>
+					        </div>
+					        <div class="drag-answer">
+					        	<form id="foo">
+						            <div class="drag-answer--left">
+						            	<button type="submit" data-no="1" id="answer_right" class="answer-button"></button>
+						            </div>
+						            <div class="drag-answer--right">
+						            	<button type="submit" data-no="0" id="answer_wrong" class="answer-button"></button>
+						            </div>
+						            <input id='' name='' type='text'>
+						            <div style="display: none">
+						            	<input id='id' name='id' type='text'>
+							            <input id='userName' name='userName' type='text'>
+							            <!-- <input id='userEmail' name='userEmail' type='text'> -->
+							            <input id='pollAnswer' name='pollAnswer' type='text'>
+						            </div>
+						            
+						            <input id='userEmail' name='userEmail' type='email'>
+                       			 	<button type="submit">Submit</button>
+
+						        </form>
+					        </div>
 				        </div>
-				        <div class="drag-answer">
-				            <div class="drag-answer--left">
-				            	<span>Apples</span>
-				            </div>
-				            <div class="drag-answer--right">
-				            	<span>Oranges</span>
-				            </div>
+				        <div class="results-wrap">
+				        	<span class="result-yes">70%</span>
+				        	<span class="result-no">30%</span>
 				        </div>
+
+
+
 				    </div>
 				</div>
 
@@ -68,17 +81,20 @@
         </div>
 
 
-        <!-- <form id="foo">
-            <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
-            <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
-        </form> -->
-
-
 
 
     </div>
 
 
+</div>
+
+<!-- Facebook Login -->
+<div class="facebook-login">
+	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+	</fb:login-button>
+
+	<div id="status">
+	</div>
 </div>
     
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
@@ -118,25 +134,207 @@
 	var poll_data_pull;
 
 	function showInfo(data) {
-		// console.log( JSON.parse(data[10].pollSheetData)[0]);
-
-		// dashboard_data = JSON.parse(data[10].pollSheetData)[0];
-
-		
 
 		console.log(data[getParameterByName('id')-2].pollSheetData);
-
 		poll_data_pull = JSON.parse(data[getParameterByName('id')-2].pollSheetData);
-		console.log(poll_data_pull[0].imgURL);
+		console.log(poll_data_pull);
+		
+		$(".cropit-preview-image").attr("src", poll_data_pull[0].imgURL);
+		$(".cropit-preview-image").attr("style", poll_data_pull[0].imgTransform);
+		$(".resize-drag").attr("style", poll_data_pull[0].resizeDrag);
 
-		// data[getParameterByName('id')].jukeboxPushArray
+		$("#question_txt").text(poll_data_pull[0].qusTxt);
+		$("#answer_right").text(poll_data_pull[0].ansRight);
+        $("#answer_wrong").text(poll_data_pull[0].ansWrong);
+        $("#id").val(getParameterByName('id'));
+
+		console.log(poll_data_pull[0].imgURL);
+		console.log(poll_data_pull[0].imgTransform);
+		console.log(poll_data_pull[0].resizeDrag);
+
+		console.log(new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
+
+		console.log(new Date().getHours()- new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
+		if(new Date().getHours()- new Date(Date.parse(poll_data_pull[0].dateTime)).getHours()>1)
+		{
+			 existValue() 
+		}
 	}
+
+	// form submit
+    var request;
+    var user_info=0;
+    $("#foo button.answer-button").click(function(){
+    	user_info= $(this).attr("data-no");
+    	// add value here
+    	$("#userName").val("Shahadat");
+    	//$("#userEmail").val("shahadat@thequint.com");
+    	$("#pollAnswer").val(user_info);
+    });
+
+    function existValue() {
+		$(".question-wrap").hide();
+		$(".results-wrap").show();
+	}
+
+    $("#foo").submit(function(event){
+    	event.preventDefault();
+
+    	console.log(user_info);
+
+    	if($("#userEmail").val()==""){
+    		alert("Please fill the email");
+    		return;
+    	}
+    	
+    	if ($("#userEmail").val() =="shahadat@gmail.com"){
+			alert("Email id already exist");
+			existValue() ;
+			return;
+    	}
+
+        // abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+        // let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea");
+        // serialize the data in the form
+        var serializedData = $form.serialize();
+    
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+        $('#result').text('Sending data...');
+    
+        // fire off the request to /form.php
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbwfBHsQrJGRMgU2WQ4kLii2Cni-XC0rV0z0j6o4Aw6-1-TFdYI/exec",
+            type: "post",
+            data: serializedData
+        });
+    
+        // callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            $('#result').html('<span class="success">Success</span>');
+            console.log("Hooray, it worked!");
+            existValue();
+        });
+    
+        // callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // log the error to the console
+            console.error(
+                "The following error occured: "+
+                textStatus, errorThrown
+            );
+        });
+    
+        // if the request failed or succeeded
+        request.always(function () {
+            // reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+
+        $('#foo').find('input, textarea').val('');
+    
+        // prevent default posting of form
+        
+    });
+
+	
+
+
+
+
+
 
 	function adjust_iframe_height() {
 	    var actual_height = document.body.scrollHeight;
 	    //console.log("height is", actual_height);
 	    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
 	}
+	adjust_iframe_height();
+</script>
+
+
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '425030461275044',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.8' // use graph api version 2.8
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call 
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    // FB.api('/me', function(response) {
+    FB.api('/me', {fields: 'name,email'}, function(response) {
+      console.log('Successful login for: ' + response.name);
+      console.log('Successful login for: ' + response.email);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
 </script>
 </body>
 </html>

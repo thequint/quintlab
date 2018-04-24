@@ -11,23 +11,26 @@
 <!-- Contact Form - sent to a Google Sheet -->
 <form id='foo'>
     <p>
+        <label>ID</label>
+        <input id='ID' name='ID' type='text'>
+    </p>
+    <p>
         <label>Name</label>
-        <input id='name' name='name' type='text'>
+        <input id='userName' name='userName' type='text'>
     </p>
     <p>
         <label>Email Address</label>
         <input id='email' name='email' type='email'>
     </p>
     <p>
-        <label>Phone Number</label>
+        <label>Option Selected</label>
         <input id='phone' name='phone' type='tel'>
     </p>
-    <p>
-        <label>Message</label>
-        <textarea id='message' name='message' rows='5'></textarea>
-    </p>
     
-    <button type='submit'>Send</button>
+    <button type='submit' data-no="0">Send</button>
+
+
+    <button type='submit' data-no="1">Send 2</button>
     <div id="result"></div>
     <div id='success'></div>
 </form>
@@ -38,7 +41,7 @@ jQuery( document ).ready(function( $ ) {
     var request;
     
     $("#foo").submit(function(event){
-
+        console.log($(this).attr("data-no"));
         // Form Validation
         // if ($.trim($("#Name").val()) === "" || $.trim($("#Comments").val()) === "") {
         //     alert('Please insert all fields');
@@ -66,7 +69,7 @@ jQuery( document ).ready(function( $ ) {
     
         // fire off the request to /form.php
         request = $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbylYyMpYbrBsTBAu2gVXx6bQlnH6puxMIE3RLrnD36A6WOX4xNI/exec",
+            url: "https://script.google.com/macros/s/AKfycbwfBHsQrJGRMgU2WQ4kLii2Cni-XC0rV0z0j6o4Aw6-1-TFdYI/exec",
             type: "post",
             data: serializedData
         });

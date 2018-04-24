@@ -83,10 +83,10 @@
                         <div class="drag-preview">
                             <div class="cropit-preview"></div>
                             <div class="drag-content resize-drag">
-                                <div class="drag-question"><span class="makeEditable">Apples or Oranges</span></div>
+                                <div class="drag-question"><span id="question_txt" class="makeEditable">Ask a Question...</span></div>
                                 <div class="drag-answer">
-                                    <div class="drag-answer--left"><span class="makeEditable">Apples</span></div>
-                                    <div class="drag-answer--right"><span class="makeEditable">Oranges</span></div>
+                                    <div class="drag-answer--left"><span id="answer_right" class="makeEditable">Yes</span></div>
+                                    <div class="drag-answer--right"><span id="answer_wrong" class="makeEditable">No</span></div>
                                 </div>
                             </div>
                         </div>
@@ -107,32 +107,17 @@
                         </div>
                     </div>
                     <div class="drag-btns">
-                        <!-- <span class="drag-submit">Submit</span> -->
                         <form id="foo">
-                            
                             <button type="submit" class="drag-submit">Submit</button>
-                            <textarea id="pollSheetData" name="pollSheetData" cols="40" placeholder="Your Message" ></textarea>
+                            <textarea id="pollSheetData" name="pollSheetData" cols="40" placeholder="Your Message" style="display:none"></textarea>
                         </form>
+                        <div class="embedded-code"></div>
                         <!-- <span class="btn-prev">Prev</span>
                         <span class="btn-next">Next</span> -->
                     </div>
                 </div>
-
-
-                <!-- <form id="foo">
-                    <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" ></textarea>
-                    <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
-                </form> -->
-
-
-
-
             </div>
-
-
         </div>
-        
-        
        
     </div>
 
@@ -159,7 +144,7 @@
 <script src="assets/js/jquery.cropit.js"></script>
 
 
-<script type="text/javascript" src="https://code.interactjs.io/v1.3.3/interact.min.js"></script>
+<script type="text/javascript" src="http://code.interactjs.io/v1.3.3/interact.min.js"></script>
 
 <script type="text/javascript">
 
@@ -201,12 +186,6 @@
             window.open(imageData);
         });
     }
-
-    // $(".drag-submit").click(function(){
-    //     $(".drag-preview").find(".resize-drag").removeClass("resize-drag");
-    //     $(".drag-preview").find(".makeEditable").removeClass("makeEditable");
-    // });
-
 
     // editable
     $.fn.editable = function() {
@@ -340,25 +319,40 @@
         poll_data_push[0]['imgTransform'] = $(".cropit-preview-image").attr("style", );
 
         poll_data_push[0]['resizeDrag'] = $(".resize-drag").attr("style", );
-        // poll_data[0]['resizeDragX'] = $(".resize-drag").attr("data-x", );
-        // poll_data[0]['resizeDragY'] = $(".resize-drag").attr("data-y", );
 
+        poll_data_push[0]['qusTxt'] = $("#question_txt").text();
+
+        poll_data_push[0]['ansRight'] = $("#answer_right").text();
+        poll_data_push[0]['ansWrong'] = $("#answer_wrong").text();
+
+
+        poll_data_push[0]['dateTime'] =new Date().toString();
+        
+        console.log(poll_data_push);
     }
 
+    function copyHandler() {
+        $(".copy-val").click(function() {
+            $(".embedded-iframe").select();
+            document.execCommand('copy');
+        });
+    }
 
     var request;
+
+ //   console.log(JSON.stringify(new Date().toString()));
 
     $("#foo").submit(function(event) {
         // console.log("init");		
         event.preventDefault();
 
         arrayFunction();
-        console.log(poll_data_push);
+        //console.log(poll_data_push);
 
-        console.log(poll_data_push[0]['resizeDrag']);
+       // console.log(poll_data_push[0]['resizeDrag']);
 
         $("#pollSheetData").val(JSON.stringify(poll_data_push));
-
+        console.log(JSON.stringify(poll_data_push));
         // add value to the textarea
         if (request) {
             request.abort();
@@ -415,8 +409,9 @@
 
             //$('#foo').find('input, textarea').val('');
 
-            // var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/quizzes/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
-            // $('.preview').prepend('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+            var str = "<iframe src='poll/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
+            $('.embedded-code').prepend('<form><div class="form-group"><label for="text" class="embedded-label">Embedded Code</label><textarea type="text" rows="5" class="form-control embedded-iframe" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+            copyHandler();
         }
         // prevent default posting of form
          // event.preventDefault();
