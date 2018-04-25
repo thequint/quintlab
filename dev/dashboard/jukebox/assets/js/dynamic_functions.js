@@ -7,16 +7,15 @@ var category_array = [
 	{name:"Surprise Me", icon:"surprise-icon.svg", colors:"#f09a9a"}, 
 	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff6f6a"},
 
-
-	{name:"Chak De!", icon:"default-icon.svg", colors:"#85d4ad"},
-	{name:"Unplugged", icon:"default-icon.svg", colors:"#41d660"},
-	{name:"Mash Up", icon:"default-icon.svg", colors:"#44434a"},
-	{name:"Sa Re Gaao", icon:"default-icon.svg", colors:"#6d387e"},
-	{name:"Zenning", icon:"default-icon.svg", colors:"#6d387e"},
-	{name:"Ooh La La", icon:"default-icon.svg", colors:"#6d387e"},
-	{name:"Covers", icon:"default-icon.svg", colors:"#6d387e"},
-	{name:"Haste Gaate", icon:"default-icon.svg", colors:"#6d387e"},
-	{name:"Sing Along", icon:"default-icon.svg", colors:"#6d387e"}
+	{name:"Chak De!", icon:"chak-de-icon.svg", colors:"#312f9a"},
+	{name:"Unplugged", icon:"unplugged-icon.svg", colors:"#e757ea"},
+	{name:"Mash Up", icon:"mash-up-icon.svg", colors:"#e5b51a"},
+	{name:"Sa Re Gaao", icon:"sa-re-gaao-icon.svg", colors:"#ed2831"},
+	{name:"Zenning", icon:"zenning-icon.svg", colors:"#ebe9ff"},
+	{name:"Ooh La La", icon:"ooh-la-la-icon.svg", colors:"#d80ae8"},
+	{name:"Covers", icon:"covers-icon.svg", colors:"#27e29e"},
+	{name:"Haste Gaate", icon:"haste-gaate-icon.svg", colors:"#eaa758"},
+	{name:"Sing Along", icon:"sing-along-icon.svg", colors:"#0c78e5"}
 ];
 
 function pie_events() {
