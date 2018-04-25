@@ -6,10 +6,17 @@ var category_array = [
 	{name:"Love Hell", icon:"heartbreak-icon.svg", colors:"#19a2a3"},
 	{name:"Surprise Me", icon:"surprise-icon.svg", colors:"#f09a9a"}, 
 	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff6f6a"},
-	{name:"Peaceful", icon:"default-icon.svg", colors:"#85d4ad"},
-	{name:"Confident", icon:"default-icon.svg", colors:"#41d660"},
-	{name:"Sad", icon:"default-icon.svg", colors:"#44434a"},
-	{name:"Determined", icon:"default-icon.svg", colors:"#6d387e"}
+
+
+	{name:"Chak De!", icon:"default-icon.svg", colors:"#85d4ad"},
+	{name:"Unplugged", icon:"default-icon.svg", colors:"#41d660"},
+	{name:"Mash Up", icon:"default-icon.svg", colors:"#44434a"},
+	{name:"Sa Re Gaao", icon:"default-icon.svg", colors:"#6d387e"},
+	{name:"Zenning", icon:"default-icon.svg", colors:"#6d387e"},
+	{name:"Ooh La La", icon:"default-icon.svg", colors:"#6d387e"},
+	{name:"Covers", icon:"default-icon.svg", colors:"#6d387e"},
+	{name:"Haste Gaate", icon:"default-icon.svg", colors:"#6d387e"},
+	{name:"Sing Along", icon:"default-icon.svg", colors:"#6d387e"}
 ];
 
 function pie_events() {
@@ -200,7 +207,7 @@ function create_pie() {
 
 	    //$(".play-icon").append("<li data-title-1="+sector.title_1+"data-track-1="+sector.track_1+">"+"<img src='jukebox/assets/images/"+sector.moods_icon+"'>"+"</li>");
 
-	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+sector.moods_icon+"'></li>");
+	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
 	})
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -222,7 +229,7 @@ function create_pie() {
         console.log(n+"|"+angle);
         $("#svg_circle ul#pie_labels").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'>"+$(this).attr("data-mood")+"</li>")
         
-        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+$(this).attr("data-mood-icon")+"'></li>")
+        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+$(this).attr("data-mood-icon")+"'></li>")
         console.log($(this).attr("data-mood"));
         
     })
