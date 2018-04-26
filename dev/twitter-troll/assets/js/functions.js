@@ -332,14 +332,17 @@ $('.btn-circle').darkTooltip({
 $('.filter-men').click(function () {
 	$('.filter-women').parent().removeClass('is-active');
 	$(this).parent().addClass('is-active');
+	$('.clear-all').show();
 });
 
 $('.filter-women').click(function () {
 	$('.filter-men').parent().removeClass('is-active');
 	$(this).parent().addClass('is-active');
+	$('.clear-all').show();
 });
 
-$('.filter-all').click(function () {
+$('.clear-all').click(function () {
 	$('.filter-men').parent().removeClass('is-active');
 	$('.filter-women').parent().removeClass('is-active');
+	$(this).hide();
 });

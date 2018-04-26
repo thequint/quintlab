@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
 .col {
 	float: left;
 	padding: 0px 15px;
-	margin-bottom: 30px;
 }
 .col-1 {
 	width: 100%;
@@ -75,6 +74,10 @@ h1, h2, h3, h4, h5, h6 {
 .video-wrapper{
 	background-color: #FFCC00;
 	padding: 40px 0px;
+}
+.ugc-wrapper{
+	background-color: #CDCDCD;
+	padding: 40px 0px 10px 0;
 }
 
 
@@ -198,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-headline::after{
 	height:2px;
-	width: 200px;
+	width: 70%;
 	background: #1B0325;
 	content: '';
 	position: absolute;
@@ -248,11 +251,19 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 }
 
-.content{
+.video-wrapper .col-content{
 	padding: 30px 30px 30px 60px;
 	min-height: 470px;
 	
 }
+
+.ugc-wrapper .col-content{
+	padding: 30px 30px 30px 60px;
+	min-height: 470px;
+	
+}
+
+
 
 .cls-1{
 fill:#2cddbb;
@@ -303,6 +314,13 @@ fill:#2cddbb;
 	font-size: 22px;
 }
 
+.devider-wrapper img{
+	width: 100%;
+	min-width: inherit;
+	max-width: inherit;
+}
 
-
+.devider-color-1{
+	background-color: #1b0325;
+}
 
