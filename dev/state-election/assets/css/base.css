@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 0;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 }
 img {
 	width: auto\9;
@@ -14,6 +15,12 @@ img {
 	vertical-align: middle;
 	border: 0;
 	-ms-interpolation-mode: bicubic;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+	-webkit-user-drag: none;
 }
 ul, ol {
 	list-style-type: none;

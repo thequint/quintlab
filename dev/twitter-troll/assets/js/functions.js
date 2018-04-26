@@ -214,7 +214,7 @@ function random(filter) {
 	//$(".str").html( content_array.length+"|"+choose_setup+"|"+content_array[0].set[0].row[0]);
 
 	for (var i = 0; i < content_array[choose_setup].set[1].rows.length; i++) {
-		console.log(content_array[choose_setup].set[1].rows[i]);
+		//console.log(content_array[choose_setup].set[1].rows[i]);
 
 		var choose_word = Math.floor(
 			Math.random() * content_array[choose_setup].set[1].rows[i].row.length
@@ -229,6 +229,10 @@ function random(filter) {
 			);
 		}
 	}
+	
+	$('.str').append($(this).text() + ' #TrollMagarPyaarSe')
+	
+	//$('.str').text() + '#');
 }
 
 
