@@ -241,7 +241,11 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .rotating {
+    background-color: #ccc;
+    border-radius:100%;
+    overflow: hidden;
   -webkit-animation: rotating 18s linear infinite;
   -moz-animation: rotating 18s linear infinite;
   -ms-animation: rotating 18s linear infinite;
@@ -249,6 +253,12 @@ body {
   animation: rotating 18s linear infinite;
 }
 .rotating.paused {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.rotating:hover {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
@@ -396,11 +406,16 @@ visibility: visible;
     height: 48px;
     border-radius: 100%;
     cursor: pointer;
+    /*background-color: #e94d4b;*/
+    border: 1px #fff solid;
 }
 
 
 #step02 .song-footer .play-icon li img {
     opacity: 0.4;
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
 }
 #step02 .song-footer .play-icon li:hover img {
     opacity: 1;
@@ -676,6 +691,10 @@ visibility: visible;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
 }
+#pie_icons li img {
+    width: 35px;
+    height: 35px;
+}
 #pie_labels li:nth-child(2) {
     transform: rotate(90deg);
 }
@@ -683,7 +702,7 @@ visibility: visible;
     max-width: 40px;
 }
 #pie_labels li span {
-    font: 16px Monaco, MonoSpace;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 900;
     height: 200px;
@@ -694,6 +713,8 @@ visibility: visible;
     transform-origin: bottom center;
     height: 150px;
     letter-spacing: 0;
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: "Cooper-hewitt-semibold",sans-serif !important;
 }
 
 
@@ -715,9 +736,9 @@ visibility: visible;
     .step01--container {
         top: 50%;
     }
-    .main-wrap--headline {
+    /*.main-wrap--headline {
         display: none;
-    }
+    }*/
     #step02 .song-footer .play-icon {
         width: 380px;
     }
@@ -733,8 +754,8 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 540px;
-        height: 540px;
+        width: 490px;
+        height: 490px;
     }
     .pin-top {
         width: 38px;
@@ -758,11 +779,20 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 540px;
-        height: 540px;
+        width: 480px;
+        height: 480px;
+    }
+    .main-wrap--headline {
+        width: 300px;
+    }
+    .step01--container .main-wrap--headline {
+        top: -26px;
     }
 }
 @media only screen and (max-width: 550px) {
+    .rotating {
+        background: none;
+    }
     .main-wrap,
     #step01,
     #step02 {
@@ -770,12 +800,21 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        width: 98%;
-        height: 98%;
+        width: 86%;
+        height: 86%;
+    }
+    .step01--container {
+        padding-top: 30px;
+    }
+    .main-wrap--headline {
+        width: 270px;
+    }
+    .step01--container .main-wrap--headline {
+        top: 5px;
     }
     #step02 .song-footer .play-icon li {
         /*margin: 0 1.5% 8px;*/
-}
+    }
     #step02 .song-iframe {
         margin-top: 10px;
     }
@@ -818,8 +857,17 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        /*width: 400px;*/
-        /*height: 400px;*/
+        width: 90%;
+        height: 90%;
+    }
+    .step01--container {
+        padding-top: 25px;
+    }
+    .main-wrap--headline {
+        width: 230px;
+    }
+    .step01--container .main-wrap--headline {
+        top: 7px;
     }
     .pin-top {
         width: 30px;
@@ -877,8 +925,17 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        /*width: 360px;*/
-        /*height: 360px;*/
+        width: 95%;
+        height: 95%;
+    }
+    .step01--container {
+        padding-top: 20px;
+    }
+    .main-wrap--headline {
+        width: 210px;
+    }
+    .step01--container .main-wrap--headline {
+        top: 0px;
     }
     #pie_labels li span {
         font-size: 12px;
@@ -892,8 +949,11 @@ visibility: visible;
     }
     .svg-wrap,
     #svg_circle {
-        /*width: 310px;*/
-        /*height: 310px;*/
+        width: 98%;
+        height: 98%;
+    }
+    .step01--container {
+        padding-top: 18px;
     }
     #pie_labels li span {
         font-size: 11px;

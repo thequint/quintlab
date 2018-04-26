@@ -1,11 +1,11 @@
 
 var category_array = [
-	{name:"In Love", icon:"heart-icon.svg", colors:"#e74e4f"}, 
-	{name:"Soulful", icon:"soulful-icon.svg", colors:"#d3d1bd"}, 
-	{name:"Let's party", icon:"party-icon.svg", colors:"#fcd359"},
+	{name:"In Love", icon:"in-love.svg", colors:"#e74e4f"}, 
 	{name:"Love Hell", icon:"heartbreak-icon.svg", colors:"#19a2a3"},
+	{name:"Let's party", icon:"party-icon.svg", colors:"#fcd359"},
 	{name:"Surprise Me", icon:"surprise-icon.svg", colors:"#f09a9a"}, 
 	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff6f6a"},
+	{name:"Soulful", icon:"soulful-icon.svg", colors:"#d3d1bd"},
 
 	{name:"Chak De!", icon:"chak-de-icon.svg", colors:"#312f9a"},
 	{name:"Unplugged", icon:"unplugged-icon.svg", colors:"#e757ea"},
@@ -17,6 +17,8 @@ var category_array = [
 	{name:"Haste Gaate", icon:"haste-gaate-icon.svg", colors:"#eaa758"},
 	{name:"Sing Along", icon:"sing-along-icon.svg", colors:"#0c78e5"}
 ];
+
+// $("#svg_circle").find("svg").addClass("rotating");
 
 function pie_events() {
 
@@ -206,8 +208,10 @@ function create_pie() {
 
 	    //$(".play-icon").append("<li data-title-1="+sector.title_1+"data-track-1="+sector.track_1+">"+"<img src='jukebox/assets/images/"+sector.moods_icon+"'>"+"</li>");
 
-	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
-	})
+	    $(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
+	});
+
+//class='"+sector.moods_color+"'
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	midCircle.setAttributeNS(null, 'cx', dashboard_data.size * 0.5);
@@ -255,7 +259,7 @@ function set_angle()
 	}else if ($(window).width() < 480) {
 	   	char_angle=3.5;
 	}else {
-	   	char_angle=4.2;
+	   	char_angle=3.6;
 	}
     $("#pie_labels li").each(function(index){
         var char_length= $(this).find("span").length; 
