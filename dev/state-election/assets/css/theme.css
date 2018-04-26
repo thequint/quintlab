@@ -1,4 +1,13 @@
 @charset "utf-8";
+
+@font-face {
+    font-family: 'cooper_hewittmedium';
+    src: url('../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 @font-face {
     font-family: 'libel_suitregular';
     src: url('../fonts/libel-suit-rg-webfont.woff2') format('woff2'),
@@ -7,11 +16,13 @@
     font-style: normal;
 
 }
+
+
 body {
-	font-family: 'libel_suitregular';
+	font-family: 'cooper_hewittmedium';
 	font-size: 14px;
 	font-weight: 400;
-	color: #fff;
+	color: #1b0325;
 	overflow-x: hidden;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -25,6 +36,7 @@ p {
 a {
 	text-decoration: none;
 	outline: none;
+	color: #1b0325;
 }
 button, a {
 	outline: none;
@@ -40,6 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'libel_suitregular';
 }
 /*custom grid*/
+
+
 .row {
 	position: relative;
 	margin: 0px -15px 0px -15px;
@@ -69,15 +83,53 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-wrapper{
 	background-color:#1b0325;
-	padding: 10px 0;
+	padding: 10px 0 40px 0;
 }
+
+.header-wrapper::after {
+	position: absolute;
+	width: 480px;
+	height: 46px;
+	content: '';
+	bottom: -23px;
+	left: 50%;
+	margin-left: -240px;
+	border: 3px solid #fff;
+	background-image: url(../images/patern-bg-1.svg);
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	z-index: 99;
+	border-radius: 9px;
+}
+
+
+
 .video-wrapper{
 	background-color: #FFCC00;
-	padding: 40px 0px;
+	padding: 70px 0px;
 }
+
+.video-wrapper::after {
+	position: absolute;
+	width: 270px;
+	height: 80px;
+	content: '';
+	bottom: -40px;
+	left: 50%;
+	margin-left: -135px;
+	background-image: url(../images/patern-bg-2.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	z-index: 99;
+}
+
+
 .ugc-wrapper{
 	background-color: #CDCDCD;
-	padding: 40px 0px 10px 0;
+	padding: 70px 0px 10px 0;
 }
 
 
@@ -127,13 +179,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom:14px;
 }
 .video-gallery .tabs li {
+	font-family: 'libel_suitregular';
 	float: left;
 	background-color: #2CDDBB;
 	line-height: 100%;
 	padding: 15px 15px 9px 15px;
 	cursor: pointer;
 	font-size: 23px;
-	color: #000;
 	margin-right: 14px;
 	transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -323,4 +375,126 @@ fill:#2cddbb;
 .devider-color-1{
 	background-color: #1b0325;
 }
+
+.story-card .first-story{
+/*	padding-top:20px;*/
+}
+
+.story-card figure{
+	position:relative;
+}
+
+.story-card a{
+	display: inline-block;
+	position: relative;
+	
+}
+
+.story-image img{
+	transition: transform .2s;
+}
+
+.story-card a:hover .story-image img{
+	transform: scale3d(1.3, 1.3, 1.3);
+}
+
+.story-card figcaption{
+	transition: all 0.2s ease-in-out;
+}
+
+.story-card a:hover figcaption{
+	background:#FFCC00;
+}
+
+
+
+.first-story .story-image{
+	width: 100%;
+	height: 250px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+
+
+
+.story-card .first-story{
+	text-align: center;
+}
+.story-card .first-story figure{
+	display:inline-block;
+	width: 250px;
+}
+
+.story-card .first-story figcaption{
+	background:#2cddbb;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 10px);
+	margin-left: 5px;
+	padding: 0 10px;
+	font-size: 16px;
+	height: 80px;
+	
+	
+}
+
+
+.story-card .first-story figcaption span {
+	position: relative;
+	display: inline-block;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+
+.story-card .all-story{
+	margin: 0px -5px;
+}
+.story-card .all-story figure{
+	float: left;
+	width: 50%;
+	padding: 0px 5px;
+	margin-top: 10px;
+}
+.all-story .story-image{
+	width:80px;
+	height: 80px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.story-card .all-story a{
+	height: 80px;
+	
+}
+.story-card .all-story figcaption{
+	position: relative;
+	display: inline-block;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-left:65px;
+	background:#2cddbb;
+	padding: 0px 5px 0px 19px;
+	font-size: 13px;
+	height: 65px;
+}
+.story-card .all-story figcaption span{
+	position: relative;
+	display: inline-block;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
 
