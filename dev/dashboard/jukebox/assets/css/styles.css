@@ -412,10 +412,10 @@ visibility: visible;
 
 
 #step02 .song-footer .play-icon li img {
-    opacity: 0.4;
-    width: 35px;
-    height: 35px;
-    margin-top: 5px;
+    opacity: 0.75;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
 }
 #step02 .song-footer .play-icon li:hover img {
     opacity: 1;
@@ -898,6 +898,13 @@ visibility: visible;
         width: 40px;
         height: 40px;
     }
+
+    #step02 .song-footer .play-icon li img {
+        width: 22px;
+        height: 22px;
+        margin-top: 8px;
+    }
+
     #step02 .song-footer h2 span::before,
     #step02 .song-footer h2 span::after {
         display: none;
@@ -958,13 +965,18 @@ visibility: visible;
     #pie_labels li span {
         font-size: 11px;
     }
+    .box-nut-top-right {
+        display: none;
+    }
     .pin-top {
-        right: 65px;
-        top: 0;
+        width: 25px;
+        right: 21px;
+        top: 22px;
     }
     .pin-bottom {
-        right: 75px;
-        top: 38px;
+        width: 35px;
+        right: 30px;
+        top: 62px;
     }
     #step02 .song-footer .play-icon {
         padding: 10px 0;
