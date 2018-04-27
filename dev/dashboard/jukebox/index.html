@@ -126,7 +126,7 @@
 		//console.log(JSON.parse(data[getParameterByName('id')].jukeboxPushArray));
 		//$("#data_show").append ("<p class=''>"+ data[getParameterByName('id')].jukeboxPushArray +"</p>");
 
-		dashboard_data = JSON.parse(data[getParameterByName('id')].jukeboxPushArray);
+		dashboard_data = JSON.parse(data[getParameterByName('id')-2].jukeboxPushArray);
 
 		create_pie();
 		pie_events();
