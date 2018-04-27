@@ -692,14 +692,11 @@ visibility: visible;
     transform-origin: 50% 50%;
 }
 #pie_icons li img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 #pie_labels li:nth-child(2) {
     transform: rotate(90deg);
-}
-#pie_icons li img {
-    max-width: 40px;
 }
 #pie_labels li span {
     font-size: 14px;
