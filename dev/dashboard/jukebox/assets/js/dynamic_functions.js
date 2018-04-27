@@ -225,7 +225,7 @@ function create_pie() {
 	midCircle.setAttributeNS(null, 'cx', dashboard_data.size * 0.5);
 	midCircle.setAttributeNS(null, 'cy', dashboard_data.size * 0.5);
 	midCircle.setAttributeNS(null, 'r', dashboard_data.size * 0.14);
-	midCircle.setAttributeNS(null, 'fill', '#424149');
+	midCircle.setAttributeNS(null, 'fill', '#302f37');
 
 	newSVG.appendChild(midCircle);
 
