@@ -30,6 +30,9 @@ function pie_events() {
 	$("#svg_circle path").mouseover(function(){
 		var color_attr = $(this).attr('fill');
 		$(".main-wrap").css('background', color_attr);
+		if($(this).hasClass("surprise_bg")) {
+			$(".main-wrap").css('background-image', "url('https://quintlab.herokuapp.com/dev/jukebox/assets/images/bg-surprise.svg')");
+		}
 	});
 
 	$("#svg_circle path").mouseout(function(){
@@ -188,6 +191,10 @@ function create_pie() {
 	    newSector.setAttribute('id', sector.moods);
 
 	    newSector.setAttribute('data-mood', sector.moods);
+	    if(sector.moods=="Surprise Me") {
+		    
+		}
+
 	    newSector.setAttribute('data-mood-icon', sector.moods_icon);
 
 		newSector.setAttribute('fill',sector.moods_color);
@@ -202,13 +209,14 @@ function create_pie() {
 	    newSVG.appendChild(newSector);
 	    $("#svg-labels").append("<li>"+sector.moods+"</li>");
 
-	    //$(".song-footer .btn-track01").attr('data-title-1', sector.title_1);
 
-	    // $(".btn-track01").append("<li data-title-1="+sector.title_1+" data-track-1="+sector.track_1+">"+sector.moods+"</li>");
+	    if(sector.moods=="Surprise Me") {
+		    newSector.setAttribute('class', 'surprise_bg');
+		    $(".play-icon").append("<li class='surprise_icon_bg' style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
+	    }else {
+	    	$(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
+	    }
 
-	    //$(".play-icon").append("<li data-title-1="+sector.title_1+"data-track-1="+sector.track_1+">"+"<img src='jukebox/assets/images/"+sector.moods_icon+"'>"+"</li>");
-
-	    $(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
 	});
 
 //class='"+sector.moods_color+"'

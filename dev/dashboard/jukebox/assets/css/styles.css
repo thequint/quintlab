@@ -554,6 +554,14 @@ visibility: visible;
     cursor: pointer;
 }
 
+#svg_circle .surprise_bg {
+    fill: url(#image);
+}
+.play-icon .surprise_icon_bg {
+    background-image: url('https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/bg-surprise.svg');
+    background-size: 100%;
+}
+
 
 .step01--container {
     margin: 0 auto;
