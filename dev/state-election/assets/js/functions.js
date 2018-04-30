@@ -1,83 +1,69 @@
+var collectionSlugArr =["ipl-top-story","ipl-videos","ipl-social-buzz"];
+
+
 $(document).ready(function() {
 	
-	//WhatsApp Share
-	
-	$(document).on("click", '#btnWp', function() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      var text = $(this).attr("data-text");
-      var url = $(this).attr("data-link");
-      var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
-      var whatsapp_url = "whatsapp://send?text=" + message;
-      window.location.href = whatsapp_url;
-    } else {
-      alert("Please use an Mobile Device to Share this Article");
-    }
-  });
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+		
+		$('#VideoPrev').html('<iframe src="https://www.youtube.com/embed/'+$(".tab-content.current li:nth-child(1) a").attr("data-video")+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		
+	});
 	
 	load_stories();	
+	load_slider_1();
 });
 
 
 
-function load_stories(){	
+function load_stories(){
 	
-// ipl top story	
-  var collectionSlug = 'ipl-top-story'; //temporary slug. Needs to be changed.
-  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
+  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlugArr[0], function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
     }).map(function(item) {
       return item.story
     }).slice(0,3);
+	  console.log(stories);
+	 // $(".all-story").html('');
+	  for(var i=0;i<stories.length;i++)
+		  {
+			  
+			  if(i==0)
+				  {
+					 // $(".first-story img").attr('src',"https://images.assettype.com/"+stories[i]['hero-image-s3-key']);
+					  
+					 // $(".first-story").html("<figure>"+stories[i]['headline']+"</figure>")
+					  
+				  }
+			  else
+				  {
+					  //$(".all-story").append("<figure>"+stories[i]['headline']+"</figure>")
+				  }
+			  
+		  }
+	  
     var elements = stories.map(function(story) {
       return '<li><a href="http://www.thequint.com/' + story.slug + '" target="blank"><figure><div class="img-holder"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=35&w=800&fm=pjpg" /></div><figcaption><div class="caption"><span><h5>' + story.headline + '</h5></span></figcaption></div></figure></a></li>'
     });
     elements.forEach(function(element) {
       $('#top-section-stories').append(element);
     });
-	  load_slider_5()
+	  
   });
 	
 	
-//match recap
 
-  var collectionSlug = 'match-recap'; //temporary slug. Needs to be changed.
-  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
-    var stories = res.items.filter(function(item) {
-      return item.type == 'story'
-    }).map(function(item) {
-      return item.story
-    }).slice(0,3);
-    var elements = stories.map(function(story) {
-      return '<li><a href="http://www.thequint.com/' + story.slug + '" target="blank"><figure><div class="news-pic"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=35&w=800&fm=pjpg" /></div><figcaption><span>' + story.headline + '</span></figcaption></figure></a></li>'
-    });
-    elements.forEach(function(element) {
-      $('#match-recap').append(element);
-    });
-  });	
-	
-	
-//ipl dugout
-
-  var collectionSlug = 'ipl-dugout'; //temporary slug. Needs to be changed.
-  $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
-    var stories = res.items.filter(function(item) {
-      return item.type == 'story'
-    }).map(function(item) {
-      return item.story
-    }).slice(0,3);
-    var elements = stories.map(function(story) {
-      return '<li><a href="http://www.thequint.com/' + story.slug + '" target="blank"><figure><div class="news-pic"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=35&w=800&fm=pjpg" /></div><figcaption><span>' + story.headline + '</span></figcaption></figure></a></li>'
-    });
-    elements.forEach(function(element) {
-      $('#nishant-section-stories').append(element);
-    });
-  });
 
 
 //ipl videos
-
-  var collectionSlug = 'ipl-videos'; //Needs to be replaced.
+	
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -95,7 +81,6 @@ function load_stories(){
 
 // ipl social buzz
 
-  var collectionSlug = 'ipl-social-buzz'; // 'other-sports-news' temporary slug. Needs to be changed.
   $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug, function(res) {
     var stories = res.items.filter(function(item) {
       return item.type == 'story'
@@ -110,98 +95,6 @@ function load_stories(){
     });
 	 load_slider_3();
   });
-
-
-//QUINT's MVP
-
-  $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/902037b1-6d5b-4a6d-bb64-67cbdc534b41', function(res) {
-    var lastStory = res.story;
-    var cards = lastStory.cards;
-    var cardsWithImages = cards.filter(function(card) {
-      return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
-    }).slice(0,5)
-    elements = cardsWithImages.map(function(card) {
-      var imageKey;
-      var titleElement;
-      if(card.metadata){
-        if(card && card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'][0]=="true" ){
-          var imageElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'image'});
-          titleElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'title'}) || {};  
-          imageKey= (imageElement || {})["image-s3-key"];
-        }
-      }
-      if(imageKey){
-        return '<figure><div class="img-holder"><img src="https://images.assettype.com/' + imageKey + '?q=70&amp;w=800&amp;fm=pjpg" /></div><figcaption><h4><span>MATCH IN 5 CARDS</span></h4><h2>'+ titleElement.text +'</h2><p>' + imageElement.title + '</p></figcaption></figure>'
-      }
-    });
-    elements.forEach(function(element) {
-      if(element){
-        $('#key-events-1').append(element);
-      }
-    });
-	  load_slider_1();
-  });
-
-
-//Arunâ€™s Dugout
-  $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/9e3c5172-b3f1-4fcf-ac3d-08140013dda9', function(res) {
-    var lastStory = res.story;
-    var cards = lastStory.cards;
-    var cardsWithImages = cards.filter(function(card) {
-      return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
-    }).slice(0,5)
-    elements = cardsWithImages.map(function(card) {
-      var imageKey;
-      var titleElement;
-      if(card.metadata){
-        if(card && card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'][0]=="true" ){
-          var imageElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'image'});
-          titleElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'title'}) || {};  
-          imageKey= (imageElement || {})["image-s3-key"];
-        }
-      }
-      if(imageKey){
-        return '<div class="more-list"><figure><a href="https://www.thequint.com/section/sports" target="blank"><img src="https://images.assettype.com/' + imageKey + '?q=70&amp;w=800&amp;fm=pjpg" /><figcaption>' + titleElement.text + '</figcaption></a></figure></div>'
-      }
-    });
-    elements.forEach(function(element) {
-      if(element){
-        $('#key-events-2').append(element);
-      }
-    });
-	 load_slider_2();
-  });
-
-
-//Sideline Sightings
-  $.getJSON('https://thequint-labs.quintype.io/api/v1/stories/068838a0-30f8-467a-8d95-dba9cc91caeb', function(res) {
-    var lastStory = res.story;
-    var cards = lastStory.cards;
-    var cardsWithImages = cards.filter(function(card) {
-      return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
-    }).slice(0,5)
-    elements = cardsWithImages.map(function(card) {
-      var imageKey;
-      var titleElement;
-      if(card.metadata){
-        if(card && card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'][0]=="true" ){
-          var imageElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'image'});
-          titleElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'title'}) || {};  
-          imageKey= (imageElement || {})["image-s3-key"];
-        }
-      }
-      if(imageKey){
-        return '<li><figure><div class="img-holder"><img src="https://images.assettype.com/' + imageKey + '?q=70&amp;w=800&amp;fm=pjpg" /></div><figcaption><div class="caption"><span><h5>'+ titleElement.text +'</h5>' + imageElement.title + '</span></figcaption></div></figure></li>'
-      }
-    });
-    elements.forEach(function(element) {
-      if(element){
-        $('#key-events-3').append(element);
-      }
-    });
-	  load_slider_4();
-  });
-
 }
 
 function load_slider_1(){
@@ -214,26 +107,10 @@ function load_slider_1(){
       autoplaySpeed: 2500,
     });
 }
+
+
 function load_slider_2(){
-	$('.slider-2').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      arrows: true,
-      autoplaySpeed: 2500,
-      responsive: [
-        {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-			variableWidth: true
-            
-          }
-        }
-      ]
-    });
+	
 }
 function load_slider_3(){
 	$('.slider-3').slick({
@@ -276,39 +153,32 @@ function load_slider_5(){
     });
 }
 
-
-
-	$('.story-slider').slick({
+$('.slider-2').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+			variableWidth: true
+            
+          }
+        }
+      ]
+    });
+$('.story-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       arrows: true,
 	  dots: false,
       autoplaySpeed: 2500,
-    });
-
-
-
-// Video tab
-
-$(document).ready(function(){
-	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-		
-		$('#VideoPrev').html('<iframe src="https://www.youtube.com/embed/'+$(".tab-content.current li:nth-child(1) a").attr("data-video")+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-		
-	})
-	
-
-})
-
-
+  });
 
 
