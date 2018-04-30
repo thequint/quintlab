@@ -277,6 +277,18 @@ function load_slider_5(){
 }
 
 
+
+	$('.story-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+	  dots: false,
+      autoplaySpeed: 2500,
+    });
+
+
+
 // Video tab
 
 $(document).ready(function(){

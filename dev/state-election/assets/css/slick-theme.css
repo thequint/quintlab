@@ -31,11 +31,13 @@
 	background: transparent;
 	z-index: 9999 !important;
 }
+/*
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
 	color: transparent;
 	outline: none;
 	background: transparent;
 }
+*/
 .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
 	opacity: 1;
 }
@@ -212,6 +214,8 @@
 }
 /*carousel-wrapper*/
 
+/*
+
 .carousel-wrapper .slick-prev:before, .carousel-wrapper .slick-next:before {
 	font-family: 'FontAwesome';
 	font-size: 40px;
@@ -231,7 +235,11 @@
 .carousel-wrapper .slick-next:before {
 	content: '\f0da';
 }
+*/
+
 /*Slick track*/
+
+/*
 .liveblog-wrapper .slick-track {
 	display: flex;
 }
@@ -261,5 +269,6 @@
 	top: 50%
 }
 
+*/
 
 
