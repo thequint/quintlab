@@ -558,7 +558,7 @@ visibility: visible;
     fill: url(#image);
 }
 .play-icon .surprise_icon_bg {
-    background-image: url('https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/bg-surprise.svg');
+    background-image: url('https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/bg-surprise.svg');
     background-size: 100%;
 }
 

@@ -31,7 +31,7 @@ function pie_events() {
 		var color_attr = $(this).attr('fill');
 		$(".main-wrap").css('background', color_attr);
 		if($(this).hasClass("surprise_bg")) {
-			$(".main-wrap").css({"background-image": "url('https://quintlab.herokuapp.com/dev/jukebox/assets/images/bg-surprise.svg')", "background-size": "110%"});
+			$(".main-wrap").css({"background-image": "url('https://www.thequint.com/quintlab/jukebox/assets/images/bg-surprise.svg')", "background-size": "110%"});
 		}
 	});
 
@@ -212,9 +212,9 @@ function create_pie() {
 
 	    if(sector.moods=="Surprise Me") {
 		    newSector.setAttribute('class', 'surprise_bg');
-		    $(".play-icon").append("<li class='surprise_icon_bg' style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
+		    $(".play-icon").append("<li class='surprise_icon_bg' style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
 	    }else {
-	    	$(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
+	    	$(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
 	    }
 
 	});
@@ -240,7 +240,7 @@ function create_pie() {
         console.log(n+"|"+angle);
         $("#svg_circle ul#pie_labels").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'>"+$(this).attr("data-mood")+"</li>")
         
-        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/icons/"+$(this).attr("data-mood-icon")+"'></li>")
+        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+$(this).attr("data-mood-icon")+"'></li>")
         console.log($(this).attr("data-mood"));
         
     })
