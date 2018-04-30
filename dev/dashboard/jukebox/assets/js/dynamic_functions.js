@@ -31,7 +31,7 @@ function pie_events() {
 		var color_attr = $(this).attr('fill');
 		$(".main-wrap").css('background', color_attr);
 		if($(this).hasClass("surprise_bg")) {
-			$(".main-wrap").css('background-image', "url('https://quintlab.herokuapp.com/dev/jukebox/assets/images/bg-surprise.svg')");
+			$(".main-wrap").css({"background-image": "url('https://quintlab.herokuapp.com/dev/jukebox/assets/images/bg-surprise.svg')", "background-size": "110%"});
 		}
 	});
 
