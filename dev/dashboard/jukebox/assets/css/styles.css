@@ -700,8 +700,8 @@ visibility: visible;
     transform-origin: 50% 50%;
 }
 #pie_icons li img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 }
 #pie_labels li:nth-child(2) {
     transform: rotate(90deg);
@@ -752,6 +752,9 @@ visibility: visible;
     }
     #step02 .song-footer .play-icon li {
         margin: 0 10px 8px;
+    }
+    #pie_icons li img {
+        max-width: 40px;
     }
 }
 @media only screen and (max-width: 639px) {
