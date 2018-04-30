@@ -267,7 +267,7 @@ function set_angle()
 	}else if ($(window).width() < 480) {
 	   	char_angle=3.5;
 	}else {
-	   	char_angle=3.6;
+	   	char_angle=4.1;
 	}
     $("#pie_labels li").each(function(index){
         var char_length= $(this).find("span").length; 

@@ -707,6 +707,7 @@ visibility: visible;
     transform: rotate(90deg);
 }
 #pie_labels li span {
+    color: rgba(255,255,255, 0.7);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 900;
@@ -719,7 +720,9 @@ visibility: visible;
     height: 150px;
     letter-spacing: 0;
     /*font-family: 'Quicksand', sans-serif;*/
-    font-family: "Cooper-hewitt-semibold",sans-serif !important;
+    /*font-family: "Cooper-hewitt-semibold",sans-serif !important;*/
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 

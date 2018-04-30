@@ -1,1 +1,19 @@
-<svg id="Layer_17" data-name="Layer 17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><defs><style>.cls-1{fill:#ececec;}.cls-2{fill:#fdd44d;}</style></defs><title>Party-01</title><polygon class="cls-1" points="117.26 123.19 236.46 290.44 372.2 121.45 117.26 123.19"/><rect class="cls-1" x="228.73" y="276.28" width="14.16" height="212.44" rx="7.08" ry="7.08" transform="translate(2.71 -1.66) rotate(0.41)"/><rect class="cls-1" x="191.39" y="477.66" width="85.61" height="22.09" rx="7.81" ry="7.81" transform="translate(3.46 -1.64) rotate(0.41)"/><polyline class="cls-2" points="244.24 255.31 319.89 141.81 270.74 145.44 244.24 255.31"/><circle class="cls-1" cx="312.86" cy="81.65" r="13.08" transform="translate(13.69 204.31) rotate(-36.92)"/><ellipse class="cls-1" cx="258.8" cy="89.55" rx="8.72" ry="10.9" transform="translate(-1.89 173.42) rotate(-36.92)"/><ellipse class="cls-1" cx="291.87" cy="10.17" rx="8.72" ry="10.9" transform="translate(52.42 177.36) rotate(-36.92)"/><circle class="cls-1" cx="211.03" cy="71.89" r="13.08" transform="translate(-0.87 141.18) rotate(-36.92)"/><circle class="cls-1" cx="234.35" cy="42.48" r="13.08" transform="translate(21.47 149.29) rotate(-36.92)"/><circle class="cls-1" cx="276.21" cy="54.65" r="13.08" transform="translate(22.56 176.88) rotate(-36.92)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FCFCFC;}
+	.st1{fill:#FDD44D;}
+</style>
+<polygon class="st0" points="112,81.3 259.6,288.3 427.7,79.1 "/>
+<path class="st0" d="M258,498.4l-0.7,0c-4.4,0-7.9-3.6-7.9-8l1.5-211.7c0-4.4,3.6-7.9,8-7.9l0.7,0c4.4,0,7.9,3.6,7.9,8L266,490.5
+	C265.9,494.9,262.4,498.4,258,498.4z"/>
+<path class="st0" d="M300,500l-86.6-0.6c-5.3,0-9.6-4.4-9.6-9.7l0.1-8c0-5.3,4.4-9.6,9.7-9.6l86.6,0.6c5.3,0,9.6,4.4,9.6,9.7l-0.1,8
+	C309.7,495.7,305.3,500,300,500z"/>
+<polyline class="st1" points="269.2,244.9 362.9,104.3 302,108.8 269.2,244.9 "/>
+<ellipse transform="matrix(0.7995 -0.6007 0.6007 0.7995 35.3587 203.4461)" class="st0" cx="322.4" cy="48.8" rx="9.8" ry="9.8"/>
+<ellipse transform="matrix(0.7995 -0.6007 0.6007 0.7995 22.4657 153.8541)" class="st0" cx="241.7" cy="43.3" rx="13.1" ry="13.1"/>
+<ellipse transform="matrix(0.7995 -0.6007 0.6007 0.7995 45.3748 170.38)" class="st0" cx="277.9" cy="17.2" rx="16.2" ry="16.2"/>
+<ellipse transform="matrix(0.7995 -0.6007 0.6007 0.7995 15.899 180.9124)" class="st0" cx="278.9" cy="66.6" rx="8.9" ry="8.9"/>
+</svg>
