@@ -99,6 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-wrapper {
 	padding: 50px 0px;
 }
+.carousel-wrapper.is-top{
+	padding-top:70px;
+}
+
 .stories-wrapper {
 	padding: 0px 0px 20px 0px;
 }
@@ -365,11 +369,21 @@ a:hover .story-image img {
 	background: #FFCC00;
 }
 .first-story .story-image {
-	width: 100%;
+	width: 250px;
 	height: 250px;
 	border-radius: 100%;
 	overflow: hidden;
 }
+.first-story .story-image img{
+	height: 175px;
+/*
+	width: 444px;
+	max-width:444px;
+	margin-left: -194px;
+*/
+	
+}
+
 .story-card .first-story {
 	text-align: center;
 }
@@ -415,6 +429,10 @@ a:hover .story-image img {
 	left: 0;
 	z-index: 2;
 }
+.all-story .story-image img{
+	height: 100%;
+}
+
 .story-card .all-story a {
 	height: 80px;
 }
@@ -491,7 +509,7 @@ a:hover .story-image img {
 	float: left;
 	width: 50%;
 	background: #fff;
-	padding: 50px 15px 30px 15px;
+	padding: 50px 15px 0px 15px;
 }
 .party-info .single-party.is-party-right {
 	background: #2cddbb;
