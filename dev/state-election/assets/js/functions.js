@@ -155,7 +155,7 @@ function load_stories() {
 			return item.type == 'story'
 		}).map(function (item) {
 			return item.story
-		}).slice(3, 9);
+		}).slice(3, 8);
 		var elements = stories.map(function (story) {
 			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
@@ -212,7 +212,7 @@ function load_slider_stories() {
 		slidesToScroll: 1,
 		autoplay: true,
 		arrows: true,
-		dots: false,
+		dots: true,
 		autoplaySpeed: 2500,
 	});
 }
