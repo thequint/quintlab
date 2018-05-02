@@ -216,3 +216,21 @@ function load_slider_stories() {
 		autoplaySpeed: 2500,
 	});
 }
+
+$('.slider-4').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: false,
+		arrows: true,
+		autoplaySpeed: 2500,
+		responsive: [{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				variableWidth: true
+
+			}
+		}]
+	});
