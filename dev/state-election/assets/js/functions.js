@@ -55,7 +55,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 3);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_User_Generated').append(element);
@@ -71,7 +71,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 10);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_Party_Left').append(element);
@@ -87,7 +87,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 10);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_Party_Right').append(element);
@@ -104,7 +104,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 9);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_Carousel_Caricatures').append(element);
@@ -122,7 +122,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 9);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_Carousel_Key').append(element);
@@ -141,7 +141,7 @@ function load_stories() {
 			return item.story
 		}).slice(0, 3);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=600&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#Stories_all .all-stories').append(element);
@@ -188,22 +188,33 @@ function load_slider_caricatures() {
 
 function load_slider_key() {
 	$('.slider-3').slick({
-		slidesToShow: 3,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	arrows: true,
+	autoplaySpeed: 2500,
+  	responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+		slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+		slidesToShow: 2,
 		slidesToScroll: 1,
-		autoplay: true,
-		arrows: true,
-		autoplaySpeed: 2500,
-		responsive: [{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				variableWidth: true
-
-			}
-		}]
-	});
+		arrows: false  
+      }
+    
+    }
+ 
+  ]
+});
+		
+	
 }
 
 function load_slider_stories() {
@@ -217,20 +228,100 @@ function load_slider_stories() {
 	});
 }
 
-$('.slider-4').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: false,
-		arrows: true,
-		autoplaySpeed: 2500,
-		responsive: [{
-			breakpoint: 575,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				variableWidth: true
 
-			}
-		}]
-	});
+
+
+$('.slider-4').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	arrows: true,
+	autoplaySpeed: 2500,
+  	responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+		slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false 
+      }
+    
+    }
+ 
+  ]
+});
+
+
+const countdown = document.querySelector('.countdown');
+// Set Launch Date (ms)
+const launchDate = new Date('May 15, 2018 13:00:00').getTime();
+
+// Update every second
+const intvl = setInterval(() => {
+  // Get todays date and time (ms)
+  const now = new Date().getTime();
+
+  // Distance from now and the launch date (ms)
+  const distance = launchDate - now;
+
+  // Time calculation
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display result
+  countdown.innerHTML = `
+  <div>${days}<span>Days</span></div> 
+  <div>${hours}<span>Hours</span></div>
+  <div>${mins}<span>Minutes</span></div>
+  <div>${seconds}<span>Seconds</span></div>
+  `;
+
+  // If launch date is reached
+  if (distance < 0) {
+    // Stop countdown
+    clearInterval(intvl);
+    // Style and output text
+    countdown.style.color = '#17a2b8';
+    countdown.innerHTML = 'Launched!';
+  }
+}, 1000);
+
+
+// Get Story
+var story_toggle=0;
+$('.get-stories').click(function(){
+	if(story_toggle===0)
+		{
+	$('.single-party.is-party-right').addClass("translate_x")
+	$('.single-party.is-party-left').addClass("translate_x")
+	setTimeout(function(){
+		$('.get-stories').addClass('is-change');
+		$('.get-stories span strong').html('BJP');
+	}, 1000);
+			story_toggle=1;
+		}
+	else
+		{
+			$('.single-party.is-party-right').removeClass("translate_x")
+	$('.single-party.is-party-left').removeClass("translate_x")
+	setTimeout(function(){
+		$('.get-stories').removeClass('is-change');
+		$('.get-stories span strong').html('Congress');
+	}, 1000);
+			story_toggle=0
+		}
+})
+
+
+
