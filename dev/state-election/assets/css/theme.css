@@ -100,9 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 60px 0px;
 }
 
-.carousel-wrapper.key-carousel .container{
-	padding: 0px 0px;
-}
+
 
 .carousel-wrapper.key-carousel {
 	padding: 0px 0px 70px 0;
@@ -301,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 30px 30px 30px 60px;
 	min-height: 410px;
 }
-.ugc-wrapper .col-content {
+.ugc-wrapper .col-content.cbg {
 	padding: 30px 30px 30px 60px;
 	min-height: 470px;
 }
@@ -418,7 +416,7 @@ a:hover .story-image img {
 	transform: translateY(-50%);
 }
 .story-card .all-story {
-	margin: 0px -5px;
+	margin: 0px 0px 20px 0;
 }
 .story-card .all-story figure {
 	float: left;
@@ -1038,6 +1036,14 @@ a:hover .story-image img {
 	display: block !important;
 }
 
+.logo-mobile {
+	display: none;
+	position: absolute;
+	width: 30px;
+	top: 15px;
+	left: 2px;
+	z-index: 9999;
+}
 
 
 
