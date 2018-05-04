@@ -16,7 +16,7 @@ body {
 	font-size: 14px;
 	font-weight: 400;
 	color: #1b0325;
-/*	overflow-x: hidden;*/
+	overflow-x: hidden;
 	margin: 0 !important;
 	padding: 0 !important;
 	background: transparent;
@@ -99,9 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-wrapper {
 	padding: 60px 0px;
 }
-
-
-
 .carousel-wrapper.key-carousel {
 	padding: 0px 0px 70px 0;
 }
@@ -387,7 +384,6 @@ a:hover .story-image img {
 	max-width:444px;
 	margin-left: -194px;
 */
-	
 }
 .story-card .first-story {
 	text-align: center;
@@ -511,9 +507,8 @@ a:hover .story-image img {
 	left: -70px;
 }
 .party-info {
-	position:relative;
+	position: relative;
 }
-
 .party-info .single-party {
 	float: left;
 	width: 50%;
@@ -896,7 +891,7 @@ a:hover .story-image img {
 	top: 20px;
 	left: 20px;
 	background: #2cddbb;
-	box-shadow: 0 0 0 20px rgba(255,255,255,0.2),  inset 0 0 3px rgba(115,114, 23, 0.8);
+	box-shadow: 0 0 0 20px rgba(255,255,255,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
 }
 .ch-info > div {
 	display: block;
@@ -951,7 +946,7 @@ a:hover .story-image img {
 	margin: 0 0px;
 	padding: 40px 0 0 0;
 	height: 75px;
-	text-shadow: 0 0 1px #fff,  0 1px 2px rgba(0,0,0,0.3);
+	text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0,0,0,0.3);
 }
 .ch-info p {
 	color: #fff;
@@ -1026,16 +1021,14 @@ a:hover .story-image img {
 	font-size: 18px;
 	text-transform: uppercase;
 }
-
 /*countdown-wrapper*/
 
-.is-mobile{
+.is-mobile {
 	display: none !important;
 }
-.is-desktop{
+.is-desktop {
 	display: block !important;
 }
-
 .logo-mobile {
 	display: none;
 	position: absolute;
@@ -1044,7 +1037,3 @@ a:hover .story-image img {
 	left: 2px;
 	z-index: 9999;
 }
-
-
-
-
