@@ -118,6 +118,11 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 }
 
 @media (max-width: 991px) {
+	
+	.block-content.block-content-coundown {
+	margin-top: 0;
+}
+	
 .header-wrapper::after {
 	width: 420px;
 	height: 42px;
@@ -133,7 +138,6 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 	float: none;
 	width: auto;
 	padding: 0;
-	margin-top: 30px;
 }
 .story-card .all-story figure {
 	float: left;
@@ -436,6 +440,17 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 .get-stories.is-change span {
 	top: 307px;
 }
+	
+	
+	.countdown {
+	font-size: 55px;
+}
+	
+	.countdown div {
+		width: 65px;
+	}
+	
+	
 }
 
 @media (max-width: 360px) {
