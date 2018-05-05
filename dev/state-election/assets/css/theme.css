@@ -1110,7 +1110,76 @@ height: 210px;
 }
 .twitter-widget ul li{
 	position: relative;
+	margin-bottom: 25px;
 }
+
+.twitter-widget ul li .user > a{
+	display: block;
+	width: 48px;
+	height: 48px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.twitter-widget ul li .user > div {
+	margin: 0px 0px 2px 58px;
+	font-size: 17px;
+	padding-bottom: 17px;
+}
+
+.twitter-widget ul li p{
+	margin: 0px 0px 0px 58px;
+}
+
+
+.twitter-widget ul li .user div:before,  .twitter-widget ul li .user > div:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.twitter-widget ul li .user > div:after{
+	clear: both;
+}
+
+
+.twitter-widget ul li .user > div span{
+	float: left;
+	display: inline-block;
+	font-weight: 700;
+	color: rgba(255,255,255,0.8);
+	margin-right: 4px;
+	
+}
+
+.twitter-widget ul li .user > div span:hover{
+	color:#fff;
+}
+
+.twitter-widget ul li .media{
+	margin: 15px 0px 0px 58px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.twitter-widget ul li a{
+	color: rgba(255,255,255,0.8);
+}
+.twitter-widget ul li a:hover{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.twitter-widget ul li p.timePosted {
+	position: absolute;
+	top: 18px;
+	left: 0;
+}
+
+
+
 
 .col-videos .story-slider{
 	margin-top: 0;
