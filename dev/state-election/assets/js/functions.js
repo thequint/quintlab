@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
-	$('ul.tabs li').click(function () {
+	/*$('ul.tabs li').click(function () {
 		var tab_id = $(this).attr('data-tab');
+		
 
 		$('ul.tabs li').removeClass('current');
 		$('.tab-content').removeClass('current');
@@ -11,7 +12,8 @@ $(document).ready(function () {
 
 		$('#VideoPrev').html('<iframe src="https://www.youtube.com/embed/' + $(".tab-content.current li:nth-child(1) a").attr("data-video") + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 
-	});
+	});*/
+	
 
 	load_stories();
 });
@@ -148,9 +150,26 @@ function load_stories() {
 		});
 	});
 
-	// Last slider stories
+	// Last slider stories 
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[3], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
+		var stories = res.items.filter(function (item) {
+			return item.type == 'story'
+		}).map(function (item) {
+			return item.story
+		}).slice(0, 5);
+		var elements = stories.map(function (story) {
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+		});
+		elements.forEach(function (element) {
+			$('#story_Slider_1').append(element);
+		});
+		load_slider_stories_1();
+	});
+	
+	
+	
+		$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[3], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -160,9 +179,9 @@ function load_stories() {
 			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
-			$('.story-slider').append(element);
+			$('#story_Slider_2').append(element);
 		});
-		load_slider_stories();
+		load_slider_stories_2();
 	});
 }
 
@@ -217,8 +236,19 @@ function load_slider_key() {
 	
 }
 
-function load_slider_stories() {
-	$('.story-slider').slick({
+function load_slider_stories_1() {
+	$('#story_Slider_1').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		arrows: true,
+		dots: true,
+		autoplaySpeed: 2500,
+	});
+}
+
+function load_slider_stories_2() {
+	$('#story_Slider_2').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -323,5 +353,18 @@ $('.get-stories').click(function(){
 		}
 })
 
+// Twitter Fetcher
 
+var configList = {
+  "list": {"listSlug": 'karnataka-elections', "screenName": 'tapanbabbar'},
+  "domId": 'exampleList',
+  "maxTweets": 10,
+  "enableLinks": true, 
+  "showUser": true,
+  "showTime": true,
+  "showImages": true,
+  "lang": 'en',
+	"showInteraction":false
+};
+twitterFetcher.fetch(configList);
 

@@ -122,13 +122,18 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 	.block-content.block-content-coundown {
 	margin-top: 0;
 }
+	.col.col-twitter{
+		margin-bottom:30px;
+	}
 	
+/*
 .header-wrapper::after {
 	width: 420px;
 	height: 42px;
 	margin-left: -210px;
 	bottom: -21px;
 }
+*/
 .col.col-videos {
 	float: none;
 	width: auto;
@@ -268,12 +273,14 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 .video-wrapper {
 	padding: 45px 0px 55px 0px;
 }
+/*
 .header-wrapper::after {
 	width: 220px;
 	margin-left: -120px;
 	bottom: -21px;
 	background-size: 197%;
 }
+*/
 .header-logos ul li:nth-child(1), .header-logos::before {
 	display: none;
 }
@@ -291,7 +298,7 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 .ch-grid {
 	padding: 0;
 }
-.video-wrapper::after {
+.video-wrapper::after, .header-wrapper::after {
 	width: 220px;
 	height: 62px;
 	bottom: -31px;
@@ -404,7 +411,7 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 	font-size: 15px;
 }
 .party-stories figcaption {
-	padding: 10px 0px;
+	padding: 0px 0px;
 }
 .party-stories a {
 	min-height: auto;

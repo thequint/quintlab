@@ -122,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 .ugc-wrapper {
 	padding: 70px 0px;
 }
+/*
 .header-wrapper::after {
 	position: absolute;
 	width: 480px;
@@ -139,11 +140,12 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 99;
 	border-radius: 9px;
 }
+*/
 .video-wrapper {
 	background-color: #FFCC00;
 	padding: 70px 0px 90px 0px;
 }
-.video-wrapper::after {
+.video-wrapper::after, .header-wrapper::after {
 	position: absolute;
 	width: 270px;
 	height: 80px;
@@ -157,6 +159,8 @@ h1, h2, h3, h4, h5, h6 {
 	background-size: 100%;
 	z-index: 99;
 }
+
+
 .header-logos {
 	margin: 0 auto;
 	max-width: 425px;
@@ -238,12 +242,19 @@ h1, h2, h3, h4, h5, h6 {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+.section-sub-headline{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
 .section-headline {
 	font-size: 32px;
 	position: relative;
 	line-height: 120%;
 	margin-bottom: 14px;
 	padding-left: 35px;
+	display: inline-block;
+	padding-right: 10px;
 }
 .section-headline::before {
 	width: 30px;
@@ -259,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section-headline::after {
 	height: 2px;
-	width: 70%;
+	width: 100%;
 	background: #1B0325;
 	content: '';
 	position: absolute;
@@ -550,12 +561,13 @@ a:hover .story-image img {
 	color: #2cddbb;
 }
 .party-stories figure {
-	padding: 0px 0px 27px 0px;
+/*	padding: 0px 0px 27px 0px;*/
 	font-size: 18px;
 	margin-left: 35px;
+	padding: 15px 0px;
 }
 .party-stories figure:last-child {
-	padding: 0px;
+/*	padding: 0px;*/
 }
 .party-stories figure::before {
 	width: 20px;
@@ -587,7 +599,7 @@ a:hover .story-image img {
 	position: relative;
 }
 .party-stories a {
-	min-height: 115px;
+/*	min-height: 115px;*/
 }
 .party-stories .story-image {
 	width: 200px;
@@ -595,7 +607,8 @@ a:hover .story-image img {
 	overflow: hidden;
 }
 .party-stories figcaption {
-	padding: 5px 0px 0px 212px
+	padding: 0;
+	/*padding: 5px 0px 0px 212px*/	
 }
 .party-stories a:hover {
 	color: #2cddbb;
@@ -1022,24 +1035,21 @@ a:hover .story-image img {
 
 .block-content-coundown{
 	text-align: center;
-	padding: 15px 0px;
+	padding: 15px 0px 5px 0;
 	margin-bottom: 15px;
 }
 
 .block-content.block-content-coundown h3{
 	font-size:40px;
 	line-height: 60%;
-	margin-top: 10px;
-	
-
-	
+	margin-top: 15px;	
 }
 .countdown {
 	font-size: 60px;
 	text-align: center;
 	font-family: 'libel_suitregular';
 	display: inline-block;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .countdown div {
 	margin: 0px 5px;
@@ -1081,3 +1091,28 @@ a:hover .story-image img {
 	-webkit-overflow-scrolling: touch;
 	height: 300px;
 }
+
+.logo-text {
+	color: rgba(255,255,255,0.8);
+	text-align: center;
+	font-size: 18px;
+	max-width: 500px;
+	margin: 0 auto 20px auto;
+	line-height: 130%;
+}
+
+/*Twitter Widgets*/
+
+.twitter-widget{
+height: 210px;
+	overflow: auto;
+	word-wrap: break-word;
+}
+.twitter-widget ul li{
+	position: relative;
+}
+
+.col-videos .story-slider{
+	margin-top: 0;
+}
+
