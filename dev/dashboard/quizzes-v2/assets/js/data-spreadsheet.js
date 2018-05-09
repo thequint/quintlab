@@ -30,8 +30,8 @@ function showInfo(data) {
 	sheet_data = data;
 	//data_array = JSON.parse(data[id].array); //when pulling from the sheet
 
-	data_array = JSON.parse(data[parseInt(getParameterByName('id'))-2].Comments); //when feting the array directly from the url
-	//console.log(data_array);
+	data_array = JSON.parse(data[parseInt(getParameterByName('id'))-2].Comments+data[parseInt(getParameterByName('id'))-1].Comments_2+data[parseInt(getParameterByName('id'))].Comments_3); //when feting the array directly from the url
+	console.log(data_array);
 
 	display_data();
 	// console.log(data_array[0].qT);

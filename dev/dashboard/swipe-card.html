@@ -1,256 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Swipe Cards | Quint Lab</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="assets/css/form.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-    
+    <title>Swipe Cards | Quint Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
 </head>
+
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a href="#" class="navbar-brand mb-0 h1">
-		<img src="assets/images/qLabLogo.png" width="100" height="100%" class="d-inline-block align-top">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-  	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">			
-		<ul class="navbar-nav ml-auto">
-			<li class="navbar-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Your Account
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a href="#" class="dropdown-item">View</a>
-					<a href="#" class="dropdown-item">Edit</a>
-					<a href="#" class="dropdown-item">Some Action</a>
-					<a href="#" class="dropdown-item">Another Action</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">Logout</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-
-<div class="container" id="main-content">
-	<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
-	  <ol class="breadcrumb">
-	    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-	    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
-	  </ol>
-	</nav>
-	<div class="row">
-		<div class="col-lg-12">
-			<h2 class="display-4">Swipe Card</h2>
-			<hr>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-7 col-sm-12" align="center">
-			<h4 class="display-4 preview">Preview</h4>
-		</div>
-	</div>
-	<div class="row widget-details">
-		<div class="col-lg-7 col-sm-12 mr-auto" align="center">
-			<div id="preview">
-				<iframe style='height:638px;' class='quiz-iframe' src='swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>
-			</div>
-		</div>
-		<div class="col-lg-5 col-sm-12">
-			<div class="form-wrap">
-				<form id="foo">
-
-					<div class="form-group">
-						<label for="text">Swipe Image</label>
-						<input id="Swipe_Id" name="Swipe_Id" type="text" class="form-control" style="display:none;">
-						<input id="Swipe_Image" name="Swipe_Image" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Title</label>
-						<input id="Swipe_Title" name="Swipe_Title" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Subtitle</label>
-						<input id="Swipe_Subtitle" name="Swipe_Subtitle" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Description</label>
-						<input id="Swipe_Description" name="Swipe_Description" type="text" class="form-control">
-					</div>
-
-					<!-- Left -->
-					<div class="form-group">
-						<label for="text">Swipe Image Left</label>
-						<input id="Swipe_Image_Left" name="Swipe_Image_Left" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Title Left</label>
-						<input id="Swipe_Title_Left" name="Swipe_Title_Left" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Subtitle Left</label>
-						<input id="Swipe_Subtitle_Left" name="Swipe_Subtitle_Left" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Description Left</label>
-						<input id="Swipe_Description_Left" name="Swipe_Description_Left" type="text" class="form-control">
-					</div>
-
-					<div class="form-group">
-						<label for="text">Swipe Image Right</label>
-						<input id="Swipe_Image_Right" name="Swipe_Image_Right" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Title Right</label>
-						<input id="Swipe_Title_Right" name="Swipe_Title_Right" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Subtitle Right</label>
-						<input id="Swipe_Subtitle_Right" name="Swipe_Subtitle_Right" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="text">Swipe Description Right</label>
-						<input id="Swipe_Description_Right" name="Swipe_Description_Right" type="text" class="form-control">
-					</div>
-
-					<div class="form-group clearfix">
-			            <button type="submit" class="btn-submit">Generate code</button>
-			            <span id="result"></span>
-			            <span class="copy-val">Copy</span>
-			        </div>
-					
-					<!-- <div class="form-group clearfix">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
+    </nav>
+    <div class="container" id="main-content">
+        <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="display-4">Swipe Card</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-sm-12" align="center">
+                <h4 class="display-4 preview">Preview</h4>
+            </div>
+        </div>
+        <div class="row widget-details">
+            <div class="col-lg-7 col-sm-12 mr-auto" align="center">
+                <div id="preview">
+                    <iframe style='height:638px;' class='quiz-iframe' src='swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="form-wrap">
+                    <form id="foo">
+                        <div class="form-group">
+                            <label for="text">Swipe Image</label>
+                            <input id="Swipe_Id" name="Swipe_Id" type="text" class="form-control" style="display:none;">
+                            <input id="Swipe_Image" name="Swipe_Image" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Title</label>
+                            <input id="Swipe_Title" name="Swipe_Title" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Subtitle</label>
+                            <input id="Swipe_Subtitle" name="Swipe_Subtitle" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Description</label>
+                            <input id="Swipe_Description" name="Swipe_Description" type="text" class="form-control">
+                        </div>
+                        <!-- Left -->
+                        <div class="form-group">
+                            <label for="text">Swipe Image Left</label>
+                            <input id="Swipe_Image_Left" name="Swipe_Image_Left" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Title Left</label>
+                            <input id="Swipe_Title_Left" name="Swipe_Title_Left" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Subtitle Left</label>
+                            <input id="Swipe_Subtitle_Left" name="Swipe_Subtitle_Left" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Description Left</label>
+                            <input id="Swipe_Description_Left" name="Swipe_Description_Left" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Image Right</label>
+                            <input id="Swipe_Image_Right" name="Swipe_Image_Right" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Title Right</label>
+                            <input id="Swipe_Title_Right" name="Swipe_Title_Right" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Subtitle Right</label>
+                            <input id="Swipe_Subtitle_Right" name="Swipe_Subtitle_Right" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Swipe Description Right</label>
+                            <input id="Swipe_Description_Right" name="Swipe_Description_Right" type="text" class="form-control">
+                        </div>
+                        <div class="form-group clearfix">
+                            <button type="submit" class="btn-submit">Generate code</button>
+                            <span id="result"></span>
+                            <span class="copy-val">Copy</span>
+                        </div>
+                        <!-- <div class="form-group clearfix">
 						<span type="" class="btn-submit">Generate code</span>
 						<span class="copy-val">Copy</span>
 					</div> -->
+                        <div class="form-group embedded-code">
+                            <label for="text">Embedded Code</label>
+                            <textarea type="text" class="text-area form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="test_id"></ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="assets/js/spreadsheet.js"></script>
+    <!-- <script src="swipe-card/assets/js/data-spreadsheet.js"></script> -->
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        // variable to hold request
+        var request;
 
-					<div class="form-group embedded-code">
-						<label for="text">Embedded Code</label>
-						<textarea type="text" class="text-area form-control"></textarea>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>		
-</div>
+        $("#foo").submit(function(event) {
 
-<ul id="test_id"></ul>
+            var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1KeTaw7Y8Q-8J0zvHdkplGi1Y2wR31LL8m3CkkyF5vdU/pubhtml';
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-<script src="assets/js/spreadsheet.js"></script>
-<!-- <script src="swipe-card/assets/js/data-spreadsheet.js"></script> -->
+            var $form = $(this);
+            // let's select and cache all the fields
 
 
-<script type="text/javascript">
-jQuery( document ).ready(function( $ ) {
-    // variable to hold request
-    var request;
-    
-    $("#foo").submit(function(event){
+            function init() {
+                Tabletop.init({
+                    key: public_spreadsheet_contact,
+                    callback: showInfo,
+                    simpleSheet: true
+                });
+            }
 
-    	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1KeTaw7Y8Q-8J0zvHdkplGi1Y2wR31LL8m3CkkyF5vdU/pubhtml';
+            function showInfo(data) {
 
-        var $form = $(this);
-        // let's select and cache all the fields
-        
+                var length_id = data.length + 1;
+                console.log(length_id);
 
-		function init() {
-			Tabletop.init({
-				key: public_spreadsheet_contact,
-				callback: showInfo,
-				simpleSheet: true
-			});
-		}
+                console.log(data.length);
 
-		function showInfo(data) {
+                $("#Swipe_Id").val(length_id);
 
-			var length_id = data.length+1;
-			console.log(length_id);
+                // setup some local variables
+                var $inputs = $form.find("input, select, button, textarea");
+                // serialize the data in the form
+                var serializedData = $form.serialize();
 
-			console.log(data.length);
+                // abort any pending request
+                if (request) {
+                    request.abort();
+                }
 
-			$("#Swipe_Id").val(length_id);
 
-			// setup some local variables
-	        var $inputs = $form.find("input, select, button, textarea");
-	        // serialize the data in the form
-	        var serializedData = $form.serialize();
+                // Disabled form elements will not be serialized.
+                $inputs.prop("disabled", true);
+                $('#result').text('Sending data...');
 
-			// abort any pending request
-	        if (request) {
-	            request.abort();
-	        }
+                // fire off the request to /form.php
+                request = $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbzhUtCuc8pzkZ6KQXmN0w0IsJTZ1IvuLpVHjI8Awks1zuEywJxJ/exec",
+                    type: "get",
+                    data: serializedData
+                });
 
-	        
-	        // Disabled form elements will not be serialized.
-	        $inputs.prop("disabled", true);
-	        $('#result').text('Sending data...');
-	    
-	        // fire off the request to /form.php
-	        request = $.ajax({
-	            url: "https://script.google.com/macros/s/AKfycbzhUtCuc8pzkZ6KQXmN0w0IsJTZ1IvuLpVHjI8Awks1zuEywJxJ/exec",
-	            type: "get",
-	            data: serializedData
-	        });
-	    
-	        // callback handler that will be called on success
-	        request.done(function (response, textStatus, jqXHR){
-	            // log a message to the console
-	            //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
-	            $('#result').html('<span class="success">Success</span>');
-	            console.log("Hooray, it worked!");
-	        });
-	    
-	        // callback handler that will be called on failure
-	        request.fail(function (jqXHR, textStatus, errorThrown){
-	            // log the error to the console
-	            console.error(
-	                "The following error occured: "+
-	                textStatus, errorThrown
-	            );
-	        });
-	    
-	        // if the request failed or succeeded
-	        request.always(function () {
-	            // reenable the inputs
-	            $inputs.prop("disabled", false);
-	        });
+                // callback handler that will be called on success
+                request.done(function(response, textStatus, jqXHR) {
+                    // log a message to the console
+                    //$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+                    $('#result').html('<span class="success">Success</span>');
+                    console.log("Hooray, it worked!");
+                });
 
-	        $('#foo').find('input, textarea').val('');
-			
-			$(".text-area").val("<iframe style='height:638px;' class='quiz-iframe' src='https://www.thequint.com/quintlab/dashboard/swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>");
-			
-			$("#preview").html("<iframe style='height:638px;' class='quiz-iframe' src='swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>");
-		}
+                // callback handler that will be called on failure
+                request.fail(function(jqXHR, textStatus, errorThrown) {
+                    // log the error to the console
+                    console.error(
+                        "The following error occured: " +
+                        textStatus, errorThrown
+                    );
+                });
 
-		$(".copy-val").click(function(){
-		    $(".text-area").select();
-		    document.execCommand('copy');
-		});
+                // if the request failed or succeeded
+                request.always(function() {
+                    // reenable the inputs
+                    $inputs.prop("disabled", false);
+                });
 
-		init();
+                $('#foo').find('input, textarea').val('');
 
-		event.preventDefault();
-        
+                $(".text-area").val("<iframe style='height:638px;' class='quiz-iframe' src='https://www.thequint.com/quintlab/dashboard/swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>");
+
+                $("#preview").html("<iframe style='height:638px;' class='quiz-iframe' src='swipe-card/index.html?id=0' width='100%' frameborder='0'></iframe>");
+            }
+
+            $(".copy-val").click(function() {
+                $(".text-area").select();
+                document.execCommand('copy');
+            });
+
+            init();
+
+            event.preventDefault();
+
+        });
     });
-});
-</script>
-
-
-<!--
+    </script>
+    <!--
 <script>
 	$(document).ready(function(){
 		var url = "switch/index.html"
@@ -274,7 +234,6 @@ jQuery( document ).ready(function( $ ) {
 	});
 </script>
 -->
-
-
 </body>
+
 </html>

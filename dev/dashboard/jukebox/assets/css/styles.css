@@ -556,6 +556,7 @@ visibility: visible;
 
 #svg_circle .surprise_bg {
     fill: url(#image);
+
 }
 .play-icon .surprise_icon_bg {
     background-image: url('https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/bg-surprise.svg');

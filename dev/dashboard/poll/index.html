@@ -9,189 +9,214 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
 <meta name="author" content="">
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-
 <!-- Custom -->
 <link href="assets/css/base.css" rel="stylesheet">
-<link href="assets/css/poll.css" rel="stylesheet"> 
-
+<link href="assets/css/poll.css" rel="stylesheet">
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </head>
 
 <body>
-<div class="main-wrap">
-	
+    <div class="main-wrap">
+        <div class="draggable-wrap">
+            <div class="drag-container resize-container">
+                <div class="image-editor">
+                    <div class="drag-preview">
+                        <div class="cropit-preview cropit-image-loaded" style="position: relative; width: 350px; height: 350px;">
+                            <div class="cropit-preview-image-container" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 100%;"><img class="cropit-preview-image" alt="" src="" style=""></div>
+                        </div>
+                        <div class="drag-content resize-drag" style="" data-x="43.75799560546875" data-y="-24.27301025390625">
+                            <div class="question-wrap">
+                                <div class="drag-question" style="display:none">
+                                    <span id="question_txt"></span>
+                                </div>
+                                <div class="drag-answer">
+                                    <form id="foo">
 
-	<div class="draggable-wrap">
+                                        <div class="poll-score-option" style="display:none">
+                                            <div class="drag-answer--left">
+                                                <button type="submit" data-no="1" id="answer_right" class="answer-button"></button>
+                                            </div>
+                                            <div class="drag-answer--right">
+                                                <button type="submit" data-no="0" id="answer_wrong" class="answer-button"></button>
+                                            </div>
+                                            <!-- <input id='' name='' type='text'> -->
 
-        <div class="drag-container resize-container">
-            <div class="image-editor">
-                <div class="drag-preview">
-				    <div class="cropit-preview cropit-image-loaded" style="position: relative; width: 350px; height: 350px;">
-				        <div class="cropit-preview-image-container" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 100%;"><img class="cropit-preview-image" alt="" src="" style=""></div>
-				    </div>
-				    <div class="drag-content resize-drag" style="" data-x="43.75799560546875" data-y="-24.27301025390625">
+                                            <div style="display: none">
+                                                <input id='id' name='id' type='text'>
+                                                <input id='userName' name='userName' type='text'>
+                                                <input id='pollAnswer' name='pollAnswer' type='text'>
+                                            </div>
+                                        </div>
 
-				    	<div class="question-wrap">
-					        <div class="drag-question">
-					        	<span id="question_txt"></span>
-					        </div>
-					        <div class="drag-answer">
-					        	<form id="foo">
-						            <div class="drag-answer--left">
-						            	<button type="submit" data-no="1" id="answer_right" class="answer-button"></button>
-						            </div>
-						            <div class="drag-answer--right">
-						            	<button type="submit" data-no="0" id="answer_wrong" class="answer-button"></button>
-						            </div>
-						            <input id='' name='' type='text'>
-						            <div style="display: none">
-						            	<input id='id' name='id' type='text'>
-							            <input id='userName' name='userName' type='text'>
-							            <!-- <input id='userEmail' name='userEmail' type='text'> -->
-							            <input id='pollAnswer' name='pollAnswer' type='text'>
-						            </div>
-						            
-						            <input id='userEmail' name='userEmail' type='email'>
-                       			 	<button type="submit">Submit</button>
-
-						        </form>
-					        </div>
-				        </div>
-				        <div class="results-wrap">
-				        	<span class="result-yes">70%</span>
-				        	<span class="result-no">30%</span>
-				        </div>
-
-
-
-				    </div>
-				</div>
-
-
+                                        <div class="poll-check-email">
+                                            <input id='userEmail' name='userEmail' type='text'>
+                                            <span class="check-btn">Check</span>
+                                            <!-- <button type="submit">Submit</button> -->
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="results-wrap">
+                                <span class="result-yes">70%</span>
+                                <span class="result-no">30%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
     </div>
-
-
-</div>
-
-<!-- Facebook Login -->
-<div class="facebook-login">
-	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-	</fb:login-button>
-
-	<div id="status">
-	</div>
-</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/spreadsheet.js"></script>
+    <script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
+    <script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+    <script>
     
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/spreadsheet.js"></script> 
-<!-- <script src="assets/js/dynamic_functions.js"></script> -->
-<!-- <script src="assets/js/functions.js"></script> -->
+    // Poll answer sheet
+    var poll_answer_sheet = 'https://docs.google.com/spreadsheets/d/1oA9H3Sh7rF3wRGxywK5ALzsqaeJLQEUXM4OU26Tc70A/pubhtml'; // New form quiz sheet
 
-<script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
+    Tabletop.init({
+        key: poll_answer_sheet,
+        callback: showInfoAnswer,
+        simpleSheet: true
+    });
 
-<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+    var poll_answer_data;
 
+    function showInfoAnswer(data) {
+        poll_answer_data = data;
+    }
 
+    function check_mail(email) {
+        for (var i = 0; i < poll_answer_data.length; i++) {
+            if (poll_answer_data[i].id == getParameterByName('id')) {
+                console.log(email);
+                if (email == poll_answer_data[i].userEmail) {
+                    alert("already exist");
+                    showScore();
+                    return;
+                }else{
+                    $(".poll-check-email").hide();
+                    $('.drag-question').show();
+                    $(".poll-score-option").show();
+                }
+            }
+        }
+    }
+    $(".check-btn").click(function(){
+        check_mail($("#userEmail").val());
+    });
 
-<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    // end //
 
-	// var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
+    // Poll array sheet data
+    var poll_sheet_data = 'https://docs.google.com/spreadsheets/d/1vDgiznBMahleOg-UdIStijlMiVr_29ijnbgNmNuGRrI/pubhtml'; // New form quiz sheet
+    Tabletop.init({
+        key: poll_sheet_data,
+        callback: showArrayInfo,
+        simpleSheet: true
+    });
 
-	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1vDgiznBMahleOg-UdIStijlMiVr_29ijnbgNmNuGRrI/pubhtml'; // New form quiz sheet
+    var poll_data_pull;
 
-	Tabletop.init({
-		key: public_spreadsheet_contact,
-		callback: showInfo,
-		simpleSheet: true
-	});
+    function showArrayInfo(data) {
 
-	function getParameterByName(name, url) {
-	    if (!url) url = window.location.href;
-	    name = name.replace(/[\[\]]/g, "\\$&");
-	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	        results = regex.exec(url);
-	    if (!results) return null;
-	    if (!results[2]) return '';
-	    return decodeURIComponent(results[2].replace(/\+/g, " "));
-	}
+        console.log(data[getParameterByName('id') - 2].pollSheetData);
+        poll_data_pull = JSON.parse(data[getParameterByName('id') - 2].pollSheetData);
+        console.log(poll_data_pull);
 
-	var poll_data_pull;
+        $(".cropit-preview-image").attr("src", poll_data_pull[0].imgURL);
+        $(".cropit-preview-image").attr("style", poll_data_pull[0].imgTransform);
+        $(".resize-drag").attr("style", poll_data_pull[0].resizeDrag);
 
-	function showInfo(data) {
-
-		console.log(data[getParameterByName('id')-2].pollSheetData);
-		poll_data_pull = JSON.parse(data[getParameterByName('id')-2].pollSheetData);
-		console.log(poll_data_pull);
-		
-		$(".cropit-preview-image").attr("src", poll_data_pull[0].imgURL);
-		$(".cropit-preview-image").attr("style", poll_data_pull[0].imgTransform);
-		$(".resize-drag").attr("style", poll_data_pull[0].resizeDrag);
-
-		$("#question_txt").text(poll_data_pull[0].qusTxt);
-		$("#answer_right").text(poll_data_pull[0].ansRight);
+        $("#question_txt").text(poll_data_pull[0].qusTxt);
+        $("#answer_right").text(poll_data_pull[0].ansRight);
         $("#answer_wrong").text(poll_data_pull[0].ansWrong);
         $("#id").val(getParameterByName('id'));
 
-		console.log(poll_data_pull[0].imgURL);
-		console.log(poll_data_pull[0].imgTransform);
-		console.log(poll_data_pull[0].resizeDrag);
+        console.log(poll_data_pull[0].imgURL);
+        console.log(poll_data_pull[0].imgTransform);
+        console.log(poll_data_pull[0].resizeDrag);
 
-		console.log(new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
+        console.log(new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
 
-		console.log(new Date().getHours()- new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
-		if(new Date().getHours()- new Date(Date.parse(poll_data_pull[0].dateTime)).getHours()>1)
-		{
-			 existValue() 
-		}
-	}
+        console.log(new Date().getHours() - new Date(Date.parse(poll_data_pull[0].dateTime)).getHours());
 
-	// form submit
+        if (new Date().getHours() - new Date(Date.parse(poll_data_pull[0].dateTime)).getHours() > 1) {
+            showScore()
+        }
+    }
+
+    // form submit
     var request;
-    var user_info=0;
-    $("#foo button.answer-button").click(function(){
-    	user_info= $(this).attr("data-no");
-    	// add value here
-    	$("#userName").val("Shahadat");
-    	//$("#userEmail").val("shahadat@thequint.com");
-    	$("#pollAnswer").val(user_info);
+    var user_info = 0;
+    $("#foo button.answer-button").click(function() {
+        user_info = $(this).attr("data-no");
+        // add value here
+        $("#userName").val("Shahadat");
+        //$("#userEmail").val("shahadat@thequint.com");
+        $("#pollAnswer").val(user_info);
     });
 
-    function existValue() {
-		$(".question-wrap").hide();
-		$(".results-wrap").show();
-	}
+    function showScore() {
+        $(".question-wrap").hide();
+        $(".results-wrap").show();
+        // $(".resize-drag").removeAttr("style")
+        $(".resize-drag").css("height", "inherit");
 
-    $("#foo").submit(function(event){
-    	event.preventDefault();
+        // calculate score
+        var yes_ans=0, no_ans=0;
+        for (var i = 0; i < poll_answer_data.length; i++) {
+            if (poll_answer_data[i].id == getParameterByName('id')) {
+                if(poll_answer_data[i].pollAnswer==0){
+                    no_ans++  
+                }else if(poll_answer_data[i].pollAnswer==1){
+                    yes_ans++;
+                }
+            }
+        }
+        console.log(yes_ans+"|"+no_ans);
 
-    	console.log(user_info);
+        $(".results-wrap .result-yes").css("width",yes_ans*100/(yes_ans+no_ans)+"%");
+        $(".results-wrap .result-no").css("width",no_ans*100/(yes_ans+no_ans)+"%");
 
-    	if($("#userEmail").val()==""){
-    		alert("Please fill the email");
-    		return;
-    	}
-    	
-    	if ($("#userEmail").val() =="shahadat@gmail.com"){
-			alert("Email id already exist");
-			existValue() ;
-			return;
-    	}
+        $(".results-wrap .result-yes").html((yes_ans*100/(yes_ans+no_ans)).toFixed(1)+"%");
+        $(".results-wrap .result-no").html((no_ans*100/(yes_ans+no_ans)).toFixed(1)+"%");
+
+    }
+
+    $("#foo").submit(function(event) {
+        event.preventDefault();
+
+        console.log(user_info);
+
+        if ($("#userEmail").val() == "") {
+            alert("Please fill the email");
+            return;
+        }
+        /*
+        if ($("#userEmail").val() == "shahadat@gmail.com") {
+            alert("Email id already exist");
+            showScore();
+            return;
+        }*/
 
         // abort any pending request
         if (request) {
@@ -203,138 +228,53 @@
         var $inputs = $form.find("input, select, button, textarea");
         // serialize the data in the form
         var serializedData = $form.serialize();
-    
+
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
         $('#result').text('Sending data...');
-    
+
         // fire off the request to /form.php
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbwfBHsQrJGRMgU2WQ4kLii2Cni-XC0rV0z0j6o4Aw6-1-TFdYI/exec",
             type: "post",
             data: serializedData
         });
-    
+
         // callback handler that will be called on success
-        request.done(function (response, textStatus, jqXHR){
+        request.done(function(response, textStatus, jqXHR) {
             $('#result').html('<span class="success">Success</span>');
             console.log("Hooray, it worked!");
-            existValue();
+            showScore();
         });
-    
+
         // callback handler that will be called on failure
-        request.fail(function (jqXHR, textStatus, errorThrown){
+        request.fail(function(jqXHR, textStatus, errorThrown) {
             // log the error to the console
             console.error(
-                "The following error occured: "+
+                "The following error occured: " +
                 textStatus, errorThrown
             );
         });
-    
+
         // if the request failed or succeeded
-        request.always(function () {
+        request.always(function() {
             // reenable the inputs
             $inputs.prop("disabled", false);
         });
 
         $('#foo').find('input, textarea').val('');
-    
+
         // prevent default posting of form
-        
+
     });
 
-	
-
-
-
-
-
-
-	function adjust_iframe_height() {
-	    var actual_height = document.body.scrollHeight;
-	    //console.log("height is", actual_height);
-	    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
-	}
-	adjust_iframe_height();
-</script>
-
-
-<script>
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else {
-      // The person is not logged into your app or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+    function adjust_iframe_height() {
+        var actual_height = document.body.scrollHeight;
+        //console.log("height is", actual_height);
+        parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
     }
-  }
-
-  // This function is called when someone finishes with the Login
-  // Button.  See the onlogin handler attached to it in the sample
-  // code below.
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '425030461275044',
-      cookie     : true,  // enable cookies to allow the server to access 
-                          // the session
-      xfbml      : true,  // parse social plugins on this page
-      version    : 'v2.8' // use graph api version 2.8
-    });
-
-    // Now that we've initialized the JavaScript SDK, we call 
-    // FB.getLoginStatus().  This function gets the state of the
-    // person visiting this page and can return one of three states to
-    // the callback you provide.  They can be:
-    //
-    // 1. Logged into your app ('connected')
-    // 2. Logged into Facebook, but not your app ('not_authorized')
-    // 3. Not logged into Facebook and can't tell if they are logged into
-    //    your app or not.
-    //
-    // These three cases are handled in the callback function.
-
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-
-  };
-
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  // Here we run a very simple test of the Graph API after login is
-  // successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    // FB.api('/me', function(response) {
-    FB.api('/me', {fields: 'name,email'}, function(response) {
-      console.log('Successful login for: ' + response.name);
-      console.log('Successful login for: ' + response.email);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-</script>
+    adjust_iframe_height();
+    </script>
 </body>
+
 </html>

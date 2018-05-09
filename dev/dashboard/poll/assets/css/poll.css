@@ -16,6 +16,9 @@ input, button {
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
 }
+input:focus, button:focus {
+    outline: none;
+}
 .main-wrap {
     position: relative;
     margin: 0 auto;
@@ -24,9 +27,59 @@ input, button {
 }
 
 
+.btns-wrap {
+    margin-bottom: 10px;
+}
+.create-poll-btn,
+.preview-poll-btn {
+    width: 49.4%;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.btn-inactive {
 
+}
+/*
+.create-poll-btn,
+.preview-poll-btn {
+    float: left;
+    width: 50%;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #36154f;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.create-poll-btn {
+    background-color: #87d7b0;
+    border-right: 1px solid rgba(255,255,255, 0.9);
+}
 
+.preview-poll-btn {
+    background-color: #ff6f6a;
+}
+.create-poll-btn:hover,
+.preview-poll-btn:hover {
+    background-color: #36154f;
+}
 
+.create-poll-btn.active,
+.preview-poll-btn.active {
+    background-color: #36154f;
+}
+
+.preview-poll-btn.btn-disabled {
+    position: relative;
+    background-color: #ccc;
+}*/
 
 
 
@@ -39,7 +92,7 @@ input, button {
     margin-bottom: 10px;
 }
 
-.drag-inputs input[type=text] {
+.input-field {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #87d7b0;
@@ -47,23 +100,47 @@ input, button {
     width: 80%;
     background: #f1f1f1;
 }
+.input-field.preview_input {
+    border: 1px solid #ff6f6a;
+}
+
+.draggable-wrap .form-control {
+    border-radius: 0;
+    width: 80%;
+    float: left;
+    padding: 10px;
+}
+
 input:focus,
 button:focus {
     outline: none;
 }
-.drag-inputs button {
+.input-btn {
     float: left;
     width: 20%;
     padding: 10px;
-    background: #87d7b0;
+    /*background: #87d7b0;*/
     color: white;
     font-size: 16px;
-    border: 1px solid #87d7b0;
+    /*border: 1px solid #87d7b0;*/
     border-left: none;
     cursor: pointer;
 }
+.input-btn.preview_btn {
+    background: #ff6f6a;
+    border: 1px solid #ff6f6a;
+}
 .drag-inputs button:hover {
     background: #0b7dda;
+}
+.preview-btn-wrap {
+    margin-bottom: 10px;
+}
+.preview-btn-wrap::after,
+.btns-wrap::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .drag-inputs::after {
@@ -84,14 +161,13 @@ button:focus {
     max-width: inherit;
 }
 .image-editor {
-    background-color: #87d7b0;
+    /*background-color: #ff6f6a;*/
 }
 
 .drag-content {
     display: none;
     width: 230px;
     font-size: 18px;
-
     position: absolute;
     z-index: 9;
     text-align: center;
@@ -109,31 +185,6 @@ button:focus {
     display: inline-block;
     width: 100%;
 }
-/*.resize-drag {
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background-color: rgba(255,255,255, 0.3);
-    padding: 10px;
-    border-radius: 6px;
-}*/
-
-.drag-content input {
-    width: 100%;
-    height: 20px;
-    font-size: 18px;
-    color: #212529;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    background-color: transparent;
-}
-
 .drag-content .drag-question {
     padding: 0 0 7px 0;
     width: 100%;
@@ -144,6 +195,18 @@ button:focus {
 .drag-content .drag-question input {
     color: #fff;
 }
+.drag-content .drag-question input {
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+}
 .drag-content .drag-answer {
     position: relative;
     width: 100%;
@@ -153,6 +216,30 @@ button:focus {
     text-align: center;
     border-radius: 5px;
     padding: 10px 0;
+}
+.drag-content .drag-answer input {
+    width: 100%;
+    height: 36px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #212529;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+}
+.drag-content .answer-button {
+    font-size: 30px;
+    line-height: 36px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: linear-gradient(320deg, #4398e7 25%, #7847ce 50%, #8b09a2 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .drag-content .drag-answer:before {
@@ -172,47 +259,32 @@ button:focus {
     display: table;
     font-size:0;
 }
+
+/*.answer-options {
+    font-size: 30px;
+    line-height: 36px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    background: linear-gradient(320deg, #4398e7 25%, #7847ce 50%, #8b09a2 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/
 .drag-answer--left,
 .drag-answer--right {
     float: left;
     width: 50%;
 }
-
-
 .cropit-preview {
-    background-color: #ff6f6a;
+    /*background-color: #87d7b0;*/
     background-size: cover;
     width: 100%;
     height: 350px;
     text-transform: uppercase;
     
 }
-.drag-answer button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    text-transform: uppercase;
-}
-#answer_right,
-#answer_wrong {
-    font-size: 30px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    text-transform: uppercase;
-    font-weight: 400;
-    background: linear-gradient(320deg, #4398e7 25%, #7847ce 50%, #8b09a2 75%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.drag-answer button {
-    font-size: 30px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    text-transform: uppercase;
-}
-
 .cropit-preview.cropit-image-loaded {
     background: url(../images/AjaxLoader.gif) #fcfcfc no-repeat center;
 }
@@ -230,6 +302,7 @@ button:focus {
     padding: 10px 0;
     text-align: center;
     position: relative;
+    background-color: #ccc;
 }
 .controls-wrapper button {
     border: none;
@@ -325,6 +398,7 @@ button:focus {
 }
 .embedded-code .embedded-iframe {
     height: 65px;
+    width: 100%;
 }
 
 .embedded-code .copy-val {
@@ -348,6 +422,8 @@ button:focus {
 }
 
 .question-wrap #userEmail {
+    padding: 0 5px;
+    font-size: 18px;
     width: 90%;
     height: 28px;
     text-align: left;

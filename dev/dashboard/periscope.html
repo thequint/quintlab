@@ -1,145 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Periscope | Quint Lab</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="assets/css/form.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-    
+<title>Periscope | Quint Lab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/form.css">
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
+    </nav>
+    <div class="container" id="main-content">
+        <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Widgets</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="display-4">Periscope</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-sm-12" align="center">
+                <h4 class="display-4 preview">Preview</h4>
+            </div>
+        </div>
+        <div class="row widget-details">
+            <div class="col-lg-5 col-sm-12 mr-auto" align="center">
+                <div id="preview" class="periscope-iframe">
+                    <iframe class="preview-frame" src="periscope/index.html?foo=1,2,3" width="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-7 col-sm-12">
+                <div class="form-wrap">
+                    <form>
+                        <div class="form-group">
+                            <label for="text">Embedded Code</label>
+                            <textarea type="text" class="text-area form-control embedcode-text"></textarea>
+                        </div>
+                    </form>
+                    <a class="btn btn-primary btn-block btn-lg" id="submitLink" href="#" role="button">Submit</a>
+                    <br>
+                    <ul id="listOfArticles" style="background-color: #e9e8e8;">
+                        <li>
+                            <ul class="article-list">
+                                <li>#</li>
+                                <li>Select</li>
+                                <li>Name</li>
+                                <li>Image</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/spreadsheet.js"></script>
+    <script>
+    var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1BEnGjJDIAW_LdOKsBtVd_RdlPORnfC-P-gg1RIgSPJU/pubhtml';
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a href="#" class="navbar-brand mb-0 h1">
-			<img src="assets/images/qLabLogo.png" width="100" height="100%" class="d-inline-block align-top">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-	  	</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">			
-			<ul class="navbar-nav ml-auto">
-				<li class="navbar-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Your Account
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a href="#" class="dropdown-item">View</a>
-						<a href="#" class="dropdown-item">Edit</a>
-						<a href="#" class="dropdown-item">Some Action</a>
-						<a href="#" class="dropdown-item">Another Action</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Logout</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+    function init() {
+        Tabletop.init({
+            key: public_spreadsheet_contact,
+            callback: showInfo,
+            simpleSheet: true
+        });
+    }
+    window.addEventListener('DOMContentLoaded', init);
+    var sheet_data;
 
-	<div class="container" id="main-content">
-		<nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
-		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Widgets</li>
-		  </ol>
-		</nav>
-		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="display-4">Periscope</h2>
-				<hr>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-5 col-sm-12" align="center">
-				<h4 class="display-4 preview">Preview</h4>
-			</div>
-		</div>
-		<div class="row widget-details">
-			<div class="col-lg-5 col-sm-12 mr-auto" align="center">
-				<div id="preview" class="periscope-iframe">
-					<iframe class="preview-frame" src="periscope/index.html?foo=1,2,3" width="100%" frameborder="0"></iframe>
-				</div>
-			</div>
-			<div class="col-lg-7 col-sm-12">
-				<div class="form-wrap">
-					<form>
-						<div class="form-group">
-							<label for="text">Embedded Code</label>
-							<textarea type="text" class="text-area form-control embedcode-text"></textarea>
-						</div>
-					</form>
-					<a class="btn btn-primary btn-block btn-lg" id="submitLink" href="#" role="button">Submit</a>
-					<br>
-					<ul id="listOfArticles" style="background-color: #e9e8e8;">
-						<li>
-							<ul class="article-list">
-								<li>#</li>
-								<li>Select</li>
-								<li>Name</li>
-								<li>Image</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>		
-	</div>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
 
+    function showInfo(data) {
+        sheet_data = data;
+        display_data();
+    }
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>		
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="assets/js/spreadsheet.js"></script>
-
-	<script>
-		var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1BEnGjJDIAW_LdOKsBtVd_RdlPORnfC-P-gg1RIgSPJU/pubhtml';
-		function init() {
-			Tabletop.init({
-				key: public_spreadsheet_contact,
-				callback: showInfo,
-				simpleSheet: true
-			});
-		}
-		window.addEventListener('DOMContentLoaded', init);
-		var sheet_data;
-		function getParameterByName(name, url) {
-			if (!url) url = window.location.href;
-			name = name.replace(/[\[\]]/g, "\\$&");
-			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-				results = regex.exec(url);
-			if (!results) return null;
-			if (!results[2]) return '';
-			return decodeURIComponent(results[2].replace(/\+/g, " "));
-		}
-		function showInfo(data) {
-			sheet_data = data;			
-			display_data();
-		}
-		function display_data() {
-			for(var i = 0; i < sheet_data.length - 1; i++){
-				$("#listOfArticles").append("<li class='abc'><ul class='article-list'><li>" + (i + 1) + "</li><li><input type='checkbox' name='isSelected' value='0'></li><li>" + sheet_data[i].Name + "</li><li><img src='" + sheet_data[i].Image + "'></li></ul></li>")
-			}
-		}
-		$("#submitLink").click(function(event){
-			var urlString = 'https://www.thequint.com/quintlab/dashboard/periscope/index.html?foo='
-		   $('.abc').each(function(){
-			  if($(this).find("input").is(":checked")){
-			  	// console.log($(this).index())
-			  	urlString = urlString + $(this).index() + ",";
-			  }
-			});
-		   urlString = urlString.slice(0, -1);
-		   $(".embedcode-text").val("<iframe class='quiz-iframe' src='" + urlString + "' width='100%' frameborder='0'></iframe>");
-		   $(".preview-frame").attr("src",urlString);
-		   console.log(urlString);
-		});
-	</script>
+    function display_data() {
+        for (var i = 0; i < sheet_data.length - 1; i++) {
+            $("#listOfArticles").append("<li class='abc'><ul class='article-list'><li>" + (i + 1) + "</li><li><input type='checkbox' name='isSelected' value='0'></li><li>" + sheet_data[i].Name + "</li><li><img src='" + sheet_data[i].Image + "'></li></ul></li>")
+        }
+    }
+    $("#submitLink").click(function(event) {
+        var urlString = 'https://www.thequint.com/quintlab/dashboard/periscope/index.html?foo='
+        $('.abc').each(function() {
+            if ($(this).find("input").is(":checked")) {
+                // console.log($(this).index())
+                urlString = urlString + $(this).index() + ",";
+            }
+        });
+        urlString = urlString.slice(0, -1);
+        $(".embedcode-text").val("<iframe class='quiz-iframe' src='" + urlString + "' width='100%' frameborder='0'></iframe>");
+        $(".preview-frame").attr("src", urlString);
+        console.log(urlString);
+    });
+    </script>
 </body>
+
 </html>

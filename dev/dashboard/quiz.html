@@ -12,36 +12,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
     <link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
-	<link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
+    <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand mb-0 h1">
-			<img src="assets/images/tquint-white.svg" width="100" height="100%" class="d-inline-block align-top">
-		</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="navbar-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Your Account
-					</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item">View</a>
-                        <a href="#" class="dropdown-item">Edit</a>
-                        <a href="#" class="dropdown-item">Some Action</a>
-                        <a href="#" class="dropdown-item">Another Action</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Logout</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
     </nav>
     <div class="container" id="main-content">
         <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
@@ -70,7 +46,7 @@
                 <i class="fas fa-sync-alt ml-1 refresh-icon"></i>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <div class="select-template clearfix">
                     <label class="select-tmp-label" for="sel1">Select Template:</label>
@@ -84,32 +60,32 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row widget-details">
             <div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
                 <form>
                     <div class="form-group">
                         <input href="#" class="form-control tag-line tag-line-1" placeholder="Tag line for below 33%...">
-                        <input href="#" class="form-control tag-line tag-line-img-input-1" placeholder="Tag line image url...">
+                        <input href="#" class="form-control tag-line tag-line-img-input-1" placeholder="Image URL...">
                     </div>
                     <div class="form-group">
                         <input href="#" class="form-control tag-line tag-line-2" placeholder="Tag line for between 33% & 65%...">
-                        <input href="#" class="form-control tag-line tag-line-img-input-2" placeholder="Tag line image url...">
+                        <input href="#" class="form-control tag-line tag-line-img-input-2" placeholder="Image URL...">
                     </div>
                     <div class="form-group">
                         <input href="#" class="form-control tag-line tag-line-3" placeholder="Tag line for above 65%...">
-                        <input href="#" class="form-control tag-line tag-line-img-input-3" placeholder="Tag line image url...">
+                        <input href="#" class="form-control tag-line tag-line-img-input-3" placeholder="Image URL...">
                     </div>
                 </form>
                 <div class="card">
                     <div class="card-header">
                         <div>
                             <h3>
-								Question 1
-								<button type="button" class="close question-close" aria-label="Close">
-								  <span aria-hidden="true">&times;</span>
-								</button>
-							</h3>
+                                Question 1
+                                <button type="button" class="close question-close" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -208,10 +184,10 @@
     // $( ".draggingOptions" ).sortable();
     // $( ".draggingOptions" ).disableSelection();
     // $('#draggingQuestions').on('click','.close',function() {
-    //  	$(this).parent().parent().remove();
+    //      $(this).parent().parent().remove();
     // });
     // $('.draggingOptions').on('click','.close',function() {
-    //  	$(this).parent().parent().remove();
+    //      $(this).parent().parent().remove();
     // });
     </script>
     <script>
@@ -289,16 +265,16 @@
 
     function resetEvents() {
         // $(".addImage,.addOptionImage").on('click', function(){
-        // 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        // 	closeButton();
+        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+        //  closeButton();
         // });
         // $(".addAudio,.addOptionAudio").on('click', function(){
-        // 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        // 	closeButton();
+        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+        //  closeButton();
         // });
         // $(".addVideo,.addOptionVideo").on('click', function(){
-        // 	$(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-warning mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        // 	closeButton();
+        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-warning mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+        //  closeButton();
         // });
         $(".option-close").on('click', function() {
             $(this).closest(".option").remove();
@@ -341,11 +317,11 @@
     }
 
     var flag = 0,
-    correctInputSelectedFlag = -1;
+        correctInputSelectedFlag = -1;
 
- //    $('.select-tmp-field select').on('change', function() {
-	//   	console.log($(this).val());
-	// });
+    //    $('.select-tmp-field select').on('change', function() {
+    //      console.log($(this).val());
+    // });
 
     function addQuestionFunc() {
         var j = 0;
@@ -452,7 +428,7 @@
 
 
     $("#foo").submit(function(event) {
-        // console.log("init");		
+        // console.log("init");     
         event.preventDefault();
         if ($('.tag-line-1').val() == "") {
             alert("Add tag line 1...");
@@ -485,7 +461,7 @@
 
         quiz_data[x]['selectTemplate'] = $('.select-tmp-field select').val();
 
-        
+
         $("#Comments").val(JSON.stringify(quiz_data));
 
         copyHandler();

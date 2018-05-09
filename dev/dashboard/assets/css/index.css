@@ -19,6 +19,9 @@ body{
 	background-color: #f4f4f4;
 	font-weight: 300; 
 }
+.btn {
+	cursor: pointer;
+}
 .card {
 	margin-bottom: 20px;
 }
@@ -128,6 +131,13 @@ body{
 	background-color: #fbc042 !important;
 	border-color: #fbc042 !important;
 }
+
+.btn-inactive {
+	background-color: #cacaca!important;
+	border-color:  #cacaca!important;
+}
+
+
 .slider .card:nth-child(2n){
 	background-image: -webkit-linear-gradient(right, #00ebff, #0050e6);
 }

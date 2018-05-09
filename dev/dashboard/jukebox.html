@@ -14,34 +14,23 @@
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-
 <!-- Custom -->
 <link href="jukebox/assets/css/base.css" rel="stylesheet">
-
-
 <link rel="stylesheet" type="text/css" href="jukebox/assets/css/styles.css">
 <style type="text/css">
 body {
-    background: none;
     font-family: 'Oswald', sans-serif;
+    background-color: #f4f4f4;
+    font-weight: 300;
+    font-size: 16px;
 }
 </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a href="#" class="navbar-brand mb-0 h1"> <img src="assets/images/qLabLogo.png" alt="" width="100" height="100%" class="d-inline-block align-top"> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="navbar-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Your Account </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a href="#" class="dropdown-item">View</a> <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Some Action</a> <a href="#" class="dropdown-item">Another Action</a> </div>
-                </li>
-                <li class="nav-item"> <a href="#" class="nav-link">Logout</a> </li>
-            </ul>
-        </div>
     </nav>
     <div class="container" id="main-content">
         <nav aria-label="breadcrumb" role="navigation" id="breadcrumbSection">
@@ -89,10 +78,10 @@ body {
                     <div class="card">
                         <div class="card-header">
                             <h4>Moods #<span class="moods_counter">1</span>
-							<button type="button" class="close question-close" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						</h4>
+                            <button type="button" class="close question-close" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </h4>
                         </div>
                         <div class="form_data card-body">
                             <form>
@@ -119,37 +108,25 @@ body {
                 </div>
                 <div class="add-cards"><a href="javascript:void(0);" class="add_card clickMe">+ Add another cards</a></div>
             </div>
-
-
             <div class="col-lg-8">
-            	
-
-            	<div class="">
-					<div class="btn-preview-block clearfix">
-						<button id="jukebox_preview" class="btn btn-primary" type='submit'>Preview Jukebox</button>
-						<form id='foo' style="display:inline-block">
-		                    <button class="btn btn-primary" type='submit'>Generate iFrame</button>
-		                    <input id='jukeboxPushArray' name='jukeboxPushArray' type='text'>
-		                </form>
-					</div>
-					<div class="generate-iframe-block">
-						<form>
-		                    <div class="form-group">
-		                        <label for="text">Embedded Code</label>
-		                        <textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
-		                        <span class="copy-val">Copy</span>
-		                    </div>
-		                </form>
-					</div>
-			    </div>
-
-			    
-
-
-
-
-
-
+                <div class="">
+                    <div class="btn-preview-block clearfix">
+                        <button id="jukebox_preview" class="btn btn-primary" type='submit'>Preview Jukebox</button>
+                        <form id='foo' style="display:inline-block">
+                            <button class="btn btn-primary" type='submit'>Generate iFrame</button>
+                            <input id='jukeboxPushArray' name='jukeboxPushArray' type='text'>
+                        </form>
+                    </div>
+                    <div class="generate-iframe-block">
+                        <form>
+                            <div class="form-group">
+                                <label for="text">Embedded Code</label>
+                                <textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here..."></textarea>
+                                <span class="copy-val">Copy</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="main-wrap">
                     <div class="main-wrap--overlay"></div>
                     <div class="main-wrap--container">
@@ -186,19 +163,19 @@ body {
                                     </ul>
                                 </footer>
                                 <!-- <footer class="song-footer">
-								<h2><span>Click to play your mood</span></h2>
+                                <h2><span>Click to play your mood</span></h2>
 
-								<span class="btn-track01 track-btn active">Track 1</span>
-								<span class="btn-track02 track-btn">Track 2</span>
+                                <span class="btn-track01 track-btn active">Track 1</span>
+                                <span class="btn-track02 track-btn">Track 2</span>
 
-								<ul class="play-icon">
-									<li class="heart-icon" data-video="vkKqVE9d_zw" data-videoname="Jab se tere naina mere naino se laage re"><img src="jukebox/assets/images/heart-icon.svg"></li>
-									<li class="soulful-icon" data-video="Mo5tQDcs__g" data-videoname="Hum Jo Chal Ne Lage..Chal Ne Lage Hai"><img src="jukebox/assets/images/soulful-icon.svg"></li>
-									<li class="heartbreak-icon" data-video="XdbjtoMkerU" data-videoname="Behati Hawa Sa Tha Woh, Udati Patang Sa Tha Woh"><img src="jukebox/assets/images/heartbreak-icon.svg"></li>
-									<li class="party-icon" data-video="VzLG6OqOcn8" data-videoname="Deewangi Deewangi Deewangi Hai"><img src="jukebox/assets/images/party-icon.svg"></li>
-									<li class="surprise-icon" data-video="IIg8H60bRJo" data-videoname="Woh Ladki Hai Kahan"><img src="jukebox/assets/images/surprise-icon.svg"></li>
-								</ul>
-							</footer> -->
+                                <ul class="play-icon">
+                                    <li class="heart-icon" data-video="vkKqVE9d_zw" data-videoname="Jab se tere naina mere naino se laage re"><img src="jukebox/assets/images/heart-icon.svg"></li>
+                                    <li class="soulful-icon" data-video="Mo5tQDcs__g" data-videoname="Hum Jo Chal Ne Lage..Chal Ne Lage Hai"><img src="jukebox/assets/images/soulful-icon.svg"></li>
+                                    <li class="heartbreak-icon" data-video="XdbjtoMkerU" data-videoname="Behati Hawa Sa Tha Woh, Udati Patang Sa Tha Woh"><img src="jukebox/assets/images/heartbreak-icon.svg"></li>
+                                    <li class="party-icon" data-video="VzLG6OqOcn8" data-videoname="Deewangi Deewangi Deewangi Hai"><img src="jukebox/assets/images/party-icon.svg"></li>
+                                    <li class="surprise-icon" data-video="IIg8H60bRJo" data-videoname="Woh Ladki Hai Kahan"><img src="jukebox/assets/images/surprise-icon.svg"></li>
+                                </ul>
+                            </footer> -->
                             </div>
                         </div>
                     </div>
@@ -211,6 +188,13 @@ body {
             </div>
         </div>
     </div>
+    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <pattern id='image' width="1" height="1" viewBox="50 50 100 100">
+                <image xlink:href='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/bg-surprise.svg' width="200%" height="200%" preserveAspectRatio="none"></image>
+            </pattern>
+        </defs>
+    </svg>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -218,10 +202,7 @@ body {
     <script src="jukebox/assets/js/spreadsheet.js"></script>
     <script src="jukebox/assets/js/dynamic_functions.js"></script>
     <script src="assets/js/jukebox.js"></script>
-
     <script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
-
-    
     <!-- <script src="jukebox/assets/js/functions.js"></script> -->
     <script data-cfasync="false" type="text/javascript">
     $(window).resize(function() {
@@ -253,7 +234,7 @@ body {
             //     alert('Please insert all fields');
             // }
 
-            //$("#Comments").val( JSON.stringify(dashboard_data));	
+            //$("#Comments").val( JSON.stringify(dashboard_data));  
             //dashboard_data.push({});
 
             // Display Date
@@ -300,7 +281,7 @@ body {
                         return 0;
                     } else {
 
-                    	$(".generate-iframe-block").show();
+                        $(".generate-iframe-block").show();
 
                         var embed_url = "<iframe class='quiz-iframe' src='https://www.thequint.com/quintlab/dashboard/jukebox/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
 

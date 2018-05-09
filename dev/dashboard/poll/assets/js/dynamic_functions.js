@@ -1,24 +1,16 @@
 
 var category_array = [
-	{name:"In Love", icon:"in-love.svg", colors:"#e84d4b"}, 
-	{name:"Love Hell", icon:"love-hell-icon.svg", colors:"#02a1a4"},
-	{name:"Let's party", icon:"party-icon.svg", colors:"#fdc246"},
+	{name:"In Love", icon:"heart-icon.svg", colors:"#e74e4f"}, 
+	{name:"Soulful", icon:"soulful-icon.svg", colors:"#d3d1bd"}, 
+	{name:"Let's party", icon:"party-icon.svg", colors:"#fcd359"},
+	{name:"Love Hell", icon:"heartbreak-icon.svg", colors:"#19a2a3"},
 	{name:"Surprise Me", icon:"surprise-icon.svg", colors:"#f09a9a"}, 
-	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff8c94"},
-	{name:"Soulful", icon:"soulful-icon.svg", colors:"#a8a7a7"},
-
-	{name:"Chak De!", icon:"chak-de-icon.svg", colors:"#2a363b"},
-	{name:"Unplugged", icon:"unplugged-icon.svg", colors:"#83af9b"},
-	{name:"Mash Up", icon:"mash-up-icon.svg", colors:"#fc913a"},
-	{name:"Sa Re Gaao", icon:"sa-re-gaao-icon.svg", colors:"#f8b195"},
-	{name:"Zenning", icon:"zenning-icon.svg", colors:"#d3d1bc"},
-	{name:"Ooh La La", icon:"ooh-la-la-icon.svg", colors:"#fe4365"},
-	{name:"Covers", icon:"covers-icon.svg", colors:"#a7226e"},
-	{name:"Haste Gaate", icon:"haste-gaate-icon.svg", colors:"#ff6f69"},
-	{name:"Sing Along", icon:"sing-along-icon.svg", colors:"#cc527a"}
+	{name:"Filmy", icon:"filmy-icon.svg", colors:"#ff6f6a"},
+	{name:"Peaceful", icon:"default-icon.svg", colors:"#85d4ad"},
+	{name:"Confident", icon:"default-icon.svg", colors:"#41d660"},
+	{name:"Sad", icon:"default-icon.svg", colors:"#44434a"},
+	{name:"Determined", icon:"default-icon.svg", colors:"#6d387e"}
 ];
-
-// $("#svg_circle").find("svg").addClass("rotating");
 
 function pie_events() {
 
@@ -29,14 +21,7 @@ function pie_events() {
 
 	$("#svg_circle path").mouseover(function(){
 		var color_attr = $(this).attr('fill');
-		
-		if($(this).hasClass("surprise_bg")) {
-			$(".main-wrap").css({"background": "url('https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/bg-surprise.svg')", "background-size": "cover"});
-		}
-		else
-		{
-			$(".main-wrap").css('background', color_attr);
-		}
+		$(".main-wrap").css('background', color_attr);
 	});
 
 	$("#svg_circle path").mouseout(function(){
@@ -195,10 +180,6 @@ function create_pie() {
 	    newSector.setAttribute('id', sector.moods);
 
 	    newSector.setAttribute('data-mood', sector.moods);
-	    if(sector.moods=="Surprise Me") {
-		    
-		}
-
 	    newSector.setAttribute('data-mood-icon', sector.moods_icon);
 
 		newSector.setAttribute('fill',sector.moods_color);
@@ -213,23 +194,20 @@ function create_pie() {
 	    newSVG.appendChild(newSector);
 	    $("#svg-labels").append("<li>"+sector.moods+"</li>");
 
+	    //$(".song-footer .btn-track01").attr('data-title-1', sector.title_1);
 
-	    if(sector.moods=="Surprise Me") {
-		    newSector.setAttribute('class', 'surprise_bg');
-		    $(".play-icon").append("<li class='surprise_icon_bg' style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
-	    }else {
-	    	$(".play-icon").append("<li style='background-color:"+sector.moods_color+"' data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+sector.moods_icon+"'></li>");
-	    }
+	    // $(".btn-track01").append("<li data-title-1="+sector.title_1+" data-track-1="+sector.track_1+">"+sector.moods+"</li>");
 
-	});
+	    //$(".play-icon").append("<li data-title-1="+sector.title_1+"data-track-1="+sector.track_1+">"+"<img src='jukebox/assets/images/"+sector.moods_icon+"'>"+"</li>");
 
-//class='"+sector.moods_color+"'
+	    $(".play-icon").append("<li data-title-1='"+sector.title_1+"' data-track-1='"+sector.track_1+"' data-title-2='"+sector.title_2+"' data-track-2='"+sector.track_2+"'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+sector.moods_icon+"'></li>");
+	})
 
 	var midCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 	midCircle.setAttributeNS(null, 'cx', dashboard_data.size * 0.5);
 	midCircle.setAttributeNS(null, 'cy', dashboard_data.size * 0.5);
 	midCircle.setAttributeNS(null, 'r', dashboard_data.size * 0.14);
-	midCircle.setAttributeNS(null, 'fill', '#302f37');
+	midCircle.setAttributeNS(null, 'fill', '#424149');
 
 	newSVG.appendChild(midCircle);
 
@@ -244,7 +222,7 @@ function create_pie() {
         console.log(n+"|"+angle);
         $("#svg_circle ul#pie_labels").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'>"+$(this).attr("data-mood")+"</li>")
         
-        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://www.thequint.com/quintlab/dashboard/jukebox/assets/images/icons/"+$(this).attr("data-mood-icon")+"'></li>")
+        $("#svg_circle ul#pie_icons").append("<li style='transform:rotate("+ ((360/(n*2))+(360*index/n))+"deg)'><img src='https://quintlab.herokuapp.com/dev/dashboard/jukebox/assets/images/"+$(this).attr("data-mood-icon")+"'></li>")
         console.log($(this).attr("data-mood"));
         
     })
@@ -271,7 +249,7 @@ function set_angle()
 	}else if ($(window).width() < 480) {
 	   	char_angle=3.5;
 	}else {
-	   	char_angle=4.1;
+	   	char_angle=4.2;
 	}
     $("#pie_labels li").each(function(index){
         var char_length= $(this).find("span").length; 

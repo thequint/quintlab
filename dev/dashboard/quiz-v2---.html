@@ -40,14 +40,9 @@ body {
                 <h2 class="display-4">Quiz 02</h2></div>
             <div class="display-4 col-sm-6 text-right">
                 <form id="foo">
-                    <textarea class="hidden-textarea" id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
+                    <textarea id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="visibility:hidden;display:none"></textarea>
+                    <!-- <a class="btn btn-primary float-right generate-quiz">Generate Quiz</a> -->
                     <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
-                </form>
-                <form id="foo_2">
-                    <textarea class="hidden-textarea" id="Comments_2" name="Comments_2" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
-                </form>
-                <form id="foo_3">
-                    <textarea class="hidden-textarea" id="Comments_3" name="Comments_3" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
                 </form>
             </div>
         </div>
@@ -86,12 +81,12 @@ body {
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..." maxlength="250"></textarea>
+                                <textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..." maxlength="175"></textarea>
                                 <!-- <input class="form-control question-text" placeholder="Enter Question"> -->
                                 <!-- <textarea type="text" rows="3" class="form-control description-text" placeholder="Enter description"></textarea> -->
-                                <a href="javascript:void(0);" class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
+                                <p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
                                     + Add media
-                                </a>
+                                </p>
                                 <div class="collapse container media-container">
                                     <div class="media-thumbnails-div">
                                         <ul class="mediaPlaceholderList">
@@ -180,13 +175,12 @@ body {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <span class="link-btn"><i class="fa fa-link"></i></span>
-                                <textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="450"></textarea>
+                                <textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="225"></textarea>
                                 <!-- <input class="form-control hyperlink-text" placeholder="Hyperlink text..."> -->
                                 <!-- <input class="form-control hyperlink-link" placeholder="Hyperlink link..."> -->
-                                <a href="javascript:void(0);" class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
+                                <p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">
                                     + Add media
-                                </a>
+                                </p>
                                 <div class="collapse container media-container">
                                     <div class="media-thumbnails-div">
                                         <ul class="mediaPlaceholderList">
@@ -258,17 +252,6 @@ body {
     imageNumber = 0;
     videoNumber = 0;
     audioNumber = 0;
-
-    function addHref() {
-        console.log("called");
-        $(".card:last-child .link-btn").click(function() {
-            if ($(".answered-text").val().length < 430) {
-                $(this).siblings(".answered-text").val($(this).siblings(".answered-text").val() + " <a target='_blank' href='Insert URL'>Link Text</a> ");
-
-            }
-        });
-    }
-    addHref();
 
     addAnotherOptionClick();
 
@@ -424,7 +407,7 @@ body {
         x;
 
     function addQuestionUi() {
-        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..."maxlength="250"></textarea></textarea><a href="javascript:void(0);" class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</a><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control mediaCaptionInput" placeholder="Media Caption..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div>  <div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div></div><div class="text-right"><a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a></div></div><div class="form-group"><span class="link-btn"><i class="fa fa-link"></i></span><textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="450"></textarea><a href="javascript:void(0);" class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</a><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control answeredImageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control answeredVideoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control answeredAudioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control answeredCaptionInput" placeholder="Media Caption..."></div></div></div></form></div></div>');
+        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question..."maxlength="175"></textarea></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control audioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control mediaCaptionInput" placeholder="Media Caption..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div>  <div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></ul></div></div><div class="text-right"><a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a></div></div><div class="form-group"><textarea type="text" rows="3" class="form-control answered-text" placeholder="Answer..." maxlength="225"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input class="form-control answeredImageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input class="form-control answeredVideoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input class="form-control answeredAudioInput" placeholder="Add Audio Url..."></div><div class="media-input-container"><input class="form-control answeredCaptionInput" placeholder="Media Caption..."></div></div></div></form></div></div>');
         resetEvents();
         addAnotherOptionClick();
         return;
@@ -443,11 +426,8 @@ body {
             alert("Please Enter Quiz Headline");
         }
 
-
-
         $(".card").each(function() {
             quiz_data.push({});
-
             //quiz_data[i].push( new Array());
             if ($(this).find(".question-text").val() == "") {
                 alert("Please Enter some text for questions");
@@ -558,32 +538,20 @@ body {
             i++;
             x = i;
         });
-
         i = 0;
         // console.log(flag);
         // alert(quiz_data[0].options.length);
         if (quiz_data.length > 0 && flag != -1) {
             buildPreview();
-
-            var quiz_string = JSON.stringify(quiz_data);
-
-            console.log(quiz_string);
-
-            $("#Comments").val(quiz_string.substring(0, quiz_string.length / 3));
-            $("#Comments_2").val(quiz_string.substring(quiz_string.length / 3, 2 * quiz_string.length / 3));
-            $("#Comments_3").val(quiz_string.substring(2 * quiz_string.length / 3, quiz_string.length));
+            $("#Comments").val(JSON.stringify(quiz_data));
         }
-
-
     }
 
 
     $("#addQuestionLink").click(function() {
         addQuestionFunc();
-
         if (quiz_data.length > 0 && flag != -1) {
             addQuestionUi();
-            addHref();
         }
     });
 
@@ -598,7 +566,7 @@ body {
         });
     }
 
-    var request, request_2, request_3;
+    var request;
 
     $("#foo").submit(function(event) {
         // console.log("init");     
@@ -628,38 +596,20 @@ body {
         quiz_data[x]['tL1'] = $('.tag-line-1').val();
         quiz_data[x]['tL2'] = $('.tag-line-2').val();
         quiz_data[x]['tL3'] = $('.tag-line-3').val();
+        $("#Comments").val(JSON.stringify(quiz_data));
 
-        var quiz_string = JSON.stringify(quiz_data);
 
-        console.log(quiz_string);
-
-        $("#Comments").val(quiz_string.substring(0, quiz_string.length / 3));
-        $("#Comments_2").val(quiz_string.substring(quiz_string.length / 3, 2 * quiz_string.length / 3));
-        $("#Comments_3").val(quiz_string.substring(2 * quiz_string.length / 3, quiz_string.length));
 
         // add value to the textarea
         if (request) {
             request.abort();
         }
         // setup some local variables
-        var $form = $("#foo");
+        var $form = $(this);
         // let's select and cache all the fields
         var $inputs = $form.find("input, select, button, textarea");
         // serialize the data in the form
         var serializedData = $form.serialize();
-
-
-        var $form_2 = $("#foo_2");
-        // let's select and cache all the fields
-        var $inputs_2 = $form_2.find("input, select, button, textarea");
-        // serialize the data in the form
-        var serializedData_2 = $form_2.serialize();
-
-        var $form_3 = $("#foo_3");
-        // let's select and cache all the fields
-        var $inputs_3 = $form_3.find("input, select, button, textarea");
-        // serialize the data in the form
-        var serializedData_3 = $form_3.serialize();
 
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
@@ -670,12 +620,15 @@ body {
             callback: showInfo,
             simpleSheet: true
         });
-        //console.log(serializedData);
+        console.log(serializedData);
+
         function showInfo(data) {
 
             // alert('yes');
             // fire off the request to /form.php
             request = $.ajax({
+                // url: "https://script.google.com/macros/s/AKfycbxsnZmBN13aS9kiQte-LZiDfsUnQnFIJ1aCaYVJLrr8UyRegGPw/exec",
+                // url: "https://script.google.com/macros/s/AKfycbwiRwxDqkOK1A5S1bb5T993rnKL3kiUQOKgz3sjpen_oIgFiwAF/exec",
                 url: "https://script.google.com/macros/s/AKfycbxoiuirNr4kIlH-z0QMrSRq7_SVsDmvW3f3MVq2Ov0GR-jbByB2/exec",
                 type: "get",
                 data: serializedData
@@ -683,37 +636,9 @@ body {
 
             // callback handler that will be called on success
             request.done(function(response, textStatus, jqXHR) {
-                //$('#result').html('<span class="success">Success</span>');
+                $('#result').html('<span class="success">Success</span>');
                 console.log("Hooray, it worked!");
-
-                request_2 = $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbxoiuirNr4kIlH-z0QMrSRq7_SVsDmvW3f3MVq2Ov0GR-jbByB2/exec",
-                    type: "get",
-                    data: serializedData_2
-                });
-
-                request_2.done(function(response, textStatus, jqXHR) {
-
-                    console.log("Hooray, it worked again!");
-
-                    request_3 = $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycbxoiuirNr4kIlH-z0QMrSRq7_SVsDmvW3f3MVq2Ov0GR-jbByB2/exec",
-                        type: "get",
-                        data: serializedData_3
-                    });
-
-                    request_3.done(function(response, textStatus, jqXHR) {
-                        $('#result').html('<span class="success">Success</span>');
-                        console.log("Hooray, it worked again again!");
-                    });
-
-
-                });
-
             });
-
-
-
 
             // callback handler that will be called on failure
             request.fail(function(jqXHR, textStatus, errorThrown) {
