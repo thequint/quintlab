@@ -49,6 +49,12 @@ Tweet: ">
 <link href="assets/css/responsive.css" rel="stylesheet" media="all">
 <link href="assets/css/slick.css" rel="stylesheet" media="all">
 <link href="assets/css/slick-theme.css" rel="stylesheet" media="all">
+	
+	
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/highcharts.js"></script>
+	
+	
 <script type="text/javascript">
 	window.talktype = window.talktype || function(f){
 		(talktype.q = talktype.q || []).push(arguments);
@@ -94,6 +100,31 @@ el.parentNode.insertBefore(s, el);
     <div class="logo-text"> 15,42,000 Kannadigas became eligible to vote this election. What do they want from their next government? </div>
   </div>
 </header>
+<section class="wrapper result-wrapper bg-color-2">
+	<div class="container">
+		<div class="col-emotion">
+			<ul class="clearfix">
+				<li class="emo-party_1">
+					<img class="is-high" src="assets/images/upload/pl_1_l.jpg" alt="">
+					<img class="is-low" src="assets/images/upload/pl_1_s.jpg" alt="">
+				</li>
+				<li class="emo-party_2">
+					<img class="is-high" src="assets/images/upload/pl_2_l.jpg" alt="">
+					<img class="is-low" src="assets/images/upload/pl_2_s.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+		<div class="col-result clearfix">
+			<div class="result-table">
+				<div class="table-data"><table cellpadding="0" cellspacing="0" border="0" id="Party_Result"></table></div>
+			</div>
+			<div class="result-graph">
+				<div class="is-graph graph-data" id="graph_data_state" data-x='"BJP","INC","JDM","OTH"'></div>
+			</div>
+		</div>
+	</div>
+</section>	
+	
 <section class="wrapper video-wrapper bg-color-2">
   <div class="container">
     <div class="row">
@@ -117,6 +148,7 @@ el.parentNode.insertBefore(s, el);
     </div>
   </div>
 </section>
+	
 <section class="wrapper carousel-wrapper is-top bg-color-3">
   <div class="hvr-bob">
     <div class="fact-box"> <span class="close"><i class="fa fa-close"></i></span>
@@ -365,11 +397,12 @@ el.parentNode.insertBefore(s, el);
   <div class="container"> <img src="assets/images/patern-bg-3.svg" alt=""> </div>
 </footer>
 <!-- js files --> 
-<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+	
 <script type="text/javascript" src="assets/js/slick.min.js"></script> 
 <script type="text/javascript" src="assets/js/spreadsheet.js"></script> 
-<script type="text/javascript" src="assets/js/data-spreadsheet-vs.js"></script> 
+
 <script type="text/javascript" src="assets/js/twitterFetcher.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script>
+<script type="text/javascript" src="assets/js/data-spreadsheet-vs.js"></script> 	
 </body>
 </html>

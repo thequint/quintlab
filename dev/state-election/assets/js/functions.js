@@ -1,4 +1,15 @@
 $(document).ready(function () {
+	
+	$(".share-ico").click(function (e) {
+		$(".social-ico").slideToggle(400);
+		return false;
+	});
+	
+	$("body").click(function () {
+		$(".social-ico").slideUp();
+	});
+
+	
 
 	/*$('ul.tabs li').click(function () {
 		var tab_id = $(this).attr('data-tab');
@@ -20,13 +31,13 @@ $(document).ready(function () {
 
 
 
-var collectionSlug = ["ipl-top-story", "ipl-videos", "ipl-videos", "ipl-social-buzz"];
+var collectionSlug = ["ipl-top-story", "namma-election-microsite", "political-gunpowder-microsite", "explainers-microsite"];
 
 function load_stories() {
 
 	// #Stories_Explainers
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[3], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -50,7 +61,7 @@ function load_stories() {
 
 	// #Stories_User_Generated
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -66,7 +77,7 @@ function load_stories() {
 
 	// #Stories_Party_Left
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[2], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -82,7 +93,7 @@ function load_stories() {
 
 	// #Stories_Party_Right
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[3], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -117,7 +128,7 @@ function load_stories() {
 
 	// #Stories_Carousel_Key
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -136,7 +147,7 @@ function load_stories() {
 
 	// first 3 stories
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[2], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
@@ -152,14 +163,17 @@ function load_stories() {
 
 	// Last slider stories 
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[2], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
 			return item.story
 		}).slice(0, 5);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image" style="background-image:url(https://images.assettype.com/'+story['hero-image-s3-key']+')"><img src="assets/images/placeholder.png" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			
+			/*return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'*/
 		});
 		elements.forEach(function (element) {
 			$('#story_Slider_1').append(element);
@@ -168,15 +182,14 @@ function load_stories() {
 	});
 	
 	
-	
-		$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[3], function (res) {
+	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[1], function (res) {
 		var stories = res.items.filter(function (item) {
 			return item.type == 'story'
 		}).map(function (item) {
 			return item.story
 		}).slice(3, 8);
 		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=900&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
+			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image" style="background-image:url(https://images.assettype.com/'+story['hero-image-s3-key']+')"><img src="assets/images/placeholder1.png" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
 		});
 		elements.forEach(function (element) {
 			$('#story_Slider_2').append(element);
@@ -289,9 +302,17 @@ $('.slider-4').slick({
 });
 
 
+
+
+
+
+
+
+
+
 const countdown = document.querySelector('.countdown');
 // Set Launch Date (ms)
-const launchDate = new Date('May 15, 2018 13:00:00').getTime();
+const launchDate = new Date('May 12, 2018 07:00:00').getTime();
 
 // Update every second
 const intvl = setInterval(() => {
@@ -322,8 +343,18 @@ const intvl = setInterval(() => {
     // Stop countdown
     clearInterval(intvl);
     // Style and output text
-    countdown.style.color = '#17a2b8';
-    countdown.innerHTML = 'Launched!';
+    //countdown.style.color = '#17a2b8';
+    //countdown.innerHTML = 'Launched!';
+	  
+	  countdown.innerHTML = `
+  <div>0<span>Days</span></div> 
+  <div>0<span>Hours</span></div>
+  <div>0<span>Minutes</span></div>
+  <div>0<span>Seconds</span></div>
+  `;
+	  
+	  
+	  
   }
 }, 1000);
 
@@ -367,4 +398,78 @@ var configList = {
 	"showInteraction":false
 };
 twitterFetcher.fetch(configList);
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + 2*$(window).height()/3;
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+var timer =0;
+function repeatOften() {
+  // Do whatever
+timer =timer+1;	
+$(".fact-box").each(function(index){
+	//console.log($(this).offset().top);
+	
+			if($(this).isInViewport() && !$(this).hasClass('closed') && !$(this).hasClass('expand') )
+				{
+
+					$(this).addClass("expand");
+					timer=1;
+						
+				}
+			else
+				{
+				//	$(this).removeClass("expand");
+				}
+	
+		
+})	
+	//console.log(timer%180);
+if(timer%180==0)
+	{
+		//console.log("reset");
+		$(".fact-box").each(function(index){
+		if($(this).hasClass("expand") && !$(this).hasClass('closed'))
+			{
+				$(this).addClass('closed')
+				$(this).removeClass("expand");
+			}
+			
+		});
+	}
+  requestAnimationFrame(repeatOften);
+	
+}
+
+
+requestAnimationFrame(repeatOften);
+
+$(".fact-box .close").click(function(){
+	
+	$(this).closest(".fact-box").removeClass("expand");
+	$(this).closest(".fact-box").addClass("closed");
+})
+
+$(".fact-box ").click(function(evt){
+	//console.log("1");
+	  if($(evt.target).attr('class') == "close")
+          return;
+       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       if($(evt.target).closest('.close').length)
+          return;     
+	//console.log("2");
+	$(this).toggleClass("expand");
+	//$(this).closest(".fact-box").addClass("closed");
+})
+
+
+
+
+
 

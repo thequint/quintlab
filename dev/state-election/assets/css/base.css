@@ -235,4 +235,135 @@ template {
 }
 
 
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: absolute;
+z-index: 100000;
+left: 50%;
+top: 0;
+margin-left: -125px;
+margin-top: -125px;
+	
+}
+.hvr-bob {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+
+.share {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 1000
+}
+.share-ico {
+	background: rgba(0,0,0,.2) url(../images/ico-share.svg) no-repeat scroll center center/50% auto;
+	border-radius: 100%;
+	display: block;
+	font-size: 0;
+	height: 40px;
+	overflow: hidden;
+	text-indent: -200px;
+	width: 40px
+}
+.social-ico {
+	display: none
+}
+.social-ico li {
+	display: block;
+	margin-top: 10px
+}
+.social-ico li a {
+	background: rgba(0,0,0,.2);
+	border-radius: 100%;
+	display: block;
+	font-size: 20px;
+	height: 40px;
+	overflow: hidden;
+	width: 40px;
+	color: #fff;
+	text-align: center
+}
+.social-ico li a i {
+	line-height: 40px
+}
+.social-ico li a:hover {
+	color: #FFCC00
+}
+
+@media (max-width: 767px) {
+.share {
+	right: 10px;
+	top: 10px
+}
+.social-ico li {
+	margin-top: 7px
+}
+.share-ico, .social-ico li a {
+	width: 35px;
+	height: 35px
+}
+.social-ico li a i {
+	line-height: 35px
+}
+}
+
 

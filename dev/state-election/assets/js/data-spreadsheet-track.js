@@ -30,7 +30,7 @@ function showInfo(data) {
 	sheet_data = data;
 	display_data();
 	
-	console.log(sheet_data);
+	//console.log(sheet_data);
 }
 
 
