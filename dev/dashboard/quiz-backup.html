@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-                                    <a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a>
+                                    <a href="#" class="addAnotherOption">+ Add another option</a>
                                 </div>
                             </div>
                         </form>
@@ -230,7 +230,7 @@
         }
 
         if ($('.tag-line-img-input-1').val() != "") {
-            //alert($('.tag-line-img-input-1').val());
+            alert($('.tag-line-img-input-1').val());
             $('.tag-line-img-1').attr('src', $('.tag-line-img-input-1').val());
         }
         if ($('.tag-line-img-input-2').val() != "") {
@@ -310,7 +310,7 @@
         x;
 
     function addQuestionUi() {
-        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div></div><div class="text-right"><a href="javascript:void(0);" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
+        $('.question-cards').append('<div class="card"><div class="card-header"><div><h3>Question ' + (quiz_data.length + 1) + '<button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h3></div></div><div class="card-body"><form><div class="form-group"><textarea type="text" rows="3" class="form-control question-text" placeholder="Enter Question"></textarea><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></div><div class="form-group"><div class="container options-container"><div class="option"><ul class="optionInputGroup"><li class="optionRadioLi"><input type="radio" name="optionsRadio" class="optionsRadioInput"></li><li class="optionInputLi"><input class="form-control optionInput" type="text" id="option-1" placeholder="Option"></li><li class="options-close-button"><button type="button" class="close option-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></li><li><p class="mt-2 addMediaBtn" data-toggle="collapse" role="button" aria-expanded="false">+ Add media</p><div class="collapse container media-container"><div class="media-thumbnails-div"><ul class="mediaPlaceholderList"><li class="placeholderImage"></li><li class="placeholderVideo"></li><li class="placeholderAudio"></li></ul></div><div class="media-input-container"><input href="#" class="form-control border-danger imageInput" placeholder="Add Image Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger videoInput" placeholder="Add Video Url..."></div><div class="media-input-container"><input href="#" class="form-control border-danger audioInput" placeholder="Add Audio Url..."></div></div></li></ul></div></div><div class="text-right"><a href="#" class="addAnotherOption">+ Add another option</a></div></div></form></div></div>');
         resetEvents();
         addAnotherOptionClick();
         return;
@@ -324,22 +324,18 @@
     // });
 
     function addQuestionFunc() {
-        i=0;
-        //console.log("validate");
         var j = 0;
         flag = 0;
-        
+        correctInputSelectedFlag = -1;
         quiz_data = [];
-        var card_each_var = 1;
         $(".card").each(function() {
-            correctInputSelectedFlag = -1;
+
             quiz_data.push({});
             //quiz_data[i].push( new Array());
             if ($(this).find(".question-text").val() == "") {
                 alert("Please Enter some text for questions");
                 flag = -1;
-                card_each_var=0;
-                return 0;
+                return;
             }
             quiz_data[i]['questionText'] = $(this).find(".question-text").val().toString();
             quiz_data[i]['questionImageUrl'] = $(this).find(".imageInput").val();
@@ -347,7 +343,7 @@
             quiz_data[i]['questionAudioUrl'] = $(this).find(".audioInput").val();
 
             // console.log(quiz_data);
-            var option_each_var = 1;
+
             $(this).find(".option").each(function() {
                 // console.log(j);
                 if ($(this).find(".optionInput").val() == "") {
@@ -355,8 +351,7 @@
                     option_data = [];
                     quiz_data[i] = [];
                     flag = -1;
-                    option_each_var=0;
-                    return 0;
+                    return;
                 }
                 option_data.push({});
                 // option_data[j].push(new Array());
@@ -370,85 +365,50 @@
                 if ($(this).find("input:radio[name='optionsRadio']").is(":checked")) {
                     // console.log("true")
                     option_data[j]['isCorrect'] = true;
-
                     correctInputSelectedFlag = 0;
-                    //console.log("xyz"+correctInputSelectedFlag)
                 } else {
                     option_data[j]['isCorrect'] = false;
                 }
                 //option_data[j]['isCorrect'] = $(this).find(".optionsRadioInput").val() ? true : false;
                 // console.log($(this).find(".optionsRadioInput").val());
                 j++;
-                //console.log(option_data.length);
-            }); // end options loop
-            if(option_each_var==0)
-            {
-            card_each_var=0;    
-            return 0;
-            }
+                console.log(option_data.length);
+            });
             if (j < 2 || option_data.length < 0) {
                 alert("Add atleast two options...!!!");
                 quiz_data = [];
                 option_data = [];
                 j = 0;
                 flag = -1;
-                card_each_var=0;
-                return 0;
+                return;
             }
-            //console.log("abc"+correctInputSelectedFlag)
             if (correctInputSelectedFlag != 0) {
                 alert("One of the options must be marked true...!!!");
                 quiz_data = [];
                 option_data = [];
                 flag = -1;
-                card_each_var=0;
-                return 0;
+                return;
             }
             j = 0;
             quiz_data[i]['options'] = option_data;
             option_data = [];
             i++;
             x = i;
-        }); // end cards function
-        
-        if(card_each_var==0)
-        {
-            return 0;
-        }
-
-
+        });
         i = 0;
         // console.log(flag);
         // alert(quiz_data[0].options.length);
-           
-            //$("#Comments").val(JSON.stringify(quiz_data));
-        
-
-        if ($('.tag-line-1').val() == "") {
-            alert("Add tag line 1...");
-            return 0;
-        } else if ($('.tag-line-2').val() == "") {
-            alert("Add tag line 2...");
-            return 0;
-        } else if ($('.tag-line-3').val() == "") {
-            alert("Add tag line 3...");
-            return 0;
+        if (quiz_data.length > 0 && flag != -1) {
+            buildPreview();
+            $("#Comments").val(JSON.stringify(quiz_data));
         }
-        buildPreview();
-        $("#Comments").val(JSON.stringify(quiz_data)); 
-        return 1;
     }
 
     $("#addQuestionLink").click(function() {
-        if(addQuestionFunc()==1)
-        {
-
-        if (quiz_data.length > 0 && flag != -1 ) {
+        addQuestionFunc();
+        if (quiz_data.length > 0 && flag != -1) {
             addQuestionUi();
-             
-            // $("#Comments").val("yes");
         }
-    }
     });
 
     // $('.generate-quiz-button').on('click', function(){
@@ -468,15 +428,26 @@
 
 
     $("#foo").submit(function(event) {
+        // console.log("init");     
         event.preventDefault();
-        if(addQuestionFunc()==0)
-        {
-        return;
+        if ($('.tag-line-1').val() == "") {
+            alert("Add tag line 1...");
+            return;
+        } else if ($('.tag-line-2').val() == "") {
+            alert("Add tag line 2...");
+            return;
+        } else if ($('.tag-line-3').val() == "") {
+            alert("Add tag line 3...");
+            return;
+        } else if (quiz_data.length <= 0) {
+            alert("Please Enter questions first...!!!");
+            return;
         }
-        //console.log(quiz_data);
+        console.log(quiz_data);
         if (!confirm("Are You sure?\n Quiz once generated could not be edited...")) {
             return;
         }
+
         quiz_data.push({});
 
         quiz_data[x]['tagLine1'] = $('.tag-line-1').val();

@@ -71,7 +71,7 @@ function resetEvents(){
 	// on click add track #2
 	$(".card:last-child").find(".add_track").click(function(){
 		$(this).hide();
-		$(this).closest(".card").find(".form-group--main").append('<div class="form-group"><input id="" type="text" class="song-title_2 form-control" placeholder="Song Title #2"></div><div class="form-group"><input id="" type="text" class="song-track_2 form-control" placeholder="Song Track #2"></div>');
+		$(this).closest(".card").find(".form-group--main").append('<div class="form-group"><input id="" type="text" class="song-title_2 form-control" placeholder="Song Title #2"></div><div class="form-group"><input id="" type="text" class="song-track_2 form-control" placeholder="Youtube Embed Code #2"></div>');
 	});
 }
 
@@ -85,7 +85,7 @@ $(".add_card").click(function(){
 		return 0;
 	}else {	
 		var moods_counter = $(".card").length+1 ;
-		$("#moods_card").append('<div class="card"><div class="card-header"><h4>Moods #<span class="moods_counter">'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Song Track #1"></div></div><div class=""><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
+		$("#moods_card").append('<div class="card"><div class="card-header"><h4>Moods #<span class="moods_counter">'+ moods_counter +'</span><button type="button" class="close question-close" aria-label="Close"><span aria-hidden="true">&times;</span></button></h4></div><div class="form_data card-body"><form><div class="form-group--main"><div class="form-group"><select class="select_category form-control"></select></div><div class="form-group"><input id="" type="text" class="song-title_1 form-control" placeholder="Song Title #1"></div><div class="form-group"><input id="" type="text" class="song-track_1 form-control" placeholder="Youtube Embed Code #1"></div></div><div class=""><a href="javascript:void(0);" class="add_track">+ Add Track #2</a></div></form></div></div>');
 		resetEvents();
 	}
 	if($(".card").length==10){
