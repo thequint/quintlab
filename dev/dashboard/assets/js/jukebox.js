@@ -169,11 +169,9 @@ function jukeboxFormValidation(){
 			alert("Insert Track");
 			return 0;
 		}else {
-			console.log("Validation");
 			$(".main-wrap").addClass("show");
 			addQuestionFunc();
 			create_pie();
-			
 			pie_events();
 			$(".display_results").html( JSON.stringify(dashboard_data));
 		}

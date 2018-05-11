@@ -45,12 +45,9 @@ function pie_events() {
 
 	$("#svg_circle path").click(function(){
 
-		console.log("yes")
+		console.log($(this).attr("data-title-2"));
 
-		if(($(this).attr("data-title-2") =="undefined") && ($(this).attr("data-track-2") =="undefined")){
-
-		//if ( (!$(this).hasClass("current")) && (!$("body").hasClass("home"))  ){
-
+		if(($(this).attr("data-track-2") =="undefined") || ($(this).attr("data-track-2") =="")){
 			$(".track-btn").hide();
 		}else{
 			$(".track-btn").show();
@@ -130,7 +127,7 @@ function pie_events() {
 		console.log(data_track_1);
 		$(".iframe-section .song-iframe").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/"+data_track_1+"?autoplay=1' frameborder='0' allowfullscreen></iframe>");
 		
-		if($(this).attr("data-title-2") =="undefined"){
+		if(($(this).attr("data-track-2") =="undefined") || ($(this).attr("data-track-2") =="")){
 			$(".track-btn").hide();
 		}else{
 			$(".track-btn").show();
