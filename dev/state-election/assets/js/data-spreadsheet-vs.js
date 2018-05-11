@@ -57,7 +57,9 @@ function display_data() {
 		$('.emo-party_1').addClass('is-happy');
 		$('.emo-party_2').addClass('is-happy');
 	}
-
+	
+	
+	$('.result-wrapper').removeClass('is-hide');
 
 	// Content and Videos
 

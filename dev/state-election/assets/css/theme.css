@@ -1483,6 +1483,15 @@ To {
 /*Result CSS*/
 .result-wrapper{
 	padding: 80px 0px 0 0;
+	
+}
+.result-wrapper.is-hide{
+	display: none;
+}
+
+
+.result-wrapper .inner-container{
+	padding: 30px;
 }
 
 .col-emotion{
