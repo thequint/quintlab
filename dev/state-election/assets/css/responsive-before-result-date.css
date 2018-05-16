@@ -62,17 +62,6 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 /*Theme Responsive*/
 
 @media (max-width: 1199px) {
-	
-	.is-graph {
-	width: 300px;
-	height: 300px;
-	margin: -5px auto 0 auto;
-}
-	
-	.total-text{
-		right:34px;
-	}	
-	
 .story-card .all-story figure {
 	float: none;
 	width: auto;
@@ -129,42 +118,6 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 }
 
 @media (max-width: 991px) {
-	
-	
-	
-	.is-graph {
-	width: 400px;
-	height: 400px;
-	margin: -82px auto 0 auto;
-}
-	.total-text{
-		right:25px;
-	}
-	
-	
-	.col-emotion ul {
-	position: inherit;
-	bottom: 3px;
-}
-	
-	.col-emotion {
-	float: none;
-	width: 100%;
-		padding-bottom: 20px;
-		height: auto;
-}
-	
-	.col-emotion ul {
-	max-width: 450px;
-	margin: 0 auto;
-}
-	
-	.col-result {
-	float: none;
-	width: 100%;
-	padding-left: 0;
-}
-	
 	
 	
 	.col-videos .story-slider{
@@ -324,43 +277,9 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 
 @media (max-width: 767px) {
 	
-	.result-wrapper .inner-container {
-	padding: 10px;
-}
-	.total-text {
-	right: 0;
-	width: 100%;
-	text-align: center;
-}
-	
-	
-	.is-graph {
-	width: 280px;
-	height: 280px;
-	margin: -55px auto 0 auto;
-}
-	.result-table {
-	
-	float: none;
-	width: auto;
-	padding: 10px;
-	font-size: 30px;
-}
-	
-	.result-graph {
-	float: none;
-	width: 100%;
-	height: 160px;
-	overflow: hidden;
-}
-	
-
-	
 	.key-carousel figure{
 		width: 270px;
 	}
-	
-	
 	
 	
 	
@@ -436,18 +355,11 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 }
 
 @media (max-width: 575px) {
-	
-	.result-wrapper {
-	padding: 60px 0px 0 0;
-}
-	
-	
-	
 .header-wrapper {
 	padding: 5px 0 30px 0;
 }
 .video-wrapper {
-	padding: 30px 0px 60px 0px;
+	padding: 45px 0px 55px 0px;
 }
 /*
 .header-wrapper::after {
@@ -491,7 +403,7 @@ http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/complete_exampl
 	margin-top: 0px;
 }
 .carousel-wrapper.key-carousel {
-	padding: 0px 0px 30px 0;
+	padding: 30px 0px 20px 0;
 }
 .ugc-wrapper {
 	padding: 30px 0px;

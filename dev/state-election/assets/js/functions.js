@@ -29,9 +29,14 @@ $(document).ready(function () {
 	load_stories();
 });
 
+//3rd // 4b373a27-fc96-4fc3-b859-b82ec6d16e5c
+
+//2nd //439e9323-41da-417e-bbd5-142b9d5fff6b
+
+// 1st//c0d3e5f3-fe29-4c02-b2ff-6c011fc41d58
 
 
-var collectionSlug = ["ipl-top-story", "namma-election-microsite", "political-gunpowder-microsite", "explainers-microsite"];
+var collectionSlug = ["ipl-top-story", "namma-election-microsite", "political-gunpowder-microsite", "explainers-microsite", "4b373a27-fc96-4fc3-b859-b82ec6d16e5c"];
 
 function load_stories() {
 
@@ -43,7 +48,7 @@ function load_stories() {
 		}).map(function (item) {
 			return item.story
 		}).slice(0, 3);
-		console.log(stories);
+		//console.log(stories);
 		$(".all-story").html('');
 		for (var i = 0; i < stories.length; i++) {
 
@@ -128,20 +133,41 @@ function load_stories() {
 
 	// #Stories_Carousel_Key
 
-	$.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
-		var stories = res.items.filter(function (item) {
-			return item.type == 'story'
-		}).map(function (item) {
-			return item.story
-		}).slice(0, 9);
-		var elements = stories.map(function (story) {
-			return '<figure><a target="_blank" href="http://www.thequint.com/' + story.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + story['hero-image-s3-key'] + '?q=100&w=800&fm=pjpg" alt=""></div><figcaption> <span>' + story.headline + '</span> </figcaption></a></figure>'
-		});
-		elements.forEach(function (element) {
-			$('#Stories_Carousel_Key').append(element);
-		});
-		load_slider_key();
-	});
+$.getJSON('https://www.thequint.com/api/v1/stories/' + collectionSlug[4], function(res) {
+    var lastStory = res.story;
+    var cards = lastStory.cards;
+    var cardsWithImages = cards.filter(function(card) {
+      return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
+    }).slice(0,5)
+    elements = cardsWithImages.map(function(card) {
+      var imageKey;
+      var titleElement;
+      if(card.metadata){
+        if(card && card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'][0]=="true" ){
+          var imageElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'image'});
+          titleElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'title'}) || {};  
+          imageKey= (imageElement || {})["image-s3-key"];
+        }
+      }
+     	
+		if(imageKey){
+        return '<figure><a target="_blank" href="http://www.thequint.com/' + lastStory.slug + '"><div class="story-image"><img src="https://images.assettype.com/' + imageKey + '?auto=format&amp;rect=0,0,2348,1321&amp;q=100&amp;w=420&amp;fm=pjpg" alt="' + titleElement.text + '"></div><figcaption> <span>' + titleElement.text + '</span> </figcaption></a></figure>'
+      }
+		
+    });
+    elements.forEach(function(element) {
+      if(element){
+        $('#Stories_Carousel_Key').append(element);
+		 //console.log(elements); 
+      }
+    });
+	  
+	  load_slider_key();
+  });
+	
+	
+
+
 
 	// #Stories_all
 
@@ -237,8 +263,10 @@ function load_slider_key() {
       breakpoint: 768,
       settings: {
 		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false  
+            slidesToScroll: 1,
+            arrows: false,
+            centerMode: false,
+            variableWidth: true 
       }
     
     }
@@ -312,7 +340,7 @@ $('.slider-4').slick({
 
 const countdown = document.querySelector('.countdown');
 // Set Launch Date (ms)
-const launchDate = new Date('May 12, 2018 07:00:00').getTime();
+const launchDate = new Date('May 15, 2018 08:00:00').getTime();
 
 // Update every second
 const intvl = setInterval(() => {

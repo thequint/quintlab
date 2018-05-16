@@ -1,0 +1,84 @@
+body {
+	background-color: #FFCC00;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+.result-wrapper {
+	padding: 30px 0px 0 0 !important;
+	overflow: hidden;
+}
+.result-wrapper .inner-container {
+	background-color: rgba(0,0,0,0) !important;
+	min-height: 265px;
+	padding: 0 !important;
+}
+
+
+
+
+
+/*FOR HI*/
+body.hi{
+	font-family: 'Noto Sans', sans-serif;
+}
+
+body.hi .result-table {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+body.hi h1, body.hi h2, body.hi h3, body.hi h4, body.hi h5, body.hih6 {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+}
+
+body.hi .section-headline {
+margin-bottom: 20px;
+margin-top: -5px;	
+}
+
+body.hi .section-headline::before {
+
+	top: 5px;
+	
+}
+
+body.hi .section-headline::after {
+	bottom: -9px;
+}
+
+
+
+@media (max-width: 991px) {
+.col-emotion {
+	display: none;
+}
+}
+
+@media (max-width: 767px) {
+.col-emotion, .result-graph {
+	display: none;
+}
+}
+
+@media (max-width: 575px) {
+	
+.section-headline {
+	font-size: 25px;
+	margin-top: 30px;
+	display: block;
+
+}
+	
+	
+	.wrapper, .container{
+		width: 100% !important;
+	}
+	
+
+}
+
+
