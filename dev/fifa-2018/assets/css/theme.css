@@ -1,0 +1,145 @@
+@charset "utf-8";
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 900;
+	color: #1b0325;
+	overflow-x: hidden;
+	background: transparent;
+}
+p {
+	line-height: 160%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #1b0325;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+
+/*header-wrapper*/
+.header-wrapper{
+	background-color: #b0060f;
+	text-align: center;
+	padding: 20px 0px 15px 0;	
+}
+
+
+.header-wrapper::after,
+.header-wrapper::before, .matches:before{
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.header-wrapper::after {
+	z-index: 1;
+	background-image: url(../images/patern-bg.svg);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.2;
+}
+
+.header-wrapper::before, .matches::before {
+	z-index: 2;
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+	background: radial-gradient(ellipse at center, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+}
+
+
+.logo-fifa{
+	cursor: default;
+	display: inline-block;
+	position: relative;
+	z-index: 3;
+	
+}
+.logo-fifa .logo-icon {
+	float: left;
+	width: 60px;
+	margin-right: 20px;
+}
+
+.logo-fifa .logo-text {
+	width: 400px;
+	float: left;
+	margin-top: 20px;
+}
+
+/*Result-wrapper*/
+.result-wrapper{
+	text-align: center;
+}
+
+
+.matches{
+	overflow: hidden;
+}
+.single-match{
+	float:left;
+	width: 50%;
+	height: 130px;
+	position: relative;
+	
+}
+
+.single-match.previous-mathes{
+	background-color: #b0060f;
+}
+.single-match.upcoming-mathes{
+	background-color: #316295;
+}
+
+.single-match.previous-mathes::after,
+.single-match.upcoming-mathes::after{
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: '';
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+}
+.single-match.previous-mathes::after {
+	background-color: #b0060f;
+	transform: skew(-25deg, 0deg);
+}
+
+.single-match.upcoming-mathes::after{
+	background-color: #316295;
+	transform: skew(-25deg, 0deg);
+}
+
+.single-content{
+	position: relative;
+	z-index: 2;
+}
+
+
+
+
+
+
+

@@ -81,6 +81,16 @@ function calculateBmi() {
 		if (!$(".cal-bmi").hasClass("is-active")) {
 			$(".cal-bmi").addClass("is-active");
 			$('.cal-bmi.is-active').click(function () {
+				if(!$(this).hasClass("is-slide"))
+					{
+					  ga("gtag_UA_58739020_1.send", {
+                	  hitType: 'event',
+                      eventCategory: 'Labs',
+                      eventAction: 'play',
+                      eventLabel: 'FitBMI'
+					  });
+					//console.log("yes");	
+					}
 				$(this).toggleClass('is-slide');
 				$('.result').toggle();
 				$('.info').toggle();
