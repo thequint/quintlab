@@ -197,7 +197,9 @@ template {
 .container:before, 
 .container:after, 
 .row:before, 
-.row:after {
+.row:after,
+.team-details li:after,
+.team-details li:before{
 	display: table;
 	line-height: 0;
 	content: "";
@@ -205,7 +207,8 @@ template {
 .clearfix:after, 
 .wrapper, 
 .container:after, 
-.row:after {
+.row:after,
+.team-details li:after{
 	clear: both;
 }
 .clearfix {
