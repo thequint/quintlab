@@ -1,10 +1,8 @@
-//var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1BEnGjJDIAW_LdOKsBtVd_RdlPORnfC-P-gg1RIgSPJU/pubhtml';
-var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1zPdOwtrX29QFF0pBINoe1TLwcPoDdI8oheRQmUvi28Q/pubhtml';
-
+var public_spreadsheet = 'https://docs.google.com/spreadsheets/d/18XqcAgVcxw6_4IL76qYjHuwt3lfq2Q9rBDDHYDd6esY/pubhtml';
 
 function init() {
 	Tabletop.init({
-		key: public_spreadsheet_contact,
+		key: public_spreadsheet,
 		callback: showInfo,
 		simpleSheet: true
 	});
@@ -23,33 +21,50 @@ function getParameterByName(name, url) {
 	return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
 function showInfo(data) {
+	"use strict";
 	sheet_data = data;
 	display_data();
+	update_group("A");
 }
 
 
-function display_data() {
-	for (var index = sheet_data.length - 1; index >= 0; index--) {
-		$('#tab-1 ul').append('<li><a data-video="'+sheet_data[index].Video_Tab_1+'" href="javascript:void(0);"><img src="https://img.youtube.com/vi/'+sheet_data[index].Video_Tab_1+'/mqdefault.jpg" alt=""></a></li>');
+function update_group(x) {
+	var group_array = []
+	for (var i = 0; i < sheet_data.length; i++) {
+		if (sheet_data[i].Group == x) {
+			group_array.push(sheet_data[i]);
+
+		}
 	}
-	
-	for (var index = sheet_data.length - 1; index >= 0; index--) {
-		$('#tab-2 ul').append('<li><a data-video="'+sheet_data[index].Video_Tab_2+'" href="javascript:void(0);"><img src="https://img.youtube.com/vi/'+sheet_data[index].Video_Tab_2+'/mqdefault.jpg" alt=""></a></li>');
-	}
-	
-	for (var index = sheet_data.length - 1; index >= 0; index--) {
-		$('#tab-3 ul').append('<li><a data-video="'+sheet_data[index].Video_Tab_3+'" href="javascript:void(0);"><img src="https://img.youtube.com/vi/'+sheet_data[index].Video_Tab_3+'/mqdefault.jpg" alt=""></a></li>');
-	}
-	
-	$('#VideoPrev').html('<iframe src="https://www.youtube.com/embed/'+sheet_data[sheet_data.length - 1].Video_Tab_1+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-	
-	
-	
-	
-	$('.list li a').click(function(){
-		$('#VideoPrev').html('<iframe src="https://www.youtube.com/embed/'+$(this).attr('data-video')+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-		$(".tab-content.current li:nth-child(1) a").attr("data-video");
-		console.log();
+
+	group_array.sort(function (a, b) {
+		return a.Points - b.Points
 	});
+	group_array.reverse();
+	console.log(group_array);
+
+	$(".point-table tbody").html('');
+	for (var i = 0; i < group_array.length; i++) {
+		$(".point-table tbody").append('<tr><td>' + group_array[i].Country + '</td><td>' + group_array[i].Wins + '</td><td>' + group_array[i].Draw + '</td><td>' + group_array[i].Points + '</td></tr>');
+	}
+	
+	
+	
+	
+}
+
+function display_data() {
+	"use strict";
+
+	// Previous matches
+
+	$('.previous-mathes ul.team-details').append('<li><div class="single-group"><div class="team-name">' + sheet_data[0].Previous_1A + '</div><div class="team-point">' + sheet_data[1].Previous_1A + '</div></div><div class="single-group"><div class="team-name">' + sheet_data[0].Previous_1B + '</div><div class="team-point">' + sheet_data[1].Previous_1B + '</div></div></li><li><div class="single-group"><div class="team-name">' + sheet_data[0].Previous_2A + '</div><div class="team-point">' + sheet_data[1].Previous_2A + '</div></div><div class="single-group"><div class="team-name">' + sheet_data[0].Previous_2B + '</div><div class="team-point">' + sheet_data[1].Previous_2B + '</div></div></li>');
+
+
+	// Upcoming matches
+
+	$('.upcoming-mathes ul.team-details').append('<li><div class="team-name">' + sheet_data[0].Upcoming_1A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_1B + '</div></li><li><div class="team-name">' + sheet_data[0].Upcoming_2A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_2B + '</div></li>');
+
 }

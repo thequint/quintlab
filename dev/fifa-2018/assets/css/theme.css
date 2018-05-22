@@ -3,7 +3,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
 	font-weight: 900;
-	color: #393737;
+	color: #4d4d4d;
 	overflow-x: hidden;
 	background: transparent;
 }
@@ -14,7 +14,7 @@ p {
 a {
 	text-decoration: none;
 	outline: none;
-	color: #393737;
+	color: #4d4d4d;
 }
 button, a {
 	outline: none;
@@ -25,9 +25,13 @@ button, a {
 	-ms-transition: all 0.2s ease-in-out;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #393737;
+	color: #4d4d4d;
 	font-weight: 900;
 	text-transform: uppercase;
+}
+
+.is-loading{
+	display: block;
 }
 
 
@@ -296,12 +300,114 @@ text-shadow: 3px 3px 0px #393737;
 .point-table-wrapper nav ul li a{
 	color:#B3B3B3;
 	display: inline-block;
-	padding: 10px 5px
+	padding: 10px 0px
 }
 .point-table-wrapper nav ul li a:hover, .point-table-wrapper nav ul li.active a{
 	color: #b0060f;
 }
 
+.group-details{
+	padding: 25px 0px 0 0;
+}
+
+.group-details h4{
+	text-transform:inherit;
+	line-height: 100%;
+	font-size: 23px;
+	margin: 0px 0px 15px 0px;
+}
+
+.nav-content{
+	margin: 0px -15px 0 -15px;
+}
+
+.content{
+	width: 50%;
+	float: left;
+	padding: 0px 15px;
+}
+
+.point-table table{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	text-transform: uppercase;
+	
+}
+.point-table table tr th,
+.point-table table tr td{
+	padding:16px 10px;
+	font-weight: 900;
+	line-height: 100%;
+	vertical-align: middle;
+	width: 25%;
+}
+
+.point-table table tr td{
+	border: 0px solid #ccc;
+	font-size: 30px;
+	color: #316295;
+	padding:3px 10px 10px 10px;
+}
+.point-table table tr td:nth-child(1){
+	font-size: 15px;
+	color: #4d4d4d;
+	padding:16px 10px;
+	
+}
+
+
+
+.point-table table thead{
+	background-color: #b0060f;
+	color: #fff;
+	font-size: 20px;
+}
+
+.point-table table thead span{
+	position: relative;
+	display: block;
+}
+.point-table table tbody tr{
+	background-color:#e5e5e5; 
+}
+.point-table table tbody tr:nth-child(odd){
+	background-color:#f0f0f0; 
+}
+
+.stories h5{
+	text-transform: inherit;
+	font-size: 20px;
+	line-height: 100%;
+	margin:5px 0 15px 0;
+	
+}
+.stories ul li{
+	position: relative;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 12px;
+	padding-left: 18px;
+}
+.stories ul li::before{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	content: '';
+	left: 0;
+	top: 4px;
+	border-radius: 100%;
+	background-color: #4d4d4d;
+}
+
+.stories ul li a{
+	display: inline-block;
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+.stories ul li a:hover{
+	color:#b0060f;
+	border-bottom: 1px solid #b0060f;
+}
 
 
 
@@ -330,7 +436,7 @@ text-shadow: 3px 3px 0px #393737;
 }
 
 
-.animate{
+.point-table-wrapper h3{
 	animation: animatedBackground 10s linear infinite;
     -moz-animation: animatedBackground 10s linear infinite;
     -webkit-animation: animatedBackground 10s linear infinite;
