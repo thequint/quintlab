@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Audio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
+<meta charset="UTF-8">
+<title>Audio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
+<script type="text/javascript">
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: 'violet',
+    progressColor: 'purple'
+});
+wavesurfer.load('assets/media/audio--light-has-gone-30-jan-1948.mp3');
+
+</script>
 </head>
 <body>
 	
@@ -12,15 +21,7 @@
 <p align="center">
 <button class="btn btn-primary" onclick="wavesurfer.playPause()">Play</button>
 </p>
-<script type="text/javascript">
-	var wavesurfer = WaveSurfer.create({
-	    container: '#waveform',
-	    waveColor: 'violet',
-	    progressColor: 'purple'
-	});
-	wavesurfer.load('assets/media/audio--light-has-gone-30-jan-1948.mp3');
 
-</script>
 <!--
 <div id="waveform"></div>
 

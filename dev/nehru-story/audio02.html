@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="wavesurfer.js is an HTML 5 audio player and waveform visualizer, made with JavaScript and Web Audio.
+    ">
+    <link rel="alternate" type="application/rss+xml" title="wavesurfer.js" href="http://wavesurfer-js.org/feed.xml">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/ribbon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/lisp.min.js"></script>
+    
+</head>
+
+<body>
+    <header class="overview">
+        <div class="container">
+            <div class="demo">
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
+                
+                <div id="waveform">
+                    <progress id="progress" class="progress progress-striped" value="0" max="100"></progress>
+                </div>
+                <script>
+                var ctx = document.createElement('canvas').getContext('2d');
+                var linGrad = ctx.createLinearGradient(0, 64, 0, 200);
+                linGrad.addColorStop(0.5, 'rgba(255, 255, 255, 1.000)');
+                linGrad.addColorStop(0.5, 'rgba(183, 183, 183, 1.000)');
+                var wavesurfer = WaveSurfer.create({
+                    // Use the id or class-name of the element you created, as a selector
+                    container: '#waveform',
+                    // The color can be either a simple CSS color or a Canvas gradient
+                    waveColor: linGrad,
+                    progressColor: 'hsla(200, 100%, 30%, 0.5)',
+                    cursorColor: '#fff',
+                    // This parameter makes the waveform look like SoundCloud's player
+                    barWidth: 3
+                });
+                wavesurfer.on('loading', function(percents) {
+                    document.getElementById('progress').value = percents;
+                });
+                wavesurfer.on('ready', function(percents) {
+                    document.getElementById('progress').style.display = 'none';
+                });
+                wavesurfer.load('https://wavesurfer-js.org/example/media/small-demo.wav');
+                </script>
+                <div class="controls">
+                    <button class="btn btn-primary" onclick="wavesurfer.skipBackward()">
+                        <i class="fa fa-step-backward"></i> Backward
+                    </button>
+                    <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+                        <i class="fa fa-play"></i> Play /
+                        <i class="fa fa-pause"></i> Pause
+                    </button>
+                    <button class="btn btn-primary" onclick="wavesurfer.skipForward()">
+                        <i class="fa fa-step-forward"></i> Forward
+                    </button>
+                    <button class="btn btn-primary" onclick="wavesurfer.toggleMute()">
+                        <i class="fa fa-volume-off"></i> Toggle Mute
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+</body>
+
+</html>
