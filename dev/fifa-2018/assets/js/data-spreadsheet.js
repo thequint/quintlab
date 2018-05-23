@@ -43,7 +43,7 @@ function update_group(x) {
 		return a.Points - b.Points
 	});
 	group_array.reverse();
-	console.log(group_array);
+	//console.log(group_array);
 
 	$(".point-table tbody").html('');
 	for (var i = 0; i < group_array.length; i++) {

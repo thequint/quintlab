@@ -29,25 +29,16 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 900;
 	text-transform: uppercase;
 }
-
-.is-loading{
+.is-loading {
 	display: block;
 }
-
-
 /*header-wrapper*/
 .header-wrapper {
 	background-color: #b0060f;
 	text-align: center;
 	padding: 20px 0px 15px 0;
 }
-
-
-
-.header-wrapper::after,
-.header-wrapper::before, 
-.matches:before,
-.point-table-wrapper h3::after{
+.header-wrapper::after, .header-wrapper::before, .matches:before, .point-table-wrapper h3::after {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -56,19 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	position: absolute;
 }
-
-.header-wrapper::after,.point-table-wrapper h3::after {
+.header-wrapper::after, .point-table-wrapper h3::after {
 	z-index: 1;
 	background-image: url(../images/patern-bg.svg);
 	background-size: cover;
 	background-position: center;
 	opacity: 0.2;
-	
-	
-	
-	
 }
-
 .header-wrapper::before, .matches::before {
 	z-index: 2;
 	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
@@ -77,8 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 	background: radial-gradient(ellipse at center, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 }
-
-.logo-tq{
+.logo-tq {
 	display: block;
 	width: 40px;
 	position: absolute;
@@ -86,37 +70,30 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0px;
 	z-index: 999;
 }
-
-.logo-fifa{
+.logo-fifa {
 	cursor: default;
 	display: inline-block;
 	position: relative;
 	z-index: 3;
-	
 }
 .logo-fifa .logo-icon {
 	float: left;
 	width: 70px;
 	margin-right: 20px;
 }
-
 .logo-fifa .logo-text {
 	width: 460px;
 	float: left;
 	margin-top: 28px;
 }
-
 /*Result-wrapper*/
-.result-wrapper{
+.result-wrapper {
 	text-align: center;
 }
-
-
-.matches{
+.matches {
 	overflow: hidden;
 	position: relative;
 }
-
 .matches::after {
 	width: 70px;
 	height: 136px;
@@ -131,24 +108,19 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 4;
 	margin: -68px 0px 0px -35px;
 }
-
-.single-match{
-	float:left;
+.single-match {
+	float: left;
 	width: 50%;
-	height: 180px;
+	height: 180px !important;
 	position: relative;
-	
 }
-
-.single-match.previous-mathes{
+.single-match.previous-mathes {
 	background-color: #b0060f;
 }
-.single-match.upcoming-mathes{
+.single-match.upcoming-mathes {
 	background-color: #316295;
 }
-
-.single-match.previous-mathes::after,
-.single-match.upcoming-mathes::after{
+.single-match.previous-mathes::after, .single-match.upcoming-mathes::after {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -162,13 +134,11 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #b0060f;
 	transform: skew(-25deg, 0deg);
 }
-
-.single-match.upcoming-mathes::after{
+.single-match.upcoming-mathes::after {
 	background-color: #316295;
 	transform: skew(-25deg, 0deg);
 }
-
-.single-content{
+.single-content {
 	position: relative;
 	z-index: 2;
 	color: #fff;
@@ -180,12 +150,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 3px 3px 0px #393737;
 	margin: 15px 0px 10px 0px;
 }
-
-.previous-mathes .team-details{
+.previous-mathes .team-details {
 	display: inline-block;
 	position: relative;
 }
-.previous-mathes .team-details::after{
+.previous-mathes .team-details::after {
 	position: absolute;
 	width: 1px;
 	height: 100%;
@@ -193,14 +162,11 @@ h1, h2, h3, h4, h5, h6 {
 	content: '';
 	background-color: #fff;
 }
-
-
-.previous-mathes .team-details li{
+.previous-mathes .team-details li {
 	float: left;
 	position: relative;
-	padding:20px;
+	padding: 20px 18px;
 }
-
 .previous-mathes .team-details li::after {
 	position: absolute;
 	width: 50px;
@@ -212,44 +178,33 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 20px;
 	line-height: 100%;
 }
-
-
-.previous-mathes .single-group{
+.previous-mathes .single-group {
 	float: left;
-	
 	line-height: 100%;
 	padding: 0px 20px;
 	height: 66px;
 	position: relative;
 }
-
-.previous-mathes .team-details .team-name{
-font-size: 30px;
+.previous-mathes .team-details .team-name {
+	font-size: 30px;
 	margin-bottom: 25px;
 }
-
-.previous-mathes .team-details .team-point{
-text-shadow: 3px 3px 0px #393737;
+.previous-mathes .team-details .team-point {
+	text-shadow: 3px 3px 0px #393737;
 	font-size: 50px;
 }
-
-
-
-.upcoming-mathes .team-details{
+.upcoming-mathes .team-details {
 	display: inline-block;
 	position: relative;
 }
-
-.upcoming-mathes .team-details li{
+.upcoming-mathes .team-details li {
 	float: left;
 	position: relative;
-	padding:5px 40px;
+	padding: 5px 40px;
 	font-size: 35px;
 	line-height: 90%;
-	
 }
-
-.upcoming-mathes .team-details::after{
+.upcoming-mathes .team-details::after {
 	position: absolute;
 	width: 1px;
 	height: 100%;
@@ -257,16 +212,13 @@ text-shadow: 3px 3px 0px #393737;
 	content: '';
 	background-color: #fff;
 }
-
-.upcoming-mathes .team-details li .vs{
+.upcoming-mathes .team-details li .vs {
 	font-size: 20px;
 }
-
-.point-table-wrapper .container{
+.point-table-wrapper .container {
 	background-color: #fff;
 }
-
-.point-table-wrapper h3{
+.point-table-wrapper h3 {
 	background: #316295;
 	color: #fff;
 	line-height: 100%;
@@ -275,121 +227,106 @@ text-shadow: 3px 3px 0px #393737;
 	text-shadow: 3px 3px 0px #393737;
 	position: relative;
 }
-
-
-
-.point-table-wrapper h3 span{
+.point-table-wrapper h3 span {
 	position: relative;
 	z-index: 3;
 }
-
-.point-table-wrapper .inner-container{
+.point-table-wrapper .inner-container {
 	padding: 0px 30px 30px 30px;
 }
-
-.point-table-wrapper nav{
+.point-table-wrapper nav {
 	border-bottom: 2px solid #b0060f;
-	padding:10px 0;
+	padding: 10px 0;
 }
-
-.point-table-wrapper nav ul li{
+.point-table-wrapper nav ul li {
 	float: left;
 	width: 12.5%;
 	font-size: 23px;
 }
-.point-table-wrapper nav ul li a{
-	color:#B3B3B3;
+.point-table-wrapper nav ul li a {
+	color: #B3B3B3;
 	display: inline-block;
 	padding: 10px 0px
 }
-.point-table-wrapper nav ul li a:hover, .point-table-wrapper nav ul li.active a{
+.point-table-wrapper nav ul li a:hover {
+	color: #4d4d4d;
+}
+.point-table-wrapper nav ul li.active a {
 	color: #b0060f;
 }
-
-.group-details{
+.group-details {
 	padding: 25px 0px 0 0;
 }
-
-.group-details h4{
-	text-transform:inherit;
+.group-details h4 {
+	text-transform: inherit;
 	line-height: 100%;
 	font-size: 23px;
 	margin: 0px 0px 15px 0px;
 }
-
-.nav-content{
+.nav-content {
 	margin: 0px -15px 0 -15px;
 }
-
-.content{
+.content {
 	width: 50%;
 	float: left;
 	padding: 0px 15px;
 }
-
-.point-table table{
+.point-table table {
 	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
 	text-transform: uppercase;
-	
 }
-.point-table table tr th,
-.point-table table tr td{
-	padding:16px 10px;
+.point-table table tr th, .point-table table tr td {
+	padding: 16px 0px;
 	font-weight: 900;
 	line-height: 100%;
 	vertical-align: middle;
 	width: 25%;
 }
-
-.point-table table tr td{
+.point-table table tr td {
 	border: 0px solid #ccc;
 	font-size: 30px;
 	color: #316295;
-	padding:3px 10px 10px 10px;
+	padding: 3px 10px 10px 10px;
 }
-.point-table table tr td:nth-child(1){
+.point-table table tr td:nth-child(1) {
 	font-size: 15px;
 	color: #4d4d4d;
-	padding:16px 10px;
-	
+	padding: 16px 10px;
 }
-
-
-
-.point-table table thead{
+.point-table table thead {
 	background-color: #b0060f;
 	color: #fff;
 	font-size: 20px;
 }
-
-.point-table table thead span{
+.point-table table thead span {
 	position: relative;
 	display: block;
 }
-.point-table table tbody tr{
-	background-color:#e5e5e5; 
+.point-table table tbody tr {
+	background-color: #e5e5e5;
 }
-.point-table table tbody tr:nth-child(odd){
-	background-color:#f0f0f0; 
+.point-table table tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
 }
-
-.stories h5{
+.stories h5 {
 	text-transform: inherit;
 	font-size: 20px;
 	line-height: 100%;
-	margin:5px 0 15px 0;
-	
+	margin: 5px 0 15px 0;
 }
-.stories ul li{
+.stories ul li {
 	position: relative;
 	font-weight: 700;
 	font-size: 16px;
-	margin-bottom: 12px;
+	margin-top: 12px;
 	padding-left: 18px;
 }
-.stories ul li::before{
+.stories ul li:first-child {
+	margin-top: 0;
+}
+.stories ul li::before {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -399,15 +336,16 @@ text-shadow: 3px 3px 0px #393737;
 	border-radius: 100%;
 	background-color: #4d4d4d;
 }
-
-.stories ul li a{
+.stories ul li a {
 	display: inline-block;
 	border-bottom: 1px solid rgba(0,0,0,0);
 }
-.stories ul li a:hover{
-	color:#b0060f;
+.stories ul li a:hover {
+	color: #b0060f;
 	border-bottom: 1px solid #b0060f;
 }
+
+
 
 
 
@@ -415,32 +353,49 @@ text-shadow: 3px 3px 0px #393737;
 /*Animation*/
 
 @keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 0; }
+ 0% {
+background-position: 0 0;
+}
+ 100% {
+background-position: -300px 0;
+}
 }
 @-moz-keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 0; }
+ 0% {
+background-position: 0 0;
+}
+ 100% {
+background-position: -300px 0;
+}
 }
 @-webkit-keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 0; }
+ 0% {
+background-position: 0 0;
+}
+ 100% {
+background-position: -300px 0;
+}
 }
 @-ms-keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 0; }
+ 0% {
+background-position: 0 0;
+}
+ 100% {
+background-position: -300px 0;
+}
 }
 @-o-keyframes animatedBackground {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 0; }
+ 0% {
+background-position: 0 0;
 }
-
-
-.point-table-wrapper h3{
+ 100% {
+background-position: -300px 0;
+}
+}
+.point-table-wrapper h3 {
 	animation: animatedBackground 10s linear infinite;
-    -moz-animation: animatedBackground 10s linear infinite;
-    -webkit-animation: animatedBackground 10s linear infinite;
-    -ms-animation: animatedBackground 10s linear infinite;
-    -o-animation: animatedBackground 10s linear infinite;
+	-moz-animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 10s linear infinite;
+	-ms-animation: animatedBackground 10s linear infinite;
+	-o-animation: animatedBackground 10s linear infinite;
 }
-
