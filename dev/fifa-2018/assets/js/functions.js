@@ -72,4 +72,11 @@ $('.matches').slick({
  
   ]
 });
-
+var i=0;
+function repeatOften() {
+  // Do whatever
+	i=i+0.01;
+	$(".header-bg").css("transform","translate3d("+(-400+400*Math.cos(i))+"px,"+(-400+400*Math.sin(i))+"px,0)");
+  requestAnimationFrame(repeatOften);
+}
+requestAnimationFrame(repeatOften);

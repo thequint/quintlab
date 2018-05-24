@@ -35,6 +35,7 @@
 }
 .point-table-wrapper nav ul li {
 	width: 25%;
+	text-align: center;
 }
 .nav-content {
 	margin: 0px;
@@ -137,5 +138,31 @@
 .upcoming-mathes .team-details li {
 	font-size: 30px;
 	line-height: 100%;
+}
+}
+
+@media (max-width: 680px) {
+.logo-fifa {
+	text-align: center;
+}
+.logo-fifa .logo-icon {
+	float: none;
+	width: 44px;
+	margin-right: 0;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -22px;
+	top: -8px;
+}
+.logo-fifa .logo-text {
+	width: 280px;
+	float: left;
+	margin-top: 87px;
+}
+.logo-tq {
+	width: 35px;
+	left: 10px;
+	top: -8px;
 }
 }
