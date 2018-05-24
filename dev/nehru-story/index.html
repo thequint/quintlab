@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
     <link rel="stylesheet" href="assets/css/theme.css" media="all">
     <link rel="stylesheet" href="https://fea.assettype.com/thequint/assets/fonts-86f8c78cce.css">
+    
+    <link rel='stylesheet prefetch' href='https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/font/font.css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -31,7 +35,43 @@
 <body>
     <div class="main-wrap">
         <section class="container">
-            <div class="container--left" id="story_img"></div>
+            <div class="container--left">
+                <div class="player">
+                    <div class="like waves-effect waves-light">
+                        <i class="icon-heart"></i>
+                    </div>
+                    <div class="mask"></div>
+                    <ul class="player-info info-one">
+                        <li>Rock'n'Roll Nerd</li>
+                        <li>Tim Minchin</li>
+                        <li>5:34</li>
+                    </ul>
+                    <ul class="player-info info-two">
+                        <li>Rock'n'Roll Nerd</li>
+                        <li>Tim Minchin</li>
+                        <li><span id="duration"></span><i> / </i>5:34</li>
+                    </ul>
+                    <div id="play-button" class="unchecked">
+                        <i class="icon icon-play"></i>
+                    </div>
+                    <div class="control-row">
+                        <div class="waves-animation-one"></div>
+                        <div class="waves-animation-two"></div>
+                        <div id="pause-button">
+                            <i class="icon"></i>
+                        </div>
+                        <div class="seek-field">
+                            <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+                        </div>
+                        <div class="volume-icon">
+                            <i class="icon-volume-up"></i>
+                        </div>
+                        <div class="volume-field">
+                            <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container--right">
                 <div class="box-wrap">
                     <!-- <h1 class="box-headline" id="story_headline"></h1> -->
@@ -39,7 +79,7 @@
                         <span id="story_content"></span>
                         <span id="typedtext"></span>
                     </div>
-                    <div class="box-audio" id="story_audio"></div>
+                    <!-- <div class="box-audio" id="story_audio"></div> -->
                 </div>
             </div>
         </section>
@@ -49,14 +89,29 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+    <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
+        <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.ogg" type="audio/ogg">
+        <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.mp3" type="audio/mpeg">
+    </audio>
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
+    <script src="assets/js/index.js"></script>
+
+
     <script type="text/javascript">
-    $(".container--left").click(function() {
-        $(this).addClass("img-animate");
+    //$(".container--left").click(function() {
+    var type_flag=0;  
+    $("#play-button").click(function() {
+        $(".container--left").addClass("img-animate");
         // $(this).animate({left: '0'});
         // $(".main-wrap .container--right").css("width","500px");
         $(".container--right").addClass("box-width");
         $(".container--right").addClass("add-content");
-        typewriter();
+        if(type_flag==0) {
+            typewriter();
+            type_flag=1;
+        }
     });
 
     function getParameterByName(name, url) {
@@ -102,7 +157,7 @@
 
     console.log(content_array[section_id].heading);
 
-    $("#story_img").html(content_array[section_id].img);
+    // $("#story_img").html(content_array[section_id].img);
     $("#story_headline").html(content_array[section_id].headline);
     $("#story_content").html(content_array[section_id].content[0]+'<br/><br/>'+content_array[section_id].content[1]);
     //$("#story_audio").html(story_content[section_id].audio);

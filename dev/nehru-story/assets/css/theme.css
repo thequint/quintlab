@@ -179,5 +179,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+@media only screen and (max-width: 1279px) {
+    .main-wrap {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+    .main-wrap .container--left {
+        transform: translate3d(0,0,0);
+    }
+    .main-wrap .container--right {
+        height: auto;
+    }
+    .main-wrap .container--right.box-width {
+        width: 100%;
+        /*width: calc(100% - 300px);
+        width: -webkit-calc(100% - 300px);*/
+    }
+}
 
 

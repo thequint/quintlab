@@ -8,18 +8,18 @@
     <title></title>
     <meta name="description" content="wavesurfer.js is an HTML 5 audio player and waveform visualizer, made with JavaScript and Web Audio.
     ">
-    <link rel="alternate" type="application/rss+xml" title="wavesurfer.js" href="http://wavesurfer-js.org/feed.xml">
+    <!-- <link rel="alternate" type="application/rss+xml" title="wavesurfer.js" href="http://wavesurfer-js.org/feed.xml"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/ribbon.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/lisp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/lisp.min.js"></script> -->
     
 </head>
 
-<body>
+<body style="background-color: #ccc">
     <header class="overview">
         <div class="container">
             <div class="demo">
@@ -29,6 +29,7 @@
                 <div id="waveform">
                     <progress id="progress" class="progress progress-striped" value="0" max="100"></progress>
                 </div>
+
                 <script>
                 var ctx = document.createElement('canvas').getContext('2d');
                 var linGrad = ctx.createLinearGradient(0, 64, 0, 200);
@@ -50,7 +51,8 @@
                 wavesurfer.on('ready', function(percents) {
                     document.getElementById('progress').style.display = 'none';
                 });
-                wavesurfer.load('https://wavesurfer-js.org/example/media/small-demo.wav');
+                // wavesurfer.load('https://wavesurfer-js.org/example/media/small-demo.wav');
+                wavesurfer.load('assets/media/nehru-audio-ogg-02.ogg');
                 </script>
                 <div class="controls">
                     <button class="btn btn-primary" onclick="wavesurfer.skipBackward()">
