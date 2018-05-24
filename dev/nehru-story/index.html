@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="assets/css/animate.css" media="all">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
     <link rel="stylesheet" href="assets/css/theme.css" media="all">
+
     <link rel="stylesheet" href="https://fea.assettype.com/thequint/assets/fonts-86f8c78cce.css">
-    
     <link rel='stylesheet prefetch' href='https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/font/font.css'>
     <link rel="stylesheet" href="assets/css/style.css">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -84,33 +84,24 @@
             </div>
         </section>
     </div>
-
     <!-- <div id="typedtext"></div> -->
-
     <!-- Scripts -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-
     <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
         <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.ogg" type="audio/ogg">
         <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.mp3" type="audio/mpeg">
     </audio>
-    
     <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
     <script src="assets/js/index.js"></script>
-
-
     <script type="text/javascript">
-    
-    var type_flag=0;  
+    var type_flag = 0;
     $("#play-button").click(function() {
         $(".container--left").addClass("img-animate");
-        // $(this).animate({left: '0'});
-        // $(".main-wrap .container--right").css("width","500px");
         $(".container--right").addClass("box-width");
         $(".container--right").addClass("add-content");
-        if(type_flag==0) {
+        if (type_flag == 0) {
             typewriter();
-            type_flag=1;
+            type_flag = 1;
         }
     });
 
@@ -128,26 +119,26 @@
     var content_array = [{
             'img': '<img src="assets/images/nehru-img.jpg">',
             'headline': 'Special Status to Delhi',
-            'content': ['#01 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence','Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
+            'content': ['#01 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
         },
         {
             'img': '<img src="assets/images/nehru-img02.jpg">',
             'headline': 'Special Status to Delhi',
-            'content': ['#02 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence','Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
+            'content': ['#02 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
 
         },
         {
             'img': '<img src="assets/images/nehru-img03.jpg">',
             'headline': 'Special Status to Delhi',
-            'content': ['#03 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence','Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
+            'content': ['#03 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
         },
         {
             'img': '<img src="assets/images/nehru-img.jpg">',
             'headline': 'Special Status to Delhi',
-            'content': ['#04 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence','Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
+            'content': ['#04 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
         }
     ]
@@ -155,14 +146,12 @@
 
     section_id = getParameterByName('id');
 
-    // console.log(content_array[section_id].heading);
-
     // $("#story_img").html(content_array[section_id].img);
     // $("#story_headline").html(content_array[section_id].headline);
-    $("#story_content").html(content_array[section_id].content[0]+'<br/><br/>'+content_array[section_id].content[1]);
+    $("#story_content").html(content_array[section_id].content[0] + '<br/><br/>' + content_array[section_id].content[1]);
     //$("#story_audio").html(story_content[section_id].audio);
 
-    $("#story_audio").html(" <audio controls><source src="+content_array[section_id].audio+" type='audio/mpeg'></audio>");
+    $("#story_audio").html(" <audio controls><source src=" + content_array[section_id].audio + " type='audio/mpeg'></audio>");
 
     var aText = new Array(
         content_array[section_id].content[0],
@@ -201,7 +190,6 @@
         }
     }
     //typewriter();
-    
     </script>
 </body>
 
