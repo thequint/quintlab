@@ -33,11 +33,11 @@
 <![endif]-->
 </head>
 
-<body>
+<body onload="adjust_iframe_height()">
     <div class="main-wrap">
         <section class="container">
             <div class="container--left">
-                <div class="player">
+                <div class="player" id="story_img">
                     <div class="like waves-effect waves-light">
                         <i class="icon-heart"></i>
                     </div>
@@ -77,7 +77,7 @@
                 <div class="box-wrap">
                     <!-- <h1 class="box-headline" id="story_headline"></h1> -->
                     <div class="box-content">
-                        <span id="story_content"></span>
+                        <!-- <span id="story_content"></span> -->
                         <span id="typedtext"></span>
                     </div>
                     <!-- <div class="box-audio" id="story_audio"></div> -->
@@ -85,16 +85,18 @@
             </div>
         </section>
     </div>
-
+    
+    <div id="story_audio"></div>
+    <!--
     <audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop>
         <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.ogg" type="audio/ogg">
-        <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.mp3" type="audio/mpeg">
-    </audio>
+        <source src="assets/media/audio--light-has-gone-30-jan-1948.mp3" type="audio/mpeg">
+    </audio>-->
 
     <!-- Scripts -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
-    <script src="assets/js/index.js"></script>
+ <!--   <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
+    <script src="assets/js/index.js"></script>-->
     <script type="text/javascript">
     var type_flag = 0;
     $("#play-button").click(function() {
@@ -113,7 +115,7 @@
             $(".container--right").removeClass("box-width");
             $(".container--right").removeClass("add-content");
         }
-
+        adjust_iframe_height();
         
     });
 
@@ -129,14 +131,14 @@
 
     // content array
     var content_array = [{
-            'img': '<img src="assets/images/nehru-img02.jpg">',
+            'img': 'assets/images/nehru-cover-img01.jpg',
             'headline': 'Tryst With Destiny',
             'sub_headline': 'Jawaharlal Nehru',
-            'content': ['#01 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
+            'content': ['Nehru: Whether we are Hindus or Muslims, Sikhs or Christians, whatever we are, none of us can say in his heart of hearts that he has no prejudice and no taint of communalism in his mind or heart.', '“Another word is thrown up a good deal, this SECULAR STATE business. May I beg with all humility those gentlemen who use this word often, to consult some dictionary before they use it? It is brought in at every conceivable step and at every conceivable stage. I just do not understand it. It has a great deal of importance, no doubt. But it is brought in in all contexts, as if by saying that we are a secular State we have done something amazingly generous, given something out of our pocket to the rest of the world, something which we ought not to have done. We have only done something which every country does except a very few misguided and backward countries in the world. Let us not refer to that word in the sense that we have done something very mighty.” '],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
         },
         {
-            'img': '<img src="assets/images/nehru-img02.jpg">',
+            'img': 'assets/images/nehru-img02.jpg',
             'headline': 'Tryst With Destiny',
             'sub_headline': 'Jawaharlal Nehru',
             'content': ['#02 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
@@ -144,14 +146,14 @@
 
         },
         {
-            'img': '<img src="assets/images/nehru-img02.jpg">',
+            'img': 'assets/images/nehru-img02.jpg',
             'headline': 'Tryst With Destiny',
             'sub_headline': 'Jawaharlal Nehru',
             'content': ['#03 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
             'audio': 'assets/media/audio--light-has-gone-30-jan-1948.mp3'
         },
         {
-            'img': '<img src="assets/images/nehru-img02.jpg">',
+            'img': 'assets/images/nehru-img02.jpg',
             'headline': 'Tryst With Destiny',
             'sub_headline': 'Jawaharlal Nehru',
             'content': ['#04 Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence. Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence', 'Jawaharlal Nehru was the first Prime Minister of India and a central figure in Indian politics before and after independence.'],
@@ -164,12 +166,30 @@
 
     // $("#story_img").html(content_array[section_id].img);
     // $("#story_headline").html(content_array[section_id].headline);
+
+    $(".player").css("background-image","url('"+content_array[section_id].img+"')");
+
     $(".story_headline").html(content_array[section_id].headline);
     $(".sub_headline").html(content_array[section_id].sub_headline);
     $("#story_content").html(content_array[section_id].content[0] + '<br/><br/>' + content_array[section_id].content[1]);
-    //$("#story_audio").html(story_content[section_id].audio);
 
-    $("#story_audio").html(" <audio controls><source src=" + content_array[section_id].audio + " type='audio/mpeg'></audio>");
+    $("#story_audio").html('<audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop><source src="'+ content_array[section_id].audio +'" type="audio/mpeg"></audio>');
+
+    jQuery.loadScript = function (url, callback) {
+    jQuery.ajax({
+        url: url,
+        dataType: 'script',
+        success: callback,
+        async: true
+    });
+    }
+
+    $.loadScript('https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js', function(){
+        console.log("script_loaded");
+        $.loadScript('https://quintlab.herokuapp.com/dev/nehru-story/assets/js/index.js', function(){
+            console.log("script_loaded_2");
+        });
+    });
 
     var aText = new Array(
         content_array[section_id].content[0],
@@ -208,6 +228,13 @@
         }
     }
     //typewriter();
+
+    function adjust_iframe_height(){
+        var actual_height = document.body.scrollHeight; 
+        console.log("height is",actual_height);
+        parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
+        //* allows this to post to any parent iframe regardless of domain
+    }
     </script>
 </body>
 
