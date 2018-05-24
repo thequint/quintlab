@@ -10,8 +10,8 @@
 
 .player {
     position: relative;
-    background-color: #ffffff;
-    background-image: url(../images/nehru-cover-img01.jpg);
+    background-color: #e9c300;
+    background-image: url(../images/nehru-cover-img01.png);
     background-size: 100%;
     width: 100%;
     height: 300px;
