@@ -36,8 +36,6 @@
     <div class="main-wrap">
         <section class="container">
             <div class="container--left">
-
-                
                 <div class="player">
                     <div class="like waves-effect waves-light">
                         <i class="icon-heart"></i>
@@ -73,8 +71,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <div class="container--right">
                 <div class="box-wrap">
@@ -98,13 +94,13 @@
         <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.ogg" type="audio/ogg">
         <source src="https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/audio/Tim%20Minchin%20%E2%80%94%20Rock%20n%20Roll%20Nerd.mp3" type="audio/mpeg">
     </audio>
-    
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
     <script src="assets/js/index.js"></script>
 
 
     <script type="text/javascript">
-    //$(".container--left").click(function() {
+    
     var type_flag=0;  
     $("#play-button").click(function() {
         $(".container--left").addClass("img-animate");
@@ -159,10 +155,10 @@
 
     section_id = getParameterByName('id');
 
-    console.log(content_array[section_id].heading);
+    // console.log(content_array[section_id].heading);
 
     // $("#story_img").html(content_array[section_id].img);
-    $("#story_headline").html(content_array[section_id].headline);
+    // $("#story_headline").html(content_array[section_id].headline);
     $("#story_content").html(content_array[section_id].content[0]+'<br/><br/>'+content_array[section_id].content[1]);
     //$("#story_audio").html(story_content[section_id].audio);
 
