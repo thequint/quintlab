@@ -7,7 +7,7 @@ body {
     line-height: 125%;
 	/*font-family: 'Oswald', sans-serif;*/
     font-family: 'Raleway', sans-serif;
-    background-color: #f4f4f4;
+    /*background-color: #f4f4f4;*/
 }
 
 p {
@@ -200,11 +200,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-wrap .container--right {
         width: 300px;
-        height: auto;
+        height: 300px;
         padding: 10px 0 10px 15px;
     }
     .box-wrap {
-        height: auto;
+        height: 280px;
     }
     .main-wrap .container--right.box-width {
         width: 100%;
@@ -229,11 +229,6 @@ h1, h2, h3, h4, h5, h6 {
         width: calc(100% - 210px);
         width: -webkit-calc(100% - 210px);
     }
-    .main-wrap .container--right {
-        /*padding: 10px 0*/
-    }
-    .main-wrap .container--right .box-content {
-        padding-right: 10px
-    }
+    
 }
 
