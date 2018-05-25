@@ -7,7 +7,7 @@ body {
     line-height: 125%;
 	/*font-family: 'Oswald', sans-serif;*/
     font-family: 'Raleway', sans-serif;
-    background-color: #bbdefb;
+    background-color: #f4f4f4;
 }
 
 p {
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (max-width: 799px) {
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
     .main-wrap {
         margin: 0 auto;
@@ -210,6 +210,12 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 }
+@media only screen and (max-width: 767px) {
+    .main-wrap .container--right {
+        background-color: #f4f4f4;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .main-wrap {
         margin: 0 auto;
@@ -222,6 +228,12 @@ h1, h2, h3, h4, h5, h6 {
     .control-row .seek-field {
         width: calc(100% - 210px);
         width: -webkit-calc(100% - 210px);
+    }
+    .main-wrap .container--right {
+        /*padding: 10px 0*/
+    }
+    .main-wrap .container--right .box-content {
+        padding-right: 10px
     }
 }
 
