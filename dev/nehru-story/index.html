@@ -44,12 +44,12 @@
                     <ul class="player-info info-one">
                         <li class="story_headline">The Objective Resolution</li>
                         <li class="sub_headline"></li>
-                        <li>5:34</li>
+                        <li class="audio_length">5:34</li>
                     </ul>
                     <ul class="player-info info-two">
                         <li class="story_headline">The Objective Resolution</li>
                         <li class="sub_headline"></li>
-                        <li><span id="duration"></span><i> / </i>2:34</li>
+                        <li><span id="duration"></span><i> / </i><span class="audio_length">5:34</span></li>
                     </ul>
                     <div id="play-button" class="unchecked">
                         <i class="icon icon-play"></i>
@@ -256,6 +256,8 @@
 
 
     console.log(Math.round(content_array[section_id].audioLength/60) +":"+ content_array[section_id].audioLength%60);
+
+    $(".audio_length").html(content_array[section_id].audioLength/60) +":"+ (content_array[section_id].audioLength%60);
 
 
     $("#story_audio").html('<audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop><source src="'+ content_array[section_id].audio +'" type="audio/mpeg"></audio>');
