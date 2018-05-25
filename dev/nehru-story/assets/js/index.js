@@ -22,9 +22,10 @@ $(document).ready(function() {
             }, 400);
             audio.play();
             audio.currentTime = 0;
-            
+
             $(".container--left").addClass("img-animate");
             $(".container--right").addClass("box-width");
+            $(".container--right").addClass("box-height");
             $(".container--right").addClass("add-content");
             if (type_flag == 0) {
                 typewriter();

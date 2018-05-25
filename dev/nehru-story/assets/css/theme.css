@@ -201,8 +201,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-wrap .container--right {
         width: 300px;
-        height: 300px;
+        /*height: 300px;*/
+        height: 0;
         padding: 10px 0 10px 15px;
+    }
+    .main-wrap .container--right.box-height {
+        height: 300px;
     }
     .box-wrap {
         height: 280px;
