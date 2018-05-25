@@ -207,6 +207,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-wrap .container--right.box-height {
         height: auto;
+        padding: 10px 0 10px 15px;
     }
     .box-wrap {
         height: 280px;
@@ -232,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 639px) {
     .main-wrap .container--right {
-        background-color: #f4f4f4;
+        /*background-color: #f4f4f4;*/
     }
 }
 
