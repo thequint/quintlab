@@ -22,7 +22,7 @@ $(document).ready(function() {
             }, 400);
             audio.play();
             audio.currentTime = 0;
-            
+
             $(".container--left").addClass("img-animate");
             $(".container--right").addClass("box-width");
             $(".container--right").addClass("add-content");
@@ -55,7 +55,6 @@ $(document).ready(function() {
             $(".container--right").removeClass("box-width");
             $(".container--right").removeClass("add-content");
         }
-        adjust_iframe_height();
     });
     $("#pause-button").click(function() {
         $(this).children(".icon")

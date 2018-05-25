@@ -32,7 +32,7 @@
 <![endif]-->
 </head>
 
-<body onload="adjust_iframe_height()">
+<body>
     <div class="main-wrap">
         <section class="container">
             <div class="container--left">
@@ -312,12 +312,6 @@
     }
     //typewriter();
 
-    function adjust_iframe_height(){
-        var actual_height = document.body.scrollHeight; 
-        console.log("height is",actual_height);
-        parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
-        //* allows this to post to any parent iframe regardless of domain
-    }
     </script>
 </body>
 
