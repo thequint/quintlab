@@ -16,11 +16,10 @@
 <link rel="stylesheet" href="assets/css/base.css" media="all">
 <link rel="stylesheet" href="assets/css/animate.css" media="all">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css" media="all">
-<link rel="stylesheet" href="assets/css/theme.css" media="all">
 
-<!-- <link rel="stylesheet" href="https://fea.assettype.com/thequint/assets/fonts-86f8c78cce.css"> -->
 <link rel='stylesheet prefetch' href='https://michael-zhigulin.github.io/mz-codepen-projects/Material%20Design%20UI%20Audio%20Player/font/font.css'>
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme.css" media="all">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:600,700" rel="stylesheet">
@@ -43,12 +42,12 @@
                     </div>
                     <div class="mask"></div>
                     <ul class="player-info info-one">
-                        <li class="story_headline">test</li>
+                        <li class="story_headline">The Objective Resolution</li>
                         <li class="sub_headline"></li>
                         <li>5:34</li>
                     </ul>
                     <ul class="player-info info-two">
-                        <li class="story_headline">test</li>
+                        <li class="story_headline">The Objective Resolution</li>
                         <li class="sub_headline"></li>
                         <li><span id="duration"></span><i> / </i>5:34</li>
                     </ul>
@@ -106,10 +105,24 @@
             $(".container--left").addClass("img-animate");
             $(".container--right").addClass("box-width");
             $(".container--right").addClass("add-content");
-            if (type_flag == 0) {
-                typewriter();
-                type_flag = 1;
+            
+
+            if ($(window).width() <= 799) {
+                // alert('Less than 799');
+                for (i = 0; i < content_array[section_id].content.length; i++) {
+                    $("#typedtext").append(content_array[section_id].content[i]+"<br/> <br/>");
+                }
+
+            }else {
+                // alert('More than 799');
+                if (type_flag == 0) {
+                    typewriter();
+                    type_flag = 1;
+                }
             }
+
+
+
         }else {
             $(".container--left").removeClass("img-animate");
             $(".container--right").removeClass("box-width");
@@ -256,6 +269,10 @@
         content_array[section_id].content[0],
         content_array[section_id].content[1]
     );*/
+
+    // for (i = 0; i < content_array[section_id].content.length; i++) {
+    //     aText.append(content_array[section_id].content[i]+"<br>")
+    // }
     console.log(content_array[section_id].content.length);
     for (i = 0; i < content_array[section_id].content.length; i++) {
         aText.push(content_array[section_id].content[i])

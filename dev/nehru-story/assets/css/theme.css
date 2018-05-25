@@ -200,11 +200,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-wrap .container--right {
         width: 300px;
-        height: 300px;
+        height: auto;
         padding: 10px 0 10px 15px;
     }
     .box-wrap {
-        height: 280px;
+        height: auto;
     }
     .main-wrap .container--right.box-width {
         width: 100%;
@@ -218,6 +218,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-wrap .container--left {
         width: 100%;
+    }
+    .control-row .seek-field {
+        width: calc(100% - 210px);
+        width: -webkit-calc(100% - 210px);
     }
 }
 
