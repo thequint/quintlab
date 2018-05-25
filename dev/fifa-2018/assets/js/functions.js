@@ -12,6 +12,14 @@ $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], fu
 	elements.forEach(function (element) {
 		$('.stories ul').append(element);
 	});
+	var time= 500;
+			
+			$('.stories ul li').each(function(index) {
+			var this_p = $(this) 	
+			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+      		time += 500;
+				
+			});
 });
 
 // Data Change functions
@@ -43,7 +51,17 @@ $('.data-groups li').click(function () {
 				return '<li><a target="_blank" href="http://www.thequint.com/' + story.slug + '">' + story.headline + '</a></li>'
 			});
 			elements.forEach(function (element) {
+				
 				$('.stories ul').append(element);
+			});
+			
+			var time= 500;
+			
+			$('.stories ul li').each(function(index) {
+			var this_p = $(this) 	
+			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+      		time += 500;
+				
 			});
 			story_flag = 0;
 		});
@@ -75,7 +93,7 @@ $('.matches').slick({
 var i=0;
 function repeatOften() {
   // Do whatever
-	i=i+0.01;
+	i=i+0.001;
 	$(".header-bg").css("transform","translate3d("+(-400+400*Math.cos(i))+"px,"+(-400+400*Math.sin(i))+"px,0)");
   requestAnimationFrame(repeatOften);
 }

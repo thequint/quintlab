@@ -50,6 +50,15 @@ function update_group(x) {
 		$(".point-table tbody").append('<tr><td>' + group_array[i].Country + '</td><td>' + group_array[i].Wins + '</td><td>' + group_array[i].Draw + '</td><td>' + group_array[i].Points + '</td></tr>');
 	}
 	
+			var time= 500;
+			
+			$('.point-table tbody tr').each(function(index) {
+			var this_p = $(this) 	
+			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+      		time += 500;
+				
+			});
+	
 	
 	
 	

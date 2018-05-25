@@ -51,12 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-wrapper .header-bg, .point-table-wrapper h3 .header-bg {
 	z-index: 1;
+	
 	background-image: url(../images/patern-bg.svg);
-	background-size: cover;
-	background-position: center;
+
 	opacity: 0.2;
-	width: 800%;
-	height: 800%;
+	width: 600%;
+	height: 1000px;
 	
 }
 
@@ -331,6 +331,35 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 16px;
 	margin-top: 12px;
 	padding-left: 18px;
+	opacity: 0;
+	transform:translate3d(0,5px,0);
+	    -webkit-transition: all ease-out 0.5s;
+    -moz-transition: all all ease-out 0.5s;
+    -o-transition: all all ease-out 0.5s;
+    -ms-transition: all ease-out 0.5s;
+    transition: all ease-out 0.5s;
+
+}
+.point-table tbody tr td
+{
+	opacity: 0;
+	transform:translate3d(0,-5px,0);
+	    -webkit-transition: all ease-out 0.5s;
+    -moz-transition: all all ease-out 0.5s;
+    -o-transition: all all ease-out 0.5s;
+    -ms-transition: all ease-out 0.5s;
+    transition: all ease-out 0.5s;
+}
+.point-table tbody tr.position_visible td
+{
+	transform:translate3d(0,0px,0);
+	opacity: 1;
+}
+
+.stories ul li.position_visible
+{
+	transform:translate3d(0,0px,0);
+	opacity: 1;
 }
 .stories ul li:first-child {
 	margin-top: 0;
