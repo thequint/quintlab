@@ -15,8 +15,8 @@ $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], fu
 	var time= 500;
 			
 			$('.stories ul li').each(function(index) {
-			var this_p = $(this) 	
-			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+			var this_p = $(this) ;	
+			setTimeout( function(){ this_p.addClass('position_visible');  }, time);
       		time += 500;
 				
 			});
@@ -58,8 +58,9 @@ $('.data-groups li').click(function () {
 			var time= 500;
 			
 			$('.stories ul li').each(function(index) {
-			var this_p = $(this) 	
-			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+				
+			var this_p = $(this) ;	
+			setTimeout( function(){ this_p.addClass('position_visible'); }, time);
       		time += 500;
 				
 			});
@@ -74,7 +75,7 @@ $('.data-groups li').click(function () {
 $('.matches').slick({
 	slidesToShow: 2,
 	slidesToScroll: 1,
-	autoplay: false,
+	autoplay: true,
 	arrows: false,
 	autoplaySpeed: 2500,
   	responsive: [
@@ -83,7 +84,7 @@ $('.matches').slick({
       settings: {
         slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: false,
+		autoplay: true,
 		arrows: true
       }
     }

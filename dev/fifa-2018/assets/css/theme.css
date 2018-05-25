@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 	background: radial-gradient(ellipse at center, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
+    pointer-events: none;
 }
 .logo-tq {
 	display: block;

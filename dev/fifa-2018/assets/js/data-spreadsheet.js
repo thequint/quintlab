@@ -53,8 +53,8 @@ function update_group(x) {
 			var time= 500;
 			
 			$('.point-table tbody tr').each(function(index) {
-			var this_p = $(this) 	
-			setTimeout( function(){ this_p.addClass('position_visible'); console.log("num"); }, time)
+			var this_p = $(this);	
+			setTimeout( function(){ this_p.addClass('position_visible'); }, time);
       		time += 500;
 				
 			});
