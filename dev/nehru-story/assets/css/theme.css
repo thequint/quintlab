@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 }*/
 
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 799px) {
     body {
         font-size: 17px;
     }
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 639px) {
     .main-wrap .container--right {
         background-color: #f4f4f4;
     }
