@@ -97,9 +97,10 @@
  <!--   <script src='https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js'></script>
     <script src="assets/js/index.js"></script>-->
     <script type="text/javascript">
+    
     var type_flag = 0;
-    $("#play-button").click(function() {
-        
+
+    function playBTNFunction(){
         if($(this).hasClass("unchecked")){
             //alert("yes");
             $(".container--left").addClass("img-animate");
@@ -109,25 +110,13 @@
                 typewriter();
                 type_flag = 1;
             }
-            // if ($(window).width() <= 799) {
-            //     for (i = 0; i < content_array[section_id].content.length; i++) {
-            //         $("#typedtext").append(content_array[section_id].content[i]+"<br/> <br/>");
-            //     }
-
-            // }else {
-            //     if (type_flag == 0) {
-            //         typewriter();
-            //         type_flag = 1;
-            //     }
-            // }
         }else {
             $(".container--left").removeClass("img-animate");
             $(".container--right").removeClass("box-width");
             $(".container--right").removeClass("add-content");
         }
         adjust_iframe_height();
-        
-    });
+    }
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -227,7 +216,7 @@
             'headline': 'Being a Part of the Commonwealth',
             'subHeadline': 'Jawaharlal Nehru',
             'content': ['We are being faced by many economic difficulties. They are our domestic concern, no doubt, but obviously the world can help or hinder any policy that we might adopt. Now, does this proposal which is contained in this Declaration help our speedy progress economically and otherwise or not? That is another test. I am prepared to admit that even without external help, we will go ahead. But obviously it will be a far more difficult task and it will take a much longer time. It is not an easy matter to do that.”','“Some people talk about encouraging this particular group or that, this bloc or that. We are all, I am afraid, in the habit of considering ourselves or our friends as angel and others the reverse of angels.','“I am asked often, how can you join a Commonwealth in which there is racial discrimination, in which there are other things happening to which we object. That, I think, is a fair question and it is a matter which necessarily must cause us some trouble in our thinking. Nevertheless it is a question which does not really arise. That is to say, when we have entered into an alliance with a nation or a group of nations, it does not mean that we accept their other policies, etc.; it does not mean that we commit ourselves in any way to something that they may do. In fact, this House knows that we are carrying on at the present moment a struggle, or our countrymen are carrying on a struggle in regard to racial discrimination in various parts of the world.”'],
-            'audio': 'assets/media/Nehru-Being-a-Part-of-the-Commonwealth-1.wav',
+            'audio': 'assets/media/Nehru-Being-a-Part-of-the-Commonwealth-1.mp3',
             'audioLength': '96'
         },
         {
@@ -236,7 +225,7 @@
             'headline': 'Being a Part of the Commonwealth',
             'subHeadline': 'Jawaharlal Nehru',
             'content': ['“We shall go our way and they shall go their way. But our ways, unless something happens, will be friendly ways; at any rate, attempts will be made to understand each other, to be friends with each other and to co-operate with each other.”'],
-            'audio': 'assets/media/Nehru-Being-a-Part-of-the-Commonwealth-2.wav',
+            'audio': 'assets/media/Nehru-Being-a-Part-of-the-Commonwealth-2.mp3',
             'audioLength': '15'
         }
     ]
@@ -257,10 +246,10 @@
 
     console.log(Math.round(content_array[section_id].audioLength/60) +":"+ content_array[section_id].audioLength%60);
 
-    $(".audio_length").html(content_array[section_id].audioLength/60) +":"+ (content_array[section_id].audioLength%60);
+    $(".audio_length").html(Math.round(content_array[section_id].audioLength/60) +":"+ content_array[section_id].audioLength%60);
 
 
-    $("#story_audio").html('<audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto" loop><source src="'+ content_array[section_id].audio +'" type="audio/mpeg"></audio>');
+    $("#story_audio").html('<audio id="audio-player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()" preload="auto"><source src="'+ content_array[section_id].audio +'" type="audio/mpeg"></audio>');
 
     jQuery.loadScript = function (url, callback) {
     jQuery.ajax({
