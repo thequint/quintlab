@@ -312,13 +312,17 @@
         }
     }
     //typewriter();
-    adjust_iframe_height();
+    
     function adjust_iframe_height(){
         var actual_height = document.body.scrollHeight; 
         console.log("height is",actual_height);
         parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
         //* allows this to post to any parent iframe regardless of domain
     }
+    $("#play-button").click(function() {
+        adjust_iframe_height();
+    });
+    adjust_iframe_height();
     </script>
 </body>
 
