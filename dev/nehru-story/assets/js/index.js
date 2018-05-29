@@ -24,9 +24,9 @@ $(document).ready(function() {
             audio.currentTime = 0;
 
             $(".container--left").addClass("img-animate");
-            $(".container--right").addClass("box-width");
-            $(".container--right").addClass("box-height");
-            $(".container--right").addClass("add-content");
+            $(".container--right").addClass("box-width box-height add-content");
+            // $(".container--right").addClass("box-height");
+            // $(".container--right").addClass("add-content");
             if (type_flag == 0) {
                 typewriter();
                 type_flag = 1;
@@ -52,9 +52,8 @@ $(document).ready(function() {
             audio.pause();
             audio.currentTime = 0;
 
-             $(".container--left").removeClass("img-animate");
-            $(".container--right").removeClass("box-width");
-            $(".container--right").removeClass("add-content");
+            $(".container--left").removeClass("img-animate");
+            $(".container--right").removeClass("box-width box-height add-content");
         }
         adjust_iframe_height();
     });
