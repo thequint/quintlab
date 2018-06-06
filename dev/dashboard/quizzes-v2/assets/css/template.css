@@ -1,6 +1,8 @@
 
 /*  For FIT */
 /* #00CBC4 cyan */
+
+/* 43dbc0 FIT*/
 /* #DA3868 pink */
 /* #4D4845 Grey */
 /* #FFFFFF White */
@@ -9,13 +11,13 @@
 
 }
 .quiz-template-02.fit-quiz .question-box {
-    border-bottom: 3px #00CBC4 dotted;
+    border-bottom: 3px #43dbc0 dotted;
 }
 .quiz-template-02.fit-quiz .question-box:last-child {
     border-bottom: 0 none;
 }
 .quiz-template-02.fit-quiz .quiz-header {
-    background-color: #00CBC4;
+    background-color: #43dbc0;
 }
 .quiz-template-02.fit-quiz .quiz-headline span {
 	padding: 12px 15px 8px;
@@ -27,9 +29,9 @@
 }
 .quiz-template-02.fit-quiz {
     border-top: 0;
-    border-left: 5px #00CBC4 solid;
-    border-right: 5px #00CBC4 solid;
-    border-bottom: 50px #00CBC4 solid;
+    border-left: 5px #43dbc0 solid;
+    border-right: 5px #43dbc0 solid;
+    border-bottom: 50px #43dbc0 solid;
     box-shadow: 10px 0px 10px -5px rgba(0, 0, 0, 0.3), -5px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .quiz-template-02.fit-quiz .question-box .question-headline {
@@ -38,8 +40,8 @@
 .quiz-template-02.fit-quiz .quiz-headline {
     display: none;
 }
-.quiz-template-02.fit-quiz .question-box .question-headline .bullet {
-	background-color: #00CBC4
+.quiz-template-02.fit-quiz .question-box .bullet {
+	background-color: #43dbc0
 }
 
 .quiz-template-02.fit-quiz .question-box .question-options .demo-list li.right.active:after,
@@ -65,7 +67,7 @@
 }
 
 .quiz-template-02.fit-quiz .question-box .question-options .demo-list li:hover {
-    background-color: #00CBC4;
+    background-color: #43dbc0;
 }
 .quiz-template-02.fit-quiz .question-box .question-options .demo-list.answered li:hover {
     background-color: #ebebeb;
@@ -84,7 +86,7 @@
 
 
 /*  For Bollywood */
-/* #00CBC4 cyan */
+/* #43dbc0 cyan */
 /* #DA3868 pink */
 /* #4D4845 Grey */
 /* #FFFFFF White */
@@ -122,7 +124,7 @@
 .quiz-template-02.bollywood-quiz .question-box .question-headline {
 	color: #9c0416;
 }
-.quiz-template-02.bollywood-quiz .question-box .question-headline .bullet {
+.quiz-template-02.bollywood-quiz .question-box .bullet {
 	background-color: #9c0416
 }
 

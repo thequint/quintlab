@@ -364,17 +364,11 @@ body {
         //     $(this).toggleClass('hli');
         // });
 
-        // $(".quiz-headline").html();
         $('.quiz-headline').html('<span>' + $('.quizHeadlineInput').val() + '</span>');
         $('.quiz-template-02').attr('class', 'quiz-template-02');
-
         $('.quiz-template-02').addClass($('.select-tmp-field select').val());
-        
+        $('.quiz-template-02.fit-quiz .quiz-header img').attr('src','quizzes-v2/assets/images/fit-banner.jpg');
         $('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src','quizzes-v2/assets/images/bollywood-banner.jpg');
-
-        // if($('.tag-line-1').val() != ""){
-        //  $('.preview').append('<div>' + $('.tag-line-1').val() + '</div>');
-        // }
         return;
     }
 
