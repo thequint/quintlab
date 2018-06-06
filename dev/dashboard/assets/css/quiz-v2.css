@@ -24,7 +24,7 @@ button.close {
 .optionRadioLi {
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 5px;
 }
 .card-body textarea,
 .card-body input {
@@ -37,10 +37,17 @@ button.close {
     padding: 0;
 }
 .mediaPlaceholderList li {
-    width: 33.333%;
+    width: 100%;
     float: left;
-    padding: 0px 10px 20px 0px;
+    margin-bottom: 10px;
 }
+.mediaPlaceholderList li img {
+    max-width: 100%;
+}
+.mediaPlaceholderList li iframe {
+    /*width: 100%;*/
+}
+
 
 .white-box{
 	background-color: #fff;
@@ -86,4 +93,8 @@ button.close {
 }
 .copy-val:hover {
     background-color: #F7A500;
+}
+.container.media-container {
+    padding-right: 0;
+    padding-left: 0;
 }

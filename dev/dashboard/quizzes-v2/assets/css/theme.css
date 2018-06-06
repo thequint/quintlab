@@ -19,6 +19,23 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+/* Fonts for FIT */
+@font-face {
+    font-family: 'qanelas_soft_demoultralight';
+    src: url('../fonts/fit/qanelassoftdemo-ultralight-webfont.woff2') format('woff2'),
+         url('../fonts/fit/qanelassoftdemo-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'qanelas_soft_demoextrabold';
+    src: url('../fonts/fit/qanelassoftdemo-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/fit/qanelassoftdemo-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -52,12 +69,24 @@ button:focus {
     display: block;
 }*/
 
+.quiz-wrap {
+    overflow: hidden;
+    max-width: 650px;
+    padding: 0 15px;
+    margin: 0 auto;
+    /*background-color: #ccc;*/
+    min-height: 400px;
+    background-image: url(../images/AjaxLoader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .quiz-template-02 {
+    display: none;
     font-size: 19px;
     line-height: 150%;
     overflow: hidden;
-    max-width: 650px;
-    margin: 0 auto;
+    background-color: #fff;
     font-family: 'cooper_hewittbook';
     border-top: 5px #F7A500 solid;
     border-left: 5px #F7A500 solid;
@@ -68,14 +97,17 @@ button:focus {
 .quiz-template-02 .quiz-header {
     position: relative;
     width: 100%;
-    height: 90px;
+    /*height: 90px;*/
+    background-color: #F7A500;
 }
 .quiz-template-02 .quiz-header img {
     width: 100%;
-    height: 100%
+    height: 100%;
+    opacity: .4;
+    display: block;
 }
 .quiz-template-02 .quiz-headline {
-    position: absolute;
+    /*position: absolute;
     top: 33px;
     left: 0;
     right: 0;
@@ -85,7 +117,24 @@ button:focus {
     font-size: 24px;
     letter-spacing: 2px;
     line-height: 24px;
+    text-transform: uppercase;*/
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -ms-transform: translateY (-50%);
+    -webkit-transform: translateY (-50%);
+     -moz-transform: translateY (-50%);
+     -o-transform: translateY (-50%);
+     transform: translateY(-50%);
+     text-align: center;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 24px;
     text-transform: uppercase;
+
 }
 .quiz-template-02 .quiz-headline span {
     padding: 10px 15px;
@@ -95,7 +144,7 @@ button:focus {
     font-family: 'cooper_hewittbold';
 }
 .quiz-template-02 .questions {
-    padding: 0 30px;
+    padding: 30px 30px 0;
 }
 .quiz-template-02 .question-box {
 	padding-bottom: 50px;
@@ -201,26 +250,28 @@ button:focus {
     cursor: pointer;
     border-radius: 5px;
     color: #656565;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
 }
 
 .quiz-template-02 .question-box .question-options .demo-list li.bg-success {
     background-color: #95c198!important;
 }
-.quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
+/*.quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
     color: #95c198;
-}
-.quiz-template-02 .question-box .question-options .demo-list li.right.active {
+}*/
+.quiz-template-02 .question-box .question-options .demo-list li.right.active,
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right {
     position: relative;
 }
-.quiz-template-02 .question-box .question-options .demo-list li.right.active:after {
+.quiz-template-02 .question-box .question-options .demo-list li.right.active:after,
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right:after {
     position: absolute;
     right: 15px;
     content: "\f00c";
     font-family: 'FontAwesome';
-    top: 22%;
+    top: 23%;
     font-size: 24px;
 }
 .quiz-template-02 .question-box .question-options .demo-list li.wrong.active {
@@ -231,7 +282,7 @@ button:focus {
     right: 15px;
     content: "\f00d";
     font-family: 'FontAwesome';
-    top: 22%;
+    top: 23%;
     font-size: 24px;
 }
 .quiz-template-02 .question-box .question-options .demo-list li:hover {
@@ -245,7 +296,8 @@ button:focus {
 .quiz-template-02 .question-box .question-options .demo-list.answered li {
     cursor: default;
 }
-.quiz-template-02 .question-box .question-options .demo-list li.right.active {
+.quiz-template-02 .question-box .question-options .demo-list li.right.active,
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right {
     color: #fff;
     background-color: #95c198;
 }
@@ -412,13 +464,25 @@ button:focus {
     font-size: 13px;
 }
 
+
+
+.question img{
+    width: 100%;
+    margin: 5px 0px 20px 0px;
+}
+
+.options-media li{
+    width: 33.333%;
+    margin: 10px;
+}
+
 @media only screen and (max-width: 639px) {
     .quiz-template-02 {
         font-size: 19px;
         line-height: 150%;
     }
     .quiz-template-02 .quiz-headline span {
-        font-size: 24px;
+        font-size: 20px;
     }
     .quiz-template-02 .question-box .question-headline {
         padding: 0 10px;
@@ -427,7 +491,7 @@ button:focus {
         font-size: 19px;
     }
     .quiz-template-02 .questions {
-        padding: 0 20px;
+        padding: 20px 20px 0;
     }
     .quiz-template-02 .question-box .question-headline .bullet {
         left: -55px;
@@ -461,15 +525,20 @@ button:focus {
         border-bottom: 30px #F7A500 solid;
     }
     .quiz-template-02 .quiz-header {
-        height: 70px;
+        /*height: 70px;*/
     }
     .quiz-template-02 .quiz-headline {
-        top: 20px;
+        /*top: 20px;*/
     }
     .quiz-template-02 .quiz-headline span {
-        font-size: 18px;
-        padding: 8px 12px;
+        font-size: 16px;
+        padding: 8px 10px 7px;
         letter-spacing: 1px;
     }
-
+}
+@media only screen and (max-width: 375px) {
+    .quiz-template-02 .quiz-headline span {
+        font-size: 14px;
+        padding: 6px 8px 5px;
+    }
 }

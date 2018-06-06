@@ -35,6 +35,9 @@ function showInfo(data) {
 
 	display_data();
 	// console.log(data_array[0].qT);
+
+	// alert("yes");
+	$(".quiz-template-02").show();
 }
 
 function display_data() {
@@ -43,6 +46,12 @@ function display_data() {
 	var str = '';
 
 	$('.quiz-headline').html('<span>' + data_array[data_array.length-1].qH + '</span>');
+
+	$('.quiz-template-02').addClass(data_array[data_array.length-2].selectTemp);
+
+	$('.quiz-template-02.fit-quiz .quiz-header img').attr('src','assets/images/fit-banner.jpg');
+
+	$('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src','assets/images/bollywood-banner.jpg');
 
 	for (var index = 0; index < data_array.length - 1; index++) {
 
@@ -99,7 +108,7 @@ function display_data() {
 
 
 		// console.log(media);
-		$('.questions').append('<div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].qT + '</h1></div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mC + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].aT + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].aC + '</div></div></div></div>');
+		$('.questions').append('<div class="question-box"><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mC + '</div><div class="question-headline"><div class="bullet"><span>' + (index + 1) + '</span></div> <h1 class="headline-text">' + data_array[index].qT + '</h1></div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul><div class="answered-text" style="display:none"><div class="answered-description">' + data_array[index].aT + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + data_array[index].aC + '</div></div></div></div>');
 		str = '';
 	}
 

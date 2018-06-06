@@ -4,25 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Story Quiz</title>
+    <title>Quiz Widget | Quint Lab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Fav and Touch Icons -->
     <link rel="icon" href="assets/images/favicon/favicon.ico">
+
     <!-- Font Awesome for Icon -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Custom -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+    <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/check-radio.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <!-- <link href="assets/css/styles.css" rel="stylesheet"> -->
     <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/index.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'> -->
+    <link href="assets/css/template.css" rel="stylesheet">
+
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,58 +30,26 @@
 </head>
 
 <body onload="adjust_iframe_height()">
+
 <!-- Quiz Start Here -->
-<div class="quiz-template-02">
+<div class="quiz-wrap">
+    <div class="quiz-template-02">
 
-    <header class="quiz-header">
-        <img src="assets/images/quiz-header.jpg">
-        <h1 class="quiz-headline"></h1>
-    </header>
-    
-    <div class="questions"> </div>
+        <header class="quiz-header">
+            <img src="assets/images/quiz-line-header.png">
+            <!-- <img src="assets/images/bollywood-banner.jpg"> -->
+            <h1 class="quiz-headline"></h1>
+        </header>
+        
+        <div class="questions"> </div>
 
-    <div class="score-card" style="display:none">
-        <h2 class="score-card--headline"><span class="score_length">3</span> out of <span class="total_length">11</span></h2>
-        <p class="score-message"></p>
-    </div>
-
-    <!-- Button -->
-    <!-- <div class="result-btn">
-        <button type="button" id="btn" class="result-submit">Check Score <i class="fa fa-angle-right fa-lg"></i></button>
-    </div> -->
-    
-
-    <!-- Total Score -->
-    <div style="display:none">
-        <label>Your Total Score: </label> <span id="lblTotalMarks">0</span>
-    </div>
-
-    <!-- ANSWER -->
-    <div class="lessGreater large-size">
-        <div class="white-box minimum" style="display:none">
-            <span class="result-content">
-        <p>You've scored <span class="total-score highlight"></span> out of <span class="highlight"></span>.
-            <br>
-            <span class="tag-line-1"></span></p>
-            </span>
-            <span class="result-img"><img alt="" src="assets/images/quiz/fitness-test-1.gif"></span>
-        </div>
-        <div class="white-box middle" style="display:none">
-            <span class="result-content">
-        <p>You've scored <span class="total-score highlight"></span> out of <span class="highlight"></span>.
-            <br><span class="tag-line-2"></span></p>
-            </span>
-            <span class="result-img"><img alt="" src="assets/images/quiz/fitness-test-2.gif"></span>
-        </div>
-        <div class="white-box maximum" style="display:none">
-            <span class="result-content">
-        <p>You've scored <span class="total-score highlight"></span> out of <span class="highlight"></span>.
-            <br><span class="tag-line-3"></span></p>
-            </span>
-            <span class="result-img"><img alt="" src="assets/images/quiz/fitness-test-3.gif"></span>
+        <div class="score-card" style="display:none">
+            <h2 class="score-card--headline"><span class="score_length">3</span> out of <span class="total_length">11</span></h2>
+            <p class="score-message"></p>
         </div>
     </div>
 </div>
+
 <!-- JS Libraries -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/icheck.min.js"></script>

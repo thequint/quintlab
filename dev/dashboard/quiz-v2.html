@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
 <link rel="stylesheet" type="text/css" href="assets/css/quiz-v2.css">
 <link href="quizzes-v2/assets/css/theme.css" rel="stylesheet">
+<link href="quizzes-v2/assets/css/template.css" rel="stylesheet">
 <style type="text/css">
 body {
     font-family: 'Oswald', sans-serif;
@@ -60,6 +61,23 @@ body {
                 <i class="fas fa-sync-alt ml-1 refresh-icon"></i>
             </div>
         </div>
+
+        
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="select-template clearfix">
+                    <label class="select-tmp-label">Select Template:</label>
+                    <div class="select-tmp-field">
+                        <select class="form-control">
+                            <option value="news-quiz">News Desk</option>
+                            <option value="fit-quiz">FIT</option>
+                            <option value="bollywood-quiz">Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row widget-details">
             <div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
                 <form>
@@ -217,7 +235,7 @@ body {
                 <div class="embedded-preview"></div>
                 <div class="quiz-template-02" style="display: none">
                     <header class="quiz-header">
-                        <img src="quizzes-v2/assets/images/quiz-header.jpg">
+                        <img src="quizzes-v2/assets/images/quiz-line-header.png">
                         <h1 class="quiz-headline"></h1>
                     </header>
                     <div class="preview"></div>
@@ -274,6 +292,7 @@ body {
 
     function buildPreview() {
         $('.preview').html("");
+
         var str = '';
         for (var i = 0; i < quiz_data.length; i++) {
             // console.log(i);
@@ -309,7 +328,7 @@ body {
                 ans_media = ans_media + '<div class="question-media--audio">' + quiz_data[i]['aAU'] + '</div>';
             }
 
-            $('.preview').append('<div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div><div class="question-media"></div>' + media + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + quiz_data[i]['aC'] + '</div>  </div></div></div></div>');
+            $('.preview').append('<div class="questions"><div class="question-box"><div class="question-media"></div>' + media + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + quiz_data[i]['aC'] + '</div>  </div></div></div></div>');
             str = '';
 
             // $('.preview').append('<div class="quiz-template-02"><div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div><div class="question-media">' + (quiz_data[i]['qIU'] == null ? (quiz_data[i]['qVU'] == null ? (quiz_data[i]['qAU'] == null ? '' : quiz_data[i]['qAU'] ? '' : quiz_data[i]['mC'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['qVU '] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['qIU'] + '"></div>') + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="hyperlink-text">' + quiz_data[i]['hyperlinkText'] + '</div><div class="hyperlink-link">' + quiz_data[i]['hyperlinkLink'] + '</div> </div></div></div></div></div>');
@@ -346,8 +365,12 @@ body {
         // });
 
         // $(".quiz-headline").html();
-
         $('.quiz-headline').html('<span>' + $('.quizHeadlineInput').val() + '</span>');
+        $('.quiz-template-02').attr('class', 'quiz-template-02');
+
+        $('.quiz-template-02').addClass($('.select-tmp-field select').val());
+        
+        $('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src','quizzes-v2/assets/images/bollywood-banner.jpg');
 
         // if($('.tag-line-1').val() != ""){
         //  $('.preview').append('<div>' + $('.tag-line-1').val() + '</div>');
@@ -484,6 +507,8 @@ body {
             // optionVideoUrl   = oVU
             // isCorrect        = isC
 
+            quiz_data[i]['selectTemp'] = $('.select-tmp-field select').val();
+
             quiz_data[i]['qT'] = $(this).find(".question-text").val().toString();
 
             if ($(this).find(".imageInput").val() != "")
@@ -501,6 +526,8 @@ body {
             quiz_data[i]['aVU'] = $(this).find(".answeredVideoInput").val();
             quiz_data[i]['aAU'] = $(this).find(".answeredAudioInput").val();
             quiz_data[i]['aC'] = $(this).find(".answeredCaptionInput").val();
+
+
 
             //quiz_data[i]['hyperlinkText'] = $(this).find(".hyperlink-text").val();
             //quiz_data[i]['hyperlinkLink'] = $(this).find(".hyperlink-link").val();
