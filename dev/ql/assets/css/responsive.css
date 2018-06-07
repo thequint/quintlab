@@ -7,107 +7,78 @@
 }
 
 @media (max-width: 860px) {
-	.container{
-		width: 90%;
-	}
-	.list-items {
+.container {
+	width: 90%;
+}
+.list-items {
 	margin: 0 -15px;
 }
-	.list-items li {
-	
+.list-items li {
 	margin-bottom: 30px;
 }
-	
-	.list-items li figure {
+.list-items li figure {
 	margin: 0px 15px;
 }
 .body-wrapper {
 	padding: 40px 0px 0px 0px;
-}	
-	
 }
+}
+
 @media (max-width: 767px) {
-	
-	.fixed-wrap{
-		display: none;
-	}
-	
-	
-	.top-wrapper {
+.fixed-wrap {
+	display: none;
+}
+.top-wrapper {
 	margin: 0 20px;
 	padding: 15px 0px;
-	
 }
-	
-	.caption {
+.caption {
 	padding-left: 0%;
 	max-width: 590px;
 }
-	
-	
-	.body-wrapper{
-		padding: 30px 0 0 0;
-	}
-	
-		.container{
-		width: auto;
-			margin: 0px 20px;
-	}
-	
-	.list-items li {
+.body-wrapper {
+	padding: 30px 0 0 0;
+}
+.container {
+	width: auto;
+	margin: 0px 20px;
+}
+.list-items li {
 	float: none;
 	width: auto;
 	margin-bottom: 40px;
 }
-	
-		.list-items {
+.list-items {
 	margin: 0px;
 }
-	
-		.list-items li figure {
+.list-items li figure {
 	margin: 0px;
 }
-	
-	.captions-wrapper {
+.captions-wrapper {
 	margin: 0 20px;
+}
+}
 
-}
-	
-}
 @media (max-width: 360px) {
-	
-	.logo-tql {
+.logo-tql {
 	width: 200px;
 	display: block;
 }
-	
-	.caption h2 {
+.caption h2 {
 	color: #fff;
 	font-size: 16px;
-	margin-top: 10px;	
-
+	margin-top: 10px;
 }
-	
-	.caption h2 br{
-		display: none;
-	}
-	
-	
+.caption h2 br {
+	display: none;
+}
 .caption p {
-
 	font-size: 15px;
 }
-	
-	.list-items li p{
-		font-size: 16px;
-	}
-	
-	.list-items li {
+.list-items li p {
+	font-size: 16px;
+}
+.list-items li {
 	margin-bottom: 30px;
 }
 }
-
-
-
-
-
