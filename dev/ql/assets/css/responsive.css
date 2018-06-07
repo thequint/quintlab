@@ -1,0 +1,29 @@
+@charset "utf-8";
+.container {
+	width: 80%;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.container{
+		width: 90%;
+	}
+	.list-items {
+	margin: 0 -15px;
+}
+	.list-items li {
+	
+	margin-bottom: 30px;
+}
+	
+	.list-items li figure {
+	margin: 0px 15px;
+}
+.body-wrapper {
+	padding: 40px 0px 0px 0px;
+}	
+	
+}
+

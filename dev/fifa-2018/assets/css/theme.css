@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	padding: 20px 0px 15px 0;
 	height: 175px;
-	overflow:hidden;
+	overflow: hidden;
 }
 .header-wrapper .header-bg, .header-wrapper::before, .matches:before, .point-table-wrapper h3 .header-bg {
 	width: 100%;
@@ -51,17 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-wrapper .header-bg, .point-table-wrapper h3 .header-bg {
 	z-index: 1;
-	
 	background-image: url(../images/patern-bg.svg);
-
 	opacity: 0.2;
 	width: 600%;
 	height: 1000px;
-	
 }
-
-
-
 .header-wrapper::before, .matches::before {
 	z-index: 2;
 	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
@@ -69,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
 	background: radial-gradient(ellipse at center, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.4) 90%);
-    pointer-events: none;
+	pointer-events: none;
 }
 .logo-tq {
 	display: block;
@@ -333,33 +327,28 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 12px;
 	padding-left: 18px;
 	opacity: 0;
-	transform:translate3d(0,5px,0);
-	    -webkit-transition: all ease-out 0.5s;
-    -moz-transition: all all ease-out 0.5s;
-    -o-transition: all all ease-out 0.5s;
-    -ms-transition: all ease-out 0.5s;
-    transition: all ease-out 0.5s;
-
+	transform: translate3d(0, 5px, 0);
+	-webkit-transition: all ease-out 0.5s;
+	-moz-transition: all all ease-out 0.5s;
+	-o-transition: all all ease-out 0.5s;
+	-ms-transition: all ease-out 0.5s;
+	transition: all ease-out 0.5s;
 }
-.point-table tbody tr td
-{
+.point-table tbody tr td {
 	opacity: 0;
-	transform:translate3d(0,-5px,0);
-	    -webkit-transition: all ease-out 0.5s;
-    -moz-transition: all all ease-out 0.5s;
-    -o-transition: all all ease-out 0.5s;
-    -ms-transition: all ease-out 0.5s;
-    transition: all ease-out 0.5s;
+	transform: translate3d(0, -5px, 0);
+	-webkit-transition: all ease-out 0.5s;
+	-moz-transition: all all ease-out 0.5s;
+	-o-transition: all all ease-out 0.5s;
+	-ms-transition: all ease-out 0.5s;
+	transition: all ease-out 0.5s;
 }
-.point-table tbody tr.position_visible td
-{
-	transform:translate3d(0,0px,0);
+.point-table tbody tr.position_visible td {
+	transform: translate3d(0, 0px, 0);
 	opacity: 1;
 }
-
-.stories ul li.position_visible
-{
-	transform:translate3d(0,0px,0);
+.stories ul li.position_visible {
+	transform: translate3d(0, 0px, 0);
 	opacity: 1;
 }
 .stories ul li:first-child {
@@ -377,42 +366,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 .stories ul li a {
 	display: inline-block;
-/*	border-bottom: 1px solid rgba(0,0,0,0);*/
 }
 .stories ul li a:hover {
 	color: #b0060f;
-/*	border-bottom: 1px solid #b0060f;*/
 }
-
-
-
-
-
-
-/*Animation*/
-
 
 @-webkit-keyframes animatedBackground {
  0% {
 background-position: 0vw 0vh;
 }
-	25%
-	{
-		background-position: 50vw 50vh;
-	}
-	50%
-	{
-		background-position: 100vw 0vh;
-	}
-	75%
-	{
-		background-position: 50vw -50vh;
-	}
+ 25% {
+ background-position: 50vw 50vh;
+}
+ 50% {
+ background-position: 100vw 0vh;
+}
+ 75% {
+ background-position: 50vw -50vh;
+}
  100% {
 background-position: 0vw 0vh;
 }
 }
-
 .header-wrapper::after {
 	animation: animatedBackground 10s linear infinite;
 	-moz-animation: animatedBackground 10s linear infinite;
@@ -420,40 +395,3 @@ background-position: 0vw 0vh;
 	-ms-animation: animatedBackground 10s linear infinite;
 	-o-animation: animatedBackground 10s linear infinite;
 }
-
-
-
-
-/*Animate content*/ 
-
-.group-details {
-    /*-webkit-transform: translateX(250px);
-	-moz-transform: translateX(250px);
-	-o-transform: translateX(250px);
-	-ms-transform: translateX(250px);
-	transform: translateX(250px);*/
-}
-
-.tabs input.tab-selector-1:checked ~ .content .content-1,
-.tabs input.tab-selector-2:checked ~ .content .content-2,
-.tabs input.tab-selector-3:checked ~ .content .content-3,
-.tabs input.tab-selector-4:checked ~ .content .content-4 {
-    -webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	-o-transform: translateX(0px);
-	-ms-transform: translateX(0px);
-	transform: translateX(0px);
-	z-index: 100;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    opacity: 1;
-    -webkit-transition: all ease-out 0.2s 0.1s;
-    -moz-transition: all ease-out 0.2s 0.1s;
-    -o-transition: all ease-out 0.2s 0.1s;
-    -ms-transition: all ease-out 0.2s 0.1s;
-    transition: all ease-out 0.2s 0.1s;
-}
-
-
-
-
