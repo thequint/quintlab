@@ -6,7 +6,7 @@
 	position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
 	.container{
 		width: 90%;
 	}
@@ -28,6 +28,9 @@
 }
 @media (max-width: 767px) {
 	
+	.fixed-wrap{
+		display: none;
+	}
 	
 	
 	.top-wrapper {
@@ -65,7 +68,32 @@
 	margin: 0px;
 }
 	
+	.captions-wrapper {
+	margin: 0 20px;
+
 }
+	
+}
+@media (max-width: 360px) {
+	
+	.logo-tql {
+	width: 200px;
+	display: block;
+}
+	
+	.caption h2 {
+	color: #fff;
+	font-size: 20px;
+
+}
+	
+.caption p {
+
+	font-size: 17px;
+}	
+	
+}
+
 
 
 
