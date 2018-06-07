@@ -83,15 +83,28 @@
 	
 	.caption h2 {
 	color: #fff;
-	font-size: 20px;
+	font-size: 16px;
+	margin-top: 10px;	
 
 }
 	
+	.caption h2 br{
+		display: none;
+	}
+	
+	
 .caption p {
 
-	font-size: 17px;
-}	
+	font-size: 15px;
+}
 	
+	.list-items li p{
+		font-size: 16px;
+	}
+	
+	.list-items li {
+	margin-bottom: 30px;
+}
 }
 
 
