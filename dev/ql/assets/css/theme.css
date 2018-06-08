@@ -202,5 +202,12 @@ opacity: 1;
 	color: #37184E;
 	text-decoration: underline;
 }
+.copy-right{
+	color:rgba(255,255,255,0.5);
+	font-size: 14px;
+	padding-top: 10px;
+	
+}
+
 
 
