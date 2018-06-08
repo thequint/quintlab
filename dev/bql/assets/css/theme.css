@@ -127,15 +127,26 @@ opacity: 1;
 	/*	max-width: 590px;*/
 	max-width: 820px;
 }
+
+.caption h1 {
+	color: #fff;
+	font-size: 50px;
+	margin: 0px 0 0 0;
+	line-height: 110%;
+	position: relative;
+	text-transform: uppercase;
+}
 .caption h2 {
 	color: #fff;
 	font-size: 26px;
-	margin: 30px 0 0 0;
+	margin: 15px 0 0 0;
 	line-height: 110%;
 	position: relative;
 	padding-left: 12px;
 	text-transform: uppercase;
 }
+
+
 .caption h2::before {
 	width: 4px;
 	height: calc(100% - 8px);
