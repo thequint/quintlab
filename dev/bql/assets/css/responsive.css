@@ -1,0 +1,138 @@
+@charset "utf-8";
+.container {
+	width: 80%;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media (max-width: 860px) {
+.container {
+	width: 90%;
+}
+.list-items {
+	margin: 0 -15px;
+}
+.list-items li {
+	margin-bottom: 30px;
+}
+.list-items li figure {
+	margin: 0px 15px;
+}
+.body-wrapper {
+	padding: 40px 0px 0px 0px;
+}
+	.footer-logos li {
+	margin: 0px 20px;
+		height: 26px;
+}
+	
+}
+
+@media (max-width: 767px) {
+.fixed-wrap {
+	display: none;
+}
+.top-wrapper {
+	margin: 0 20px;
+	padding: 15px 0px;
+}
+.caption {
+	padding-left: 0%;
+	max-width: 590px;
+}
+.body-wrapper {
+	padding: 30px 0 0 0;
+}
+.container {
+	width: auto;
+	margin: 0px 20px;
+}
+.list-items li {
+	float: none;
+	width: auto;
+	margin-bottom: 40px;
+}
+.list-items {
+	margin: 0px;
+}
+.list-items li figure {
+	margin: 0px;
+}
+.captions-wrapper {
+	margin: 0 20px;
+}
+.footer-wrapper {
+	padding: 20px 0px;
+}	
+	
+.footer-logos {
+	display: block;
+	text-align: center;
+	width: 320px;
+	margin: 0 auto;
+}
+	
+.footer-logos li {
+	margin: 5px 7px;
+	height: 26px;
+	float: none;
+	display: inline-block;
+}
+	
+
+.logo-tql {
+	width: 220px;
+	display: block;
+}
+.caption h2 {
+	color: #fff;
+	font-size: 19px;
+	margin-top: 20px;
+}
+
+.caption p {
+	font-size: 18px;
+}
+	
+	
+	
+	
+}
+
+@media (max-width: 360px) {
+	
+	
+	.logo-tql {
+	width: 200px;
+	display: block;
+}
+.caption h2 {
+	color: #fff;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.caption p {
+	font-size: 15px;
+}
+	
+	
+	.scroll-btn{
+		display: none;
+	}
+	
+	.caption h2 br {
+	display: none;
+}
+	
+.list-items li p {
+	font-size: 16px;
+}
+.list-items li {
+	margin-bottom: 30px;
+}
+}
+
+
+
