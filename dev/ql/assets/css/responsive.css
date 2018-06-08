@@ -78,13 +78,9 @@
 	height: 26px;
 	float: none;
 	display: inline-block;
-}	
-	
-	
-	
 }
+	
 
-@media (max-width: 360px) {
 .logo-tql {
 	width: 200px;
 	display: block;
@@ -94,12 +90,26 @@
 	font-size: 16px;
 	margin-top: 10px;
 }
-.caption h2 br {
-	display: none;
-}
+
 .caption p {
 	font-size: 15px;
 }
+	
+	
+	
+	
+}
+
+@media (max-width: 360px) {
+	
+	.scroll-btn{
+		display: none;
+	}
+	
+	.caption h2 br {
+	display: none;
+}
+	
 .list-items li p {
 	font-size: 16px;
 }
@@ -107,3 +117,6 @@
 	margin-bottom: 30px;
 }
 }
+
+
+
