@@ -23,7 +23,7 @@ header("Access-Control-Allow-Origin: *");
 $data = array();
 
 $client_id     = 'a43897ed-e15c-4adf-9244-f205d3ef9091';
-$client_secret = ' Jbq_AjozKI-eITwacHxQF-PurGA7LJp-h7oiILw1c1iES8KcfnJfNQjD5SNBUGxaiaBvVmOvGX6aJXx8gwCxng';
+$client_secret = 'Jbq_AjozKI-eITwacHxQF-PurGA7LJp-h7oiILw1c1iES8KcfnJfNQjD5SNBUGxaiaBvVmOvGX6aJXx8gwCxng';
 $auth_string   = "{$client_id}:{$client_secret}";
 $request       = "https://oauth.brightcove.com/v3/access_token?grant_type=client_credentials";
 $ch            = curl_init($request);
