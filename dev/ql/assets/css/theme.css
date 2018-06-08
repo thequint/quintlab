@@ -40,11 +40,54 @@ h1, h2, h3, h4, h5, h6 {
 	background: linear-gradient(to right, #36184E, #892F6A); 
 }
 .footer-wrapper {
-	padding: 15px 0px;
+	padding: 25px 0px;
 	background: -webkit-linear-gradient(left, #36184E, #892F6A);
 	background: -o-linear-gradient(left, #36184E, #892F6A);
 	background: linear-gradient(to right, #36184E, #892F6A); 
+	text-align: center;
 }
+.footer-logos{
+	display:inline-block;
+}
+.footer-logos li{
+	float: left;
+	margin: 0px 30px;
+}
+
+.footer-logos li a{
+	display: block;
+	opacity: 0.6;
+ 
+}
+
+.footer-logos li a:hover{
+opacity: 1;
+}
+
+.footer-logos li a img{
+	width: 100%;
+	min-width: 0;
+}
+.footer-logos li.logo-the-quint{
+	width: 100px;
+}
+.footer-logos li.logo-bloomberg-quint{
+	width: 180px;
+}
+
+.footer-logos li.logo-hindi-quint{
+	width: 80px;
+}
+
+.footer-logos li.logo-neon{
+	width: 70px;
+}
+
+.footer-logos li.logo-fit{
+	width: 32px;
+}
+
+
 .body-wrapper {
 	padding: 50px 0px 0px 0px;
 }
@@ -159,3 +202,5 @@ h1, h2, h3, h4, h5, h6 {
 	color: #37184E;
 	text-decoration: underline;
 }
+
+
