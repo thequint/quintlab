@@ -82,6 +82,28 @@
 	
 
 .logo-tql {
+	width: 220px;
+	display: block;
+}
+.caption h2 {
+	color: #fff;
+	font-size: 19px;
+	margin-top: 20px;
+}
+
+.caption p {
+	font-size: 18px;
+}
+	
+	
+	
+	
+}
+
+@media (max-width: 360px) {
+	
+	
+	.logo-tql {
 	width: 200px;
 	display: block;
 }
@@ -95,12 +117,6 @@
 	font-size: 15px;
 }
 	
-	
-	
-	
-}
-
-@media (max-width: 360px) {
 	
 	.scroll-btn{
 		display: none;
