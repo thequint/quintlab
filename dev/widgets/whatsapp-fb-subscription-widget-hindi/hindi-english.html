@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex, nofollow">
+<title>Whatsapp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:700,900" rel="stylesheet">
+<link href="https://fea.assettype.com/thequint/assets/hindi-5842ee7870.css" rel="stylesheet">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    margin: 0 auto;
+    width: 1280px;
+    height: 200px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ccc;
+    /*font-weight: 700;*/
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-wrapper p {
+    font-size: 20px;
+    line-height: 21px;
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-family: 'Noto-sans', system-ui, sans-serif;
+}
+
+.main-wrapper h1 {
+    font-size: 54px;
+    line-height: 44px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+    font-size: 0;
+}
+
+.main-wrapper__left a,
+.main-wrapper__right a {
+    position: relative;
+    float: left;
+    height: 200px;
+    color: #fff;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.main-wrapper__left a {
+    width: 47.5%;
+    z-index: 10;
+    text-align: right;
+    background-color: #139e49;
+}
+
+.main-wrapper__left a:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #139e49;
+    transform-origin: bottom left;
+    -ms-transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    transform: skew(-10deg, 0deg);
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.main-wrapper__left a:hover {
+    background-color: #008b37;
+}
+
+.main-wrapper__left a:hover:after {
+    background-color: #008b37;
+}
+
+.main-wrapper__right a {
+    width: 52.5%;
+    background-color: #3d5ba9;
+}
+
+.main-wrapper__right a:hover {
+    background-color: #274995;
+}
+
+.main-wrapper__left .wrap-middle,
+.main-wrapper__right .wrap-middle {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    /*background-color: #ccc;*/
+    -ms-transform: translateY (-50%);
+    -webkit-transform: translateY (-50%);
+    -moz-transform: translateY (-50%);
+    -o-transform: translateY (-50%);
+    transform: translateY(-50%);
+}
+
+.main-wrapper__left .wrap-middle {
+    max-width: 300px;
+}
+
+.main-wrapper__left .wrap-middle:after {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    content: " ";
+    z-index: -1;
+    background-image: url(whatsapp-shadow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.main-wrapper__right .wrap-middle:after {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    content: " ";
+    z-index: -1;
+    background-image: url(facebook-shadow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.main-wrapper__right .wrap-middle {
+    max-width: 380px;
+    padding-left: 25px;
+}
+
+.main-wrapper__left .wrap-middle span {
+    display: block;
+}
+
+.main-wrapper__left .wrap-middle .people-icon {
+    position: absolute;
+    width: 33px;
+    right: -7px;
+    bottom: -17px;
+}
+
+@media only screen and (max-width: 1279px) {
+    .main-wrapper {
+        max-width: 920px;
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    .main-wrapper {
+        max-width: 320px;
+    }
+    .main-wrapper__left a {
+        width: 100%;
+        height: 88px;
+    }
+    .main-wrapper__right a {
+        width: 100%;
+        height: 112px;
+    }
+    .main-wrapper p {
+        margin-bottom: 2px;
+        font-size: 14px;
+        line-height: 12px;
+    }
+    .main-wrapper__left .wrap-middle span {
+        display: inline-block;
+    }
+    .main-wrapper h1 {
+        font-size: 34px;
+        line-height: 30px;
+        font-weight: 900;
+    }
+    .main-wrapper__left .wrap-middle {
+        max-width: 270px;
+        padding: 0;
+        text-align: center;
+    }
+    .main-wrapper__left .wrap-middle:after {
+        margin: 0 auto;
+        width: 200px;
+        left: -10px;
+        bottom: -6px;
+    }
+    .main-wrapper__left .wrap-middle .people-icon {
+        width: 23px;
+        right: 35px;
+        bottom: -13px;
+    }
+
+    .main-wrapper__right .wrap-middle {
+        max-width: 270px;
+        padding: 0;
+        text-align: center;
+    }
+    .main-wrapper__right .wrap-middle h1 {
+        margin: 0 auto;
+        text-align: left;
+        width: 220px;
+        /*background-color: #ccc;*/
+    }
+    .main-wrapper__right .wrap-middle:after {
+        margin: 0 auto;
+        width: 240px;
+        left: 0;
+        bottom: -6px;
+    }
+    .main-wrapper__left a:after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: #139e49;
+        transform-origin: bottom right;
+        -ms-transform: skew(0deg, -2deg);
+        -webkit-transform: skew(0deg, -2deg);
+        transform: skew(0deg, -2deg);
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+    }
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58739020-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-58739020-1');
+
+    $(document).ready(function(){
+        $("#btn_whatsapp").click(function(e){
+            //e.preventDefault();
+            ga("gtag_UA_58739020_1.send", {
+                hitType: 'event',
+                eventCategory: 'Labs',
+                eventAction: 'play',
+                eventLabel: 'WhatsApp'
+            });
+            //console.log("yes");
+           /* setTimeout(function(){
+                // window.location = "https://thequint.com/whatsapp";
+                window.open('https://thequint.com/whatsapp', '_blank');
+            }, 2000);*/
+        });
+        $("#btn_facebook").click(function(e){
+            ga("gtag_UA_58739020_1.send", {
+                hitType: 'event',
+                eventCategory: 'Labs',
+                eventAction: 'play',
+                eventLabel: 'Facebook'
+            });
+        });
+    });
+</script>
+
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="main-wrapper__left">
+            <a id="btn_whatsapp" href="https://thequint.com/whatsapp" target="_blank">
+            <span class="wrap-middle">
+                <p><span>सब्सक्राइब करने के लिए</span> यहां क्लिक कीजिए</p>
+                <h1>Whatsapp</h1>
+                <span class="people-icon"><img src="people-icon.svg"></span>
+            </span>
+        </a>
+        </div>
+        <div class="main-wrapper__right">
+            <a id="btn_facebook" href="http://llink.to/?u=https:%2F%2Fm.me%2F315252535308608%3Fref%3D106__Template-310:ca_4cea7b2a-06ac-4482-b6eb-4d1fd15923a2_&e=ba47efd1ec1f5a9db74a1dfdb5b5cd73" target="_blank">
+            <span class="wrap-middle">
+                <p>सब्सक्राइब करने के लिए यहां क्लिक कीजिए</p>
+                <h1>Facebook<br>
+                Messenger</h1>
+            </span>
+        </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -194,13 +194,9 @@ button:focus {
     font-size: 18px;
     padding-right: 2px;
 }
-
-
-
-
-
 .quiz-template-02 .question-box .question-headline .headline-text {
     font-size: 22px;
+    line-height: 130%;
     font-family: 'cooper_hewittbook';
 }
 .quiz-template-02 .question-box .question-headline:after {

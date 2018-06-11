@@ -136,42 +136,52 @@ function display_data() {
 	listClick();
 }
 
+function generate_score() {
+	$(".score-card").slideDown();
+	//console.log($("li.right.active").length);
+
+	var total_length = $(".answer-type").length;
+	var score_length = $("li.right.active").length;
+
+	var percent = score_length*100/total_length
+
+	if(percent<33.33) {
+		$(".score-message").html(data_array[data_array.length-1].tL1);
+	}else if(percent<65) {
+		$(".score-message").html(data_array[data_array.length-1].tL2);
+	}else {
+		$(".score-message").html(data_array[data_array.length-1].tL3);
+	}
+
+	console.log(total_length);
+	console.log(score_length);
+	$(".total_length").html(total_length);
+	$(".score_length").html(score_length);
+}
+
+$(".check-score").click(function(){
+	generate_score();
+	$(".answered li").addClass("option-list");
+});
+
+
+
 function listClick(){
 	$(".demo-list li").click(function(){
 		if(!$(this).closest("ul").hasClass("answered")){
 			$(this).closest("ul").addClass("answered");
 
-			$(".answered li").addClass("option-list");
+			//$(".answered li").addClass("option-list");
 
 			$(this).addClass("active");
 
-			console.log($(".answer-type").length+ "|" +$(".answered").length);
+			//console.log($(".answer-type").length+ "|" +$(".answered").length);
 
-			if($(".answer-type").length == $(".answered").length) {
-				$(".score-card").slideDown();
-				//console.log($("li.right.active").length);
-
-				var total_length = $(".answer-type").length;
-				var score_length = $("li.right.active").length;
-
-				var percent = score_length*100/total_length
-
-				if(percent<33.33) {
-					$(".score-message").html(data_array[data_array.length-1].tL1);
-				}else if(percent<65) {
-					$(".score-message").html(data_array[data_array.length-1].tL2);
-				}else {
-					$(".score-message").html(data_array[data_array.length-1].tL3);
-				}
-
-				console.log(total_length);
-				console.log(score_length);
-				$(".total_length").html(total_length);
-				$(".score_length").html(score_length);
-
-			}
+			// if($(".answer-type").length == $(".answered").length) {
+			// 	generate_score();
+			// }
 		}
-		$(this).closest(".question-options").find(".answered-text").slideDown();
+		//$(this).closest(".question-options").find(".answered-text").slideDown();
    	});
 }
 
