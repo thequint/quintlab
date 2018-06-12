@@ -389,6 +389,17 @@ body {
         //     $(this).toggleClass('hli');
         // });
 
+        if ($('.tag-line-img-input-1').val() != "") {
+            //alert($('.tag-line-img-input-1').val());
+            $('.tag-line-img-1').attr('src', $('.tag-line-img-input-1').val());
+        }
+        if ($('.tag-line-img-input-2').val() != "") {
+            $('.tag-line-img-2').attr('src', $('.tag-line-img-input-2').val());
+        }
+        if ($('.tag-line-img-input-3').val() != "") {
+            $('.tag-line-img-3').attr('src', $('.tag-line-img-input-3').val());
+        }
+
         $('.quiz-headline').html('<span>' + $('.quizHeadlineInput').val() + '</span>');
         $('.quiz-template-02').attr('class', 'quiz-template-02');
         $('.quiz-template-02').addClass($('.select-tmp-field select').val());
@@ -672,8 +683,13 @@ body {
         quiz_data[x]['qH'] = $('.quizHeadlineInput').val();
 
         quiz_data[x]['tL1'] = $('.tag-line-1').val();
+        quiz_data[x]['tagLineImg1'] = $('.tag-line-img-input-1').val();
+
         quiz_data[x]['tL2'] = $('.tag-line-2').val();
+        quiz_data[x]['tagLineImg2'] = $('.tag-line-img-input-2').val();
+
         quiz_data[x]['tL3'] = $('.tag-line-3').val();
+        quiz_data[x]['tagLineImg3'] = $('.tag-line-img-input-3').val();
 
         var quiz_string = JSON.stringify(quiz_data);
 

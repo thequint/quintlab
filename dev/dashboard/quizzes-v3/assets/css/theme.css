@@ -268,18 +268,74 @@ button:focus {
     background-color: #95c198!important;
 }
 
+
+
+
 .quiz-template-02 .question-box .question-options .demo-list li:hover {
     color: #fff;
     background-color: #F7A500;
 }
-.quiz-template-02 .question-box .question-options .demo-list li.active {
+.quiz-template-02 .question-box .question-options .demo-list.answered li:hover {
+    color: #656565;
+    background-color: #ebebeb;
+}
+.quiz-template-02 .question-box .question-options .demo-list li.active,
+.quiz-template-02 .question-box .question-options .demo-list li.active:hover {
     color: #fff;
     background-color: #F7A500;
 }
 
-/*.quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
+.quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
     color: #95c198;
-}*/
+}
+
+.quiz-template-02 .question-box .question-options .demo-list.answered li {
+    cursor: default;
+}
+
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list {
+    color: #fff;
+    background-color: #95c198;
+}
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list.active {
+    color: #fff;
+    background-color: #95c198;
+}
+.quiz-template-02 .question-box .question-options .demo-list.answered li.wrong.option-list.active {
+    color: #fff;
+    background-color: #af3a3a;
+}
+
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list,
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list.active {
+    position: relative;
+}
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list:after,
+.quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list.active:after {
+    position: absolute;
+    right: 15px;
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    top: 23%;
+    font-size: 24px;
+}
+
+.quiz-template-02 .question-box .question-options .demo-list.answered li.wrong.option-list.active {
+    position: relative;
+}
+.quiz-template-02 .question-box .question-options .demo-list.answered li.wrong.option-list.active:after {
+    position: absolute;
+    right: 15px;
+    content: "\f00d";
+    font-family: 'FontAwesome';
+    top: 23%;
+    font-size: 24px;
+}
+
+
+
+
+
 /*.quiz-template-02 .question-box .question-options .demo-list li.right.active,
 .quiz-template-02 .question-box .question-options .demo-list.answered li.right {
     position: relative;
@@ -292,8 +348,8 @@ button:focus {
     font-family: 'FontAwesome';
     top: 23%;
     font-size: 24px;
-}
-.quiz-template-02 .question-box .question-options .demo-list li.wrong.active {
+}*/
+/*.quiz-template-02 .question-box .question-options .demo-list li.wrong.active {
     position: relative;
 }
 .quiz-template-02 .question-box .question-options .demo-list li.wrong.active:after {
@@ -303,27 +359,19 @@ button:focus {
     font-family: 'FontAwesome';
     top: 23%;
     font-size: 24px;
-}
-.quiz-template-02 .question-box .question-options .demo-list li:hover {
-    color: #fff;
-    background-color: #F7A500;
-}
-.quiz-template-02 .question-box .question-options .demo-list.answered li:hover {
-    color: #656565;
-    background-color: #ebebeb;
-}
-.quiz-template-02 .question-box .question-options .demo-list.answered li {
-    cursor: default;
-}
-.quiz-template-02 .question-box .question-options .demo-list li.right.active,
-.quiz-template-02 .question-box .question-options .demo-list.answered li.right {
-    color: #fff;
-    background-color: #95c198;
-}
-.quiz-template-02 .question-box .question-options .demo-list li.wrong.active {
-    color: #fff;
-    background-color: #af3a3a;
 }*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Answered Card */
 .quiz-template-02 .answered-text {

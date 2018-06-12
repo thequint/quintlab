@@ -147,10 +147,13 @@ function generate_score() {
 
 	if(percent<33.33) {
 		$(".score-message").html(data_array[data_array.length-1].tL1);
+		$(".score-img").html('<img src="'+ data_array[data_array.length-1].tagLineImg1 +'">');
 	}else if(percent<65) {
 		$(".score-message").html(data_array[data_array.length-1].tL2);
+		$(".score-img").html('<img src="'+ data_array[data_array.length-1].tagLineImg2 +'">');
 	}else {
 		$(".score-message").html(data_array[data_array.length-1].tL3);
+		$(".score-img").html('<img src="'+ data_array[data_array.length-1].tagLineImg3 +'">');
 	}
 
 	console.log(total_length);
@@ -161,7 +164,9 @@ function generate_score() {
 
 $(".check-score").click(function(){
 	generate_score();
-	$(".answered li").addClass("option-list");
+	//$(".answered li").addClass("option-list");
+	$(".demo-list li").addClass("option-list");
+	$(".question-options").find(".answered-text").slideDown();
 });
 
 
