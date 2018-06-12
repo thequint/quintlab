@@ -34,19 +34,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-wrapper {
 	height: 100vh;
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-color: #071624;
+	
+/*
 	background: #2a1dd3;
 	background: -webkit-linear-gradient(left, #2a1dd3, #f0256a);
 	background: -o-linear-gradient(left, #2a1dd3, #f0256a);
 	background: linear-gradient(to right, #2a1dd3, #f0256a);
-/*	background-image: linear-gradient(to right, #2a1dd3, #9500b8, #c5009c, #e10080, #f0256a);*/
+*/
 }
 .footer-wrapper {
 	padding: 25px 0px;
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-color: #071624;
+/*
 	background: #2a1dd3;
 	background: -webkit-linear-gradient(left, #2a1dd3, #f0256a);
 	background: -o-linear-gradient(left, #2a1dd3, #f0256a);
 	background: linear-gradient(to right, #2a1dd3, #f0256a);
-/*	 background-image: linear-gradient(to right, #2a1dd3, #9500b8, #c5009c, #e10080, #f0256a);*/
+*/
+
 	text-align: center;
 }
 .footer-logos{

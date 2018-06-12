@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 16px;
 	margin-top: 12px;
 	padding-left: 18px;
-	opacity: 0;
+/*	opacity: 0;*/
 	transform: translate3d(0, 5px, 0);
 	-webkit-transition: all ease-out 0.5s;
 	-moz-transition: all all ease-out 0.5s;
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 	transition: all ease-out 0.5s;
 }
 .point-table tbody tr td {
-	opacity: 0;
+/*	opacity: 0;*/
 	transform: translate3d(0, -5px, 0);
 	-webkit-transition: all ease-out 0.5s;
 	-moz-transition: all all ease-out 0.5s;

@@ -1,4 +1,4 @@
-var collectionSlug = ["ipl-top-story"];
+var collectionSlug = ["fifa-world-cup-group-a"];
 
 $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], function (res) {
 	var stories = res.items.filter(function (item) {
@@ -12,14 +12,14 @@ $.getJSON('https://www.thequint.com/api/v1/collections/' + collectionSlug[0], fu
 	elements.forEach(function (element) {
 		$('.stories ul').append(element);
 	});
-	var time= 500;
+	/*var time= 500;
 			
 			$('.stories ul li').each(function(index) {
 			var this_p = $(this) ;	
 			setTimeout( function(){ this_p.addClass('position_visible');  }, time);
       		time += 500;
 				
-			});
+			});*/
 });
 
 // Data Change functions
@@ -55,7 +55,7 @@ $('.data-groups li').click(function () {
 				$('.stories ul').append(element);
 			});
 			
-			var time= 500;
+			/*var time= 500;
 			
 			$('.stories ul li').each(function(index) {
 				
@@ -63,7 +63,7 @@ $('.data-groups li').click(function () {
 			setTimeout( function(){ this_p.addClass('position_visible'); }, time);
       		time += 500;
 				
-			});
+			});*/
 			story_flag = 0;
 		});
 
