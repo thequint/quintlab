@@ -29,8 +29,10 @@ function showInfo(data) {
 	//var id = getParameterByName('id'); //when pulling from the sheet
 	sheet_data = data;
 	//data_array = JSON.parse(data[id].array); //when pulling from the sheet
-
+console.log(data[parseInt(getParameterByName('id'))-2].Comments+data[parseInt(getParameterByName('id'))-1].Comments_2+data[parseInt(getParameterByName('id'))].Comments_3);
 	data_array = JSON.parse(data[parseInt(getParameterByName('id'))-2].Comments+data[parseInt(getParameterByName('id'))-1].Comments_2+data[parseInt(getParameterByName('id'))].Comments_3); //when feting the array directly from the url
+	
+
 	console.log(data_array);
 
 	display_data();
@@ -44,9 +46,9 @@ function display_data() {
 
 	//console.log(data_array.length);
 	var str = '';
-
+	console.log(data_array);
 	$('.quiz-headline').html('<span>' + data_array[data_array.length-1].qH + '</span>');
-	$('.quiz-template-02').addClass(data_array[data_array.length-2].selectTemp);
+	$('.quiz-template-02').addClass(data_array[data_array.length-1].selectTemp);
 	$('.quiz-template-02.fit-quiz .quiz-header img').attr('src','assets/images/fit-banner.jpg');
 	$('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src','assets/images/bollywood-banner.jpg');
 

@@ -168,11 +168,12 @@
             }
         }
         console.log(yes_ans+"|"+no_ans);
+        
         $(".results-wrap .result-yes").css("width",yes_ans*100/(yes_ans+no_ans)+"%");
         $(".results-wrap .result-no").css("width",no_ans*100/(yes_ans+no_ans)+"%");
 
-        $(".results-wrap .result-yes").html(yes_ans*100/(yes_ans+no_ans)+"%");
-        $(".results-wrap .result-no").html(no_ans*100/(yes_ans+no_ans)+"%");
+        $(".results-wrap .result-yes").html((yes_ans*100/(yes_ans+no_ans)).toFixed(1)+"%");
+        $(".results-wrap .result-no").html((no_ans*100/(yes_ans+no_ans)).toFixed(1)+"%");
     }
     // end //
 

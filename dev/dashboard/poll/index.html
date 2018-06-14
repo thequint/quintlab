@@ -97,22 +97,35 @@
     }
 
     function check_mail(email) {
+        console.log("a");
         for (var i = 0; i < poll_answer_data.length; i++) {
+            console.log("b");
             if (poll_answer_data[i].id == getParameterByName('id')) {
                 console.log(email);
+                console.log("c");
                 if (email == poll_answer_data[i].userEmail) {
+                    console.log("d");
                     alert("already exist");
                     showScore();
                     return;
                 }else{
+                    console.log("e");
                     $(".poll-check-email").hide();
                     $('.drag-question').show();
                     $(".poll-score-option").show();
+                    return;
                 }
             }
         }
+        
+        $(".poll-check-email").hide();
+        $('.drag-question').show();
+        $(".poll-score-option").show();
+
+
     }
     $(".check-btn").click(function(){
+
         check_mail($("#userEmail").val());
     });
 

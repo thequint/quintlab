@@ -486,7 +486,7 @@ body {
     var flag = 0,
         correctInputSelectedFlag = -1;
 
-    function addQuestionFunc() {
+    function addQuestionFunc() { // 
         var j = 0;
         flag = 0;
         correctInputSelectedFlag = -1;
@@ -537,7 +537,7 @@ body {
             // optionVideoUrl   = oVU
             // isCorrect        = isC
 
-            quiz_data[i]['selectTemp'] = $('.select-tmp-field select').val();
+            
 
             quiz_data[i]['qT'] = $(this).find(".question-text").val().toString();
 
@@ -679,6 +679,8 @@ body {
         }
 
         quiz_data.push({});
+
+        quiz_data[x]['selectTemp'] = $('.select-tmp-field select').val();
 
         quiz_data[x]['qH'] = $('.quizHeadlineInput').val();
 
