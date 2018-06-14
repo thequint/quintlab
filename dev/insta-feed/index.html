@@ -20,66 +20,63 @@
 <meta name="author" content="The Quint Lab">
 <meta name="copyright" content="The Quint" />
 <title>Insta Feed - Quint lab</title>
-			
-<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">	
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 <link rel="stylesheet" media="all" href="assets/css/base.css">
-<link rel="stylesheet" media="all" href="assets/css/animate.css">	
 <link rel="stylesheet" href="assets/css/theme.css" media="all">
 <link rel="stylesheet" media="all" href="assets/css/responsive.css">
-
 <script> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script>
-
 </head>
 <body>
-	<section class="wrapper insta-feed-wrapper">
-		<header class="wrapper header-wrapper">
-			<h1 class="profile-headline"><a href="javascript:void(0);">TQ_abuse_tracker</a></h1>
-			<div class="profile-detail clearfix">
-				<figure>
-					<div class="profile-image"><a href="javascript:void(0);"><img src="assets/images/profile.jpg" alt=""></a></div>
-					<figcaption class="clearfix">
-						<ul class="facts clearfix">
-							<li>
-								<h3>2 213</h3>
-								<p>complaints</p>
-							</li>
-							<li>
-								<h3>511</h3>
-								<p>victims</p>
-							</li>
-						</ul>
-						<a class="btn-share-story" href="javascript:void(0);">Share Your Story</a>
-					</figcaption>
-				</figure>
-				<div class="qa">
-					<h4>Stop Online Hate </h4> 
-					<p>The Quint’s sample page tracking hate against women.</p>
-				</div>
-				<ul class="filters clearfix">
-					<li><a href="#">filter 1</a></li>
-					<li><a href="#">filter 2</a></li>
-					<li><a href="#">filter 3</a></li>
-				</ul>
-				<p class="followed-by">Followed by <a href="#" target="_blank">thequint</a></p>
-			</div>
-		</header>
-		<section class="wrapper insta-gallery-wrapper">
-			<ul class="clearfix">
-				<li><figure><img src="assets/images/profiles/profile-1.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-				<li><figure><img src="assets/images/profiles/profile-2.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-				<li><figure><img src="assets/images/profiles/profile-3.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-				<li><figure><img src="assets/images/profiles/profile-3.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-				<li><figure><img src="assets/images/profiles/profile-1.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-				<li><figure><img src="assets/images/profiles/profile-2.jpg" alt=""><figcaption><div>Nidhi Razdan</div></figcaption></figure></li>
-			</ul>
-		</section>
-	</section>
-	
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/spreadsheet.js"></script>
-<script type="text/javascript" src="assets/js/data-spreadsheet.js"></script>	
+<section class="wrapper insta-feed-wrapper">
+  <header class="wrapper header-wrapper">
+    <h1 class="profile-headline"><a href="javascript:void(0);">TQ_abuse_tracker</a></h1>
+    <div class="profile-detail clearfix">
+      <figure>
+        <div class="profile-image"><a href="javascript:void(0);"><img src="assets/images/profile.jpg" alt=""></a></div>
+        <figcaption class="clearfix">
+          <ul class="facts clearfix">
+            <li>
+              <h3>2 213</h3>
+              <p>complaints</p>
+            </li>
+            <li>
+              <h3>511</h3>
+              <p>victims</p>
+            </li>
+          </ul>
+          <a class="btn-share-story" href="javascript:void(0);">Share Your Story</a> </figcaption>
+      </figure>
+      <div class="qa">
+        <h4>Stop Online Hate </h4>
+        <p>The Quint’s sample page tracking hate against women.</p>
+      </div>
+      <ul class="filters clearfix">
+        <li><a href="#">filter 1</a></li>
+        <li><a href="#">filter 2</a></li>
+        <li><a href="#">filter 3</a></li>
+      </ul>
+      <p class="followed-by">Followed by <a href="#" target="_blank">thequint</a></p>
+    </div>
+  </header>
+  <section class="wrapper insta-gallery-wrapper">
+    <ul id="GalleryItems" class="clearfix">
+    </ul>
+  </section>
+  <div class="modal" id="ItemDetails" style="display: none;">
+    <div class="modal-container"> <span class="close-modal">close</span>
+      <div class="embed-content"> </div>
+      <div class="modal-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+<script type="text/javascript" src="assets/js/spreadsheet.js"></script> 
+<script type="text/javascript" src="assets/js/data-spreadsheet.js"></script> 
 <script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 </html>
