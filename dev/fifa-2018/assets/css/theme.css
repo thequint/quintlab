@@ -417,3 +417,21 @@ background-position: 0vw 0vh;
 .for-mobile {
 	display: none !important;
 }
+
+
+
+
+.banner-wrapper{
+			height: 200px;
+			background-color: #b81319;
+			background-image: url(../images/banner-d.gif);
+			background-repeat: no-repeat;
+			background-position: center center;
+	}
+
+@media (max-width:980px) {
+	.banner-wrapper{
+	background-image: url(../images/banner-m.gif);
+	}
+}
+
