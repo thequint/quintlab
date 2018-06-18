@@ -281,18 +281,35 @@ h1, h2, h3, h4, h5, h6 {
 	border-collapse: collapse;
 	text-transform: uppercase;
 }
+.point-table table tr th:nth-child(1) {
+	width: 25%;
+}
+.point-table table tr th:nth-child(2) {
+	width: 15%;
+}
+.point-table table tr th:nth-child(3) {
+	width: 15%;
+}
+.point-table table tr th:nth-child(4) {
+	width: 15%;
+}
+.point-table table tr th:nth-child(5) {
+	width: 15%;
+}
+.point-table table tr th:nth-child(6) {
+	width: 15%;
+}
 .point-table table tr th, .point-table table tr td {
 	padding: 16px 0px;
 	font-weight: 900;
 	line-height: 100%;
 	vertical-align: middle;
-	width: 25%;
 }
 .point-table table tr td {
 	border: 0px solid #ccc;
 	font-size: 30px;
 	color: #316295;
-	padding: 3px 10px 10px 10px;
+	padding: 7px 10px 3px 10px;
 }
 .point-table table tr td:nth-child(1) {
 	font-size: 15px;
@@ -326,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 16px;
 	margin-top: 12px;
 	padding-left: 18px;
-/*	opacity: 0;*/
+	/*	opacity: 0;*/
 	transform: translate3d(0, 5px, 0);
 	-webkit-transition: all ease-out 0.5s;
 	-moz-transition: all all ease-out 0.5s;
@@ -335,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
 	transition: all ease-out 0.5s;
 }
 .point-table tbody tr td {
-/*	opacity: 0;*/
+	/*	opacity: 0;*/
 	transform: translate3d(0, -5px, 0);
 	-webkit-transition: all ease-out 0.5s;
 	-moz-transition: all all ease-out 0.5s;
@@ -370,8 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 .stories ul li a:hover {
 	color: #b0060f;
 }
-
-@-webkit-keyframes animatedBackground {
+ @-webkit-keyframes animatedBackground {
  0% {
 background-position: 0vw 0vh;
 }
@@ -394,4 +410,10 @@ background-position: 0vw 0vh;
 	-webkit-animation: animatedBackground 10s linear infinite;
 	-ms-animation: animatedBackground 10s linear infinite;
 	-o-animation: animatedBackground 10s linear infinite;
+}
+.for-desktop {
+	display: block !important;
+}
+.for-mobile {
+	display: none !important;
 }

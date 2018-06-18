@@ -74,6 +74,17 @@
 .stories ul li:nth-child(4) {
 	display: none;
 }
+	
+	
+	
+.for-desktop{
+	display: none !important;
+}
+
+.for-mobile{
+	display: block !important;
+}
+	
 }
 
 @media (max-width: 767px) {
@@ -82,7 +93,7 @@
 }
 .point-table-wrapper h3 {
 	padding: 15px;
-	font-size: 26px;
+	font-size: 21px;
 }
 .point-table-wrapper .inner-container {
 	padding: 0px 10px 10px 10px;
@@ -98,11 +109,12 @@
 }
 .point-table table tr th, .point-table table tr td {
 	padding: 15px 0px;
-	width: 24%;
 }
+/*
 .point-table table tr th:nth-child(1), .point-table table tr td:nth-child(1) {
 	width: 26%;
 }
+*/
 .point-table table thead {
 	font-size: 15px;
 }
@@ -112,7 +124,7 @@
 }
 .point-table table tr td {
 	font-size: 25px;
-	padding: 3px 5px 10px 5px;
+	padding: 3px 5px 0px 5px;
 }
 .stories h5 {
 	font-size: 18px;

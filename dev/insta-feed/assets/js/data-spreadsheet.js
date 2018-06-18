@@ -40,7 +40,7 @@ function display_data() {
 
 	$("#GalleryItems li").click(function () {
 		$("#ItemDetails").fadeIn();
-		$("#ItemDetails .embed-content").html('<iframe src="https://www.youtube.com/embed/' + $(this).attr('data-video') + '?rel=0&feature=oembed&modestbranding=1&autohide=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>');
+		$("#ItemDetails .embed-content").html('<iframe src="https://www.youtube.com/embed/' + $(this).attr('data-video') + '?rel=0&feature=oembed&modestbranding=0&autohide=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>');
 		$("#ItemDetails h3").html($(this).attr('data-headline'));
 		$("#ItemDetails p").html($(this).attr('data-caption'));
 
@@ -50,4 +50,18 @@ function display_data() {
 		$('#ItemDetails').fadeOut();
 		$("#ItemDetails .embed-content").html('');
 	});
+	
+	$('#ItemDetails').click(function(evt){    
+       if(evt.target.id == "modal_cont")
+          return;
+       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       if($(evt.target).closest('#modal_cont').length)
+          return;             
+
+      //Do processing of click event here for every element except with id menu_content
+		$('#ItemDetails').fadeOut();
+		$("#ItemDetails .embed-content").html('');
+
+});
+	
 }

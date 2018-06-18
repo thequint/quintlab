@@ -47,7 +47,7 @@ function update_group(x) {
 
 	$(".point-table tbody").html('');
 	for (var i = 0; i < group_array.length; i++) {
-		$(".point-table tbody").append('<tr><td>' + group_array[i].Country + '</td><td>' + group_array[i].Wins + '</td><td>' + group_array[i].Draw + '</td><td>' + group_array[i].Points + '</td></tr>');
+		$(".point-table tbody").append('<tr><td>' + group_array[i].Country + '</td><td>' + group_array[i].Wins + '</td><td>' + group_array[i].Draw + '</td><td>' + group_array[i].Points + '</td><td>' + group_array[i].Loss + '</td><td>' + group_array[i].Goal_Difference + '</td></tr>');
 	}
 	
 			/*var time= 500;
