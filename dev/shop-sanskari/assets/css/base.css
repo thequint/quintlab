@@ -46,6 +46,9 @@ a {
 a:active, a:hover {
 	outline-width: 0;
 }
+::-webkit-scrollbar {
+	display: none;
+}
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;

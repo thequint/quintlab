@@ -155,7 +155,7 @@ button:focus {
 .quiz-template-02 .question-box:last-child {
 	padding-bottom: 30px;
     margin-bottom: 0;
-    /*border-bottom: 0;*/
+    border-bottom: 0;
 }
 .quiz-template-02 .question-box:after {
     content: " ";
@@ -290,9 +290,13 @@ button:focus {
 }
 .quiz-template-02 .question-box .question-options .demo-list li.right.option-list {
     position: relative;
-    color: #95c198;
-    border: 1px #95c198 solid
+    color: #65a266;
+    border: 1px #65a266 solid
 }
+.quiz-template-02 .question-box .question-options .demo-list li.right.option-list:hover {
+    color: #65a266;
+}
+
 .quiz-template-02 .question-box .question-options .demo-list li.right.option-list:after {
     position: absolute;
     right: 15px;
@@ -308,12 +312,12 @@ button:focus {
 .quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list {
     color: #fff;
     border: none;
-    background-color: #95c198;
+    background-color: #65a266;
 }
 .quiz-template-02 .question-box .question-options .demo-list.answered li.right.option-list.active {
     color: #fff;
     border: none;
-    background-color: #95c198;
+    background-color: #65a266;
 }
 .quiz-template-02 .question-box .question-options .demo-list.answered li.wrong.option-list.active {
     color: #fff;
@@ -333,6 +337,7 @@ button:focus {
     top: 23%;
     font-size: 24px;
 }
+
 .quiz-template-02 .question-box .question-options .demo-list.answered li.wrong.option-list.active {
     position: relative;
 }
@@ -356,13 +361,12 @@ button:focus {
 
 
 
-
 /* Answered Card */
 .quiz-template-02 .answered-text {
     font-size: 17px;
     color: #777;
     margin: 0 auto;
-    max-width: 520px;
+    /*max-width: 520px;*/
 }
 .quiz-template-02 .answered-text a {
     color: #0093C6  
@@ -372,8 +376,13 @@ button:focus {
 }
 .quiz-template-02 .answered-text .answered-description {
     padding-top: 10px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
+
+.quiz-template-02 .answered-text .answered-media {
+    margin-top: 10px;
+}
+
 .quiz-template-02 .answered-text .hyperlink-link {
     margin-bottom: 30px;
 }
@@ -389,6 +398,7 @@ button:focus {
 .quiz-template-02 .score-card {
     display: none;
     padding: 40px 30px 20px;
+    border-top: 5px #F7A500 solid
 }
 .quiz-template-02 .score-card--headline {
     margin-bottom: 20px;
@@ -452,8 +462,8 @@ button:focus {
 /* BTN */
 .quiz-template-02 .result-btn {
     width: 100%;
-    padding: 15px 35px 0;
-    margin-bottom: 15px;
+    padding: 0 35px 0;
+    margin-bottom: 25px;
 }
 .quiz-template-02 .result-btn:after {
     content: " ";
