@@ -7,8 +7,17 @@ $(window).ready(function () {
 		elevation: 50,
 		when: {
 			turned: function (e, page) {
-				console.log('Current view: ', $(this).turn('view'));
+				//console.log('Current view: ', $(this).turn('view'));
+				//console.log();
+				//alert('page'+page); 
+				
+				
+				$('.page').html(+page);
 			}
+			
+			
+			
+			
 		}
 	});
 });
@@ -20,5 +29,23 @@ $(window).bind('keydown', function (e) {
 		$("#magazine").turn("previous");
 	else if (e.keyCode === 39)
 		$("#magazine").turn("next");
+
+});
+
+
+
+$("#next").click(function (e) {
+	"use strict";
+	$("#magazine").turn("next");
+	return false;
+
+});
+
+$("#previous").click(function (e) {
+	"use strict";
+
+	e.stopPropagation();
+	$("#magazine").turn("previous");
+	return false;
 
 });
