@@ -27,56 +27,43 @@
 <link rel="stylesheet" href="assets/css/theme.css" media="all">
 <link rel="stylesheet" media="all" href="assets/css/responsive.css">
 	
-<script> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script><br>
+<script> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script>
 	
 	
-<style type="text/css">
-body{
-	background:#ccc;
-}
-#magazine{
-	width:100%;
-	height:100%;
-}
-#magazine .turn-page{
-	background-color:#ccc;
-	background-size:100% 100%;
-}
-	
-	
-	.container{
-	width:400px;
-	height:522px;
-}
-	
-	.page{
-		text-align: center;
-		padding: 10px;
-		color:#333;
-	}	
-	
-</style>
+
 	
 </head>
 <body>
 
 <div class="container">
-<div style="position: absolute; top: 0; right: -200px;">
-	<a id="previous" href="javascript:void(0);">Prev</a>&nbsp;&nbsp;
-	<a id="next" href="javascript:void(0);">Next</a>
-</div>	
+<div class="arrow arrow-left" id="previous_1"><i class="fa fa-angle-left"></i></div>
+<div class="arrow arrow-right" id="next_1"><i class="fa fa-angle-right"></i></div>
 <div id="magazine">
 	<div style="background-image:url(pages/01.jpg);"></div>
-	<div style="background-image:url(pages/02.jpg);"></div>
+	<div style="background-image:url(pages/blank.jpg);">
+	<div class="page-content">
+		<div class="embed-content">
+			<iframe class="youtube-video" data-src="https://www.youtube.com/embed/nI-CGinaAWE?rel=0&amp;controls=0&amp;showinfo=0" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<h2>Who Is Anukreethy Vas? Know How She Became Femina Miss India 2018</h2>
+		<p>Anukreethy Vas, a college student from Tamil Nadu, was crowned Femina Miss India 2018 on 19 June in a grand ceremony at the Sardar Vallabhbhai Patel Indoor Stadium in Mumbai. Vas had to beat 30 contestants to win this coveted title.</p>
+	</div>	
+	</div>
 	<div style="background-image:url(pages/03.jpg);"></div>
 	<div style="background-image:url(pages/04.jpg);"></div>
 	<div style="background-image:url(pages/05.jpg);"></div>
 	<div style="background-image:url(pages/06.jpg);"></div>
 </div>
-<div class="page"></div>
+	<footer>
+		
+		<div id="previous"><i class="fa fa-angle-left"></i></div>
+		<div class="page">2</div>
+		<div id="next"><i class="fa fa-angle-right"></i></div>
+	</footer>
 </div>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/turn.min.js"></script>
 <script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 </html>
+

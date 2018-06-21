@@ -417,21 +417,71 @@ background-position: 0vw 0vh;
 .for-mobile {
 	display: none !important;
 }
-
-
-
-
-.banner-wrapper{
-			height: 200px;
-			background-color: #b81319;
-			background-image: url(../images/banner-d.gif);
-			background-repeat: no-repeat;
-			background-position: center center;
-	}
-
-@media (max-width:980px) {
-	.banner-wrapper{
-	background-image: url(../images/banner-m.gif);
-	}
+.banner-wrapper {
+	height: 180px;
+	background-color: #b81319;
+	background-image: url(../images/banner-d.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	overflow: hidden;
+}
+.football-area {
+	width: 300px;
+	height: 180px;
+	margin: 0 auto;
+	border: 0px solid #fff;
+	position: relative;
+}
+.football-area span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+.football-area span {
+	animation: ball_move 7s infinite ease-in-out;
+	-moz-animation: ball_move 7s infinite ease-in-out;
+	-webkit-animation: ball_move 7s infinite ease-in-out;
+}
+.football-area span img {
+	animation-name: ball_spinner;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	transform-style: preserve-3d;
+	text-align: center;
+	position: absolute;
+}
+ @keyframes ball_spinner {
+ 0% {
+ transform:rotate(0deg);
+}
+ 100% {
+ transform:rotate(360deg);
+}
+}
+ @keyframes ball_move {
+ 0% {
+ transform: translate(0px, 100px);
+}
+ 25% {
+ transform: translate(100px, -500px);
+}
+ 50% {
+ transform: translate(300px, 100px);
+}
+ 75% {
+ transform: translate(300px, 100px);
+}
+ 100% {
+ transform: translate(300px, 100px);
+}
 }
 
+@media (max-width:980px) {
+.banner-wrapper {
+	background-image: url(../images/banner-m.jpg);
+}
+}

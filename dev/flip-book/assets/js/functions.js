@@ -13,9 +13,20 @@ $(window).ready(function () {
 				
 				
 				$('.page').html(+page);
+				
+				//$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+				
+				
+				$('.youtube-video').each(function(){
+					
+					var data_src =  $(this).attr('data-src');
+					
+					$('.youtube-video').attr('src', data_src);
+					
+				});
+				
+				
 			}
-			
-			
 			
 			
 		}
@@ -49,3 +60,22 @@ $("#previous").click(function (e) {
 	return false;
 
 });
+
+
+$("#next_1").click(function (e) {
+	"use strict";
+	$("#magazine").turn("next");
+	return false;
+
+});
+
+$("#previous_1").click(function (e) {
+	"use strict";
+
+	e.stopPropagation();
+	$("#magazine").turn("previous");
+	return false;
+
+});
+
+
