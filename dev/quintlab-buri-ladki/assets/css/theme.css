@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+body {
+	font-size: 16px;
+	color: #513c6a;
+	overflow-x: hidden;
+	background-color: #eee;
+	font-family: "cooper_hewittmedium", sans-serif;
+}
+
+@font-face {
+    font-family: 'cooper_hewittmedium';
+    src: url('../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cooper_hewittsemibold';
+    src: url('../fonts/cooperhewitt-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cooper_hewittbold';
+    src: url('../fonts/cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+p {
+	line-height: 125%;
+	margin-bottom: 10px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-family: "cooper_hewittsemibold", sans-serif;
+}
+.main-wrap {
+	margin: 0 auto;
+	position: relative;
+	width: 800px;
+	background-color: #fff8e9;
+}
+.main-wrap:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	background-image: url(../images/pattern-01.png);
+	background-repeat: repeat;
+	background-position: left;
+}
+
+.block {
+
+}
+.block .first {
+	text-align: center;
+}
+.block__element {
+
+}
+.block--modifier {
+	position: relative;
+}
+.block__element--logo {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	width: 40px;
+}
+.block__element--circle-logo {
+	margin: 0 auto;
+	padding: 8% 35px 0;
+	width: 160px;
+	height: 160px;
+	background-color: #fa9f00;
+	border-radius: 100%;
+	display: inline-block;
+}
+.block__element--sub-headline {
+	margin: 10px auto 0;
+	max-width: 350px;
+	color: #513c6a;
+	font-size: 18px;
+	font-family: "cooper_hewittsemibold", sans-serif;
+}
+.block__element--continue {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.block__element--continue a {
+	color: #513c6a;
+}
+.block__element--continue .btn-continue {
+	margin: 0 auto;
+	width: 33px;
+	display: block;
+	margin-bottom: 7px;
+}
+
+
+
+.block__element--header {
+	position: relative;
+	padding-bottom: 15px;
+	border-bottom: 1px #513c6a solid;
+}
+.block__element--header:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.block__element--header .quint-logo {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 40px;
+	float: left;
+}
+.block__element--header .buri-ladki-logo {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 110px;
+	float: left;
+}
+
+.block__element--headline {
+	padding: 8px 20px;
+	color: #007762;
+	font-size: 34px;
+	text-transform: uppercase;
+	font-family: "cooper_hewittbold", sans-serif;
+}
+
+.block__element--content {
+	padding: 30px 30px 50px; 
+	color: #fff;
+	font-size: 30px;
+}
+.block__element--content h3 {
+	font-size: 32px;
+}
+.second .block__element--content {
+	background-color: rgba(244, 111, 34, 1.0);
+}
+.third .block__element--content {
+	background-color: #007762;
+}
+.forth .block__element--content {
+	background-color: #009b7d;
+}
+.forth .block__element--content.second-section {
+	background-color: #3e9a50;
+}
+
+
+.forth .block__element--content span {
+	width: 42px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    color: #007762;
+    font-family: "cooper_hewittbold", sans-serif;
+}
+
+
+.block__element--media {
+	margin: -60px auto 0;
+	max-width: 650px;
+	padding-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
