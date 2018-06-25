@@ -4,31 +4,32 @@ $(window).ready(function () {
 		display: 'single',
 		acceleration: true,
 		gradients: !$.isTouch,
+		//acceleration: !isChrome(),
 		elevation: 50,
 		when: {
 			turned: function (e, page) {
 				//console.log('Current view: ', $(this).turn('view'));
 				//console.log();
 				//alert('page'+page); 
-				
-				
+
+
 				$('.page').html(+page);
-				
+
 				//$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-				
-				
-				$('.youtube-video').each(function(){
-					
-					var data_src =  $(this).attr('data-src');
-					
+
+
+				$('.youtube-video').each(function () {
+
+					var data_src = $(this).attr('data-src');
+
 					$('.youtube-video').attr('src', data_src);
-					
+
 				});
-				
-				
+
+
 			}
-			
-			
+
+
 		}
 	});
 });
@@ -77,5 +78,3 @@ $("#previous_1").click(function (e) {
 	return false;
 
 });
-
-
