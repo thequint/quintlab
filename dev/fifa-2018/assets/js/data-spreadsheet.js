@@ -75,5 +75,34 @@ function display_data() {
 	// Upcoming matches
 
 	$('.upcoming-mathes ul.team-details').append('<li><div class="team-name">' + sheet_data[0].Upcoming_1A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_1B + '</div></li><li><div class="team-name">' + sheet_data[0].Upcoming_2A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_2B + '</div></li>');
-
+	
+	
+	// Previous matches for Cube
+	
+	$('.data-views').append('<li class="is-previous"><div class="single-content"><h3>Previously</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Previous_1A + ' <span>' + sheet_data[1].Previous_1A + '</span></div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Previous_1B + '<span>' + sheet_data[1].Previous_1B + '</span></div></div></div></li><li class="is-previous"><div class="single-content"><h3>Previously</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Previous_2A + '<span>' + sheet_data[1].Previous_2A + '</span></div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Previous_2B + '<span>' + sheet_data[1].Previous_2B + '</span></div></div></div></li><li class="is-upcoming"><div class="single-content"><h3>Up Next</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Upcoming_1A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_1B + '</div></div></div></li><li class="is-upcoming"><div class="single-content"><h3>Up Next</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Upcoming_2A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_2B + '</div></div></div></li>');
+	
+	
+	// Upcoming matches for Cube
+	/*
+	$('.data-views').append('<li class="is-upcoming"><div class="single-content"><h3>Up Next</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Upcoming_1A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_1B + '</div></div></div></li><li class="is-upcoming"><div class="single-content"><h3>Up Next</h3><div class="team-detail"><div class="team-name">' + sheet_data[0].Upcoming_2A + '</div><div class="vs">VS</div><div class="team-name">' + sheet_data[0].Upcoming_2B + '</div></div></div></li>');
+	*/
+	
+	
 }
+
+var current_score=0;
+
+ setInterval(function(){ 
+	 if(current_score==3)
+		 {
+			 current_score=0;
+		 }
+	 else{
+	 current_score=current_score+1;
+	 }
+	 $(".data-views li").hide();
+	 $(".data-views li").eq(current_score).show();
+	  		//console.log(current_score);
+
+ 
+ }, 2000);
