@@ -7,8 +7,7 @@ body, .cube_cont {
 	background: transparent;
 }
 .cube_cont {
-	top: 120px;  
-	
+	top: 120px;
 	left: 120px;
 	width: 0px;
 }
@@ -17,7 +16,7 @@ body, .cube_cont {
 }
 .cube {
 	transform-style: preserve-3d;
-	animation: ani 2s ease-in-out infinite;
+	animation: ani 6s ease-in-out infinite;
 }
 img {
 	width: 100%;
@@ -58,12 +57,21 @@ img.score {
  --m: -1;
 }
  @keyframes ani {
- 0% {
+0% {
  transform: rotateY(0deg) rotateX(0deg);
 }
- 50% {
+	 	 
+ 10% {
  transform: rotateY(90deg) rotateX(90deg) scale3d(0.5, 0.5, 0.5);
 }
+ 40% {
+ transform: rotateY(90deg) rotateX(90deg) scale3d(0.5, 0.5, 0.5);
+}
+	 
+50% {
+ transform: rotateY(180deg) rotateX(180deg);
+}
+	 	 
  100% {
  transform: rotateY(180deg) rotateX(180deg);
 }
@@ -72,10 +80,10 @@ img.score {
  0% {
  transform: rotateY(0deg) rotateX(0deg);
 }
- 50% {
+40% {
  transform: rotateY(0deg) rotateX(0deg);
 }
- 50.1% {
+ 40.1% {
  transform: rotateY(180deg) rotateX(180deg);
 }
  100% {
@@ -91,7 +99,7 @@ img.score {
 	top: 0;
 	left: 0;
 	transform: rotate(180deg);
-	animation: ani_2 2s ease-in-out infinite;
+	animation: ani_2 6s ease-in-out infinite;
 }
 
 .data-views li{
