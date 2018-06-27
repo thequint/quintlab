@@ -93,12 +93,17 @@ var current_score=0;
 	 else{
 	 current_score=current_score+1;
 	 }
+	 setTimeout(function(){
 	 $(".data-views li").hide();
 	 $(".data-views li").eq(current_score).show();
+
+}, 1000);
 	  		//console.log(current_score);
 
  
- }, 2000);
+ }, 6000);
+
+
 
 
 	$('.close-modal').click(function(){
