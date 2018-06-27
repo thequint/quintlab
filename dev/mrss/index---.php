@@ -1,4 +1,3 @@
-
 <?php
 /**
  * bcls-proxy.php - proxy for Brightcove RESTful APIs
@@ -16,10 +15,13 @@
  *
  * @returns {string} $response - JSON response received from the API
  */
+
 // CORS enablement
 header("Access-Control-Allow-Origin: *");
+
 // set up request for access token
 $data = array();
+
 $client_id     = 'a43897ed-e15c-4adf-9244-f205d3ef9091';
 $client_secret = 'Jbq_AjozKI-eITwacHxQF-PurGA7LJp-h7oiILw1c1iES8KcfnJfNQjD5SNBUGxaiaBvVmOvGX6aJXx8gwCxng';
 $auth_string   = "{$client_id}:{$client_secret}";
@@ -37,47 +39,35 @@ curl_setopt_array($ch, array(
     ));
 $response = curl_exec($ch);
 curl_close($ch);
+
 // Check for errors
 if ($response === FALSE) {
     die(curl_error($ch));
 }
+
 // Decode the response
 $responseData = json_decode($response, TRUE);
 $access_token = $responseData["access_token"];
-//echo($access_token);
-// See (?) http://php.net/manual/en/function.filter-input-array.php
-$myPostArgs = filter_input_array(INPUT_POST);
-// foreach($myPostArgs as $key => $value)
-// {
-//     echo($key.": ".$value);
-//     echo("\n");
-// }
-//echo("\n\n");
+
 // set up the API call
 // get data
-if ($myPostArgs["requestBody"]) {
-    $data = json_decode($myPostArgs["requestBody"]);
-    //echo($data);
+if ($_POST["requestBody"]) {
+    $data = json_decode($_POST["requestBody"]);
 } else {
-	//echo("no request body\n\n");
     $data = array();
 }
 // get request type or default to GET
-if ($myPostArgs["requestType"]) {
-    $method = $myPostArgs["requestType"];
-    //echo($method."\n\n");
+if ($_POST["requestType"]) {
+    $method = $_POST["requestType"];
 } else {
     $method = "GET";
 }
-if (strpos($myPostArgs["url"], 'api.brightcove.com') == false) {
+
+if (strpos($_POST["url"], 'api.brightcove.com') == false) {
     exit('Only requests to Brightcove APIs are accepted by this proxy');
 }
 // get the URL and authorization info from the form data
-$request = $myPostArgs["url"];
-if (strpos($request, '%3A') == true) {
-	$request = urldecode($request);
-}
-//echo($request."\n\n");
+$request = $_POST["url"];
 //send the http request
 $ch = curl_init($request);
 curl_setopt_array($ch, array(
@@ -92,18 +82,20 @@ curl_setopt_array($ch, array(
     ));
 $response = curl_exec($ch);
 curl_close($ch);
+
 // Check for errors
 if ($response === FALSE) {
     $logEntry = "\nError:\n".
     "\n".date("Y-m-d H:i:s")." UTC \n"
     .$response;
     $logFileLocation = "log.txt";
-    $fileHandle      = fopen($logFileLocation, 'a') or die("hello rob");
+    $fileHandle      = fopen($logFileLocation, 'a') or die("-1");
     fwrite($fileHandle, $logEntry);
     fclose($fileHandle);
     echo "Error: there was a problem with your API call"+
     die(curl_error($ch));
 }
+
 // Decode the response
 // $responseData = json_decode($response, TRUE);
 // return the response to the AJAX caller
