@@ -14,6 +14,18 @@ body {
 	height: auto;
 	background-color: #e5e6e8;
 }
+
+body.hi {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	color: #000;
+	font-size: 17px;
+	width: 100%;
+	height: auto;
+	background-color: #e5e6e8;
+}
+
+
 p {
 	line-height: 130%;
 	margin-bottom: 25px;
@@ -84,4 +96,31 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 18px;
 	line-height: 120%;
 	margin: 0 0 0px 0;
+}
+
+
+body.hi .doctors-slider figcaption h3 {
+	color: #de346d;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 21px;
+	line-height: 120%;
+	margin: 0 0 5px 0;
+	font-weight: 700;
+}
+body.hi .doctors-slider figcaption h4 {
+	color: #333;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 18px;
+	line-height: 120%;
+	margin: 0 0 0px 0;
+}
+
+body.hi .wrapper-headline {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 48px;
+	line-height: 120%;
+	text-transform: capitalize;
+	margin-bottom: 24px;
+	color: #43dbc0;
+	font-weight: 700;
 }
