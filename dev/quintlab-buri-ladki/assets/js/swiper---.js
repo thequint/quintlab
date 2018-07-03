@@ -1849,10 +1849,19 @@
       x = Math.floor(x);
       y = Math.floor(y);
     }
-
+if(($(".main-slider.swiper-slide-active").index()==$($wrapperEl).closest(".main-slider").index())||$($wrapperEl).closest(".main-slider").index()==undefined )
+     {
+     console.log("yes");
     if (!params.virtualTranslate) {
+      
+     // console.log(/*$wrapperEl.find("p").html()+"|"+*/ $(".main-slider.swiper-slide-active").index());
+      $(".wow").css({"visibility":'',"animation-name":''});
+     
+     // console.log($(".main-slider.swiper-slide-active").index()+"|"+$($wrapperEl).closest(".main-slider").index());
+     //console.log($wrapperEl);
       if (Support.transforms3d) { $wrapperEl.transform(("translate3d(" + x + "px, " + y + "px, " + z + "px)")); }
       else { $wrapperEl.transform(("translate(" + x + "px, " + y + "px)")); }
+    
     }
     swiper.previousTranslate = swiper.translate;
     swiper.translate = swiper.isHorizontal() ? x : y;
@@ -1870,6 +1879,11 @@
     }
 
     swiper.emit('setTranslate', swiper.translate, byController);
+  }
+  else
+  {
+    console.log("do nothing")
+  }
   }
 
   function minTranslate () {
@@ -4766,7 +4780,7 @@
       }
       if ($nextEl && $nextEl.length > 0) {
         if (swiper.isEnd) {
-          $nextEl.addClass(params.disabledClass);
+         // $nextEl.addClass(params.disabledClass);
         } else {
           $nextEl.removeClass(params.disabledClass);
         }
@@ -4805,8 +4819,11 @@
 
       if ($nextEl && $nextEl.length > 0) {
         $nextEl.on('click', function (e) {
+
           e.preventDefault();
+          swiper.isEnd=false; // need to test, might have issues
           if (swiper.isEnd && !swiper.params.loop) { return; }
+
           swiper.slideNext();
         });
       }
@@ -5019,6 +5036,7 @@
         } else {
           scaleY = scale;
         }
+        console.log("s2");
         $el.find(("." + (params.progressbarFillClass))).transform(("translate3d(0,0,0) scaleX(" + scaleX + ") scaleY(" + scaleY + ")")).transition(swiper.params.speed);
       }
       if (params.type === 'custom' && params.renderCustom) {
@@ -5108,31 +5126,11 @@
       }
 
       if (params.clickable) {
-/*
-        $(".slide-next").on('click', function (e) { // custom horizontal slider
-          e.preventDefault();
-
-          var index =1 * swiper.params.slidesPerGroup;
-         // console.log("clicked"+index+"|"+$(this).index()+"|"+swiper.params.slidesPerGroup);
-         if (swiper.params.loop) { index += swiper.loopedSlides; }
-         console.log("index"+index);
-          swiper.slideTo(index);
-
-        })*/
-
         $el.on('click', ("." + (params.bulletClass)), function onClick(e) {
-
-          // show correct arrow
-
-
           e.preventDefault();
-
           var index = $(this).index() * swiper.params.slidesPerGroup;
-          console.log("clicked"+index+"|"+$(this).index()+"|"+swiper.params.slidesPerGroup+"|");
           if (swiper.params.loop) { index += swiper.loopedSlides; }
-
           swiper.slideTo(index);
-           reset_arrows();
         });
       }
 
@@ -5282,6 +5280,7 @@
       }
       if (swiper.isHorizontal()) {
         if (Support.transforms3d) {
+          console.log("s3");
           $dragEl.transform(("translate3d(" + newPos + "px, 0, 0)"));
         } else {
           $dragEl.transform(("translateX(" + newPos + "px)"));
@@ -5289,6 +5288,7 @@
         $dragEl[0].style.width = newSize + "px";
       } else {
         if (Support.transforms3d) {
+          console.log("s4");
           $dragEl.transform(("translate3d(0px, " + newPos + "px, 0)"));
         } else {
           $dragEl.transform(("translateY(" + newPos + "px)"));
@@ -5640,9 +5640,11 @@
         $el[0].style.opacity = currentOpacity;
       }
       if (typeof scale === 'undefined' || scale === null) {
+        console.log("s5");
         $el.transform(("translate3d(" + x + ", " + y + ", 0px)"));
       } else {
         var currentScale = scale - ((scale - 1) * (1 - Math.abs(progress)));
+        console.log("s6");
         $el.transform(("translate3d(" + x + ", " + y + ", 0px) scale(" + currentScale + ")"));
       }
     },
@@ -5788,6 +5790,7 @@
       if (zoom.scale < params.minRatio) {
         zoom.scale = (params.minRatio + 1) - (Math.pow( ((params.minRatio - zoom.scale) + 1), 0.5 ));
       }
+      console.log("s7");
       gesture.$imageEl.transform(("translate3d(0,0,0) scale(" + (zoom.scale) + ")"));
     },
     onGestureEnd: function onGestureEnd(e) {
@@ -5807,6 +5810,7 @@
       }
       if (!gesture.$imageEl || gesture.$imageEl.length === 0) { return; }
       zoom.scale = Math.max(Math.min(zoom.scale, gesture.maxRatio), params.minRatio);
+      console.log("s8");
       gesture.$imageEl.transition(swiper.params.speed).transform(("translate3d(0,0,0) scale(" + (zoom.scale) + ")"));
       zoom.currentScale = zoom.scale;
       zoom.isScaling = false;
@@ -5914,7 +5918,7 @@
       velocity.prevPositionX = image.touchesCurrent.x;
       velocity.prevPositionY = image.touchesCurrent.y;
       velocity.prevTime = Date.now();
-
+      console.log("s9");
       gesture.$imageWrapEl.transform(("translate3d(" + (image.currentX) + "px, " + (image.currentY) + "px,0)"));
     },
     onTouchEnd: function onTouchEnd() {
@@ -5955,7 +5959,7 @@
       image.maxY = -image.minY;
       image.currentX = Math.max(Math.min(image.currentX, image.maxX), image.minX);
       image.currentY = Math.max(Math.min(image.currentY, image.maxY), image.minY);
-
+      console.log("s10");
       gesture.$imageWrapEl.transition(momentumDuration).transform(("translate3d(" + (image.currentX) + "px, " + (image.currentY) + "px,0)"));
     },
     onTransitionEnd: function onTransitionEnd() {
@@ -5963,7 +5967,9 @@
       var zoom = swiper.zoom;
       var gesture = zoom.gesture;
       if (gesture.$slideEl && swiper.previousIndex !== swiper.activeIndex) {
+        console.log("s11");
         gesture.$imageEl.transform('translate3d(0,0,0) scale(1)');
+        console.log("s12");
         gesture.$imageWrapEl.transform('translate3d(0,0,0)');
         gesture.$slideEl = undefined;
         gesture.$imageEl = undefined;
@@ -6070,7 +6076,9 @@
         translateX = 0;
         translateY = 0;
       }
+      console.log("s13");
       gesture.$imageWrapEl.transition(300).transform(("translate3d(" + translateX + "px, " + translateY + "px,0)"));
+      console.log("s14");
       gesture.$imageEl.transition(300).transform(("translate3d(0,0,0) scale(" + (zoom.scale) + ")"));
     },
     out: function out() {
@@ -6089,7 +6097,9 @@
 
       zoom.scale = 1;
       zoom.currentScale = 1;
+      console.log("s15");
       gesture.$imageWrapEl.transition(300).transform('translate3d(0,0,0)');
+      console.log("s16");
       gesture.$imageEl.transition(300).transform('translate3d(0,0,0) scale(1)');
       gesture.$slideEl.removeClass(("" + (params.zoomedSlideClass)));
       gesture.$slideEl = undefined;
@@ -6637,7 +6647,7 @@
       return $el;
     },
     disableEl: function disableEl($el) {
-      $el.attr('aria-disabled', true);
+      //$el.attr('aria-disabled', true);
       return $el;
     },
     enableEl: function enableEl($el) {
@@ -7207,6 +7217,7 @@
         var slideOpacity = swiper.params.fadeEffect.crossFade ?
           Math.max(1 - Math.abs($slideEl[0].progress), 0) :
           1 + Math.min(Math.max($slideEl[0].progress, -1), 0);
+          console.log("s17");
         $slideEl
           .css({
             opacity: slideOpacity,
@@ -7348,7 +7359,7 @@
           ty = tx;
           tx = 0;
         }
-
+        console.log("s18");
         var transform = "rotateX(" + (isHorizontal ? 0 : -slideAngle) + "deg) rotateY(" + (isHorizontal ? slideAngle : 0) + "deg) translate3d(" + tx + "px, " + ty + "px, " + tz + "px)";
         if (progress <= 1 && progress > -1) {
           wrapperRotate = (slideIndex * 90) + (progress * 90);
@@ -7380,6 +7391,7 @@
 
       if (params.shadow) {
         if (isHorizontal) {
+          console.log("s19");
           $cubeShadowEl.transform(("translate3d(0px, " + ((swiperWidth / 2) + params.shadowOffset) + "px, " + (-swiperWidth / 2) + "px) rotateX(90deg) rotateZ(0deg) scale(" + (params.shadowScale) + ")"));
         } else {
           var shadowAngle = Math.abs(wrapperRotate) - (Math.floor(Math.abs(wrapperRotate) / 90) * 90);
@@ -7390,10 +7402,12 @@
           var scale1 = params.shadowScale;
           var scale2 = params.shadowScale / multiplier;
           var offset = params.shadowOffset;
+          console.log("s20");
           $cubeShadowEl.transform(("scale3d(" + scale1 + ", 1, " + scale2 + ") translate3d(0px, " + ((swiperHeight / 2) + offset) + "px, " + (-swiperHeight / 2 / scale2) + "px) rotateX(-90deg)"));
         }
       }
       var zFactor = (Browser.isSafari || Browser.isUiWebView) ? (-swiperSize / 2) : 0;
+      console.log("s21");
       $wrapperEl
         .transform(("translate3d(0px,0," + zFactor + "px) rotateX(" + (swiper.isHorizontal() ? 0 : wrapperRotate) + "deg) rotateY(" + (swiper.isHorizontal() ? -wrapperRotate : 0) + "deg)"));
     },
@@ -7505,6 +7519,7 @@
           if (shadowBefore.length) { shadowBefore[0].style.opacity = Math.max(-progress, 0); }
           if (shadowAfter.length) { shadowAfter[0].style.opacity = Math.max(progress, 0); }
         }
+        console.log("s22");
         $slideEl
           .transform(("translate3d(" + tx + "px, " + ty + "px, 0px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)"));
       }
@@ -7619,6 +7634,7 @@
         if (Math.abs(rotateY) < 0.001) { rotateY = 0; }
         if (Math.abs(rotateX) < 0.001) { rotateX = 0; }
 
+        console.log("s23");
         var slideTransform = "translate3d(" + translateX + "px," + translateY + "px," + translateZ + "px)  rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
 
         $slideEl.transform(slideTransform);
@@ -7736,7 +7752,4 @@
 
   return Swiper;
 
-  
-
 })));
-
