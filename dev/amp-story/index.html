@@ -78,7 +78,434 @@ body {
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
-<link href="assets/css/theme.css" rel="stylesheet">
+<!-- <link href="assets/css/theme.css" rel="stylesheet"> -->
+<style amp-custom>
+body {
+    font-size: 100%;
+    font-weight: 400;
+}
+amp-story {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+amp-story-page {
+    background-color: #000;
+}
+h1 {
+    font-weight: bold;
+    font-size: 2.875em;
+    font-weight: normal;
+    line-height: 1.174;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+q {
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+/* Home Cover #1 */
+
+.home-cover-1 {
+
+}
+.home-cover-1 .cover-img {
+    position: relative;
+}
+.home-cover-1 .cover-img::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
+.home-cover-1 .home-wrap {
+    /*align-content: center;*/
+}
+.home-cover-1 .home-wrap__intro {
+    align-content: center;
+    position: absolute;
+    bottom: 30%;
+    left: 15px
+}
+.home-cover-1 .home-wrap__intro--logo {
+    margin-bottom: 5px !important;
+}
+.home-cover-1 .home-wrap__intro--logo .story-logo {
+    width: 90px;
+    height: 55px;
+}
+.home-cover-1 .home-wrap__intro--headline {
+    margin-bottom: 5px !important;
+}
+.home-cover-1 .home-wrap__intro--headline .story-category {
+    font-size: .75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.home-cover-1 .home-wrap__intro--headline .story-title {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.home-cover-1 .home-wrap__intro--byline {
+
+}
+.home-cover-1 .home-wrap__intro--byline .story-author {
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.home-cover-1 .home-wrap__intro--byline .publish-date {
+    font-size: .5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+
+/* Home Cover #2 */
+
+.home-cover-2 {
+
+}
+.home-cover-2 .cover-img {
+    position: relative;
+}
+.home-cover-2 .cover-img::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
+.home-cover-2 .home-wrap {
+    /*align-content: center;*/
+}
+.home-cover-2 .home-wrap__intro {
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%
+}
+.home-cover-2 .home-wrap__intro--logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-bottom: 5px !important;
+}
+.home-cover-2 .home-wrap__intro--logo .story-logo {
+    width: 90px;
+    height: 55px;
+}
+.home-cover-2 .home-wrap__intro--headline {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 0 10px;
+    margin-bottom: 5px !important;
+}
+.home-cover-2 .home-wrap__intro--headline .story-category {
+    display: none;
+    font-size: .75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.home-cover-2 .home-wrap__intro--headline .story-title {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.home-cover-2 .home-wrap__intro--byline {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+.home-cover-2 .home-wrap__intro--byline .story-author {
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.home-cover-2 .home-wrap__intro--byline .publish-date {
+    font-size: .5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Story Temp #1 */
+.amp-story-1 {
+
+}
+.amp-story-1 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-1 .amp-story--content .story-content {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 10px;
+    max-width: 90%;
+    /*border-right: 5px #ffce00 solid;*/
+    background-color: rgba(0,0,0, 0.5);
+}
+.amp-story-1 .amp-story--content .story-content::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: " ";
+    width: 5px;
+    height: 100%;
+    background-color: #ffce00;
+}
+.amp-story-1 .amp-story--content .story-content h2 {
+    font-size: 1.3em
+}
+.amp-story-1 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+
+/* Story Temp #2 */
+.amp-story-2 {
+
+}
+.amp-story-2 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-2 .amp-story--content .story-content {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    padding: 10px;
+    max-width: 90%;
+    background-color: rgba(0,0,0, 0.5);
+}
+.amp-story-2 .amp-story--content .story-content::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 100%;
+    height: 5px;
+    background-color: #ffce00;
+}
+.amp-story-2 .amp-story--content .story-content h2 {
+    font-size: 1.3em
+}
+.amp-story-2 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #3 */
+.amp-story-3 {
+
+}
+.amp-story-3 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-3 .amp-story--content .story-content {
+    margin: 0 auto !important;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    max-width: 80%;
+    text-align: center;
+}
+.amp-story-3 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-3 .amp-story--content .story-content h2 {
+    font-size: 1.3em
+}
+.amp-story-3 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #4 */
+.amp-story-4 {
+
+}
+.amp-story-4 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-4 .amp-story--content {
+    align-content: center;
+}
+.amp-story-4 .amp-story--content .story-content {
+    margin: 0 auto !important;
+    /*position: absolute;*/
+    position: relative;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    max-width: 100%;
+    text-align: center;
+}
+.amp-story-4 .amp-story--content .story-content::before {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-4 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-4 .amp-story--content .story-content h2 {
+    font-size: 1.3em
+}
+.amp-story-4 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #5 */
+.amp-story-5 {
+
+}
+.amp-story-5 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-5 .amp-story--content .story-content {
+    margin: 0 auto !important;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+.amp-story-5 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-5 .amp-story--content .story-content h2 {
+    font-size: 1.3em
+}
+.amp-story-5 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+/*amp-story-grid-layer.bottom {
+    align-content: end;
+}
+
+amp-story-grid-layer.noedge {
+    padding: 0px;
+}
+
+amp-story-grid-layer.center-text {
+    align-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.banner-text {
+    text-align: center;
+    background-color: #000;
+    line-height: 2em;
+}*/
+<style>
 
 </head>
 
