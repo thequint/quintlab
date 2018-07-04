@@ -307,20 +307,35 @@ q {
 	width: 30px;
 	height: 40px;
 }
+.amp-story-4 .amp-story--content {
+	align-content: center;
+}
 .amp-story-4 .amp-story--content .story-content {
 	margin: 0 auto !important;
-	position: absolute;
+	/*position: absolute;*/
+	position: relative;
 	bottom: 30px;
 	left: 0;
 	right: 0;
 	padding: 10px;
-	max-width: 90%;
+	max-width: 100%;
 	text-align: center;
+}
+.amp-story-4 .amp-story--content .story-content::before {
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	content: " ";
+	width: 66%;
+	height: 3px;
+	background-color: #ffce00;
 }
 .amp-story-4 .amp-story--content .story-content::after {
 	margin: 0 auto;
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	content: " ";
@@ -352,35 +367,20 @@ q {
 	width: 30px;
 	height: 40px;
 }
-.amp-story-5 .amp-story--content {
-	align-content: center;
-}
 .amp-story-5 .amp-story--content .story-content {
 	margin: 0 auto !important;
-	/*position: absolute;*/
-	position: relative;
+	position: absolute;
 	bottom: 30px;
 	left: 0;
 	right: 0;
 	padding: 10px;
-	max-width: 100%;
+	max-width: 90%;
 	text-align: center;
-}
-.amp-story-5 .amp-story--content .story-content::before {
-	margin: 0 auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	content: " ";
-	width: 66%;
-	height: 3px;
-	background-color: #ffce00;
 }
 .amp-story-5 .amp-story--content .story-content::after {
 	margin: 0 auto;
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	right: 0;
 	content: " ";
@@ -400,6 +400,9 @@ q {
 	text-align: right;
 	display: inline-block;
 }
+
+
+
 
 
 
