@@ -1,0 +1,30 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": [
+    {
+      "provider": "facebook",
+      "app_id": "425030461275044"
+    },
+    {
+      "provider": "twitter",
+      "text": "This is custom share text that I would like for the Twitter platform",
+      "url" :"CANONICAL_URL"
+    },
+    {
+      "provider": "whatsapp",
+      "text": "This is custom share text that I would like for the Twitter platform",
+      "url" :"CANONICAL_URL"
+    },
+    {
+      "provider": "email",
+      "text": "This is custom share text that I would like for the Twitter platform",
+      "url" :"CANONICAL_URL"
+    }
+  ],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More to read"
+    }
+  ]
+}
