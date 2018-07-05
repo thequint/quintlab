@@ -433,27 +433,6 @@ amp-story-grid-layer.overlay-bg::after {
     line-height: 2em;
 }
 </style>
-
-<amp-analytics type="googleanalytics">
-<script type="application/json">
-{
-  "vars": {
-    "account": "UA-58739020-1"
-  },
-  "triggers": {
-    "trackPageviewWithCustomUrl": {
-      "on": "visible",
-      "request": "pageview",
-      "vars": {
-        "title": "My page",
-        "documentLocation": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/"
-      }
-    }
-  }
-}
-</script>
-</amp-analytics>
-
 </head>
 
 <body>
@@ -608,6 +587,26 @@ amp-story-grid-layer.overlay-bg::after {
     
       <amp-story-bookend src="bookend.json" layout="nodisplay"></amp-story-bookend>
 </amp-story>
+
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-58739020-1"
+  },
+  "triggers": {
+    "trackPageviewWithCustomUrl": {
+      "on": "visible",
+      "request": "pageview",
+      "vars": {
+        "title": "My page",
+        "documentLocation": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/"
+      }
+    }
+  }
+}
+</script>
+</amp-analytics>
 </body>
 
 </html>
