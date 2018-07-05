@@ -1,0 +1,521 @@
+<!doctype html>
+<html ⚡>
+<head>
+<meta charset="utf-8">
+<title>AMP Story</title>
+<link rel="canonical" href="index.html">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-video"
+src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+<script async custom-element="amp-story"
+src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
+<style amp-custom>
+body {
+    font-size: 100%;
+    font-weight: 500
+}
+amp-story {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+amp-story-page {
+    background-color: #000;
+}
+h1 {
+    font-size: 1.4em;
+    line-height: 1.15em;
+}
+h3 {
+    font-size: 1.3em;
+    line-height: 1.15em;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.125em;
+    line-height: 1.25em;
+    font-weight: 400
+}
+q {
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+/* Home Cover #1 */
+.home-cover-1 .home-wrap {
+    /*align-content: center;*/
+}
+.home-cover-1 .home-wrap__intro {
+    align-content: center;
+    position: absolute;
+    bottom: 30%;
+    left: 15px;
+    width: 90%
+}
+.home-cover-1 .home-wrap__intro--logo {
+    padding-bottom: 3px;
+}
+.home-cover-1 .home-wrap__intro--logo .story-logo {
+    width: 90px;
+    height: 55px;
+}
+.home-cover-1 .home-wrap__intro--headline {
+    padding-bottom: 3px;
+}
+.home-cover-1 .home-wrap__intro--headline .story-category {
+    font-size: .75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.home-cover-1 .home-wrap__intro--headline .story-title {
+    text-transform: uppercase;
+}
+.home-cover-1 .home-wrap__intro--byline {
+
+}
+.home-cover-1 .home-wrap__intro--byline .story-author {
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.home-cover-1 .home-wrap__intro--byline .publish-date {
+    font-size: .5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Overlay BG color */
+amp-story-grid-layer.overlay-bg {
+    position: relative;
+}
+amp-story-grid-layer.overlay-bg::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+/* Home Cover #2 */
+.home-cover-2 .home-wrap {
+    /*align-content: center;*/
+}
+.home-cover-2 .home-wrap__intro {
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%
+}
+.home-cover-2 .home-wrap__intro--logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-bottom: 3px;
+}
+.home-cover-2 .home-wrap__intro--logo .story-logo {
+    width: 90px;
+    height: 55px;
+}
+.home-cover-2 .home-wrap__intro--headline {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 0 10px;
+    padding-bottom: 5px;
+}
+.home-cover-2 .home-wrap__intro--headline .story-category {
+    display: none;
+    font-size: .75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.home-cover-2 .home-wrap__intro--headline .story-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+.home-cover-2 .home-wrap__intro--byline {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+.home-cover-2 .home-wrap__intro--byline .story-author {
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.home-cover-2 .home-wrap__intro--byline .publish-date {
+    font-size: .5em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Story Temp #1 */
+.amp-story-1 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-1 .amp-story--content .story-content {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 10px;
+    max-width: 90%;
+    background-color: rgba(0,0,0, 0.5);
+}
+.amp-story-1 .amp-story--content .story-content::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: " ";
+    width: 5px;
+    height: 100%;
+    background-color: #ffce00;
+}
+.amp-story-1 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #2 */
+.amp-story-2 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-2 .amp-story--content .story-content {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    padding: 10px;
+    max-width: 90%;
+    background-color: rgba(0,0,0, 0.5);
+}
+.amp-story-2 .amp-story--content .story-content::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 100%;
+    height: 5px;
+    background-color: #ffce00;
+}
+.amp-story-2 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #3 */
+.amp-story-3 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-3 .amp-story--content .story-content {
+    margin: 0 auto;
+    position: absolute;
+    top: 65px;
+    left: 10%;
+    right: 0;
+    padding: 10px;
+    max-width: 80%;
+    text-align: center;
+}
+.amp-story-3 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-3 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #4 */
+.amp-story-4 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-4 .amp-story--content {
+    align-content: center;
+}
+.amp-story-4 .amp-story--content .story-content {
+    margin: 0 auto;
+    /*position: absolute;*/
+    position: relative;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    max-width: 100%;
+    text-align: center;
+}
+.amp-story-4 .amp-story--content .story-content::before {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-4 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-4 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+
+/* Story Temp #5 */
+.amp-story-5 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-5 .amp-story--content .story-content {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30px;
+    left: 5%;
+    right: 0;
+    padding: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+.amp-story-5 .amp-story--content .story-content::after {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 66%;
+    height: 3px;
+    background-color: #ffce00;
+}
+.amp-story-5 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
+</style>
+</head>
+
+<body>
+<amp-story standalone title="AMP Story" publisher="AMP tutorials" publisher-logo-src="assets/images/AMP-Brand-White-Icon.svg" poster-portrait-src="assets/images/home-1.jpg">
+
+    <!-- Home Cover -->
+    <amp-story-page id="cover" class="home-cover-1">
+        <amp-story-grid-layer template="fill" class="overlay-bg">
+            <amp-img src="assets/images/home-1.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="home-wrap">
+            <div class="home-wrap__intro">
+                <div class="home-wrap__intro--logo">
+                    <amp-img class="story-logo" src="assets/images/logo.svg" width="90" height="55"></amp-img>
+                </div>
+                <div class="home-wrap__intro--headline">
+                    <p class="story-category">Photo Essay</p>
+                    <h1 class="story-title">What Sanju Didn't Show About Sanjay Dutt's Life</h1>
+                </div>
+                <div class="home-wrap__intro--byline">
+                    <p class="story-author">Shahadat Hussain</p>
+                    <p class="publish-date">07.03.2018</p>
+                </div>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #1-->
+    <amp-story-page id="page1" class="amp-story-2">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="assets/images/story01.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fly-in-right">
+                <h3>Where's the Dhak Dhak girl?</h3>
+                <p>There's no mention of the alleged Sanjay Dutt-Madhuri Dixit affair.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #2-->
+    <amp-story-page id="page2" class="amp-story-5">
+        <amp-story-grid-layer template="fill" class="overlay-bg">
+            <amp-img src="assets/images/story02.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fly-in-bottom" animate-in-duration="1s">
+                <h3>No 'rocky marriage' references</h3>
+                <p>Sanjay's first wife, Richa Sharma, died in 1996. Baba divorced Rhea Pillai in 2005.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #2-->
+    <amp-story-page id="page3" class="amp-story-2">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="assets/images/story03.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fly-in-left" animate-in-duration="1s">
+                <!-- <h3>No 'rocky marriage' references</h3> -->
+                <p>Baba divorced Rhea Pillai in 2005.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #3-->
+    <amp-story-page id="page4" class="amp-story-4">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="assets/images/story04.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fade-in" animate-in-duration="1s">
+                <h3>Skips the daughter</h3>
+                <p>Sanjay Dutt's eldest daughter, Trishala, lives in the US.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #4-->
+    <amp-story-page id="page5" class="amp-story-2">
+        <amp-story-grid-layer template="fill" class="overlay-bg">
+            <amp-img src="assets/images/story05.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fade-in" animate-in-duration="1s">
+                <h3>Fires the firing episode</h3>
+                <p>In 1982, Sanjay got drunk and opened fire near his Pali Hill house.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #7-->
+    <amp-story-page id="page6" class="amp-story-5">
+        <amp-story-grid-layer template="fill" class="overlay-bg">
+            <amp-img src="assets/images/story06.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fly-in-bottom" animate-in-duration="1s">
+                <h3>Sidelines the sisters</h3>
+                <p>Sanjay's sisters Namrata and Priya stood by his side after their parents died.</p>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story page #7-->
+    <amp-story-page id="page7" class="amp-story-4">
+        <amp-story-grid-layer template="fill" class="overlay-bg">
+            <amp-img src="assets/images/story06.jpg" width="720" height="1280" layout="responsive">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--logo">
+            <amp-img class="logo-icon" src="assets/images/icon.svg" width="30" height="40"></amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-story--content">
+            <div class="story-content" animate-in="fade-in" animate-in-duration="1s">
+                <q>As told by Yasser Usman, author, 'Sanjay Dutt - The Crazy Untold Story Of Bollywood'S Bad Boy'</q>
+            </div>
+            <span class="story-caption">Photo Courtesy: iStock</span>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+</amp-story>
+</body>
+
+</html>
