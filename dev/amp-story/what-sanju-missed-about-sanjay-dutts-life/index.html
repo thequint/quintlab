@@ -132,6 +132,45 @@ amp-story-grid-layer.overlay-bg::after {
     background-color: rgba(0,0,0, 0.4);
 }
 
+amp-story-grid-layer.overlay-bg-top {
+    position: relative;
+}
+amp-story-grid-layer.overlay-bg-top::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 40%;
+    /*background-color: rgba(0,0,0, 0.4);*/
+    background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.0));
+    background-image:     -webkit-linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.0));
+    background-image:      -moz-linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.0));
+
+    background-image:      -o-linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.0));
+    background-image:     -ms-linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.0));
+}
+
+amp-story-grid-layer.overlay-bg-bottom {
+    position: relative;
+}
+amp-story-grid-layer.overlay-bg-bottom::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: " ";
+    width: 100%;
+    height: 40%;
+    /*background-color: rgba(0,0,0, 0.4);*/
+    background: linear-gradient(rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+    background-image:     -webkit-linear-gradient(rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+    background-image:      -moz-linear-gradient(rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+
+    background-image:      -o-linear-gradient(rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+    background-image:     -ms-linear-gradient(rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+}
 /* Home Cover #2 */
 .home-cover-2 .home-wrap {
     /*align-content: center;*/
@@ -463,7 +502,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #1-->
     <amp-story-page id="page1" class="amp-story-2">
-        <amp-story-grid-layer template="fill">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story01.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
@@ -481,7 +520,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #2-->
     <amp-story-page id="page2" class="amp-story-5">
-        <amp-story-grid-layer template="fill" class="overlay-bg">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story02.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
@@ -498,7 +537,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #2-->
     <amp-story-page id="page3" class="amp-story-2">
-        <amp-story-grid-layer template="fill">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story03.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
@@ -532,7 +571,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #4-->
     <amp-story-page id="page5" class="amp-story-2">
-        <amp-story-grid-layer template="fill" class="overlay-bg">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story05.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
@@ -549,7 +588,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #7-->
     <amp-story-page id="page6" class="amp-story-5">
-        <amp-story-grid-layer template="fill" class="overlay-bg">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story06.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
@@ -566,7 +605,7 @@ amp-story-grid-layer.overlay-bg::after {
 
     <!-- Story page #7-->
     <amp-story-page id="page7" class="courtesy-end">
-        <amp-story-grid-layer template="fill" class="overlay-bg">
+        <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story07.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
         </amp-story-grid-layer>
