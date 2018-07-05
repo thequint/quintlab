@@ -372,7 +372,14 @@ amp-story-grid-layer.overlay-bg::after {
     display: inline-block;
 }
 
-/* Courtesy End Story */
+
+
+
+
+
+
+
+/* Story Temp #5 */
 .courtesy-end .amp-story--logo .logo-icon {
     position: absolute;
     top: 10px;
@@ -393,6 +400,12 @@ amp-story-grid-layer.overlay-bg::after {
     font-weight: 300;
 }
 
+
+
+
+
+
+
 /* Mor Story */
 .amp-more-story {
 
@@ -409,6 +422,30 @@ amp-story-grid-layer.overlay-bg::after {
     align-content: center;
 }
 .amp-more-story__wrap--content .story-content {
+    text-align: center;
+    background-color: #000;
+    line-height: 2em;
+}
+
+
+
+
+/* Template CSS */
+amp-story-grid-layer.bottom {
+    align-content: end;
+}
+amp-story-grid-layer.noedge {
+    padding: 0px;
+}
+amp-story-grid-layer.center-text {
+    align-content: center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.banner-text {
     text-align: center;
     background-color: #000;
     line-height: 2em;
@@ -563,6 +600,27 @@ amp-story-grid-layer.overlay-bg::after {
             <div class="story-content" animate-in="fade-in" animate-in-duration="1s">
                 <p>As told by Yasser Usman, author, 'Sanjay Dutt - The Crazy Untold Story Of Bollywood's Bad Boy'</p>
             </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+
+
+    <!-- More Stories -->
+    <amp-story-page id="page8" class="amp-more-story">
+        <amp-story-grid-layer template="vertical" class="amp-more-story__wrap">
+            <div class="amp-more-story__wrap--container">
+                <amp-img src="assets/images/story01.jpg" width="720" height="1280" layout="responsive" animate-in="fade-in" animate-in-delay="0.4s">
+                </amp-img>
+                <amp-img src="assets/images/story02.jpg" width="720" height="1280" layout="responsive" animate-in="fade-in" animate-in-delay="0.6s">
+                </amp-img>
+                <amp-img src="assets/images/story03.jpg" width="720" height="1280" layout="responsive" animate-in="fade-in" animate-in-delay=".8s">
+                </amp-img>
+                <amp-img src="assets/images/story04.jpg" width="720" height="1280" layout="responsive" animate-in="fade-in" animate-in-delay="1s">
+                </amp-img>
+            </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical" class="amp-more-story__wrap--content">
+            <p class="story-content" animate-in="fly-in-bottom">More AMP Stories</p>
         </amp-story-grid-layer>
     </amp-story-page>
 
