@@ -1,24 +1,53 @@
 {
-  "bookendVersion": "v1.0",
-  "shareProviders": [
+    "bookendVersion": "v1.0",
+    "shareProviders": [
     {
-      "provider": "facebook",
-      "app_id": "425030461275044"
+        "provider": "facebook",
+        "app_id": "425030461275044"
     },
     {
-      "provider": "twitter",
-      "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
-      "url" :"CANONICAL_URL"
+        "provider": "twitter",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
     },
     {
-      "provider": "whatsapp",
-      "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
-      "url" :"CANONICAL_URL"
+        "provider": "whatsapp",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
     },
     {
-      "provider": "email",
-      "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
-      "url" :"CANONICAL_URL"
-    }
-  ]
+        "provider": "email",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
+    }],
+    "components": [
+    {
+        "type": "landscape",
+        "title": "Here’s What Went Into Making Ranbir Kapoor Look Like ‘Sanju’",
+        "url": "https://www.thequint.com/entertainment/celebrities/the-making-of-sanju",
+        "image": "assets/images/story/more-story01.jpg",
+        "category": "News"
+    },
+    {
+        "type": "landscape",
+        "title": "‘Sanju’ Box Office: The Ranbir Kapoor Film Is ‘200 Not Out’",
+        "url": "https://www.thequint.com/entertainment/bollywood/sanju-box-office-collection",
+        "image": "assets/images/story/more-story02.jpg",
+        "category": "News"
+    },
+    {
+        "type": "landscape",
+        "title": "Before ‘Sanju’ Rishi Kapoor Thought Ranbir Had Got It All Wrong",
+        "url": "https://www.thequint.com/entertainment/celebrities/ranbir-kapoors-performance-in-sanju-makes-rishi-kapoor-proud",
+        "image": "assets/images/story/more-story03.jpg",
+        "category": "News"
+    },
+    {
+        "type": "cta-link",
+        "links": [
+        {
+            "text": "the quint",
+            "url": "https://www.thequint.com/"
+        }]
+    }]
 }
