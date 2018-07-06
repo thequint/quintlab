@@ -41,6 +41,37 @@
 src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-story"
 src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/",
+    "headline": "What Sanju Didn’t Show About Sanjay Dutt’s Life - The Quint",
+    "datePublished": "2018-07-05T11:32:41+05:30",
+    "dateModified": "2018-07-05T11:32:41+05:30",
+    "description": "Sanjay Dutt’s Biopic: What the movie Sanju did not tell you about his life. Watch this AMP story that talk about life of Sanjay Dutt and things missed out by Raj Kumar Hirani in his movie Sanju.",
+    "author": {
+      "@type": "Person",
+      "name": "The Quint Lab"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Quint",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/assets/images/logo/thequint.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/assets/images/og.jpg",
+      "height": 2000,
+      "width": 800
+    }
+}
+</script>
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
 <style amp-custom>
 body {
@@ -620,61 +651,27 @@ amp-story-grid-layer.overlay-bg-bottom::after {
             <amp-img class="story-logo" src="assets/images/logo.svg" width="90" height="55"></amp-img>
         </amp-story-grid-layer>
     </amp-story-page>
-    
-      <amp-story-bookend src="bookend.json" layout="nodisplay"></amp-story-bookend>
-
-</amp-story>
-<amp-analytics type="googleanalytics">
-<script type="application/json">
-{
-  "vars": {
-    "account": "UA-58739020-1"
-  },
-  "triggers": {
-    "trackPageviewWithCustomUrl": {
-      "on": "visible",
-      "request": "pageview",
+    <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
       "vars": {
-        "title": "My page",
-        "documentLocation": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/"
+        "account": "UA-58739020-1"
+      },
+      "triggers": {
+        "trackPageviewWithCustomUrl": {
+          "on": "visible",
+          "request": "pageview",
+          "vars": {
+            "title": "My page",
+            "documentLocation": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/"
+          }
+        }
       }
     }
-  }
-}
-</script>
-</amp-analytics>
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "NewsArticle",
-    "mainEntityOfPage": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/",
-    "headline": "What Sanju Didn’t Show About Sanjay Dutt’s Life - The Quint",
-    "datePublished": "2018-07-05T11:32:41+05:30",
-    "dateModified": "2018-07-05T11:32:41+05:30",
-    "description": "Sanjay Dutt’s Biopic: What the movie Sanju did not tell you about his life. Watch this AMP story that talk about life of Sanjay Dutt and things missed out by Raj Kumar Hirani in his movie Sanju.",
-    "author": {
-      "@type": "Person",
-      "name": "The Quint Lab"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Quint",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/assets/images/logo/thequint.png",
-        "width": 600,
-        "height": 60
-      }
-    },
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/assets/images/og.jpg",
-      "height": 2000,
-      "width": 800
-    }
-}
-</script>
+    </script>
+    </amp-analytics>
+    <amp-story-bookend src="bookend.json" layout="nodisplay"></amp-story-bookend>
+</amp-story>
 </body>
 
 </html>
