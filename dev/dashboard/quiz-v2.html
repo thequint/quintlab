@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="robots" content="noindex, nofollow">
-<title>Widgets | Quint Lab</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no">
-<meta name="description" content="">
-<meta name="author" content="">
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-<link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
-<link rel="stylesheet" type="text/css" href="assets/css/quiz-v2.css">
-<link href="quizzes-v2/assets/css/theme.css" rel="stylesheet">
-<link href="quizzes-v2/assets/css/template.css" rel="stylesheet">
-<style type="text/css">
-body {
-    font-family: 'Oswald', sans-serif;
-    background-color: #f4f4f4;
-    font-weight: 300;
-    font-size: 16px;
-}
-</style>
-<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Widgets | Quint Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/switchWidgetPage.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quiz-v2.css">
+    <link href="quizzes-v2/assets/css/theme.css" rel="stylesheet">
+    <link href="quizzes-v2/assets/css/template.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        font-family: 'Oswald', sans-serif;
+        background-color: #f4f4f4;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    </style>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
 <link href="quizzes/assets/css/check-radio.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="quizzes/assets/css/styles.css"> -->
 </head>
@@ -41,35 +41,22 @@ body {
                 <li class="breadcrumb-item active" aria-current="page">Widgets</li>
             </ol>
         </nav>
-        <div class="row generate-quiz">
-            <div class="display-4 col-sm-6">
-                <h2 class="display-4">Quiz 02</h2></div>
-            <div class="display-4 col-sm-6 text-right">
-                <form id="foo">
-                    <textarea class="hidden-textarea" id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
-                    <button type="submit" class="btn btn-primary generate-quiz-button">Generate Quiz</button>
-                </form>
-                <form id="foo_2">
-                    <textarea class="hidden-textarea" id="Comments_2" name="Comments_2" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
-                </form>
-                <form id="foo_3">
-                    <textarea class="hidden-textarea" id="Comments_3" name="Comments_3" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
-                </form>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="display-4">Quiz 02</h2>
+                <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 text-center">
-                Add Questions
+            <div class="col-lg-6" align="center">
+                <h4 class="display-5">Add Questions</h4>
             </div>
-            <div class="col-lg-6 text-center">
-                Preview
-                <i class="fas fa-sync-alt ml-1 refresh-icon"></i>
+            <div class="col-lg-6" align="center">
+                <h4 class="display-5"> Preview </h4>
             </div>
         </div>
-
-        
         <div class="row">
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6">
                 <div class="select-template clearfix">
                     <label class="select-tmp-label">Select Template:</label>
                     <div class="select-tmp-field">
@@ -81,8 +68,24 @@ body {
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6 select-template text-center">
+                <div class="btn-preview-block clearfix">
+                    <button class="btn btn-primary refresh-icon">Preview Quiz</button>
+                    <div style="display:inline-block">
+                        <form id="foo">
+                            <textarea class="hidden-textarea" id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
+                            <button type="submit" class="btn btn-primary generate-quiz-button">Get Embed Code</button>
+                        </form>
+                        <form id="foo_2">
+                            <textarea class="hidden-textarea" id="Comments_2" name="Comments_2" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
+                        </form>
+                        <form id="foo_3">
+                            <textarea class="hidden-textarea" id="Comments_3" name="Comments_3" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div class="row widget-details">
             <div class="col-lg-6 col-sm-12 question-cards" id="draggingQuestions">
                 <form>
@@ -237,7 +240,11 @@ body {
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12">
-                <div class="embedded-preview"></div>
+                <div class="preview-iframe">
+                    <!-- <iframe src="https://www.thequint.com/quintlab/dashboard/quizzes-v2/index.html?id=107" width="100%" frameborder="0"></iframe> -->
+                </div>
+                <div class="embedded-preview-link"></div>
+                <div id="reviewed_embedded_code" class="embedded-preview"></div>
                 <div class="quiz-template-02" style="display: none">
                     <header class="quiz-header">
                         <img src="quizzes-v2/assets/images/quiz-line-header.png">
@@ -258,22 +265,13 @@ body {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="quizzes-v2/assets/js/spreadsheet.js"></script>
-    <script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
+    <!-- iframeResizer Scripts -->
+    <script src="assets/js/iframeResizer.min.js"></script>
+
     <script>
     $("#draggingQuestions").sortable();
     $("#draggingQuestions").disableSelection();
-    // $( ".draggingOptions" ).sortable();
-    // $( ".draggingOptions" ).disableSelection();
-    // $('#draggingQuestions').on('click','.close',function() {
-    //      $(this).parent().parent().remove();
-    // });
-    // $('.draggingOptions').on('click','.close',function() {
-    //      $(this).parent().parent().remove();
-    // });
-    </script>
-    <script>
-    // var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1Tm-evipM7HZuMc0hiX6mpZ_QilShOugEsVZp5kHkYVg/pubhtml'; // New form quiz sheet
-    var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/16ryxF_1uxrtDwc6GWqUaJCs_CjE_cJ8Ab8ZjrkIafG4/pubhtml'; // New form quiz sheet
+    var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/16ryxF_1uxrtDwc6GWqUaJCs_CjE_cJ8Ab8ZjrkIafG4/pubhtml'; // quiz sheet
     var questionNumber = 0;
     var quiz_data = [];
     var option_data = [];
@@ -336,11 +334,6 @@ body {
             $('.preview').append('<div class="questions"><div class="question-box"><div class="question-media"></div>' + media + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="answered-media">' + ans_media + '</div><div class="answered-caption">' + quiz_data[i]['aC'] + '</div>  </div></div></div></div>');
             str = '';
 
-            // $('.preview').append('<div class="quiz-template-02"><div class="questions"><div class="question-box"><div class="question-headline"><div class="bullet"><span>' + (i + 1) + '</span></div><h1 class="headline-text">' + quiz_data[i]['qT'].toString() + '</h1></div><div class="question-media">' + (quiz_data[i]['qIU'] == null ? (quiz_data[i]['qVU'] == null ? (quiz_data[i]['qAU'] == null ? '' : quiz_data[i]['qAU'] ? '' : quiz_data[i]['mC'] ) : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i]['qVU '] + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>' ) : '<img src="' + quiz_data[i]['qIU'] + '"></div>') + '<div class="question-media--caption">' + quiz_data[i]['mC'] + '</div>' + '<div class="question-options"><ul class="answer-type demo-list">' + str + '</ul><div class="answered-text"><div class="answered-description">' + quiz_data[i]['aT'] + '</div><div class="hyperlink-text">' + quiz_data[i]['hyperlinkText'] + '</div><div class="hyperlink-link">' + quiz_data[i]['hyperlinkLink'] + '</div> </div></div></div></div></div>');
-
-            // $('.questions').append('<div class="question-box"><div class="question"><span class="bullet">' + (index + 1) + '.</span> ' + data_array[index].qT + '</div><div class="description-text"> ' + data_array[index].descriptionText + '</div><div class="question-media">' + media + '</div><div class="question-media--caption">' + data_array[index].mC + '</div><div class="question-options"><ul class="answer-type demo-list">' + str + '<input type="hidden" id="ques0' + index + '" value="0"></ul></div></div>');
-
-
             $(".question-media, .answered-media").each(function() {
                 if ($(this).html() == "") {
                     $(this).remove();
@@ -353,27 +346,12 @@ body {
                 }
             });
         }
-        // if($('.tag-line-1').val() != ""){
-        //  $('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-1').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-1.gif"></span></div>');
-        // }
-        // if($('.tag-line-2').val() != ""){
-        //  $('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-2').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-2.gif"></span></div>');
-        // }
-        // if($('.tag-line-3').val() != ""){
-        //  $('.preview').append('<div class="white-box minimum"><span class="result-content"><p>You\'ve scored _ out of _.<br><span class="tag-line-1">' + $('.tag-line-3').val() + '</span></p></span><span class="result-img"><img alt="" src="assets/images/fitness-test-3.gif"></span></div>');
-        // }
-        // $(".question-box").css({"background-color": "white", "border-radius": "0px", "border": "1px #d8d8d8 solid", "padding": "24px 12px 12px 24px", "margin" : "0 0 3.5em"});
-
-        // $('.lbl').click(function () {
-        //     $('.hli').toggleClass('hli');
-        //     $(this).toggleClass('hli');
-        // });
 
         $('.quiz-headline').html('<span>' + $('.quizHeadlineInput').val() + '</span>');
         $('.quiz-template-02').attr('class', 'quiz-template-02');
         $('.quiz-template-02').addClass($('.select-tmp-field select').val());
-        $('.quiz-template-02.fit-quiz .quiz-header img').attr('src','quizzes-v2/assets/images/fit-banner.jpg');
-        $('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src','quizzes-v2/assets/images/bollywood-banner.jpg');
+        $('.quiz-template-02.fit-quiz .quiz-header img').attr('src', 'quizzes-v2/assets/images/fit-banner.jpg');
+        $('.quiz-template-02.bollywood-quiz .quiz-header img').attr('src', 'quizzes-v2/assets/images/bollywood-banner.jpg');
         return;
     }
 
@@ -387,18 +365,6 @@ body {
     }
 
     function resetEvents() {
-        // $(".addImage,.addOptionImage").on('click', function(){
-        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        //  closeButton();
-        // });
-        // $(".addAudio,.addOptionAudio").on('click', function(){
-        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-danger mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        //  closeButton();
-        // });
-        // $(".addVideo,.addOptionVideo").on('click', function(){
-        //  $(this).parent().parent().parent().prepend("<div class='input-group'><input class='form-control bg-warning mb-3' type='text' placeholder='" + $(this).prev().val() + "' readonly><button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        //  closeButton();
-        // });
         $(".option-close").on('click', function() {
             $(this).closest(".option").remove();
             // console.log("clicked again");
@@ -465,8 +431,6 @@ body {
             alert("Please Enter Quiz Headline");
         }
 
-
-
         $(".card").each(function() {
             quiz_data.push({});
 
@@ -525,13 +489,6 @@ body {
             quiz_data[i]['aVU'] = $(this).find(".answeredVideoInput").val();
             quiz_data[i]['aAU'] = $(this).find(".answeredAudioInput").val();
             quiz_data[i]['aC'] = $(this).find(".answeredCaptionInput").val();
-
-
-
-            //quiz_data[i]['hyperlinkText'] = $(this).find(".hyperlink-text").val();
-            //quiz_data[i]['hyperlinkLink'] = $(this).find(".hyperlink-link").val();
-
-            // console.log(quiz_data);
 
             $(this).find(".option").each(function() {
                 // console.log(j);
@@ -599,10 +556,7 @@ body {
             $("#Comments_2").val(quiz_string.substring(quiz_string.length / 3, 2 * quiz_string.length / 3));
             $("#Comments_3").val(quiz_string.substring(2 * quiz_string.length / 3, quiz_string.length));
         }
-
-
     }
-
 
     $("#addQuestionLink").click(function() {
         addQuestionFunc();
@@ -731,15 +685,54 @@ body {
                     request_3.done(function(response, textStatus, jqXHR) {
                         $('#result').html('<span class="success">Success</span>');
                         console.log("Hooray, it worked again again!");
-                    });
 
+                        $(".preview-iframe").html("<div class='preview-iframe--wrap'><iframe src='https://www.thequint.com/quintlab/dashboard/quizzes-v2/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe></div>");
+
+                        $('.embedded-preview-link').html('<div class="checkbox"><input type="checkbox" id="review_check" value="text" onclick="myFunction()"><label for="review_check">I have reviewed above the Quiz it looks perfect</label></div>');
+
+                        var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/quizzes-v2/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
+
+                        $('.embedded-preview').html('<form><div class="form-group"><label for="text"><strong>Embedded Code</strong></label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
+
+                        
+
+                        // iFrame resizer custom code
+                        iFrameResize({
+                            log: true, // Enable console logging
+                            enablePublicMethods: true, // Enable methods within iframe hosted page
+                            resizedCallback: function(messageData) { // Callback fn when resize is received
+                                $('p#callback').html(
+                                    '<b>Frame ID:</b> ' + messageData.iframe.id +
+                                    ' <b>Height:</b> ' + messageData.height +
+                                    ' <b>Width:</b> ' + messageData.width +
+                                    ' <b>Event type:</b> ' + messageData.type
+                                );
+                            },
+                            messageCallback: function(messageData) { // Callback fn when message is received
+                                $('p#callback').html(
+                                    '<b>Frame ID:</b> ' + messageData.iframe.id +
+                                    ' <b>Message:</b> ' + messageData.message
+                                );
+                                alert(messageData.message);
+                            },
+                            closedCallback: function(id) { // Callback fn when iFrame is closed
+                                $('p#callback').html(
+                                    '<b>IFrame (</b>' + id +
+                                    '<b>) removed from page.</b>'
+                                );
+                            }
+                        });
+
+                        $(".btn-preview-block").hide();
+                        $("#addQuestionLink").hide();
+
+                        copyHandler();
+
+                    });
 
                 });
 
             });
-
-
-
 
             // callback handler that will be called on failure
             request.fail(function(jqXHR, textStatus, errorThrown) {
@@ -758,15 +751,25 @@ body {
             });
 
             $('#foo').find('input, textarea').val('');
-
-            var str = "<iframe src='https://www.thequint.com/quintlab/dashboard/quizzes-v2/index.html?id=" + parseInt(data.length + 2) + "' width='100%' frameborder='0'></iframe>";
-
-            $('.embedded-preview').html('<form><div class="form-group"><label for="text">Embedded Code</label><textarea type="text" rows="5" class="form-control iframe-link" placeholder="The link will be shown here...">' + str + '</textarea><span class="copy-val">Copy</span></div></form>');
-            copyHandler();
         }
+
+        $(".quiz-template-02").hide();
+        $(".preview-iframe").css("min-height", "300px");
+
         // prevent default posting of form
         //  event.preventDefault();
     });
+    </script>
+    <script>
+    function myFunction() {
+        var checkBox = document.getElementById("review_check");
+        var text = document.getElementById("reviewed_embedded_code");
+        if (checkBox.checked == true) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
     </script>
 </body>
 

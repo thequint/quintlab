@@ -67,10 +67,117 @@ button.close {
     width: 50%;
 }
 
-.generate-quiz-button,
-.refresh-icon {
-    cursor: pointer;
+
+.preview-iframe {
+    background-image: url(../images/AjaxLoader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
 }
+.preview-iframe--wrap {
+}
+.preview-iframe--wrap iframe {
+    display: block;
+    background-color: #f4f4f4
+}
+.embedded-preview-link {
+    margin: 10px 0;
+}
+.embedded-preview {
+    display: none;
+}
+
+/* Design checkbox */
+.checkbox {
+    position: relative
+}
+.checkbox [type="checkbox"]:not(:checked),
+.checkbox [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px
+}
+
+.checkbox [type="checkbox"]:not(:checked)+label,
+.checkbox [type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    font-size: .85rem;
+    line-height: 1.5625rem;
+    color: #555;
+    letter-spacing: .03125rem;
+    display: block;
+    text-transform: uppercase
+}
+
+.checkbox [type="checkbox"]:checked+label {
+    color: #000
+}
+
+.checkbox [type="checkbox"]:not(:checked)+label:before,
+.checkbox [type="checkbox"]:checked+label:before,
+.checkbox [type="checkbox"]:not(:checked)+label:after,
+.checkbox [type="checkbox"]:checked+label:after {
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+}
+
+.checkbox [type="checkbox"]:not(:checked)+label:before,
+.checkbox [type="checkbox"]:checked+label:before {
+    display: inline-block;
+    cursor: pointer;
+    border-width: .125rem;
+    border-style: solid;
+    border-color: #bdc1cc;
+    background-color: transparent
+}
+
+.checkbox [type="checkbox"]:not(:checked)+label:after,
+.checkbox [type="checkbox"]:checked+label:after {
+    background-color: #fdbe2d;
+    border: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("https://fea.assettype.com/thequint/assets/radio-check-4a29fceea8.svg")
+}
+
+.checkbox [type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    transform: scale(0)
+}
+
+.checkbox [type="checkbox"]:checked+label:after {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    transform: scale(1)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .iframe-link {
     margin-bottom: 5px;
