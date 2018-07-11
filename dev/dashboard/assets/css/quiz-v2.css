@@ -87,6 +87,14 @@ button.close {
     display: none;
 }
 
+.btn.btn-primary.generate-quiz-button[type="submit"]:disabled{
+    cursor: text;
+}
+.btn.btn-primary.generate-quiz-button[type="submit"]:hover:disabled {
+    background-color: #36154f !important;
+    border-color: #36154f !important;
+}
+
 /* Design checkbox */
 .checkbox {
     position: relative

@@ -74,7 +74,7 @@
                     <div style="display:inline-block">
                         <form id="foo">
                             <textarea class="hidden-textarea" id="Comments" name="Comments" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
-                            <button type="submit" class="btn btn-primary generate-quiz-button">Get Embed Code</button>
+                            <button type="submit" class="btn btn-primary generate-quiz-button" disabled="disabled">Get Embed Code</button>
                         </form>
                         <form id="foo_2">
                             <textarea class="hidden-textarea" id="Comments_2" name="Comments_2" cols="40" placeholder="Your Message" autocomplete="off" style="display:none"></textarea>
@@ -446,6 +446,7 @@
             }
 
             $(".quiz-template-02").show();
+            $(".btn.btn-primary.generate-quiz-button").removeAttr("disabled");
 
             // == Shorterners Name == // 
             // quizHeadline     = qH
@@ -569,6 +570,7 @@
 
     $('.refresh-icon').click(function() {
         addQuestionFunc();
+        //$(".btn.btn-primary.generate-quiz-button").removeAttr("disabled");
     });
 
     function copyHandler() {
