@@ -282,7 +282,6 @@
     audioNumber = 0;
 
     function addHref() {
-        // console.log("called");
         $(".card:last-child .link-btn").click(function() {
             if ($(".answered-text").val().length < 430) {
                 $(this).siblings(".answered-text").val($(this).siblings(".answered-text").val() + " <a target='_blank' href='Insert URL'>Link Text</a> ");
@@ -300,19 +299,10 @@
         $(".quiz-template-02").show();
         var str = '';
         for (var i = 0; i < quiz_data.length; i++) {
-             // console.log("question"+i);
+             
             for (var j = 0; j < quiz_data[i].options.length; j++) {
-                // console.log("option"+j);
                 str = str + '<li' + ((quiz_data[i].options[j].isC == true) ? ' class="bg-success"' : '') + '><label class="lbl' + ((quiz_data[i].options[j].isC == true) ? ' text-white"' : '') + '">' + (quiz_data[i].options[j].oIU == null ? (quiz_data[i].options[j].oVU == null ? (quiz_data[i].options[j].optionAudioUrl == null ? '' : '<iframe width="100%" height="300" style="background-color:transparent; display:block; padding: 0; max-width: 700px;" frameborder="0" allowtransparency="allowtransparency" scrolling="no" src="https:' + quiz_data[i].options[j].optionAudioUrl + '" title="Audioboom player"></iframe>') : '<iframe src="https://www.youtube.com/embed/" + ' + quiz_data[i].options[j].oVU + ' + "" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>') : '<img src="' + quiz_data[i].options[j].oIU + '">')+quiz_data[i].options[j].oT+'</label></li>';
-
-             //   console.log(quiz_data[i].options[j] +"|"+ quiz_data[i].options.length);
-               // console.log(quiz_data);
-                // console.log(quiz_data[i].options[j]);
-               // console.log(quiz_data[i].options[j].oT.toString());
             }
-
-           // console.log(quiz_data);
-            // console.log(quiz_data.length);
 
             var media = '';
             if (quiz_data[i]['qIU']) //image
@@ -378,14 +368,10 @@
     function resetEvents() {
         $(".option-close").on('click', function() {
             $(this).closest(".option").remove();
-            // console.log("clicked again");
-            // addQuestionFunc();
         });
 
         $(".question-close").on('click', function() {
             $(this).closest(".card").remove();
-            // console.log("clicked");
-            // addQuestionFunc();
         });
 
         $(".addMediaBtn").on("click", function(e) {
@@ -436,7 +422,6 @@
         flag = 0;
         correctInputSelectedFlag = -1;
         quiz_data=[];
-        console.log("asdad");
       
         if ($(".quizHeadlineInput").val() == "") {
             alert("Please Enter Quiz Headline");
@@ -564,8 +549,6 @@
 
             var quiz_string = JSON.stringify(quiz_data);
 
-           // console.log(quiz_string);
-
             $("#Comments").val(quiz_string.substring(0, quiz_string.length / 3));
             $("#Comments_2").val(quiz_string.substring(quiz_string.length / 3, 2 * quiz_string.length / 3));
             $("#Comments_3").val(quiz_string.substring(2 * quiz_string.length / 3, quiz_string.length));
@@ -596,7 +579,6 @@
     var request, request_2, request_3;
 
     $("#foo").submit(function(event) {
-        // console.log("init");     
         event.preventDefault();
         if ($('.tag-line-1').val() == "") {
             alert("Add tag line 1...");
@@ -625,8 +607,6 @@
         quiz_data[x]['tL3'] = $('.tag-line-3').val();
 
         var quiz_string = JSON.stringify(quiz_data);
-
-       // console.log(quiz_string);
 
         $("#Comments").val(quiz_string.substring(0, quiz_string.length / 3));
         $("#Comments_2").val(quiz_string.substring(quiz_string.length / 3, 2 * quiz_string.length / 3));
