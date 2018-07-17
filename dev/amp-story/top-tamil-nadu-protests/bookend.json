@@ -1,0 +1,39 @@
+{
+    "bookendVersion": "v1.0",
+    "shareProviders": [
+    {
+        "provider": "facebook",
+        "app_id": "425030461275044"
+    },
+    {
+        "provider": "twitter",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
+    },
+    {
+        "provider": "whatsapp",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
+    },
+    {
+        "provider": "email",
+        "text": "What Sanju Didn’t Show About Sanjay Dutt’s Life",
+        "url": "CANONICAL_URL"
+    }],
+    "components": [
+    {
+        "type": "portrait",
+        "title": "What Sanju Didn't Show About Sanjay Dutt's Life",
+        "url": "https://www.thequint.com/entertainment/celebrities/the-making-of-sanju",
+        "image": "assets/images/story/1x1.jpg",
+        "category": "Bollywood"
+    },
+    {
+        "type": "cta-link",
+        "links": [
+        {
+            "text": "the quint",
+            "url": "https://www.thequint.com/"
+        }]
+    }]
+}
