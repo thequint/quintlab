@@ -15,6 +15,8 @@ function showInfo(data) {
 var _html_list = "";
 //for(var index = data.length; index >= 0; index--) {
 for(var index = data.length-1; index >= 0; index--) {
+	if(data[index].category=="murder")
+	{
 _html_list +=  "<li>"
 					+ "<div class='contact-list'>"
 						+ "<figure>"
@@ -26,14 +28,18 @@ _html_list +=  "<li>"
 									+ "<h3 class='label-2'>" +data[index].Date +"</h3>"
 									+ "<h3 class='label-3'>" +data[index].Location +"</h3>"
 									+ "<h3 class='label-4'>" +data[index].WhatHappened +"</h3>"
-									+ "<h3 class='label-5'>" +data[index].CaseStatus +"</h3>"
+									+ "<h3 class='label-5'>" +data[index].CaseStatus +"</h3>";
 									//+ "<span class='more-btn'>Read More</span>"
-									+ "<div class='contact-video'><div class='embed-content "+data[index].Video+"'><iframe src='" +data[index].Video +"' frameborder='0' allowfullscreen></iframe></div></div>"
-								+ "</div>"
-							+ "</figcaption>"
-						+ "</figure>"
-					+"</div>"
-				+"</li>";
+if(data[index].Video != 'None') {
+	_html_list += "<div class='contact-video'><div class='embed-content "+data[index].Video+"'><iframe src='" +data[index].Video +"' frameborder='0' allowfullscreen></iframe></div></div>"; 
+}
+								
+_html_list += "</div>"
+			  +"</figcaption>"
+			  +"</figure>"
+			  +"</div>"
+			  +"</li>";
+			}
 }
 
 document.getElementById("allContact").innerHTML = _html_list;
