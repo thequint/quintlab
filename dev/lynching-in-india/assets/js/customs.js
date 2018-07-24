@@ -1,3 +1,6 @@
+$(window).scroll(function () {
+    $('.scroll-up').fadeOut(100); 
+});
 
 // WOW Animations
 var wow = new WOW(
@@ -15,12 +18,6 @@ var wow = new WOW(
     }
 );
 wow.init();
-
-
-$(window).scroll(function () {
-    $('.scroll-up').fadeOut(100); 
-});
-
 
 $(window).load(function(){
     $(".placeholder").each(function(){
@@ -43,7 +40,6 @@ $(window).load(function(){
     $(".img-small").css("opacity","0");
     $("body").css("background-image","url(assets/images/intro-bg.jpg)");
 });
-
 
 // Gallery Slider
 $(".horizontal--slider").slick({
@@ -95,23 +91,4 @@ $(".social-back").click(function(e) {
 $("body").click(function() {
     $(".social-icons").slideUp();
 });
-
-// Body Background Fixed
-/*
-var screen_height = $(window).height();
-var screen_width = $(window).width();
-
-$("#section--intro").height(screen_height + 70);
-$(".full-image").height(screen_height + 70);
-$(".full-image img").height(screen_height + 70);
-
-if ($(window).width() < 960) {
-    $("#section--intro").height(screen_height + 70);
-    $(".full-image").height(screen_height + 70);
-    $(".full-image img").height(screen_height + 70);
-}else{
-    $("#section--intro").height('');
-    $(".full-image").height('');
-    $(".full-image img").height('');
-}*/
 
