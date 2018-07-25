@@ -62,7 +62,8 @@ function showInfo(data) {
 	sheet_data = data;
 	showDataFunction();
 }
-$(".filter span").click(function(){
+//$(".filter span").click(function(){
+$(".filter span").on('click touchstart', function () {
 	str="";
 	showDataFunction($(this).html());
 	$(".filter span").removeClass("active");

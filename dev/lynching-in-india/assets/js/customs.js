@@ -38,7 +38,7 @@ $(window).load(function(){
     $(".map-container").html('<iframe src="https://www.google.com/maps/d/embed?mid=1tYMm___3NDR_fN9p6XOQjkupGO8" width="640" height="480"></iframe>');
 
     $(".img-small").css("opacity","0");
-    $("body").css("background-image","url(assets/images/intro-bg.jpg)");
+    $("body").addClass("body-bg");
 });
 
 // Gallery Slider

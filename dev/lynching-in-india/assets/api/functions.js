@@ -1,5 +1,9 @@
 
-$(document).on("click", '#allContact li .contact-list', function() {
+$(document).on("click", '#allContact li .contact-list', function(e) {
+
+	// e.preventDefault();
+	// $('body').css('overflow', 'hidden');
+
 	$('#contactModal').addClass('modal--active');
 	$('.modal__content').addClass('modal__content--active');
 	
@@ -13,24 +17,41 @@ $(document).on("click", '#allContact li .contact-list', function() {
 	for(var i = 1; i <= 5; i++) {
 		$('#contactModal').find('.modal-label-' + i).text(_this.find('.label-'+i).text());
 	}
+	$("body").addClass("body-scroll");
 });
-	
+
+function resetPopUp(){
+	$("body").removeClass("body-scroll");
+
+	$('#contactModal').removeClass('modal--active');
+	$('.modal__content').removeClass('modal__content--active');
+	$('#contactModal').find('iframe').attr('src', '');
+}
+
+$("body").click(function(e) {
+    var container = $(".modal__dialog");
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0)
+    {
+        resetPopUp();
+    }
+});
 $('.modal__close').click(function(){
-	$('#contactModal').removeClass('modal--active');
-	$('.modal__content').removeClass('modal__content--active');
-	$('#contactModal').find('iframe').attr('src', '');
+	resetPopUp();
 });
 	
-$("#contactModal").click(function(){
-	$('#contactModal').removeClass('modal--active');
-	$('.modal__content').removeClass('modal__content--active');
-	$('#contactModal').find('iframe').attr('src', '');
-});
+// $("#contactModal").click(function(){
+// 	$('#contactModal').removeClass('modal--active');
+// 	$('.modal__content').removeClass('modal__content--active');
+// 	$('#contactModal').find('iframe').attr('src', '');
+// });
 	
 $('#allContact li').each(function(){
 	var thisname = $(this).find('h3:firsr').text();
 	$(this).addClass('thisname');
 });
+
+
 
 
 //WhatsApp
