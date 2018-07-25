@@ -365,9 +365,45 @@ a {
     display: none;
     margin: 30px 0 0;
     padding: 0 15px;
+    
+}
+
+#section--forth .section--gallery .filter-wrap {
+    width: 298px;
+    line-height: 40px;
+    
+    border-radius: 5px;
+    text-align: center;
+}
+#section--forth .section--gallery .filter-wrap:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
 }
 
 #section--forth .section--gallery .filter span {
+    display: block;
+    float: left;
+    cursor: pointer;
+    background-color: #b74c4b;
+}
+#section--forth .section--gallery .filter span:hover {
+    background-color: #a3281c
+}
+#section--forth .section--gallery .filter span.active {
+    background-color: #a3281c
+}
+#section--forth .section--gallery .filter-wrap span:first-child{
+    width: 20%;
+}
+#section--forth .section--gallery .filter-wrap span:nth-child(2),
+#section--forth .section--gallery .filter-wrap span:nth-child(3){
+    width: 40%;
+    border-left: 1px solid rgba(255,255,255, 0.2)
+}
+
+/*#section--forth .section--gallery .filter span {
     background-color: #b74c4b;
     padding: 5px 10px;
     border-radius: 3px;
@@ -380,7 +416,8 @@ a {
 }
 #section--forth .section--gallery .filter span.active {
     background-color: #f13432
-}
+}*/
+
 #section--forth .section--gallery__thumbs {
 
 }
@@ -547,23 +584,6 @@ a {
     display: none;
     transition: all 0.2s ease-in-out;
 }
-
-/*.gallery--effect .contact-list-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 99;
-    font-size: 15px;
-    font-weight: normal;
-    padding: 6px 6px;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    
-}*/
-/*.gallery--effect .gallery--caption {
-    display: none;
-}*/
-
 .gallery--effect .contact-list-content {
     position: absolute;
     top: 15px;
@@ -572,6 +592,7 @@ a {
     font-size: 15px;
     font-weight: normal;
     padding: 6px 6px;
+    /*width: 90%;*/
     background-color: rgba(0, 0, 0, 0.8);
     /*background-color: rgba(183, 76, 75, 0.8);*/
     -webkit-border-top-right-radius: 4px;
@@ -601,7 +622,7 @@ a {
 .gallery--effect .contact-list-content .label-3:before {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 1px;
     content: " ";
     width: 18px;
     height: 18px;
@@ -613,8 +634,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
 .gallery--effect .contact-list-content .label-2:before {
     background-image: url(../images/date.svg);
     background-size: 12px;
@@ -626,7 +645,7 @@ a {
     background-size: 11px;
     background-position: center;
     background-repeat: no-repeat;
-    
+
     
 }
 
@@ -934,6 +953,7 @@ a {
 }
 .social-icons .facebook,
 .social-icons .twitter,
+.social-icons .whatsapp,
 .social-icons .copyright {
     width: 40px;
     height: 40px;
@@ -943,6 +963,10 @@ a {
 
 .social img {
     width: 100%;
+}
+.social-icons .whatsapp img {
+    width: 35px;
+    width: 35px;
 }
 
 

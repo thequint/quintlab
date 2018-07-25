@@ -189,6 +189,14 @@
         font-size: 20px;
         line-height: 22px;
     }
+    #section--forth .section--gallery .filter {
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    #section--forth .section--gallery .filter-wrap {
+        width: 200px;
+        line-height: 34px;
+    }
 }
 @media only screen and (max-width: 480px) {
 	#section--first .banner--txt {
@@ -200,6 +208,21 @@
 	    font-size: 16px;
 	    line-height: 18px;
 	}
+    
+    .gallery--effect .contact-list-content {
+        top: 8px;
+    }
+    .gallery--effect .contact-list-content .label-2:before,
+    .gallery--effect .contact-list-content .label-3:before {
+        display: none;
+    }
+    .gallery--effect .contact-list-content .label-2,
+    .gallery--effect .contact-list-content .label-3 {
+        padding-left: 1px; 
+    }
+    .gallery--effect figure .contact-list-content .label-3 {
+        display: none;
+    }
 
 	.modal__content {
         padding: 10px 40px 10px 10px;

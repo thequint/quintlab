@@ -52,6 +52,10 @@ function showDataFunction(category) {
 
     $(".section--gallery .filter").show();
     $(".lds-spinner").hide();
+
+	// $(".gallery--effect figure").mouseover(function(){
+	// $(this).find(".contact-list-content .label-3").hide();
+	// });
 }
 	
 function showInfo(data) {
@@ -64,3 +68,15 @@ $(".filter span").click(function(){
 	$(".filter span").removeClass("active");
 	$(this).addClass("active");
 });
+
+
+
+
+
+
+
+
+
+
+
+

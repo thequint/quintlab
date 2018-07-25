@@ -1,5 +1,5 @@
 
-$(document).on("click", '#allContact li', function() {
+$(document).on("click", '#allContact li .contact-list', function() {
 	$('#contactModal').addClass('modal--active');
 	$('.modal__content').addClass('modal__content--active');
 	
