@@ -21,18 +21,12 @@ function showDataFunction(category) {
 	        str += "<li>" +
 	            "<div class='contact-list'>" +
 	            "<figure>" +
-
-	            "<div class='contact-list-content'>" +
-	            // "<h1 class='label-1'>" + sheet_data[index].Name + "</h1>" +
-	            "<h3 class='label-2'>" + sheet_data[index].Date + "</h3>" +
-	            "<h3 class='label-3'>" + sheet_data[index].Location + "</h3>" +
-	            "</div>" +
-
 	            "<div class='contact-img'><img src=" + 'data/lynched/' + sheet_data[index].Image + '.jpg' + "></div>" +
 	            "<figcaption>" +
 	            "<div class='gallery--caption'>" +
 	            "<h1 class='label-1'>" + sheet_data[index].Name + "</h1>" +
-	            
+	            "<h3 class='label-2'>" + sheet_data[index].Date + "</h3>" +
+	            "<h3 class='label-3'>" + sheet_data[index].Location + "</h3>" +
 	            "<h3 class='label-4'>" + sheet_data[index].WhatHappened + "</h3>" +
 	            "<h3 class='label-5'>" + sheet_data[index].CaseStatus + "</h3>";
 	        if (sheet_data[index].Video != 'None') {
@@ -64,3 +58,5 @@ $(".filter span").click(function(){
 	$(".filter span").removeClass("active");
 	$(this).addClass("active");
 });
+
+
