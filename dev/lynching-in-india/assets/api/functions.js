@@ -1,6 +1,7 @@
 $(document).on("click", '#allContact li .contact-list', function(e) {
 
 	$(".detail-popup").addClass("pop-active");
+	$(".detail-popup__overlay").addClass("overlay-active");
 
 	// e.preventDefault();
 	// $('body').css('overflow', 'hidden');
@@ -14,7 +15,7 @@ $(document).on("click", '#allContact li .contact-list', function(e) {
 	var label_video = $(this).find('.contact-video').attr("data-video");
 	console.log(label_video);
 	if(label_video!=undefined){
-		$('.detail-popup').find('.detail-popup__content--video').html("<div class='contact-video'><iframe src='" + label_video + "' frameborder='0' allowfullscreen></iframe></div>");
+		$('.detail-popup').find('.detail-popup__content--video').html("<div class='contact-video'><iframe src='" + label_video + "?modestbranding=1&;showinfo=0&;autohide=1&;rel=0' frameborder='0' allowfullscreen></iframe></div>");
 	}
 	else
 	{
@@ -29,11 +30,9 @@ $(document).on("click", '#allContact li .contact-list', function(e) {
 	$('.detail-popup').find('.detail-popup__content--header-thumb').html(label_img);
 	//$('.detail-popup').find('.detail-popup__content--video').html("");
 	
-
 	for(var i = 1; i <= 5; i++) {
 		$('.detail-popup').find('.modal-label-' + i).text(_this.find('.label-'+i).text());
 	}
-
 
 	// for(var i = 1; i <= 5; i++) {
 	// 	$('#contactModal').find('.modal-label-' + i).text(_this.find('.label-'+i).text());
@@ -52,10 +51,10 @@ $(".detail-popup__close").click(function(){
 function resetPopUp(){
 	$("body").removeClass("body-scroll");
 	$(".detail-popup").removeClass("pop-active");
+	$(".detail-popup__overlay").removeClass("overlay-active");
 	$('.detail-popup').find('iframe').attr('src', '');
 
 	$(".thequint--logo, .social--section").removeClass("is-hidden");
-
 
 	$('#contactModal').removeClass('modal--active');
 	$('.modal__content').removeClass('modal__content--active');
