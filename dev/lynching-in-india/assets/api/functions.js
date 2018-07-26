@@ -1,4 +1,4 @@
-$(document).on("click touchstart", '#allContact li .contact-list', function(e) {
+$(document).on("click", '#allContact li .contact-list', function(e) {
 
 	$(".detail-popup").addClass("pop-active");
 
@@ -83,6 +83,7 @@ $('#allContact li').each(function(){
 	var thisname = $(this).find('h3:firsr').text();
 	$(this).addClass('thisname');
 });
+
 
 
 
