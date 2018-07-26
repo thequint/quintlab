@@ -1147,7 +1147,7 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
     margin: auto;
     max-width: 600px;
     height: 400px;
