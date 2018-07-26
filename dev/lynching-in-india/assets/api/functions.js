@@ -87,7 +87,6 @@ $('#allContact li').each(function(){
 
 
 
-
 //WhatsApp
 
 $(document).on("click", '#btnWp', function() {
