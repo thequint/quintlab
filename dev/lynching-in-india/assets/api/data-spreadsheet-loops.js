@@ -36,7 +36,8 @@ function showDataFunction(category) {
 	            "<h3 class='label-4'>" + sheet_data[index].WhatHappened + "</h3>" +
 	            "<h3 class='label-5'>" + sheet_data[index].CaseStatus + "</h3>";
 	        if (sheet_data[index].Video != 'None') {
-	            str += "<div class='contact-video'><div class='embed-content " + sheet_data[index].Video + "'><iframe src='" + sheet_data[index].Video + "' frameborder='0' allowfullscreen></iframe></div></div>";
+	            //str += "<div class='contact-video'><div class='embed-content " + sheet_data[index].Video + "'><iframe src='" + sheet_data[index].Video + "' frameborder='0' allowfullscreen></iframe></div></div>";
+	            str += "<div class='contact-video' data-video="+ sheet_data[index].Video +"></div>"
 	        }
 	        str += "</div>" +
 	            "</figcaption>" +
