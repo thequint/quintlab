@@ -39,10 +39,10 @@ $(document).on("click", '#allContact li .contact-list', function(e) {
 	// 	$('#contactModal').find('.modal-label-' + i).text(_this.find('.label-'+i).text());
 	// }
 	$("body").addClass("body-scroll");
+	$(".thequint--logo, .social--section").addClass("is-hidden");
 });
 
 $(".detail-popup__close").click(function(){
-	$(".detail-popup").removeClass("pop-active");
 	resetPopUp();
 });
 
@@ -53,6 +53,8 @@ function resetPopUp(){
 	$("body").removeClass("body-scroll");
 	$(".detail-popup").removeClass("pop-active");
 	$('.detail-popup').find('iframe').attr('src', '');
+
+	$(".thequint--logo, .social--section").removeClass("is-hidden");
 
 
 	$('#contactModal').removeClass('modal--active');

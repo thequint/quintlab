@@ -1164,6 +1164,7 @@ a {
     clear: both;
 }
 .detail-popup__content--logo {
+    display: none;
     float: left;
     width: 100%;
     text-align: center;
@@ -1253,6 +1254,9 @@ a {
 }
 
 @media(max-width: 639px) {
+    .detail-popup__content--logo {
+        display: block;
+    }
     .detail-popup {
         margin: initial;
         max-width: 100%;
@@ -1274,6 +1278,10 @@ a {
     }
     .detail-popup__close {
         position: fixed;
+    }
+    .thequint--logo.is-hidden,
+    .social--section.is-hidden {
+        display: none;
     }
 }
 
