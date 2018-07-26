@@ -14,6 +14,9 @@ body {
 }*/
 body.body-scroll {
     overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 @font-face {
     font-family: 'oswaldbold';
@@ -1254,6 +1257,12 @@ a {
         margin: initial;
         max-width: 100%;
         height: auto;
+
+        /*margin: initial;
+        max-width: 100%;
+        height: auto;
+        min-height: 100%;
+        bottom: auto;*/
     }
     .detail-popup__content--header-thumb {
         max-width: 110px;
