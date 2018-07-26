@@ -6,12 +6,12 @@ body {
     background-color: rgba(0,0,0,1.0);
 	font-family: 'Zilla Slab', serif;
 }
-body.body-bg {
+/*body.body-bg {
     background-image: url(../images/intro-bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100vh;
-}
+}*/
 body.body-scroll {
     overflow: hidden;
 }
@@ -131,6 +131,9 @@ a {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background-image: url(../images/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #section--first .banner--txt {
     margin: 0 auto;
