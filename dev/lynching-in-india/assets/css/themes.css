@@ -1239,6 +1239,9 @@ a {
     }
 }
 @media(max-width: 639px) {
+    body.body-scroll {
+        position: fixed;
+    }
     .detail-popup__content--logo {
         display: block;
     }
