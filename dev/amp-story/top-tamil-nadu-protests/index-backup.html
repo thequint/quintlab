@@ -88,41 +88,28 @@ amp-story {
 amp-story-page {
     background-color: #000;
 }
-#amp-wrap h1,
-#amp-wrap h3 {
+h1 {
+    font-size: 1.4em;
+    line-height: 1.15em;
     font-weight: 700;
     font-family: 'Oswald', sans-serif;
 }
-#amp-wrap h1 {
-    font-size: 1.4em;
-    line-height: 1.15em;
-}
-#amp-wrap h3 {
+h3 {
     color: #ffce00;
     font-size: 1.25em;
     line-height: 1.15em;
     padding-bottom: 1px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
 }
-#amp-wrap p {
+p {
     margin: 0;
     padding: 0;
     font-size: 1.25em;
     line-height: 1.125em;
     font-weight: 400
 }
-#amp-wrap p.story-category {
-    font-size: .75em;
-}
-#amp-wrap p.story-author {
-    font-size: 1em;
-}
-#amp-wrap p.publish-date {
-    font-size: 0.625em;
-}
-#amp-wrap .courtesy-end p {
-    font-size: 0.875em;
-}
-#amp-wrap q {
+q {
     font-weight: 400;
     font-size: 1.1em;
 }
@@ -149,6 +136,7 @@ amp-story-page {
     padding-bottom: 3px;
 }
 .home-cover-1 .home-wrap__intro--headline .story-category {
+    font-size: .75em;
     letter-spacing: 1px;
     line-height: 1.5em;
     text-transform: uppercase;
@@ -160,9 +148,11 @@ amp-story-page {
 
 }
 .home-cover-1 .home-wrap__intro--byline .story-author {
+    font-size: 1em;
     letter-spacing: 1px;
 }
 .home-cover-1 .home-wrap__intro--byline .publish-date {
+    font-size: 0.625em;
     letter-spacing: 1px;
     line-height: 1.5em;
     text-transform: uppercase;
@@ -224,6 +214,9 @@ amp-story-grid-layer.overlay-bg-bottom::after {
 }
 
 /* Home Cover #2 */
+.home-cover-2 .home-wrap {
+    /*align-content: center;*/
+}
 .home-cover-2 .home-wrap__intro {
     align-content: center;
     position: absolute;
@@ -252,6 +245,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
 }
 .home-cover-2 .home-wrap__intro--headline .story-category {
     display: none;
+    font-size: .75em;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -275,25 +269,15 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     text-transform: uppercase;
 }
 
-#amp-wrap .logo-icon {
+/* Story Temp #1 */
+.amp-story-1 .amp-story--logo .logo-icon {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 30px;
     height: 40px;
 }
-#amp-wrap .story-caption {
-    position: absolute;
-    bottom: 8px;
-    right: 6px;
-    font-size: .65em;
-    font-weight: 300;
-    text-align: right;
-    display: inline-block;
-}
-
-/* Story Style #1 */
-.story-style-1 .story-content {
+.amp-story-1 .amp-story--content .story-content {
     position: absolute;
     top: 65px;
     left: 0;
@@ -301,7 +285,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     max-width: 90%;
     background-color: rgba(0,0,0, 0.7);
 }
-.story-style-1 .story-content::after {
+.amp-story-1 .amp-story--content .story-content::after {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -311,9 +295,25 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 100%;
     background-color: #ffce00;
 }
+.amp-story-1 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
 
-/* Story Style #2 */
-.story-style-2 .story-content {
+/* Story Temp #2 */
+.amp-story-2 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-2 .amp-story--content .story-content {
     position: absolute;
     bottom: 50px;
     left: 0;
@@ -321,7 +321,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     max-width: 90%;
     background-color: rgba(0,0,0, 0.7);
 }
-.story-style-2 .story-content::after {
+.amp-story-2 .amp-story--content .story-content::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -331,9 +331,25 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 5px;
     background-color: #ffce00;
 }
+.amp-story-2 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
 
-/* Story Style #3 */
-.story-style-3 .story-content {
+/* Story Temp #3 */
+.amp-story-3 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-3 .amp-story--content .story-content {
     margin: 0 auto;
     position: absolute;
     top: 65px;
@@ -343,7 +359,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     max-width: 80%;
     text-align: center;
 }
-.story-style-3 .story-content::after {
+.amp-story-3 .amp-story--content .story-content::after {
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -354,13 +370,30 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 3px;
     background-color: #ffce00;
 }
+.amp-story-3 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
 
-/* Story Style #4 */
-.story-style-4 .amp-story--content {
+/* Story Temp #4 */
+.amp-story-4 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-4 .amp-story--content {
     align-content: center;
 }
-.story-style-4 .story-content {
+.amp-story-4 .amp-story--content .story-content {
     margin: 0 auto;
+    /*position: absolute;*/
     position: relative;
     bottom: 30px;
     left: 0;
@@ -369,7 +402,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     max-width: 100%;
     text-align: center;
 }
-.story-style-4 .story-content::before {
+.amp-story-4 .amp-story--content .story-content::before {
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -380,7 +413,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 3px;
     background-color: #ffce00;
 }
-.story-style-4 .story-content::after {
+.amp-story-4 .amp-story--content .story-content::after {
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -391,9 +424,25 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 3px;
     background-color: #ffce00;
 }
+.amp-story-4 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
 
-/* Story Style #5 */
-.story-style-5 .story-content {
+/* Story Temp #5 */
+.amp-story-5 .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
+.amp-story-5 .amp-story--content .story-content {
     margin: 0 auto;
     position: absolute;
     bottom: 30px;
@@ -403,7 +452,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     max-width: 90%;
     text-align: center;
 }
-.story-style-5 .story-content::after {
+.amp-story-5 .amp-story--content .story-content::after {
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -414,8 +463,24 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     height: 3px;
     background-color: #ffce00;
 }
+.amp-story-5 .amp-story--content .story-caption {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    font-size: .65em;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+}
 
 /* Courtesy End Story */
+.courtesy-end .amp-story--logo .logo-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 40px;
+}
 .courtesy-end .amp-story--content .story-content {
     margin: 0 auto;
     position: absolute;
@@ -427,6 +492,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     text-align: center;
     font-weight: 300;
 }
+
 .courtesy-end .amp-story--content .story-content p {
     font-size: 0.875em;
     line-height: 1.25em;
@@ -457,7 +523,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
 </head>
 
 <body>
-<amp-story id="amp-wrap" standalone="" title="Tamil Nadu Protests: Top 10 Public Protests of Tamil Nadu Till Date - The Quint" publisher="The Quint" publisher-logo-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/logo/thequint.png" poster-portrait-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/3x4.jpg" poster-square-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/1x1.jpg" poster-landscape-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/4x3.jpg">
+<amp-story standalone="" title="Tamil Nadu Protests: Top 10 Public Protests of Tamil Nadu Till Date - The Quint" publisher="The Quint" publisher-logo-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/logo/thequint.png" poster-portrait-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/3x4.jpg" poster-square-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/1x1.jpg" poster-landscape-src="https://www.thequint.com/quintlab/top-tamil-nadu-protests/assets/images/poster/4x3.jpg">
 
     <!-- Home Cover -->
     <amp-story-page id="cover" class="home-cover-1">
@@ -472,6 +538,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
                 </div>
                 <div class="home-wrap__intro--headline">
                     <p class="story-category">Politics/India</p>
+                    <!-- <h1 class="story-title">What Sanju Didn't Show About Sanjay Dutt's Life</h1> -->
                     <h1 class="story-title">Tamil Nadu: The Land <br>of Protests</h1>
                 </div>
                 <div class="home-wrap__intro--byline">
@@ -483,7 +550,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #1-->
-    <amp-story-page id="page1" class="amp-story story-style-4">
+    <amp-story-page id="page1" class="amp-story-4">
         <amp-story-grid-layer template="fill" class="overlay-bg">
             <amp-img src="assets/images/story01.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -498,10 +565,11 @@ amp-story-grid-layer.overlay-bg-bottom::after {
             </div>
             <!-- <span class="story-caption"></span> -->
         </amp-story-grid-layer>
+        
     </amp-story-page>
 
     <!-- Story page #2-->
-    <amp-story-page id="page2" class="amp-story story-style-2">
+    <amp-story-page id="page2" class="amp-story-2">
         <amp-story-grid-layer template="fill" class="">
             <amp-img src="assets/images/story02.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -518,7 +586,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #3-->
-    <amp-story-page id="page3" class="amp-story story-style-3">
+    <amp-story-page id="page3" class="amp-story-3">
         <amp-story-grid-layer template="fill" class="overlay-bg">
             <amp-img src="assets/images/story03.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -535,7 +603,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #4-->
-    <amp-story-page id="page4" class="amp-story story-style-2">
+    <amp-story-page id="page4" class="amp-story-2">
         <amp-story-grid-layer template="fill" class="">
             <amp-img src="assets/images/story04.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -552,7 +620,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #5-->
-    <amp-story-page id="page5" class="amp-story story-style-5">
+    <amp-story-page id="page5" class="amp-story-5">
         <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story05.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -569,7 +637,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #6-->
-    <amp-story-page id="page6" class="amp-story story-style-1">
+    <amp-story-page id="page6" class="amp-story-1">
         <amp-story-grid-layer template="fill" class="overlay-bg-top">
             <amp-img src="assets/images/story06.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -586,7 +654,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #7-->
-    <amp-story-page id="page7" class="amp-story story-style-2">
+    <amp-story-page id="page7" class="amp-story-2">
         <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story07.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -603,7 +671,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #8-->
-    <amp-story-page id="page8" class="amp-story story-style-1">
+    <amp-story-page id="page8" class="amp-story-1">
         <amp-story-grid-layer template="fill" class="overlay-bg-top">
             <amp-img src="assets/images/story08.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -620,7 +688,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #9-->
-    <amp-story-page id="page9" class="amp-story story-style-2">
+    <amp-story-page id="page9" class="amp-story-2">
         <amp-story-grid-layer template="fill" class="overlay-bg-bottom">
             <amp-img src="assets/images/story09.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
@@ -637,7 +705,7 @@ amp-story-grid-layer.overlay-bg-bottom::after {
     </amp-story-page>
 
     <!-- Story page #10-->
-    <amp-story-page id="page10" class="amp-story story-style-3">
+    <amp-story-page id="page10" class="amp-story-3">
         <amp-story-grid-layer template="fill" class="overlay-bg-dark">
             <amp-img src="assets/images/story10.jpg" width="720" height="1280" layout="responsive">
             </amp-img>
