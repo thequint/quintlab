@@ -1,31 +1,22 @@
 @charset "utf-8";
 .container {
-	width: 80%;
+	width: 90%;
 	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
 }
 
 @media (max-width: 1000px) {
-		.list-items li figcaption {
-	min-height: 85px;
 
-}
 }
 
 @media (max-width: 860px) {
-.container {
-	width: 90%;
-}
-.list-items {
-	margin: 0 -15px;
-}
+
+
 .list-items li {
-	margin-bottom: 30px;
+	width: 33.333%;
 }
-.list-items li figure {
-	margin: 0px 15px;
-}
+
 .body-wrapper {
 	padding: 40px 0px 0px 0px;
 }
@@ -39,14 +30,10 @@
 }
 
 @media (max-width: 767px) {
-.list-items li figcaption {
-	min-height: 0;
-	position: relative;
+.list-items li {
+	width: 50%;
 }
-.list-items li p.cat {
-	position: inherit;
-	margin-top: 6px;
-}
+
 .fixed-wrap {
 	display: none;
 }
@@ -65,17 +52,8 @@
 	width: auto;
 	margin: 0px 20px;
 }
-.list-items li {
-	float: none;
-	width: auto;
-	margin-bottom: 40px;
-}
-.list-items {
-	margin: 0px;
-}
-.list-items li figure {
-	margin: 0px;
-}
+
+
 .captions-wrapper {
 	margin: 0 20px;
 }
@@ -111,10 +89,43 @@
 }
 }
 
-@media (max-width: 360px) {
-.list-items li figcaption {
-	min-height: 0;
+@media (max-width: 479px) {
+	
+	.list-items li figure {
+	margin: 0px 5px;
+
 }
+	
+	.list-items {
+	margin: 0 -5px;
+}
+	
+	.container {
+	width: auto;
+	margin: 0px 15px;
+}
+	
+	.list-items li {
+	margin-bottom: 10px;
+}
+	
+.list-items li figcaption {
+	min-height: 150px;
+	padding: 10px;
+}	
+	
+.list-items li p.cat {
+	
+	
+	bottom: 10px;
+	font-size: 13px;
+	left: 10px;
+}	
+	
+}
+
+
+@media (max-width: 360px) {
 .logo-tql {
 	width: 200px;
 	display: block;
@@ -135,7 +146,5 @@
 .list-items li p {
 	font-size: 16px;
 }
-.list-items li {
-	margin-bottom: 30px;
-}
+
 }
