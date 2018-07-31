@@ -1,0 +1,46 @@
+{
+    "bookendVersion": "v1.0",
+    "shareProviders": [
+    {
+        "provider": "facebook",
+        "app_id": "425030461275044"
+    },
+    {
+        "provider": "twitter",
+        "text": "Checkout The Top 10 Public Protests of Tamil Nadu | @TheQuintLab",
+        "url": "CANONICAL_URL"
+    },
+    {
+        "provider": "whatsapp",
+        "text": "Checkout The Top 10 Public Protests of Tamil Nadu - https://www.thequint.com/quintlab/top-tamil-nadu-protests/",
+        "url": "CANONICAL_URL"
+    },
+    {
+        "provider": "email",
+        "text": "Checkout The Top 10 Public Protests of Tamil Nadu",
+        "url": "CANONICAL_URL"
+    }],
+    "components": [
+    {
+        "type": "portrait",
+        "title": "What Sanju Didn't Show About Sanjay Dutt's Life",
+        "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/",
+        "image": "assets/images/more-story/sanju.jpg",
+        "category": "Bollywood"
+    },
+    {
+        "type": "portrait",
+        "title": "The Land of Protests: Top 10 Public Protests of Tamil Nadu",
+        "url": "https://www.thequint.com/quintlab/top-tamil-nadu-protests/",
+        "image": "assets/images/more-story/top-tamil-nadu-protests.jpg",
+        "category": "politics"
+    },
+    {
+        "type": "cta-link",
+        "links": [
+        {
+            "text": "The Quint",
+            "url": "https://www.thequint.com/"
+        }]
+    }]
+}
