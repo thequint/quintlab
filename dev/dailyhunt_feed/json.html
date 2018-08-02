@@ -1,0 +1,32 @@
+
+
+	
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/spreadsheet.js"></script> 
+<script src="assets/js/vkbeautify.js"></script> 
+ 
+<!-- <script src="assets/js/functions.js"></script> -->
+
+
+<script>
+	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18nf1vQ81tWpjp4MhL6iqGL7DO08J78rudDq5QDCNg18/pubhtml';
+
+	Tabletop.init({
+		key: public_spreadsheet_contact,
+		callback: showInfo,
+		simpleSheet: true
+	});
+
+	
+	var dashboard_data;
+
+	function showInfo(data) {
+		console.log(data);
+		
+
+	
+	}
+
+</script>
+	

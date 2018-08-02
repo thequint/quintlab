@@ -1,0 +1,49 @@
+
+
+	
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VzLG6OqOcn8" frameborder="0" allowfullscreen></iframe> -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/spreadsheet.js"></script> 
+<script src="assets/js/vkbeautify.js"></script> 
+ 
+<!-- <script src="assets/js/functions.js"></script> -->
+
+
+<script>
+	var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/18nf1vQ81tWpjp4MhL6iqGL7DO08J78rudDq5QDCNg18/pubhtml';
+
+	Tabletop.init({
+		key: public_spreadsheet_contact,
+		callback: showInfo,
+		simpleSheet: true
+	});
+
+	
+	var dashboard_data;
+
+	function showInfo(data) {
+			try{
+        var xml = $($.parseXML('<?xml version="1.0" encoding="utf-8" ?><ChronoUpdates />'));
+			$(data).each(function(index){	
+				
+        $('ChronoUpdates',xml).append($('<Update />', xml).text(data[index].Message).attr({Date:data[index].Date,title:data[index].Title,image:data[index].Image}));
+				
+				})	
+      	
+		var text = 		(new XMLSerializer()).serializeToString(xml.context)
+		$(document.body).text(text);		
+		var parser, xmlDoc;		
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(text,"text/xml");
+		console.log(xmlDoc)		
+		//  $(document.body).text(xmlDoc);		
+			}catch(e){
+        document.write(e.message);
+    	}
+	
+
+	
+	}
+
+</script>
+	
