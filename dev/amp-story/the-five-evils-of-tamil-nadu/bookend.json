@@ -36,6 +36,13 @@
         "category": "politics"
     },
     {
+        "type": "portrait",
+        "title": "Indian Tennis Players to Watch at Asian Games",
+        "url": "https://www.thequint.com/quintlab/indian-tennis-players/",
+        "image": "assets/images/more-story/indian-tennis-players.jpg",
+        "category": "Sports"
+    },
+    {
         "type": "cta-link",
         "links": [
         {
