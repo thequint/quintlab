@@ -1,404 +1,0 @@
-Sl no,Name,Location,Party,Point,Grade,Price1,price2
-1,Pooja Pal,ALLAHABAD WEST,BSP,1,10th Pass,"Rs 1,11,02,460~ 1 Crore+","Rs 56,52,574~ 56 Lacs+"
-2,Shankh Lal,KATEHARI,SP,4,Graduate,"Rs 4,18,77,911~ 4 Crore+","Rs 24,57,150~ 24 Lacs+"
-3,Azimulhaq Pahalwan,TANDA,SP,2,10th Pass,"Rs 32,45,255~ 32 Lacs+","Rs 3,33,000~ 3 Lacs+"
-4,Gutiyari Lal Duwesh,AGRA CANTT. (SC),BSP,0,8th Pass,"Rs 1,69,16,925~ 1 Crore+","Rs 11,01,787~ 11 Lacs+"
-5,Jagan Prasad Garg,AGRA NORTH,BJP,0,Graduate,"Rs 10,24,95,284~ 10 Crore+","Rs 2,72,27,500~ 2 Crore+"
-6,Kali Charan Suman,AGRA RURAL (SC),BSP,0,"PostGraduate","Rs 1,55,55,743~ 1 Crore+","Rs 0~"
-7,Yogendra Upadhyay,AGRA SOUTH,BJP,3,"PostGraduate","Rs 67,25,280~ 67 Lacs+","Rs 0~"
-8,Tribhuvan Ram,AJAGARA (SC),BSP,0,Graduate,"Rs 3,45,51,995~ 3 Crore+","Rs 0~"
-9,Ram Murti Verma,AKBARPUR,SP,0,12th Pass,"Rs 1,40,35,616~ 1 Crore+","Rs 12,34,475~ 12 Lacs+"
-10,Ram Swaroop Singh,AKBARPUR-RANIYA,SP,0,10th Pass,"Rs 2,83,91,300~ 2 Crore+","Rs 0~"
-11,Bheem Prasad,ALAPUR (SC),SP,0,Graduate,"Rs 22,33,676~ 22 Lacs+","Rs 0~"
-12,Rameshwar Singh,ALIGANJ,SP,27,10th Pass,"Rs 10,03,79,697","Rs 12,99,441"
-13,Zafar Aalam,ALIGARH,SP,0,Graduate,"Rs 18,63,92,000~ 18 Crore+","Rs 85,21,000~ 85 Lacs+"
-14,"Anugrah NarayanSingh",ALLAHABAD NORTH,INC,1,"GraduateProfessional","Rs 63,34,685~ 63 Lacs+","Rs 0~"
-15,Parvez Ahmad,ALLAHABAD SOUTH,SP,4,12th Pass,"Rs 3,26,83,405~ 3 Crore+","Rs 8,77,656~ 8 Lacs+"
-16,Mamtesh,AMANPUR,BSP,0,Graduate,"Rs 1,12,35,328~ 1 Crore+","Rs 0~"
-17,Gayatri Prasad,AMETHI,SP,1,Graduate,"Rs 1,83,59,616~ 1 Crore+","Rs 0~"
-18,"Narendra SinghYadav",AMRITPUR,SP,0,"PostGraduate","Rs 4,72,63,493~ 4 Crore+","Rs 0~"
-19,Mehboob Ali,AMROHA,SP,12,12th Pass,"Rs 4,65,33,828~ 4 Crore+","Rs 33,45,885~ 33 Lacs+"
-20,Gajendra Singh,ANUPSHAHAR,BSP,0,Literate,"Rs 3,27,05,761~ 3 Crore+","Rs 21,16,000~ 21 Lacs+"
-21,Dharm Pal Singh,AONLA,BJP,1,"PostGraduate","Rs 1,18,54,754~ 1 Crore+","Rs 13,90,167~ 13 Lacs+"
-22,Salil Vishnoi,ARYA NAGAR,BJP,0,"GraduateProfessional","Rs 2,40,96,759~ 2 Crore+","Rs 31,00,000~ 31 Lacs+"
-23,Pinki Singh,ASMOLI,SP,0,"GraduateProfessional","Rs 2,16,85,000~ 2 Crore+","Rs 51,00,000~ 51 Lacs+"
-24,Viresh Yadav,ATRAULI,SP,3,Graduate,"Rs 1,42,93,505~ 1 Crore+","Rs 10,55,990~ 10 Lacs+"
-25,Sagram,ATRAULIYA,SP,1,Doctorate,"Rs 66,77,825~ 66 Lacs+","Rs 0~"
-26,Madhubala,AURAI (SC),SP,1,Graduate,"Rs 1,83,71,616~ 1 Crore+","Rs 52,14,352~ 52 Lacs+"
-27,"Madan Singh/Santosh",AURAIYA (SC),SP,5,12th Pass,"Rs 71,12,669~ 71 Lacs+","Rs 11,27,000~ 11 Lacs+"
-28,Ayodhya Prasad Pal,AYAH SHAH,BSP,2,12th Pass,"Rs 2,11,69,635~ 2 Crore+","Rs 48,96,905~ 48 Lacs+"
-29,Tej Narayan,AYODHYA,SP,8,Post,"Rs 66,612",Rs 0
-30,Durga Prasad,AZAMGARH,SP,2,"GraduateProfessional","Rs 2,56,19,562~ 2 Crore+","Rs 20,36,200~ 20 Lacs+"
-31,Vinod Kumar,BABAGANJ (SC),IND,2,"PostGraduate","Rs 80,84,751~ 80 Lacs+","Rs 29,270~ 29 Thou+"
-32,Vishambhar Singh,BABERU,SP,3,"PostGraduate","Rs 3,22,36,701~ 3 Crore+","Rs 14,10,000~ 14 Lacs+"
-33,Krishanpal,BABINA,BSP,0,12th Pass,"Rs 46,72,000~ 46 Lacs+","Rs 0~"
-34,Ram Lal Akela,BACHHRAWAN (SC),SP,3,"PostGraduate","Rs 77,51,790~ 77 Lacs+","Rs 11,50,293~ 11 Lacs+"
-35,Abid Raja Khan,BADAUN,SP,2,12th Pass,"Rs 1,68,12,470~ 1 Crore+","Rs 9,00,000~ 9 Lacs+"
-36,Om Prakash,BADLAPUR,SP,2,10th Pass,"Rs 2,77,07,636~ 2 Crore+","Rs 79,01,734~ 79 Lacs+"
-37,Hemlata Chaudhary,BAGHPAT,BSP,0,"PostGraduate","Rs 20,76,38,911~ 20 Crore+","Rs 0~"
-38,"Raja MahendraAridaman Singh",BAH,SP,0,"PostGraduate","Rs 14,79,81,775~ 14 Crore+","Rs 36,73,027~ 36 Lacs+"
-39,Ata Ur Rehman,BAHERI,SP,0,Others,"Rs 1,14,63,000~ 1 Crore+","Rs 1,53,000~ 1 Lacs+"
-40,"Dr.Vaqar AhmadShah",BAHRAICH,SP,0,"GraduateProfessional","Rs 2,12,51,534~ 2 Crore+","Rs 4,37,877~ 4 Lacs+"
-41,Jai Prakash Anchal,BAIRIA,SP,0,"PostGraduate","Rs 97,21,868~ 97 Lacs+","Rs 0~"
-42,Gomti Yadav,BAKSHI KAA TALAB,SP,2,Graduate,"Rs 4,91,95,802~ 4 Crore+","Rs 0~"
-43,Anil Verma,BALAMAU (SC),SP,0,Graduate,"Rs 1,07,23,390~ 1 Crore+","Rs 0~"
-44,Pooran Prakash,BALDEV (SC),RLD,0,"GraduateProfessional","Rs 6,90,51,703~ 6 Crore+","Rs 10,60,000~ 10 Lacs+"
-45,Savitri Fule,BALHA (SC),BJP,6,Graduate,"Rs 2,00,291~ 2 Lacs+","Rs 0~"
-46,Narad,BALLIA NAGAR,SP,0,"PostGraduate","Rs 3,57,85,466~ 3 Crore+","Rs 2,20,066~ 2 Lacs+"
-47,Jagram,BALRAMPUR (SC),SP,0,10th Pass,"Rs 13,45,553~ 13 Lacs+","Rs 0~"
-48,Vivek Kumar Singh,BANDA,INC,0,"GraduateProfessional","Rs 6,45,58,500~ 6 Crore+","Rs 0~"
-49,Badlu Khan,BANGERMAU,SP,0,12th Pass,"Rs 1,48,65,000~ 1 Crore+","Rs 61,00,000~ 61 Lacs+"
-50,Ram Govind,BANSDIH,SP,0,"GraduateProfessional","Rs 37,63,600~ 37 Lacs+","Rs 0~"
-51,Dr Vijay Kumar,BANSGAON (SC),BSP,0,"GraduateProfessional","Rs 33,76,775~ 33 Lacs+","Rs 0~"
-52,Jay Pratap Singh,BANSI,BJP,0,Graduate,"Rs 4,67,94,550~ 4 Crore+","Rs 2,48,322~ 2 Lacs+"
-53,Dr Ajay Kumar,BARA (SC),SP,0,Doctorate,"Rs 7,08,39,283~ 7 Crore+","Rs 6,52,907~ 6 Lacs+"
-54,Dharam Raj,BARABANKI,SP,0,"GraduateProfessional","Rs 78,74,513~ 78 Lacs+","Rs 3,57,000~ 3 Lacs+"
-55,Dalveer Singh,BARAULI,RLD,0,"GraduateProfessional","Rs 5,26,90,345~ 5 Crore+","Rs 0~"
-56,Lokesh Dixit,BARAUT,BSP,0,10th Pass,"Rs 5,06,66,823~ 5 Crore+","Rs 0~"
-57,Dr Arun Kumar,BAREILLY,BJP,0,"GraduateProfessional","Rs 10,16,40,861~ 10 Crore+","Rs 30,19,842~ 30 Lacs+"
-58,Rajesh Agarwal,BAREILLY CANTT.,BJP,0,"PostGraduate","Rs 1,97,92,594~ 1 Crore+","Rs 8,47,412~ 8 Lacs+"
-59,Prem Prakash,BARHAJ,SP,0,Graduate,"Rs 2,11,39,532~ 2 Crore+","Rs 0~"
-60,Mohd.Ghazi,BARHAPUR,BSP,0,8th Pass,"Rs 61,12,783~ 61 Lacs+","Rs 1,00,000~ 1 Lacs+"
-61,Hemraj Verma,BARKHERA,SP,0,Graduate,"Rs 48,74,559~ 48 Lacs+","Rs 4,25,000~ 4 Lacs+"
-62,Jitendra Kumar,BASTI SADAR,BSP,1,12th Pass,"Rs 2,43,81,937~ 2 Crore+","Rs 12,31,023~ 12 Lacs+"
-63,Mahaveer Singh,BEHAT,BSP,0,"GraduateProfessional","Rs 5,98,41,158~ 5 Crore+","Rs 19,37,664~ 19 Lacs+"
-64,Gorakh Paswan,BELTHARA ROAD (SC),SP,0,12th Pass,"Rs 27,87,320~ 27 Lacs+","Rs 0~"
-65,Zaheed,BHADOHI,SP,3,12th Pass,"Rs 55,72,208~ 55 Lacs+","Rs 46,500~ 46 Thou+"
-66,"Kuldeep SinghSengar",BHAGWANTNAGAR,SP,0,Graduate,"Rs 1,27,26,000~ 1 Crore+","Rs 1,52,000~ 1 Lacs+"
-67,Sukh Devi Verma,BHARTHANA (SC),SP,0,10th Pass,"Rs 1,02,74,104~ 1 Crore+","Rs 0~"
-68,Kameswar,BHATPAR RANI,SP,0,Literate,"Rs 2,01,94,722~ 2 Crore+","Rs 13,97,796~ 13 Lacs+"
-69,Indrani Devi,BHINGA,SP,1,12th Pass,"Rs 1,51,95,917~ 1 Crore+","Rs 4,19,790~ 4 Lacs+"
-70,Yogendra Pal Singh,BHOGNIPUR,SP,0,"GraduateProfessional","Rs 1,17,05,544~ 1 Crore+","Rs 0~"
-71,Shazil Islam,BHOJIPURA,IEMC,1,10th Pass,"Rs 2,31,46,800~ 2 Crore+","Rs 33,25,840~ 33 Lacs+"
-72,Jamaluddin Siddiqui,BHOJPUR,SP,0,"GraduateProfessional","Rs 12,46,92,916~ 12 Crore+","Rs 0~"
-73,Alok Kumar,BHONGAON,SP,0,Graduate,"Rs 1,15,76,763~ 1 Crore+","Rs 0~"
-74,Pramod Kumar,BIDHUNA,SP,2,Graduate,"Rs 55,53,184~ 55 Lacs+","Rs 0~"
-75,Kunvar Bharatendra,BIJNOR,BJP,0,"PostGraduate","Rs 1,84,78,450~ 1 Crore+","Rs 0~"
-76,Mitrasen,BIKAPUR,SP,19,12th Pass,"Rs 73,57,031~ 73 Lacs+","Rs 58,122~ 58 Thou+"
-77,Mhd. Irfan,BILARI,SP,0,"GraduateProfessional","Rs 1,99,26,989~ 1 Crore+","Rs 0~"
-78,Sanjay Kapoor,BILASPUR,INC,0,"GraduateProfessional","Rs 4,84,18,000~ 4 Crore+","Rs 45,16,000~ 45 Lacs+"
-79,Brijesh Kumar,"BILGRAM-MALLANWAN",BSP,0,"PostGraduate","Rs 1,20,38,185~ 1 Crore+","Rs 40,09,036~ 40 Lacs+"
-80,Aruna Kumari,BILHAUR (SC),SP,0,"PostGraduate","Rs 59,58,561~ 59 Lacs+","Rs 0~"
-81,Musarrat Ali Bittan,BILSI,BSP,2,8th Pass,"Rs 1,82,88,199~ 1 Crore+","Rs 0~"
-82,"Sukhadev PrasadVerma",BINDKI,BSP,0,8th Pass,"Rs 1,27,34,246~ 1 Crore+","Rs 0~"
-83,"Agys RamsaranVerma",BISALPUR,BJP,5,"GraduateProfessional","Rs 73,03,190~ 73 Lacs+","Rs 2,90,000~ 2 Lacs+"
-84,"Ashutosh Morya UrfRaju",BISAULI (SC),SP,0,10th Pass,"Rs 2,86,55,526~ 2 Crore+","Rs 2,00,000~ 2 Lacs+"
-85,Rampal Yadav,BISWAN,SP,2,12th Pass,"Rs 1,76,04,655~ 1 Crore+","Rs 4,51,000~ 4 Lacs+"
-86,Virendra Singh,BITHARI CHAINPUR,BSP,2,"PostGraduate","Rs 3,47,96,758~ 3 Crore+","Rs 40,00,000~ 40 Lacs+"
-87,Muneendra Shukla,BITHOOR,SP,3,12th Pass,"Rs 78,80,975~ 78 Lacs+","Rs 7,19,902~ 7 Lacs+"
-88,Nawazish Alam Khan,BUDHANA,SP,0,Graduate,"Rs 84,34,000~ 84 Lacs+","Rs 5,00,000~ 5 Lacs+"
-89,Mohd. Aleem Khan,BULANDSHAHAR,BSP,3,Literate,"Rs 2,61,19,833~ 2 Crore+","Rs 3,37,000~ 3 Lacs+"
-90,Fateh Bahadur,CAIMPIYARGANJ,NCP,0,12th Pass,"Rs 3,29,36,000~ 3 Crore+","Rs 1,09,58,000~ 1 Crore+"
-91,Mohd. Asif Jafri,CHAIL,BSP,0,"GraduateProfessional","Rs 4,94,61,635~ 4 Crore+","Rs 41,775~ 41 Thou+"
-92,Poonam,CHAKIA (SC),SP,0,10th Pass,"Rs 61,62,143~ 61 Lacs+","Rs 12,05,812~ 12 Lacs+"
-93,Ali Yusuf Ali,CHAMRAUA,BSP,0,10th Pass,"Rs 1,19,99,486~ 1 Crore+","Rs 7,50,000~ 7 Lacs+"
-94,Laxmigautam,CHANDAUSI (SC),SP,0,"PostGraduate","Rs 53,70,873~ 53 Lacs+","Rs 15,70,213~ 15 Lacs+"
-95,Iqbal,CHANDPUR,BSP,2,12th Pass,"Rs 1,42,79,277~ 1 Crore+","Rs 0~"
-96,Uma Bharti,CHARKHARI,BJP,5,5th Pass,"Rs 95,27,439~ 95 Lacs+","Rs 0~"
-97,Noor Saleem Rana,CHARTHAWAL,BSP,2,12th Pass,"Rs 19,14,13,086~ 19 Crore+","Rs 9,60,35,953~ 9 Crore+"
-98,Jay Prakash,CHAURI-CHAURA,BSP,0,Graduate,"Rs 3,39,48,031~ 3 Crore+","Rs 18,19,995~ 18 Lacs+"
-99,Bhailal,CHHANBEY (SC),SP,0,10th Pass,"Rs 88,70,000~ 88 Lacs+","Rs 0~"
-100,Veer Pal,CHHAPRAULI,RLD,0,12th Pass,"Rs 19,97,087~ 19 Lacs+","Rs 0~"
-101,Rakesh Kr.,CHHARRA,SP,1,Graduate,"Rs 4,79,694~ 4 Lacs+","Rs 0~"
-102,Tejpal Singh,CHHATA,RLD,1,"PostGraduate","Rs 5,13,20,577~ 5 Crore+","Rs 0~"
-103,Arvind Singh Yadav,CHHIBRAMAU,SP,0,Graduate,"Rs 1,97,59,660~ 1 Crore+","Rs 7,00,500~ 7 Lacs+"
-104,Rajesh,CHILLUPAR,BSP,3,Graduate,"Rs 34,99,917~ 34 Lacs+","Rs 9,11,816~ 9 Lacs+"
-105,Veer Singh,CHITRAKOOT,SP,9,12th Pass,"Rs 84,21,699~ 84 Lacs+","Rs 8,06,511~ 8 Lacs+"
-106,Jagtamba Singh,CHUNAR,SP,0,"PostGraduate","Rs 28,84,501~ 28 Lacs+","Rs 0~"
-107,Yogesh Pratap Singh,COLONELGANJ,SP,0,"GraduateProfessional","Rs 5,93,09,143~ 5 Crore+","Rs 35,00,000~ 35 Lacs+"
-108,"Ram Murti SinghVerma",DADRAUL,SP,1,Graduate,"Rs 1,94,33,464~ 1 Crore+","Rs 0~"
-109,Satveer Singh Gujjar,DADRI,BSP,0,10th Pass,"Rs 97,48,182~ 97 Lacs+","Rs 6,94,734~ 6 Lacs+"
-110,Rajeev Kumar,DARIYABAD,SP,0,10th Pass,"Rs 1,72,14,714~ 1 Crore+","Rs 90,000~ 90 Thou+"
-111,Sinod Kumar Shakya,DATAGANJ,BSP,1,12th Pass,"Rs 3,01,97,031~ 3 Crore+","Rs 27,50,000~ 27 Lacs+"
-112,"ShribhagwanSharma",DEBAI,SP,13,10th Pass,"Rs 1,80,76,071~ 1 Crore+","Rs 0~"
-113,Rajendra Singh Rana,DEOBAND,SP,3,"GraduateProfessional","Rs 4,45,52,413~ 4 Crore+","Rs 36,16,701~ 36 Lacs+"
-114,Janmejai Singh,DEORIA,BJP,1,10th Pass,"Rs 2,54,53,482~ 2 Crore+","Rs 4,52,277~ 4 Lacs+"
-115,"Th. Mool ChandChauhan",DHAMPUR,SP,1,"PostGraduate","Rs 79,86,983~ 79 Lacs+","Rs 3,88,592~ 3 Lacs+"
-116,Maikal Chandra,DHANAURA (SC),SP,0,"PostGraduate","Rs 1,75,04,582~ 1 Crore+","Rs 0~"
-117,Alagu Prasad,DHANGHATA (SC),SP,1,12th Pass,"Rs 19,50,000~ 19 Lacs+","Rs 0~"
-118,"Dharmesh SinghTomar",DHAULANA,SP,0,"PostGraduate","Rs 3,87,46,455~ 3 Crore+","Rs 0~"
-119,Shamsher Bahadur,DHAURAHRA,BSP,0,"GraduateProfessional","Rs 1,13,50,746~ 1 Crore+","Rs 9,88,277~ 9 Lacs+"
-120,Pradeep Kumar,DIBIYAPUR,SP,0,"GraduateProfessional","Rs 1,83,75,474~ 1 Crore+","Rs 8,16,593~ 8 Lacs+"
-121,Adil Shekh,DIDARGANJ,SP,2,10th Pass,"Rs 1,46,78,205~ 1 Crore+","Rs 0~"
-122,Kamal Yusuf Malik,DOMARIYAGANJ,PECP,0,10th Pass,"Rs 1,48,50,000~ 1 Crore+","Rs 4,75,843~ 4 Lacs+"
-123,Rubi Prasad,DUDDHI (SC),IND,0,Graduate,"Rs 1,28,000~ 1 Lacs+","Rs 0~"
-124,Ashish Kumar Yadav,ETAH,SP,0,12th Pass,"Rs 1,98,49,262~ 1 Crore+","Rs 0~"
-125,"Raghuraj SinghShakya",ETAWAH,SP,0,"PostGraduate","Rs 1,80,14,900~ 1 Crore+","Rs 7,50,000~ 7 Lacs+"
-126,Dharam Pal Singh,ETMADPUR,BSP,0,Doctorate,"Rs 2,44,94,623~ 2 Crore+","Rs 4,96,214~ 4 Lacs+"
-127,Dr Siya Ram,FARIDPUR (SC),SP,0,"GraduateProfessional","Rs 30,02,953~ 30 Lacs+","Rs 0~"
-128,"Vijay Singh S/O PremSingh",FARRUKHABAD,IND,3,8th Pass,"Rs 1,31,08,316~ 1 Crore+","Rs 0~"
-129,Chhotey Lal Verma,FATEHABAD,BSP,0,12th Pass,"Rs 3,33,95,272~ 3 Crore+","Rs 4,95,000~ 4 Lacs+"
-130,Syed Qasim Hasan,FATEHPUR,SP,5,10th Pass,"Rs 2,28,78,000~ 2 Crore+","Rs 4,00,000~ 4 Lacs+"
-131,Surajpal Singh,FATEHPUR SIKRI,BSP,0,8th Pass,"Rs 1,61,39,144~ 1 Crore+","Rs 1,76,078~ 1 Lacs+"
-132,"Ganga SinghKushwaha",FAZILNAGAR,BJP,0,"PostGraduate","Rs 68,06,000~ 68 Lacs+","Rs 0~"
-133,Manish Asiza,FIROZABAD,BJP,3,Graduate,"Rs 4,42,88,931~ 4 Crore+","Rs 62,13,715~ 62 Lacs+"
-134,Shiv Pratap Yadav,GAINSARI,SP,1,Doctorate,"Rs 86,22,604~ 86 Lacs+","Rs 0~"
-135,Pardeep Kumar,GANGOH,INC,5,"PostGraduate","Rs 78,30,968~ 78 Lacs+","Rs 1,00,000~ 1 Lacs+"
-136,Deepnarayan Singh,GARAUTHA,SP,6,Graduate,"Rs 9,14,43,463~ 9 Crore+","Rs 1,63,18,337~ 1 Crore+"
-137,Madan Chauhan,GARHMUKTESHWAR,SP,0,Graduate,"Rs 4,70,69,253~ 4 Crore+","Rs 21,54,565~ 21 Lacs+"
-138,Kuwar Anand Singh,GAURA,SP,0,Graduate,"Rs 18,30,08,486~ 18 Crore+","Rs 0~"
-139,Rakesh Pratap Singh,GAURIGANJ,SP,6,10th Pass,"Rs 82,52,699~ 82 Lacs+","Rs 13,52,034~ 13 Lacs+"
-140,Indrajeet,GHATAMPUR (SC),SP,0,12th Pass,"Rs 67,94,125~ 67 Lacs+","Rs 2,50,000~ 2 Lacs+"
-141,Suresh Bansal,GHAZIABAD,BSP,0,"PostGraduate","Rs 7,15,37,174~ 7 Crore+","Rs 0~"
-142,Vijay Kumar Mishra,GHAZIPUR,SP,0,"GraduateProfessional","Rs 9,51,36,818~ 9 Crore+","Rs 0~"
-143,Ramesh Chandra,GHORAWAL,SP,1,12th Pass,"Rs 3,75,87,783~ 3 Crore+","Rs 1,36,51,923~ 1 Crore+"
-144,Sudhakar,GHOSI,SP,6,"PostGraduate","Rs 47,65,100~ 47 Lacs+","Rs 0~"
-145,Vinay Tiwari,GOLA GOKRANNATH,SP,2,12th Pass,"Rs 5,46,92,565~ 5 Crore+","Rs 1,20,000~ 1 Lacs+"
-146,"Vinod Kumar (PanditSingh)",GONDA,SP,2,12th Pass,"Rs 1,46,30,757~ 1 Crore+","Rs 0~"
-147,Wasim,GOPALPUR,SP,0,"PostGraduate","Rs 44,18,400~ 44 Lacs+","Rs 84,605~ 84 Thou+"
-148,Shyam Prakash,GOPAMAU (SC),SP,1,Graduate,"Rs 1,59,50,000~ 1 Crore+","Rs 15,00,000~ 15 Lacs+"
-149,Vijay Bahadur Yadav,GORAKHPUR RURAL,BJP,0,12th Pass,"Rs 2,70,68,238~ 2 Crore+","Rs 0~"
-150,"Dr Radha MohanDas Agarwal",GORAKHPUR URBAN,BJP,1,"PostGraduate","Rs 2,09,40,077~ 2 Crore+","Rs 2,02,000~ 2 Lacs+"
-151,Abhay Singh,GOSHAINGANJ,SP,18,Graduate,"Rs 2,36,25,343~ 2 Crore+","Rs 13,67,132~ 13 Lacs+"
-152,Rajkumar Rawat,GOVERDHAN,BSP,0,12th Pass,"Rs 2,51,26,702~ 2 Crore+","Rs 0~"
-153,Satyadev Pachauri,GOVINDNAGAR,BJP,0,"PostGraduate","Rs 2,74,44,332~ 2 Crore+","Rs 4,74,275~ 4 Lacs+"
-154,Ram Khilari,GUNNAUR,SP,1,"GraduateProfessional","Rs 1,32,61,140~ 1 Crore+","Rs 2,90,010~ 2 Lacs+"
-155,Vijay Kumar,GYANPUR,SP,26,12th Pass,"Rs 7,38,74,576~ 7 Crore+","Rs 0~"
-156,Ram Magan,HAIDERGARH (SC),SP,0,12th Pass,"Rs 29,26,801~ 29 Lacs+","Rs 85,000~ 85 Thou+"
-157,Sadhvi Niranjan Jyoti,HAMIRPUR,BJP,0,12th Pass,"Rs 10,06,926~ 10 Lacs+","Rs 25,987~ 25 Thou+"
-158,"Mahesh NarayanSingh",HANDIA,SP,5,Graduate,"Rs 3,48,35,228~ 3 Crore+","Rs 6,36,238~ 6 Lacs+"
-159,Gajraj Singh,HAPUR (SC),INC,2,10th Pass,"Rs 2,99,62,341~ 2 Crore+","Rs 6,91,563~ 6 Lacs+"
-160,"Surendra VikramSingh",HARCHANDPUR,SP,1,12th Pass,"Rs 1,40,88,751~ 1 Crore+","Rs 23,04,806~ 23 Lacs+"
-161,Nitin Agrawal,HARDOI,SP,0,"PostGraduate","Rs 7,85,58,000~ 7 Crore+","Rs 0~"
-162,Ramhet Bharti,HARGAON (SC),BSP,0,"GraduateProfessional","Rs 1,54,61,904~ 1 Crore+","Rs 20,50,000~ 20 Lacs+"
-163,Raj Kishor Singh,HARRAIYA,SP,1,Graduate,"Rs 2,04,21,553~ 2 Crore+","Rs 18,67,492~ 18 Lacs+"
-164,Kamal Akhtar,HASANPUR,SP,0,"GraduateProfessional","Rs 1,05,19,377~ 1 Crore+","Rs 70,145~ 70 Thou+"
-165,Prabhu Dayal,HASTINAPUR (SC),SP,1,8th Pass,"Rs 23,70,325~ 23 Lacs+","Rs 0~"
-166,Radheshyam,HATA,SP,3,Graduate,"Rs 1,04,52,123~ 1 Crore+","Rs 3,81,984~ 3 Lacs+"
-167,"Genda LalChaudhary",HATHRAS (SC),BSP,0,Graduate,"Rs 1,10,88,304~ 1 Crore+","Rs 29,73,740~ 29 Lacs+"
-168,Mo.Asif,HUSAINGANJ,BSP,0,12th Pass,"Rs 11,31,52,968~ 11 Crore+","Rs 0~"
-169,Triloki Ram,IGLAS (SC),RLD,0,Graduate,"Rs 3,58,07,129~ 3 Crore+","Rs 98,24,000~ 98 Lacs+"
-170,Abrar Ahmad,ISAULI,SP,0,8th Pass,"Rs 2,90,000~ 2 Lacs+","Rs 8,650~ 8 Thou+"
-171,Mata Prasad Pandey,ITWA,SP,0,"PostGraduate","Rs 90,62,715~ 90 Lacs+","Rs 5,63,554~ 5 Lacs+"
-172,Radheyshyam,JAGDISHPUR (SC),INC,0,12th Pass,"Rs 23,94,791~ 23 Lacs+","Rs 0~"
-173,Madan Gopal Verma,JAHANABAD,SP,1,12th Pass,"Rs 1,79,87,010~ 1 Crore+","Rs 6,31,000~ 6 Lacs+"
-174,Subba Ram,JAKHANIAN (SC),SP,0,"PostGraduate","Rs 81,00,599~ 81 Lacs+","Rs 0~"
-175,Neeraj Kushwaha,JALALABAD,BSP,0,Graduate,"Rs 4,73,30,000~ 4 Crore+","Rs 35,88,000~ 35 Lacs+"
-176,Sher Bahadur,JALALPUR,SP,0,12th Pass,"Rs 69,73,613~ 69 Lacs+","Rs 0~"
-177,Ranjeet Suman,JALESAR (SC),SP,0,"PostGraduate","Rs 2,41,35,818~ 2 Crore+","Rs 0~"
-178,Kailash,JANGIPUR,SP,0,Graduate,"Rs 1,02,79,611~ 1 Crore+","Rs 13,00,000~ 13 Lacs+"
-179,Ram Veer Singh,JASRANA,SP,2,"PostGraduate","Rs 3,61,92,835~ 3 Crore+","Rs 20,86,216~ 20 Lacs+"
-180,Shivpal Singh Yadav,JASWANTNAGAR,SP,2,"GraduateProfessional","Rs 6,03,26,145~ 6 Crore+","Rs 1,34,34,382~ 1 Crore+"
-181,Nadeem Javed,JAUNPUR,INC,0,"PostGraduate","Rs 42,01,139~ 42 Lacs+","Rs 0~"
-182,Ved Ram Bhati,JEWAR,BSP,0,"GraduateProfessional","Rs 3,19,14,356~ 3 Crore+","Rs 5,50,000~ 5 Lacs+"
-183,Ravi Sharma,JHANSI NAGAR,BJP,2,"GraduateProfessional","Rs 1,88,84,448~ 1 Crore+","Rs 33,10,888~ 33 Lacs+"
-184,"Ram ChandraChaudhari",KADIPUR (SC),SP,1,"PostGraduate","Rs 6,14,900~ 6 Lacs+","Rs 0~"
-185,Ajit Kumar,KAIMGANJ (SC),SP,0,12th Pass,"Rs 96,82,315~ 96 Lacs+","Rs 2,12,000~ 2 Lacs+"
-186,Hukum Singh,KAIRANA,BJP,1,"GraduateProfessional","Rs 2,69,23,823~ 2 Crore+","Rs 29,26,671~ 29 Lacs+"
-187,Mukut Bihari,KAISERGANJ,BJP,0,"GraduateProfessional","Rs 1,57,15,145~ 1 Crore+","Rs 1,90,460~ 1 Lacs+"
-188,Uma Kanti,KALPI,INC,0,Literate,"Rs 42,74,622~ 42 Lacs+","Rs 0~"
-189,Satish Kumar Nigam,KALYANPUR,SP,2,"PostGraduate","Rs 1,00,67,583~ 1 Crore+","Rs 0~"
-190,Anil Kumar Dohre,KANNAUJ (SC),SP,0,"GraduateProfessional","Rs 32,56,355~ 32 Lacs+","Rs 6,39,382~ 6 Lacs+"
-191,"Raghunandan SinghBhadauria",KANPUR CANTT.,BJP,0,"PostGraduate","Rs 3,14,33,334~ 3 Crore+","Rs 30,16,975~ 30 Lacs+"
-192,Aneesurrehman,KANTH,PECP,0,"GraduateProfessional","Rs 32,91,124~ 32 Lacs+","Rs 4,22,000~ 4 Lacs+"
-193,Vijay Kumar,KAPILVASTU (SC),SP,0,8th Pass,"Rs 1,32,09,002~ 1 Crore+","Rs 4,00,000~ 4 Lacs+"
-194,Ram Prasad,KAPTANGANJ,BSP,1,12th Pass,"Rs 2,41,17,549~ 2 Crore+","Rs 0~"
-195,Deepak Patel,KARACHHANA,BSP,1,"PostGraduate","Rs 6,39,28,581~ 6 Crore+","Rs 81,36,381~ 81 Lacs+"
-196,Sobaran Singh,KARHAL,SP,0,Graduate,"Rs 3,58,23,894~ 3 Crore+","Rs 0~"
-197,Manpal Singh,KASGANJ,SP,1,"GraduateProfessional","Rs 1,54,96,534~ 1 Crore+","Rs 0~"
-198,Sunil Kumar Lala,KASTA (SC),SP,0,8th Pass,"Rs 48,35,024~ 48 Lacs+","Rs 5,00,000~ 5 Lacs+"
-199,Rajesh Yadav,KATRA,SP,6,"GraduateProfessional","Rs 3,27,18,749~ 3 Crore+","Rs 15,19,625~ 15 Lacs+"
-200,Bavan Singh,KATRA BAZAR,BJP,2,Graduate,"Rs 1,20,50,985~ 1 Crore+","Rs 13,37,086~ 13 Lacs+"
-201,Gulab Chand,KERAKAT (SC),SP,0,Graduate,"Rs 37,96,765~ 37 Lacs+","Rs 0~"
-202,Vijay,KHADDA,INC,2,12th Pass,"Rs 1,48,94,197~ 1 Crore+","Rs 0~"
-203,Krishna Paswan,KHAGA (SC),BJP,1,Not Given,"Rs 1,22,72,206~ 1 Crore+","Rs 10,00,000~ 10 Lacs+"
-204,Bhagwait Prasad,KHAIR (SC),RLD,0,12th Pass,"Rs 64,15,936~ 64 Lacs+","Rs 1,75,400~ 1 Lacs+"
-205,Sant Prasad,KHAJANI (SC),BJP,0,"PostGraduate","Rs 14,18,000~ 14 Lacs+","Rs 0~"
-206,Dr Mohd Ayub,KHALILABAD,PECP,7,"PostGraduate","Rs 18,65,37,551~ 18 Crore+","Rs 1,41,62,032~ 1 Crore+"
-207,"Kartar SinghBhadana",KHATAULI,RLD,0,8th Pass,"Rs 26,30,79,627~ 26 Crore+","Rs 25,55,000~ 25 Lacs+"
-208,Bhagwan Singh,KHERAGARH,BSP,0,"PostGraduate","Rs 87,93,810~ 87 Lacs+","Rs 25,53,929~ 25 Lacs+"
-209,Banshi Singh,KHURJA (SC),INC,1,8th Pass,"Rs 39,27,000~ 39 Lacs+","Rs 10,00,000~ 10 Lacs+"
-210,Ajay Kapoor,KIDWAI NAGAR,INC,0,Graduate,"Rs 8,23,97,047~ 8 Crore+","Rs 0~"
-211,"Eng. BrajeshKatheriya",KISHNI (SC),SP,0,Graduate,"Rs 19,12,000~ 19 Lacs+","Rs 0~"
-212,Shahid Manzoor,KITHORE,SP,0,"PostGraduate","Rs 3,17,07,610~ 3 Crore+","Rs 4,20,302~ 4 Lacs+"
-213,Hazi Jameer Ullah,KOIL,SP,2,8th Pass,"Rs 1,06,84,918~ 1 Crore+","Rs 0~"
-214,Rajbali Jaisal,KORAON (SC),BSP,1,Graduate,"Rs 67,82,326~ 67 Lacs+","Rs 0~"
-215,"Raghuraj PratapSingh",KUNDA,IND,8,Graduate,"Rs 7,11,57,460~ 7 Crore+","Rs 0~"
-216,Mohammad Rizwan,KUNDARKI,SP,3,Graduate,"Rs 63,76,774~ 63 Lacs+","Rs 78,000~ 78 Thou+"
-217,Farid Mahfuz Kidwai,KURSI,SP,0,"PostGraduate","Rs 3,52,37,327~ 3 Crore+","Rs 1,14,180~ 1 Lacs+"
-218,"BrahmashankarTripathi",KUSHINAGAR,SP,2,"GraduateProfessional","Rs 2,94,89,681~ 2 Crore+","Rs 0~"
-219,Zasmeer Ansari,LAHARPUR,BSP,0,Literate,"Rs 1,12,44,646~ 1 Crore+","Rs 15,47,790~ 15 Lacs+"
-220,Utkarsh,LAKHIMPUR,SP,0,"GraduateProfessional","Rs 80,87,459~ 80 Lacs+","Rs 1,50,000~ 1 Lacs+"
-221,Bechai,LALGANJ (SC),SP,1,Graduate,"Rs 18,24,000~ 18 Lacs+","Rs 0~"
-222,Ramesh Prasad,LALITPUR,BSP,0,10th Pass,"Rs 87,47,637~ 87 Lacs+","Rs 2,24,386~ 2 Lacs+"
-223,Santosh,LAMBHUA,SP,0,Graduate,"Rs 40,97,261~ 40 Lacs+","Rs 0~"
-224,Zakir Ali,LONI,BSP,0,10th Pass,"Rs 16,95,81,273~ 16 Crore+","Rs 0~"
-225,Dr. Rita Joshi,LUCKNOW CANTT.,INC,2,Doctorate,"Rs 2,01,13,693~ 2 Crore+","Rs 0~"
-226,Ravidas Mehrotra,LUCKNOW CENTRAL,SP,17,"GraduateProfessional","Rs 34,17,000~ 34 Lacs+","Rs 0~"
-227,Kalraj Mishra,LUCKNOW EAST,BJP,0,"PostGraduate","Rs 3,59,52,690~ 3 Crore+","Rs 0~"
-228,Abhishek Mishra,LUCKNOW NORTH,SP,0,Doctorate,"Rs 1,31,48,840~ 1 Crore+","Rs 7,00,000~ 7 Lacs+"
-229,Mohd.Rehan,LUCKNOW WEST,SP,0,Graduate,"Rs 5,72,46,777~ 5 Crore+","Rs 0~"
-230,Jagdish Sonkar,MACHHLISHAHR (SC),SP,1,Graduate,"Rs 2,39,15,456~ 2 Crore+","Rs 82,991~ 82 Thou+"
-231,Santram,MADHAUGARH,BSP,0,12th Pass,"Rs 58,26,054~ 58 Lacs+","Rs 5,00,000~ 5 Lacs+"
-232,Umesh Pandey,MADHUBAN,BSP,2,Graduate,"Rs 1,13,46,000~ 1 Crore+","Rs 42,00,000~ 42 Lacs+"
-233,Ram Karan Arya,MAHADEWA (SC),SP,1,"GraduateProfessional","Rs 64,04,664~ 64 Lacs+","Rs 0~"
-234,Sudama,MAHARAJGANJ (SC),SP,0,Graduate,"Rs 8,48,637~ 8 Lacs+","Rs 0~"
-235,Satish Mahana,MAHARAJPUR,BJP,0,Graduate,"Rs 7,26,44,477~ 7 Crore+","Rs 1,06,27,045~ 1 Crore+"
-236,Krishna Kumar Ojha,MAHASI,BSP,1,12th Pass,"Rs 85,19,215~ 85 Lacs+","Rs 10,69,682~ 10 Lacs+"
-237,"Narendra SinghVerma",MAHMOODABAD,SP,1,"PostGraduate","Rs 2,05,94,632~ 2 Crore+","Rs 4,36,969~ 4 Lacs+"
-238,Raj Narain Alias Rajju,MAHOBA,BSP,0,"GraduateProfessional","Rs 1,92,13,294~ 1 Crore+","Rs 28,58,500~ 28 Lacs+"
-239,Anoop Kumar,MAHOLI,SP,0,Graduate,"Rs 6,73,44,580~ 6 Crore+","Rs 72,40,584~ 72 Lacs+"
-240,"Rajkumar Alias RajuYadav",MAINPURI,SP,1,12th Pass,"Rs 9,21,94,533~ 9 Crore+","Rs 61,05,059~ 61 Lacs+"
-241,Ramesh Chand,MAJHAWAN,BSP,1,12th Pass,"Rs 2,59,70,234~ 2 Crore+","Rs 1,26,03,883~ 1 Crore+"
-242,Paras Nath Yadaw,MALHANI,SP,0,12th Pass,"Rs 1,31,17,125~ 1 Crore+","Rs 0~"
-243,Indal Kumar,MALIHABAD (SC),SP,4,10th Pass,"Rs 2,37,66,000~ 2 Crore+","Rs 14,99,000~ 14 Lacs+"
-244,"Chandrabhan SinghPatel",MANIKPUR,BSP,1,12th Pass,"Rs 3,78,40,744~ 3 Crore+","Rs 0~"
-245,Indrajeet Saroj,MANJHANPUR (SC),BSP,0,Graduate,"Rs 2,37,17,337~ 2 Crore+","Rs 76,37,200~ 76 Lacs+"
-246,Babu Lal,MANKAPUR (SC),SP,1,5th Pass,"Rs 39,71,468~ 39 Lacs+","Rs 0~"
-247,Jayant Chaudhary,MANT,RLD,0,"PostGraduate","Rs 6,93,48,338~ 6 Crore+","Rs 26,25,200~ 26 Lacs+"
-248,Amit Gaurav,MARHARA,SP,0,12th Pass,"Rs 1,36,03,866~ 1 Crore+","Rs 8,24,400~ 8 Lacs+"
-249,Lalitesh Pati Tripathi,MARIHAN,INC,0,"GraduateProfessional","Rs 6,68,55,203~ 6 Crore+","Rs 6,79,239~ 6 Lacs+"
-250,Shraddha,MARIYAHU,SP,0,12th Pass,"Rs 31,62,138~ 31 Lacs+","Rs 2,02,000~ 2 Lacs+"
-251,Yasar Shah,MATERA,SP,1,"PostGraduate","Rs 1,31,45,819~ 1 Crore+","Rs 82,70,293~ 82 Lacs+"
-252,Pradeep Mathur,MATHURA,INC,1,"GraduateProfessional","Rs 2,28,59,536~ 2 Crore+","Rs 19,44,280~ 19 Lacs+"
-253,Mokhtar Ansari,MAU,QED,15,Graduate,"Rs 3,07,88,828~ 3 Crore+","Rs 19,75,599~ 19 Lacs+"
-254,Dr. Rashmi Arya,MAURANIPUR (SC),SP,0,Doctorate,"Rs 75,04,333~ 75 Lacs+","Rs 2,50,000~ 2 Lacs+"
-255,Jamil,MEERAPUR,BSP,0,Literate,"Rs 22,21,000~ 22 Lacs+","Rs 0~"
-256,Sultan Beg,MEERGANJ,BSP,3,"PostGraduate","Rs 1,15,48,283~ 1 Crore+","Rs 10,78,786~ 10 Lacs+"
-257,Dr. Laxmikant Bajpai,MEERUT,BJP,3,"GraduateProfessional","Rs 1,13,86,984~ 1 Crore+","Rs 20,07,000~ 20 Lacs+"
-258,Satya Prakash,MEERUT CANTT.,BJP,1,8th Pass,"Rs 2,77,94,652~ 2 Crore+","Rs 29,59,231~ 29 Lacs+"
-259,"Ravindra KumarBhadana",MEERUT SOUTH,BJP,0,12th Pass,"Rs 73,45,342~ 73 Lacs+","Rs 0~"
-260,Brijlal,MEHNAGAR (SC),SP,0,12th Pass,"Rs 1,81,79,555~ 1 Crore+","Rs 0~"
-261,Nandita Shukla,MEHNAUN,SP,0,"PostGraduate","Rs 1,08,54,405~ 1 Crore+","Rs 1,50,000~ 1 Lacs+"
-262,Feran Lal,MEHRONI (SC),BSP,2,8th Pass,"Rs 1,85,25,602~ 1 Crore+","Rs 93,56,920~ 93 Lacs+"
-263,"Girish Chandra AlliasGama Pandey",MEJA,SP,0,10th Pass,"Rs 44,51,378~ 44 Lacs+","Rs 0~"
-264,Laxmikant,MENHDAWAL,SP,1,12th Pass,"Rs 20,83,335~ 20 Lacs+","Rs 4,89,296~ 4 Lacs+"
-265,Vijay Singh,MILAK (SC),SP,0,10th Pass,"Rs 41,60,370~ 41 Lacs+","Rs 3,50,000~ 3 Lacs+"
-266,Avdheshprasad,MILKIPUR (SC),SP,0,"PostGraduate","Rs 1,92,89,073~ 1 Crore+","Rs 1,39,101~ 1 Lacs+"
-267,"Kailash NathChaurasiya",MIRZAPUR,SP,4,8th Pass,"Rs 2,09,67,983~ 2 Crore+","Rs 0~"
-268,Rampal Rajwanshi,MISRIKH (SC),SP,0,8th Pass,"Rs 1,39,30,177~ 1 Crore+","Rs 0~"
-269,Sudesh Sharma,MODI NAGAR,RLD,0,10th Pass,"Rs 4,84,94,211~ 4 Crore+","Rs 13,19,610~ 13 Lacs+"
-270,Sibgatullah Ansari,MOHAMMADABAD,QED,0,Graduate,"Rs 2,06,01,429~ 2 Crore+","Rs 0~"
-271,Awasthi Bala Prasad,MOHAMMDI,BSP,0,"GraduateProfessional","Rs 1,18,56,647~ 1 Crore+","Rs 0~"
-272,Radhey Lal Rawat,MOHAN (SC),BSP,0,"PostGraduate","Rs 56,22,569~ 56 Lacs+","Rs 18,00,000~ 18 Lacs+"
-273,Chandra Rawat,MOHANLALGANJ (SC),SP,1,Graduate,"Rs 41,15,134~ 41 Lacs+","Rs 0~"
-274,"Mohammad YusufAnsari",MORADABAD NAGAR,SP,0,Literate,"Rs 1,37,37,233~ 1 Crore+","Rs 5,10,938~ 5 Lacs+"
-275,Shameemul Haq,MORADABAD RURAL,SP,0,10th Pass,"Rs 1,23,11,403~ 1 Crore+","Rs 0~"
-276,Shah Alam,MUBARAKPUR,BSP,0,"PostGraduate","Rs 54,44,23,098~ 54 Crore+","Rs 36,25,460~ 36 Lacs+"
-277,Babban,MUGHALSARAI,BSP,1,8th Pass,"Rs 10,41,38,000~ 10 Crore+","Rs 4,14,53,000~ 4 Crore+"
-278,Baijnath,"MUHAMMADABAD-GOHNA (SC)",SP,0,10th Pass,"Rs 61,98,223~ 61 Lacs+","Rs 0~"
-279,Seema,"MUNGRABADSHAHPUR",BJP,1,"PostGraduate","Rs 86,99,000~ 86 Lacs+","Rs 1,35,000~ 1 Lacs+"
-280,Wahab,MURADNAGAR,BSP,0,12th Pass,"Rs 65,78,087~ 65 Lacs+","Rs 0~"
-281,Chitranjan Swaroop,MUZAFFAR NAGAR,SP,1,12th Pass,"Rs 1,46,75,556~ 1 Crore+","Rs 2,84,000~ 2 Lacs+"
-282,Manoj Kumar Paras,NAGINA (SC),SP,2,12th Pass,"Rs 47,18,376~ 47 Lacs+","Rs 4,50,000~ 4 Lacs+"
-283,Tasleem,NAJIBABAD,BSP,1,Literate,"Rs 3,50,20,415~ 3 Crore+","Rs 25,76,281~ 25 Lacs+"
-284,"Dr. Dharam SinghSaini",NAKUR,BSP,0,"GraduateProfessional","Rs 4,80,88,000~ 4 Crore+","Rs 1,26,25,000~ 1 Crore+"
-285,Madhuri Verma,NANPARA,INC,0,Not Given,"Rs 1,10,53,901~ 1 Crore+","Rs 4,70,71,202~ 4 Crore+"
-286,Gayacharan Dinkar,NARAINI (SC),BSP,0,12th Pass,"Rs 31,87,700~ 31 Lacs+","Rs 0~"
-287,Ashfaq Ali Khan,NAUGAWAN SADAT,SP,1,"GraduateProfessional","Rs 39,66,682~ 39 Lacs+","Rs 2,10,203~ 2 Lacs+"
-288,Kaushal Kishore,NAUTANWA,INC,6,12th Pass,"Rs 1,28,96,294~ 1 Crore+","Rs 60,000~ 60 Thou+"
-289,"Bhagwat SaranGangwar",NAWABGANJ,SP,2,12th Pass,"Rs 1,40,16,500~ 1 Crore+","Rs 0~"
-290,Om Kumar,NEHTAUR (SC),BSP,0,12th Pass,"Rs 23,41,71,142~ 23 Crore+","Rs 7,31,70,310~ 7 Crore+"
-291,Ajay Kumar,NIGHASAN,BJP,1,"GraduateProfessional","Rs 2,33,76,427~ 2 Crore+","Rs 0~"
-292,Alambadi,NIZAMABAD,SP,0,12th Pass,"Rs 23,96,816~ 23 Lacs+","Rs 0~"
-293,"Mahesh KumarSharma",NOIDA,BJP,0,"GraduateProfessional","Rs 37,45,62,512~ 37 Crore+","Rs 5,77,08,418~ 5 Crore+"
-294,Lokendra Singh,NOORPUR,BJP,2,"PostGraduate","Rs 76,04,494~ 76 Lacs+","Rs 2,40,267~ 2 Lacs+"
-295,Sunil Kumar,OBRA,BSP,0,Graduate,"Rs 1,41,34,414~ 1 Crore+","Rs 0~"
-296,Daya Shankar,ORAI (SC),SP,0,10th Pass,"Rs 70,60,409~ 70 Lacs+","Rs 0~"
-297,Swami Prasad Maury,PADRAUNA,BSP,1,"PostGraduate","Rs 1,20,66,744~ 1 Crore+","Rs 0~"
-298,"Harvinder KumarSahni",PALIA,BSP,0,Graduate,"Rs 7,16,60,782~ 7 Crore+","Rs 2,50,56,853~ 2 Crore+"
-299,Dev Narayan,PANIYRA,BSP,1,Graduate,"Rs 1,34,74,483~ 1 Crore+","Rs 0~"
-300,Shakir Ali,PATHARDEVA,SP,1,Graduate,"Rs 2,27,55,063~ 2 Crore+","Rs 0~"
-301,Najeeba Khan,PATIYALI,SP,1,Others,"Rs 62,27,381~ 62 Lacs+","Rs 0~"
-302,Ram Singh,PATTI,SP,1,"GraduateProfessional","Rs 26,66,592~ 26 Lacs+","Rs 0~"
-303,Mukesh Srivastav,PAYAGPUR,INC,0,12th Pass,"Rs 2,48,99,346~ 2 Crore+","Rs 30,61,660~ 30 Lacs+"
-304,Ansar Ahmad,PHAPHAMAU,SP,1,8th Pass,"Rs 4,09,19,546~ 4 Crore+","Rs 6,23,623~ 6 Lacs+"
-305,"Bajrang BahadurSingh",PHARENDA,BJP,0,Graduate,"Rs 4,15,85,000~ 4 Crore+","Rs 2,59,86,000~ 2 Crore+"
-306,Upendra,PHEPHANA,BJP,11,"PostGraduate","Rs 82,54,873~ 82 Lacs+","Rs 8,92,000~ 8 Lacs+"
-307,Shayam Bahadur,PHOOLPUR-PAWAI,SP,2,"PostGraduate","Rs 1,06,87,390~ 1 Crore+","Rs 9,31,030~ 9 Lacs+"
-308,Syeed Ahamad,PHULPUR,SP,9,10th Pass,"Rs 4,34,86,958~ 4 Crore+","Rs 1,84,12,000~ 1 Crore+"
-309,Riaz Ahmad,PILIBHIT,SP,1,"PostGraduate","Rs 1,25,60,000~ 1 Crore+","Rs 24,95,000~ 24 Lacs+"
-310,Ajay,PINDRA,INC,8,Graduate,"Rs 84,99,084~ 84 Lacs+","Rs 0~"
-311,Rajmati Nishad,PIPRAICH,SP,0,Literate,"Rs 1,05,06,098~ 1 Crore+","Rs 0~"
-312,Shakuntala Devi,POWAYAN (SC),SP,0,8th Pass,"Rs 2,92,25,874~ 2 Crore+","Rs 27,02,080~ 27 Lacs+"
-313,"Nagendra Singh""Munna Yadav""",PRATAPGARH,SP,1,"GraduateProfessional","Rs 57,06,927~ 57 Lacs+","Rs 6,00,000~ 6 Lacs+"
-314,Vijma Yadav,PRATAPPUR,SP,3,Literate,"Rs 98,76,222~ 98 Lacs+","Rs 6,48,537~ 6 Lacs+"
-315,Peetam Ram,PURANPUR (SC),SP,1,5th Pass,"Rs 98,11,333~ 98 Lacs+","Rs 0~"
-316,Anil Kumar,PURQAZI (SC),BSP,0,12th Pass,"Rs 53,43,790~ 53 Lacs+","Rs 3,97,000~ 3 Lacs+"
-317,Uday Raj,PURWA,SP,3,"GraduateProfessional","Rs 1,10,75,044~ 1 Crore+","Rs 1,58,108~ 1 Lacs+"
-318,"Akhilesh KumarSingh",RAE BARELI,PECP,8,Graduate,"Rs 3,60,17,982~ 3 Crore+","Rs 8,45,475~ 8 Lacs+"
-319,Arvind Kumar Singh,RAM NAGAR,SP,3,"GraduateProfessional","Rs 71,26,175~ 71 Lacs+","Rs 0~"
-320,Purnawasi,RAMKOLA (SC),SP,1,10th Pass,"Rs 70,19,901~ 70 Lacs+","Rs 10,00,000~ 10 Lacs+"
-321,"Mohammad AzamKhan",RAMPUR,SP,5,"GraduateProfessional","Rs 1,94,79,140~ 1 Crore+","Rs 0~"
-322,"Chaudhary FasihaBashir",RAMPUR KARKHANA,SP,0,10th Pass,"Rs 3,32,06,798~ 3 Crore+","Rs 16,00,000~ 16 Lacs+"
-323,Pramod Kumar,RAMPUR KHAS,INC,0,"GraduateProfessional","Rs 3,90,61,374~ 3 Crore+","Rs 0~"
-324,"Ravindar KumarMolhu","RAMPUR MANIHARAN(SC)",BSP,7,10th Pass,"Rs 3,65,08,839~ 3 Crore+","Rs 9,36,264~ 9 Lacs+"
-325,Pro. Shivakant Ojha,RANIGANJ,SP,0,"PostGraduate","Rs 2,43,35,672~ 2 Crore+","Rs 12,76,000~ 12 Lacs+"
-326,Umashanker,RASARA,BSP,1,12th Pass,"Rs 20,75,63,588~ 20 Crore+","Rs 2,14,76,603~ 2 Crore+"
-327,Shiv Kumar Beria,RASULABAD (SC),SP,0,"GraduateProfessional","Rs 2,21,24,514~ 2 Crore+","Rs 6,28,881~ 6 Lacs+"
-328,Gayadeen,RATH (SC),INC,0,Not Given,"Rs 6,76,790~ 6 Lacs+","Rs 0~"
-329,Avinash,ROBERTSGANJ,SP,0,Graduate,"Rs 81,34,725~ 81 Lacs+","Rs 11,70,000~ 11 Lacs+"
-330,Anupriya Singh,ROHANIYA,AD,0,"PostGraduate","Rs 93,08,462~ 93 Lacs+","Rs 0~"
-331,Ram Chandra,RUDAULI,BJP,3,Graduate,"Rs 55,77,264~ 55 Lacs+","Rs 3,82,776~ 3 Lacs+"
-332,Sanjay Pratap Jaiswal,RUDHAULI,INC,4,10th Pass,"Rs 10,35,15,855~ 10 Crore+","Rs 2,47,448~ 2 Lacs+"
-333,"Akhilesh PratapSingh",RUDRAPUR,INC,0,"PostGraduate","Rs 1,84,57,054~ 1 Crore+","Rs 23,50,000~ 23 Lacs+"
-334,Devendra Agrawal,SADABAD,SP,6,10th Pass,"Rs 21,91,29,447~ 21 Crore+","Rs 12,37,556~ 12 Lacs+"
-335,Arun Kumar,SADAR,SP,1,12th Pass,"Rs 18,97,344~ 18 Lacs+","Rs 0~"
-336,Sudhir Kumar,SAFIPUR (SC),SP,0,Graduate,"Rs 62,90,456~ 62 Lacs+","Rs 1,72,948~ 1 Lacs+"
-337,Abhay Narayan,SAGRI,SP,2,Graduate,"Rs 55,09,354~ 55 Lacs+","Rs 22,870~ 22 Thou+"
-338,Rajendra,SAHAJANWA,BSP,0,12th Pass,"Rs 5,04,84,274~ 5 Crore+","Rs 40,96,217~ 40 Lacs+"
-339,Jagpal,SAHARANPUR,BSP,0,12th Pass,"Rs 1,32,72,246~ 1 Crore+","Rs 6,60,322~ 6 Lacs+"
-340,Raghav Lakhan Pal,SAHARANPUR NAGAR,BJP,0,"PostGraduate","Rs 3,36,71,755~ 3 Crore+","Rs 0~"
-341,Omkar Singh,SAHASWAN,SP,0,"GraduateProfessional","Rs 1,16,68,443~ 1 Crore+","Rs 1,71,767~ 1 Lacs+"
-342,Amarpal,SAHIBABAD,BSP,1,12th Pass,"Rs 20,57,39,539~ 20 Crore+","Rs 11,30,000~ 11 Lacs+"
-343,Subhash,SAIDPUR (SC),SP,0,10th Pass,"Rs 22,10,57,031~ 22 Crore+","Rs 22,00,000~ 22 Lacs+"
-344,Manoj Kumar,SAIYADRAJA,IND,2,12th Pass,"Rs 1,21,04,485~ 1 Crore+","Rs 1,56,12,896~ 1 Crore+"
-345,Sushil Singh,SAKALDIHA,IND,6,12th Pass,"Rs 9,90,66,259~ 9 Crore+","Rs 1,64,52,329~ 1 Crore+"
-346,Manbodh,SALEMPUR (SC),SP,2,Graduate,"Rs 17,56,400~ 17 Lacs+","Rs 0~"
-347,Asha Kishor,SALON (SC),SP,1,Graduate,"Rs 4,17,36,773~ 4 Crore+","Rs 4,53,308~ 4 Lacs+"
-348,Iqbal Mehmood,SAMBHAL,SP,1,Graduate,"Rs 3,08,02,873~ 3 Crore+","Rs 3,62,003~ 3 Lacs+"
-349,Rajeshwari,SANDI (SC),SP,0,10th Pass,"Rs 76,17,400~ 76 Lacs+","Rs 0~"
-350,"Kunwar MahabirSingh",SANDILA,SP,2,Graduate,"Rs 4,76,60,217~ 4 Crore+","Rs 1,60,160~ 1 Lacs+"
-351,Sangeet Singh Som,SARDHANA,BJP,3,12th Pass,"Rs 20,22,61,775~ 20 Crore+","Rs 96,84,068~ 96 Lacs+"
-352,Devendra Pratap,SARENI,SP,0,Post,"Rs 1,63,00,000",Rs 0
-,Singh,,,,Graduate,~ 1 Crore+,~
-353,"Sharda PratapShukla",SAROJINI NAGAR,SP,0,"PostGraduate","Rs 71,26,441~ 71 Lacs+","Rs 0~"
-354,Rajni Tiwari,SAWAYAZPUR,BSP,0,Graduate,"Rs 1,44,44,000~ 1 Crore+","Rs 20,35,000~ 20 Lacs+"
-355,Surendra,SEVAPURI,SP,2,Literate,"Rs 1,45,22,258~ 1 Crore+","Rs 28,20,519~ 28 Lacs+"
-356,"Mahendra KumarSingh",SEVATA,SP,0,10th Pass,"Rs 1,93,03,169~ 1 Crore+","Rs 8,00,000~ 8 Lacs+"
-357,Babu Khan,SHAHABAD,SP,0,Graduate,"Rs 1,50,05,667~ 1 Crore+","Rs 96,484~ 96 Thou+"
-358,"Shailendra YadavLalaee",SHAHGANJ,SP,6,Graduate,"Rs 5,41,88,073~ 5 Crore+","Rs 22,61,786~ 22 Lacs+"
-359,"Suresh KumarKhanna",SHAHJAHANPUR,BJP,0,"GraduateProfessional","Rs 47,45,592~ 47 Lacs+","Rs 1,07,064~ 1 Lacs+"
-360,Pankaj Kumar Malik,SHAMLI,INC,0,"GraduateProfessional","Rs 2,78,40,896~ 2 Crore+","Rs 22,92,200~ 22 Lacs+"
-361,Ashish Yadav,SHEKHUPUR,SP,5,12th Pass,"Rs 4,11,01,745~ 4 Crore+","Rs 0~"
-362,Mukesh Sharma,SHIKARPUR,SP,4,12th Pass,"Rs 10,55,56,733~ 10 Crore+","Rs 34,57,000~ 34 Lacs+"
-363,Om Prakash Verma,SHIKOHABAD,SP,0,Graduate,"Rs 97,25,199~ 97 Lacs+","Rs 1,00,000~ 1 Lacs+"
-364,Uday Lal Maurya,SHIVPUR,BSP,0,10th Pass,"Rs 2,20,87,833~ 2 Crore+","Rs 6,75,000~ 6 Lacs+"
-365,Lal Munni Singh,SHOHRATGARH,SP,0,Literate,"Rs 1,14,42,365~ 1 Crore+","Rs 1,17,066~ 1 Lacs+"
-366,Muhammad Ramjan,SHRAWASTI,SP,0,10th Pass,"Rs 3,68,79,443~ 3 Crore+","Rs 0~"
-367,Manish Rawat,SIDHAULI (SC),SP,0,"PostGraduate","Rs 31,49,523~ 31 Lacs+","Rs 0~"
-368,Jiauddin Rizvi,SIKANDERPUR,SP,0,Graduate,"Rs 1,27,61,661~ 1 Crore+","Rs 1,85,376~ 1 Lacs+"
-369,Indra Pal Singh,SIKANDRA,BSP,1,Graduate,"Rs 57,86,405","Rs 55,715"
-370,Ramveer Upadhyay,SIKANDRA RAO,BSP,0,"GraduateProfessional","Rs 4,97,03,220~ 4 Crore+","Rs 1,23,06,000~ 1 Crore+"
-371,Bimla Singh Solanki,SIKANDRABAD,BJP,0,12th Pass,"Rs 16,40,19,886~ 16 Crore+","Rs 60,33,620~ 60 Lacs+"
-372,Keshav Prashad,SIRATHU,BJP,9,Graduate,"Rs 13,52,56,346~ 13 Crore+","Rs 53,76,277~ 53 Lacs+"
-373,Hari Om,SIRSAGANJ,SP,3,Graduate,"Rs 3,07,05,629~ 3 Crore+","Rs 12,25,000~ 12 Lacs+"
-374,Haji Irfan Solanki,SISHAMAU,SP,1,Others,"Rs 1,41,33,634~ 1 Crore+","Rs 0~"
-375,Shivendra Singh,SISWA,SP,0,Graduate,"Rs 6,08,10,358~ 6 Crore+","Rs 0~"
-376,"Radhey ShyamJaisawal",SITAPUR,SP,11,8th Pass,"Rs 1,13,67,000~ 1 Crore+","Rs 12,00,000~ 12 Lacs+"
-377,Ghulam Mohammed,SIWALKHAS,SP,0,"PostGraduate","Rs 1,43,96,233~ 1 Crore+","Rs 28,52,496~ 28 Lacs+"
-378,Satyaveer,SORAON (SC),SP,0,"PostGraduate","Rs 85,19,577~ 85 Lacs+","Rs 3,56,124~ 3 Lacs+"
-379,Ramsaran,SRI NAGAR (SC),SP,0,Graduate,"Rs 1,13,90,715~ 1 Crore+","Rs 1,50,000~ 1 Lacs+"
-380,"Nawab Kazim AliKhan",SUAR,INC,0,"PostGraduate","Rs 56,89,33,381~ 56 Crore+","Rs 53,31,000~ 53 Lacs+"
-381,Anoop Sanda,SULTANPUR,SP,8,Graduate,"Rs 9,31,53,429~ 9 Crore+","Rs 15,00,320~ 15 Lacs+"
-382,Dilnawaz Khan,SYANA,INC,0,Literate,"Rs 73,48,235~ 73 Lacs+","Rs 3,72,140~ 3 Lacs+"
-383,"Ajay Kumar AliasLallu",TAMKUHI RAJ,INC,12,"PostGraduate","Rs 96,586~ 96 Thou+","Rs 0~"
-384,"Awadesh KumarSingh",TARABGANJ,SP,0,Graduate,"Rs 1,96,92,677~ 1 Crore+","Rs 15,15,164~ 15 Lacs+"
-385,"Kunwar SarveshKumar",THAKURDWARA,BJP,4,12th Pass,"Rs 4,34,60,956~ 4 Crore+","Rs 0~"
-386,Suresh Kumar,THANA BHAWAN,BJP,0,12th Pass,"Rs 20,61,643~ 20 Lacs+","Rs 0~"
-387,Roshan Lal Verma,TILHAR,BSP,2,8th Pass,"Rs 1,44,28,076~ 1 Crore+","Rs 32,00,000~ 32 Lacs+"
-388,Dr. Mohd. Mushlim,TILOI,INC,5,12th Pass,"Rs 5,59,77,274~ 5 Crore+","Rs 5,00,000~ 5 Lacs+"
-389,Daljeet Singh,TINDWARI,INC,1,Graduate,"Rs 3,09,88,074~ 3 Crore+","Rs 77,50,000~ 77 Lacs+"
-390,Vijai Bahadur Pal,TIRWA,SP,0,"PostGraduate","Rs 18,37,294~ 18 Lacs+","Rs 0~"
-391,Abdul Masood,TULSIPUR,SP,1,12th Pass,"Rs 98,99,639~ 98 Lacs+","Rs 1,03,300~ 1 Lacs+"
-392,Rakesh Babu,TUNDLA (SC),BSP,0,"PostGraduate","Rs 94,96,000~ 94 Lacs+","Rs 1,10,710~ 1 Lacs+"
-393,"Manoj KumarPandey",UNCHAHAR,SP,3,Graduate,"Rs 7,13,70,849~ 7 Crore+","Rs 1,97,06,795~ 1 Crore+"
-394,Deepak Kumar,UNNAO,SP,3,Graduate,"Rs 6,35,32,000~ 6 Crore+","Rs 5,42,000~ 5 Lacs+"
-395,Aarif Anwar Hashmi,UTRAULA,SP,0,"PostGraduate","Rs 2,75,14,097~ 2 Crore+","Rs 8,84,556~ 8 Lacs+"
-396,Jyotsana Srivastava,VARANASI CANTT.,BJP,1,Doctorate,"Rs 1,59,84,863~ 1 Crore+","Rs 0~"
-397,Ravindra,VARANASI NORTH,BJP,3,"PostGraduate","Rs 3,70,31,067~ 3 Crore+","Rs 12,27,484~ 12 Lacs+"
-398,"Shyam Deo RaiChoudhary",VARANASI SOUTH,BJP,1,Graduate,"Rs 46,47,565~ 46 Lacs+","Rs 680~ 6 Hund+"
-399,Raja Ram,VISHWANATH GANJ,SP,3,Graduate,"Rs 4,18,45,157~ 4 Crore+","Rs 24,67,086~ 24 Lacs+"
-400,"Sachindra NathTripathi",ZAFRABAD,SP,0,Graduate,"Rs 65,60,236~ 65 Lacs+","Rs 0~"
-401,"Syeda ShadabFatima",ZAHOORABAD,SP,1,"PostGraduate","Rs 2,40,72,357~ 2 Crore+","Rs 13,00,000~ 13 Lacs+"
-402,Ram Gopal,ZAIDPUR (SC),SP,0,8th Pass,"Rs 21,38,633~ 21 Lacs+","Rs 3,26,785~ 3 Lacs+"
