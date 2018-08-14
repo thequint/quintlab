@@ -1,0 +1,315 @@
+body {
+	font-weight: 600;
+	color: #172244;
+	font-size: 100%;
+	overflow-x: hidden;
+	background: transparent;
+	font-family: 'Muli', sans-serif;
+}
+
+
+.asian-game {
+	margin: 0 auto;
+	max-width: 1280px;
+	overflow: hidden;
+}
+.asian-game__headline {
+	font-size: 30px;
+}
+.asian-game__slider {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px;
+	overflow: hidden;
+}
+.asian-game__slider-wrap {
+	margin: 0 auto;
+	/*width: 1000px;*/
+	overflow: scroll;
+	padding: 20px 10px;
+}
+.asian-game__slider-wrap ul {
+	position: relative;
+	/*width: 5000px;*/
+	transition: all 0.2s ease-in-out;
+}
+.asian-game__slider-wrap ul li {
+	float: left;
+	width: 215px;
+	min-height: 280px;
+}
+.asian-game__slider-wrap ul::before {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	content: " ";
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 2px dashed #1e2b55; 
+}
+.asian-game__slider-wrap::after,
+.asian-game__slider-wrap ul::after {
+	content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.asian-game .slide-prev,
+.asian-game .slide-next {
+	position: absolute;
+	width: 32px;
+	top: 45.5%;
+	cursor: pointer;
+}
+.asian-game .slide-prev {
+	left: 0;
+}
+.asian-game .slide-next {
+	right: 0;
+}
+
+
+@media (min-width: 960px) {
+	.asian-game__slider-wrap {
+		overflow:hidden;
+	}
+}
+
+@media (max-width: 1279px) {
+	.asian-game {
+		max-width: 960px
+	}
+}
+@media (max-width: 959px) {
+	.asian-game {
+		max-width: 640px
+	}
+}
+
+
+.asian-game__content {
+	position: relative;
+	padding-left: 15px;
+}
+
+.asian-game__content::before {
+	position: absolute;
+	width: 4px;
+	height: 50%;
+	content: " ";
+	left: 0;
+	background-color: #0091eb;
+}
+.asian-game__content:nth-child(odd):before {
+	bottom: 0;
+}
+.asian-game__content:nth-child(even):before {
+	top: 0;
+}
+.asian-game__content .el-position {
+	position: absolute;
+}
+.asian-game__content:nth-child(odd) .el-position {
+	bottom: 0
+}
+.asian-game__content:nth-child(even) .el-position {
+	top: 0
+}
+.asian-game__content .circle-small {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: " ";
+	left: -8px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	border-radius: 100%;
+	background-color: #0091eb;
+	border: 2px #fff solid;
+}
+
+.asian-game__content .circle-large {
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	content: " ";
+	left: -17px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	border-radius: 100%;
+	background-color: #0091eb;
+	border: 3px #fff solid;
+}
+.asian-game__content .circle-large span {
+	margin: 6px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 100%;
+	background-color: #0091eb;
+	border: 4px #fff solid;
+}
+
+.asian-game__content--timestamp {
+	font-weight: 800;
+	font-size: .75em;
+}
+.asian-game__content--category {
+	font-weight: 600;
+	margin: 5px 0;
+}
+.asian-game__content--category::after {
+	content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.asian-game__content--category .cat-icon {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 5px; 
+	border-radius: 100%;
+	background-image: url(../images/default-icon.svg);
+}
+.asian-game__content--category .cat-bg {
+	padding: 0 8px;
+	float: left;
+	color: #fff;
+	height: 30px;
+	line-height: 28px;
+	position: relative;
+	background-color: #0091eb;
+}
+.asian-game__content--category .cat-bg:after {
+	position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    right: -13px;
+    top: 0;
+    border-bottom: 30px solid #0091eb;
+	border-right: 13px solid transparent;
+}
+
+.asian-game__content--headline {
+	font-weight: 900;
+	font-size: 1.13em;
+}
+.asian-game__content--headline .match-vs {
+	display: block;
+	padding-left: 25px;
+	font-weight: 600;
+	position: relative;
+}
+.asian-game__content--headline .match-vs::before {
+	position: absolute;
+	left: 0;
+	content: "vs";
+}
+.asian-game__content--sub-headline {
+	font-weight: 600;
+	font-size: 0.88em;
+}
+
+
+
+
+/* Category color by name */
+
+/* aquatic */
+.asian-game__content.aquatic::before,
+.asian-game__content.aquatic .circle-small,
+.asian-game__content.aquatic .circle-large,
+.asian-game__content.aquatic .circle-large span {
+	background-color: #0091eb;
+}
+.asian-game__content.aquatic .asian-game__content--category .cat-bg {
+	background-color: #0091eb;
+}
+.asian-game__content.aquatic .asian-game__content--category .cat-bg:after {
+    border-bottom: 30px solid #0091eb;
+}
+.asian-game__content.aquatic .asian-game__content--category .cat-icon {
+	background-image: url(../images/default-icon.svg);
+}
+
+/* Boxing */
+.asian-game__content.boxing::before,
+.asian-game__content.boxing .circle-small,
+.asian-game__content.boxing .circle-large,
+.asian-game__content.boxing .circle-large span {
+	background-color: #871996;
+}
+.asian-game__content.boxing .asian-game__content--category .cat-bg {
+	background-color: #871996;
+}
+.asian-game__content.boxing .asian-game__content--category .cat-bg:after {
+    border-bottom: 30px solid #871996;
+}
+.asian-game__content.boxing .asian-game__content--category .cat-icon {
+	background-image: url(../images/boxing-icon.svg);
+}
+
+/* Handball */
+.asian-game__content.handball::before,
+.asian-game__content.handball .circle-small,
+.asian-game__content.handball .circle-large,
+.asian-game__content.handball .circle-large span {
+	background-color: #f52e59;
+}
+.asian-game__content.handball .asian-game__content--category .cat-bg {
+	background-color: #f52e59;
+}
+.asian-game__content.handball .asian-game__content--category .cat-bg:after {
+    border-bottom: 30px solid #f52e59;
+}
+.asian-game__content.handball .asian-game__content--category .cat-icon {
+	background-image: url(../images/handball-icon.svg);
+}
+
+/* Shooting */
+.asian-game__content.shooting::before,
+.asian-game__content.shooting .circle-small,
+.asian-game__content.shooting .circle-large,
+.asian-game__content.shooting .circle-large span {
+	background-color: #f29100;
+}
+.asian-game__content.shooting .asian-game__content--category .cat-bg {
+	background-color: #f29100;
+}
+.asian-game__content.shooting .asian-game__content--category .cat-bg:after {
+    border-bottom: 30px solid #f29100;
+}
+.asian-game__content.shooting .asian-game__content--category .cat-icon {
+	background-image: url(../images/shooting-icon.svg);
+}
+
+/* Wrestling */
+.asian-game__content.wrestling::before,
+.asian-game__content.wrestling .circle-small,
+.asian-game__content.wrestling .circle-large,
+.asian-game__content.wrestling .circle-large span {
+	background-color: #00bfa6;
+}
+.asian-game__content.wrestling .asian-game__content--category .cat-bg {
+	background-color: #00bfa6;
+}
+.asian-game__content.wrestling .asian-game__content--category .cat-bg:after {
+    border-bottom: 30px solid #00bfa6;
+}
+.asian-game__content.wrestling .asian-game__content--category .cat-icon {
+	background-image: url(../images/wrestling-icon.svg);
+}
+
+
+

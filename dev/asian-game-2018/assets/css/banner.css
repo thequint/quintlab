@@ -1,0 +1,200 @@
+body {
+	font-weight: 600;
+	color: #172244;
+	font-size: 100%;
+	overflow-x: hidden;
+	background: transparent;
+	font-family: 'Lato', sans-serif;
+}
+
+/*header-wrapper*/
+.section-wrap {
+	text-align: center;
+	height: 150px;
+	overflow: hidden;
+}
+.banner-bg {
+	position: relative;
+	background-color: #c70039;
+}
+.banner-icon {
+	position: relative;
+}
+
+.banner-icon::before,
+.banner-icon::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	content: " ";
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.banner-icon::before {
+	left: 0;
+	width: 310px;
+	background-image: url(../images/asian-game-hockey.png);
+}
+.banner-icon::after {
+	right: 0;
+	width: 250px;
+	background-image: url(../images/asian-game-badminton.png);
+}
+
+.banner-container {
+	margin: 0 auto;
+	position: relative;
+	width: 1240px;
+	max-width: 100%;
+	height: 150px;
+	background-color: #c70039;
+}
+.banner-content {
+	position: relative;
+	font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    max-width: 430px;
+    height: 100%;
+}
+.banner-content::after {
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	background-color: #b40838;
+	-ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    border-left: 50px solid #ba0939;
+    border-right: 50px solid #ba0939;
+}
+.banner-content--middle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    -ms-transform: translateY (-50%);
+    -webkit-transform: translateY (-50%);
+     -moz-transform: translateY (-50%);
+     -o-transform: translateY (-50%);
+     transform: translateY(-50%);
+     text-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+}
+.banner-content--middle h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 36px;
+	font-weight: 900;
+}
+.banner-content--middle p {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+@media (max-width: 1279px) {
+	.banner-container {
+	    width: 960px;
+	    max-width: 100%;
+	}
+	.banner-content::after {
+	    border-left: 40px solid #ba0939;
+	    border-right: 40px solid #ba0939;
+	}
+}
+
+
+@media (max-width: 960px) {
+	.section-wrap {
+		height: 110px;
+	}
+	.banner-container {
+	    width: 640px;
+	    max-width: 100%;
+	    height: 110px;
+	}
+
+	.banner-content {
+	    max-width: 260px;
+	    height: 100%;
+	}
+	.banner-content::after {
+	    border-left: 20px solid #ba0939;
+	    border-right: 20px solid #ba0939;
+	}
+	.banner-content--middle h3 {
+		font-size: 24px;
+	}
+	.banner-content--middle p {
+		font-size: 17px;
+	}
+
+	.banner-icon::before {
+		width: 226px;
+	}
+	.banner-icon::after {
+		width: 180px;
+	}
+	
+}
+
+@media (max-width: 640px) {
+	.section-wrap {
+		text-align: center;
+		height: 50px;
+		overflow: hidden;
+	}
+	.banner-container {
+	    width: 640px;
+	    max-width: 100%;
+	    height: 50px;
+	}
+
+	.banner-content {
+	    max-width: 165px;
+	    height: 100%;
+	}
+	.banner-content::after {
+	    border-left: 15px solid #ba0939;
+	    border-right: 15px solid #ba0939;
+	}
+	.banner-content--middle h3 {
+		font-size: 16px;
+		font-weight: 900;
+	}
+	.banner-content--middle p {
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.banner-icon::before {
+		left: -10px;
+		width: 82px;
+		background-size: cover;
+	}
+	.banner-icon::after {
+		right: -9px;
+		width: 80px;
+		background-size: cover;
+	}
+	.banner-content--middle {
+	     text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+	}
+}
+
+
+
+
+
+
+

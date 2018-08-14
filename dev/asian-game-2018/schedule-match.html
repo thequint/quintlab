@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Asian Game Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" media="all" href="assets/css/base.css">
+    <link href="assets/css/styles.css" rel="stylesheet" media="all">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:600,800,900" rel="stylesheet">
+    <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="home">
+<section class="section asian-game">
+    <div class="asian-game__headline">Schedule of the Day</div>
+    <div class="asian-game__slider">
+        <div class="asian-game__slider-wrap">
+            <ul id="product_show">
+
+
+                <!-- <li class="asian-game__content aquatic">
+                    <div class="el-position">
+                        <div class="asian-game__content--timestamp">10:00 - 12:00</div>
+                        <div class="asian-game__content--category"><span class="cat-icon"></span><span class="cat-bg">Aquatic</span></div>
+                        <div class="asian-game__content--headline">Vidhawal Khade</div>
+                        <div class="asian-game__content--sub-headline">Swimming - Round 1</div>
+                    </div>
+                    <span class="circle-small"></span>
+                </li>
+                <li class="asian-game__content boxing">
+                    <div class="el-position">
+                        <div class="asian-game__content--timestamp">13:00 - 15:00</div>
+                        <div class="asian-game__content--category"><span class="cat-icon"></span><span class="cat-bg">Boxing</span></div>
+                        <div class="asian-game__content--headline">Vijender Singh <span class="match-vs">Lee Markham</span></div>
+                        <div class="asian-game__content--sub-headline">Swimming - Round 1</div>
+                    </div>
+                    <span class="circle-large"><span></span></span>
+                </li> -->
+            </ul>
+        </div>
+        <span class="slide-prev"><img src="assets/images/s-prev.svg"></span>
+        <span class="slide-next"><img src="assets/images/s-next.svg"></span>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/js/spreadsheet.js"></script> 
+<script type="text/javascript" src="assets/js/functions.js"></script> 
+
+<script type="text/javascript">
+
+function adjust_slider() {
+    var cur_index = 0;
+    var num_li = 5;
+
+    // if ($(window).width() >= 960 && $(window).width() < 1280) {
+    if ($(window).width() < 1280) {
+        num_li = 4;
+    }
+    if ($(window).width() < 960) {
+        num_li = 3;
+    }
+    if ($(window).width() < 640) {
+        num_li = 2;
+    }
+    $("ul li").css("width", $(".asian-game").width() / num_li);
+
+    $("ul").css("width", $("ul li").length * $(".asian-game").width() / num_li);
+    var max_cur = $("ul li").length - num_li;
+
+    $(".slide-next").click(function() {
+        console.log(cur_index);
+        if (cur_index < max_cur) {
+            cur_index = cur_index + 1;
+        } else {
+            cur_index = 0;
+        }
+        var translate_val = cur_index * $(".asian-game").width() / num_li
+        $("ul").css("transform", "translateX(" + -translate_val + "px)");
+    });
+
+    $(".slide-prev").click(function() {
+        console.log(cur_index);
+        if (cur_index <= 0) {
+            cur_index = 0;
+        } else {
+            cur_index = cur_index - 1;
+        }
+        console.log(cur_index);
+        var translate_val = cur_index * window.innerWidth / num_li
+        $("ul").css("transform", "translateX(" + -translate_val + "px)");
+    });
+}
+</script>
+</body>
+
+</html>
