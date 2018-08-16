@@ -60,6 +60,9 @@ h1, h2, h3, h4, h5, h6 {
 	.carousel-wrapper .container {
 		max-width: 960px;
 	}
+	.carousel-wrapper{
+		height: 235px;
+	}
 }
 
 
@@ -67,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 	.carousel-wrapper .container {
 		max-width: 640px;
 	}
+	
 }
 
 @media (max-width: 640px) {
