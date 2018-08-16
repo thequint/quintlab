@@ -1,0 +1,193 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900');
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #6d6e70;
+	overflow-x: hidden;
+	background-color: #f3f3f3;
+}
+p {
+	line-height: 160%;
+	margin-bottom: 25px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+button, a {
+	outline: none;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #6d6e70;
+	font-weight: normal;
+	font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.container {
+	position: relative;
+	max-width: 1100px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+.row {
+	margin: 0px -15px;
+	margin-bottom: 30px;
+}
+.col {
+	padding: 0 15px;
+	float: left;
+}
+.col-content {
+	border: 1px solid #D4D5D7;
+	padding: 8px 10px;
+	min-height: 300px;
+	background: #F3F3F3;
+}
+.scroll-content {
+	max-height: 400px;
+	overflow: auto;
+}
+.col.col-1 {
+	width: 33.333%;
+}
+.col.col-2 {
+	width: 66.666%;
+}
+.col.col-3 {
+	width: 100%;
+}
+.col-content h3 {
+	font-size: 29px;
+	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 100%;
+}
+.col-content h3.color-1 {
+	color: #d72331;
+}
+.col-content h3.color-2 {
+	color: #7bc144;
+}
+.col-content h3.color-3 {
+	color: #a34f9e;
+}
+.col-content h3.color-4 {
+	color: #c5d830;
+}
+.col-content h4 {
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 104%;
+	margin: 4px 0 9px;
+}
+p.caption {
+	margin: 10px 0;
+}
+.row.center-row {
+	text-align: center;
+}
+.row.center-row .col {
+	float: none;
+	display: inline-block;
+	text-align: left;
+}
+/*Frame Content CSS*/
+
+.frame-chart {
+	max-width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+.frame-wrapper {
+}
+.frame-wrapper .container {
+/*	padding: 0px;*/
+}
+table.count-table {
+	border-collapse: collapse;
+	width: 100%;
+	background: #fff;
+	font-size: 13px;
+}
+table.count-table td, table.count-table th {
+	padding: 7px 10px;
+	text-align: left;
+}
+thead th, tfoot td {
+	font-weight: bold;
+	color: #fff;
+	white-space: nowrap;
+}
+thead th {
+	background-color: #CB2826;
+}
+tfoot td {
+	background-color: #31bc86;
+}
+tbody th {
+	background-color: #461211;
+	color: #fff;
+}
+.election-table ul:after, .election-table ul:before {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.election-table ul:after {
+	clear: both;
+}
+.election-table ul li {
+	padding: 0px 10px;
+}
+.table-cont {
+/*	min-height: 150px;*/
+	font-family: "Fira Sans Extra Condensed", sans-serif;
+	font-weight: 500;
+	border: 0px solid #FFBF00;
+	background: #FFBF00;
+	height: 200px !important;
+}
+.table-cont h3 {
+	background: #ffbf00 none repeat scroll 0 0;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 100%;
+	margin: 0;
+	padding: 6px 0;
+	text-align: center;
+	text-shadow: 1px 1px 0 #4d086a;
+	border-bottom: 1px solid #F3F3F3;
+}
+.table-cont h3 a {
+	color: #fff;
+	display: block;
+}
+.row.table-row {
+	margin: 0px -10px 30px -10px;
+}
+.election-data {
+	padding: 10px;
+}
+.election-data table {
+	width: 100%;
+	font-size: 25px;
+	color: #4D086A;
+	line-height: 130%;
+}
+.hi .election-data table tr td:first-child {
+	font-size: 24px;
+}
+.election-data table tr td:last-child span {
+	text-align: left;
+	background-color: #FFBF00;
+	padding: 0px 2px;
+}
+
+
