@@ -116,12 +116,19 @@ $(document).ready(function(){
     $('.slider-1').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       arrows: true,
       autoplaySpeed: 2000,
       responsive: [
+      {
+          breakpoint: 959,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
         {
-          breakpoint: 600,
+          breakpoint: 639,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

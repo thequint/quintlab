@@ -513,10 +513,10 @@ input.search-data {
 
 
 
-.story-list{
+/*.story-list{
 	width: 20%;
 	float: left;
-}
+}*/
 
 .story-item {padding:0px 20px;}
 
@@ -604,7 +604,12 @@ input.search-data {
 
 
 /*carousel-wrapper*/
-.carousel-wrapper{font-family: "Fira Sans Extra Condensed",sans-serif;}
+.carousel-wrapper{
+	overflow: hidden;
+	height: 235px;
+	background-color: #ccc;
+	font-family: "Fira Sans Extra Condensed",sans-serif;
+}
 .carousel-wrapper .story-list img{
 	width: 100%;
 }
@@ -649,7 +654,7 @@ input.search-data {
 	font-size: 24px;
     font-weight: 500;
     color: #4D086A;
-    margin: 15px 0px 30px 10px;
+    margin: 0 0px 20px 10px;
     line-height: 100%;
     text-transform: uppercase;
 }
