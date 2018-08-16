@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 		max-width: 960px;
 	}
 	.carousel-wrapper{
-		height: 235px;
+		height: 237px;
 	}
 }
 
@@ -74,8 +74,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 640px) {
-	.carousel-wrapper{
-		height: 210px;
+	.carousel-wrapper {
+		height: 212px;
 	}
 	.carousel-wrapper .container {
 		max-width: 100%;

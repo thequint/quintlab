@@ -606,7 +606,7 @@ input.search-data {
 /*carousel-wrapper*/
 .carousel-wrapper{
 	overflow: hidden;
-	height: 300px;
+	height: 304px;
 	background-color: #ccc;
 	font-family: "Fira Sans Extra Condensed",sans-serif;
 }
@@ -651,10 +651,11 @@ input.search-data {
 	
 }
 .carousel-wrapper h3{
-	font-size: 24px;
-    font-weight: 500;
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+    font-weight: 900;
     color: #4D086A;
-    margin: 0 0px 20px 10px;
+    margin: 0 0 20px 10px;
     line-height: 100%;
     text-transform: uppercase;
 }
@@ -663,9 +664,10 @@ input.search-data {
 	background-color: #b40838;
 	display: inline-block;
 	padding: 0 10px;
-	height: 38px;
-    line-height: 38px;
-    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+	height: 40px;
+    line-height: 40px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);*/
 }
 .carousel-wrapper h3 span::after {
 	position: absolute;
@@ -675,7 +677,7 @@ input.search-data {
     height: 0;
     right: -16px;
     top: 0;
-    border-bottom: 38px solid #b40838;
+    border-bottom: 40px solid #b40838;
 	border-right: 16px solid transparent;
 	/*box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);*/
 }
