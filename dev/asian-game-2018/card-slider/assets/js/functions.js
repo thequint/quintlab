@@ -51,8 +51,9 @@ $(document).ready(function() {
 // KEY EVENTS
 
 $(document).ready(function() {
-  $.getJSON('http://thequint-labs.rio.quintype.io/api/v1/stories/e5141214-38ca-4e67-8eff-14b006cee565', function(res) {
+  // $.getJSON('http://thequint-labs.rio.quintype.io/api/v1/stories/e5141214-38ca-4e67-8eff-14b006cee565', function(res) {
   // $.getJSON('https://www.thequint.com/api/v1/stories/2a97e847-be14-4f8f-8c45-8fb10791ee3e', function(res) {
+    $.getJSON('http://thequint-labs.rio.quintype.io/api/v1/stories/e5141214-38ca-4e67-8eff-14b006cee565', function(res) {
     var lastStory = res.story;
     var cards = lastStory.cards;
     var cardsWithImages = cards.filter(function(card) {

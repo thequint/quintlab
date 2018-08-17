@@ -280,7 +280,7 @@ content: '';
     color: #4D086A;
 }
 .carousel-wrapper .slick-prev {
-    left: 25px;
+    left: 35px;
     background-image: url("../images/slide-left.svg");
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -290,7 +290,7 @@ content: '';
     content: ' ';
 }
 .carousel-wrapper .slick-next {
-    right: 25px;
+    right: 35px;
     background-image: url("../images/slide-right.svg");
     background-position: bottom center;
     background-repeat: no-repeat;

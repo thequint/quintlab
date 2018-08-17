@@ -655,7 +655,7 @@ input.search-data {
 	font-size: 22px;
     font-weight: 900;
     color: #4D086A;
-    margin: 0 0 20px 10px;
+    margin: 0 0 20px -15px;
     line-height: 100%;
     text-transform: uppercase;
 }
@@ -686,10 +686,10 @@ input.search-data {
 .carousel-wrapper.purple h3{
 	color: #fff;
 }
-.carousel-wrapper .row{
+/*.carousel-wrapper .row{
 	margin-left:-10px;
 	margin-right:-10px;
-}
+}*/
 
 
 .gallery-wrapper .story-list img{width: 100%;}
