@@ -607,7 +607,7 @@ input.search-data {
 .carousel-wrapper{
 	overflow: hidden;
 	height: 304px;
-	background-color: #ccc;
+	/*background-color: #ccc;*/
 	font-family: "Fira Sans Extra Condensed",sans-serif;
 }
 .carousel-wrapper .story-list img{
