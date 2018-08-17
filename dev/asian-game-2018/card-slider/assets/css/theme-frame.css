@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 959px) {
 	.carousel-wrapper .container {
 		max-width: 600px;
 	}
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
 	.carousel-wrapper {
 		height: 212px;
 	}

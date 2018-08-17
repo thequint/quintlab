@@ -114,7 +114,7 @@ body {
 }
 
 
-@media (max-width: 960px) {
+@media (max-width: 959px) {
 	.section-wrap {
 		height: 110px;
 	}
@@ -148,7 +148,7 @@ body {
 	
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
 	.section-wrap {
 		text-align: center;
 		height: 50px;
