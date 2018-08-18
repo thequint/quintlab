@@ -1,0 +1,93 @@
+/* Category color by name */
+
+/* Pink #F3325C */
+.asian-game__content.Archery::before,
+.asian-game__content.Archery .circle-small,
+.asian-game__content.Archery .circle-large,
+.asian-game__content.Archery .circle-large span,
+
+.asian-game__content.Artistic-Gymnastics::before,
+.asian-game__content.Artistic-Gymnastics .circle-small,
+.asian-game__content.Artistic-Gymnastics .circle-large,
+.asian-game__content.Artistic-Gymnastics .circle-large span,
+
+.asian-game__content.Artistic-Swimming::before,
+.asian-game__content.Artistic-Swimming .circle-small,
+.asian-game__content.Artistic-Swimming .circle-large,
+.asian-game__content.Artistic-Swimming .circle-large span,
+
+.asian-game__content.Athletics::before,
+.asian-game__content.Athletics .circle-small,
+.asian-game__content.Athletics .circle-large,
+.asian-game__content.Athletics .circle-large span,
+
+.asian-game__content.Baseball::before,
+.asian-game__content.Baseball .circle-small,
+.asian-game__content.Baseball .circle-large,
+.asian-game__content.Baseball .circle-large span,
+
+.asian-game__content.Basketball-3x3::before,
+.asian-game__content.Basketball-3x3 .circle-small,
+.asian-game__content.Basketball-3x3 .circle-large,
+.asian-game__content.Basketball-3x3 .circle-large span,
+
+.asian-game__content.Softball::before,
+.asian-game__content.Softball .circle-small,
+.asian-game__content.Softball .circle-large,
+.asian-game__content.Softball .circle-large span
+{
+	background-color: #F3325C;
+}
+
+/* Pink #F3325C */
+.asian-game__content.Archery .asian-game__content--category .cat-bg,
+.asian-game__content.Artistic-Gymnastics .asian-game__content--category .cat-bg,
+.asian-game__content.Artistic-Swimming .asian-game__content--category .cat-bg,
+.asian-game__content.Athletics .asian-game__content--category .cat-bg,
+.asian-game__content.Baseball .asian-game__content--category .cat-bg,
+.asian-game__content.Basketball-3x3 .asian-game__content--category .cat-bg,
+.asian-game__content.Softball .asian-game__content--category .cat-bg
+{
+	background-color: #F3325C;
+}
+
+/* Pink #F3325C */
+.asian-game__content.Archery .asian-game__content--category .cat-bg:after,
+.asian-game__content.Artistic-Gymnastics .asian-game__content--category .cat-bg:after,
+.asian-game__content.Artistic-Swimming .asian-game__content--category .cat-bg:after,
+.asian-game__content.Athletics .asian-game__content--category .cat-bg:after,
+.asian-game__content.Baseball .asian-game__content--category .cat-bg:after,
+.asian-game__content.Basketball-3x3 .asian-game__content--category .cat-bg:after,
+.asian-game__content.Softball .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #F3325C;
+}
+
+/* Pink #F3325C */
+.asian-game__content.Archery .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Archery.svg);
+}
+.asian-game__content.Artistic-Gymnastics .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Artistic-Gymnastics.svg);
+}
+.asian-game__content.Artistic-Swimming .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Artistic-Swimming.svg);
+}
+.asian-game__content.Athletics .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Athletics.svg);
+}
+.asian-game__content.Baseball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Baseball.svg);
+}
+.asian-game__content.Basketball-3x3 .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Basketball-3x3.svg);
+}
+.asian-game__content.Softball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/pink/Softball.svg);
+}
+
+
+
+
+
+

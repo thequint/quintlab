@@ -1,0 +1,123 @@
+/* Category color by name */
+
+/* Orange #F09024 */
+.asian-game__content.Canoe-Slalom::before,
+.asian-game__content.Canoe-Slalom .circle-small,
+.asian-game__content.Canoe-Slalom .circle-large,
+.asian-game__content.Canoe-Slalom .circle-large span,
+
+.asian-game__content.Judo::before,
+.asian-game__content.Judo .circle-small,
+.asian-game__content.Judo .circle-large,
+.asian-game__content.Judo .circle-large span,
+
+.asian-game__content.Modern-Pentathlon::before,
+.asian-game__content.Modern-Pentathlon .circle-small,
+.asian-game__content.Modern-Pentathlon .circle-large,
+.asian-game__content.Modern-Pentathlon .circle-large span,
+
+.asian-game__content.Paragliding::before,
+.asian-game__content.Paragliding .circle-small,
+.asian-game__content.Paragliding .circle-large,
+.asian-game__content.Paragliding .circle-large span,
+
+.asian-game__content.Pencak-Silat::before,
+.asian-game__content.Pencak-Silat .circle-small,
+.asian-game__content.Pencak-Silat .circle-large,
+.asian-game__content.Pencak-Silat .circle-large span,
+
+.asian-game__content.Roller-Skate::before,
+.asian-game__content.Roller-Skate .circle-small,
+.asian-game__content.Roller-Skate .circle-large,
+.asian-game__content.Roller-Skate .circle-large span,
+
+.asian-game__content.Rugby-Sevens::before,
+.asian-game__content.Rugby-Sevens .circle-small,
+.asian-game__content.Rugby-Sevens .circle-large,
+.asian-game__content.Rugby-Sevens .circle-large span,
+
+.asian-game__content.Sport-Climbing::before,
+.asian-game__content.Sport-Climbing .circle-small,
+.asian-game__content.Sport-Climbing .circle-large,
+.asian-game__content.Sport-Climbing .circle-large span,
+
+.asian-game__content.Taekwondo::before,
+.asian-game__content.Taekwondo .circle-small,
+.asian-game__content.Taekwondo .circle-large,
+.asian-game__content.Taekwondo .circle-large span,
+
+.asian-game__content.Wushu::before,
+.asian-game__content.Wushu .circle-small,
+.asian-game__content.Wushu .circle-large,
+.asian-game__content.Wushu .circle-large span
+{
+	background-color: #F09024;
+}
+
+/* Orange #F09024 */
+.asian-game__content.Canoe-Slalom .asian-game__content--category .cat-bg,
+.asian-game__content.Judo .asian-game__content--category .cat-bg,
+.asian-game__content.Modern-Pentathlon .asian-game__content--category .cat-bg,
+.asian-game__content.Paragliding .asian-game__content--category .cat-bg,
+.asian-game__content.Pencak-Silat .asian-game__content--category .cat-bg,
+.asian-game__content.Roller-Skate .asian-game__content--category .cat-bg,
+.asian-game__content.Rugby-Sevens .asian-game__content--category .cat-bg,
+.asian-game__content.Sport-Climbing .asian-game__content--category .cat-bg,
+.asian-game__content.Taekwondo .asian-game__content--category .cat-bg,
+.asian-game__content.Wushu .asian-game__content--category .cat-bg
+{
+	background-color: #F09024;
+}
+
+/* Orange #F09024 */
+.asian-game__content.Canoe-Slalom .asian-game__content--category .cat-bg:after,
+.asian-game__content.Judo .asian-game__content--category .cat-bg:after,
+.asian-game__content.Modern-Pentathlon .asian-game__content--category .cat-bg:after,
+.asian-game__content.Paragliding .asian-game__content--category .cat-bg:after,
+.asian-game__content.Pencak-Silat .asian-game__content--category .cat-bg:after,
+.asian-game__content.Roller-Skate .asian-game__content--category .cat-bg:after,
+.asian-game__content.Rugby-Sevens .asian-game__content--category .cat-bg:after,
+.asian-game__content.Sport-Climbing .asian-game__content--category .cat-bg:after,
+.asian-game__content.Taekwondo .asian-game__content--category .cat-bg:after,
+.asian-game__content.Wushu .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #F09024;
+}
+
+/* Orange #F09024 */
+.asian-game__content.Canoe-Slalom .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Canoe-Slalom.svg);
+}
+.asian-game__content.Judo .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Judo.svg);
+}
+.asian-game__content.Modern-Pentathlon .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Modern-Pentathlon.svg);
+}
+.asian-game__content.Paragliding .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Paragliding.svg);
+}
+.asian-game__content.Pencak-Silat .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Pencak-Silat.svg);
+}
+.asian-game__content.Roller-Skate .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Roller-Skate.svg);
+}
+.asian-game__content.Rugby-Sevens .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Rugby-Sevens.svg);
+}
+.asian-game__content.Sport-Climbing .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Sport-Climbing.svg);
+}
+.asian-game__content.Taekwondo .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Taekwondo.svg);
+}
+.asian-game__content.Wushu .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/orange/Wushu.svg);
+}
+
+
+
+
+
+

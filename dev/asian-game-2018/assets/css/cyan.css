@@ -1,0 +1,95 @@
+/* Category color by name */
+
+/* Cyan #1DBEA6 */
+.asian-game__content.Fencing::before,
+.asian-game__content.Fencing .circle-small,
+.asian-game__content.Fencing .circle-large,
+.asian-game__content.Fencing .circle-large span,
+
+.asian-game__content.Football::before,
+.asian-game__content.Football .circle-small,
+.asian-game__content.Football .circle-large,
+.asian-game__content.Football .circle-large span,
+
+.asian-game__content.Golf::before,
+.asian-game__content.Golf .circle-small,
+.asian-game__content.Golf .circle-large,
+.asian-game__content.Golf .circle-large span,
+
+.asian-game__content.Handball::before,
+.asian-game__content.Handball .circle-small,
+.asian-game__content.Handball .circle-large,
+.asian-game__content.Handball .circle-large span,
+
+.asian-game__content.Hockey::before,
+.asian-game__content.Hockey .circle-small,
+.asian-game__content.Hockey .circle-large,
+.asian-game__content.Hockey .circle-large span,
+
+.asian-game__content.Rowing::before,
+.asian-game__content.Rowing .circle-small,
+.asian-game__content.Rowing .circle-large,
+.asian-game__content.Rowing .circle-large span,
+
+.asian-game__content.Sambo::before,
+.asian-game__content.Sambo .circle-small,
+.asian-game__content.Sambo .circle-large,
+.asian-game__content.Sambo .circle-large span
+{
+	background-color: #1DBEA6;
+}
+
+/* Cyan #1DBEA6 */
+.asian-game__content.Fencing .asian-game__content--category .cat-bg,
+.asian-game__content.Football .asian-game__content--category .cat-bg,
+.asian-game__content.Golf .asian-game__content--category .cat-bg,
+.asian-game__content.Handball .asian-game__content--category .cat-bg,
+.asian-game__content.Hockey .asian-game__content--category .cat-bg,
+.asian-game__content.Rowing .asian-game__content--category .cat-bg,
+.asian-game__content.Sambo .asian-game__content--category .cat-bg
+
+{
+	background-color: #1DBEA6;
+}
+
+/* Cyan #1DBEA6 */
+.asian-game__content.Fencing .asian-game__content--category .cat-bg:after,
+.asian-game__content.Football .asian-game__content--category .cat-bg:after,
+.asian-game__content.Golf .asian-game__content--category .cat-bg:after,
+.asian-game__content.Handball .asian-game__content--category .cat-bg:after,
+.asian-game__content.Hockey .asian-game__content--category .cat-bg:after,
+.asian-game__content.Rowing .asian-game__content--category .cat-bg:after,
+.asian-game__content.Sambo .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #1DBEA6;
+}
+
+/* Cyan #1DBEA6 */
+.asian-game__content.Fencing .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Fencing.svg);
+}
+.asian-game__content.Football .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Football.svg);
+}
+.asian-game__content.Golf .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Golf.svg);
+}
+.asian-game__content.Handball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Handball.svg);
+}
+.asian-game__content.Hockey .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Hockey.svg);
+}
+.asian-game__content.Rowing .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Rowing.svg);
+}
+.asian-game__content.Sambo .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/cyan/Sambo.svg);
+}
+
+
+
+
+
+
+

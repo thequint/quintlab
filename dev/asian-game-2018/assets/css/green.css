@@ -1,0 +1,103 @@
+/* Category color by name */
+
+/* Green #0F7D77 */
+.asian-game__content.Bowling::before,
+.asian-game__content.Bowling .circle-small,
+.asian-game__content.Bowling .circle-large,
+.asian-game__content.Bowling .circle-large span,
+
+.asian-game__content.Bridge::before,
+.asian-game__content.Bridge .circle-small,
+.asian-game__content.Bridge .circle-large,
+.asian-game__content.Bridge .circle-large span,
+
+.asian-game__content.Canoe-Sprint::before,
+.asian-game__content.Canoe-Sprint .circle-small,
+.asian-game__content.Canoe-Sprint .circle-large,
+.asian-game__content.Canoe-Sprint .circle-large span,
+
+.asian-game__content.Cycling-BMX::before,
+.asian-game__content.Cycling-BMX .circle-small,
+.asian-game__content.Cycling-BMX .circle-large,
+.asian-game__content.Cycling-BMX .circle-large span,
+
+.asian-game__content.Cycling-Mountain-Bike::before,
+.asian-game__content.Cycling-Mountain-Bike .circle-small,
+.asian-game__content.Cycling-Mountain-Bike .circle-large,
+.asian-game__content.Cycling-Mountain-Bike .circle-large span,
+
+.asian-game__content.Cycling-Road::before,
+.asian-game__content.Cycling-Road .circle-small,
+.asian-game__content.Cycling-Road .circle-large,
+.asian-game__content.Cycling-Road .circle-large span,
+
+.asian-game__content.Cycling-Track::before,
+.asian-game__content.Cycling-Track .circle-small,
+.asian-game__content.Cycling-Track .circle-large,
+.asian-game__content.Cycling-Track .circle-large span,
+
+.asian-game__content.Karate::before,
+.asian-game__content.Karate .circle-small,
+.asian-game__content.Karate .circle-large,
+.asian-game__content.Karate .circle-large span
+{
+	background-color: #0F7D77;
+}
+
+/* Green #0F7D77 */
+.asian-game__content.Bowling .asian-game__content--category .cat-bg,
+.asian-game__content.Bridge .asian-game__content--category .cat-bg,
+.asian-game__content.Canoe-Sprint .asian-game__content--category .cat-bg,
+.asian-game__content.Cycling-BMX .asian-game__content--category .cat-bg,
+.asian-game__content.Cycling-Mountain-Bike .asian-game__content--category .cat-bg,
+.asian-game__content.Cycling-Road .asian-game__content--category .cat-bg,
+.asian-game__content.Cycling-Track .asian-game__content--category .cat-bg,
+.asian-game__content.Karate .asian-game__content--category .cat-bg
+{
+	background-color: #0F7D77;
+}
+
+/* Green #0F7D77 */
+.asian-game__content.Bowling .asian-game__content--category .cat-bg:after,
+.asian-game__content.Bridge .asian-game__content--category .cat-bg:after,
+.asian-game__content.Canoe-Sprint .asian-game__content--category .cat-bg:after,
+.asian-game__content.Cycling-BMX .asian-game__content--category .cat-bg:after,
+.asian-game__content.Cycling-Mountain-Bike .asian-game__content--category .cat-bg:after,
+.asian-game__content.Cycling-Road .asian-game__content--category .cat-bg:after,
+.asian-game__content.Cycling-Track .asian-game__content--category .cat-bg:after,
+.asian-game__content.Karate .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #0F7D77;
+}
+
+/* Green #0F7D77 */
+.asian-game__content.Bowling .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Bowling.svg);
+}
+.asian-game__content.Bridge .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Bridge.svg);
+}
+.asian-game__content.Canoe-Sprint .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Canoe-Sprint.svg);
+}
+.asian-game__content.Cycling-BMX .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Cycling-BMX.svg);
+}
+.asian-game__content.Cycling-Mountain-Bike .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Cycling-Mountain-Bike.svg);
+}
+.asian-game__content.Cycling-Road .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Cycling-Road.svg);
+}
+.asian-game__content.Cycling-Track .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Cycling-Track.svg);
+}
+.asian-game__content.Karate .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/green/Karate.svg);
+}
+
+
+
+
+
+

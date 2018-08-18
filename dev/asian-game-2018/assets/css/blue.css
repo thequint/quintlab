@@ -1,0 +1,88 @@
+/* Category color by name */
+
+/* Blue #1793E8 */
+.asian-game__content.Badminton::before,
+.asian-game__content.Badminton .circle-small,
+.asian-game__content.Badminton .circle-large,
+.asian-game__content.Badminton .circle-large span,
+
+.asian-game__content.Sepaktakraw::before,
+.asian-game__content.Sepaktakraw .circle-small,
+.asian-game__content.Sepaktakraw .circle-large,
+.asian-game__content.Sepaktakraw .circle-large span,
+
+.asian-game__content.Shooting::before,
+.asian-game__content.Shooting .circle-small,
+.asian-game__content.Shooting .circle-large,
+.asian-game__content.Shooting .circle-large span,
+
+.asian-game__content.Skateboard::before,
+.asian-game__content.Skateboard .circle-small,
+.asian-game__content.Skateboard .circle-large,
+.asian-game__content.Skateboard .circle-large span,
+
+.asian-game__content.Soft-Tennis::before,
+.asian-game__content.Soft-Tennis .circle-small,
+.asian-game__content.Soft-Tennis .circle-large,
+.asian-game__content.Soft-Tennis .circle-large span,
+
+.asian-game__content.Swimming::before,
+.asian-game__content.Swimming .circle-small,
+.asian-game__content.Swimming .circle-large,
+.asian-game__content.Swimming .circle-large span,
+
+.asian-game__content.Tennis::before,
+.asian-game__content.Tennis .circle-small,
+.asian-game__content.Tennis .circle-large,
+.asian-game__content.Tennis .circle-large span
+{
+	background-color: #1793E8;
+}
+
+/* Blue #1793E8 */
+.asian-game__content.Badminton .asian-game__content--category .cat-bg,
+.asian-game__content.Sepaktakraw .asian-game__content--category .cat-bg,
+.asian-game__content.Shooting .asian-game__content--category .cat-bg,
+.asian-game__content.Skateboard .asian-game__content--category .cat-bg,
+.asian-game__content.Soft-Tennis .asian-game__content--category .cat-bg,
+.asian-game__content.Swimming .asian-game__content--category .cat-bg,
+.asian-game__content.Tennis .asian-game__content--category .cat-bg
+{
+	background-color: #1793E8;
+}
+
+/* Blue #1793E8 */
+.asian-game__content.Badminton .asian-game__content--category .cat-bg:after,
+.asian-game__content.Sepaktakraw .asian-game__content--category .cat-bg:after,
+.asian-game__content.Shooting .asian-game__content--category .cat-bg:after,
+.asian-game__content.Skateboard .asian-game__content--category .cat-bg:after,
+.asian-game__content.Soft-Tennis .asian-game__content--category .cat-bg:after,
+.asian-game__content.Swimming .asian-game__content--category .cat-bg:after,
+.asian-game__content.Tennis .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #1793E8;
+}
+
+/* Blue #1793E8 */
+.asian-game__content.Badminton .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Badminton.svg);
+}
+.asian-game__content.Sepaktakraw .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Sepaktakraw.svg);
+}
+.asian-game__content.Shooting .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Shooting.svg);
+}
+.asian-game__content.Skateboard .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Skateboard.svg);
+}
+.asian-game__content.Soft-Tennis .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Soft-Tennis.svg);
+}
+.asian-game__content.Swimming .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Swimming.svg);
+}
+.asian-game__content.Tennis .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/blue/Tennis.svg);
+}
+

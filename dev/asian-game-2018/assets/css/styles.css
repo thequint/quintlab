@@ -12,10 +12,57 @@ body {
 	margin: 0 auto;
 	max-width: 1280px;
 	overflow: hidden;
+	height: 377px;
 }
-.asian-game__headline {
+/*.asian-game__headline {
 	font-size: 30px;
+}*/
+
+
+.asian-game__headline h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 100%;
+    text-transform: uppercase;
 }
+.asian-game__headline h3 span {
+	position: relative;
+	background-color: #b40838;
+	display: inline-block;
+	padding: 0 10px;
+	height: 40px;
+    line-height: 40px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);*/
+}
+.asian-game__headline h3 span::after {
+	position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    right: -16px;
+    top: 0;
+    border-bottom: 40px solid #b40838;
+	border-right: 16px solid transparent;
+	/*box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .asian-game__slider {
 	position: relative;
 	margin: 0 auto;
@@ -224,10 +271,12 @@ body {
 
 
 
+
+
 /* Category color by name */
 
 /* aquatic */
-.asian-game__content.aquatic::before,
+/*.asian-game__content.aquatic::before,
 .asian-game__content.aquatic .circle-small,
 .asian-game__content.aquatic .circle-large,
 .asian-game__content.aquatic .circle-large span {
@@ -241,10 +290,10 @@ body {
 }
 .asian-game__content.aquatic .asian-game__content--category .cat-icon {
 	background-image: url(../images/default-icon.svg);
-}
+}*/
 
 /* Boxing */
-.asian-game__content.boxing::before,
+/*.asian-game__content.boxing::before,
 .asian-game__content.boxing .circle-small,
 .asian-game__content.boxing .circle-large,
 .asian-game__content.boxing .circle-large span {
@@ -258,10 +307,10 @@ body {
 }
 .asian-game__content.boxing .asian-game__content--category .cat-icon {
 	background-image: url(../images/boxing-icon.svg);
-}
+}*/
 
 /* Handball */
-.asian-game__content.handball::before,
+/*.asian-game__content.handball::before,
 .asian-game__content.handball .circle-small,
 .asian-game__content.handball .circle-large,
 .asian-game__content.handball .circle-large span {
@@ -275,10 +324,10 @@ body {
 }
 .asian-game__content.handball .asian-game__content--category .cat-icon {
 	background-image: url(../images/handball-icon.svg);
-}
+}*/
 
 /* Shooting */
-.asian-game__content.shooting::before,
+/*.asian-game__content.shooting::before,
 .asian-game__content.shooting .circle-small,
 .asian-game__content.shooting .circle-large,
 .asian-game__content.shooting .circle-large span {
@@ -292,10 +341,10 @@ body {
 }
 .asian-game__content.shooting .asian-game__content--category .cat-icon {
 	background-image: url(../images/shooting-icon.svg);
-}
+}*/
 
 /* Wrestling */
-.asian-game__content.wrestling::before,
+/*.asian-game__content.wrestling::before,
 .asian-game__content.wrestling .circle-small,
 .asian-game__content.wrestling .circle-large,
 .asian-game__content.wrestling .circle-large span {
@@ -309,7 +358,7 @@ body {
 }
 .asian-game__content.wrestling .asian-game__content--category .cat-icon {
 	background-image: url(../images/wrestling-icon.svg);
-}
+}*/
 
 
 

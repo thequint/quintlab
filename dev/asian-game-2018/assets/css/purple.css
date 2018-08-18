@@ -1,0 +1,107 @@
+/* Category color by name */
+
+/* Purple #862194 */
+.asian-game__content.Jetski::before,
+.asian-game__content.Jetski .circle-small,
+.asian-game__content.Jetski .circle-large,
+.asian-game__content.Jetski .circle-large span,
+
+.asian-game__content.Rhythmic-Gymnastics::before,
+.asian-game__content.Rhythmic-Gymnastics .circle-small,
+.asian-game__content.Rhythmic-Gymnastics .circle-large,
+.asian-game__content.Rhythmic-Gymnastics .circle-large span,
+
+.asian-game__content.Squash::before,
+.asian-game__content.Squash .circle-small,
+.asian-game__content.Squash .circle-large,
+.asian-game__content.Squash .circle-large span,
+
+.asian-game__content.Table-Tennis::before,
+.asian-game__content.Table-Tennis .circle-small,
+.asian-game__content.Table-Tennis .circle-large,
+.asian-game__content.Table-Tennis .circle-large span,
+
+.asian-game__content.Trampoline-Gymnastics::before,
+.asian-game__content.Trampoline-Gymnastics .circle-small,
+.asian-game__content.Trampoline-Gymnastics .circle-large,
+.asian-game__content.Trampoline-Gymnastics .circle-large span,
+
+.asian-game__content.Triathlon::before,
+.asian-game__content.Triathlon .circle-small,
+.asian-game__content.Triathlon .circle-large,
+.asian-game__content.Triathlon .circle-large span,
+
+.asian-game__content.Volleyball::before,
+.asian-game__content.Volleyball .circle-small,
+.asian-game__content.Volleyball .circle-large,
+.asian-game__content.Volleyball .circle-large span,
+
+.asian-game__content.Weightlifting::before,
+.asian-game__content.Weightlifting .circle-small,
+.asian-game__content.Weightlifting .circle-large,
+.asian-game__content.Weightlifting .circle-large span,
+
+.asian-game__content.Wrestling::before,
+.asian-game__content.Wrestling .circle-small,
+.asian-game__content.Wrestling .circle-large,
+.asian-game__content.Wrestling .circle-large span
+{
+	background-color: #862194;
+}
+
+/* Purple #862194 */
+.asian-game__content.Jetski .asian-game__content--category .cat-bg,
+.asian-game__content.Rhythmic-Gymnastics .asian-game__content--category .cat-bg,
+.asian-game__content.Squash .asian-game__content--category .cat-bg,
+.asian-game__content.Table-Tennis .asian-game__content--category .cat-bg,
+.asian-game__content.Trampoline-Gymnastics .asian-game__content--category .cat-bg,
+.asian-game__content.Triathlon .asian-game__content--category .cat-bg,
+.asian-game__content.Volleyball .asian-game__content--category .cat-bg,
+.asian-game__content.Weightlifting .asian-game__content--category .cat-bg,
+.asian-game__content.Wrestling .asian-game__content--category .cat-bg
+{
+	background-color: #862194;
+}
+
+/* Purple #862194 */
+.asian-game__content.Jetski .asian-game__content--category .cat-bg:after,
+.asian-game__content.Rhythmic-Gymnastics .asian-game__content--category .cat-bg:after,
+.asian-game__content.Squash .asian-game__content--category .cat-bg:after,
+.asian-game__content.Table-Tennis .asian-game__content--category .cat-bg:after,
+.asian-game__content.Trampoline-Gymnastics .asian-game__content--category .cat-bg:after,
+.asian-game__content.Triathlon .asian-game__content--category .cat-bg:after,
+.asian-game__content.Volleyball .asian-game__content--category .cat-bg:after,
+.asian-game__content.Weightlifting .asian-game__content--category .cat-bg:after,
+.asian-game__content.Wrestling .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #862194;
+}
+
+/* Purple #862194 */
+.asian-game__content.Jetski .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Jetski.svg);
+}
+.asian-game__content.Rhythmic-Gymnastics .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Rhythmic-Gymnastics.svg);
+}
+.asian-game__content.Squash .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Squash.svg);
+}
+.asian-game__content.Table-Tennis .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Table-Tennis.svg);
+}
+.asian-game__content.Trampoline-Gymnastics .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Trampoline-Gymnastics.svg);
+}
+.asian-game__content.Triathlon .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Triathlon.svg);
+}
+.asian-game__content.Volleyball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Volleyball.svg);
+}
+.asian-game__content.Weightlifting .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Weightlifting.svg);
+}
+.asian-game__content.Wrestling .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/purple/Wrestling.svg);
+}

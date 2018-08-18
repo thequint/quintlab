@@ -1,0 +1,20 @@
+/* Category color by name */
+
+@import "purple.css";
+@import "green.css";
+@import "yellow.css";
+@import "orange.css";
+@import "pink.css";
+@import "blue.css";
+@import "cyan.css";
+
+/*@import "green.css";*/ /* Using a string */
+
+
+
+
+/*@import url("green.css");*/ /* Using a url */
+
+
+
+

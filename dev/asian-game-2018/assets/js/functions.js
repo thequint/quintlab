@@ -22,20 +22,15 @@ function showInfo(data) {
     for (var index = data.length - 1; index >= 0; index--) {
         
             $("#product_show").append(
-                "<li class='asian-game__content aquatic'>" +
+                "<li class='asian-game__content " + data[index].Game_icon + "'>" +
                     "<div class='el-position'>" +
                         "<div class='asian-game__content--timestamp'>" + data[index].Game_time + "</div>" +
                         "<div class='asian-game__content--category'><span class='cat-icon'></span><span class='cat-bg'>" + data[index].Game_category + "</span></div>" +
-                        "<div class='asian-game__content--headline'>" + data[index].Game_player_name + "</div>" +
+                        "<div class='asian-game__content--headline'>" + data[index].Game_player_name + " <span class='match-vs'>" + data[index].Game_player_vs + "</span></div>" +
                         "<div class='asian-game__content--sub-headline'>" + data[index].Game_round + "</div>" +
                     "</div>" +
-
-                // "<h4 class='item-list--item-name'>" + data[index].Game_time + "</h4>" +
-                // "<h4 class='item-list--item-tagline'>" + data[index].Game_category + "</h4>" +
-                // "<h4 class='item-list--item-name'>" + data[index].Game_category_style + "</h4>" +
-                // "<h4 class='item-list--item-tagline'>" + data[index].Game_player_name + "</h4>" +
-                // "<h4 class='item-list--item-name'>" + data[index].Game_player_vs + "</h4>" +
-                // "<h4 class='item-list--item-tagline'>" + data[index].Game_round + "</h4>" +
+                    "<span class='circle-small'></span>" +
+                    //"<span class='circle-large'><span></span></span>" +
                 "</li>"
             )
 

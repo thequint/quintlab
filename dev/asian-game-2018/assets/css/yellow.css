@@ -1,0 +1,123 @@
+/* Category color by name */
+
+/* Yellow #FED530 */
+.asian-game__content.Basketball::before,
+.asian-game__content.Basketball .circle-small,
+.asian-game__content.Basketball .circle-large,
+.asian-game__content.Basketball .circle-large span,
+
+.asian-game__content.Beach-Volleyball::before,
+.asian-game__content.Beach-Volleyball .circle-small,
+.asian-game__content.Beach-Volleyball .circle-large,
+.asian-game__content.Beach-Volleyball .circle-large span,
+
+.asian-game__content.Boxing::before,
+.asian-game__content.Boxing .circle-small,
+.asian-game__content.Boxing .circle-large,
+.asian-game__content.Boxing .circle-large span,
+
+.asian-game__content.Diving::before,
+.asian-game__content.Diving .circle-small,
+.asian-game__content.Diving .circle-large,
+.asian-game__content.Diving .circle-large span,
+
+.asian-game__content.Equestrian::before,
+.asian-game__content.Equestrian .circle-small,
+.asian-game__content.Equestrian .circle-large,
+.asian-game__content.Equestrian .circle-large span,
+
+.asian-game__content.Ju-Jitsu::before,
+.asian-game__content.Ju-Jitsu .circle-small,
+.asian-game__content.Ju-Jitsu .circle-large,
+.asian-game__content.Ju-Jitsu .circle-large span,
+
+.asian-game__content.Kabaddi::before,
+.asian-game__content.Kabaddi .circle-small,
+.asian-game__content.Kabaddi .circle-large,
+.asian-game__content.Kabaddi .circle-large span,
+
+.asian-game__content.Kurash::before,
+.asian-game__content.Kurash .circle-small,
+.asian-game__content.Kurash .circle-large,
+.asian-game__content.Kurash .circle-large span,
+
+.asian-game__content.Sailing::before,
+.asian-game__content.Sailing .circle-small,
+.asian-game__content.Sailing .circle-large,
+.asian-game__content.Sailing .circle-large span,
+
+.asian-game__content.Water-Polo::before,
+.asian-game__content.Water-Polo .circle-small,
+.asian-game__content.Water-Polo .circle-large,
+.asian-game__content.Water-Polo .circle-large span
+{
+	background-color: #FED530;
+}
+
+/* Yellow #FED530 */
+.asian-game__content.Basketball .asian-game__content--category .cat-bg,
+.asian-game__content.Beach-Volleyball .asian-game__content--category .cat-bg,
+.asian-game__content.Boxing .asian-game__content--category .cat-bg,
+.asian-game__content.Diving .asian-game__content--category .cat-bg,
+.asian-game__content.Equestrian .asian-game__content--category .cat-bg,
+.asian-game__content.Ju-Jitsu .asian-game__content--category .cat-bg,
+.asian-game__content.Kabaddi .asian-game__content--category .cat-bg,
+.asian-game__content.Kurash .asian-game__content--category .cat-bg,
+.asian-game__content.Sailing .asian-game__content--category .cat-bg,
+.asian-game__content.Water-Polo .asian-game__content--category .cat-bg
+{
+	background-color: #FED530;
+}
+
+/* Yellow #FED530 */
+.asian-game__content.Basketball .asian-game__content--category .cat-bg:after,
+.asian-game__content.Beach-Volleyball .asian-game__content--category .cat-bg:after,
+.asian-game__content.Boxing .asian-game__content--category .cat-bg:after,
+.asian-game__content.Diving .asian-game__content--category .cat-bg:after,
+.asian-game__content.Equestrian .asian-game__content--category .cat-bg:after,
+.asian-game__content.Ju-Jitsu .asian-game__content--category .cat-bg:after,
+.asian-game__content.Kabaddi .asian-game__content--category .cat-bg:after,
+.asian-game__content.Kurash .asian-game__content--category .cat-bg:after,
+.asian-game__content.Sailing .asian-game__content--category .cat-bg:after,
+.asian-game__content.Water-Polo .asian-game__content--category .cat-bg:after
+{
+    border-bottom: 30px solid #FED530;
+}
+
+/* Yellow #FED530 */
+.asian-game__content.Basketball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Basketball.svg);
+}
+.asian-game__content.Beach-Volleyball .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Beach-Volleyball.svg);
+}
+.asian-game__content.Boxing .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Boxing.svg);
+}
+.asian-game__content.Diving .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Diving.svg);
+}
+.asian-game__content.Equestrian .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Equestrian.svg);
+}
+.asian-game__content.Ju-Jitsu .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Ju-Jitsu.svg);
+}
+.asian-game__content.Kabaddi .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Kabaddi.svg);
+}
+.asian-game__content.Kurash .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Kurash.svg);
+}
+.asian-game__content.Sailing .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Sailing.svg);
+}
+.asian-game__content.Water-Polo .asian-game__content--category .cat-icon {
+	background-image: url(../images/icons/yellow/Water-Polo.svg);
+}
+
+
+
+
+
+
