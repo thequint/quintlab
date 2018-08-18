@@ -9,17 +9,39 @@ body {
 
 
 .asian-game {
+	position: relative;
 	margin: 0 auto;
-	max-width: 1280px;
+	/*max-width: 1280px;*/
+	width: 100%;
 	overflow: hidden;
-	height: 377px;
+	height: 380px;
+	background-color: #ccc;
+
+}
+
+.asian-game::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    width: 100%;
+    height: 6px;
+    background-image: url(../images/strip-small.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 101%;
 }
 /*.asian-game__headline {
 	font-size: 30px;
 }*/
 
-
+.asian-game__headline {
+	margin: 0 auto;
+	max-width: 1240px;
+}
 .asian-game__headline h3{
+	padding-top: 20px;
 	font-family: 'Lato', sans-serif;
 	font-size: 22px;
     font-weight: 900;
@@ -50,23 +72,11 @@ body {
 	/*box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);*/
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .asian-game__slider {
 	position: relative;
 	margin: 0 auto;
-	padding: 20px;
+	max-width: 1240px;
+	padding: 0 20px 20px;
 	overflow: hidden;
 }
 .asian-game__slider-wrap {
@@ -254,111 +264,16 @@ body {
 }
 .asian-game__content--headline .match-vs {
 	display: block;
-	padding-left: 25px;
+	/*padding-left: 25px;*/
 	font-weight: 600;
 	position: relative;
 }
-.asian-game__content--headline .match-vs::before {
+/*.asian-game__content--headline .match-vs::before {
 	position: absolute;
 	left: 0;
 	content: "vs";
-}
+}*/
 .asian-game__content--sub-headline {
 	font-weight: 600;
 	font-size: 0.88em;
 }
-
-
-
-
-
-
-/* Category color by name */
-
-/* aquatic */
-/*.asian-game__content.aquatic::before,
-.asian-game__content.aquatic .circle-small,
-.asian-game__content.aquatic .circle-large,
-.asian-game__content.aquatic .circle-large span {
-	background-color: #0091eb;
-}
-.asian-game__content.aquatic .asian-game__content--category .cat-bg {
-	background-color: #0091eb;
-}
-.asian-game__content.aquatic .asian-game__content--category .cat-bg:after {
-    border-bottom: 30px solid #0091eb;
-}
-.asian-game__content.aquatic .asian-game__content--category .cat-icon {
-	background-image: url(../images/default-icon.svg);
-}*/
-
-/* Boxing */
-/*.asian-game__content.boxing::before,
-.asian-game__content.boxing .circle-small,
-.asian-game__content.boxing .circle-large,
-.asian-game__content.boxing .circle-large span {
-	background-color: #871996;
-}
-.asian-game__content.boxing .asian-game__content--category .cat-bg {
-	background-color: #871996;
-}
-.asian-game__content.boxing .asian-game__content--category .cat-bg:after {
-    border-bottom: 30px solid #871996;
-}
-.asian-game__content.boxing .asian-game__content--category .cat-icon {
-	background-image: url(../images/boxing-icon.svg);
-}*/
-
-/* Handball */
-/*.asian-game__content.handball::before,
-.asian-game__content.handball .circle-small,
-.asian-game__content.handball .circle-large,
-.asian-game__content.handball .circle-large span {
-	background-color: #f52e59;
-}
-.asian-game__content.handball .asian-game__content--category .cat-bg {
-	background-color: #f52e59;
-}
-.asian-game__content.handball .asian-game__content--category .cat-bg:after {
-    border-bottom: 30px solid #f52e59;
-}
-.asian-game__content.handball .asian-game__content--category .cat-icon {
-	background-image: url(../images/handball-icon.svg);
-}*/
-
-/* Shooting */
-/*.asian-game__content.shooting::before,
-.asian-game__content.shooting .circle-small,
-.asian-game__content.shooting .circle-large,
-.asian-game__content.shooting .circle-large span {
-	background-color: #f29100;
-}
-.asian-game__content.shooting .asian-game__content--category .cat-bg {
-	background-color: #f29100;
-}
-.asian-game__content.shooting .asian-game__content--category .cat-bg:after {
-    border-bottom: 30px solid #f29100;
-}
-.asian-game__content.shooting .asian-game__content--category .cat-icon {
-	background-image: url(../images/shooting-icon.svg);
-}*/
-
-/* Wrestling */
-/*.asian-game__content.wrestling::before,
-.asian-game__content.wrestling .circle-small,
-.asian-game__content.wrestling .circle-large,
-.asian-game__content.wrestling .circle-large span {
-	background-color: #00bfa6;
-}
-.asian-game__content.wrestling .asian-game__content--category .cat-bg {
-	background-color: #00bfa6;
-}
-.asian-game__content.wrestling .asian-game__content--category .cat-bg:after {
-    border-bottom: 30px solid #00bfa6;
-}
-.asian-game__content.wrestling .asian-game__content--category .cat-icon {
-	background-image: url(../images/wrestling-icon.svg);
-}*/
-
-
-
