@@ -15,8 +15,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 	height: 380px;
-	background-color: #ccc;
-
+	background-color: #fff;
 }
 
 .asian-game::after {
@@ -25,12 +24,12 @@ body {
     left: 0;
     right: 0;
     content: " ";
-    width: 100%;
+    width: 110%;
     height: 6px;
-    background-image: url(../images/strip-small.svg);
+    background-image: url(../images/strip-big.svg);
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: 101%;
+    background-size: 110%;
 }
 /*.asian-game__headline {
 	font-size: 30px;
@@ -38,10 +37,10 @@ body {
 
 .asian-game__headline {
 	margin: 0 auto;
+	padding-top: 10px;
 	max-width: 1240px;
 }
 .asian-game__headline h3{
-	padding-top: 20px;
 	font-family: 'Lato', sans-serif;
 	font-size: 22px;
     font-weight: 900;
@@ -120,7 +119,7 @@ body {
 .asian-game .slide-next {
 	position: absolute;
 	width: 32px;
-	top: 45.5%;
+	top: 42.5%;
 	cursor: pointer;
 }
 .asian-game .slide-prev {
