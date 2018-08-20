@@ -1,8 +1,9 @@
 // KEY EVENTS
 
 $(document).ready(function() {
-    $.getJSON('https://www.thequint.com/api/v1/stories/20bce1b6-bd22-4427-954a-a7a7a42c09bd', function(res) { // Day #1
+    // $.getJSON('https://www.thequint.com/api/v1/stories/20bce1b6-bd22-4427-954a-a7a7a42c09bd', function(res) { // Day #1
     // $.getJSON('https://www.thequint.com/api/v1/stories/494eeb0c-331d-497f-b378-c8f344221ae3', function(res) { // Day #2
+    $.getJSON(api_url, function(res) { // Day #2
         console.log(res)
        $("#asian_game_carousel").css("display", "block");
         var lastStory = res.story;
