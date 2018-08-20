@@ -318,3 +318,12 @@ content: '';
 	height: 100%;
 	width: 100%;
 }
+
+@media (max-width: 639px) {
+    .carousel-wrapper .slick-prev {
+        left: 0;
+    }
+    .carousel-wrapper .slick-next {
+        right: 0;
+    }
+}

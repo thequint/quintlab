@@ -27,7 +27,7 @@ body {
     width: 110%;
     height: 6px;
     background-image: url(../images/strip-big.svg);
-    background-position: bottom center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: 110%;
 }
@@ -37,7 +37,7 @@ body {
 
 .asian-game__headline {
 	margin: 0 auto;
-	padding-top: 10px;
+	padding-top: 20px;
 	max-width: 1240px;
 }
 .asian-game__headline h3{
@@ -82,6 +82,7 @@ body {
 	margin: 0 auto;
 	/*width: 1000px;*/
 	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 	padding: 20px 10px;
 }
 .asian-game__slider-wrap ul {
@@ -128,25 +129,6 @@ body {
 .asian-game .slide-next {
 	right: 0;
 }
-
-
-@media (min-width: 960px) {
-	.asian-game__slider-wrap {
-		overflow:hidden;
-	}
-}
-
-@media (max-width: 1279px) {
-	.asian-game {
-		max-width: 960px
-	}
-}
-@media (max-width: 959px) {
-	.asian-game {
-		max-width: 640px
-	}
-}
-
 
 .asian-game__content {
 	position: relative;
@@ -275,4 +257,27 @@ body {
 .asian-game__content--sub-headline {
 	font-weight: 600;
 	font-size: 0.88em;
+}
+
+@media (min-width: 960px) {
+	.asian-game__slider-wrap {
+		overflow:hidden;
+	}
+}
+
+@media (max-width: 1279px) {
+	.asian-game__slider {
+		max-width: 960px
+	}
+}
+@media (max-width: 959px) {
+	.asian-game__slider {
+		max-width:/* */640px;
+		max-width: 100%;
+		width: 100%
+	}
+	.asian-game::after {
+	    width: 115%;
+	    background-size: 115%;
+	}
 }

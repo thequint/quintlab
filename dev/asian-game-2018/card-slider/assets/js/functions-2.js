@@ -10,11 +10,11 @@ $(document).ready(function() {
         var cardsWithImages = cards.filter(function(card) {
             return card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'] && card.metadata.attributes['liveblogimage'][0] == "true"
         }).slice(0, 10)
-        elements = cardsWithImages.map(function(card) {
+        elements = cards.map(function(card) {
             var imageKey;
             var titleElement;
             if (card.metadata) {
-                if (card && card.metadata && card.metadata.attributes && card.metadata.attributes['liveblogimage'][0] == "true") {
+                if (card && card.metadata && card.metadata.attributes ) {
                     var imageElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'image' });
                     titleElement = card['story-elements'].find(function(storyElement) { return storyElement.type == 'title' }) || {};
                     imageKey = (imageElement || {})["image-s3-key"];
