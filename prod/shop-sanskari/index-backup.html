@@ -107,15 +107,6 @@ _comscore.push(COMSCORE_OPTS);
 
 <!-- <div class="loader"></div> -->
 
-<div id="video_popup" class="intro-popup" style="display:none">
-    <div class="intro-box">
-        <div class="intro-iframe">
-            <div id="video_cont"></div>
-            <span class="intro-close"><i class="fa fa-close"></i></span>
-        </div>
-    </div>
-</div>
-
 <header class="header">
     <div class="header__top-bar">Send ‘Aashirwaad’ to <strong>+91 9999008335</strong> <span>to get Aashirwaad from the elderly</span></div>
     <div class="header__nav-bar">
@@ -129,9 +120,9 @@ _comscore.push(COMSCORE_OPTS);
                     <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/shop-sanskari/&text=Shop with Aashirwaad and earn Sanskar! Free Shipping and Aashirwaad on Delivery Available.%20https%3A//thequint.com/quintlab/shop-sanskari/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/shop-sanskari/&t=Online+shop+for+all+things+sanskari:+Shop+for+sanskari+clothes,+sanskari+makeup,+sanskari+footwear,+troll-free keyboards+and+more+at+Shopsanskari.com."><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <!-- <li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-    				<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-    				<li><a href=""><i class="fa fa-twitter"></i></a></li>
-    				<li><a href=""><i class="fa fa-facebook"></i></a></li> -->
+				<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+				<li><a href=""><i class="fa fa-twitter"></i></a></li>
+				<li><a href=""><i class="fa fa-facebook"></i></a></li> -->
                 </ul>
             </div>
         </div>
@@ -344,40 +335,6 @@ _comscore.push(COMSCORE_OPTS);
 <!-- Scripts -->
 <script src="assets/js/bundles-script.min.js"></script>
 <script src="assets/js/functions.js"></script>
-
-<script type="text/javascript">
-    var heroVideo;
-    var src;
-    var myArray = [
-        "5751257853001",
-        "5751244980001",
-        "5751241983001",
-        "5751243387001"
-    ];
-    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-    //console.log(randomItem);
-
-    $("#video_cont").html('<video id="heroPlayerID" data-video-id="'+ randomItem +'" data-account="5653786008001" data-player="default" data-embed="default" controls class="video-js" autoplay></video>')
-</script>
-<script src="https://players.brightcove.net/5653786008001/default_default/index.min.js"></script>
-<script>
-    videojs('heroPlayerID').ready(function() {
-        heroVideo = this;
-        src=heroVideo.currentSrc();
-        //heroVideo.poster('http://animal-dream.com/data_images/tiger/tiger8.jpg');
-        heroVideo.on('ended', resetOnEnded);
-        var video_id = getParameterByName("v");
-        
-        if(video_id==null){
-            document.getElementById("video_popup").style.display = "block";
-        }else {
-            document.getElementById("video_popup").style.display = "none";
-        }
-    });
-    function resetOnEnded() {
-        document.getElementById("video_popup").style.display = "none";
-    }
-</script>
 </body>
 
 </html>

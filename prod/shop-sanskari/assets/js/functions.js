@@ -1,20 +1,27 @@
-$(function() {
-    //----- OPEN
-    $('[data-popup-open]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-open');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
 
-        e.preventDefault();
-    });
+//----- Intro popup
+$(".intro-close").click(function(e) {
+    $(".intro-popup").hide();
+    $('.intro-iframe iframe').attr('src', '');
+    $(".scroll-up").show();
 
-    //----- CLOSE
-    $('[data-popup-close]').on('click', function(e)  {
-        var targeted_popup_class = jQuery(this).attr('data-popup-close');
-        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
-
-        e.preventDefault();
-    });
+    setTimeout(function(){
+        $(".scroll-up").fadeOut();
+    }, 3000);
 });
+
+//----- Slider popup
+$('[data-popup-open]').on('click', function(e)  {
+    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+    e.preventDefault();
+});
+$('[data-popup-close]').on('click', function(e)  {
+    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+    e.preventDefault();
+});
+
 
 var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1SugZ2oqmcPKbTyQ-2nN5OIH3xG4ZaYUBcmLtbKqgJts/pubhtml';
 
@@ -77,38 +84,36 @@ $("body").click(function() {
     $(".social-ico").slideUp();
 });
 
-// Logo Slider
-$(document).ready(function() {
-    $('.logo-slider').slick({
-        infinite: true,
-        autoplay: true,
-        arrows: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplaySpeed: 4000,
-        arrows: true,
-        responsive: [{
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 960,
-            settings: {
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-    });
+//----- Logo Slider
+$('.logo-slider').slick({
+    infinite: true,
+    autoplay: true,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplaySpeed: 4000,
+    arrows: true,
+    responsive: [{
+        breakpoint: 1100,
+        settings: {
+            slidesToShow: 4
+        }
+    }, {
+        breakpoint: 960,
+        settings: {
+            slidesToShow: 3
+        }
+    }, {
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 2
+        }
+    }, {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
 });
 
 // 
@@ -121,6 +126,7 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
 function cart_quantity_selction() {
     $('.plus').on('click', function() {
         var $qty = $(this).closest('p').find('.qty');
@@ -145,7 +151,6 @@ function cart_quantity_selction() {
 }
 
 function update_cart_value() { // used only in cart page
-
     var q_item_array = [];
     var q_item_sum = 0;
     var grand_total = 0;
@@ -172,7 +177,9 @@ function update_cart_value() { // used only in cart page
     $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item_array); // go to cart page
 }
 
-window.addEventListener('DOMContentLoaded', init);
+//window.addEventListener('DOMContentLoaded', init);
+
+$(window).on('load',function(){init();})
 
 function showInfo(data) {
     if ($('body').hasClass('home')) { // only runs when in home page
@@ -187,7 +194,9 @@ function showInfo(data) {
         var q_item = getParameterByName('q');
         //console.log(q_item);
 
-        //console.log(q_item);
+        var video_id = getParameterByName('v');
+        var video_id = 1;
+        //console.log(video_id);
 
         if (q_item == null) {
             $("#header-cart-q .header-cart-item").text(0);
@@ -208,7 +217,7 @@ function showInfo(data) {
             $("#header-cart-q .header-cart-item").text(q_item_sum);
             $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
 
-            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+video_id); // back to home page
             $(".thanks_url").attr("href", "thank-you.html?cid=" + cid_item + "&q=" + q_item); // go to thank you page
         }
 
@@ -290,11 +299,15 @@ function showInfo(data) {
         var q_item = getParameterByName('q');
         //console.log(q_item);
 
+        var video_id = getParameterByName('v');
+        var video_id = 1;
+        console.log(video_id);
+
         if (q_item == null) { // Increase the cart item
             $("#header-cart-q .header-cart-item").text(0);
             $("#header-cart-q").attr("href", "carts.html"); // go to cart page
 
-            $(".home_url").attr("href", "index.html"); // back to home page
+            $(".home_url").attr("href", "index.html?v=1"); // back to home page
             $(".thanks_url").attr("href", "thank-you.html"); // go to thank you page
 
         } else {
@@ -307,7 +320,7 @@ function showInfo(data) {
             $("#header-cart-q .header-cart-item").text(q_item_sum);
             $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
 
-            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+ video_id); // back to home page
             $(".thanks_url").attr("href", "thank-you.html?cid=" + cid_item + "&q=" + q_item); // go to thank you page
         }
 
@@ -322,7 +335,7 @@ function showInfo(data) {
                 if (jQuery.inArray(id_item, cid_item_array) !== -1) { // to check if product added already exists in the cart
                     //console.log("firts");
 
-                    $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+                    $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+ video_id); // back to home page
                     //$(".thanks_url").attr("href","thank-you.html"); // go to thank you page
 
                     $("#quick-cart-pay").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
@@ -341,7 +354,7 @@ function showInfo(data) {
                         q_item = q_item + "," + $('.count').text();
                     }
 
-                    $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+                    $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+ video_id); // back to home page
                     $(".thanks_url").attr("href", "thank-you.html?cid=" + cid_item + "&q=" + q_item); // go to thank you page
 
                     $("#quick-cart-pay").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
@@ -484,6 +497,10 @@ function showInfo(data) {
         var q_item = getParameterByName('q');
         //console.log(q_item);
 
+        var video_id = getParameterByName('v');
+        var video_id = 1;
+        console.log(video_id);
+
         if (q_item == null) {
             //
         } else {
@@ -497,7 +514,7 @@ function showInfo(data) {
             //console.log(q_item_sum);
         }
 
-        $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+        $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+ video_id); // back to home page
         $(".thanks_url").attr("href", "thank-you.html?cid=" + cid_item + "&q=" + q_item); // go to thank you page
 
         $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
@@ -506,14 +523,14 @@ function showInfo(data) {
             $("#header-cart-q .header-cart-item").text(0);
             $("#header-cart-q").attr("href", "carts.html"); // go to cart page
 
-            $(".home_url").attr("href", "index.html"); // back to home page
+            $(".home_url").attr("href", "index.html?v=1"); // back to home page
             $(".thanks_url").attr("href", "thank-you.html"); // go to thank you page
 
         } else {
             $("#header-cart-q .header-cart-item").text(q_item_sum); // cart item quantity
             $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item); // go to cart page
 
-            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item); // back to home page
+            $(".home_url").attr("href", "index.html?cid=" + cid_item + "&q=" + q_item +"&v="+ video_id); // back to home page
             $(".thanks_url").attr("href", "thank-you.html?cid=" + cid_item + "&q=" + q_item); // go to thank you page
         }
 
