@@ -177,7 +177,9 @@ function update_cart_value() { // used only in cart page
     $("#header-cart-q").attr("href", "carts.html?cid=" + cid_item + "&q=" + q_item_array); // go to cart page
 }
 
-window.addEventListener('DOMContentLoaded', init);
+//window.addEventListener('DOMContentLoaded', init);
+
+$(window).on('load',function(){init();})
 
 function showInfo(data) {
     if ($('body').hasClass('home')) { // only runs when in home page
