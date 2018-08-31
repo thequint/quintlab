@@ -10,7 +10,6 @@ function init(){
 	});
 }
 
-window.addEventListener('DOMContentLoaded', init);
 function showInfo(data) {
 	$(".Total_Testimonials").append (
 		data[0].Total_Testimonials
@@ -19,3 +18,8 @@ function showInfo(data) {
 		data[0].Total_Signatures
 	)
 }
+
+//window.addEventListener('DOMContentLoaded', init);
+$(window).on('load',function(){
+	init();
+});
