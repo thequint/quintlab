@@ -209,12 +209,15 @@ body {
     <script src="assets/js/jukebox.js"></script>
     <script src="https://css-tricks.com/examples/BlurredText/js/jquery.lettering.js"></script>
     <!-- <script src="jukebox/assets/js/functions.js"></script> -->
-    <script data-cfasync="false" type="text/javascript">
-    $(window).resize(function() {
-        create_pie();
-        pie_events();
-    });
+    <script type="text/javascript">
+
     jQuery(document).ready(function($) {
+
+        //$(window).resize(function() {
+        $(window).on('resize', function(){
+            create_pie();
+            pie_events();
+        });
 
         var public_spreadsheet_contact = 'https://docs.google.com/spreadsheets/d/1r1OCM18cjnC17W8sZLhxFnN7xj1YxMU0lNjkjREVAho/pubhtml';
 
