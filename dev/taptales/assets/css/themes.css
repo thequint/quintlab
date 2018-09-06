@@ -62,39 +62,27 @@ img {
     clear: both;
 }
 
-.loader {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    background: url(../images/clock-loading.gif) #fff no-repeat center;
-}
-
 .filter-hide {
 	display: none !important;
 	height: 0!important;
 }
-.grid-init {
+#grid-init {
 	display: none;
 }
-.header {
+.tap-header {
 	margin: 30px auto;
     max-width: 1280px;
     width: 100%
-
 }
-.header img {
+.tap-header img {
 	width: 100%;
 	display: block;
 }
-.header__top-bar {
+.tap-header__top-bar {
 	position: relative;
 	text-align: right;
-	/*height: 100px;*/
 }
-.header__top-bar:after {
+.tap-header__top-bar:after {
 	position: absolute;
 	top: 35%;
 	right: 0;
@@ -103,7 +91,7 @@ img {
 	height: 3px;
 	background-color: #000;
 }
-.header__top-bar--text {
+.tap-header__top-bar--text {
 	position: absolute;
 	left: 0;
 	top: 40%;
@@ -113,7 +101,7 @@ img {
 	color: rgba(31, 31, 31, 1.0);
 	font-family: 'futura_hv_btheavy', sans-serif;
 }
-.header__top-bar--logo {
+.tap-header__top-bar--logo {
 	position: relative;
 	z-index: 1;
 	right: 10%;
@@ -122,29 +110,30 @@ img {
 	background-color: #fdf9ee;
 	display: inline-block;
 }
-.header__top-bar--logo img {
+.tap-header__top-bar--logo img {
 	width: 100%;
 }
-.header .nav {
+.tap-header .nav {
 	margin: 30px 0 0;
 	width: 100%;
 	text-align: center;
 	font-family: 'futuramedium', sans-serif;
 }
-.header .nav li {
-	font-size: 1.19em;
-	color: rgba(31, 31, 31, 0.8);
+.tap-header .nav li {
 	padding: 0 2%;
 	line-height: 32px;
 	display: inline-block;
 }
+.tap-header .nav li a {
+	font-size: 1.19em;
+	color: rgba(31, 31, 31, 0.8);
+}
 
-.header .nav li.active {
+.tap-header .nav li a.active {
 	font-size: 1.5em;
 	color: rgba(31, 31, 31, 1.0);
 	font-family: 'futura_hv_btheavy', sans-serif;
 }
-
 
 .main-wrap {
 	margin: 0 auto;
@@ -232,8 +221,6 @@ img {
 	-webkit-transition: -webkit-transform 0.2s, color 0.2s;
 	transition: transform 0.2s, color 0.2s;
 }
-
-
 
 @media screen and (max-width: 767px) {
 	.header__top-bar--text {

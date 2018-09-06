@@ -35,23 +35,23 @@
 </head>
 
 <body>
-<header class="header">
-    <div class="header__top-bar">
-        <span class="header__top-bar--text">Instant Stories. Just Tap.</span>
-        <span class="header__top-bar--logo"><img src="assets/images/taptales-logo.svg"></span>
+<header class="tap-header">
+    <div class="tap-header__top-bar">
+        <span class="tap-header__top-bar--text">Instant Stories. Just Tap.</span>
+        <span class="tap-header__top-bar--logo"><img src="assets/images/taptales-logo.svg"></span>
     </div>
     <nav class="nav">
         <ul>
-            <li class="active"><a href="javascript:void(0);" class="filter-button" data-filter="all">All</a></li>
-            <li><a href="javascript:void(0);" class="filter-button" data-filter="bollywood">Bollywood</a></li>
-            <li><a href="javascript:void(0);" class="filter-button" data-filter="sports">Sports</a></li>
-            <li><a href="javascript:void(0);" class="filter-button" data-filter="politics">Politics</a></li>
-            <li><a href="javascript:void(0);">Neon</a></li>
-            <li><a href="javascript:void(0);">Lifestyle</a></li>
-            <li><a href="javascript:void(0);">Voices</a></li>
-            <li><a href="javascript:void(0);">Politics</a></li>
-            <li><a href="javascript:void(0);">Fit</a></li>
-            <li><a href="javascript:void(0);">Tech & Auto</a></li>
+            <li><a class="filter-btn active" data-filter="all" href="javascript:void(0);">All</a></li>
+            <li><a class="filter-btn" data-filter="bollywood" href="javascript:void(0);">Bollywood</a></li>
+            <li><a class="filter-btn" data-filter="sports" href="javascript:void(0);">Sports</a></li>
+            <li><a class="filter-btn" data-filter="politics" href="javascript:void(0);">Politics</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Neon</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Lifestyle</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Voices</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Politics</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Fit</a></li>
+            <li><a class="filter-btn" href="javascript:void(0);">Tech & Auto</a></li>
         </ul>
     </nav>
 </header>
@@ -132,12 +132,12 @@
 <script src="assets/js/gridScrollFx.js"></script>
 
 <script>
-$(".filter-button").click(function() { // Filtring by category
+$(".filter-btn").click(function() { // Filtring by category
 
-    $(".filter-button").removeClass("active");
+    $(".filter-btn").removeClass("active");
     $(this).addClass("active");
 
-    $("ul#grid").html($("ul#grid-init").html())
+    $("ul#grid").html($("ul#grid-init").html());
     var value = $(this).attr('data-filter');
 
     if (value != "all") {
