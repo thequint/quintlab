@@ -1,0 +1,71 @@
+.grid li > a {
+	border-radius: 7px;
+	-webkit-box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+}
+
+
+
+.grid li.cat-sports .gallery-category,
+.grid li.cat-sports .curtain {
+	background-color: #46c6e6;
+}
+.grid li.cat-sports > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(61, 198, 232, 0.32), 0 1px 4px rgba(61, 198, 232, 0.3), 0 0 40px rgba(61, 198, 232, 0.1) inset;
+}
+/* */
+.grid li.cat-neon .gallery-category,
+.grid li.cat-neon .curtain {
+	background-color: #f7382a;
+}
+.grid li.cat-neon > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(250, 53, 28, 0.32), 0 1px 4px rgba(250, 53, 28, 0.3), 0 0 40px rgba(250, 53, 28, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(250, 53, 28, 0.32), 0 1px 4px rgba(250, 53, 28, 0.3), 0 0 40px rgba(250, 53, 28, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(250, 53, 28, 0.32), 0 1px 4px rgba(250, 53, 28, 0.3), 0 0 40px rgba(250, 53, 28, 0.1) inset;
+}
+/* */
+.grid li.cat-gender .gallery-category,
+.grid li.cat-gender .curtain {
+	background-color: #6434f5;
+}
+.grid li.cat-gender > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(100, 36, 249, 0.32), 0 1px 4px rgba(100, 36, 249, 0.3), 0 0 40px rgba(100, 36, 249, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(100, 36, 249, 0.32), 0 1px 4px rgba(100, 36, 249, 0.3), 0 0 40px rgba(100, 36, 249, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(100, 36, 249, 0.32), 0 1px 4px rgba(100, 36, 249, 0.3), 0 0 40px rgba(100, 36, 249, 0.1) inset;
+}
+/* */
+.grid li.cat-voices .gallery-category,
+.grid li.cat-voices .curtain {
+	background-color: #73cc57;
+}
+.grid li.cat-voices > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(112, 206, 80, 0.32), 0 1px 4px rgba(112, 206, 80, 0.3), 0 0 40px rgba(112, 206, 80, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(112, 206, 80, 0.32), 0 1px 4px rgba(112, 206, 80, 0.3), 0 0 40px rgba(112, 206, 80, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(112, 206, 80, 0.32), 0 1px 4px rgba(112, 206, 80, 0.3), 0 0 40px rgba(112, 206, 80, 0.1) inset;
+}
+/* */
+.grid li.cat-entertainment .gallery-category,
+.grid li.cat-entertainment .curtain {
+	background-color: #ff0085;
+}
+.grid li.cat-entertainment > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(255, 0, 133, 0.32), 0 1px 4px rgba(255, 0, 133, 0.3), 0 0 40px rgba(255, 0, 133, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(255, 0, 133, 0.32), 0 1px 4px rgba(255, 0, 133, 0.3), 0 0 40px rgba(255, 0, 133, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(255, 0, 133, 0.32), 0 1px 4px rgba(255, 0, 133, 0.3), 0 0 40px rgba(255, 0, 133, 0.1) inset;
+}
+/* */
+.grid li.cat-politics .gallery-category,
+.grid li.cat-politics .curtain {
+	background-color: rgba(154, 64, 133, 1.0);
+}
+.grid li.cat-politics > a {
+	-webkit-box-shadow: 0 15px 10px -10px rgba(154, 64, 133, 0.32), 0 1px 4px rgba(154, 64, 133, 0.3), 0 0 40px rgba(154, 64, 133, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(154, 64, 133, 0.32), 0 1px 4px rgba(154, 64, 133, 0.3), 0 0 40px rgba(154, 64, 133, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(154, 64, 133, 0.32), 0 1px 4px rgba(154, 64, 133, 0.3), 0 0 40px rgba(154, 64, 133, 0.1) inset;
+}
+
+
+

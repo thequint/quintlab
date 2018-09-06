@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Taptales</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="Shop Sankari: Online shopping for sanskari clothes, sanskari makeup, sanskari footwear, troll-free keyboards. Buy everything you need to be Sanskari at Shopsanskari.com by Quint Neon.">
+<meta name="author" content="The Quint">
+<meta name="copyright" content="The Quint">
+<link rel="canonical" href="https://thequint.com/quintlab/taptales">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" href="assets/css/grids.css" media="all">
+<link rel="stylesheet" href="assets/css/themes.css" media="all">
+<link rel="stylesheet" href="assets/css/ctg-colors.css" media="all">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Muli:600|Oswald:500" rel="stylesheet">
+
+<script src="assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Google Analytics -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top-bar">
+            <span class="header__top-bar--text">Instant Stories. Just Tap.</span>
+            <span class="header__top-bar--logo"><img src="assets/images/taptales-logo.svg"></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="active"><a href="javascript:void(0);" class="filter-button" data-filter="all">All</a></li>
+                <li><a href="javascript:void(0);" class="filter-button" data-filter="bollywood">Bollywood</a></li>
+                <li><a href="javascript:void(0);" class="filter-button" data-filter="sports">Sports</a></li>
+                <li><a href="javascript:void(0);" class="filter-button" data-filter="politics">Politics</a></li>
+                <li><a href="javascript:void(0);">Neon</a></li>
+                <li><a href="javascript:void(0);">Lifestyle</a></li>
+                <li><a href="javascript:void(0);">Voices</a></li>
+                <li><a href="javascript:void(0);">Politics</a></li>
+                <li><a href="javascript:void(0);">Fit</a></li>
+                <li><a href="javascript:void(0);">Tech & Auto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <section class="grid-wrap">
+            <ul class="grid swipe-down" id="grid">
+                <li class="cat-entertainment filter bollywood"><a href="#"><img src="assets/images/1.jpg" alt="dummy">
+                    <span class="gallery-caption">What Sanju Didn't Show About Sanjay Dutt's Life</span>
+                    <span class="gallery-category">Bollywood</span>
+                    </a>
+                </li>
+                <li class="cat-sports filter sports"><a href="#"><img src="assets/images/2.jpg" alt="dummy">
+                    <span class="gallery-caption">5 HOCKEY PLAYERS WHO COULD DEFEND INDIA’S TITLE AT ASIAN GAMES 2018</span>
+                    <span class="gallery-category">Sports</span>
+                    </a>
+                </li>
+                <li class="cat-politics filter politics"><a href="#"><img src="assets/images/3.jpg" alt="dummy">
+                    <span class="gallery-caption">Tamil Nadu: The Land of Protests</span>
+                    <span class="gallery-category">Politics / India</span>
+                    </a>
+                </li>
+                <li class="cat-sports filter sports"><a href="#"><img src="assets/images/4.jpg" alt="dummy">
+                    <span class="gallery-caption">Indian Tennis Players to Watch at Asian Games</span>
+                    <span class="gallery-category">Sports</span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+            
+        </section>
+    </div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/classie.js"></script>
+<script src="assets/js/colorfinder-1.1.js"></script>
+<script src="assets/js/gridScrollFx.js"></script>
+<script>
+$(".filter-button").click(function() {
+    var value = $(this).attr('data-filter');
+    if (value == "all") {
+        $('.filter').removeClass("filter-hide");
+    } else {
+
+        $(".filter").not('.' + value).addClass("filter-hide");
+        $('.filter').filter('.' + value).removeClass("filter-hide");
+
+        setTimeout(function(){
+            $(".grid li").removeAttr("style");
+             $(".grid").removeAttr("style");
+             $(".grid").removeClass("loaded");
+
+    $(".grid li").removeClass("shown");
+    setTimeout(function(){
+
+        new GridScrollFx(document.getElementById('grid'), {
+            viewportFactor: 0.4
+        });
+    }, 10000);    }, 10000);
+
+    }
+
+    
+
+    // if ($(".filter-button").removeClass("active")) {
+    //     $(this).removeClass("active");
+    // }
+    // $(this).addClass("active");
+});
+
+if ($(".filter-button").removeClass("active")) {
+    $(this).removeClass("active");
+}
+$(this).addClass("active");
+
+$('.nav li').click(function() {
+    $('.nav li').removeClass("active");
+    $(this).addClass("active");
+});
+
+function gridHeight() {
+    if ($(window).width() > 480 && $(window).width() < 768) {
+        $('.grid li > a').each(function() {
+            var height = Math.floor(Math.random() * 50) + 300
+            $(this).css("height", height);
+        });
+    } else if ($(window).width() <= 480) {
+        // alert('Less than 480');
+        $('.grid li > a').each(function() {
+            var height = Math.floor(Math.random() * 50) + 180
+            $(this).css("height", height);
+        });
+    } else {
+        $('.grid li > a').each(function() {
+            var height = Math.floor(Math.random() * 150) + 320
+            $(this).css("height", height);
+        });
+    }
+}
+
+gridHeight();
+
+var current_block, prev_block;
+
+$(window).on('resize', function() {
+    if ($(window).width() > 480 && $(window).width() < 768) {
+        current_block = "B";
+
+    } else if ($(window).width() <= 480) {
+        current_block = "A";
+
+    } else {
+        current_block = "C";
+
+    }
+    console.log(current_block + "|" + prev_block);
+
+    if (current_block != prev_block) {
+        console.log("change");
+        gridHeight();
+        prev_block = current_block;
+    }
+});
+
+new GridScrollFx(document.getElementById('grid'), {
+    viewportFactor: 0.4
+});
+</script>
+</body>
+
+</html>
