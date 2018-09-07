@@ -324,5 +324,8 @@ img {
 	.grid li {
 		width: 155px;
 	}
+	.grid .gallery-caption {
+	    font-size: 0.75em;
+	}
 }
 
