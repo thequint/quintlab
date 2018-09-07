@@ -225,11 +225,11 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-	.header__top-bar--text {
+	.tap-header__top-bar--text {
 		top: 35%;
 		font-size: 1.25em
 	}
-	.header__top-bar--logo {
+	.tap-header__top-bar--logo {
 		width: 300px;
 		right: 3%;
 		padding: 0 20px;
@@ -239,20 +239,20 @@ img {
 	}
 }
 @media screen and (max-width: 639px) {
-	.header__top-bar--text {
+	.tap-header__top-bar--text {
 		padding: 5px;
 		font-size: 1em;
 		letter-spacing: 0;
 	}
-	.header__top-bar--logo {
+	.tap-header__top-bar--logo {
 		width: 220px;
 		right: 2%;
 		padding: 0 10px;
 	}
-	.header {
+	.tap-header {
 		margin: 20px 0 10px;
 	}
-	.header .nav {
+	.tap-header .nav {
 		margin: 15px 0 0;
 		padding: 0 10px;
 	}
@@ -260,7 +260,10 @@ img {
 		font-size: 1.13em;
 		padding: 0 1%;
 	}
-	.header .nav li.active {
+	.tap-header .nav li a {
+		font-size: 1.13em;
+	}
+	.tap-header .nav li a.active {
 		font-size: 1.25em;
 	}
 	.grid li > a {
@@ -274,23 +277,27 @@ img {
 	}
 }
 @media screen and (max-width: 480px) {
-	.header__top-bar--text {
+	.tap-header__top-bar--text {
 		display: none;
 	}
-	.header__top-bar--logo {
-		width: 200px;
+	.tap-header__top-bar--logo {
+		width: 250px;
 		right: 2%;
 		left: 0;
 		margin: 0 auto;
 		display: block;
 		padding: 0 10px;
 	}
-	.header .nav li {
+	.tap-header .nav li {
 		font-size: 1em;
-		padding: 0 1%;
+		line-height: 26px;
+		padding: 0 1.5%;
 	}
-	.header .nav li.active {
-		font-size: 1.13em;
+	.tap-header .nav li a {
+		font-size: 1em;
+	}
+	.tap-header .nav li a.active {
+		font-size: 1.06em;
 	}
 	.grid li {
 		width: 220px;

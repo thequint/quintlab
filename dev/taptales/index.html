@@ -43,13 +43,12 @@
     <nav class="nav">
         <ul>
             <li><a class="filter-btn active" data-filter="all" href="javascript:void(0);">All</a></li>
-            <li><a class="filter-btn" data-filter="bollywood" href="javascript:void(0);">Bollywood</a></li>
+            <li><a class="filter-btn" data-filter="bollywood" href="javascript:void(0);">Entertaiment</a></li>
             <li><a class="filter-btn" data-filter="sports" href="javascript:void(0);">Sports</a></li>
             <li><a class="filter-btn" data-filter="politics" href="javascript:void(0);">Politics</a></li>
             <li><a class="filter-btn" href="javascript:void(0);">Neon</a></li>
             <li><a class="filter-btn" href="javascript:void(0);">Lifestyle</a></li>
             <li><a class="filter-btn" href="javascript:void(0);">Voices</a></li>
-            <li><a class="filter-btn" href="javascript:void(0);">Politics</a></li>
             <li><a class="filter-btn" href="javascript:void(0);">Fit</a></li>
             <li><a class="filter-btn" href="javascript:void(0);">Tech & Auto</a></li>
         </ul>
@@ -171,6 +170,7 @@ function gridHeight() {
         });
     }
 }
+var current_block, prev_block;
 
 function init() {
     $("ul#grid").html($("ul#grid-init").html());
@@ -179,11 +179,9 @@ function init() {
     new GridScrollFx(document.getElementById('grid'), {
         viewportFactor: 0.4
     });
+    check_block();
 }
-init();
-
-var current_block, prev_block;
-$(window).on('resize', function() {
+function check_block() {
     if ($(window).width() > 480 && $(window).width() < 768) {
         current_block = "B";
     } else if ($(window).width() <= 480) {
@@ -197,6 +195,12 @@ $(window).on('resize', function() {
         gridHeight();
         prev_block = current_block;
     }
+}
+
+init();
+
+$(window).on('resize', function() {
+    check_block();
 });
 </script>
 </body>
