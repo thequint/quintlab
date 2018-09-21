@@ -2599,6 +2599,7 @@
   }());
 
   function onTouchStart (event) {
+    return false;
     var swiper = this;
     var data = swiper.touchEventsData;
     var params = swiper.params;
@@ -2669,6 +2670,7 @@
   }
 
   function onTouchMove (event) {
+    return false;
     var swiper = this;
     var data = swiper.touchEventsData;
     var params = swiper.params;
@@ -5813,6 +5815,7 @@
       if (zoom.scale === 1) { gesture.$slideEl = undefined; }
     },
     onTouchStart: function onTouchStart(e) {
+      return false;
       var swiper = this;
       var zoom = swiper.zoom;
       var gesture = zoom.gesture;
@@ -5825,6 +5828,7 @@
       image.touchesStart.y = e.type === 'touchstart' ? e.targetTouches[0].pageY : e.pageY;
     },
     onTouchMove: function onTouchMove(e) {
+      return false; 
       var swiper = this;
       var zoom = swiper.zoom;
       var gesture = zoom.gesture;
