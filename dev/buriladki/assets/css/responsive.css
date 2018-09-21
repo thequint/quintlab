@@ -72,11 +72,11 @@
 	}*/
 	.swiper-container-horizontal > .next-slide.swiper-pagination-bullets,
 	.swiper-container-vertical > .down-slide.swiper-pagination-bullets {
-		right: 0;
-		left: 0;
 		bottom: 15px;
+		/*right: 0;
+		left: 0;
 		margin: 0 auto;
-		width: 166px;
+		width: 166px;*/
 	}
 }
 

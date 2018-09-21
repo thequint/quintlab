@@ -641,12 +641,14 @@ span.first-letter {
 .swiper-container-horizontal > .next-slide.swiper-pagination-bullets,
 .swiper-container-vertical > .down-slide.swiper-pagination-bullets {
 	bottom: 30px;
-	left: 30px;
-	right: inherit;
+	right: 0;
+	left: 0;
 	top: inherit;
 	-webkit-transform: inherit;
     transform: inherit;
-	width: auto;
+	/*width: auto;*/
+	margin: 0 auto;
+		width: 166px;
 }
 
 .swiper-container-vertical > .down-slide.swiper-pagination-bullets {
