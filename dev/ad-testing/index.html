@@ -2,29 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Ad testing</title>
-    <style type="text/css">
-    	body {
-    		height: 600px;
-    	}
+<meta charset="UTF-8">
+<title>Ad testing</title>
+<style type="text/css">
+body {
+    height: 600px;
+}
 
-    </style>
+/*img {
+    width: 300px;
+    height: 600px;
+}
+
+img:hover {
+    height: 600px;
+}*/
+</style>
 </head>
 
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <div style="float:right;">
-        <img src="ads-small.jpg" class="logo" />
+        <img src="http://secure-myprivacy.com/wp-content/uploads/2017/10/expat-300x600-cards.gif" class="logo" />
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type='text/javascript'>
     $(document).ready(function() {
         $(".logo").hover(
             function() {
-                $(this).attr("src", "ads-large.jpg");
+                $(this).attr("src", "https://notautil.com/wp-content/uploads/2018/02/banner.jpg");
             },
             function() {
-                $(this).attr("src", "ads-small.jpg");
+                $(this).attr("src", "http://secure-myprivacy.com/wp-content/uploads/2017/10/expat-300x600-cards.gif");
             });
     });
     </script>

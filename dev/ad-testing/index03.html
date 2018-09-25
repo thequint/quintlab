@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Ad testing</title>
+<style type="text/css">
+body {
+    height: 600px;
+}
+</style>
+</head>
+
+<body>
+<div style="float:right;">
+    <img src="ads-small.jpg" class="logo">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+    $(".logo").hover(
+        function() {
+            $(this).attr("src", "ads-large.jpg");
+        },
+        function() {
+            $(this).attr("src", "ads-small.jpg");
+        });
+});
+</script>
+</body>
+
+</html>
