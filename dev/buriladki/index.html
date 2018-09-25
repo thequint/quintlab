@@ -43,8 +43,8 @@
                     <h1 class="block__element--logo-icon"><a href="/"><img src="assets/images/quint-logo.svg"></a></h1>
 
                     <div class="block__element--item">
-                        <span class="block__element--circle-logo wow"><img src="assets/images/buri-ladki.svg"></span>
-                        <p class="block__element--sub-headline">Lorem Ipsum Del Ra tu me dilme mere hai dard e disco</p>
+                        <span class="block__element--circle-logo wow"><img class="hvr-pulse" src="assets/images/buri-ladki.svg"></span>
+                        <p class="block__element--sub-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
@@ -1178,34 +1178,26 @@
             </div>
 
 
-
-
-
-
-
             <!-- Horizontal Slide #1-->
-            <div class="swiper-slide intro main-slider">
+            <div class="swiper-slide end-slider">
                 <div class="block__element">
-                    <h1 class="block__element--logo-icon"><a href="/"><img src="assets/images/quint-logo.svg"></a></h1>
-
                     <div class="block__element--item">
-                        <span class="block__element--circle-logo wow"><img src="assets/images/buri-ladki.svg"></span>
-                        <p class="block__element--sub-headline">Lorem Ipsum Del Ra tu me dilme mere hai dard e disco</p>
+                        <span class="block__element--circle-logo end-slide-logo"><img src="assets/images/buri-ladki.svg"></span>
                     </div>
-
+                    <h1 class="block__element--logo-icon"><a href="/"><img src="assets/images/quint-logo.svg"></a></h1>
+                    <!-- <span class="block__element--circle-logo end-slide-logo"><img src="assets/images/buri-ladki.svg"></span> -->
+                    <span class="block__element--end-slide-img"><img src="assets/images/end-slide.png"></span>
+                    <span class="block__element--end-slide-clouds"><img src="assets/images/end-slide-clouds.png"></span>
                 </div>
             </div>
 
-            <!-- <div class="swiper-slide">
-                <div class="swiper-container swiper-container-v">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Vertical Slide 1</div>
-                        <div class="swiper-slide">Vertical Slide 2</div>
-                        <div class="swiper-slide">Vertical Slide 3</div>
-                        <div class="swiper-slide">Vertical Slide 4</div>
-                        <div class="swiper-slide">Vertical Slide 5</div>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination-v down-slide"></div>
+
+            <!-- <div class="swiper-slide end-slider">
+                <div class="video-elemet">
+                    <video width="100%" height="100%" autoplay loop muted>
+                      <source src="assets/media/quint-logo-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
                 </div>
             </div> -->
 
@@ -1216,9 +1208,6 @@
         <div class="swiper-pagination swiper-pagination-h next-slide swiper-pagination-last"></div>
     </div>
 </div>
-    <!-- <div class="swiper-button-prev"></div> -->
-        <!-- <div class="swiper-button-next"></div> -->
-    <!-- Swiper JS -->
 
 
 <!-- JS -->
@@ -1311,6 +1300,21 @@ $(".swiper-pagination-last .swiper-pagination-bullet:last-child").click(function
     }
        last_check=1;
 });
+
+/*
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('source')[0].src = this;
+        // Alternatively you could use:
+        // (new Image()).src = this;
+    });
+}
+
+// Usage:
+
+preload([
+    'assets/media/quint-logo-video.mp4'
+]);*/
 
 /*
 $(".swiper-pagination-bullet").click(function(){

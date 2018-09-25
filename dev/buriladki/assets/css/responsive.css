@@ -8,6 +8,28 @@
 	}
 }
 @media screen and (max-width: 767px) {
+	.block__element--circle-logo {
+		width: 200px;
+		height: 200px;
+	}
+	.block__element--circle-logo img {
+		margin-top: 27%;
+		width: 65%;
+	}
+
+	.block__element--circle-logo.end-slide-logo {
+		width: 250px;
+		height: 250px;
+	}
+
+	.block .video-elemet video {
+	    position: absolute;
+	    width: auto;
+	    left: 50%;
+	    height: 100%;
+	    transform: translate(-50%,0);
+	}
+
 	.block__element {
 		width: 640px;
 		max-width: 640px;
@@ -26,7 +48,10 @@
 		background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.25));
 	}
 	.swiper-slide.intro::after {
-		display: none;
+		/*display: none;*/
+		opacity: 0.4;
+		width: 200%;
+		height: 100%;	
 	}
 	.block__element h3 {
 		margin-bottom: 0;
@@ -65,25 +90,15 @@
 	.block__element--content .question-second:before {
 		left: 0;
 	}
-	/*.animate-text.option-text {
-		max-height: 100px;
-		overflow: auto;
-		padding: 0;
-	}*/
 	.swiper-container-horizontal > .next-slide.swiper-pagination-bullets,
 	.swiper-container-vertical > .down-slide.swiper-pagination-bullets {
 		bottom: 10px;
-		/*right: 0;
-		left: 0;
-		margin: 0 auto;
-		width: 166px;*/
 	}
 	
 	.block__element {
 		height: 100%;
 	}
 	.block__element .block__element--media {
-		/*height: 50%;*/
 		margin-top: 80px; 
 		height: calc(50% - 80px);
 		height: -webkit-calc(50% - 80px);
@@ -108,9 +123,34 @@
 		height: auto !important;
 	}
 
+
+
 }
 
 @media screen and (max-width: 640px) {
+	.block__element--circle-logo {
+		width: 160px;
+		height: 160px;
+	}
+	.block__element--circle-logo img {
+		margin-top: 28%;
+		width: 62%;
+	}
+
+	.block__element--circle-logo.end-slide-logo {
+		width: 220px;
+		height: 220px;
+	}
+	.block__element--end-slide-img {
+	    max-width: 350px;
+	}
+
+
+	.block__element--sub-headline {
+		padding: 0 20px;
+		font-size: 1.25em;
+	}
+
 	.block__element {
 		width: 600px;
 		max-width: 600px;
@@ -166,10 +206,29 @@
 		max-width: 70%;
 		width: 70%
 	}
+
+	.block__element--circle-logo.end-slide-logo {
+		width: 180px;
+		height: 180px;
+	}
+	.block__element--end-slide-img {
+	    max-width: 300px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.block__element--circle-logo.end-slide-logo {
+		width: 200px;
+		height: 200px;
+		margin-bottom:30%; 
+	}
+	.block__element--end-slide-img {
+	    max-width: 320px;
+	}
 }
 
 
 @media screen and (max-width: 400px) {
+
 	.block__element--media {
 		width: 100%;
 		max-width: 100%;

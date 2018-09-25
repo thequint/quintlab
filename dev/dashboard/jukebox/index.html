@@ -121,7 +121,12 @@
 	});
 
 	$(window).on('load',function(){
-		init();
+		//init();
+		Tabletop.init({
+			key: public_spreadsheet_contact,
+			callback: showInfo,
+			simpleSheet: true
+		});
 	});
 		
 	function getParameterByName(name, url) {
