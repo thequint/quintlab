@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ad testing</title>
+    <style type="text/css">
+    	body {
+    		height: 600px;
+    	}
+
+    </style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <div style="float:right;">
+        <img src="https://immarwaiktissad.com/wp-content/uploads/2016/03/33b39419b72480e90453c5244ad5a240.jpg" class="logo" />
+    </div>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+        $(".logo").hover(
+            function() {
+                $(this).attr("src", "https://customcreatives.com/wp-content/uploads/2016/08/half-page300x600.jpg");
+            },
+            function() {
+                $(this).attr("src", "https://immarwaiktissad.com/wp-content/uploads/2016/03/33b39419b72480e90453c5244ad5a240.jpg");
+            });
+    });
+    </script>
+</body>
+
+</html>

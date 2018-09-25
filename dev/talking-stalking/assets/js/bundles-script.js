@@ -865,7 +865,7 @@ function slug_3_init() {
         elements.forEach(function(element) {
             $('#SlugType_video').append(element);
         });
-        v_slider();
+        setTimeout(function(){ v_slider(); }, 2000);
     });
 }
 //slug_1_init();
