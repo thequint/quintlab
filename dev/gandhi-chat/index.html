@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="The Quint">
+<meta name="copyright" content="The Quint">
+<title>Gandhi Chat</title>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Custom styles for this template -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="assets/css/animate.css" rel="stylesheet" media="all">
+<link href="assets/css/base.css" rel="stylesheet" media="all">
+<link href="assets/css/theme.css" rel="stylesheet" media="all">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:700" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- Section Banner -->
+<section class="main-wrap">
+    <div class="block">
+        <div class="block__elements">
+            
+            <div class="block__elements--first">
+                <!-- <div class="quint-logo"><a href="https://www.thequint.com" target="_blank"> <img src="assets/images/quint-logo.svg" alt="The Quint Logo"> </a></div> -->
+                <div class="content-middle">
+                    <h1 class="main-headline">Gandhi BAAT</h1>
+                    <div class="profile-icon">
+                        <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
+                        <span class="online"></span>
+                        <span class="online-available">Available</span>
+                    </div>
+
+                    <h2 class="sub-headline">Learn the differing opinions of U.S. politicians on the subject of health care.</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <span class="btn-intro btn-next">Continue</span>
+                </div>
+            </div>
+
+
+
+            <div class="block__elements--second">
+                <header class="top-header">
+                    <!-- <div class="quint-logo"><a href="https://www.thequint.com" target="_blank"> <img src="assets/images/quint-logo.svg" alt="The Quint Logo"> </a></div> -->
+                    <div class="profile-icon">
+                        <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
+                        <span class="online"></span>
+                        <span class="profile-name">Bapu</span>
+                    </div>
+                    <div class="profile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+                <div class="mid-section">
+                    <div class="chat-content fixed">
+                        <!-- <span class="chat-qus">Hello</span> -->
+                        <!-- <span class="chat-response">Hello How are you!</span> -->
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="footer-btn">
+                        <span class="btn btn-continue">Hello</span>
+                        <span class="btn btn-second btn-continue">Hello 2</span>
+                    </div>
+                    <span class="leave-message">MG leaves the chat.</span>
+                </footer>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    $(".btn-next").click(function(){
+        $(".block__elements--first").hide();
+        $(".block__elements--second").show();
+    });
+
+
+    var category_array = [
+
+        // {qus[{qus_first:'01'},{qus_second:'02'}], response[{media:'aa'},{embed:'bb'}]
+        // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
+        // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
+
+        // [{btn:'btn 01', qus:'01 Lorem ipsum dolor', media:'<img src="assets/images/media-img.jpg">', embed:'', content:'01 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}],
+
+        // [{btn:'btn 02-1', qus:'02-1 Lorem ipsum dolor', media:'<img src="assets/images/media-img02.jpg">', embed:'', content:'02-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit'},{btn:'btn 02-2', qus:'02-2 Lorem ipsum dolor', media:'<img src="assets/images/media-img02.jpg">', embed:'', content:'02-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit'}],
+
+        // [{btn:'btn 03', qus:'03 Lorem ipsum dolor', media:'<img src="assets/images/media-img02.jpg">', embed:'', content:'03 Lorem ipsum dolor sit amet, consectetur adipiscing elit'}],
+
+        // [{btn:'btn 04', qus:'04 Lorem ipsum dolor', media:'', embed:'<iframe width="560" height="315" src="https://www.youtube.com/embed/IhAdzJCCb9k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', content:'04 Lorem ipsum dolor sit amet, consectetur adipiscing elit'}]
+
+        [{btn:'Start Chating', qus:'Oh MG!', qus_media:'', media:'', embed:'', content:'Hey! 🙏'}],
+
+        [{btn:"What should I call you?", qus:"😁 What should I call you, Bapu?", qus_media:'', media:'', embed:'', content:"Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎"}, {btn:"Can't believe it's you!", qus:"I still can't believe it's you! 😱",  qus_media:'', media:'', embed:'', content:"Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎"}],
+
+        [{btn:"You do sound quite cool!", qus:"You do sound quite cool!",  qus_media:'', media:'', embed:'', content:"Very humbly, I'm worth my salt. #DandiBaat"}, {btn:'😂 😂', qus:'😂 😂', qus_media:'', media:'', embed:'', content:"Very humbly, I'm worth my salt. #DandiBaat"}],
+
+        [{btn:"What's Dandi?", qus:"What's Dandi?", qus_media:'', media:'', embed:'', content:"How far can you go for salt? I walked over 390 kilometres to protest against the tax British imposed on salt.  It was kinda namak risk ka, but it proved to be a 'jaley pe namak' for the British rule! Now tell me Who's the real salt bae? *Inserts salt bae meme*"},{btn:"Tussi badey mazaakiya ho!", qus:"Tussi badey mazaakiya ho!", qus_media:'<img src="assets/images/kajol-from-k3g.gif">', media:'', embed:'', content:'Ask the British! 😝'}],
+
+
+        [{btn:"You are Baapu for a reason.", qus:"You are Baapu of the nation for a reason.", qus_media:'', media:'', embed:'', content:"😎"}],
+
+        [{btn:'Is this your first web chat?', qus:"Is this your first web chat?",  qus_media:'', media:'', embed:'<iframe width="560" height="315" src="https://www.youtube.com/embed/dpjBWw5w444" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', content:"Yes. It's quite addictive. BTW have you seen my first video interview?"}],
+
+        [{btn:"Great thoughts there!", qus:"Great thoughts there! Bapu, what do you think about Demonetisation?", qus_media:'<img src="assets/images/demonetisation.jpg">', media:'', embed:'', content:"Ohh, what a masterstroke, just to get different colour filters on my photograph? How did it turn out for you?"}],
+
+        [{btn:"Great!", qus:"Great! Black money saaf, sab inconvenience maaf!", qus_media:'', media:'', embed:'', content:"That's NOT what I meant when I asked you to turn the other cheek when someone slaps you!"},{btn:"Disappointed!", qus:"Disappointed! Wanted to start a Civil Disobedience movement!", qus_media:'', media:'', embed:'', content:"Easier said than done. 😏"}],
+
+        [{btn:"Tell me more.", qus:"Tell me more.", qus_media:'', media:'', embed:'', content:"A small group of determined and like-minded people can change the course of history."},{btn:'Haan I understand.', qus:"Haan I understand.", qus_media:'', media:'', embed:'', content:"A small group of determined and like-minded people can change the course of history."}],
+
+        [{btn:"Such profound words! 😍", qus:"Such profound words! 😍", qus_media:'', media:'', embed:'', content:"Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews."}, {btn:'Ye original hai? 😶', qus:"Ye original hai? 😶", qus_media:'', media:'', embed:'', content:"Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews."}],
+
+        [{btn:"Pakka, not a WebQoof at all.", qus:"Pakka, not a WebQoof at all. I keep my facts checked.", qus_media:'', media:'', embed:'', content:"It pains me to see so many people getting lynched over rumours and fake news!"}],
+
+        [{btn:"What can one do?", qus:"What can one do?", media:"What can one do?", embed:'', content:'"When you are right, you have no need to be angry. When you are wrong, you have no right to be angry"'}],
+
+        [{btn:"Hmmmm", qus:"Hmmmm", qus_media:'', media:'', embed:'', content:"Kya hua? You don't seem satisfied with my answer?"},{btn:"Totally agree!", qus:"Totally agree!", qus_media:'', media:'', embed:'', content:"All I'm saying is that 'earth provides enough to satisfy every man’s needs, but not every man’s greed'. Laalach buri bala hai."}],
+
+        [{btn:"Yes, please elaborate!", qus:"Yes, please elaborate!", qus_media:'', media:'', embed:'', content:'"Fear of disease killed more men than disease itself." This fear is being used in the politics today. Like the British Raj did!'}],
+
+        [{btn:"Were you happy when the British left?", qus:"You must have been really happy when the British left?", qus_media:'', media:'', embed:'', content:"Yes, and no."}],
+
+        [{btn:"Whaaaa?", qus:"Whaaaa?", qus_media:'', media:'', embed:'', content:"I was happy that we achieved self-rule. But the partition of India and Pakistan hurt me terribly."}],
+
+        [{btn:"But that means India vs Pakistan matches.", qus:"But that also means we get to see India vs Pakistan matches.", qus_media:'', media:'', embed:'', content:"Arey lekin... Well, yeah, India vs England matches are rather boring."}],
+
+        [{btn:"How to do Gandhigiri?", qus:"How to do Gandhigiri?", qus_media:'', media:'', embed:'', content:"🙈 🙊 🙉 . Simple hai!"}],
+
+        [{btn:"Haha! I get it.", qus:"Haha! I get it.", qus_media:'', media:'', embed:'', content:"Cheers. You and I should connect more!"},{btn:"What do you mean?", qus:"What do you mean?", qus_media:'', media:'', embed:'', content:"... Let me observe maun-vrat while you figure it out."}],
+
+        [{btn:"Sure, see you soon Gandhi ji!", qus:"Sure, see you soon Gandhi ji!", qus_media:'', media:'', embed:'', content:"Peace out!"}],
+
+        [{btn:"🙏 🙏 🙏", qus:"🙏 🙏 🙏", qus_media:'', media:'', embed:'', content:'And hey, ask your friends to have a chat with me. I would like to know more about them. Share this across :)'}],
+
+        // [{btn:'btn 01', qus:'', media:'', embed:'', content:''}],
+        // [{btn:"", qus:'', media:'', embed:'', content:""},{btn:'btn 01', qus:"", media:'', embed:'', content:""}],
+
+        
+    ];
+
+    var count = 0;
+
+    //console.log(category_array[count][0].qus);
+
+    $(".footer .btn-continue").text(category_array[count][0].btn);
+    
+    $(".btn-continue").click(function(){
+
+        $(".chat-content").append('<div class="chat-qus"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
+
+        count++;
+
+        $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
+
+        if(count < category_array.length) {
+
+            $(".footer .btn-continue").eq(0).text(category_array[count][0].btn);
+            
+            if(category_array[count].length==2){
+                $(".btn-second").css("display","inline-block");
+                  $(".footer .btn-continue").eq(1).text(category_array[count][1].btn);
+            }else {
+                $(".btn-second").css("display","");
+            }
+        }
+        // console.log(category_array.length+"|"+count);
+        if(category_array.length ==count){
+            $(".footer-btn").hide();
+            $(".leave-message").show();
+        }
+
+        setTimeout(function(){
+            $(".chat-qus .chat-box").css({"display":"inline-block"});
+
+        }, 1000);
+        setTimeout(function(){
+            $(".chat-response .chat-box").css({"display":"inline-block"});
+
+            if($(".chat-content").height()>$(".mid-section").height())
+            {
+                $(".chat-content").removeClass("fixed");
+            }
+
+            $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
+        return false;
+        }, 1500);
+
+        
+    });
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
