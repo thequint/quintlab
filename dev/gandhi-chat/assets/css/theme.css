@@ -176,7 +176,15 @@ img {
     right: 0;
     display: inline-block;
     width: 100%;
+    animation: blinker 1s linear infinite;
 }
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .block__elements--first .sub-headline {
     margin-bottom: 20px;
     font-size: 1.19em;
@@ -344,6 +352,7 @@ img {
 }
 .block__elements--second .mid-section .chat-content .chat-box img {
     margin-bottom: 10px;
+    border-radius: 15px;
 }
 .block__elements--second .mid-section .chat-content .chat-box span {
     /*display: inline-block;*/
