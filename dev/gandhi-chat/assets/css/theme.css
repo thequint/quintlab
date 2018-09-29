@@ -548,4 +548,8 @@ img {
     .block__elements--second {
         box-shadow: none;
     }
+    .block__elements--second .mid-section,
+    .block__elements--second .footer {
+        background-color: #f3f4ff;
+    }
 }
