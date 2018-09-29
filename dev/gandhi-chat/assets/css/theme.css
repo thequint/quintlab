@@ -60,9 +60,10 @@ img {
 
 .main-wrap {
     margin: 0 auto;
-    height: 100%;
+    /*height: 100%;*/
     position: relative;
     z-index: 1;
+    padding-bottom: 50px;
     /*background-image: -webkit-linear-gradient(126deg, #4673e0, #8d55e9);
     background-image: -o-linear-gradient(126deg, #4673e0, #8d55e9);
     background-image: linear-gradient(216deg, #4673e0, #8d55e9);*/
@@ -538,6 +539,9 @@ img {
 }
 
 @media screen and (max-width: 619px) {
+    .main-wrap {
+        padding-bottom: 0
+    }
     .main-wrap .block {
         padding-top: 0;
     }
