@@ -346,7 +346,7 @@ img {
     display: none;
     position: relative;
     z-index: 1;
-    font-size: 0.94em;
+    font-size: 1em;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.75);
 }
