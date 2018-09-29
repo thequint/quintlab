@@ -62,13 +62,13 @@
                     <div class="profile-icon">
                         <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
                         <span class="online"></span>
-                        <span class="profile-name">Bapu</span>
+                        <span class="profile-name">Gandhi Ji</span>
                     </div>
-                    <div class="profile-menu">
+                    <!-- <div class="profile-menu">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </div> -->
                 </header>
                 <div class="mid-section">
                     <div class="chat-content fixed">
@@ -171,7 +171,7 @@
     
     $(".btn-continue").click(function(){
 
-        $(".chat-content").append('<div class="chat-qus"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
+        $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
 
         count++;
 
@@ -196,10 +196,14 @@
 
         setTimeout(function(){
             $(".chat-qus .chat-box").css({"display":"inline-block"});
+            $(".chat-qus .user-profile").css({"display":"block"});
+            $(".chat-qus .spinner").hide();
 
         }, 1000);
         setTimeout(function(){
             $(".chat-response .chat-box").css({"display":"inline-block"});
+            $(".chat-response .gandhi-profile").css({"display":"block"});
+            $(".chat-response .spinner").hide();
 
             if($(".chat-content").height()>$(".mid-section").height())
             {
