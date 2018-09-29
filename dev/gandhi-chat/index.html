@@ -34,7 +34,7 @@
 <body>
 
 <!-- Section Banner -->
-<section class="main-wrap">
+<section class="main-wrap body-bg">
     <div class="block">
         <div class="block__elements">
             
@@ -97,6 +97,7 @@
     $(".btn-next").click(function(){
         $(".block__elements--first").hide();
         $(".block__elements--second").show();
+        $(".main-wrap").removeClass("body-bg");
     });
 
 
