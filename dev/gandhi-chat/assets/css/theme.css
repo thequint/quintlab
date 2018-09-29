@@ -5,8 +5,7 @@ body {
     color: #fff;
     font-weight: normal;
     overflow-x: hidden;
-    /*background-color: #2b9387;*/
-    background-color: #cfd1ff;
+    /*background-color: #cfd1ff;*/
     font-family: 'Avenir LT Std 85 Heavy';
     /*font-family: 'Roboto', sans-serif;*/
 
@@ -349,7 +348,7 @@ img {
 .block__elements--second .mid-section .chat-content .chat-response {
     margin-bottom: 20px;
     min-height: 20px;
-    width: 80%;
+    width: 70%;
     position: relative;
 }
 .block__elements--second .mid-section .chat-content .chat-qus {
@@ -534,7 +533,7 @@ img {
 }
 .block__elements--second .footer {
     padding-top: 15px;
-    min-height: 60px;
+    min-height: 66px;
     background-color: #fff;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -542,7 +541,15 @@ img {
     display: none;
     font-size: 1.25em;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 38px;
     color: rgba(73, 91, 189, 1)
 }
 
+@media screen and (max-width: 639px) {
+    .main-wrap .block {
+        padding-top: 0;
+    }
+    .main-wrap:after {
+        display: none;
+    }
+}
