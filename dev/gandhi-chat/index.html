@@ -12,89 +12,68 @@
 <title>Gandhi Chat</title>
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
-
 <!-- Custom styles for this template -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
-<link href="assets/css/animate.css" rel="stylesheet" media="all">
 <link href="assets/css/base.css" rel="stylesheet" media="all">
 <link href="assets/css/theme.css" rel="stylesheet" media="all">
-
-<!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web:700" rel="stylesheet">
-
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </head>
 
 <body>
-
-<!-- Section Banner -->
-<section class="main-wrap body-bg">
-    <div class="block">
-        <div class="block__elements">
-            
-            <div class="block__elements--first">
-                <!-- <div class="quint-logo"><a href="https://www.thequint.com" target="_blank"> <img src="assets/images/quint-logo.svg" alt="The Quint Logo"> </a></div> -->
-                <div class="content-middle">
-                    <h1 class="main-headline">Mahatma ki Baat</h1>
-                    <div class="profile-icon">
-                        <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
-                        <span class="online"></span>
-                        <span class="online-available">Available</span>
-                    </div>
-
-                    <h2 class="sub-headline">Hv fun txtng Gandhi ji, and go LOL in this interactive chat app!</h2>
-                    <p class="content">Welcome to <strong>The Quint's</strong> interactive chatbox featuring Mahatma Gandhi. <br>All the questions you wanted to ask Gandhi ji, and not. Just tap to chat.</p>
-                    <span class="btn-intro btn-next">Continue</span>
-                </div>
-            </div>
-
-
-
-            <div class="block__elements--second">
-                <header class="top-header">
+    <!-- Section Banner -->
+    <section class="main-wrap body-bg">
+        <div class="block">
+            <div class="block__elements">
+                <div class="block__elements--first">
                     <!-- <div class="quint-logo"><a href="https://www.thequint.com" target="_blank"> <img src="assets/images/quint-logo.svg" alt="The Quint Logo"> </a></div> -->
-                    <div class="profile-icon">
-                        <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
-                        <span class="online"></span>
-                        <span class="profile-name">Gandhi Ji</span>
+                    <div class="content-middle">
+                        <h1 class="main-headline">Mahatma ki Baat</h1>
+                        <div class="profile-icon">
+                            <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
+                            <span class="online"></span>
+                            <span class="online-available">Available</span>
+                        </div>
+                        <h2 class="sub-headline">Hv fun txtng Gandhi ji, and go LOL in this interactive chat app!</h2>
+                        <p class="content">Welcome to <strong>The Quint's</strong> interactive chatbox featuring Mahatma Gandhi.
+                            <br>All the questions you wanted to ask Gandhi ji, and not. Just tap to chat.</p>
+                        <span class="btn-intro btn-next">Continue</span>
                     </div>
-                    <!-- <div class="profile-menu">
+                </div>
+                <div class="block__elements--second">
+                    <header class="top-header">
+                        <div class="profile-icon">
+                            <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
+                            <span class="online"></span>
+                            <span class="profile-name">Gandhi Ji</span>
+                        </div>
+                        <!-- <div class="profile-menu">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div> -->
-                </header>
-                <div class="mid-section">
-                    <div class="chat-content fixed">
-                        <!-- <span class="chat-qus">Hello</span> -->
-                        <!-- <span class="chat-response">Hello How are you!</span> -->
+                    </header>
+                    <div class="mid-section">
+                        <div class="chat-content fixed">
+                        </div>
                     </div>
+                    <footer class="footer">
+                        <div class="footer-btn">
+                            <span class="btn btn-continue">Hello</span>
+                            <span class="btn btn-second btn-continue">Hello 2</span>
+                        </div>
+                        <span class="leave-message">MG leaves the chat.</span>
+                    </footer>
                 </div>
-                <footer class="footer">
-                    <div class="footer-btn">
-                        <span class="btn btn-continue">Hello</span>
-                        <span class="btn btn-second btn-continue">Hello 2</span>
-                    </div>
-                    <span class="leave-message">MG leaves the chat.</span>
-                </footer>
             </div>
-            
         </div>
-    </div>
-</section>
-
-
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-
-<script type="text/javascript">
-
-    $(".btn-next").click(function(){
+    </section>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(".btn-next").click(function() {
         $(".block__elements--first").hide();
         $(".block__elements--second").show();
         $(".main-wrap").removeClass("body-bg");
@@ -103,119 +82,118 @@
     var category_array = [
         // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
 
-        [{btn:'Start Chating', qus:"Oh MG!", qus_media:'', media:'', embed:'', content:"Hey! 🙏"}],
+        [{ btn: 'Start Chating', qus: "Oh MG!", qus_media: '', media: '', embed: '', content: "Hey! 🙏" }],
 
-        [{btn:"What should I call you?", qus:"😁 What should I call you, Bapu?", qus_media:'', media:'', embed:'', content:"Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎"}, {btn:"Can't believe it's you!", qus:"I still can't believe it's you! 😱",  qus_media:'', media:'', embed:'', content:"Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎"}],
+        [{ btn: "What should I call you?", qus: "😁 What should I call you, Bapu?", qus_media: '', media: '', embed: '', content: "Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎" }, { btn: "Can't believe it's you!", qus: "I still can't believe it's you! 😱", qus_media: '', media: '', embed: '', content: "Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎" }],
 
-        [{btn:"You do sound quite cool!", qus:"You do sound quite cool!",  qus_media:'', media:'', embed:'', content:"Very humbly, I'm worth my salt. #DandiBaat"}, {btn:'😂 😂', qus:'😂 😂', qus_media:'', media:'', embed:'', content:"Very humbly, I'm worth my salt. #DandiBaat"}],
+        [{ btn: "You do sound quite cool!", qus: "You do sound quite cool!", qus_media: '', media: '', embed: '', content: "Very humbly, I'm worth my salt. #DandiBaat" }, { btn: '😂 😂', qus: '😂 😂', qus_media: '', media: '', embed: '', content: "Very humbly, I'm worth my salt. #DandiBaat" }],
 
-        [{btn:"What's Dandi?", qus:"What's Dandi?", qus_media:'', media:'<img src="assets/images/salt-bae.gif">', embed:'', content:"How far can you go for salt? I walked over 390 kilometres to protest against the tax British imposed on salt. It was kinda namak risk ka, but it proved to be a 'jaley pe namak' for the British rule! Now tell me Who's the real salt bae?"},{btn:"Tussi badey mazaakiya ho!", qus:"Tussi badey mazaakiya ho!", qus_media:'<img src="assets/images/kajol-from-k3g.gif">', media:'<img src="assets/images/ask-the-british.jpg">', embed:'', content:'Ask the British! 😝'}],
+        [{ btn: "What's Dandi?", qus: "What's Dandi?", qus_media: '', media: '<img src="assets/images/salt-bae.gif">', embed: '', content: "How far can you go for salt? I walked over 390 kilometres to protest against the tax British imposed on salt. It was kinda namak risk ka, but it proved to be a 'jaley pe namak' for the British rule! Now tell me Who's the real salt bae?" }, { btn: "Tussi badey mazaakiya ho!", qus: "Tussi badey mazaakiya ho!", qus_media: '<img src="assets/images/kajol-from-k3g.gif">', media: '<img src="assets/images/ask-the-british.jpg">', embed: '', content: 'Ask the British! 😝' }],
 
-        [{btn:"How did the British react?", qus:"So much panga with the British Raj? How did they react?", qus_media:'', media:'<img src="assets/images/gandhi-jail.jpg">', embed:'', content:"They kept sending me to the jail. I was jailed 7 times in India. My first prison sentence came at the age of 39, in South Africa."}],
+        [{ btn: "How did the British react?", qus: "So much panga with the British Raj? How did they react?", qus_media: '', media: '<img src="assets/images/gandhi-jail.jpg">', embed: '', content: "They kept sending me to the jail. I was jailed 7 times in India. My first prison sentence came at the age of 39, in South Africa." }],
 
-        [{btn:"Ohhhhh!", qus:"Ohhhhh!", qus_media:'', media:'', embed:'', content:"The last time I walked out of jail was at the age of 75!  #Old_Is_Bold"}],
+        [{ btn: "Ohhhhh!", qus: "Ohhhhh!", qus_media: '', media: '', embed: '', content: "The last time I walked out of jail was at the age of 75!  #Old_Is_Bold" }],
 
-        [{btn:"What kept you going Bapu?", qus:"What kept you going Bapu?", qus_media:'', media:'<img src="assets/images/south-africa_fast.jpg">', embed:'', content:"The hunger for freedom made me observe around 17 fasts! My first fast was in South Africa in 1913."}],
+        [{ btn: "What kept you going Bapu?", qus: "What kept you going Bapu?", qus_media: '', media: '<img src="assets/images/south-africa_fast.jpg">', embed: '', content: "The hunger for freedom made me observe around 17 fasts! My first fast was in South Africa in 1913." }],
 
-        [{btn:"...and the longest fast?", qus:"...and the longest fast?", qus_media:'', media:'', embed:'', content:"Let me think... yes! The longest I went without food was 21 days, in 1924."}],
+        [{ btn: "...and the longest fast?", qus: "...and the longest fast?", qus_media: '', media: '', embed: '', content: "Let me think... yes! The longest I went without food was 21 days, in 1924." }],
 
-        [{btn:"What was this for?", qus:"What was this for?", qus_media:'', media:'<img src="assets/images/gandhi-indira-21-days.jpg">', embed:'', content:"Ahh.. ye tha Hindu-Muslim unity ke liye, after the first non-cooperation movement. P.S This is my pic with li'l Indira Gandhi then."}],
+        [{ btn: "What was this for?", qus: "What was this for?", qus_media: '', media: '<img src="assets/images/gandhi-indira-21-days.jpg">', embed: '', content: "Ahh.. ye tha Hindu-Muslim unity ke liye, after the first non-cooperation movement. P.S This is my pic with li'l Indira Gandhi then." }],
 
-        [{btn:'Is this your first web chat?', qus:"Is this your first web chat?",  qus_media:'', media:'', embed:'<iframe width="560" height="315" src="https://www.youtube.com/embed/dpjBWw5w444" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', content:"Yes. It's quite addictive. BTW have you seen my first video interview?"}],
+        [{ btn: 'Is this your first web chat?', qus: "Is this your first web chat?", qus_media: '', media: '', embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/dpjBWw5w444" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', content: "Yes. It's quite addictive. BTW have you seen my first video interview?" }],
 
-        [{btn:"Great thoughts there!", qus:"Great thoughts there! Bapu, what do you think about Demonetisation?", qus_media:'<img src="assets/images/demonetisation.jpg">', media:'', embed:'', content:"Ohh, what a masterstroke, just to get different colour filters on my photograph? How did it turn out for you?"}],
+        [{ btn: "Great thoughts there!", qus: "Great thoughts there! Bapu, what do you think about Demonetisation?", qus_media: '<img src="assets/images/demonetisation.jpg">', media: '', embed: '', content: "Ohh, what a masterstroke, just to get different colour filters on my photograph? How did it turn out for you?" }],
 
-        [{btn:"Great!", qus:"Great! Black money saaf, sab inconvenience maaf!", qus_media:'', media:'', embed:'', content:"That's NOT what I meant when I asked you to turn the other cheek when someone slaps you!"},{btn:"Disappointed!", qus:"Disappointed! Wanted to start a Civil Disobedience movement!", qus_media:'', media:'', embed:'', content:"Easier said than done. 😏"}],
+        [{ btn: "Great!", qus: "Great! Black money saaf, sab inconvenience maaf!", qus_media: '', media: '', embed: '', content: "That's NOT what I meant when I asked you to turn the other cheek when someone slaps you!" }, { btn: "Disappointed!", qus: "Disappointed! Wanted to start a Civil Disobedience movement!", qus_media: '', media: '', embed: '', content: "Easier said than done. 😏" }],
 
-        [{btn:"Tell me more.", qus:"Tell me more.", qus_media:'', media:'<img src="assets/images/course-of-history.jpg">', embed:'', content:"A small group of determined and like-minded people can change the course of history."},{btn:'Haan I understand.', qus:"Haan I understand.", qus_media:'', media:'<img src="assets/images/course-of-history.jpg">', embed:'', content:"A small group of determined and like-minded people can change the course of history."}],
+        [{ btn: "Tell me more.", qus: "Tell me more.", qus_media: '', media: '<img src="assets/images/course-of-history.jpg">', embed: '', content: "A small group of determined and like-minded people can change the course of history." }, { btn: 'Haan I understand.', qus: "Haan I understand.", qus_media: '', media: '<img src="assets/images/course-of-history.jpg">', embed: '', content: "A small group of determined and like-minded people can change the course of history." }],
 
-        [{btn:"Such profound words! 😍", qus:"Such profound words! 😍", qus_media:'', media:'', embed:'', content:"Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews."}, {btn:'Ye original hai? 😶', qus:"Ye original hai? 😶", qus_media:'', media:'', embed:'', content:"Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews."}],
+        [{ btn: "Such profound words! 😍", qus: "Such profound words! 😍", qus_media: '', media: '', embed: '', content: "Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews." }, { btn: 'Ye original hai? 😶', qus: "Ye original hai? 😶", qus_media: '', media: '', embed: '', content: "Trust me, I'm a lawyer! But please don't trust random quotes on the internet with my picture. Savdhaan from #FakeNews." }],
 
-        [{btn:"Pakka, not a WebQoof at all.", qus:"Pakka, not a WebQoof at all. I keep my facts checked.", qus_media:'', media:'', embed:'', content:"It pains me to see so many people getting lynched over rumours and fake news!"}],
+        [{ btn: "Pakka, not a WebQoof at all.", qus: "Pakka, not a WebQoof at all. I keep my facts checked.", qus_media: '', media: '', embed: '', content: "It pains me to see so many people getting lynched over rumours and fake news!" }],
 
-        [{btn:"What can one do?", qus:"What can one do?", qus_media:'', media:'', embed:'', content:'"When you are right, you have no need to be angry. When you are wrong, you have no right to be angry"'}],
+        [{ btn: "What can one do?", qus: "What can one do?", qus_media: '', media: '', embed: '', content: '"When you are right, you have no need to be angry. When you are wrong, you have no right to be angry"' }],
 
-        [{btn:"Hmmmm", qus:"Hmmmm", qus_media:'', media:'', embed:'', content:"Kya hua? You don't seem satisfied with my answer?"},{btn:"Totally agree!", qus:"Totally agree!", qus_media:'', media:'', embed:'', content:"All I'm saying is that 'earth provides enough to satisfy every man’s needs, but not every man’s greed'. Laalach buri bala hai."}],
+        [{ btn: "Hmmmm", qus: "Hmmmm", qus_media: '', media: '', embed: '', content: "Kya hua? You don't seem satisfied with my answer?" }, { btn: "Totally agree!", qus: "Totally agree!", qus_media: '', media: '', embed: '', content: "All I'm saying is that 'earth provides enough to satisfy every man’s needs, but not every man’s greed'. Laalach buri bala hai." }],
 
-        [{btn:"Yes, please elaborate!", qus:"Yes, please elaborate!", qus_media:'', media:'', embed:'', content:'"Fear of disease killed more men than disease itself." This fear is being used in the politics today. Like the British Raj did!'}],
+        [{ btn: "Yes, please elaborate!", qus: "Yes, please elaborate!", qus_media: '', media: '', embed: '', content: '"Fear of disease killed more men than disease itself." This fear is being used in the politics today. Like the British Raj did!' }],
 
-        [{btn:"Were you happy when the British left?", qus:"You must have been really happy when the British left?", qus_media:'', media:'', embed:'', content:"Yes, and no."}],
+        [{ btn: "Were you happy when the British left?", qus: "You must have been really happy when the British left?", qus_media: '', media: '', embed: '', content: "Yes, and no." }],
 
-        [{btn:"Whaaaa?", qus:"Whaaaa?", qus_media:'', media:'', embed:'', content:"I was happy that we achieved self-rule. But the partition of India and Pakistan hurt me terribly."}],
+        [{ btn: "Whaaaa?", qus: "Whaaaa?", qus_media: '', media: '', embed: '', content: "I was happy that we achieved self-rule. But the partition of India and Pakistan hurt me terribly." }],
 
-        [{btn:"But that means India vs Pakistan matches.", qus:"But that also means we get to see India vs Pakistan matches.", qus_media:'', media:'', embed:'', content:"Arey lekin... Well, yeah, India vs England matches are rather boring."}],
+        [{ btn: "But that means India vs Pakistan matches.", qus: "But that also means we get to see India vs Pakistan matches.", qus_media: '', media: '', embed: '', content: "Arey lekin... Well, yeah, India vs England matches are rather boring." }],
 
-        [{btn:"How to do Gandhigiri?", qus:"How to do Gandhigiri?", qus_media:'', media:'', embed:'', content:"🙈 🙊 🙉 . Simple hai!"}],
+        [{ btn: "How to do Gandhigiri?", qus: "How to do Gandhigiri?", qus_media: '', media: '', embed: '', content: "🙈 🙊 🙉 . Simple hai!" }],
 
-        [{btn:"Haha! I get it.", qus:"Haha! I get it.", qus_media:'', media:'', embed:'', content:"Cheers. You and I should connect more!"},{btn:"What do you mean?", qus:"What do you mean?", qus_media:'', media:'', embed:'', content:"... Let me observe maun-vrat while you figure it out."}],
+        [{ btn: "Haha! I get it.", qus: "Haha! I get it.", qus_media: '', media: '', embed: '', content: "Cheers. You and I should connect more!" }, { btn: "What do you mean?", qus: "What do you mean?", qus_media: '', media: '', embed: '', content: "... Let me observe maun-vrat while you figure it out." }],
 
-        [{btn:"Sure, see you soon Gandhi ji!", qus:"Sure, see you soon Gandhi ji!", qus_media:'', media:'', embed:'', content:"Peace out!"}],
+        [{ btn: "Sure, see you soon Gandhi ji!", qus: "Sure, see you soon Gandhi ji!", qus_media: '', media: '', embed: '', content: "Peace out!" }],
 
-        [{btn:"🙏 🙏 🙏", qus:"🙏 🙏 🙏", qus_media:'', media:'', embed:'', content:'And hey, ask your friends to have a chat with me. I would like to know more about them. Share this across :)'}],
+        [{ btn: "🙏 🙏 🙏", qus: "🙏 🙏 🙏", qus_media: '', media: '', embed: '', content: 'And hey, ask your friends to have a chat with me. I would like to know more about them. Share this across :)' }],
 
         // [{btn:'btn 01', qus:'', media:'', embed:'', content:''}],
         // [{btn:"", qus:'', media:'', embed:'', content:""},{btn:'btn 01', qus:"", media:'', embed:'', content:""}],
 
-        
+
     ];
 
     var count = 0;
 
     $(".footer .btn-continue").text(category_array[count][0].btn);
-    
-    $(".btn-continue").click(function(){
 
-        if(category_array[count].media==undefined){
-            $(".chat-box .chat-box--media").css("display","none");
-        }else {
-            $(".chat-box .chat-box--media").css("display","inline-block");
+    $(".btn-continue").click(function() {
+
+        if (category_array[count].media == undefined) {
+            $(".chat-box .chat-box--media").css("display", "none");
+        } else {
+            $(".chat-box .chat-box--media").css("display", "inline-block");
         }
-        $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
+        $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">' + category_array[count][$(this).index()].qus_media + '</span><span class="chat-box--qus-content">' + category_array[count][$(this).index()].qus + '</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">' + category_array[count][$(this).index()].media + '</span><span class="chat-box--embed">' + category_array[count][$(this).index()].embed + '</span><span class="chat-box--content">' + category_array[count][$(this).index()].content + '</span></span></div>');
 
         count++;
 
         $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
 
-        if(count < category_array.length) {
+        if (count < category_array.length) {
             $(".footer .btn-continue").eq(0).text(category_array[count][0].btn);
-            
-            if(category_array[count].length==2){
-                $(".btn-second").css("display","inline-block");
-                  $(".footer .btn-continue").eq(1).text(category_array[count][1].btn);
-            }else {
-                $(".btn-second").css("display","");
+
+            if (category_array[count].length == 2) {
+                $(".btn-second").css("display", "inline-block");
+                $(".footer .btn-continue").eq(1).text(category_array[count][1].btn);
+            } else {
+                $(".btn-second").css("display", "");
             }
         }
         // console.log(category_array.length+"|"+count);
-        if(category_array.length ==count){
+        if (category_array.length == count) {
             $(".footer-btn").fadeOut();
 
-            setTimeout(function(){
+            setTimeout(function() {
                 $(".leave-message").fadeIn();
             }, 2000);
         }
 
-        setTimeout(function(){
-            $(".chat-qus .chat-box").css({"display":"inline-block"});
-            $(".chat-qus .user-profile").css({"display":"block"});
+        setTimeout(function() {
+            $(".chat-qus .chat-box").css({ "display": "inline-block" });
+            $(".chat-qus .user-profile").css({ "display": "block" });
             $(".chat-qus .spinner").hide();
 
-            setTimeout(function(){
-                $(".chat-response .chat-box").css({"display":"inline-block"});
-                $(".chat-response .gandhi-profile").css({"display":"block"});
+            setTimeout(function() {
+                $(".chat-response .chat-box").css({ "display": "inline-block" });
+                $(".chat-response .gandhi-profile").css({ "display": "block" });
                 $(".chat-response .spinner").hide();
-                if($(".chat-content").height()>$(".mid-section").height())
-                {
+                if ($(".chat-content").height() > $(".mid-section").height()) {
                     $(".chat-content").removeClass("fixed");
                 }
                 $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
-            return false;
+                return false;
             }, 800);
 
         }, 1000);
-        
+
     });
-</script>
+    </script>
 </body>
 
 </html>
