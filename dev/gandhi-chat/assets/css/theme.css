@@ -145,9 +145,10 @@ img {
 }
 
 .block__elements--first .main-headline {
-    font-size: 3em;
+    font-size: 2.75em;
     line-height: 100%;
     margin-bottom: 40px;
+    letter-spacing: -1px;
     font-family: 'Avenir LT Std 95 Black';
     /*font-family: 'Titillium Web', sans-serif;*/
 }

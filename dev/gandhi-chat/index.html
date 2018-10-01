@@ -41,7 +41,7 @@
             <div class="block__elements--first">
                 <!-- <div class="quint-logo"><a href="https://www.thequint.com" target="_blank"> <img src="assets/images/quint-logo.svg" alt="The Quint Logo"> </a></div> -->
                 <div class="content-middle">
-                    <h1 class="main-headline">Gandhi BAAT</h1>
+                    <h1 class="main-headline">Mahatma ki Baat</h1>
                     <div class="profile-icon">
                         <img src="assets/images/gandhi-profile.jpg" atl="Mahatma Gandhi">
                         <span class="online"></span>
@@ -49,7 +49,7 @@
                     </div>
 
                     <h2 class="sub-headline">Hv fun txtng Gandhi ji, and go LOL in this interactive chat app!</h2>
-                    <p class="content">Welcome to The Quint's interactive chatbox featuring Mahatma Gandhi. <br>All the questions you wanted to ask Gandhi ji, and not. Just tap to chat.</p>
+                    <p class="content">Welcome to <strong>The Quint's</strong> interactive chatbox featuring Mahatma Gandhi. <br>All the questions you wanted to ask Gandhi ji, and not. Just tap to chat.</p>
                     <span class="btn-intro btn-next">Continue</span>
                 </div>
             </div>
@@ -115,6 +115,18 @@
 
         [{btn:"What's Dandi?", qus:"What's Dandi?", qus_media:'', media:'<img src="assets/images/salt-bae.gif">', embed:'', content:"How far can you go for salt? I walked over 390 kilometres to protest against the tax British imposed on salt. It was kinda namak risk ka, but it proved to be a 'jaley pe namak' for the British rule! Now tell me Who's the real salt bae?"},{btn:"Tussi badey mazaakiya ho!", qus:"Tussi badey mazaakiya ho!", qus_media:'<img src="assets/images/kajol-from-k3g.gif">', media:'<img src="assets/images/ask-the-british.jpg">', embed:'', content:'Ask the British! 😝'}],
 
+
+
+
+
+
+        [{btn:"How did the British react?", qus:"So much panga with the British Raj? How did they react?", qus_media:'', media:'<img src="assets/images/gandhi-jail.jpg">', embed:'', content:"They kept sending me to the jail. I was jailed 7 times in India. My first prison sentence came at the age of 39, in South Africa."}],
+
+        [{btn:"Ohhhhh!", qus:"Ohhhhh!", qus_media:'', media:'', embed:'', content:"The last time I walked out of jail was at the age of 75!  #Old_Is_Bold"}],
+
+
+
+
         [{btn:"What kept you going Bapu?", qus:"What kept you going Bapu?", qus_media:'', media:'<img src="assets/images/south-africa_fast.jpg">', embed:'', content:"The hunger for freedom made me observe around 17 fasts! My first fast was in South Africa in 1913."}],
 
         [{btn:"...and the longest fast?", qus:"...and the longest fast?", qus_media:'', media:'', embed:'', content:"Let me think... yes! The longest I went without food was 21 days, in 1924."}],
@@ -170,6 +182,8 @@
         $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
 
         count++;
+
+        console.log(category_array[count][0].btn);
 
         $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
 
