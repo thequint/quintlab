@@ -100,11 +100,7 @@
         $(".main-wrap").removeClass("body-bg");
     });
 
-
     var category_array = [
-
-        // {qus[{qus_first:'01'},{qus_second:'02'}], response[{media:'aa'},{embed:'bb'}]
-        // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
         // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
 
         [{btn:'Start Chating', qus:"Oh MG!", qus_media:'', media:'', embed:'', content:"Hey! 🙏"}],
@@ -115,17 +111,9 @@
 
         [{btn:"What's Dandi?", qus:"What's Dandi?", qus_media:'', media:'<img src="assets/images/salt-bae.gif">', embed:'', content:"How far can you go for salt? I walked over 390 kilometres to protest against the tax British imposed on salt. It was kinda namak risk ka, but it proved to be a 'jaley pe namak' for the British rule! Now tell me Who's the real salt bae?"},{btn:"Tussi badey mazaakiya ho!", qus:"Tussi badey mazaakiya ho!", qus_media:'<img src="assets/images/kajol-from-k3g.gif">', media:'<img src="assets/images/ask-the-british.jpg">', embed:'', content:'Ask the British! 😝'}],
 
-
-
-
-
-
         [{btn:"How did the British react?", qus:"So much panga with the British Raj? How did they react?", qus_media:'', media:'<img src="assets/images/gandhi-jail.jpg">', embed:'', content:"They kept sending me to the jail. I was jailed 7 times in India. My first prison sentence came at the age of 39, in South Africa."}],
 
         [{btn:"Ohhhhh!", qus:"Ohhhhh!", qus_media:'', media:'', embed:'', content:"The last time I walked out of jail was at the age of 75!  #Old_Is_Bold"}],
-
-
-
 
         [{btn:"What kept you going Bapu?", qus:"What kept you going Bapu?", qus_media:'', media:'<img src="assets/images/south-africa_fast.jpg">', embed:'', content:"The hunger for freedom made me observe around 17 fasts! My first fast was in South Africa in 1913."}],
 
@@ -173,22 +161,22 @@
 
     var count = 0;
 
-    //console.log(category_array[count][0].qus);
-
     $(".footer .btn-continue").text(category_array[count][0].btn);
     
     $(".btn-continue").click(function(){
 
+        if(category_array[count].media==undefined){
+            $(".chat-box .chat-box--media").css("display","none");
+        }else {
+            $(".chat-box .chat-box--media").css("display","inline-block");
+        }
         $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].qus_media +'</span><span class="chat-box--qus-content">'+ category_array[count][$(this).index()].qus +'</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">'+ category_array[count][$(this).index()].media +'</span><span class="chat-box--embed">'+ category_array[count][$(this).index()].embed +'</span><span class="chat-box--content">'+ category_array[count][$(this).index()].content +'</span></span></div>');
 
         count++;
 
-        console.log(category_array[count][0].btn);
-
         $(".mid-section").animate({ scrollTop: $(".chat-content").height() }, "slow");
 
         if(count < category_array.length) {
-
             $(".footer .btn-continue").eq(0).text(category_array[count][0].btn);
             
             if(category_array[count].length==2){
@@ -226,16 +214,8 @@
 
         }, 1000);
         
-
-        
     });
 </script>
 </body>
 
 </html>
-
-
-
-
-
-
