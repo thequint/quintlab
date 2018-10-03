@@ -370,7 +370,10 @@ span.first-letter {
 	padding-left: 60px;
 }
 .option-text.option-text-ani p {
-	margin: 0
+	margin: 0;
+}
+.option-click {
+	cursor: pointer;
 }
 
 
