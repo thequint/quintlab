@@ -1662,6 +1662,15 @@
 
     // Active classes
     activeSlide.addClass(params.slideActiveClass);
+	if($(".swiper-slide-active .swiper-slide-active").hasClass("slide-option"))
+		{
+			$(".swiper-pagination").addClass("hide");
+			
+		}
+	  else
+		{
+			  
+		}
 
     if (params.loop) {
       // Duplicate to all looped slides
@@ -1708,6 +1717,7 @@
           .addClass(params.slideDuplicatePrevClass);
       }
     }
+	  
   }
 
   function updateActiveIndex (newActiveIndex) {
@@ -1795,6 +1805,8 @@
     if (params.slideToClickedSlide && swiper.clickedIndex !== undefined && swiper.clickedIndex !== swiper.activeIndex) {
       swiper.slideToClickedSlide();
     }
+
+    console.log("yes")
   }
 
   var update = {

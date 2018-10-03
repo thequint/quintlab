@@ -9,11 +9,8 @@ body {
 	height: 100%;
 	font-size: 100%;
 	overflow-x: hidden;
-	background-color: #fb9f00;
-	/*font-family: 'Abel', sans-serif;*/
+	background-color: #2b9387;
 	font-family: 'Roboto', sans-serif;
-	/*font-family: 'futuramedium', sans-serif;*/
-	/*font-family: "cooper_hewittmedium", sans-serif;*/
 }
 
 @font-face {
@@ -341,14 +338,11 @@ span.first-letter {
 .block__element--content .qus-block {
 	position: relative;
 	width: 100%;
-	/*padding: 15px 15px 15px 50px;*/
 	min-height: 125px;
-	/*padding-left: 50px;*/
 	overflow: hidden;
 	margin-bottom: 30px;
-	background-image: linear-gradient(to left, rgba(43, 147, 135, 0.2), rgba(255, 255, 255, 0.2));
+	/*background-image: linear-gradient(to left, rgba(43, 147, 135, 0.2), rgba(255, 255, 255, 0.2));*/
 }
-
 .block__element--content .qus-block:before {
 	position: absolute;
     left: 36px;
@@ -453,14 +447,30 @@ span.first-letter {
 	background-color: #ffb93d
 }
 .question-slider-01.slide-option {
-	background-color: #2b9387 /* not yet */
+	background-color: #2b9387
 }
-.question-slider-01.slide-answer-a {
+.question-slider-01.slide-option.option-first {
+	background-color: #403e56
+}
+.question-slider-01.slide-option.option-second {
+	background-color: #e87888
+}
+
+.question-slider-01.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-01.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #403e56, rgba(255, 255, 255, 0.2));
+}
+.question-slider-01.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #e87888, rgba(255, 255, 255, 0.2));
+}
+/*.question-slider-01.slide-answer-a {
 	background-color: #403e56
 }
 .question-slider-01.slide-answer-b {
 	background-color: #e87888
-}
+}*/
 
 /* #02 */
 .question-slider-02.slide-text {
@@ -472,14 +482,25 @@ span.first-letter {
 .question-slider-02.slide-question {
 	background-color: #fcc396
 }
+
 .question-slider-02.slide-option {
 	background-color: #2b9387
 }
-.question-slider-02.slide-answer-a {
-	background-color: #b1c5ce
+.question-slider-02.slide-option.option-first {
+	background-color: #b7cad1
 }
-.question-slider-02.slide-answer-b {
+.question-slider-02.slide-option.option-second {
 	background-color: #b1c4cb
+}
+
+.question-slider-02.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-02.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #b7cad1, rgba(255, 255, 255, 0.2));
+}
+.question-slider-02.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #b1c4cb, rgba(255, 255, 255, 0.2));
 }
 
 /* #03 */
@@ -495,11 +516,21 @@ span.first-letter {
 .question-slider-03.slide-option {
 	background-color: #2b9387
 }
-.question-slider-03.slide-answer-a {
+.question-slider-03.slide-option.option-first {
 	background-color: #1c655e
 }
-.question-slider-03.slide-answer-b {
+.question-slider-03.slide-option.option-second {
 	background-color: #b09546
+}
+
+.question-slider-03.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-03.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #1c655e, rgba(255, 255, 255, 0.2));
+}
+.question-slider-03.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #b09546, rgba(255, 255, 255, 0.2));
 }
 
 /* #04 */
@@ -515,11 +546,21 @@ span.first-letter {
 .question-slider-04.slide-option {
 	background-color: #2b9387
 }
-.question-slider-04.slide-answer-a {
+.question-slider-04.slide-option.option-first {
 	background-color: #ddc599
 }
-.question-slider-04.slide-answer-b {
+.question-slider-04.slide-option.option-second {
 	background-color: #2f616a
+}
+
+.question-slider-04.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-04.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #ddc599, rgba(255, 255, 255, 0.2));
+}
+.question-slider-04.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2f616a, rgba(255, 255, 255, 0.2));
 }
 
 /* #05 */
@@ -535,11 +576,21 @@ span.first-letter {
 .question-slider-05.slide-option {
 	background-color: #2b9387
 }
-.question-slider-05.slide-answer-a {
+.question-slider-05.slide-option.option-first {
 	background-color: #e8ad39
 }
-.question-slider-05.slide-answer-b {
+.question-slider-05.slide-option.option-second {
 	background-color: #37625b
+}
+
+.question-slider-05.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-05.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #e8ad39, rgba(255, 255, 255, 0.2));
+}
+.question-slider-05.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #37625b, rgba(255, 255, 255, 0.2));
 }
 
 /* #06 */
@@ -555,11 +606,21 @@ span.first-letter {
 .question-slider-06.slide-option {
 	background-color: #2b9387
 }
-.question-slider-06.slide-answer-a {
-	background-color: #025e6b
+.question-slider-06.slide-option.option-first {
+	background-color: #405067
 }
-.question-slider-06.slide-answer-b {
+.question-slider-06.slide-option.option-second {
 	background-color: #393e54
+}
+
+.question-slider-06.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-06.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #405067, rgba(255, 255, 255, 0.2));
+}
+.question-slider-06.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #393e54, rgba(255, 255, 255, 0.2));
 }
 
 /* #07 */
@@ -575,11 +636,21 @@ span.first-letter {
 .question-slider-07.slide-option {
 	background-color: #2b9387
 }
-.question-slider-07.slide-answer-a {
+.question-slider-07.slide-option.option-first {
 	background-color: #462c2f
 }
-.question-slider-07.slide-answer-b {
+.question-slider-07.slide-option.option-second {
 	background-color: #ed9f95
+}
+
+.question-slider-07.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-07.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #462c2f, rgba(255, 255, 255, 0.2));
+}
+.question-slider-07.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #ed9f95, rgba(255, 255, 255, 0.2));
 }
 
 /* #08 Not Actual color */
@@ -595,11 +666,21 @@ span.first-letter {
 .question-slider-08.slide-option {
 	background-color: #2b9387
 }
-.question-slider-08.slide-answer-a {
+.question-slider-08.slide-option.option-first {
 	background-color: #97532e
 }
-.question-slider-08.slide-answer-b {
-	background-color: #538481
+.question-slider-08.slide-option.option-second {
+	background-color: #548582
+}
+
+.question-slider-08.slide-option .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
+}
+.question-slider-08.slide-option.option-first .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #97532e, rgba(255, 255, 255, 0.2));
+}
+.question-slider-08.slide-option.option-second .block__element--content .qus-block {
+	background-image: linear-gradient(to left, #548582, rgba(255, 255, 255, 0.2));
 }
 
 /* #09 */
@@ -817,5 +898,10 @@ span.first-letter {
 	background-position-x: 135px;
 }
 */
+.next-slide .swiper-pagination-bullet {
+	color: #000;
+}
+
+
 
 

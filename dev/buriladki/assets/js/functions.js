@@ -28,7 +28,8 @@ $(".block__element--content").each(function(){
 
 $(".swiper-slide .option-click").click(function(){
     console.log($(this).index());
-
+    $(".swiper-pagination").removeClass('hide');
+    
     $(this).closest(".swiper-slide").find(".content-question").hide();
     $(this).closest(".swiper-slide").find(".content-option").fadeIn();
 
@@ -36,6 +37,14 @@ $(".swiper-slide .option-click").click(function(){
     $(this).closest(".swiper-slide").find(".content-option .option-img").eq($(this).index()).show();
 
     $(this).closest(".swiper-slide").find(".option-result").eq($(this).index()).fadeIn();
+
+    console.log($(this).index());
+
+    if($(this).index()==0) {
+        $(this).closest(".slide-option").addClass("option-first");
+    }else {
+        $(this).closest(".slide-option").addClass("option-second");
+    }
 
     
     // $(this).closest(".swiper-slide").find(".option-result").eq($(this).index()).fadeIn();
@@ -97,7 +106,7 @@ $(".swiper-slide .option-click").click(function(){
 //     $(".ani-scene-second .human-sumit").addClass("fadeInRight");
 
 //     setTimeout(function(){
-//     	$(".ani-scene-second .human-child").addClass("myAnimation");
+//      $(".ani-scene-second .human-child").addClass("myAnimation");
 //     }, 2000);
 // });
 
