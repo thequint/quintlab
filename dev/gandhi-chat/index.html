@@ -10,7 +10,7 @@
 <meta name="description" content="Gandhi Jayanti 2018: Have fun texting Gandhi ji in this interactive chat app. Welcome to The Quint's interactive chatbox featuring Mahatma Gandhi.">
 <meta name="author" content="The Quint">
 <meta name="copyright" content="The Quint">
-<link rel="canonical" href="https://www.thequint.com/quintlab/mahatma-gandhi-jayanti-celebrations-chat-application">
+<link rel="canonical" href="https://www.thequint.com/quintlab/mahatma-gandhi-jayanti-celebrations-chat-application/">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
@@ -22,7 +22,7 @@
 <!-- OG Tag -->
 <meta property="og:title" content="Chat with Mahatma Gandhi">
 <meta property="og:site_name" content="TheQuint">
-<meta property="og:url" content="https://www.thequint.com/quintlab/mahatma-gandhi-jayanti-celebrations-chat-application/">
+<meta property="og:url" content="https://www.thequint.com/quintlab/mahatma-gandhi-jayanti-celebrations-chat-application">
 <meta property="og:description" content="Have fun texting Gandhi ji in this fun interactive chat app. Get answers to the questions you always wanted to ask Bapu.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://www.thequint.com/quintlab/mahatma-gandhi-jayanti-celebrations-chat-application/assets/images/og.jpg">
@@ -30,6 +30,7 @@
 <meta property="og:image:height" content="600">
 
 <!-- Twitter card -->
+<meta property="fb:app_id" content="254325784911610">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@thequint">
 <meta name="twitter:title" content="Chat with Mahatma Gandhi">
@@ -163,7 +164,7 @@ $(".btn-next").click(function() {
 var category_array = [
     // [{qus:[{btn:'btn 01'},{btn_2:'btn 02'}]}, {response:[{media:'media'},{embed:'embed'},{content:'content'}]}],
 
-    [{ btn: 'Start Chating', qus: "Oh MG!", qus_media: '', media: '', embed: '', content: "Hey! 🙏" }],
+    [{ btn: 'Start Chatting', qus: "Oh MG!", qus_media: '', media: '', embed: '', content: "Hey! 🙏" }],
 
     [{ btn: "What should I call you?", qus: "😁 What should I call you, Bapu?", qus_media: '', media: '', embed: '', content: "Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎" }, { btn: "Can't believe it's you!", qus: "I still can't believe it's you! 😱", qus_media: '', media: '', embed: '', content: "Chill yaar. It's mah chat, mah rule, and I am Mah-atma! It's all cool. 😎" }],
 
@@ -220,11 +221,11 @@ var category_array = [
 var count = 0;
 $(".footer .btn-continue").text(category_array[count][0].btn);
 $(".btn-continue").click(function() {
-    if (category_array[count].media == undefined) {
-        $(".chat-box .chat-box--media").css("display", "none");
-    } else {
-        $(".chat-box .chat-box--media").css("display", "inline-block");
-    }
+    // if (category_array[count].media == undefined) {
+    //     $(".chat-box .chat-box--media").css("display", "none");
+    // } else {
+    //     $(".chat-box .chat-box--media").css("display", "inline-block");
+    // }
     $(".chat-content").append('<div class="chat-qus"><span class="user-profile"><img src="assets/images/user-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">' + category_array[count][$(this).index()].qus_media + '</span><span class="chat-box--qus-content">' + category_array[count][$(this).index()].qus + '</span></span></div> <div class="chat-response"><span class="gandhi-profile"><img src="assets/images/gandhi-profile.png"></span><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><span class="chat-box"><span class="chat-box--media">' + category_array[count][$(this).index()].media + '</span><span class="chat-box--embed">' + category_array[count][$(this).index()].embed + '</span><span class="chat-box--content">' + category_array[count][$(this).index()].content + '</span></span></div>');
 
     count++;
