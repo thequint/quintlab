@@ -448,6 +448,7 @@ span.first-letter {
 }
 .question-slider-01.slide-option {
 	background-color: #2b9387
+	/*background-image: url(../images/question-bg.jpg); 342f2b*/
 }
 .question-slider-01.slide-option.option-first {
 	background-color: #403e56
@@ -822,9 +823,8 @@ span.first-letter {
 	top: inherit;
 	-webkit-transform: inherit;
     transform: inherit;
-	/*width: auto;*/
 	margin: 0 auto;
-		width: 166px;
+	width: 215px;
 }
 
 .swiper-container-vertical > .down-slide.swiper-pagination-bullets {
@@ -844,45 +844,46 @@ span.first-letter {
 .next-slide .swiper-pagination-bullet,
 .down-slide .swiper-pagination-bullet {
 	/*width: 30px;*/
-	height: 34px;
+	height: 40px;
     opacity: 0.8;
-    width: 182px;
+    width: 215px;
 	border-radius: 5px;
 	border: 2px solid rgba(255, 255, 255, 1.0);
 }
 .next-slide .swiper-pagination-bullet {
 	background: url(../images/arrow-right.svg) no-repeat right;
-	background-size: 19px;
-	background-position-x: 154px;
+	background-size: 22px;
+    background-position-x: 182px;
 }
 .down-slide .swiper-pagination-bullet {
 	background: url(../images/arrow-down.svg) no-repeat right;
-	background-size: 19px;
-	background-position-x: 154px;
+	background-size: 22px;
+    background-position-x: 182px;
 }
 
 .next-slide .swiper-pagination-bullet.arrow-reload {
 	background: url(../images/arrow-reload.svg) no-repeat right !important;
 	background-size: 20px !important;
-	background-position-x: 154px !important;
+	background-position-x: 182px !important;
 }
 
 .swiper-container-horizontal > .next-slide.swiper-pagination-bullets::after,
 .swiper-container-vertical > .down-slide.swiper-pagination-bullets::after {
 	position: absolute;
     content: "Click to Continue";
-    /*right: 12px;*/
+    /* right: 12px; */
     color: #fff;
     font-weight: 700;
-    top: 10px;
-    font-size: 15px;
+    top: 11px;
+    font-size: 18px;
     line-height: 100%;
     width: 100%;
     text-transform: uppercase;
     height: 100%;
     z-index: -1;
-    left: 10px;
+    left: 12px;
     text-align: left;
+    letter-spacing: -.2px;
 }
 .swiper-pagination-bullet:focus {
 	outline: none;
