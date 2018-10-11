@@ -46,7 +46,7 @@ img {
 .main-wrap {
 	margin: 0 auto;
     max-width: 800px;
-    background-color: #f4f4f4
+    /*background-color: #f4f4f4*/
 }
 
 .qus-wrap {
@@ -92,7 +92,7 @@ img {
 /*background: -webkit-linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
 
 .qus-wrap.first {
-	border: 1px #5a0080 solid;
+	border: 1px #5a0080 dashed;
 }
 .qus-wrap.first .qus-btn {
 	background-color: #5a0080;
@@ -112,7 +112,7 @@ img {
 }
 
 .qus-wrap.third {
-	border: 1px #2bba61 solid;
+	border: 2px #2bba61 dotted;
 }
 .qus-wrap.third .qus-btn {
 	background-color: #2bba61;
@@ -142,7 +142,7 @@ img {
 }
 
 .qus-wrap.sixth {
-	border: 1px #23A6D5 solid;
+	border: 2px #23A6D5 dotted;
 }
 .qus-wrap.sixth .qus-btn {
 	background-color: #23A6D5;
