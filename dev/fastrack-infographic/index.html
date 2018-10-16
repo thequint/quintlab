@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fastrack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/themes.css">
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body onload="adjust_iframe_height()">
+<div class="main-wrap">
+
+	<section class="section-wrap">
+		<div class="circle-list">
+			<ul>
+				<li class="popup-bt hvr-pulse" data-text="Message alert: No more taking your phone out of your pocket each time to check to your WhatsApp and SMS messages."><span>Message <strong>display</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Calories consumed: This device tells you the number of calories you’ve consumed. Isn’t it the perfect diet partner?"><span>Calories <strong>consumed</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Track number of steps, distance covered: You will know exactly how much you’ve walked and how much further you need to push yourself."><span>Steps <strong>tracker</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Battery lasts 10 days: This endless battery never quits on you. Just charge it thrice every month."><span>Long-lasting <strong>battery</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Camera control: Get the power to remotely take pictures with your phone camera. Say hello to hands-free selfies."><span>Camera <strong>control</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Phone finder: Never lose or misplace your phone ever again."><span>Phone <strong>finder</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Sedentary tracker: Notifies you when you’ve been inactive for too long. Perfect for anyone with a desk job."><span>Sedentary <strong>tracker</strong></span></li>
+
+				<li class="popup-bt hvr-pulse" data-text="Track your sleep pattern: Find out if you’re sleeping well and getting enough rest."><span>Sleep <strong>tracker</strong></span></li>
+			</ul>
+		</div>
+		<div class="circle-mid"></div>
+		<div class="quint-logo"><a href=""><img src="assets/images/quint-logo.svg"></a></div>
+		<div class="fastrack-logo"><a href=""><img src="assets/images/fastrack-logo.svg"></a></div>
+		<div class="move-on-logo"><a href=""><img src="assets/images/move-on-logo.svg"></a></div>
+	</section>
+
+	<!-- Popup -->
+	<div class="overlay" style="display: none;">
+		<div class="info-popup" style="display: none">
+			<div class="info-popup--content">
+		        <p></p>
+		        <span class="close-icon"></span>
+		        <span class="corner-top-left"></span>
+		        <span class="corner-top-right"></span>
+		        <span class="corner-btm-left"></span>
+		        <span class="corner-btm-right"></span>
+	        </div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/functions.js"></script>
+
+<!-- iFrame Resizer -->
+<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script> 
+<script>
+	function adjust_iframe_height(){
+	    var actual_height = document.body.scrollHeight; 
+	    console.log("height is",actual_height);
+	    parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
+	}
+</script>
+</body>
+</html>
