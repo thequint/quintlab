@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fastrack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<!-- <link rel="stylesheet" href="assets/css/themes.css"> -->
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body onload="adjust_iframe_height()">
+<div class="quint-logo"><img src="assets/img/quint-logo.svg"></div>
+<div class="threesixty-wrapper">
+    <div class="threesixty" data-path="assets/img/src/gem{index}.png" data-count="30">
+        
+        <!-- put your preloader here -->
+        <div class="ui-spinner">
+            <span class="side side-left">
+                <span class="fill"></span>
+            </span>
+            <span class="side side-right">
+                <span class="fill"></span>
+            </span>
+        </div>
+        <!-- end preloader -->
+    </div>
+    <div class="ui">
+        <div class="next">Next</div>
+        <div class="prev">Prev</div>
+    </div>
+    <!-- <img src="assets/img/label.png" alt="" class="label"/> -->
+
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/js/jquery.threesixty.js"></script>
+<!-- <script type="text/javascript" src="assets/js/functions.js"></script> -->
+<script>
+    $(document).ready(function(){
+
+        var $threeSixty = $('.threesixty');
+
+        $threeSixty.threeSixty({
+            dragDirection: 'horizontal',
+            useKeys: true,
+            draggable: true
+        });
+
+        $('.next').click(function(){
+            $threeSixty.nextFrame();
+        });
+
+        $('.prev').click(function(){
+            $threeSixty.prevFrame();
+        });
+
+        // $threeSixty.on('down', function(){
+        //     $('.ui, h1, h2, .label, .examples').stop().animate({opacity:0}, 300);
+        // });
+
+        // $threeSixty.on('up', function(){
+        //     $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
+        // });
+    });
+</script>
+
+<!-- iFrame Resizer -->
+<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script> 
+<script>
+	function adjust_iframe_height(){
+	    var actual_height = document.body.scrollHeight; 
+	    console.log("height is",actual_height);
+	    parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
+	}
+</script>
+</body>
+</html>
