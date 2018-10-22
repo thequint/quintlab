@@ -392,23 +392,6 @@ span.first-letter {
 	width: 50%;
 }
 
-.block__element--media .icon-duck {
-	position: absolute;
-    bottom: 47px;
-    left: 111px;
-    width: 44px;
-}
-/*.block__element--media .icon-duck img {
-	width: 100%;
-}*/
-.block__element--media .icon-toy {
-	position: absolute;
-    top: 20px;
-    left: 85px;
-    width: 55px;
-}
-
-
 .block__element--content .qus-block {
 	position: relative;
 	width: 100%;
@@ -549,10 +532,10 @@ span.first-letter {
 
 /* #02 */
 .question-slider-02.slide-text {
-	background-color: #fade7a
+	background-color: #ffbc2d
 }
 .question-slider-02.slide-text-2 {
-	background-color: #c6d997
+	background-color: #fade7a
 }
 .question-slider-02.slide-question {
 	background-color: #fcc396
@@ -580,13 +563,13 @@ span.first-letter {
 
 /* #03 */
 .question-slider-03.slide-text {
-	background-color: #dbbb8a
+	background-color: #b09345
 }
 .question-slider-03.slide-text-2 {
 	background-color: #000
 }
 .question-slider-03.slide-question {
-	background-color: #e8cca7;
+	background-color: #777f4c;
 }
 .question-slider-03.slide-option {
 	background-color: #2b9387
@@ -610,7 +593,7 @@ span.first-letter {
 
 /* #04 */
 .question-slider-04.slide-text {
-	background-color: #7d5f9f
+	background-color: #db6951
 }
 .question-slider-04.slide-text-2 {
 	background-color: #7d5f9f
@@ -640,75 +623,66 @@ span.first-letter {
 
 /* #05 */
 .question-slider-05.slide-text {
-	background-color: #3f3734
+	background-color: #eaaf53
 }
 .question-slider-05.slide-text-2 {
 	background-color: #000
 }
 .question-slider-05.slide-question {
-	background-color: #8e6794
+	background-color: #68a897
 }
 .question-slider-05.slide-option {
 	background-color: #2b9387
 }
 .question-slider-05.slide-option.option-first {
-	background-color: #405067
+	background-color: #e8ad39
 }
 .question-slider-05.slide-option.option-second {
-	background-color: #393e54
+	background-color: #37625b
 }
 
 .question-slider-05.slide-option .block__element--content .qus-block {
 	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
 }
 .question-slider-05.slide-option.option-first .block__element--content .qus-block {
-	background-image: linear-gradient(to left, #405067, rgba(255, 255, 255, 0.2));
+	background-image: linear-gradient(to left, #e8ad39, rgba(255, 255, 255, 0.2));
 }
 .question-slider-05.slide-option.option-second .block__element--content .qus-block {
-	background-image: linear-gradient(to left, #393e54, rgba(255, 255, 255, 0.2));
+	background-image: linear-gradient(to left, #37625b, rgba(255, 255, 255, 0.2));
 }
 
 /* #06 */
 .question-slider-06.slide-text {
-	background-color: #93a7bf
+	background-color: #ddb02f
 }
 .question-slider-06.slide-text-2 {
 	background-color: #3f3734
 }
 .question-slider-06.slide-question {
-	background-color: #59bb8c
+	background-color: #8e6794
 }
 .question-slider-06.slide-option {
 	background-color: #2b9387
 }
 .question-slider-06.slide-option.option-first {
-	background-color: #462c2f
+	background-color: #405067
 }
 .question-slider-06.slide-option.option-second {
-	background-color: #ed9f95
+	background-color: #393e54
 }
 
 .question-slider-06.slide-option .block__element--content .qus-block {
 	background-image: linear-gradient(to left, #2b9387, rgba(255, 255, 255, 0.2));
 }
 .question-slider-06.slide-option.option-first .block__element--content .qus-block {
-	background-image: linear-gradient(to left, #462c2f, rgba(255, 255, 255, 0.2));
+	background-image: linear-gradient(to left, #405067, rgba(255, 255, 255, 0.2));
 }
 .question-slider-06.slide-option.option-second .block__element--content .qus-block {
-	background-image: linear-gradient(to left, #ed9f95, rgba(255, 255, 255, 0.2));
+	background-image: linear-gradient(to left, #393e54, rgba(255, 255, 255, 0.2));
 }
 
 /* #07 */
 .question-slider-07.slide-text {
-	background-color: #f1b732
-}
-.question-slider-07.slide-text-2 {
-	background-color: #c7874a
-}
-.question-slider-07.slide-text-3 {
-	background-color: #fad899
-}
-/*.question-slider-07.slide-text {
 	background-color: #93a7bf
 }
 .question-slider-07.slide-text-2 {
@@ -735,7 +709,7 @@ span.first-letter {
 }
 .question-slider-07.slide-option.option-second .block__element--content .qus-block {
 	background-image: linear-gradient(to left, #ed9f95, rgba(255, 255, 255, 0.2));
-}*/
+}
 
 /* #08 Not Actual color */
 .question-slider-08.slide-text {
@@ -884,138 +858,6 @@ span.first-letter {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-/* Buzz */
-@-webkit-keyframes hvr-buzz {
-  0% {
-    -webkit-transform: translateX(3px) rotate(3deg);
-    transform: translateX(3px) rotate(3deg);
-  }
-  50% {
-    -webkit-transform: translateX(-3px) rotate(-3deg);
-    transform: translateX(-3px) rotate(-3deg);
-  }
-   100% {
-    -webkit-transform: translateX(3px) rotate(3deg);
-    transform: translateX(3px) rotate(3deg);
-  }
-}
-@keyframes hvr-buzz {
-  0% {
-    -webkit-transform: translateX(3px) rotate(3deg);
-    transform: translateX(3px) rotate(3deg);
-  }
-  50% {
-    -webkit-transform: translateX(-3px) rotate(-3deg);
-    transform: translateX(-3px) rotate(-3deg);
-  }
-  100% {
-    -webkit-transform: translateX(3px) rotate(3deg);
-    transform: translateX(3px) rotate(3deg);
-  }
-}
-.hvr-buzz {
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-transform: perspective(1px) translateZ(0);
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px transparent;
-
-	-webkit-animation-name: hvr-buzz;
-	animation-name: hvr-buzz;
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
-	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-}
-
-
-/* Wobble To Top Right */
-@-webkit-keyframes hvr-wobble-to-top-right {
-  16.65% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  33.3% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  49.95% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-@keyframes hvr-wobble-to-top-right {
-  16.65% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  33.3% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  49.95% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-.hvr-wobble-to-top-right {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-
-  -webkit-animation-name: hvr-wobble-to-top-right;
-  animation-name: hvr-wobble-to-top-right;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-
-  -webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-}
-/*.hvr-wobble-to-top-right:hover, .hvr-wobble-to-top-right:focus, .hvr-wobble-to-top-right:active {
-  -webkit-animation-name: hvr-wobble-to-top-right;
-  animation-name: hvr-wobble-to-top-right;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}*/
 
 
 

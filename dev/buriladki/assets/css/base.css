@@ -275,7 +275,46 @@ template {
 
 
 
-
+.share {
+  position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+}
+.share-ico {
+  background: #393185 url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
+  border-radius: 100%;
+  display: block;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: -200px;
+}
+.social-ico {
+  display: none;
+}
+.social-ico li {
+  display: block;
+  margin-top: 5px;
+}
+.social-ico li a {
+  background: #393185;
+  border-radius: 100%;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+}
+.social-ico li a i {
+  line-height: 40px;
+}
+.social-ico li a:hover {
+  color: #0782C6;
+}
 
 
 

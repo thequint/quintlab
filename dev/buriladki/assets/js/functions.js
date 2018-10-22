@@ -15,6 +15,15 @@ var wow = new WOW(
 );
 wow.init();
 
+// Share Icon
+$(".share-ico").click(function(e) {
+    $(".social-ico").slideToggle(400);
+    return false;
+});
+$("body").click(function() {
+    $(".social-ico").slideUp();
+});
+
 console.log($(".qus-text").innerHeight());
 
 // $(".qus-text").parent().css("height", box_height);
