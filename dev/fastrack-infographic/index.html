@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,6 @@
 <link rel="stylesheet" href="assets/css/base.css?v=xyz">
 <link rel="stylesheet" href="assets/css/themes.css?v=xyz">
 <link rel="stylesheet" href="assets/css/main.css?v=xyz">
-
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -24,196 +24,136 @@
 <![endif]-->
 </head>
 
-<body onload="adjust_iframe_height()">
+<body>
 <div class="main-wrap">
-
-	<section class="section-wrap">
-
-		<div class="quint-logo"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/quint-logo.svg"></a></div>
-		<div class="fastrack-logo"><a href=""><img src="assets/images/fastrack-logo-blue.svg"></a></div>
-		<div class="move-on-logo"><a href=""><img src="assets/images/move-on-logo.svg"></a></div>
-		
-
-
-		<div class="circle-list">
-			<ul>
-				<li class="popup-bt hvr-pulse" data-text="Read all your WhatsApp and SMS messages on the band itself. No more taking the phone out of your pocket each time."><span>Message <strong>display</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="Depending on the number of steps taken and your stride length it tells you how many calories have been burnt."><span>Calories <strong>consumed</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="You will know exactly how much you've walked and how much further you need to push yourself."><span>Steps <strong>tracker</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="Once fully charged, the battery lasts 7 days. The good life is here."><span>Long-lasting <strong>battery</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="Get the power to remotely take pictures with your phone camera. Say hello to hands-free selfies."><span>Camera <strong>control</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="With this feature, you will locate your phone in an instant and that too without pressing the panic button."><span>Phone <strong>finder</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="Notifies you when you’ve been inactive for too long. Say goodbye to the couch potato life."><span>Sedentary <strong>reminder</strong></span></li>
-
-				<li class="popup-bt hvr-pulse" data-text="Keep a track of your sleep pattern, in the bed and off it."><span>Sleep <strong>tracker</strong></span></li>
-			</ul>
-		</div>
-
-		<div class="circle-mid">
-
-			<!-- Watch Black -->
-			<div class="watch-wrap">
-				<div class="threesixty-wrapper">
-				    <div class="threesixty" data-path="assets/img/black/gem{index}.png" data-count="30">
-				        <!-- put your preloader here -->
-				        <div class="ui-spinner">
-				            <span class="side side-left">
-				                <span class="fill"></span>
-				            </span>
-				            <span class="side side-right">
-				                <span class="fill"></span>
-				            </span>
-				        </div>
-				        <!-- end preloader -->
-				    </div>
-				    <div class="ui">
-				        <span class="next"></span>
-				        <span class="prev"></span>
-				    </div>
-				</div>
-			</div>
-
-			<!-- Watch Grey -->
-			<div class="watch-wrap">
-				<div class="threesixty-wrapper">
-				    <div class="threesixty" data-path="assets/img/grey/gem{index}.png" data-count="30">
-				        <!-- put your preloader here -->
-				        <div class="ui-spinner">
-				            <span class="side side-left">
-				                <span class="fill"></span>
-				            </span>
-				            <span class="side side-right">
-				                <span class="fill"></span>
-				            </span>
-				        </div>
-				        <!-- end preloader -->
-				    </div>
-				    <div class="ui">
-				        <span class="next"></span>
-				        <span class="prev"></span>
-				    </div>
-				</div>
-			</div>
-
-			<!-- Watch Green -->
-			<div class="watch-wrap">
-				<div class="threesixty-wrapper">
-				    <div class="threesixty" data-path="assets/img/green/gem{index}.png" data-count="30">
-				        <!-- put your preloader here -->
-				        <div class="ui-spinner">
-				            <span class="side side-left">
-				                <span class="fill"></span>
-				            </span>
-				            <span class="side side-right">
-				                <span class="fill"></span>
-				            </span>
-				        </div>
-				        <!-- end preloader -->
-				    </div>
-				    <div class="ui">
-				        <span class="next"></span>
-				        <span class="prev"></span>
-				    </div>
-				</div>
-			</div>
-
-		</div>
-
-
-		<!-- <div class="circle-mid"></div> -->
-		<div class="color-option">
-			<ul>
-				<li class="active"></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-
-
-		<span class="know-more"><span>Click</span> on the icons to know more</span>
-		<span class="buy-now"><a href="https://www.fastrack.in/shop/watch-smart-wearables-reflex-2?utm_source=quint&utm_medium=infographic&utm_campaign=ReflexLaunch" target="_blank">Buy Now</a></span>
-
-
-	</section>
-
-	<!-- Popup -->
-	<div class="overlay" style="display: none;">
-		<div class="info-popup" style="display: none">
-			<div class="info-popup--content">
-		        <p></p>
-		        <span class="close-icon"></span>
-		        <span class="corner-top-left"></span>
-		        <span class="corner-top-right"></span>
-		        <span class="corner-btm-left"></span>
-		        <span class="corner-btm-right"></span>
-	        </div>
-		</div>
+    <section class="section-wrap">
+        <div class="quint-logo"><a href="https://www.thequint.com/" target="_blank"><img src="assets/images/quint-logo.svg"></a></div>
+        <div class="fastrack-logo"><a href=""><img src="assets/images/fastrack-logo-blue.svg"></a></div>
+        <div class="move-on-logo"><a href=""><img src="assets/images/move-on-logo.svg"></a></div>
+        <div class="circle-list">
+		<ul>
+			<li class="popup-bt hvr-pulse" data-text="Read all your WhatsApp and SMS messages on the band itself. No more taking the phone out of your pocket each time."><span>Message <strong>display</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="Depending on the number of steps taken and your stride length it tells you how many calories have been burnt."><span>Calories <strong>consumed</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="You will know exactly how much you've walked and how much further you need to push yourself."><span>Steps <strong>tracker</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="Once fully charged, the battery lasts 7 days. The good life is here."><span>Long-lasting <strong>battery</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="Get the power to remotely take pictures with your phone camera. Say hello to hands-free selfies."><span>Camera <strong>control</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="With this feature, you will locate your phone in an instant and that too without pressing the panic button."><span>Phone <strong>finder</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="Notifies you when you’ve been inactive for too long. Say goodbye to the couch potato life."><span>Sedentary <strong>reminder</strong></span></li>
+			<li class="popup-bt hvr-pulse" data-text="Keep a track of your sleep pattern, in the bed and off it."><span>Sleep <strong>tracker</strong></span></li>
+		</ul>
 	</div>
+        <div class="circle-mid">
+            <!-- Watch Black -->
+            <div class="watch-wrap">
+                <div class="threesixty-wrapper">
+                    <div class="threesixty" data-path="assets/img/black/gem{index}.png" data-count="30">
+                        <div class="ui-spinner">
+                            <span class="side side-left">
+			                <span class="fill"></span>
+                            </span>
+                            <span class="side side-right">
+			                <span class="fill"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="ui">
+                        <span class="next"></span>
+                        <span class="prev"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Watch Grey -->
+            <div class="watch-wrap">
+                <div class="threesixty-wrapper">
+                    <div class="threesixty" data-path="assets/img/grey/gem{index}.png" data-count="30">
+                        <div class="ui-spinner">
+                            <span class="side side-left">
+			                <span class="fill"></span>
+                            </span>
+                            <span class="side side-right">
+			                <span class="fill"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="ui">
+                        <span class="next"></span>
+                        <span class="prev"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Watch Green -->
+            <div class="watch-wrap">
+                <div class="threesixty-wrapper">
+                    <div class="threesixty" data-path="assets/img/green/gem{index}.png" data-count="30">
+                        <div class="ui-spinner">
+                            <span class="side side-left">
+			                <span class="fill"></span>
+                            </span>
+                            <span class="side side-right">
+			                <span class="fill"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="ui">
+                        <span class="next"></span>
+                        <span class="prev"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="circle-mid"></div> -->
+        <div class="color-option">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <span class="know-more"><span>Click</span> on the icons to know more</span>
+        <span class="buy-now"><a href="https://www.fastrack.in/shop/watch-smart-wearables-reflex-2?utm_source=quint&utm_medium=infographic&utm_campaign=ReflexLaunch" target="_blank">Buy Now</a></span>
+    </section>
+
+    <!-- Popup -->
+    <div class="overlay" style="display: none;">
+        <div class="info-popup" style="display: none">
+            <div class="info-popup--content">
+                <p></p>
+                <span class="close-icon"></span>
+                <span class="corner-top-left"></span>
+                <span class="corner-top-right"></span>
+                <span class="corner-btm-left"></span>
+                <span class="corner-btm-right"></span>
+            </div>
+        </div>
+    </div>
 
 </div>
-
-<!-- Scripts -->
+    <!-- Scripts -->
 <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="assets/js/functions.js"></script>
 <script src="assets/js/jquery.threesixty.js"></script>
-
 <script>
     var $threeSixty = $('.threesixty');
-
     $threeSixty.threeSixty({
         dragDirection: 'horizontal',
         useKeys: true,
         draggable: true
     });
-
-    $('.next').click(function(){
+    $('.next').click(function() {
         $threeSixty.nextFrame();
     });
-
-    $('.prev').click(function(){
+    $('.prev').click(function() {
         $threeSixty.prevFrame();
     });
-
     $(".circle-mid .watch-wrap").eq(0).show();
-
-    $(".color-option li").click(function(){
-    	$(".color-option li").removeClass("active");
-    	$(this).addClass("active");
-
-    	$(".circle-mid .watch-wrap").hide();
-    	$(".circle-mid .watch-wrap").eq($(this).index()).show();
-
+    $(".color-option li").click(function() {
+        $(".color-option li").removeClass("active");
+        $(this).addClass("active");
+        $(".circle-mid .watch-wrap").hide();
+        $(".circle-mid .watch-wrap").eq($(this).index()).show();
     });
-
-
-
-    // $(".btn").click(function(){
-    // 	$(".threesixty-frame").attr("src","assets/img/grey/gem0.png");
-    // });
-    // $threeSixty.on('down', function(){
-    //     $('.ui, h1, h2, .label, .examples').stop().animate({opacity:0}, 300);
-    // });
-
-    // $threeSixty.on('up', function(){
-    //     $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
-    // });
-    
-</script>
-
-<!-- iFrame Resizer -->
-<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script> 
-<script>
-	function adjust_iframe_height(){
-	    var actual_height = document.body.scrollHeight; 
-	    console.log("height is",actual_height);
-	    parent.postMessage(JSON.stringify({'msg-type':"resize-iframe", height:actual_height,src:window.location.href}),"*"); 
-	}
 </script>
 </body>
+
 </html>
