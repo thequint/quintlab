@@ -26,14 +26,11 @@ $("body").click(function() {
 
 console.log($(".qus-text").innerHeight());
 
-// $(".qus-text").parent().css("height", box_height);
-
 $(".block__element--content").each(function(){
     var box_height = $(this).find(".qus-text").innerHeight();
     console.log(box_height);
     $(this).css("height", box_height);
 });
-
 
 $(".swiper-slide .option-click").click(function(){
     console.log($(this).index());
@@ -54,69 +51,5 @@ $(".swiper-slide .option-click").click(function(){
     }else {
         $(this).closest(".slide-option").addClass("option-second");
     }
-
-    
-    // $(this).closest(".swiper-slide").find(".option-result").eq($(this).index()).fadeIn();
-
-    // $(this).closest(".swiper-slide").find(".option-img").hide();
-    // $(this).closest(".swiper-slide").find(".option-img").eq($(this).index()).show();
-
-    // $(this).closest(".swiper-slide").find(".block-fluid").removeClass("block-fluid");
-
-    // $(this).closest(".swiper-slide").find(".option-click").eq(0).addClass("slide-up");
-    // $(this).closest(".swiper-slide").find(".option-click").eq(1).addClass("slide-down");
-
 });
-
-// $(".swiper-slide .qus-first").click(function(){
-
-//     $(this).closest(".swiper-slide").find(".ans-first-a").fadeIn();
-
-//     $(this).closest(".swiper-slide").find(".block-fluid--img-left").show();
-//     $(this).closest(".swiper-slide").find(".block-fluid--img-right").hide();
-
-//     $(this).closest(".swiper-slide").find(".block-fluid").removeClass("block-fluid");
-
-//     $(this).closest(".swiper-slide").find(".qus-first").addClass("slide-up");
-//     $(this).closest(".swiper-slide").find(".qus-second").addClass("slide-down");
-// });
-
-
-// $(".swiper-slide .qus-second").click(function(){
-//     $(this).closest(".swiper-slide").find(".ans-first-b").fadeIn();
-
-//     $(this).closest(".swiper-slide").find(".block-fluid--img-left").hide();
-//     $(this).closest(".swiper-slide").find(".block-fluid--img-right").show();
-
-//     $(this).closest(".swiper-slide").find(".block-fluid").removeClass("block-fluid");
-
-//     $(this).closest(".swiper-slide").find(".qus-first").addClass("slide-up");
-//     $(this).closest(".swiper-slide").find(".qus-second").addClass("slide-down");
-// });
-
-
-// $(".ani-btn").click(function(){
-//     $(".ani-scene-first .bg").addClass("fadeInUp");
-//     $(".ani-scene-first .sofa").addClass("fadeInDown");
-//     $(".ani-scene-first .human").addClass("fadeInDown");
-
-//     $(".ani-scene-first .plant").addClass("fadeInLeft");
-//     $(".ani-scene-first .toy").addClass("fadeInRight");
-
-//     $(".box-animation").addClass("add-animation");
-// });
-
-// $(".ani-btn2").click(function(){
-//     $(".ani-scene-second .bg").addClass("fadeInUp");
-//     $(".ani-scene-second .sofa").addClass("fadeInDown");
-//     $(".ani-scene-second .human").addClass("fadeIn");
-    
-//     $(".ani-scene-second .human-child").addClass("fadeInLeft");
-//     $(".ani-scene-second .human-sumit").addClass("fadeInRight");
-
-//     setTimeout(function(){
-//      $(".ani-scene-second .human-child").addClass("myAnimation");
-//     }, 2000);
-// });
-
 
