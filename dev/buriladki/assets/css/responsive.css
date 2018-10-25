@@ -71,8 +71,8 @@
     .block__element--media {
         margin: 0 auto;
         float: none;
-        width: 600px;
-        max-width: 600px;
+        width: 550px;
+        max-width: 550px;
     }
 
     .block__element--content {
@@ -115,38 +115,40 @@
     .block__element {
         height: 100%;
     }
-
-    
-
     .option-img {
-        /*margin-bottom: 20px;*/
+        margin-bottom: 20px;
     }
 
     .block__element .block__element--media .scene-placeholder {
         /*display: none;*/
-        position: relative;
-        opacity: 1
-    }
-
-    .block__element .block__element--media .scene-animation img {
+        /*position: relative;*/
+        /*opacity: 1*/
         position: absolute;
-        bottom: 0;
-        height: 100%;
         margin: 0 auto;
         left: 0;
         right: 0;
+        bottom: 0;
+
     }
-    .block__element .block__element--media {
+    .block__element .block__element--media .scene-animation img {
+        position: absolute;
+        bottom: 0;
+        /*height: 100%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;*/
+    }
+    .block__element--media {
         /*height: 30% !important;*/
         margin-top: 80px;
-        /*height: calc(40% - 80px);*/
-        /*height: -webkit-calc(40% - 80px);*/
+        height: calc(50% - 80px);
+        height: -webkit-calc(50% - 80px);
     }
 
-    .block__element .block__element--content {
-        height: 60% !important;
-        height: calc(60% - 100px) !important;
-        height: -webkit-calc(60% - 100px) !important;
+    .block__element--content {
+        /*height: 60% !important;*/
+        height: calc(50% - 80px) !important;
+        height: -webkit-calc(50% - 80px) !important;
     }
     
 
@@ -188,6 +190,9 @@
 }
 
 @media screen and (max-width: 640px) {
+	.option-img {
+        margin-bottom: 0;
+    }
     .block__element--logo-icon {
         top: 10px;
         left: 10px;

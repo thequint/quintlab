@@ -24,11 +24,11 @@ $("body").click(function() {
     $(".social-ico").slideUp();
 });
 
-console.log($(".qus-text").innerHeight());
+// console.log($(".qus-text").innerHeight());
 
 $(".block__element--content").each(function(){
     var box_height = $(this).find(".qus-text").innerHeight();
-    console.log(box_height);
+    // console.log(box_height);
     $(this).css("height", box_height);
 });
 

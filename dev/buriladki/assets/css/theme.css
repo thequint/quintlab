@@ -374,6 +374,11 @@ transform: translateY(-50%);*/
     overflow: hidden;
 }
 
+.block__element--media .option-img {
+	/*position: absolute;*/
+	/*bottom: 0;*/
+}
+
 .block__element--content.block-fluid {
     margin: 0 auto;
     position: absolute;
@@ -421,6 +426,7 @@ transform: translateY(-50%);*/
     top: 5%;
     left: 13%;
     width: 9%;
+    z-index: 5
 }
 
 .block__element--media .icon-top-right {
@@ -428,6 +434,7 @@ transform: translateY(-50%);*/
     top: 20px;
     right: 85px;
     width: 55px;
+    z-index: 5
 }
 
 .block__element--media .icon-dialogue-box {
@@ -435,6 +442,7 @@ transform: translateY(-50%);*/
     top: 2%;
     left: 33%;
     width: 12%;
+    z-index: 5
 }
 
 .block__element--media .icon-pad {
@@ -442,6 +450,7 @@ transform: translateY(-50%);*/
     bottom: 20.2%;
     right: 22%;
     width: 10%;
+    z-index: 5
 }
 
 .block__element--media .icon-basketball-lines {
@@ -450,6 +459,7 @@ transform: translateY(-50%);*/
     right: 33%;
     width: 17%;
     opacity: 0.7;
+    z-index: 5
 }
 
 .block__element--media .icon-message {
@@ -457,6 +467,7 @@ transform: translateY(-50%);*/
     top: 14%;
     right: 25%;
     width: 6%;
+    z-index: 5
 }
 
 .block__element--media .icon-ball {
@@ -465,6 +476,7 @@ transform: translateY(-50%);*/
     right: 36%;
     width: 10%;
     z-index: -1;
+    z-index: 5
 }
 
 .block__element--media .glass-leaf {
@@ -472,6 +484,17 @@ transform: translateY(-50%);*/
     bottom: 12%;
     left: 8%;
     width: 8%;
+    z-index: 5
+}
+.block__element--media .glass-bottle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5
 }
 
 .block__element--content .qus-block {
@@ -558,9 +581,32 @@ transform: translateY(-50%);*/
     content: "B";
 }
 
-.scene-placeholder {
-    opacity: 0;
+
+.block__element--media {
+	opacity: 0;
 }
+.block__element--media.fade-img {
+    -webkit-animation: fade-img 2s;
+    animation: fade-img 2s;
+    opacity: 1;
+}
+@-webkit-keyframes fade-img {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-img {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .scene-animation {
     overflow: hidden;
@@ -572,8 +618,11 @@ transform: translateY(-50%);*/
     width: 100%;
     height: 100%;
 }
+.scene-animation .animated {
+	
+}
 
-.scene-animation span {
+/*.scene-animation span {
     position: absolute;
     top: 0;
     right: 0;
@@ -581,7 +630,7 @@ transform: translateY(-50%);*/
     left: 0;
     width: 100%;
     height: 100%;
-}
+}*/
 
 /* Theme Color */
 /* #01 */
@@ -888,6 +937,7 @@ background-image: linear-gradient(to left, #548582, rgba(255, 255, 255, 0.2));
 
 .content-option {
     display: none;
+    height: 100%;
 }
 
 .option-result {
