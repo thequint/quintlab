@@ -147,10 +147,9 @@
 
     .block__element--content {
         /*height: 60% !important;*/
-        height: calc(50% - 80px) !important;
-        height: -webkit-calc(50% - 80px) !important;
+        height: calc(50% - 75px) !important;
+        height: -webkit-calc(50% - 75px) !important;
     }
-    
 
     .block__element--content.block-fluid {
         height: auto !important;
