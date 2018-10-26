@@ -364,6 +364,7 @@ img {
 	width: 100%;
 	padding: 20px 40px;
 	font-size: 28px;
+	letter-spacing: 1px;
 	background-color: #9bb321;
 }
 .info-popup .corner-top-left,
