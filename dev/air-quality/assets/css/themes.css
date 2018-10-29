@@ -47,7 +47,7 @@ img {
     max-width: 800px;
     position: relative;
     overflow: hidden;
-    background-color: #fff;
+    /*background-color: #fff;*/
 }
 
 .clearfix:after {
@@ -110,13 +110,11 @@ img {
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
-
-
 .weather-results {
     padding: 15px;
     border: 1px solid #ccc;
+    background-color: #fff;
 }
-
 .weather-results::after,
 .weather-results--headline::after {
     visibility: hidden;
@@ -486,6 +484,7 @@ img {
 	color: #444;
 	font-size: 0.94em;
     border: 1px solid #ccc;
+    background-color: #fff;
 }
 .weather-impacts::after,
 .impacts-remark::after {
