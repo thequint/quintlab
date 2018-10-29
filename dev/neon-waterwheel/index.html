@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>The Neon Waterwheel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="The Quint">
+<meta name="copyright" content="The Quint">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+<style> 
+#carrousel {
+  max-width:100%;
+  background-color:#028DCA;
+  padding-top:4em;
+  padding-bottom:4em;
+}
+
+.container.neon-iframe {
+  max-width:100%;
+}
+
+#carrousel .owl-carousel .owl-item {
+  height: 300px;
+  position: relative;
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transition: all 0.2s;
+  -webkit-transform: all 0.2s;
+  z-index: 1;
+}
+
+#carrousel .owl-carousel img {
+  width: 300px;
+  height: 300px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: block;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+  box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+}
+
+#carrousel .owl-item.big {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  position: relative;
+}
+#carrousel .owl-item.medium {
+  transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  position: relative;
+}
+#carrousel .owl-item.medium.mdright {
+  /*border: solid 1px red;*/
+  position: relative;
+}
+#carrousel .owl-item.medium.mdleft {
+  /*border: solid 1px blue;*/
+  position: relative;
+}
+#carrousel .owl-item.smallRight.active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  position: relative;
+}
+#carrousel .owl-item.smallLeft.active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  position: relative;
+}
+#carrousel .owl-nav {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+#carrousel .owl-nav .owl-prev {
+  position: absolute;
+  left:-30px;
+  top:28px;
+  background: transparent !important;
+  color: #000 !important;
+  font-size: 50px !important;
+  width:21px;
+  height:37.5px;
+  outline:0;
+}
+#carrousel .owl-nav .owl-prev img{
+  position: absolute;
+  left:0 !important;
+  top:0 !important;
+  width:21px;
+  height:37.5px;
+}
+#carrousel .owl-nav .owl-prev:hover {
+  color: #000 !important;
+}
+#carrousel .owl-nav .owl-next {
+  position: absolute;
+  top:28px;
+  right: -30px;
+  background: transparent !important;
+  color: #000 !important;
+  font-size: 50px !important;
+  width:21px;
+  height:37.5px;
+  outline:0;
+}
+#carrousel .owl-nav .owl-next img{
+  position: absolute;
+  left:0 !important;
+  top:0 !important;
+  width:21px;
+  height:37.5px;
+}
+#carrousel .owl-nav .owl-next:hover {
+  color: #000 !important;
+}
+
+.owl-item.cloned.active.smallleft {
+  z-index:6 !important;
+}
+
+.owl-item.medium.mdleft.active {
+  z-index:8 !important;
+}
+
+.owl-item.cloned.active.medium.mdleft {
+  z-index:8 !important;
+}
+
+.owl-item.active.center.big {
+  z-index:10 !important;
+}
+
+.owl-item.cloned.active.medium.mdright {
+  z-index:8 !important;
+}
+
+.owl-item.active.medium.mdright {
+  z-index:8 !important;
+}
+
+.owl-item.active.smallright {
+  z-index:6 !important;
+}
+
+.owl-item.active.smallRight {
+  z-index:6 !important;
+}
+
+.owl-item.cloned.smallRight.active {
+  z-index:6 !important;
+}
+
+.bg-tf1{
+  position:absolute;
+  top:25px;
+  left:30px;
+}
+
+.bg-tf1 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf2{
+  position:absolute;
+  top:332px;
+  left:210px;
+}
+
+.bg-tf2 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf3{
+  position:absolute;
+  top:35px;
+  left:999px;
+}
+
+.bg-tf3 img{
+  width:50px;
+  height:70px;
+}
+
+.bg-tf4{
+  position:absolute;
+  top:70px;
+  left:165px;
+}
+
+.bg-tf4 img{
+  width:50px;
+  height:60px;
+}
+
+.bg-tf5{
+  position:absolute;
+  top:345px;
+  left:470px;
+}
+
+.bg-tf5 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf6{
+  position:absolute;
+  top:10px;
+  left:365px;
+}
+
+.bg-tf6 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf7{
+  position:absolute;
+  top:150px;
+  left:70px;
+}
+
+.bg-tf7 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf8{
+  position:absolute;
+  top:40px;
+  left:690px;
+}
+
+.bg-tf8 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf9{
+  position:absolute;
+  top:300px;
+  left:45px;
+}
+
+.bg-tf9 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf10{
+  position:absolute;
+  top:220px;
+  left:880px;
+}
+
+.bg-tf10 img{
+  width:50px;
+  height:70px;
+}
+
+.bg-tf11{
+  position:absolute;
+  top:335px;
+  left:740px;
+}
+
+.bg-tf11 img{
+  width:50px;
+  height:60px;
+}
+
+.bg-tf12{
+  position:absolute;
+  top:120px;
+  left:1165px;
+}
+
+.bg-tf12 img{
+  width:50px;
+  height:70px;
+}
+
+.bg-tf13{
+  position:absolute;
+  top:340px;
+  left:1100px;
+}
+
+.bg-tf13 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf14{
+  position:absolute;
+  top:260px;
+  left:1215px;
+}
+
+.bg-tf14 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf15{
+  position:absolute;
+  top:440px;
+  left:109px;
+  display:none;
+}
+
+.bg-tf15 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf16{
+  position:absolute;
+  top:560px;
+  left:240px;
+  display:none;
+}
+
+.bg-tf16 img{
+  width:50px;
+  height:60px;
+}
+
+.bg-tf17{
+  position:absolute;
+  top:610px;
+  left:55px;
+  display:none;
+}
+
+.bg-tf17 img{
+  width:50px;
+  height:60px;
+}
+
+.bg-tf18{
+  position:absolute;
+  top:495px;
+  left:550px;
+  display:none;
+}
+
+.bg-tf18 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf19{
+  position:absolute;
+  top:620px;
+  left:435px;
+  display:none;
+}
+
+.bg-tf19 img{
+  width:50px;
+  height:50px;
+}
+
+.bg-tf20{
+  position:absolute;
+  top:580px;
+  left:670px;
+  display:none;
+}
+
+.bg-tf20 img{
+  width:50px;
+  height:60px;
+}
+
+.bg-tf21{
+  position:absolute;
+  top:468px;
+  left:396px;
+  display:none;
+}
+
+.bg-tf21 img{
+  width:50px;
+  height:50px;
+}
+
+.follow-us{
+display:inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .bg-tf15, .bg-tf16, .bg-tf17, .bg-tf18, .bg-tf19, .bg-tf20, .bg-tf21{
+    display:inline-block;
+  }
+}
+
+@media only screen and (max-width: 1264px) {
+  .bg-tf14{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 1216px) {
+  .bg-tf12{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .bg-tf13{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .bg-tf3{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .bg-tf10{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 792px) {
+  .bg-tf11{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 741px) {
+  .bg-tf8{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .bg-tf20{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-tf18{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .bg-tf5{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .bg-tf19{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 443px) {
+  .bg-tf21{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .bg-tf6{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .bg-tf16{
+    display:none;
+  }
+}
+
+@keyframes fill-animation {
+  0% {
+    fill: #d6249f;
+  }
+  25% {
+    fill: #fdf497;
+  }
+  75% {
+    fill: #fd5949;
+  }
+}
+
+.flash {
+  animation: fill-animation 3s ease-in-out infinite;
+  animation-delay: .25s;
+}
+</style>
+</head>
+<body>
+
+<div id="carrousel">
+
+  <div class="bg-tf1">
+    <img src="assets/images/meme_1.png">
+  </div>
+
+  <div class="bg-tf2">
+    <img src="assets/images/meme_2.png">
+  </div>
+
+  <div class="bg-tf3">
+    <img src="assets/images/meme_3.png">
+  </div>
+
+  <div class="bg-tf4">
+    <img src="assets/images/meme_4.png">
+  </div>
+
+  <div class="bg-tf5">
+    <img src="assets/images/meme_5.png">
+  </div>
+
+  <div class="bg-tf6">
+    <img src="assets/images/meme_6.png">
+  </div>
+
+  <div class="bg-tf7">
+    <img src="assets/images/meme_7.png">
+  </div>
+
+  <div class="bg-tf8">
+    <img src="assets/images/meme_8.png">
+  </div>
+
+  <div class="bg-tf9">
+    <img src="assets/images/meme_9.png">
+  </div>
+
+  <div class="bg-tf10">
+    <img src="assets/images/meme_10.png">
+  </div>
+
+  <div class="bg-tf11">
+    <img src="assets/images/meme_11.png">
+  </div>
+
+  <div class="bg-tf12">
+    <img src="assets/images/meme_12.png">
+  </div>
+
+  <div class="bg-tf13">
+    <img src="assets/images/meme_1.png">
+  </div>
+
+  <div class="bg-tf14">
+    <img src="assets/images/meme_7.png">
+  </div>
+
+  <div class="bg-tf15">
+    <img src="assets/images/meme_7.png">
+  </div>
+
+  <div class="bg-tf16">
+    <img src="assets/images/meme_10.png">
+  </div>
+
+  <div class="bg-tf17">
+    <img src="assets/images/meme_3.png">
+  </div>
+
+  <div class="bg-tf18">
+    <img src="assets/images/meme_6.png">
+  </div>
+
+  <div class="bg-tf19">
+    <img src="assets/images/meme_8.png">
+  </div>
+
+  <div class="bg-tf20">
+    <img src="assets/images/meme_4.png">
+  </div>
+
+  <div class="bg-tf21">
+    <img src="assets/images/meme_9.png">
+  </div>
+
+  <div class="container neon-iframe">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+
+      <div class="col-lg-1 col-md-1 col-sm-1">
+
+      </div>
+
+      <div class="col-lg-7 col-md-7 col-sm-7 style="position:relative;">
+        <div class="owl-carousel owl-theme owl-loaded owl-drag">
+          <div class="owl-stage-outer">
+            <div class="owl-stage" style="transition: all 1s ease 0s; width: 3888px; transform: translate3d(-1296px, 0px, 0px);">
+              <div class="owl-item" id="one"></div>
+              <div class="owl-item smallLeft active" id="two"></div>
+              <div class="owl-item medium mdleft active" id="three"></div>
+              <div class="owl-item big active center" id="four"></div>
+              <div class="owl-item medium mdright active" id="five"></div>
+              <div class="owl-item smallRight active" id="six"></div>
+              <div class="owl-item" id="seven"></div>
+            </div>
+          </div>
+          <div class="owl-nav">
+            <button type="button" role="presentation" class="owl-prev">
+              <img src="assets/images/l_btn.svg">
+            </button>
+            <button type="button" role="presentation" class="owl-next">
+              <img src="assets/images/r_btn.svg">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+        <div class="follow-us">
+        <a href="https://www.instagram.com/quintneon/" target="_blank" style="text-decoration:none;">
+        <div style="margin-top:2em;">
+          <text style="color: #fff;font-family: Oswald;font-weight: 700;font-size:35px;">Follow Us On</text>
+        </div>
+        <div style="margin-top:1.5em;">
+          <svg width="60px" height="60px">
+            <defs>
+              <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%">
+                  <animate 
+                  attributeName="stop-color"
+                  values="#fdf497; #fd5949; #d6249f; #d6249f"
+                  dur="3s" 
+                  repeatCount="indefinite" 
+                  />
+                </stop>
+                <stop offset="0%">
+                  <animate 
+                  attributeName="stop-color"
+                  values="#fd5949; #d6249f; #d6249f; #fdf497;"
+                  dur="3s" 
+                  repeatCount="indefinite" 
+                  />
+                </stop>
+
+                <stop offset="50%">
+                  <animate 
+                  attributeName="stop-color"
+                  values="#d6249f; #d6249f; #fdf497;#fd5949;"
+                  dur="3s" 
+                  repeatCount="indefinite" 
+                  />
+                </stop>
+
+                <stop offset="100%">
+                  <animate 
+                  attributeName="stop-color"
+                  values="#d6249f; #fdf497;#fd5949;#d6249f;"
+                  dur="3s" 
+                  repeatCount="indefinite" 
+                  />
+                </stop>
+              </linearGradient>
+            </defs>
+
+            <circle class="flash" cx="45" cy="15" r="3.5" fill="#d6249f" /> 
+            <circle cx="30" cy="30" r="12" fill="transparent" stroke="url(#linear)"
+            stroke-width="5"/>
+            <rect x="5" y="5" width="50" height="50" fill="transparent" stroke="url(#linear)" stroke-width="5" rx="15" ry="15"/>
+
+          </svg>
+      </div>
+      <div style="margin-top:1.5em;">
+        <text style="color: #fff;font-family: Oswald;font-weight: 700;font-size:23px;">@quintNeon</text>
+      </div>
+      <div style="margin-top:1.5em;">
+        <text style="color: #fff;font-family: Oswald;font-weight: 700;font-size:23px;margin-top:1em">For More Memes</text>
+      </div>
+    </a>
+    </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $('.owl-carousel').owlCarousel({
+    center:true,
+    loop: true,
+    nav: true,
+    items: 5,
+    navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+    responsive:{
+      0:{
+        items: 1
+      },
+      401:{
+        items: 3
+      },
+      520:{
+        items: 5
+      }
+    },
+    onInitialized: coverFlowEfx,
+    onTranslate: coverFlowEfx,
+  });
+
+  function coverFlowEfx(e){
+    if ($('.owl-dots')) {
+      $('.owl-dots').remove();
+    }
+    idx = e.item.index;
+    $('.owl-item.big').removeClass('big');
+    $('.owl-item.medium').removeClass('medium');
+    $('.owl-item.mdright').removeClass('mdright');
+    $('.owl-item.mdleft').removeClass('mdleft');
+    $('.owl-item.smallRight').removeClass('smallRight');
+    $('.owl-item.smallLeft').removeClass('smallLeft');
+    $('.owl-item').eq(idx -1).addClass('medium mdleft');
+    $('.owl-item').eq(idx).addClass('big');
+    $('.owl-item').eq(idx + 1).addClass('medium mdright');
+    $('.owl-item').eq(idx + 2).addClass('smallRight');
+    $('.owl-item').eq(idx - 2).addClass('smallLeft');
+  }
+
+
+  var click = false;
+</script>
+
+<script>
+  $.ajax({
+    type: "GET",
+    dataType: "jsonp",
+    cache: false,
+    url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=8300248756.1677ed0.72bd3551c0644e549d244ffef0ec5160&count=10",
+    success: function(data) {
+      $("#one.owl-item").append("<a target='_blank' href='" + data.data[0].link +"'><img src='" + data.data[0].images.standard_resolution.url +"'></img></a>");
+      $("#two.owl-item").append("<a target='_blank' href='" + data.data[1].link +"'><img src='" + data.data[1].images.standard_resolution.url +"'></img></a>");
+      $("#three.owl-item").append("<a target='_blank' href='" + data.data[2].link +"'><img src='" + data.data[2].images.standard_resolution.url +"'></img></a>");
+      $("#four.owl-item").append("<a target='_blank' href='" + data.data[3].link +"'><img src='" + data.data[3].images.standard_resolution.url +"'></img></a>");
+      $("#five.owl-item").append("<a target='_blank' href='" + data.data[4].link +"'><img src='" + data.data[4].images.standard_resolution.url +"'></img></a>");
+      $("#six.owl-item").append("<a target='_blank' href='" + data.data[5].link +"'><img src='" + data.data[5].images.standard_resolution.url +"'></img></a>");
+      $("#seven.owl-item").append("<a target='_blank' href='" + data.data[6].link +"'><img src='" + data.data[6].images.standard_resolution.url +"'></img></a>");
+    }
+  });
+</script>
+</body>
+</html>
