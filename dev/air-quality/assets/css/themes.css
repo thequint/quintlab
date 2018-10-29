@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
     font-family: 'Roboto', sans-serif;
 }
 a {
@@ -480,7 +481,7 @@ img {
 }
 
 .weather-impacts {
-	margin: 20px 0;
+	margin: 20px 0 0;
 	padding: 15px;
 	color: #444;
 	font-size: 0.94em;
@@ -571,8 +572,6 @@ img {
 .quality-index.severe {
     color: #c00000;
 }
-
-
 .impacts-remark li span {
 	display: inline-block;
     width: 100px;
@@ -581,11 +580,11 @@ img {
     vertical-align: middle;
 }
 
-
-
-
-
-
+@media screen and (max-width: 767px) {
+body {
+    background-color: #fff;
+}
+}
 
 @media screen and (max-width: 640px) {
 	.weather-results-graph {
