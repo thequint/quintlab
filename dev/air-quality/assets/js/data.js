@@ -134,7 +134,8 @@ function append_data(station) {
 
     console.log(station);
 
-    // console.log(items[100]);
+    var pm_2 =[];
+    var pm_10 =[];
 
     for (var i = 0; i < items.length; i++) {
         if (items[i].station == station) {
@@ -147,16 +148,84 @@ function append_data(station) {
             $(".table_data").append("<tr><td>" + items[i].pollutant_id + "</td><td>" + items[i].pollutant_avg + "</td><td>" + items[i].pollutant_min + "</td><td>" + items[i].pollutant_max + "</td></tr>");
 
             if (items[i].pollutant_id == "PM2.5") {
-                // call pie chart function
-                console.log("check");
-                $(".quality-index").text(items[i].pollutant_avg);
-                console.log(items[i].pollutant_avg/500*100*(180/100));
-
-                $(".quality-load").css("transform","rotate("+items[i].pollutant_avg/500*100*(180/100)+"deg)")
+                pm_2 =items[i];
             }
-
+            if (items[i].pollutant_id == "PM10") {
+                pm_10 =items[i];
+            }
         }
     }
+
+    // Pollutant Calculate
+    // console.log(pm_2.pollutant_avg);
+    // console.log(pm_10.pollutant_avg);
+
+    if(pm_10.pollutant_avg==null){
+        $(".pollutant-text").text(pm_2.pollutant_id);
+
+        $(".quality-index").text(pm_2.pollutant_avg);  
+        $(".quality-load").css("transform","rotate("+pm_2.pollutant_avg/500*100*(180/100)+"deg)");
+
+    }else if(pm_2.pollutant_avg==null){
+        $(".pollutant-text").text(pm_10.pollutant_id);
+
+        $(".quality-index").text(pm_10.pollutant_avg); 
+        $(".quality-load").css("transform","rotate("+pm_10.pollutant_avg/500*100*(180/100)+"deg)");
+
+    }else if(pm_2.pollutant_avg > pm_10.pollutant_avg){
+        $(".pollutant-text").text(pm_2.pollutant_id);
+
+        $(".quality-index").text(pm_2.pollutant_avg);
+        $(".quality-load").css("transform","rotate("+pm_2.pollutant_avg/500*100*(180/100)+"deg)");
+
+    }else{
+        $(".pollutant-text").text(pm_10.pollutant_id);
+
+        $(".quality-index").text(pm_10.pollutant_avg);
+        $(".quality-load").css("transform","rotate("+pm_10.pollutant_avg/500*100*(180/100)+"deg)");
+    }
+
+
+    // SVG Colors
+    console.log($(".quality-index-ouput").text());
+
+    $("#impacts_bg").attr('class','quality-load');
+
+    $("#impacts_color").attr('class','quality-index');
+
+    if($(".quality-index-ouput").text() <= 50){
+        console.log("-50");
+        $("#impacts_bg").addClass("good");
+        $("#impacts_color").addClass("good");
+
+    }else if($(".quality-index-ouput").text() >= 51 && $(".quality-index-ouput").text() <= 100) {
+        console.log("-51-100");
+        $("#impacts_bg").addClass("satisfactory");
+        $("#impacts_color").addClass("satisfactory");
+
+    }else if($(".quality-index-ouput").text() >= 101 && $(".quality-index-ouput").text() <= 200) {
+        console.log("-101-200");
+        $("#impacts_bg").addClass("moderate");
+        $("#impacts_color").addClass("moderate");
+
+    }else if($(".quality-index-ouput").text() >= 201 && $(".quality-index-ouput").text() <= 300) {
+        console.log("-201-300");
+        $("#impacts_bg").addClass("poor");
+        $("#impacts_color").addClass("poor");
+
+    }else if($(".quality-index-ouput").text() >= 301 && $(".quality-index-ouput").text() <= 400) {
+        console.log("-301-400-ouput");
+        $("#impacts_bg").addClass("very-poor");
+        $("#impacts_color").addClass("very-poor");
+
+    }else if($(".quality-index-ouput").text() >= 401 && $(".quality-index-ouput").text() <= 500) {
+        console.log("-401-500");
+        $("#impacts_bg").addClass("severe");
+
+        $("#impacts_color").addClass("severe");
+    }
+
+    // City Update dynamic
     $(".data-station").html(station);
 
 
