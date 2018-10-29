@@ -579,10 +579,10 @@ img {
     vertical-align: middle;
 }
 
-@media screen and (max-width: 767px) {
-body {
-    background-color: #fff;
-}
+@media screen and (max-width: 1279px) {
+    body {
+        background-color: #fff;
+    }
 }
 
 @media screen and (max-width: 640px) {
