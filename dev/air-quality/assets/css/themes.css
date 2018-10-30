@@ -480,9 +480,9 @@ img {
 
 .weather-impacts {
 	margin: 20px 0 0;
-	padding: 15px;
+	padding: 15px 15px 10px;
 	color: #444;
-	font-size: 0.94em;
+	font-size: 0.88em;
     border: 1px solid #ccc;
     background-color: #fff;
 }
@@ -505,10 +505,10 @@ img {
 }
 
 .weather-impacts .impacts-headline .remark {
-	width: 164px;
+	width: 150px;
 }
 .weather-impacts .impacts-headline .airquality {
-	width: 78px;
+	width: 82px;
 }
 .weather-impacts .impacts-headline .impacts {
 	width: 200px;
@@ -521,17 +521,17 @@ img {
 	min-height: 38px;
 }
 .impacts-remark li:nth-child(odd) {
-	width: 250px
+	width: 240px
 }
 .impacts-remark li:nth-child(even) {
-	width: calc(100% - 250px);
-	width: -webkit-calc(100% - 250px);
+	width: calc(100% - 240px);
+	width: -webkit-calc(100% - 240px);
 }
 .weather-bgcolor {
     display: inline-block;
-    width: 50px;
-    height: 25px;
-    margin-right: 5px;
+    width: 42px;
+    height: 22px;
+    margin-right: 2px;
     vertical-align: middle;
 }
 .weather-bgcolor.good {
@@ -574,9 +574,12 @@ img {
 .impacts-remark li span {
 	display: inline-block;
     width: 100px;
-    height: 25px;
-    margin-right: 5px;
+    margin-right: 3px;
     vertical-align: middle;
+    /*background-color: #ccc*/
+}
+.impacts-remark li span:nth-child(3) {
+    width: 65px;
 }
 
 @media screen and (max-width: 1279px) {
