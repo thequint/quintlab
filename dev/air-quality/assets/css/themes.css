@@ -620,17 +620,16 @@ img {
     }
     .weather-results-impacts li i {
         display: inline-block;
-        width: 12px;
-        height: 12px;
-        /*margin-right: 2px;*/
+        width: 11px;
+        height: 11px;
         vertical-align: middle;
     }
-
-
+    .weather-results-impacts li i.weather-bgcolor {
+        margin: 0
+    }
     .weather-results-impacts li span {
         line-height: 20px;
     }
-
     .weather-results-impacts li span {
         display: inline-block;
         vertical-align: middle;
