@@ -149,7 +149,9 @@ img {
     float: left;
     width: 320px;
 }
-
+.weather-results-impacts {
+    display: none;
+}
 .weather-results-table {
     float: left;
     width: calc(100% - 320px);
@@ -598,13 +600,42 @@ img {
 		text-align: center;
 	}
 	.graph-wrap {
-		margin: 20px 0 40px;
+		margin: 20px 0 30px;
 	}
 
 	.weather-results-table {
 		float: none;
 	    width: 100%;
 	}
+
+    .weather-results-impacts {
+        display: block;
+        font-size: .75em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .weather-results-impacts li {
+        display: inline-block;
+        margin: 0 2px;
+    }
+    .weather-results-impacts li i {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        /*margin-right: 2px;*/
+        vertical-align: middle;
+    }
+
+
+    .weather-results-impacts li span {
+        line-height: 20px;
+    }
+
+    .weather-results-impacts li span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
 }
 @media screen and (max-width: 550px) {
 	.weather-impacts {
