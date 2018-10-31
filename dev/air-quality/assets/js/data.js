@@ -193,36 +193,50 @@ function append_data(station) {
 
     $("#impacts_color").attr('class','quality-index');
 
+    $(".aqi-color").hide()
+
     if($(".quality-index-ouput").text() <= 50){
         console.log("-50");
         $("#impacts_bg").addClass("good");
         $("#impacts_color").addClass("good");
+
+        $(".aqi-good").css("display","inline-block");
 
     }else if($(".quality-index-ouput").text() >= 51 && $(".quality-index-ouput").text() <= 100) {
         console.log("-51-100");
         $("#impacts_bg").addClass("satisfactory");
         $("#impacts_color").addClass("satisfactory");
 
+        $(".aqi-satisfactory").css("display","inline-block");
+
     }else if($(".quality-index-ouput").text() >= 101 && $(".quality-index-ouput").text() <= 200) {
         console.log("-101-200");
         $("#impacts_bg").addClass("moderate");
         $("#impacts_color").addClass("moderate");
+
+        $(".aqi-moderate").css("display","inline-block");
 
     }else if($(".quality-index-ouput").text() >= 201 && $(".quality-index-ouput").text() <= 300) {
         console.log("-201-300");
         $("#impacts_bg").addClass("poor");
         $("#impacts_color").addClass("poor");
 
+        $(".aqi-poor").css("display","inline-block");
+
     }else if($(".quality-index-ouput").text() >= 301 && $(".quality-index-ouput").text() <= 400) {
         console.log("-301-400-ouput");
         $("#impacts_bg").addClass("very-poor");
         $("#impacts_color").addClass("very-poor");
+
+        $(".aqi-very-poor").css("display","inline-block");
 
     }else if($(".quality-index-ouput").text() >= 401 && $(".quality-index-ouput").text() <= 500) {
         console.log("-401-500");
         $("#impacts_bg").addClass("severe");
 
         $("#impacts_color").addClass("severe");
+
+        $(".aqi-severe").css("display","inline-block");
     }
 
     // City Update dynamic

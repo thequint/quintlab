@@ -111,7 +111,7 @@ _comscore.push(COMSCORE_OPTS);
             </div>
         </div>
         
-        <div class="weather-results-impacts">
+        <!-- <div class="weather-results-impacts">
             <ul>
                 <li><i class="weather-bgcolor good"></i> <span>Good</span></li>
                 <li><i class="weather-bgcolor satisfactory"></i> <span>Satisfactory</span></li>
@@ -120,10 +120,28 @@ _comscore.push(COMSCORE_OPTS);
                 <li><i class="weather-bgcolor very-poor"></i> <span>Very Poor</span></li>
                 <li><i class="weather-bgcolor severe"></i> <span>Severe</span></li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="weather-results-table">
-            <div class="weather-results-significant">Significant Pollutant is <strong class="pollutant-text"></strong></div>
+            <div class="weather-results-significant">
+                <div class="aqi-left">
+
+                    <span>Air Quality:</span>
+
+                    <span class="aqi-color aqi-good"><i class="weather-bgcolor good"></i> <strong>Good</strong></span>
+                    <span class="aqi-color aqi-satisfactory"><i class="weather-bgcolor satisfactory"></i> <strong>Satisfactory</strong></span>
+                    <span class="aqi-color aqi-moderate"><i class="weather-bgcolor moderate"></i> <strong>Moderate</strong></span>
+                    <span class="aqi-color aqi-poor"><i class="weather-bgcolor poor"></i> <strong>Poor</strong></span>
+                    <span class="aqi-color aqi-very-poor"><i class="weather-bgcolor very-poor"></i> <strong>Very Poor</strong></span>
+                    <span class="aqi-color aqi-severe"><i class="weather-bgcolor severe"></i> <strong>Severe</strong></span>
+
+                </div>
+
+                <div class="aqi-right">
+                    <span>Major Pollutant: <strong class="pollutant-text"></strong></span>
+                </div>
+
+            </div>
             <table cellpadding="0" cellspacing="0" class="airquality-table">
                 <tbody class="table_data">
                     <tr>
