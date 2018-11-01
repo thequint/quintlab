@@ -35,14 +35,16 @@
     <!-- <div class="is-mobile"><img src="assets/images/mobile-bg.png"></div> -->
 
     <div class="main-wrap__left">
-        <div class="html5-video">
+        <div class="iframe-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bUiP-iGN6oI?autoplay=1&controls=0&showinfo=0&autohide=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- <div class="html5-video">
             <video playsinline autoplay loop muted id="video" preload="auto" height="240" width="360">
-            <!-- <video playsinline autoplay loop muted style="min-width:100%; min-height:100%;"> -->
+            <video playsinline autoplay loop muted style="min-width:100%; min-height:100%;">
                 <source id="yt_emb" src="Mowgli-Vertical.mp4" type="video/mp4">
-                <!-- <source src="Mowgli-Vertical.ogg" type="video/ogg"> -->
                 Your browser does not support HTML5 video.
             </video>
-        </div>
+        </div> -->
     </div>
 
     <div class="main-wrap__right">
@@ -60,7 +62,7 @@
 <!-- Scripts -->
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-    var video = document.getElementById('video'); video.addEventListener('click',function(){ video.play(); },false);
+    // var video = document.getElementById('video'); video.addEventListener('click',function(){ video.play(); },false);
 
     $(".btn-video").on('click touchstart', function(){
         $(".main-wrap__left").show();
