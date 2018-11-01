@@ -43,7 +43,7 @@ img {
     min-height: 570px;
     position: relative;
     overflow: hidden;
-    background-color: #ccc;
+    /*background-color: #ccc;*/
     background-image: url(../images/desktop-bg.png);
     background-position: top;
     background-repeat: no-repeat;
