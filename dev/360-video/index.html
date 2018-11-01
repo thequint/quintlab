@@ -36,7 +36,7 @@
 
     <div class="main-wrap__left">
         <div class="iframe-video-first">
-            <iframe id="" width="560" height="315" src="https://www.youtube.com/embed/4TTG6inN7jc?start=222&autoplay=1&showinfo=0&controls=0&rel=0&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="video-to-autoplay" width="560" height="315" src="https://www.youtube.com/embed/4TTG6inN7jc?start=222&autoplay=1&showinfo=0&controls=0&rel=0&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
         <!-- <div class="html5-video">
@@ -74,6 +74,12 @@
         $(".main-wrap__left").hide();
         $(".main-wrap__right").show();
     });
+
+    function autoStart () {
+      document.removeEventListener('touchstart', autoStart)
+      document.getElementById('video-to-autoplay').play()
+    }
+    document.addEventListener('touchstart', autoStart, false)
 
 </script>
 </body>
