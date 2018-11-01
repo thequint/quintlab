@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<style>
+
+body{
+background-color: #F4F4F4;
+}
+
+#video-wrap {
+position:relative;
+width: 480px;
+height:600px;
+overflow: hidden !important;
+left:0;
+right:0;
+margin:auto;
+border: 2px solid #006400;
+border-radius: 7px;
+outline: none;
+border-color: #006400;
+box-shadow: 0 0 10px #006400;
+}
+
+#yt_emb {
+margin-left:50%;
+transform:translate(-50%,-10%);
+display:none;
+}
+
+#myVideo{
+margin-left:50%;
+transform:translate(-50%,-5%);
+}
+
+.button_div{
+position:absolute;
+bottom:15px;
+outline:none;
+left:-35px;
+right:0;
+margin:auto;
+}
+
+#myBtn, #myBtn2 {
+width: 40px;
+font-size: 18px;
+padding: 10px;
+border: 2px solid #ffffff;
+border-radius: 7px;
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 10px #ffffff;
+background: #fff;
+color: #000;
+cursor: pointer;
+position:absolute;
+bottom:0;
+border-radius: 7px;
+outline:none;
+left:0;
+right:0;
+margin:auto;
+opacity:0.7;
+font-weight:900;
+}
+
+#myBtn6 {
+width: 40px;
+font-size: 24px;
+padding-right: 10px;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 8px;
+border: 2px solid #ffffff;
+border-radius: 7px;
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 10px #ffffff;
+background: #fff;
+color: #000;
+cursor: pointer;
+position:absolute;
+bottom:15px;
+left:0;
+right:35px;
+border-radius: 7px;
+outline:none;
+margin:auto;
+opacity:0.7;
+font-weight:900;
+}
+
+#myBtn5 {
+width:18px !important;
+text-decoration: none;
+padding-top: 12px;
+padding-right:10px;
+padding-bottom: 7px;
+padding-left: 10px;
+right:5px !important;
+font-size: 18px;
+border: 2px solid #ffffff;
+border-radius: 7px;
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 10px #ffffff;
+background: #fff;
+color: #000;
+cursor: pointer;
+position:absolute;
+bottom:0;
+border-radius: 7px;
+outline:none;
+right:5px;
+margin:auto;
+opacity:0.7;
+font-weight:900;
+}
+
+#myBtn3, #myBtn4{
+width: 90%;
+font-size: 18px;
+border: 2px solid #ffffff;
+border-radius: 7px;
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 10px #ffffff;
+padding: 5px;
+background: #fff;
+color: #000;
+cursor: pointer;
+position:absolute;
+top:10px;
+border-radius: 7px;
+outline:none;
+left:0;
+right:0;
+margin:auto;
+opacity:0.7;
+}
+
+#myBtn4, #myBtn5, #myBtn6 {
+display:none;
+}
+
+#myBtn2 {
+left:90px;
+font-weight:900;
+}
+
+#myBtn:hover {
+background: #ddd;
+color: black;
+}
+
+#myBtn2:hover {
+background: #ddd;
+color: black;
+}
+
+@media only screen and (max-width: 960px) {
+#video-wrap {
+width: 50%;
+}
+}
+
+@media only screen and (max-width: 850px) {
+#video-wrap {
+width: 55%;
+}
+}
+
+@media only screen and (max-width: 750px) {
+#video-wrap {
+width: 60%;
+}
+}
+
+@media only screen and (max-width: 650px) {
+#video-wrap {
+width: 70%;
+}
+}
+
+@media only screen and (max-width: 550px) {
+#video-wrap {
+width: 85%;
+}
+}
+
+@media only screen and (max-width: 450px) {
+#video-wrap {
+width: 100%;
+}
+}
+
+object{pointer-events:auto;}
+</style>
+
+<body>
+<div id="video-wrap">
+<video id="myVideo" preload="auto" autoplay loop muted width="1150px">
+<source type="video/mp4" src="new_video.mp4">
+</video>
+
+<object id="yt_emb" preload="auto" data="https://www.youtube.com/embed/bUiP-iGN6oI?html5=1&showinfo=0&showsearch=0&rel=0&version=3&enablejsapi=1&autoplay=1&mute=1&loop=1&fs=0&controls=0&start=7&loop=1&playlist=bUiP-iGN6oI" height="145%" width="180%">
+</object>
+
+<div class="button_div">
+<button id="myBtn" onclick="myFunction()">||</button>
+<button id="myBtn2">X</button>
+<a id="myBtn5" href="http://www.thequint.com" target="_blank">&#8618;</a>
+</div>
+<button id="myBtn3">View More</button>
+<button id="myBtn4">Drag For 360&#176; View</button>
+<button id="myBtn6">&#171;</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "||";
+  } else {
+    video.pause();
+    btn.innerHTML = "&#9654;";
+  }
+}
+
+btn2.onclick = function() {
+    var div = document.getElementById('video-wrap');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+
+btn3.onclick = function() {
+var div = document.getElementById('myVideo');
+var div2 = document.getElementById('yt_emb');
+if (div.style.display !== 'none') {
+        div.style.display = 'none';
+        div.style.visibility = 'hidden';
+        div2.style.display = 'block';
+        div2.style.visibility = 'visible';
+        btn3.style.display = 'none';
+        btn.style.display = 'none';
+        btn4.style.display = 'block';
+        btn5.style.display = 'block';
+        btn6.style.display = 'block';
+    }
+else {
+        div.style.display = 'block';
+        div2.style.display = 'none';
+        div2.style.visibility = 'hidden';
+    }
+};
+
+btn6.onclick = function() {
+var div = document.getElementById('myVideo');
+var div2 = document.getElementById('yt_emb');
+div2.style.visibility = 'hidden';
+btn3.style.display = 'block';
+btn.style.display = 'block';
+btn4.style.display = 'none';
+btn5.style.display = 'none';
+btn6.style.display = 'none';
+div.style.display = 'block';
+div.style.visibility = 'visible';
+}
+</script>
+
+</body>
+
+
+</html>
