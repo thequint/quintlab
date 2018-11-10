@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twitter Widget</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+.twitter-timeline.twitter-timeline-rendered{
+width:100% !important;
+}
+
+.twitter-frame{
+overflow:hidden;
+width:100% !important;
+}
+
+.twitter-frame-2{
+overflow:hidden;
+width:100% !important;
+}
+
+.twitter-frame-3{
+overflow:hidden;
+width:100% !important;
+}
+
+.twitter-frame-4{
+overflow:hidden;
+width:100% !important;
+}
+
+.twitter-frame-5{
+overflow:hidden;
+width:100% !important;
+}
+
+.twitter-main-wrapper{
+position:relative !important;
+width: 100%;
+height: auto;
+background-color: #1da1f3;
+left:-8px;
+top: -8px;
+}
+
+.some-twitter-text {
+  margin-top:0.5em;
+  text-align:ccenter;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-family: Futura;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.twitter-my-vote{
+text-align:center;
+width:100%;
+}
+
+.col-lg-5.col-md-5.col-sm-5 {
+    padding-right: 0.3em !important;
+    padding-left: 0.3em !important;
+}
+
+.col-lg-4.col-md-4.col-sm-4 {
+    padding-right: 0.3em !important;
+    padding-left: 0.3em !important;
+}
+
+.twitter-my-vote img{
+margin-top:1em;
+width: 100px;
+}
+
+@media only screen and (max-width: 1280px) {
+.some-twitter-text {
+font-size:1.2em;
+}
+}
+
+@media only screen and (max-width: 1189px) {
+.some-twitter-text {
+font-size:1.1em;
+}
+}
+
+@media only screen and (max-width: 1107px) {
+.some-twitter-text {
+font-size:1em;
+}
+}
+
+@media only screen and (max-width: 975px) {
+.some-twitter-text {
+font-size:0.9em;
+}
+}
+
+@media only screen and (max-width: 898px) {
+.twitter-my-vote img{
+width: 90px;
+}
+.some-twitter-text {
+font-size:0.9em;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.twitter-my-vote img{
+width: 100px;
+}
+.some-twitter-text {
+font-size:1.2em;
+}
+.col-lg-4.col-md-4.col-sm-4 {
+display:none;
+}
+.read_more{
+display:block !important;
+text-align:center;
+background-color:#ffffff;
+width:150px;
+right:19px;
+bottom:10px;
+position:absolute;
+color:#000;
+}
+
+.fa.fa-twitter{
+color:#29a3ef;
+}
+
+.col-lg-12.col-md-12.col-sm-12{
+padding-bottom:1.2em !important;
+}
+}
+
+.read_more{
+display:none;
+}
+</style>
+
+<body onload="paint()">
+<div class="col-lg-12 col-md-12 col-sm-12" style="background-color: #1da1f3;">
+<div class="col-lg-2 col-md-2 col-sm-2">
+<div class="twitter-my-vote">
+<img src="https://quintype-dropbox.s3-accelerate.amazonaws.com/thequint.quintype.com/2018-11-07/927/Screenshot_2018_11_07_at_1_56_16_PM.png">
+</div>
+<div class="some-twitter-text">
+Latest Social Updates
+<br>From State Elections 
+</div>
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-5">
+<div class="twitter-frame">
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="1" href="https://twitter.com/TheQuint" data-widget-id="343053082919333888"></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-5">
+<div class="twitter-frame-2">
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="2" href="https://twitter.com/TheQuint" data-widget-id="343053082919333888"></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+  
+
+<div class="col-lg-12 col-md-12 col-sm-12" style="background-color: #1da1f3;padding-bottom:0.5em;">
+<a href="https://twitter.com/TheQuint" target="_blank"><div class="read_more">
+View More Tweets <i class="fa fa-twitter" aria-hidden="true"></i>
+</div><a/>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="twitter-frame-3">
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="3" href="https://twitter.com/TheQuint" data-widget-id="343053082919333888"></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="twitter-frame-4">
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="4" href="https://twitter.com/TheQuint" data-widget-id="343053082919333888"></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="twitter-frame-5">
+<a class="twitter-timeline" data-dnt="true" data-tweet-limit="5" href="https://twitter.com/TheQuint" data-widget-id="343053082919333888"></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
+</body>
+
+<script>
+var widgetCSS = "" +
+".timeline-tweet-media { display: none;}" +
+".timeline-Tweet{height: 100%;}"+
+".timeline-Widget{margin-top:0.3em;}"+
+".timeline-Tweet{height: 100%;}"+
+"#twitter-widget-0{width:100% !important;}"+
+ ".timeline-Tweet-actions {top: 10px !important;position: absolute;right: 50px;}" +
+ ".timeline-Tweet-timestamp {bottom: 12px !important;position: absolute;right: 10px;}"+
+ ".timeline-TweetList-tweet{border-top:none;overflow-y:hidden;height:170px;}" +
+ ".timeline-tweet-text { font-size:1em !important;}" +
+ ".timeline-Tweet-text{line-height:1.5em !important;}"+
+  ".timeline-Widget { border-radius:0 !important;}" +
+ ".timeline-footer { display:none !important;}" +
+".timeline-InformationCircle-widgetParent { display: none;}";
+
+var widgetCSS1 = "" +
+".timeline-tweet-media { display: none;}" +
+".timeline-Tweet{height: 100%;}"+
+".timeline-Widget{margin-top:0.3em;}"+
+ ".timeline-Tweet-actions {top: 10px !important;position: absolute;right: 50px;}" +
+ ".timeline-Tweet-timestamp {bottom: 12px !important;position: absolute;right: 10px;}"+
+ ".timeline-TweetList-tweet{border-top:none;overflow-y:hidden;height:170px;}" +
+ ".timeline-tweet-text { font-size:1em !important;}" +
+ ".timeline-Tweet-text{line-height:1.5em !important;}"+
+  ".timeline-Widget { border-radius:0 !important;}" +
+ ".timeline-footer { display:none !important;}" +
+".timeline-TweetList-tweet:first-of-type {display:none;}" +
+".timeline-InformationCircle-widgetParent { display: none;}";
+
+var widgetCSS2 = "" +
+".timeline-tweet-media { display: none;}" +
+".timeline-Tweet{height: 100%;}"+
+".timeline-Widget{margin-top:0.3em;}"+
+ ".timeline-Tweet-actions {top: 10px !important;position: absolute;right: 50px;}" +
+ ".timeline-Tweet-timestamp {bottom: 12px !important;position: absolute;right: 10px;}"+
+ ".timeline-TweetList-tweet{border-top:none;overflow-y:hidden;height:180px;}" +
+ ".timeline-tweet-text { font-size:1em !important;}" +
+  ".timeline-Tweet-text{line-height:1.5em !important;}"+
+  ".timeline-Widget { border-radius:0 !important;}" +
+ ".timeline-footer { display:none !important;}" +  
+".timeline-TweetList-tweet:first-of-type {display:none;}" +
+ ".timeline-TweetList-tweet:nth-of-type(2) {display:none;}" +
+".timeline-InformationCircle-widgetParent { display: none;}";
+
+var widgetCSS3 = "" +
+".timeline-tweet-media { display: none;}" +
+".timeline-Tweet{height: 100%;}"+
+".timeline-Widget{margin-top:0.3em;}"+
+ ".timeline-Tweet-actions {top: 10px !important;position: absolute;right: 50px;}" +
+ ".timeline-Tweet-timestamp {bottom: 12px !important;position: absolute;right: 10px;}"+
+ ".timeline-TweetList-tweet{border-top:none;overflow-y:hidden;height:180px;}" +
+ ".timeline-tweet-text { font-size:1em !important;}" +
+  ".timeline-Widget { border-radius:0 !important;}" +
+ ".timeline-footer { display:none !important;}" +
+".timeline-TweetList-tweet:first-of-type {display:none;}" +
+ ".timeline-TweetList-tweet:nth-of-type(2) {display:none;}" +
+ ".timeline-TweetList-tweet:nth-of-type(3) {display:none;}" +
+".timeline-InformationCircle-widgetParent { display: none;}";
+
+var widgetCSS4 = "" +
+".timeline-tweet-media { display: none;}" + 
+".timeline-Tweet{height: 100%;}"+
+".timeline-Widget{margin-top:0.3em;}"+
+ ".timeline-Tweet-actions {top: 10px !important;position: absolute;right: 50px;}" +
+ ".timeline-Tweet-timestamp {bottom: 12px !important;position: absolute;right: 10px;}"+
+".timeline-TweetList-tweet{border-top:none;overflow-y:hidden;height:180px;}" +
+ ".timeline-tweet-text { font-size:1em !important;}" +
+  ".timeline-Widget { border-radius:0 !important;}" +
+ ".timeline-footer { display:none !important;}" +
+ ".timeline-Tweet {height:210px;}" +
+".timeline-TweetList-tweet:first-of-type {display:none;}" +
+ ".timeline-TweetList-tweet:nth-of-type(2) {display:none;}" +
+ ".timeline-TweetList-tweet:nth-of-type(3) {display:none;}" +
+  ".timeline-TweetList-tweet:nth-of-type(4) {display:none;}" +
+".timeline-InformationCircle-widgetParent { display: none;}";
+
+function paint(){
+  
+var w = document.getElementById("twitter-widget-0").contentDocument;
+  
+var x = document.getElementById("twitter-widget-1").contentDocument;
+  
+var y = document.getElementById("twitter-widget-2").contentDocument;
+  
+var z = document.getElementById("twitter-widget-3").contentDocument;
+  
+var a = document.getElementById("twitter-widget-4").contentDocument;
+  
+var s = document.createElement("style");
+  s.innerHTML = widgetCSS;
+  s.type = "text/css";
+  w.head.appendChild(s);
+  
+var s1 = document.createElement("style");
+  s1.innerHTML = widgetCSS1;
+  s1.type = "text/css";
+  x.head.appendChild(s1);
+  
+var s2 = document.createElement("style");
+  s2.innerHTML = widgetCSS2;
+  s2.type = "text/css";
+  y.head.appendChild(s2);
+  
+var s3 = document.createElement("style");
+  s3.innerHTML = widgetCSS3;
+  s3.type = "text/css";
+  z.head.appendChild(s3);
+  
+var s4 = document.createElement("style");
+  s4.innerHTML = widgetCSS4;
+  s4.type = "text/css";
+  a.head.appendChild(s4);
+}
+</script>
+</html>
