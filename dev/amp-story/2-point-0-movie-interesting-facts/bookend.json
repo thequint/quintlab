@@ -7,17 +7,17 @@
     },
     {
         "provider": "twitter",
-        "text": "Paes, Bopanna: 6 Indian Tennis Players to Watch at Asian Games",
+        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold",
         "url": "CANONICAL_URL"
     },
     {
         "provider": "whatsapp",
-        "text": "Paes, Bopanna: 6 Indian Tennis Players to Watch at Asian Games - https://www.thequint.com/quintlab/indian-tennis-players/",
+        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold - https://www.thequint.com/quintlab/ampstories/top-indian-hockey-players/",
         "url": "CANONICAL_URL"
     },
     {
         "provider": "email",
-        "text": "Paes, Bopanna: 6 Indian Tennis Players to Watch at Asian Games",
+        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold",
         "url": "CANONICAL_URL"
     }],
     "components": [
@@ -34,6 +34,13 @@
         "url": "https://www.thequint.com/quintlab/top-tamil-nadu-protests/",
         "image": "assets/images/more-story/top-tamil-nadu-protests.jpg",
         "category": "politics"
+    },
+    {
+        "type": "portrait",
+        "title": "Indian Tennis Players to Watch at Asian Games",
+        "url": "https://www.thequint.com/quintlab/indian-tennis-players/",
+        "image": "assets/images/more-story/indian-tennis-players.jpg",
+        "category": "Sports"
     },
     {
         "type": "cta-link",
