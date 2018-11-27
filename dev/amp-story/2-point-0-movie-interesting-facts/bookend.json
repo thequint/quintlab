@@ -7,47 +7,31 @@
     },
     {
         "provider": "twitter",
-        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold",
+        "text": "2.0: Did you know everything about Rajinikanth's latest movie?",
         "url": "CANONICAL_URL"
     },
     {
         "provider": "whatsapp",
-        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold - https://www.thequint.com/quintlab/ampstories/top-indian-hockey-players/",
+        "text": "2.0: Did you know everything about Rajinikanth's latest movie? - https://www.thequint.com/quintlab/ampstories/top-indian-hockey-players/",
         "url": "CANONICAL_URL"
     },
     {
         "provider": "email",
-        "text": "Asian Games: 5 Indian Hockey Players Who Could Help India Win Gold",
+        "text": "2.0: Did you know everything about Rajinikanth's latest movie?",
         "url": "CANONICAL_URL"
     }],
+
     "components": [
+    {
+        "type": "heading",
+        "text": "More to read"
+    },
     {
         "type": "portrait",
         "title": "What Sanju Didn't Show About Sanjay Dutt's Life",
-        "url": "https://www.thequint.com/quintlab/what-sanju-missed-about-sanjay-dutts-life/",
-        "image": "assets/images/more-story/sanju.jpg",
-        "category": "Bollywood"
-    },
-    {
-        "type": "portrait",
-        "title": "The Land of Protests: Top 10 Public Protests of Tamil Nadu",
-        "url": "https://www.thequint.com/quintlab/top-tamil-nadu-protests/",
-        "image": "assets/images/more-story/top-tamil-nadu-protests.jpg",
-        "category": "politics"
-    },
-    {
-        "type": "portrait",
-        "title": "Indian Tennis Players to Watch at Asian Games",
-        "url": "https://www.thequint.com/quintlab/indian-tennis-players/",
-        "image": "assets/images/more-story/indian-tennis-players.jpg",
-        "category": "Sports"
-    },
-    {
-        "type": "portrait",
-        "title": "5 Hockey Players Who Could Defend India’s Title at Asian Games 2018",
-        "url": "https://www.thequint.com/quintlab/ampstories/top-indian-hockey-players/",
-        "image": "assets/images/more-story/top-indian-hockey-players.jpg",
-        "category": "Sports"
+        "url": "https://www.thequint.com/big-story",
+        "image": "assets/images/more-story/1x1.jpg",
+        "category": "Big Story Stack"
     },
     {
         "type": "cta-link",
