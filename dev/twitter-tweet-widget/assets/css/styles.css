@@ -59,27 +59,27 @@ body {
     background-image: linear-gradient(to right, rgba(29, 161, 243, 0), #1da1f3);
 }
 
-#example1 {
+#data_display {
     display: none;
 }
 
-#example1 li {
+#data_display li {
     width: calc(33% - 20px);
     width: -webkit-calc(33% - 20px);
     margin-right: 20px;
-    padding: 10px;
+    padding: 10px 10px 0;
     float: left;
     color: #14171a;
-    height: 250px;
+    height: 258px;
     overflow: hidden;
     border-radius: 5px;
     background-color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#example1 .slick-prev.slick-arrow {
+#data_display .slick-prev.slick-arrow {
 	display: none !important;
 }
-#example1 .slide-next {
+#data_display .slide-next {
 	position: absolute;
 	right: 10px;
 	top: 42%;

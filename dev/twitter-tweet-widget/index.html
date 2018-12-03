@@ -97,7 +97,7 @@ _comscore.push(COMSCORE_OPTS);
         <span class="my-vote-text">Latest Social Updates From State Elections</span>
     </div>
     <div class="carousel-main__right">
-        <div id="example1"></div>
+        <div id="data_display"></div>
     </div>
 </div>
 <!-- Scripts -->
@@ -107,7 +107,7 @@ _comscore.push(COMSCORE_OPTS);
 
 <script type="text/javascript">
 function slider_func() {
-    $('#example1 ul').slick({
+    $('#data_display ul').slick({
         arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -136,16 +136,8 @@ function slider_func() {
     });
 }
 $(window).on('load', function() {
-    $("#example1").show();
+    $("#data_display").show();
     slider_func();
-
-    // $(".tweet").each(function() {
-    //     console.log($(this).text().length);
-
-    //     if($(this).text().length >= 261){
-    //         alert("yes");
-    //     }
-    // });
 });
 </script>
 </body>

@@ -301,9 +301,9 @@
 
 
 var configProfile = {
-    "profile": { "screenName": 'TheQuint' },
-    "domId": 'example1',
-    "maxTweets": 5,
+    "profile": { "screenName": 'MyVote_TheQuint' },
+    "domId": 'data_display',
+    "maxTweets": 10,
     "enableLinks": true,
     "showUser": true,
     "showTime": false,
