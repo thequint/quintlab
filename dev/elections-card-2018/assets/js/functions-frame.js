@@ -85,20 +85,22 @@ function create_graph(id) {
 					style: {
 						fontWeight: 'bold',
 						color: 'white',
-						fontSize:'18px'
+						fontSize:'24px'
 						
 					}
 				},
 				// startAngle: -90,
 				startAngle: -280,
 				endAngle: 90,
-				center: ['50%', '50%']
+				center: ['50%', '50%'],
+				size: '108%'
 			}
 		},
 		series: [{
 			type: 'pie',
 			name: 'Browser share'+id,
-			innerSize: '0%',
+			// innerSize: '0%',
+			innerSize: '30%',
 			data: [
 				[graph_data[0].name, graph_data[0].value],
 				[graph_data[1].name, graph_data[1].value],

@@ -76,7 +76,7 @@ body::after{
 }
 
 .container table tr td{
-	font-size: 30px;
+	font-size: 60px;
 	color: #35144f;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -86,7 +86,9 @@ body::after{
 	text-align: left;
 	border-collapse: collapse;
 }
-
+.container table tr td:last-child {
+	text-align: right;
+}
 .container table tr td.num{
 	font-size: 100px;
 }
@@ -117,14 +119,16 @@ body::after{
 }
 .side-quint-logo {
 	margin: 0 auto;
-	width: 55%;
-	padding: 15% 20px 0 0;
+	width: 52%;
+	padding: 12% 20px 0 0;
 }
 
 .side-nav {
 	position: absolute;
-	bottom: 5%;
+	top: 422px;
 	left: 15%;
+	/*margin-top: 290px;*/
+	/*margin-left: 15%;*/
 	color: #fff
 }
 .side-nav li {
@@ -152,18 +156,20 @@ body::after{
 }
 .data-inner {
 	margin: 0 auto;
-	width: 80%;
+	width: 96%;
+	min-height: 500px;
 	background-color: #fff
 }
 .graph-data {
 	float: left;
-	width: 55%
+	width: 58%;
+	margin-top: 50px;
 }
 .table-data {
-	margin-top: 100px;
+	margin-top: 80px;
 	float: left;
-	width: 45%;
-	padding-left: 50px;
+	width: 42%;
+	padding: 0 40px 0 0px;
 }
 .table-data .party-bjp {
 	color: #f25910;
@@ -230,12 +236,12 @@ body::after{
 .card-headline .state-headline {
 	/*float: left;*/
 	display: inline-block;
-	font-size: 60px;
+	font-size: 70px;
 	line-height: 100%;
 	color: #35144f;
 	font-weight: 700;
 	line-height: 45px;
-	/*letter-spacing: 2px;*/
+	letter-spacing: -2px;
 	padding-left: 5px;
 	vertical-align: middle;
 	text-transform: capitalize;

@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container table tr td{
-	font-size: 28px;
+	font-size: 32px;
 	color: #35144f;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -244,13 +244,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .graph-data {
 	float: left;
-	width: 65%
+	width: 65%;
+	padding: 0 20px;
 }
 .table-data {
 	margin-top: 90px;
 	float: left;
 	width: 35%;
-	padding: 0 20px 0 10px;
+	padding: 0 20px 0 0;
 }
 .container table tr td:nth-child(2) {
 	text-align: right;
