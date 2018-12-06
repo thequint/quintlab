@@ -162,13 +162,13 @@ body::after{
 }
 .graph-data {
 	float: left;
-	width: 58%;
+	width: 65%;
 	margin-top: 50px;
 }
 .table-data {
 	margin-top: 80px;
 	float: left;
-	width: 42%;
+	width: 35%;
 	padding: 0 40px 0 0px;
 }
 .table-data .party-bjp {

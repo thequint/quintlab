@@ -15,7 +15,7 @@ function frame_slider() {
 	$('.slider-frame-1').slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
-		// autoplay: true,
+		autoplay: true,
 		arrows: true,
 		autoplaySpeed: 2000,
 		dots: true,
