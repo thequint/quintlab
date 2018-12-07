@@ -46,7 +46,7 @@ body::after{
 	content: '';
 	top: 0;
 	right: 0;
-	width: 75%;
+	width: 72%;
 	height: 100%;
 	background: #BFB7B7;
 }
@@ -63,12 +63,15 @@ body::after{
   border-bottom: 100px solid transparent; 
   border-right:100px solid #BFB7B7; 
 }*/
-
+.wrapper {
+	height: 100%;
+}
 .container{
 	max-width:100%;
 	position: relative;
 	margin: 0 auto;
 	z-index: 100;
+	height: 100%;
 }
 
 .container table{
@@ -97,13 +100,13 @@ body::after{
 
 
 .left-container{
-	width: 25%;
+	width: 28%;
 	float: left;
 	position: relative;
 	height: 100vh;
 }
 .right-container{
-	width: 75%;
+	width: 72%;
 	float: left;
 	position: relative;
 }
@@ -122,18 +125,43 @@ body::after{
 	width: 52%;
 	padding: 12% 20px 0 0;
 }
+.logo-text {
+	width: 100%;
+	margin-bottom: 25px;
+}
+.logo-text:after {
+	display: table;
+	line-height: 0;
+	content: "";
+	clear: both;
+}
+.my-vote-logo {
+	float: left;
+	width: 100px;
+	margin-right: 15px; 
+	display: block;
+}
+.my-vote-logo svg {
+	width: 100%
+}
+.vote-text {
+	float: left;
+	font-size: 44px;
+	line-height: 80px;
+	text-transform: uppercase;
+}
 
 .side-nav {
 	position: absolute;
-	top: 422px;
-	left: 15%;
+	top: 31%;
+	left: 10%;
 	/*margin-top: 290px;*/
 	/*margin-left: 15%;*/
 	color: #fff
 }
 .side-nav li {
-	font-size: 30px;
-	line-height: 44px;
+	font-size: 34px;
+	line-height: 50px;
 	font-weight: 700;
 	padding-left: 15px;
 }
@@ -149,27 +177,76 @@ body::after{
 }
 
 .right-content{
-	padding: 50px 30px;
-	height: 100vh;
+	/*padding: 50px 30px;*/
+	/*height: 100vh;*/
 	/*width: 400px;*/
+	height: 100%;
 	text-align: center;
 }
 .data-inner {
 	margin: 0 auto;
-	width: 96%;
-	min-height: 500px;
+	width: 92%;
+	/*min-height: 500px;*/
+	height: 75vh;
+	/*margin-top: 25vh; */
 	background-color: #fff
+}
+
+.card-headline {
+	margin: 0 auto; 
+	padding-top: 5%;
+	height: 20vh;
+	/*background-color: #ccc;*/
+	width: 92%;
+	/*margin-bottom: 30px;*/
+}
+.card-headline .map {
+	float: left;
+	/*display: inline-block;*/
+	width: 80px;
+	height: 80px;
+}
+.card-headline .map.mizoram {
+	width: 40px;
+}
+.card-headline .map.chhattisgarh {
+	width: 40px;
+}
+.card-headline .map img {
+	width: 100%;
+	height: 100%;
+}
+.card-headline .state-headline {
+	float: left;
+	display: inline-block;
+	font-size: 70px;
+	line-height: 100%;
+	color: #35144f;
+	font-weight: 700;
+	/*line-height: 45px;*/
+	letter-spacing: -2px;
+	padding-left: 5px;
+	/*vertical-align: middle;*/
+	text-transform: capitalize;
+	font-family: 'Muli', sans-serif;
 }
 .graph-data {
 	float: left;
-	width: 65%;
-	margin-top: 50px;
+	width: 62%;
+	/*padding-top: 13px;*/
+}
+.graph-data .highcharts-container,
+.graph-data svg  {
+	height: 525px !important;
+}
+.highcharts-credits {
+	display: none;
 }
 .table-data {
-	margin-top: 80px;
+	margin-top: 110px;
 	float: left;
-	width: 35%;
-	padding: 0 40px 0 0px;
+	width: 38%;
+	padding: 0 27px 0 0;
 }
 .table-data .party-bjp {
 	color: #f25910;
@@ -213,62 +290,7 @@ body::after{
 /*.map svg{fill:#000000;stroke:#000000;stroke-miterlimit:10; height: 100%;}*/
 
 
-.card-headline {
-	width: 100%;
-	margin-bottom: 30px;
-}
-.card-headline .map {
-	/*float: left;*/
-	display: inline-block;
-	width: 80px;
-	height: 80px;
-}
-.card-headline .map.mizoram {
-	width: 40px;
-}
-.card-headline .map.chhattisgarh {
-	width: 40px;
-}
-.card-headline .map img {
-	width: 100%;
-	height: 100%;
-}
-.card-headline .state-headline {
-	/*float: left;*/
-	display: inline-block;
-	font-size: 70px;
-	line-height: 100%;
-	color: #35144f;
-	font-weight: 700;
-	line-height: 45px;
-	letter-spacing: -2px;
-	padding-left: 5px;
-	vertical-align: middle;
-	text-transform: capitalize;
-	font-family: 'Muli', sans-serif;
-}
 
-
-/*.card-headline {
-	width: 100%;
-	margin-bottom: 30px;
-}
-.card-headline .map {
-	display: inline-block;
-	width: 80px;
-	height: 80px;
-	margin: 0;
-	padding: 0;
-}
-.card-headline .map svg {
-	width: 100%;
-}
-.card-headline h2 {
-	display: inline-block;
-	line-height: 90px;
-	padding-left: 10px;
-	vertical-align: bottom;
-}*/
 /*All State Theme Color*/
 
 /*Punjab*/

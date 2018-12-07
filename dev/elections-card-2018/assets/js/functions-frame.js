@@ -92,15 +92,15 @@ function create_graph(id) {
 				// startAngle: -90,
 				startAngle: -280,
 				endAngle: 90,
-				center: ['50%', '50%'],
-				size: '108%'
+				center: ['50%', '69.5%'],
+				size: '135%'
 			}
 		},
 		series: [{
 			type: 'pie',
 			name: 'Browser share'+id,
 			// innerSize: '0%',
-			innerSize: '30%',
+			innerSize: '20%',
 			data: [
 				[graph_data[0].name, graph_data[0].value],
 				[graph_data[1].name, graph_data[1].value],
