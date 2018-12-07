@@ -437,7 +437,7 @@ body.is-himachal .map svg{fill:#007ed3;stroke:#007ed3;}
 	}
 	.graph-data {
 		float: none;
-		width: 250px;
+		width: 280px;
 		margin: 0 auto;
 		height: 250px;
 		overflow: hidden;
@@ -445,18 +445,18 @@ body.is-himachal .map svg{fill:#007ed3;stroke:#007ed3;}
 	.table-data {
 		margin: 0 auto;
 		float: none;
-		width: 80%;
-		padding-left: 0;
+		width: 170px;
+		padding: 0;
 	}
 	.container table tr td {
-	    font-size: 20px;
+	    font-size: 22px;
 	    padding: 5px 0;
 	}
 	.container table tr td:nth-child(2) {
 		text-align: right;
 	}
 	.highcharts-container  {
-		margin-top: -70px;
+		margin-top: -65px;
 		height: 340px !important
 	}
 }
