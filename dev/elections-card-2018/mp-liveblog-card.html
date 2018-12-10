@@ -96,26 +96,28 @@ _comscore.push(COMSCORE_OPTS);
 
 
 <section class="wrapper">
-	<div class="right-content">
-		<div class="card-headline clearfix">
-	        <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
-	        <span class="state-headline">Madhya Pradesh</span>
-	        <!-- <h2></h2> -->
-	    </div>
+	<div class="container">
+		<div class="right-content">
+			<div class="card-headline clearfix">
+		        <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
+		        <span class="state-headline">Madhya Pradesh</span>
+		        <!-- <h2></h2> -->
+		    </div>
 
-		<div class="data-inner clearfix">
+			<div class="data-inner clearfix">
 
-			<div class="graph-data">
-	            <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
-	        </div>
+				<div class="graph-data">
+		            <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
+		        </div>
 
-	        <div class="table-data">
-	            <table id="data_mp">
-	            </table>
-	        </div>
-	        
-	    </div>
+		        <div class="table-data">
+		            <table id="data_mp">
+		            </table>
+		        </div>
+		        
+		    </div>
 
+		</div>
 	</div>
 </section>
 
@@ -193,19 +195,19 @@ function create_graph(id) {
 			pie: {
 				dataLabels: {
 					enabled: true,
-					distance: -50,
+					distance: -30,
 					style: {
 						fontWeight: 'bold',
 						color: 'white',
-						fontSize:'24px'
+						fontSize:'16px'
 						
 					}
 				},
 				// startAngle: -90,
 				startAngle: -280,
 				endAngle: 90,
-				center: ['50%', '72%'],
-				size: '135%'
+				center: ['50%', '50%'],
+				size: '108%'
 			}
 		},
 		series: [{
