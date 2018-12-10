@@ -97,27 +97,25 @@ _comscore.push(COMSCORE_OPTS);
 	<div class="container">
 		<div class="right-content">
 			<div class="card-headline clearfix">
-		        <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
-		        <span class="state-headline">Madhya Pradesh</span>
-		        <span class="live-icon">
+                <span class="map"><img src="assets/images/map/rajasthan.svg"></span>
+                <span class="state-headline">Rajasthan</span>
+                <span class="live-icon">
 					<span class="live-circle"></span>
 					<span class="text-live">Live <b>Results</b></span>
 				</span>
-		    </div>
+            </div>
 
 			<div class="data-inner clearfix">
 
 				<div class="graph-data">
-		            <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
-		        </div>
+                    <div class="is-graph" id="graph_data_rajasthan" data-x='"BJP","INC","BSP","OTH"'></div>
+                </div>
 
-		        <div class="table-data">
-		            <table id="data_mp">
-		            </table>
-		        </div>
-		        
-		    </div>
-
+                <div class="table-data">
+                    <table id="data_rajasthan">
+                    </table>
+                </div>
+            </div>
 		</div>
 	</div>
 </section>
@@ -133,30 +131,30 @@ _comscore.push(COMSCORE_OPTS);
 
 function showInfo(data) {
 
-	document.getElementById("data_mp").innerHTML = 
+	document.getElementById("data_rajasthan").innerHTML = 
 		"<tr>" 
-		+ "<td class='party-bjp'>" + [ data[0].mpparty,] + "</td>" 
-		+ "<td class='party-bjp'>" + [ data[0].mpseats,] + "</td>"  
+		+ "<td class='party-bjp'>" + [ data[0].rajasthanparty,] + "</td>" 
+		+ "<td class='party-bjp'>" + [ data[0].rajasthanseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-inc'>" + [ data[1].mpparty,] + "</td>" 
-		+ "<td class='party-inc'>" + [ data[1].mpseats,] + "</td>"  
+		+ "<td class='party-inc'>" + [ data[1].rajasthanparty,] + "</td>" 
+		+ "<td class='party-inc'>" + [ data[1].rajasthanseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-bsp'>" + [ data[2].mpparty,] + "</td>" 
-		+ "<td class='party-bsp'>" + [ data[2].mpseats,] + "</td>"  
+		+ "<td class='party-bsp'>" + [ data[2].rajasthanparty,] + "</td>" 
+		+ "<td class='party-bsp'>" + [ data[2].rajasthanseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-oth2'>" + [ data[3].mpparty,] + "</td>" 
-		+ "<td class='party-oth2'>" + [ data[3].mpseats,] + "</td>"  
+		+ "<td class='party-oth2'>" + [ data[3].rajasthanparty,] + "</td>" 
+		+ "<td class='party-oth2'>" + [ data[3].rajasthanseats,] + "</td>"  
 		+ "</tr>";
 
-    $("#graph_data_mp").attr("data-y", [data[0].mpseats, ] + "," + [data[1].mpseats, ] + "," + [data[2].mpseats, ] + "," + [data[3].mpseats, ])
+    $("#graph_data_rajasthan").attr("data-y", [data[0].rajasthanseats, ] + "," + [data[1].rajasthanseats, ] + "," + [data[2].rajasthanseats, ] + "," + [data[3].rajasthanseats, ])
 
-    create_graph("graph_data_mp");
+    create_graph("graph_data_rajasthan");
 }
 
 function create_graph(id) {

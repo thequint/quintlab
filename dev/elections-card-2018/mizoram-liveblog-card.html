@@ -91,33 +91,31 @@ _comscore.push(COMSCORE_OPTS);
 
 </head>
 <body onload="setInterval('window.location.reload()', 60000);">
-
-
 <section class="wrapper">
 	<div class="container">
 		<div class="right-content">
 			<div class="card-headline clearfix">
-		        <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
-		        <span class="state-headline">Madhya Pradesh</span>
-		        <span class="live-icon">
+                <span class="map mizoram"><img src="assets/images/map/mizoram.svg"></span>
+                <span class="state-headline">Mizoram</span>
+                <span class="live-icon">
 					<span class="live-circle"></span>
 					<span class="text-live">Live <b>Results</b></span>
 				</span>
-		    </div>
+            </div>
 
 			<div class="data-inner clearfix">
 
 				<div class="graph-data">
-		            <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
-		        </div>
+                    <div class="is-graph" id="graph_data_mizoram" data-x='"INC","MNF","BJP","OTH"'></div>
+                </div>
 
-		        <div class="table-data">
-		            <table id="data_mp">
-		            </table>
-		        </div>
-		        
-		    </div>
-
+                <div class="table-data">
+                    <table id="data_mizoram">
+                    </table>
+                </div>
+                
+            </div>
+		
 		</div>
 	</div>
 </section>
@@ -132,31 +130,30 @@ _comscore.push(COMSCORE_OPTS);
 <script type="text/javascript">
 
 function showInfo(data) {
-
-	document.getElementById("data_mp").innerHTML = 
+	document.getElementById("data_mizoram").innerHTML = 
 		"<tr>" 
-		+ "<td class='party-bjp'>" + [ data[0].mpparty,] + "</td>" 
-		+ "<td class='party-bjp'>" + [ data[0].mpseats,] + "</td>"  
+		+ "<td class='party-inc'>" + [ data[0].mizoramparty,] + "</td>" 
+		+ "<td class='party-inc'>" + [ data[0].mizoramseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-inc'>" + [ data[1].mpparty,] + "</td>" 
-		+ "<td class='party-inc'>" + [ data[1].mpseats,] + "</td>"  
+		+ "<td class='party-oth'>" + [ data[1].mizoramparty,] + "</td>" 
+		+ "<td class='party-oth'>" + [ data[1].mizoramseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-bsp'>" + [ data[2].mpparty,] + "</td>" 
-		+ "<td class='party-bsp'>" + [ data[2].mpseats,] + "</td>"  
+		+ "<td class='party-bjp'>" + [ data[2].mizoramparty,] + "</td>" 
+		+ "<td class='party-bjp'>" + [ data[2].mizoramseats,] + "</td>"  
 		+ "</tr>"
 
 		+"<tr>" 
-		+ "<td class='party-oth2'>" + [ data[3].mpparty,] + "</td>" 
-		+ "<td class='party-oth2'>" + [ data[3].mpseats,] + "</td>"  
+		+ "<td class='party-oth2'>" + [ data[3].mizoramparty,] + "</td>" 
+		+ "<td class='party-oth2'>" + [ data[3].mizoramseats,] + "</td>"  
 		+ "</tr>";
 
-    $("#graph_data_mp").attr("data-y", [data[0].mpseats, ] + "," + [data[1].mpseats, ] + "," + [data[2].mpseats, ] + "," + [data[3].mpseats, ])
+    $("#graph_data_mizoram").attr("data-y", [data[0].mizoramseats, ] + "," + [data[1].mizoramseats, ] + "," + [data[2].mizoramseats, ] + "," + [data[3].mizoramseats, ])
 
-    create_graph("graph_data_mp");
+    create_graph("graph_data_mizoram");
 }
 
 function create_graph(id) {
@@ -172,7 +169,7 @@ function create_graph(id) {
 	}
 	
     $("#" + id).highcharts({
-		colors: ['#f15a25', '#0071bd', '#22409A', '#555', '#D9B89C', '#aaeeee', '#ff0066', '#eeaaee',
+		colors: ['#22409A', '#006935', '#f15a25', '#555', '#D9B89C', '#aaeeee', '#ff0066', '#eeaaee',
       '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
 		
 		chart: {
