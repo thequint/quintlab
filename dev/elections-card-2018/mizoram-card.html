@@ -102,10 +102,10 @@ _comscore.push(COMSCORE_OPTS);
 					<div class="logo-text"><span class="my-vote-logo"><img src="assets/images/my-vote-logo.svg"></span><span class="vote-text">Results</span></div>
 					<ul>
 						<li>Rajasthan</li>
-						<li><span class="active">Mizoram</span></li>
-						<li>Madhya Pradesh</li>
 						<li>Telangana</li>
+						<li>Madhya Pradesh</li>
 						<li>Chhattisgarh</li>
+						<li><span class="active">Mizoram</span></li>
 					</ul>
 				</nav>
 			</div>
@@ -122,7 +122,7 @@ _comscore.push(COMSCORE_OPTS);
 				<div class="data-inner clearfix">
 
 					<div class="graph-data">
-	                    <div class="is-graph" id="graph_data_mizoram" data-x='"BJP","INC","AAP","OTH"'></div>
+	                    <div class="is-graph" id="graph_data_mizoram" data-x='"INC","MNF","BJP","OTH"'></div>
 	                </div>
 
 	                <div class="table-data">
@@ -139,39 +139,103 @@ _comscore.push(COMSCORE_OPTS);
 <script src="assets/js/slick.min.js"></script>	
 <script src="assets/js/functions.js"></script> 
 <script src="assets/js/spreadsheet.js"></script> 
-<script src="assets/js/functions-frame.js"></script>
+<!-- <script src="assets/js/functions-frame.js"></script> -->
 <script src="assets/js/custom.js"></script> 
 <!-- <script src="assets/js/data-frame.js?v=xyz"></script>	 -->
 
 <script type="text/javascript">
+function showInfo(data) {
+	document.getElementById("data_mizoram").innerHTML = 
+		"<tr>" 
+		+ "<td class='party-inc'>" + [ data[0].mizoramparty,] + "</td>" 
+		+ "<td class='party-inc'>" + [ data[0].mizoramseats,] + "</td>"  
+		+ "</tr>"
 
-	function showInfo(data) {
+		+"<tr>" 
+		+ "<td class='party-oth'>" + [ data[1].mizoramparty,] + "</td>" 
+		+ "<td class='party-oth'>" + [ data[1].mizoramseats,] + "</td>"  
+		+ "</tr>"
 
-		document.getElementById("data_mizoram").innerHTML = 
-			"<tr>" 
-			+ "<td class='party-bjp'>" + [ data[0].mizoramparty,] + "</td>" 
-			+ "<td class='party-bjp'>" + [ data[0].mizoramseats,] + "</td>"  
-			+ "</tr>"
+		+"<tr>" 
+		+ "<td class='party-bjp'>" + [ data[2].mizoramparty,] + "</td>" 
+		+ "<td class='party-bjp'>" + [ data[2].mizoramseats,] + "</td>"  
+		+ "</tr>"
 
-			+"<tr>" 
-			+ "<td class='party-inc'>" + [ data[1].mizoramparty,] + "</td>" 
-			+ "<td class='party-inc'>" + [ data[1].mizoramseats,] + "</td>"  
-			+ "</tr>"
+		+"<tr>" 
+		+ "<td class='party-oth2'>" + [ data[3].mizoramparty,] + "</td>" 
+		+ "<td class='party-oth2'>" + [ data[3].mizoramseats,] + "</td>"  
+		+ "</tr>";
 
-			+"<tr>" 
-			+ "<td class='party-oth'>" + [ data[2].mizoramparty,] + "</td>" 
-			+ "<td class='party-oth'>" + [ data[2].mizoramseats,] + "</td>"  
-			+ "</tr>"
+    $("#graph_data_mizoram").attr("data-y", [data[0].mizoramseats, ] + "," + [data[1].mizoramseats, ] + "," + [data[2].mizoramseats, ] + "," + [data[3].mizoramseats, ])
 
-			+"<tr>" 
-			+ "<td class='party-oth2'>" + [ data[3].mizoramparty,] + "</td>" 
-			+ "<td class='party-oth2'>" + [ data[3].mizoramseats,] + "</td>"  
-			+ "</tr>";
+    create_graph("graph_data_mizoram");
+}
+function create_graph(id) {
+	var selection_x = $("#" + id).data("x").split(',').map(JSON.parse);
+	var selection_y = $("#" + id).data("y").split(',').map(JSON.parse);
+	var graph_data = [];
 
-	    $("#graph_data_mizoram").attr("data-y", [data[0].mizoramseats, ] + "," + [data[1].mizoramseats, ] + "," + [data[2].mizoramseats, ] + "," + [data[3].mizoramseats, ])
-
-	    create_graph("graph_data_mizoram");
+	for (var i = 0; i < selection_x.length; i++) {
+		graph_data.push({
+			"name": selection_x[i],
+			"value": selection_y[i]
+		});
 	}
+	
+    $("#" + id).highcharts({
+		colors: ['#22409A', '#006935', '#f15a25', '#555', '#D9B89C', '#aaeeee', '#ff0066', '#eeaaee',
+      '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+		
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: 0,
+			plotShadow: false
+		},
+		title: {
+			text: '',
+			align: 'center',
+			verticalAlign: 'middle',
+			y: 40
+		},
+		tooltip: {
+			//pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			formatter: function() {
+      			return '<b>'+ this.point.name +'</b>: '+ this.point.y ;
+   			}
+		},
+		plotOptions: {
+			pie: {
+				dataLabels: {
+					enabled: true,
+					distance: -50,
+					style: {
+						fontWeight: 'bold',
+						color: 'white',
+						fontSize:'24px'
+						
+					}
+				},
+				// startAngle: -90,
+				startAngle: -280,
+				endAngle: 90,
+				center: ['50%', '72%'],
+				size: '135%'
+			}
+		},
+		series: [{
+			type: 'pie',
+			name: 'Browser share'+id,
+			// innerSize: '0%',
+			innerSize: '20%',
+			data: [
+				[graph_data[0].name, graph_data[0].value],
+				[graph_data[1].name, graph_data[1].value],
+				[graph_data[2].name, graph_data[2].value],
+				[graph_data[3].name, graph_data[3].value],
+			]
+		}]
+	});
+}
 </script>
 
 </body>

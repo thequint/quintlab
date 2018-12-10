@@ -39,28 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 	/*font-family: "Fira Sans Extra Condensed", sans-serif;*/
 	margin: 0;
 }
-body::after{
-	position: fixed;
-	content: '';
-	top: 0;
-	right: 0;
-	width: 72%;
-	height: 100%;
-	background: #BFB7B7;
-}
-
-/*body::before {
-  width: 0; 
-  height: 0;
-  content: '';
-  top: 50%;
-  margin-top: -100px;
-  right: 75%;
-  position: absolute;
-  border-top: 100px solid transparent;
-  border-bottom: 100px solid transparent; 
-  border-right:100px solid #BFB7B7; 
-}*/
 .wrapper {
 	height: 100%;
 }
@@ -125,7 +103,7 @@ body::after{
 }
 .logo-text {
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 25px;
 }
 .logo-text:after {
 	display: table;
@@ -159,16 +137,16 @@ body::after{
 }
 .side-nav li {
 	font-size: 34px;
-	line-height: 58px;
+	line-height: 50px;
 	font-weight: 700;
-	padding-left: 20px;
+	padding-left: 15px;
 }
 .side-nav li span.active {
 	border: 2px #ffcc33 solid;
 	border-radius: 10px; 
 	color: #ffcc33;
-	padding: 0 20px;
-	margin-left: -20px;
+	padding: 0 15px;
+	margin-left: -15px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	display: inline-block;
@@ -230,7 +208,7 @@ body::after{
 }
 .graph-data {
 	float: left;
-	width: 64%;
+	width: 62%;
 	/*padding-top: 13px;*/
 }
 .graph-data .highcharts-container,
@@ -243,8 +221,8 @@ body::after{
 .table-data {
 	margin-top: 110px;
 	float: left;
-	width: 36%;
-	padding: 0 33px 0 0;
+	width: 38%;
+	padding: 0 27px 0 0;
 }
 .table-data .party-bjp {
 	color: #f25910;

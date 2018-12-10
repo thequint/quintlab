@@ -18,8 +18,8 @@
 <link href="https://fonts.googleapis.com/css?family=Muli:400,800" rel="stylesheet">
 
 <link href="assets/css/base.css" rel="stylesheet" media="all">
-<link href="assets/css/theme.css" rel="stylesheet" media="all">
-<link href="assets/css/responsive.css" rel="stylesheet" media="all">
+<link href="assets/css/liveblog-theme.css" rel="stylesheet" media="all">
+<!-- <link href="assets/css/responsive.css" rel="stylesheet" media="all"> -->
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script src="assets/js/highcharts.js"></script>
@@ -92,50 +92,33 @@ _comscore.push(COMSCORE_OPTS);
 <!-- End Tag Manager-->
 
 </head>
-<body class="is-up" onload="setInterval('window.location.reload()', 60000);">
+<body onload="setInterval('window.location.reload()', 60000);">
+
+
 <section class="wrapper">
-	<div class="container">
-		<div class="left-container clearfix">
-			<div class="left-content">
-				<!-- <h1 class="side-quint-logo"><img src="assets/images/quint-logo.svg"></h1> -->
-				<nav class="side-nav">
-					<div class="logo-text"><span class="my-vote-logo"><img src="assets/images/my-vote-logo.svg"></span><span class="vote-text">Results</span></div>
-					<ul>
-						<li>Rajasthan</li>
-						<li>Telangana</li>
-						<li><span class="active">Madhya Pradesh</span></li>
-						<li>Chhattisgarh</li>
-						<li>Mizoram</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	
-		<div class="right-container clearfix">
-			<div class="right-content">
-				<div class="card-headline clearfix">
-                    <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
-                    <span class="state-headline">Madhya Pradesh</span>
-                    <!-- <h2></h2> -->
-                </div>
+	<div class="right-content">
+		<div class="card-headline clearfix">
+	        <span class="map"><img src="assets/images/map/madhya-pradesh.svg"></span>
+	        <span class="state-headline">Madhya Pradesh</span>
+	        <!-- <h2></h2> -->
+	    </div>
 
-				<div class="data-inner clearfix">
+		<div class="data-inner clearfix">
 
-					<div class="graph-data">
-	                    <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
-	                </div>
+			<div class="graph-data">
+	            <div class="is-graph" id="graph_data_mp" data-x='"BJP","INC","BSP","OTH"'></div>
+	        </div>
 
-	                <div class="table-data">
-	                    <table id="data_mp">
-	                    </table>
-	                </div>
-	                
-	            </div>
-			
-			</div>
-		</div>
+	        <div class="table-data">
+	            <table id="data_mp">
+	            </table>
+	        </div>
+	        
+	    </div>
+
 	</div>
 </section>
+
 <script src="assets/js/slick.min.js"></script>	
 <script src="assets/js/functions.js"></script> 
 <script src="assets/js/spreadsheet.js"></script> 
