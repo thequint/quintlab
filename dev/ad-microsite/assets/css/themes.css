@@ -738,6 +738,9 @@ img {
 	}
 }
 @media all and (max-width : 800px) {
+	.section.first:before {
+		top: 89%;
+	}
 	.section .header__banner {
 		max-width: 640px;
 	}
