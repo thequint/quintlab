@@ -21,7 +21,7 @@
     	hittrigger.addClass('inrwrpr');
     	clspos.addClass('inrwrpr');
     	$('.inrwrpr').wrapAll( "<div class='navwrp'>" );
-    	clspos.prepend('<a href="javascript:void(0)" class="mnuclose ion-close-round"><span>X</span></a>');
+    	clspos.prepend('<a href="javascript:void(0)" class="mnuclose ion-close-round"><span><i class="fa fa-times" aria-hidden="true"></i></span></a>');
     	$('body').prepend(overllay);
     	
  		

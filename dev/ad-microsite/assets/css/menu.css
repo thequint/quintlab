@@ -4,7 +4,7 @@
 }
 .navigation {
     float: right;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 .navigation nav ul {
@@ -21,7 +21,7 @@
 .navigation nav ul li a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px 13px;
+    padding: 10px 15px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -44,23 +44,24 @@
 
     .smobitrigger {
         color: #fff;
-        font-size: 30px;
+        font-size: 28px;
         line-height: 12px;
-        padding-right: 20px;
+        padding-right: 25px;
     }
 
     .mnuclose {
         font-size: 20px;
-        padding: 10px 20px;
         width: 100%;
+        padding: 10px 10px 5px 15px;
         background: rgba(0, 0, 0, 0.18);
     }
 
     .smobitrigger span,
     .mnuclose span {
-        font: 0/0 a;
+        /*font: 0/0 a;*/
+        font-size: 25px;
         text-shadow: none;
-        color: transparent;
+        /*color: transparent;*/
     }
 
     .navigation nav ul {
@@ -74,9 +75,11 @@
     .navigation nav ul li,
     .navigation nav ul li a {
         width: 100%;
+        font-size: 1.06em
     }
 
     .navigation nav ul li a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         /*padding-top: 5px;
         padding-bottom: 5px;*/
     }
