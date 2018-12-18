@@ -169,202 +169,169 @@
                             <h4><strong>Lorem Ipso Ad</strong> <span>300 x 250</span></h4>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
                         </div>
-                        <div class="ad-wrap__img"><img src="assets/images/300x250.jpg">
+                        <div class="ad-wrap__img"><!-- <img src="assets/images/300x250.jpg"> -->
                             
                             <!-- Start ad -->
-                            <!-- <div class="" style="margin:0 auto;width: 150px;height: 244px;position: relative;">
-                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
-                                <style>
-                                .iphonex_popup {
-                                    position: absolute;
-                                    bottom: 20px;
-                                    left: 30px;
-                                    width: 13vh;
-                                    z-index: 999999;
-                                    animation: shake 2s;
-                                    animation-iteration-count: infinite;
-                                    cursor: pointer;
-                                }
-                                .iphone,
-                                .close_img {
-                                    display: none;
-                                }
-                                .iphone img:hover {
-                                    animation-play-state: paused;
-                                    -webkit-animation-play-state: paused
-                                }
-                                .modal-content {
-                                    width: 900px;
-                                    height: 500px;
-                                    transform: translate(-50%);
-                                    left: 50%
-                                }
-                                .overlay {
-                                    z-index: 99999;
-                                    position: fixed;
-                                    bottom: 0;
+                            <style>
+                                .container .scratch-card {
+                                    top: 0px;
                                     left: 0;
-                                    width: 100vw;
-                                    height: 100vh;
-                                    background-color: #000;
-                                    opacity: 0.6;
-                                    display: none
+                                    width: 300px;
+                                    height: 250px;
+                                    margin: 0 auto;
+                                    line-height: 2em;
+                                    background: transparent;
                                 }
-                                .video_overlay {
-                                    position: fixed;
-                                    left: 50%;
-                                    top: 50%;
-                                    transform: translate(-50%, -50%);
-                                    display: none;
-                                    z-index: 99999;
-                                    width: 100vw;
-                                    height: 100vh;
-                                }
-                                #playpause_video {
-                                    width: 90vw;
-                                    height: 90vh;
-                                    position: fixed;
-                                    left: 50%;
-                                    top: 50%;
-                                    transform: translate(-50%, -50%)
-                                }
-                                .close_overlay {
-                                    width: 40px;
-                                    height: 40px;
-                                    line-height: 40px;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    right: 3px;
-                                    display: none;
-                                    position: fixed;
-                                    top: 3px;
-                                    background-color: #fff;
-                                    color: #000;
+                                .canvas .scratch-card {
+                                    top: 0px;
+                                    left: 0;
+                                    border: 3px solid yellow;
+                                    width: 300px;
+                                    height: 300px;
+                                    margin: 0 auto;
+                                    background: white;
+                                    -webkit-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    -o-user-select: none;
+                                    user-select: none;
                                     text-align: center;
-                                    z-index: 999999;
-                                    border-radius: 100%;
-                                    overflow: hidden
                                 }
-                                @keyframes shake {
-                                    0% {
-                                        transform: translate(1px, 1px) rotate(0deg)
-                                    }
-                                    3% {
-                                        transform: translate(-1px, -2px) rotate(-1deg)
-                                    }
-                                    6% {
-                                        transform: translate(-3px, 0px) rotate(1deg)
-                                    }
-                                    9% {
-                                        transform: translate(3px, 2px) rotate(0deg)
-                                    }
-                                    12% {
-                                        transform: translate(1px, -1px) rotate(1deg)
-                                    }
-                                    15% {
-                                        transform: translate(-1px, 2px) rotate(-1deg)
-                                    }
-                                    18% {
-                                        transform: translate(-3px, 1px) rotate(0deg)
-                                    }
-                                    21% {
-                                        transform: translate(3px, 1px) rotate(-1deg)
-                                    }
-                                    24% {
-                                        transform: translate(-1px, -1px) rotate(1deg)
-                                    }
-                                    27% {
-                                        transform: translate(1px, 2px) rotate(0deg)
-                                    }
-                                    30% {
-                                        transform: translate(1px, -2px) rotate(-1deg)
-                                    }
-                                }
-                                .close_img {
-                                    width: 30px;
-                                    height: 30px;
-                                    line-height: 27px;
-                                    font-size: 19px;
-                                    font-weight: bold;
-                                    left: 17vh;
-                                    /*position: fixed;*/
+                                #js-canvas {
                                     position: absolute;
-                                    bottom: 28vh;
-                                    background-color: #000;
-                                    color: red;
-                                    text-align: center;
-                                    z-index: 999999;
-                                    border-radius: 100%;
-                                    border: 2px solid red;
-                                    overflow: hidden;
+                                    cursor: url("coin.png"), auto;
                                 }
-                                @media only screen and (max-width: 600px) {
-                                    .iphonex_popup {
-                                        width: 13vh
-                                    }
-                                    .close_img {
-                                        left: 17vh;
-                                        bottom: 28vh;
-                                    }
-                                    #playpause_video {
-                                        width: 350px;
-                                        height: 350px;
-                                    }
-                                }
-                                .hide {
-                                    display: none;
-                                }
-                                .show {
-                                    display: block;
-                                }   
-                                </style>
+                            </style>
 
-                                <div class="is_iphonex_popup">
-                                    <div class="iphone" onclick="playVideo()">
-                                        <img src="https://www.thequint.com/quintlab/widgets/Vibrating_Mobile_Ad/iphonex.png" class="iphonex_popup">
+                            <div class="container scratch-card" id="js-container" style="width:300px;height:300px;position: absolute;top: 0;left: 0;text-align: center;">
+                                <canvas class="canvas scratch-card" id="js-canvas" width="300px" height="250px"></canvas>
+                                <div class="form scratch-card" style="visibility: hidden;background:white;border:2px solid #000;">
+                                    <h2>"Participate And Win Amazing Prizes"</h2>
+                                    <h3 style="margin-top:1em;">You can be a lucky winner</h3>
+                                    <h1 style="margin-top:0.5em;"><code>Register Now</code></h1>
+                                    <div style="margin-top:1em;">
+                                        <input type="text" name="code" placeholder="Enter Mail" style="text-align:center;">
+                                    </div>
+                                    <br>
+                                    <div style="margin-top:-1.8em;">
+                                        <input type="submit" value="Submit">
                                     </div>
                                 </div>
-                                <div class="overlay"></div>
-                                <div class="video_overlay">
-                                    <iframe id="playpause_video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div><a class="close_overlay" href="javascript:void(0);" onclick="pauseVideo()">X</a><a class="close_img" href="javascript:void(0);">X</a>
+                            </div>
 
-                                <script>
-                                jQuery(document).ready(function () {
-                                    jQuery(".iphone").toggle("fast");
-                                    jQuery(".close_img").toggle("fast");
-                                    jQuery(".iphonex_popup").click(function () {
-                                        jQuery(".iphone").toggle("fast");
-                                        jQuery(".close_img").toggle("fast");
-                                        jQuery(".video_overlay").toggle("fast");
-                                        jQuery(".overlay").toggle("fast");
-                                        jQuery(".close_overlay").toggle("fast");
-                                    });
-                                    jQuery(".close_overlay").click(function () {
-                                        jQuery(".video_overlay").toggle("fast");
-                                        jQuery(".overlay").toggle("fast");
-                                        jQuery(".close_overlay").toggle("fast");
-                                        jQuery(".iphone").toggle("fast");
-                                        jQuery(".close_img").toggle("fast");
-                                    });
-                                    jQuery(".close_img").click(function () {
-                                        jQuery(".iphone").toggle("fast");
-                                        jQuery(".close_img").toggle("fast");
-                                    });
-                                });
+                            <script> 
+                            (function () {
+                                "use strict";
+                                var isDrawing, lastPoint;
+                                var container = document.getElementById("js-container"),
+                                    canvas = document.getElementById("js-canvas"),
+                                    canvasWidth = canvas.width,
+                                    canvasHeight = canvas.height,
+                                    ctx = canvas.getContext("2d"),
+                                    image = new Image(),
+                                    brush = new Image();
+                                image.src = "scratch.jpg";
+                                image.onload = function () {
+                                    ctx.drawImage(image, 0, 0);
+                                    document.querySelectorAll(".form")[0].style.visibility = "visible";
+                                };
+                                brush.src = "coin.png";
+                                canvas.addEventListener("mousedown", handleMouseDown, false);
+                                canvas.addEventListener("touchstart", handleMouseDown, false);
+                                canvas.addEventListener("mousemove", handleMouseMove, false);
+                                canvas.addEventListener("touchmove", handleMouseMove, false);
+                                canvas.addEventListener("mouseup", handleMouseUp, false);
+                                canvas.addEventListener("touchend", handleMouseUp, false);
 
-                                function pauseVideo() {
-                                    document.getElementById("playpause_video").src = "";
+                                function distanceBetween(point1, point2) {
+                                    return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
                                 }
 
-                                function playVideo() {
-                                    document.getElementById("playpause_video").src = "https://www.youtube.com/embed/qN_9DnBh3hM?autoplay=1";
+                                function angleBetween(point1, point2) {
+                                    return Math.atan2(point2.x - point1.x, point2.y - point1.y);
                                 }
-                                </script>
-                            </div> -->
+
+                                function getFilledInPixels(stride) {
+                                    if (!stride || stride < 1) {
+                                        stride = 1;
+                                    }
+                                    var pixels = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+                                        pdata = pixels.data,
+                                        l = pdata.length,
+                                        total = (l / stride),
+                                        count = 0;
+                                    for (var i = count = 0; i < l; i += stride) {
+                                        if (parseInt(pdata[i]) === 0) {
+                                            count++;
+                                        }
+                                    }
+                                    return Math.round((count / total) * 100);
+                                }
+
+                                function getMouse(e, canvas) {
+                                    var offsetX = 0,
+                                        offsetY = 0,
+                                        mx, my;
+                                    if (canvas.offsetParent !== undefined) {
+                                        do {
+                                            offsetX += canvas.offsetLeft;
+                                            offsetY += canvas.offsetTop;
+                                        } while ((canvas = canvas.offsetParent));
+                                    }
+                                    mx = (e.pageX || e.touches[0].clientX) - offsetX;
+                                    my = (e.pageY || e.touches[0].clientY) - offsetY;
+                                    return {
+                                        x: mx,
+                                        y: my
+                                    };
+                                }
+
+                                function handlePercentage(filledInPixels) {
+                                    filledInPixels = filledInPixels || 0;
+                                    console.log(filledInPixels + "%");
+                                    if (filledInPixels > 50) {
+                                        canvas.parentNode.removeChild(canvas);
+                                    }
+                                }
+
+                                function handleMouseDown(e) {
+                                    isDrawing = true;
+                                    lastPoint = getMouse(e, canvas);
+                                }
+
+                                function handleMouseMove(e) {
+                                    if (!isDrawing) {
+                                        return;
+                                    }
+                                    e.preventDefault();
+                                    var currentPoint = getMouse(e, canvas),
+                                        dist = distanceBetween(lastPoint, currentPoint),
+                                        angle = angleBetween(lastPoint, currentPoint),
+                                        x, y;
+                                    for (var i = 0; i < dist; i++) {
+                                        x = lastPoint.x + (Math.sin(angle) * i) - 25;
+                                        y = lastPoint.y + (Math.cos(angle) * i) - 25;
+                                        ctx.globalCompositeOperation = "destination-out";
+                                        ctx.drawImage(brush, x, y);
+                                    }
+                                    lastPoint = currentPoint;
+                                    handlePercentage(getFilledInPixels(32));
+                                }
+
+                                function handleMouseUp(e) {
+                                    isDrawing = false;
+                                }
+                            })();
+                            jQuery(".canvas.scratch-card").mousedown(function () {
+                                jQuery(".canvas.scratch-card").delay(3500).hide(0);
+                            }); 
+                            </script>
 
                             <!-- end ad -->
+
+
 
                         </div>
                     </div>
