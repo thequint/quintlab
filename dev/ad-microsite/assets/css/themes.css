@@ -45,6 +45,9 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+.two, .three, .four, .five {
+  display:none;
+}
 .clearfix:after {
     content: " ";
     visibility: hidden;

@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Ad Microsite</title>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="format-detection" content="telephone=no">
-<meta name="description" content="Shop Sankari: Online shopping for sanskari clothes, sanskari makeup, sanskari footwear, troll-free keyboards. Buy everything you need to be Sanskari at Shopsanskari.com by Quint Neon.">
+<meta name="description" content="">
 <meta name="author" content="The Quint">
 <meta name="copyright" content="The Quint">
 
@@ -156,6 +157,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
 
     <!-- Section #03 -->
@@ -471,7 +475,27 @@
 
 </div>
 
-<div class="mobile-btm-left-ad">
+
+
+ 
+
+<div class="content two" data-id="2"> 
+  Content for slide 2
+</div> 
+
+<div class="content three" data-id="3"> 
+  Content for slide 3
+</div> 
+
+<div class="content four" data-id="4"> 
+  Content for slide 4
+</div> 
+
+<div class="content five" data-id="5"> 
+  Content for slide 5
+</div>
+
+<div class="content one" data-id="1">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <style>
     .iphonex_popup {
@@ -690,6 +714,11 @@
         focusOnSelect: true,
         prevArrow: $('.prev-first'),
         nextArrow: $('.next-first')
+    });
+
+    $('.slider-first-ad').on('afterChange', function(event, slick, currentSlide){   
+        $('.content').hide();
+        $('.content[data-id=' + (currentSlide + 1) + ']').show();
     });
 
     // Second

@@ -21,7 +21,7 @@
 .navigation nav ul li a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 15px 8px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
