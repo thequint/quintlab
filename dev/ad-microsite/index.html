@@ -1471,8 +1471,6 @@ $('.slider-third-content').slick({
 });
 
 
-
-
 // Interstitial ad
 $(".interstitial-ad-wrap .interstitial-ad-box").hide();
 // $(".interstitial-ad-wrap .interstitial-ad-box").eq(0).show();
@@ -1500,7 +1498,6 @@ $(".hori-close").on("click", function() {
     console.log("yes");
 });
 
-
 // Vertical ad
 $(".vertical-ad-wrap .vertical-ad-box").hide();
 
@@ -1512,6 +1509,13 @@ $(".vertical-btn-wrap li").on("click", function() {
 $(".vertical-close").on("click", function() {
     $(this).closest(".vertical-ad-box").hide();
     console.log("yes");
+});
+
+
+$(".slick-arrow").on("click", function() {
+    $(".interstitial-ad-wrap .interstitial-ad-box").hide();
+    $(".horizontal-ad-wrap .hori-ad-box").hide();
+    $(".vertical-ad-wrap .vertical-ad-box").hide();
 });
 
 
