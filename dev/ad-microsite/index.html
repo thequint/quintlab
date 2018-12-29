@@ -631,6 +631,7 @@
               player = new YT.Player("nfx_mwg_vd", {
                 host: "https://www.youtube.com",
                 videoId: "OVBjPpUlQrE",
+                origin: "https://quintlab.herokuapp.com",
                 playerVars: {
                   controls: 1,
                   autoplay: 0,
@@ -639,8 +640,7 @@
                   iv_load_policy: 3,
                   rel: 0,
                   showinfo: 0,
-                  ecver: 2,
-                  origin: "https://quintlab.herokuapp.com"
+                  ecver: 2
                 }
               });
               document.getElementById("plvd").onclick = function () {
