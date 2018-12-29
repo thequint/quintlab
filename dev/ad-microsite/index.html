@@ -71,14 +71,25 @@
             </div>
             <div class="header__banner--right">
                 <div class="banner-media">
-                    <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/P75-It-mX5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <!-- <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/P75-It-mX5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+                    <div class="media-img">
+                        <figure><img src="assets/images/video-gif.gif">
+                            <figcaption><span class="media-play-icon"><img src="assets/images/ico-video-y.svg"></span> <span class="media-play-text">Click to Play</span></figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 </section>
 
+<div class="modal-popup">
+    <div class="popup-box">
+        <div class="popup-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/P75-It-mX5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <span class="popup-close"><i class="fa fa-times"></i></span>
+    </div>
 
+</div>
 
 <!-- Section #02 -->
 <section class="section second top-ad-margin">
@@ -1340,7 +1351,7 @@
                 <div class="slider-box">
                     <ul class="slider slider-third-ad">
                         <li><img src="assets/images/590x300.jpg"></li>
-                        <li><img src="assets/images/590x300-3.jpg"></li>
+                        <li><img src="assets/images/ad-gif.gif"></li>
                     </ul>
                 </div>
                 <div class="slider-content">
@@ -1401,6 +1412,15 @@
 <script type="text/javascript" src="assets/js/wow.min.js"></script>
 <script type="text/javascript" src="assets/js/menu.js"></script>
 <script type="text/javascript">
+
+$(".media-play-icon").on("click", function() {
+    $(".modal-popup").show();
+});
+
+$(".popup-close").on("click", function() {
+    $(".modal-popup").hide();
+});
+
 jQuery(document).ready(function($) {
     $('.smobitrigger').smplmnu();
 });
