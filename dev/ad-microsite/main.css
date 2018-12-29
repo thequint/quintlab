@@ -1,0 +1,155 @@
+/*html, body{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}*/
+#container_1{
+	width:320px;
+	height:480px;
+	background: #333333;
+	margin:0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#landing{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 31;
+}
+#landing_tt{
+	top:-40px;
+}
+#lockup{
+	position: absolute;
+	opacity: 0;
+}
+#btn{
+	position: absolute;
+	margin-left:-75px;
+	left:50%;
+	top:380px;
+}
+#output{
+	width: 100%;
+	text-align: center;
+	color: black;
+	position: absolute;
+	bottom:10px;
+	font-family: "Arial, Helvetica", sans-serif;
+	font-size:15px;
+}
+#container_1 img{
+	position: absolute;
+	transform: scale(0.5);
+	transform-origin: top left;
+}
+#container_1 iframe{position: absolute;}
+#landing_netflixlogo{
+	top:429px;
+	left:109px;
+}
+#tilt, #ruthless, #righteous{
+	opacity: 0;
+}
+#tilt{top:10px;}
+#bg{left:-49px;}
+.youtube{display: none;}
+#fg{left:-142px;}
+#clickthrough{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    z-index: 30;
+}
+#closebtn{
+	position: absolute;
+    z-index: 90;
+    width:50px;
+    height: 50px;
+    right: 0;
+    visibility: hidden;
+	opacity: 0;
+	top:0;
+}
+#closebtn img {
+    left: 12px;
+    top: 13px;
+}
+#soundbtn{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	z-index: 90;
+	visibility: hidden;
+	opacity: 0;
+	top:0;
+}
+#soundbtn img{
+	position: absolute;
+	width: 45px;
+	left: 15px;
+	top: 13px;
+}
+#soundoff{
+	display: none;
+}
+#netflix-wipe{
+	position: absolute;
+	z-index:20;
+	width: 320px;
+	height: 480px;
+	background: url(images/ribbon.png) 0 0;
+	top:0;
+	left:0;
+}
+
+#netflix-wipe.wipe{
+	animation: netflixWipe 1.8s steps(29) forwards;
+}
+@keyframes netflixWipe {
+    100% { background-position-y: -13920px; }
+}
+#vid_lastframe, #vid_lastframe_right{
+	position: absolute;
+	z-index: 19;
+	display: none;
+}
+#landing_tagline {
+    margin-left: -19px;
+    left: 50%;
+    top: 20px;
+}
+#bushes_right{left:320px;}
+#bushes_left{left:914px;}
+#video{position: absolute;}
+#loading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: black;
+}
+#loading img{
+	width: 240px;
+    left: 50%;
+    margin-left: -60px;
+    top: 180px;
+}
+#preload{
+	width: 320px;
+	height: 480px;
+	position: absolute;
+	z-index:50;
+	background:white;
+	background-size: 50px 50px;
+	top:0;
+}
+#preload img {
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+}

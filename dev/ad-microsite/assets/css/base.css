@@ -7,7 +7,8 @@
 	padding: 0;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-img {
+.section img,
+.container img {
 	width: auto\9;
 	height: auto;
 	max-width: 100%;

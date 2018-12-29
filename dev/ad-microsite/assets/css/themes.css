@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	font-family: 'Avenir LT Std 95 Black';
 }
-img {
+.section img,
+.container img {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -47,17 +48,31 @@ img {
   position: relative;
 }
 
+.ad-is-mobile {
+	display: none;
+}
+.ad-is-desktop {
 
+}
+@media all and (max-width : 959px) {
+	.ad-is-mobile {
+		display: block;
+		text-align: center;
+	}
+	.ad-is-desktop {
+		display: none;
+	}
+}
 .slider-section {
-	padding: 50px 0 100px;
+	padding: 50px 0 50px;
 }
 .slider-section-third {
-	padding: 50px 0 100px;
+	padding: 100px 0 100px;
 }
 
 .hori-ad-box,
 .vertical-ad-box {
-	margin-bottom: 100px;
+	/*margin-bottom: 100px;*/
 }
 
 .interstitial-ad-wrap {
@@ -378,8 +393,8 @@ img {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	/*background-color: rgba(255, 255, 255, 0.7);*/
-	background-color: #0068ff;
+	background-color: rgba(0, 104, 255, 0.7);
+	/*background-color: #0068ff;*/
 	/*min-height: 50px;*/
 	font-size: 22px;
 	padding: 10px 10px
