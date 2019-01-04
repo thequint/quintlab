@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>MTC Promotions</title>
+<title>MTC The Change UC</title>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
@@ -12,13 +12,11 @@
 <meta name="author" content="">
 <!-- Fav and Touch Icons -->
 <link rel="icon" href="assets/images/favicon/favicon.ico">
+
 <!-- Font Awesome for Icon -->
-<link href="assets/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
-<link href="assets/css/check-radio.css" rel="stylesheet">
 <link href="assets/css/styles.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="https://fea.assettype.com/thequint/assets/fonts-86f8c78cce.css" type="text/css">
 <link rel="stylesheet" media="all" type="text/css" href="https://fea.assettype.com/thequint/assets/application-0e41b55d86.css">
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -343,7 +341,7 @@ display:block;
 </style>
 </head>
 
-<body onload="adjust_iframe_height()">
+<body>
 <a class="nav-bar" href="javascript:void(0);"><span>Menu</span></a>
 <nav class="top-nav">
     <a class="close-nav" href="javascript:void(0);">Close</a>
@@ -390,8 +388,6 @@ display:block;
     Test
     </div> -->
 
-
-
     <section class="section-fluid-top" data-reactid="150">
         <div class="container" data-reactid="151">
             <div class="row" data-reactid="152">
@@ -401,9 +397,6 @@ display:block;
             </div>
         </div>
     </section>
-
-
-
 
     <div style="width:100%;text-align:center;">
         <div class="bottom_ad">
@@ -423,117 +416,7 @@ display:block;
 </div>
 
 <script src="assets/js/jquery.min.js"></script>
-
-<script src="assets/js/icheck.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
-<script type="text/javascript" src="assets/js/functions.js"></script>
-<script>
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
-    authDomain: "dashboard-51ea4.firebaseapp.com",
-    databaseURL: "https://dashboard-51ea4.firebaseio.com",
-    projectId: "dashboard-51ea4",
-    storageBucket: "dashboard-51ea4.appspot.com",
-    messagingSenderId: "1062965330854"
-};
-firebase.initializeApp(config);
-// Initialize Cloud Firestore through Firebase
-var db = firebase.firestore();
-// Disable deprecated features
-db.settings({
-    timestampsInSnapshots: true
-});
-var total = 0;
-$('input').on('ifChecked', function(event) {
-    //$(".demo-list li label").removeClass("active");
-    //$(this).addClass("active");
-    total = 0;
-    $(this).parents('ul').find("input[Type='hidden']").val(this.value);
-    $(".demo-list").each(function() {
-        total += parseInt($(this).find("input[type='hidden']").val());
-    });
-    $("#lblTotalMarks").text(total);
-});
-$("#btn").on("click", function() {
-    var total_score = $('#lblTotalMarks').html();
-    // call database
-
-    console.log(total_score + "|" + $("#form-name").val() + "|" + $("#form-no").val())
-
-    var obj = {};
-    obj['name'] = $("#form-name").val();
-    obj['phone'] = $("#form-no").val();
-    obj['score'] = total_score;
-
-    db.collection('UC_quiz').doc($("#form-name").val()).set(obj).then(function(result) {
-        console.log('Data stored in firebase cloud firestore')
-        console.log(result)
-        //  $('.submit_message').html("success:" + result);
-        //  location.href="edit.html?post="+movie.slug;    
-    }).catch(function(error) {
-        console.log(error)
-        //      $('.submit_message').html("Error: " + error);
-    })
-
-    $(".total-score").html(total_score);
-    if ($("#lblTotalMarks").text() <= 3) { //0-3
-        $(".lessGreater div").hide();
-        $(".lessGreater div.minimum").show();
-    } else if ($("#lblTotalMarks").text() > 3 && $("#lblTotalMarks").text() <= 7) { //4-6
-        $(".lessGreater div").hide();
-        $(".lessGreater div.middle").show();
-    } else if ($("#lblTotalMarks").text() > 7) { //10-12
-        $(".lessGreater div").hide();
-        $(".lessGreater div.maximum").show();
-    } else if ($("#lblTotalMarks").text() < 1) {
-        $(".lessGreater div").hide();
-    }
-    $(".demo-list li label").addClass("answer");
-    $(".demo-list").find(".right").addClass("active");
-    adjust_iframe_height();
-});
-
-$(document).ready(function() {
-    var callbacks_list = $('.demo-callbacks');
-    $('.demo-list input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event) {
-        callbacks_list.prepend('<p><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</p>');
-    }).iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%'
-    });
-    // Check Active
-    $(".demo-list li label").click(function() {
-        $(this).parents("ul").find("label").removeClass("active");
-        $(this).addClass("active");
-        $(this).removeClass("answer");
-    });
-    $(".iCheck-helper").click(function() {
-        $(this).parents("label").click();
-    });
-    /* $("form").on('submit', function (e) {
-//ajax call here
-console.log("yes");
-$('.login-form').hide();
-$('.start-quiz').show();
-//stop form submission
-e.preventDefault();
-}); */
-
-});
-</script>
-<script src="https://fea.quintype.com/thequint/assets/iframeResizer.contentWindow.min_0bb6a81590ea182e4a7b799f4b6b4821.js"></script>
-<script>
-function adjust_iframe_height() {
-    var actual_height = document.body.scrollHeight;
-    console.log("height is", actual_height);
-    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
-    //* allows this to post to any parent iframe regardless of domain
-}
-</script>
+<script src="assets/js/functions.js"></script>
 <noscript>
     <img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" alt="" />
 </noscript>

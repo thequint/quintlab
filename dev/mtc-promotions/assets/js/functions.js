@@ -97,6 +97,7 @@ function slug_2_init() {
         elements.forEach(function(element) {
             $('#more-stories').append(element);
         });
+        $(".loader").hide();
     });
 }
 
