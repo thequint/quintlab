@@ -500,6 +500,334 @@ h6 {
     float: left;
     line-height: 36px;
 }
+.view-demo-txt {
+	float: left;
+	font-size: 18px;
+	line-height: 30px;
+	font-family: 'Avenir LT Std 95 Black';
+}
+.device-icon {
+	float: left;
+	margin-left: 10px;
+	/*position: absolute;
+	left: 10px;
+	bottom: 2px;*/
+	/*width: 100px;*/
+	/*background-color: #ccc*/
+}
+.device-icon .icon-desktop,
+.device-icon .icon-mobile {
+	height: 30px;
+	display: inline-block;
+	/*float: left;*/
+	background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.device-icon .icon-desktop {
+	width: 35px;
+    margin-right: 3px;
+	background-image: url(../images/icon-desktop.svg);
+}
+.device-icon .icon-mobile {
+	width: 13px;
+	background-image: url(../images/icon-mobile.svg);
+}
+
+
+
+.modal-ads-desktop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 34, 57, 0.8); /*#122239*/
+    z-index: 99999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+	color: #fff;
+    
+}
+.modal-ads-desktop .desktop-box {
+    position: fixed;
+    width: 1002px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    /*background-color: #000;*/
+    /*background-image: url(../images/icon-desktop.svg);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;*/
+}
+.modal-ads-desktop .desktop-box img {
+	width: 100%
+}
+
+.modal-ads-desktop .desktop-box__screen {
+	position: absolute;
+	top: 28px;
+	left: 101px;
+	width: 800px;
+    height: 476px;
+	background-color: #ccc;
+	background-image: url(../images/desktop-bg.jpg);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.modal-ads-desktop .desktop-box__screen iframe {
+	width: 800px;
+    height: 476px;
+    z-index: 5;
+    position: relative;
+}
+.modal-ads-desktop .desktop-box__screen:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-ads-desktop .desktop-box__screen iframe.interstitial-iframe-mowgli-360 {
+	height: 590px;
+	width: 960px;
+    position: absolute;
+    left: 4%;
+    right: 0;
+    top: 8px;
+    margin: 0 auto;
+
+	-ms-transform: scale(0.78);
+    -moz-transform: scale(0.78);
+    -o-transform: scale(0.78);
+    -webkit-transform: scale(0.78);
+    transform: scale(0.78);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.modal-ads-desktop .desktop-box__screen iframe.interstitial-iframe-tilt {
+	height: 480px;
+	position: absolute;
+    left: 9%;
+    right: 0;
+    top: 11.5%;
+    margin: 0 auto;
+
+	-ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.modal-ads-desktop .desktop-box__screen iframe.iframe-adidas {
+	height: 270px;
+	width:964px;
+
+    -ms-transform: scale(0.83);
+    -moz-transform: scale(0.83);
+    -o-transform: scale(0.83);
+    -webkit-transform: scale(0.83);
+    transform: scale(0.83);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.modal-ads-desktop .desktop-box__screen iframe.iframe-mowgli-banner {
+	height: 270px;
+	width:964px;
+	
+    -ms-transform: scale(0.89);
+    -moz-transform: scale(0.89);
+    -o-transform: scale(0.89);
+    -webkit-transform: scale(0.89);
+    transform: scale(0.89);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.modal-ads-desktop .desktop-close {
+    width: 35px;
+    height: 35px;
+    line-height: 38px;
+    font-size: 23px;
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e50913;
+    color: #fff;
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.65);
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal-ads-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 34, 57, 0.8); /*#122239*/
+    z-index: 99999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+	color: #fff;
+    
+}
+.modal-ads-mobile .mobile-box {
+    position: fixed;
+    /*width: 300px;*/
+    width: 350px;
+    height: auto;
+    left: 50%;
+    top: 50.5%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.modal-ads-mobile .mobile-box img {
+	width: 100%
+}
+.modal-ads-mobile .mobile-box__screen {
+	position: absolute;
+	top: 48px;
+    left: 16px;
+    width: 320px;
+    height: 547px;
+	background-color: #ccc;
+	background-image: url(../images/mobile-bg.jpg);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.modal-ads-mobile .mobile-box__screen iframe {
+	width: 100%;
+    height: 547px;
+    z-index: 5;
+    position: relative;
+}
+
+.modal-ads-mobile .mobile-box__screen:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+
+.modal-ads-mobile .mobile-close {
+    width: 35px;
+    height: 35px;
+    line-height: 38px;
+    font-size: 23px;
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e50913;
+    color: #fff;
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-ads-mobile .mobile-box__screen iframe.interstitial-iframe-mowgli-360 {
+	height: 590px;
+	width: 100%;
+    position: absolute;
+    left: 18px;
+    right: 0;
+    top: 18px;
+    margin: 0 auto;
+
+	-ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section .container {
     margin: 0 auto;
     max-width: 1100px;
