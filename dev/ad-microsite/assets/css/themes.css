@@ -500,15 +500,27 @@ h6 {
     float: left;
     line-height: 36px;
 }
+.view-demo-wrap {
+
+}
+.view-demo-btn {
+	/*height: 40px;*/
+	border-radius: 4px;
+	padding: 7px 11px 0;
+	display: inline-block;
+	background-color: #132238
+}
+
 .view-demo-txt {
+	color: #fff;
 	float: left;
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 30px;
 	font-family: 'Avenir LT Std 95 Black';
 }
 .device-icon {
 	float: left;
-	margin-left: 10px;
+	margin-left: 6px;
 	/*position: absolute;
 	left: 10px;
 	bottom: 2px;*/
@@ -517,7 +529,7 @@ h6 {
 }
 .device-icon .icon-desktop,
 .device-icon .icon-mobile {
-	height: 30px;
+	height: 25px;
 	display: inline-block;
 	/*float: left;*/
 	background-size: 100%;
@@ -526,17 +538,20 @@ h6 {
     cursor: pointer;
 }
 .device-icon .icon-desktop {
-	width: 35px;
-    margin-right: 3px;
-	background-image: url(../images/icon-desktop.svg);
+	width: 43px;
+	background-image: url(../images/popup-desktop.svg);
 }
 .device-icon .icon-mobile {
-	width: 13px;
-	background-image: url(../images/icon-mobile.svg);
+	width: 12px;
+	margin-left: 3px;
+	background-image: url(../images/popup-mobile.svg);
 }
 
 
 
+
+
+/* Modal Popup desktop */
 .modal-ads-desktop {
     position: fixed;
     width: 100%;
@@ -574,12 +589,31 @@ h6 {
 	left: 101px;
 	width: 800px;
     height: 476px;
+    overflow: hidden;
 	background-color: #ccc;
 	background-image: url(../images/desktop-bg.jpg);
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
 }
+
+.modal-ads-desktop .desktop-box__screen.bg-slide-in-out {
+	background-image: url(../images/bg-slide-in-out.jpg);
+}
+.modal-ads-desktop .desktop-box__screen.bg-adidas {
+	background-image: url(../images/bg-adidas.jpg);
+}
+.modal-ads-desktop .desktop-box__screen.bg-mowgli-banner {
+	background-image: url(../images/bg-mowgli-banner.jpg);
+}
+
+
+.modal-ads-desktop .desktop-box__screen.bg-expandable-btm {
+	background-image: url(../images/bg-expandable-btm.jpg);
+}
+
+
+
 .modal-ads-desktop .desktop-box__screen iframe {
 	width: 800px;
     height: 476px;
@@ -598,7 +632,23 @@ h6 {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modal-ads-desktop .desktop-close {
+    width: 35px;
+    height: 35px;
+    line-height: 38px;
+    font-size: 23px;
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e50913;
+    color: #fff;
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.65);
+}
 
 .modal-ads-desktop .desktop-box__screen iframe.interstitial-iframe-mowgli-360 {
 	height: 590px;
@@ -642,15 +692,35 @@ h6 {
     transform-origin: 0 0;
 }
 
+.modal-ads-desktop .desktop-box__screen iframe.iframe-slide-in-out {
+	width: 900px;
+    height: 535px;
+    left: 94px;
+    top: 164px;
+
+    -ms-transform: scale(0.68);
+    -moz-transform: scale(0.68);
+    -o-transform: scale(0.68);
+    -webkit-transform: scale(0.68);
+    transform: scale(0.68);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
 .modal-ads-desktop .desktop-box__screen iframe.iframe-adidas {
 	height: 270px;
 	width:964px;
+	left: 100px;
+    top: 69px;
 
-    -ms-transform: scale(0.83);
-    -moz-transform: scale(0.83);
-    -o-transform: scale(0.83);
-    -webkit-transform: scale(0.83);
-    transform: scale(0.83);
+    -ms-transform: scale(0.623);
+    -moz-transform: scale(0.623);
+    -o-transform: scale(0.623);
+    -webkit-transform: scale(0.623);
+    transform: scale(0.623);
 
     -ms-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
@@ -661,12 +731,14 @@ h6 {
 .modal-ads-desktop .desktop-box__screen iframe.iframe-mowgli-banner {
 	height: 270px;
 	width:964px;
+	left: 120px;
+    top: 69px;
 	
-    -ms-transform: scale(0.89);
-    -moz-transform: scale(0.89);
-    -o-transform: scale(0.89);
-    -webkit-transform: scale(0.89);
-    transform: scale(0.89);
+    -ms-transform: scale(0.623);
+    -moz-transform: scale(0.623);
+    -o-transform: scale(0.623);
+    -webkit-transform: scale(0.623);
+    transform: scale(0.623);
 
     -ms-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
@@ -675,22 +747,85 @@ h6 {
     transform-origin: 0 0;
 }
 
-.modal-ads-desktop .desktop-close {
-    width: 35px;
-    height: 35px;
-    line-height: 38px;
-    font-size: 23px;
-    font-weight: 900;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: #e50913;
-    color: #fff;
-    text-align: center;
-    border-radius: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.65);
+
+.modal-ads-desktop .desktop-box__screen iframe.iframe-top-bottom-expandable {
+	width: 970px;
+	height: 550px;
+	left: 10px;
+	top: 70px;
+
+    -ms-transform: scale(0.803);
+    -moz-transform: scale(0.803);
+    -o-transform: scale(0.803);
+    -webkit-transform: scale(0.803);
+    transform: scale(0.803);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.modal-ads-desktop .desktop-box__screen iframe.iframe-scratch-ad {
+	width: 310px;
+	height: 260px;
+	position: absolute;
+	right: -122px;
+	top: 82px;
+	/*left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);*/
+
+	-ms-transform: scale(0.58);
+    -moz-transform: scale(0.58);
+    -o-transform: scale(0.58);
+    -webkit-transform: scale(0.58);
+    transform: scale(0.58);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+.modal-ads-desktop .desktop-box__screen iframe.iframe-300-600-slide {
+	width: 1209px;
+    height: 620px;
+    right: 0;
+    top: 76px;
+
+    -ms-transform: scale(0.655);
+    -moz-transform: scale(0.655);
+    -o-transform: scale(0.655);
+    -webkit-transform: scale(0.655);
+    transform: scale(0.655);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.modal-ads-desktop .desktop-box__screen iframe.iframe-sidekick {
+	width: 1209px;
+    height: 620px;
+    right: 0;
+    top: 76px;
+
+    -ms-transform: scale(0.655);
+    -moz-transform: scale(0.655);
+    -o-transform: scale(0.655);
+    -webkit-transform: scale(0.655);
+    transform: scale(0.655);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 
 
@@ -698,11 +833,7 @@ h6 {
 
 
 
-
-
-
-
-
+/* Mobile */
 .modal-ads-mobile {
     position: fixed;
     width: 100%;
@@ -715,7 +846,6 @@ h6 {
     left: 0;
     display: none;
 	color: #fff;
-    
 }
 .modal-ads-mobile .mobile-box {
     position: fixed;
@@ -741,13 +871,15 @@ h6 {
     background-position: top;
     background-repeat: no-repeat;
 }
+.modal-ads-mobile .mobile-box__screen.bg-mobile-scratch {
+	background-image: url(../images/bg-mobile-scratch.jpg);
+}
 .modal-ads-mobile .mobile-box__screen iframe {
 	width: 100%;
     height: 547px;
     z-index: 5;
     position: relative;
 }
-
 .modal-ads-mobile .mobile-box__screen:after {
 	position: absolute;
 	content: '';
@@ -760,8 +892,6 @@ h6 {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.65);
 }
-
-
 .modal-ads-mobile .mobile-close {
     width: 35px;
     height: 35px;
@@ -779,7 +909,6 @@ h6 {
     cursor: pointer;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
 }
-
 .modal-ads-mobile .mobile-box__screen iframe.interstitial-iframe-mowgli-360 {
 	height: 590px;
 	width: 100%;
@@ -802,7 +931,34 @@ h6 {
     transform-origin: 0 0;
 }
 
+.modal-ads-mobile .mobile-box__screen iframe.interstitial-iframe-tilt {
+	height: 480px;
+	position: absolute;
+    left: 5%;
+    right: 0;
+    top: 11.5%;
+    margin: 0 auto;
 
+	-ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.modal-ads-mobile .mobile-box__screen iframe.iframe-scratch-ad {
+	width: 310px;
+    height: 260px;
+    position: absolute;
+    left: 51%;
+    top: 58px;
+    transform: translate3d(-50%, 0, 0);
+}
 
 
 
@@ -1487,20 +1643,20 @@ h6 {
     .section .ad-slider-right {
         width: 100%;
         height: auto;
-        height: 260px;
+        height: 300px;
         background-color: #eddddd;
     }
     .slider-content,
 	.section .ad-slider-right,
 	.section .ad-slider-right-bg:before {
-		height: 260px;
+		height: 300px;
 	}
 
     .section .ad-slider-left {
         width: 100%;
     }
     .section .ad-slider-left-bg:before {
-    	height: 256px;
+    	height: 300px;
     }
 
     .ad-slider-left .slider-box {
@@ -1572,13 +1728,15 @@ h6 {
     }
 
     .slider-box .slider-content__arrow {
-        right: 10px;
+    	top: 10px;
+        left: 10px;
         bottom: 10px;
-        width: 90px;
+        width: 70px;
     }
 
     .section .ad-slider-left .slider-box .slider-content__arrow {
-        left: 10px;
+        right: 10px;
+        left: inherit;
     }
 
     .slider-box {
@@ -1622,7 +1780,7 @@ h6 {
     	padding-bottom: 175px;
     }
     .slider-section-third {
-        padding: 0 0 130px;
+        padding: 0 0 170px;
     }
 
     .slider-section {
@@ -1681,7 +1839,7 @@ h6 {
         padding: 0 0 120px;
     }
     .slider-section-third {
-        padding: 0 0 55px;
+        padding: 0 0 100px;
     }
     .slider-box {
         right: 20px
