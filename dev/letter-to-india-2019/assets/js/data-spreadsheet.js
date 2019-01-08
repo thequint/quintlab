@@ -64,22 +64,12 @@ function display_data() {
             cat_class = "";
       }
 		console.log(cur_filter.indexOf(cat_no));
-		if(cur_filter.indexOf(cat_no)>-1)
-			{
-		$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><div class='valign'><h3 class='topic'><span>" + sheet_data[index].Topic + "</span></h3><h3 class='location'>" + sheet_data[index].Location + "</h3></div></div></div>");
-		
-		/*if((sheet_data[index].Location) && (sheet_data[index].Topic))
-			{
-		  $("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Location + "</h3><h3>" + sheet_data[index].Topic + "</h3></div></div>");
-			}
-		else if(sheet_data[index].Location)
-			{
-			 $("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Location + "</h3></div></div>");	
-			}
-		else
-			{
-		$("#listData").append("<div class='" + cat_class + "'><div class='list-el'><h3>" + sheet_data[index].Topic + "</h3></div></div>");		
-			}*/
+		if(cur_filter.indexOf(cat_no)>-1) {
+			// $("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><div class='valign'><h3 class='topic'><span>" + sheet_data[index].Topic + "</span></h3><h3 class='location'>" + sheet_data[index].Location + "</h3></div></div></div>");
+
+			$("#listData").append("<div class='" + cat_class + "'><div class='list-el' data-video='" + sheet_data[index].Video + "' data-message='" + sheet_data[index].Message + "' data-name='" + sheet_data[index].Name + "' data-deg='" + sheet_data[index].Deg + "' data-location='" + sheet_data[index].Location + "' data-story='" + sheet_data[index].Story + "'><div class='valign'><h3 class='location'>" + sheet_data[index].Location + "</h3></div></div></div>");
+
+
 			}
 	}
 

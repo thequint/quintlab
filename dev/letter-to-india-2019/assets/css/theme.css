@@ -487,6 +487,7 @@ right: 54px;
 }
 
 .valign {
+	font-size: 1.25em;
     position: relative;
     top: 55%;
     -webkit-transform: translateY(-50%);
