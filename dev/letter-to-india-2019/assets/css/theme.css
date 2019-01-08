@@ -97,7 +97,7 @@ h6 {
 
 .container.lti-container {
     max-width: 800px;
-    min-height: 600px;
+    /*height: 600px;*/
     margin: 0 auto;
     position: relative;
     padding: 60px 0 0;
