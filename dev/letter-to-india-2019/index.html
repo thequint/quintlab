@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#fff" />
+<title>Letter to India – The Quint</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="copyright" content="The Quint">
+<meta name="publisher" content="The Quint">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+
+<!-- Custom styles for this template -->
+<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+<!-- <link href="assets/css/bg.css" rel="stylesheet" media="all"> -->
+<link href="assets/css/base.css" rel="stylesheet" media="all">
+<link href="assets/css/slick.css" rel="stylesheet" media="all">
+<link href="assets/css/theme.css" rel="stylesheet" media="all">
+<link href="assets/css/responsive.css" rel="stylesheet" media="all">
+<script type='text/javascript'>
+window.talktype = window.talktype || function(f) {
+    (talktype.q = talktype.q || []).push(arguments);
+};
+</script>
+<script src='https://fea.assettype.com/quintype-metype/assets/application.js'></script>
+<!-- Google Analytics -->
+<script>
+var gaTrackerCode = 'UA-58739020-1';
+if (gaTrackerCode != null) {
+    (function(i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', gaTrackerCode, 'auto');
+    ga('send', 'pageview'); }
+</script>
+<!-- Begin comScoreTag -->
+<script>
+window.COMSCORE_OPTS = { c1: "2", c2: "20519288" };
+var _comscore = _comscore || [];
+_comscore.push(COMSCORE_OPTS);
+(function() {
+    var s = document.createElement("script"),
+        el = document.getElementsByTagName("script")[0];
+    s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" alt="" />
+</noscript>
+    <!-- End comScore Tag -->
+</head>
+
+<body>
+
+<!-- <div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div> -->
+<div id="preloader"></div>
+
+<div class="container lti-container loading">
+    <div class="satellite-container">
+        <div class="satellite-inner-container"> <img class="satellite" src="assets/images/satellite.png" alt="satellite">
+            <!-- <div class="antina"><img alt="antina" src="assets/images/antina.png"></div> -->
+            <a id="btn_ugc" class="btn-write-letter hvr-pulse-grow" href="javascript:void(0)"><img src="assets/images/btn-wright-letter.png" alt="Write a Letter"></a>
+
+            <!-- <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="fire fire-left"></div>
+            <div class="fire fire-mid"></div>
+            <div class="fire fire-right"></div> -->
+
+            <div class="el-container">
+                <div class="slider-bg">
+                    <div class="from-txt">From:</div>
+                    <div class="el-slider" id="listData"> </div>
+                </div>
+            </div>
+            <ul class="filter">
+                <li class="filter-audio" data-filter="audio"><a href="javascript:void(0);"><img src="assets/images/filter-audio.png" alt="Audio Filter"></a></li>
+                <li class="filter-video" data-filter="video"><a href="javascript:void(0);"><img src="assets/images/filter-video.png" alt="Video Filter"></a></li>
+                <li class="filter-text" data-filter="text"><a href="javascript:void(0);"><img src="assets/images/filter-text.png" alt="Text Filter"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="globe spin loading"> <img src="assets/images/globe.png" alt="globe"> </div> -->
+
+<div class="card-modal" id="card_Modal">
+    <div class="modal-box"> <a id="close_card" class="close-card" href="javascript:void(0);"><i class="fa fa-times"></i></a>
+        <div class="modal-content">
+            <div class="data-video">
+                <div class="frame-video"> </div>
+            </div>
+            <div class="data-message">
+                <p><span></span> <a class="data-story" href="#" target="_blank">Read Full Letter</a></p>
+            </div>
+            <h3 class="data-name"></h3>
+            <h4 class="data-deg"></h4>
+            <h5 class="data-location"></h5>
+        </div>
+    </div>
+</div>
+
+<div class="card-modal" id="ugc_Modal">
+    <div class="modal-box"> <a id="close_ugc" class="close-card" href="javascript:void(0);"><i class="fa fa-times"></i></a>
+        <div class="modal-content">
+            <div class="form-content">
+                <div id="contribution-container" data-metype-account-id="1" data-metype-host="https://www.metype.com/"></div>
+                <script type="text/javascript">
+                talktype(function() {
+                    talktype.contributionWidgetIframe(document.getElementById("contribution-container"));
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/slick.js"></script>
+<script type="text/javascript" src="assets/js/spreadsheet.js"></script>
+<script type="text/javascript" src="assets/js/data-spreadsheet.js"></script>
+<script type="text/javascript" src="assets/js/functions.js"></script>
+<script>
+jQuery(document).ready(function($) {
+
+    $(window).load(function() {
+        $('#preloader').fadeOut('slow', function() { $(this).remove(); });
+        $('.lti-container').fadeOut('slow', function() { $(this).removeClass('loading'); });
+        $('.globe').fadeOut('slow', function() { $(this).removeClass('loading'); });
+    });
+
+});
+</script>
+</body>
+
+</html>

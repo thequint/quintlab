@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*@media (max-width:1279px) {
+	.container.lti-container{
+		max-width:620px;
+	}	
+	.globe {
+		width: 620px;
+		margin-left: -310px;
+		bottom: -560px;
+	}
+}*/
+
+@media (max-width:620px) {
+	.globe {
+	width: 340px;
+	margin-left: -170px;	
+	bottom: -300px;
+}
+	
+}
+
+@media (max-width:480px) {
+	.modal-box{
+		width: 100%;
+		padding: 15px;
+	}
+	
+	.data-video {
+	margin: -15px -15px 15px -15px;
+}
+	
+	.lti-container{
+		transform: scale(0.8,0.8); 
+		margin-top: -70px !important;
+	}
+	
+}
+
+	
