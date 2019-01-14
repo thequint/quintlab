@@ -431,6 +431,7 @@ h6 {
     font-size: 22px;
     padding: 10px 10px
 }
+
 .modal-popup {
     position: fixed;
     width: 100%;
@@ -501,7 +502,7 @@ h6 {
     line-height: 36px;
 }
 .view-demo-wrap {
-
+	margin-bottom: 8px; 
 }
 .view-demo-btn {
 	/*height: 40px;*/
@@ -1040,7 +1041,7 @@ h6 {
     text-transform: uppercase;
 }
 .slider-content .slider-content__slide h4 {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     line-height: 20px;
 }
 .slider-content .slider-content__slide h4 strong {
@@ -1141,7 +1142,7 @@ h6 {
     content: ' ';
     background-color: #ddeaeb;
     width: 60%;
-    height: 215px;
+    height: 226px;
 }
 
 .ad-slider-left .slider-content .slider-content__slide h3 {
@@ -1149,7 +1150,7 @@ h6 {
 	padding-top: 22px;*/
 	position: absolute;
 	right: 20px;
-	top: 42px;
+	top: 66px;
 }
 
 
@@ -1662,7 +1663,7 @@ h6 {
         background-color: #ddeaeb
     }
     .slider-content {
-        padding-bottom: 60px;
+        padding-bottom: 30px;
         height: auto;
         min-height: 0;
     }
