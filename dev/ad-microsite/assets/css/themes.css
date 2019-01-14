@@ -520,6 +520,14 @@ h6 {
     padding-top: 2px;
 	font-family: 'Avenir LT Std 95 Black';
 }
+.desktop-only {
+	display: none;
+	color: #fff;
+	font-size: 15px;
+	line-height: 23px;
+    padding-top: 2px;
+	font-family: 'Avenir LT Std 95 Black';
+}
 .device-icon {
 	height: 25px;
 	float: left;
@@ -1101,7 +1109,7 @@ h6 {
     line-height: 30px;
     cursor: pointer;
     display: inline-block;
-    background-color: #fff;
+    background-color: #444;
     margin: 0 1px;
 }
 .slick-arrow.slick-disabled {
@@ -1592,11 +1600,18 @@ h6 {
 
     .ad-slider-left .slider-box .slider-content__arrow {}
 }
-
+ 
 @media all and (max-width : 959px) {
 	.device-hide {
 		display: none;
 	}
+	.device-icon .icon-desktop.device-hide {
+    	display: none;
+    }
+    .desktop-only {
+    	display: block;
+    } 
+
     .section .container {
         max-width: 640px
     }
@@ -1712,10 +1727,22 @@ h6 {
         background-color: #fff
     }
     .slider-box .slider-content__arrow {
-    	top: 10px;
-        left: 10px;
+    	top: 45%;
+        left: 0;
+        right: 0;
         bottom: 10px;
-        width: 70px;
+        width: 100%;
+    }
+    .slider-box .slider-content__arrow .prev.slick-arrow {
+    	position: absolute;
+    	top: 0;
+    	left: -15px;
+
+    }
+    .slider-box .slider-content__arrow .next.slick-arrow {
+		position: absolute;
+    	top: 0;
+    	right: -15px;
     }
     .section .ad-slider-left .slider-box .slider-content__arrow {
         right: 10px;
@@ -1727,15 +1754,14 @@ h6 {
     }
     .slider-content .slider-content__slide {
         margin: 0;
+        padding-bottom: 10px;
         padding-left: 20px;
         padding-right: 20px;
     }
     .ad-slider-left .slider-box .slider-content__arrow {
         margin-right: 0
     }
-    .device-icon .icon-desktop {
-    	display: none;
-    }
+
 }
 
 @media all and (max-width : 640px) {
@@ -1792,7 +1818,7 @@ h6 {
     }
 
     .slider-content {
-        padding-bottom: 180px;
+        padding-bottom: 165px;
     }
     .slider-box {
         bottom: -100px;
