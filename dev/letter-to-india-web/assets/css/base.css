@@ -215,13 +215,13 @@ transform:scale3d(1.1, 1.1, 1)
 
 
 .share {
-	position: absolute;
-    top: 24px;
-    right: 15px;
-    z-index: 5;
+	/*position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;*/
 }
 .share-ico {
-	background: #393185 url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
+	background: #332614 url("../images/ico-share.svg") no-repeat scroll center center / 50% auto;
 	border-radius: 100%;
 	display: block;
 	font-size: 0;
@@ -238,7 +238,7 @@ transform:scale3d(1.1, 1.1, 1)
 	margin-top: 5px;
 }
 .social-ico li a {
-	background: #393185;
+	background: #332614;
 	border-radius: 100%;
 	display: block;
 	font-size: 20px;
@@ -252,5 +252,5 @@ transform:scale3d(1.1, 1.1, 1)
 	line-height: 40px;
 }
 .social-ico li a:hover {
-	color: #0782C6;
+	color: #ffe7c6;
 }
