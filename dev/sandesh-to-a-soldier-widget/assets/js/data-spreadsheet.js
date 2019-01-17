@@ -84,9 +84,17 @@ function display_data() {
 		var data_deg = $(this).attr('data-deg');
 		var data_location = $(this).attr('data-location');
 		var data_story = $(this).attr('data-story');
+
+		console.log("test:"+data_video);
 		
+		if(data_video == ""){
+			console.log("blank");
+			$('.data-video').html('');
+		}else {
+			$('.data-video').html('<div class="frame-video"><iframe src="https://www.youtube.com/embed/' + data_video + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>');
+		}
 		
-		$('.data-video .frame-video').html('<iframe src="https://www.youtube.com/embed/' + data_video + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		//$('.data-video .frame-video').html('<iframe src="https://www.youtube.com/embed/' + data_video + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 		$('.data-message p span').html(data_message);
 		$('.data-name').html(data_name);
 		$('.data-deg').html(data_deg);

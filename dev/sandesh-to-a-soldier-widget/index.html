@@ -24,12 +24,14 @@
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 
 <!-- CSS -->
-<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
 <link href="assets/css/base.css" rel="stylesheet" media="all">
-<link href="assets/css/slick.css" rel="stylesheet" media="all">
+<!-- <link href="assets/css/slick.css" rel="stylesheet" media="all"> -->
 <link href="assets/css/theme.css" rel="stylesheet" media="all">
 <link href="assets/css/responsive.css" rel="stylesheet" media="all">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Oswald:600|Special+Elite" rel="stylesheet">
 
 <!-- OG Tag -->
 <meta property="og:title" content="Send your Sandesh to a Soldier Here!">
@@ -110,7 +112,6 @@ _comscore.push(COMSCORE_OPTS);
 </script>
 <!-- End Tag Manager-->
 
-<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
 <script type='text/javascript'>
     window.talktype = window.talktype || function(f) {
         (talktype.q = talktype.q || []).push(arguments);
@@ -133,16 +134,14 @@ _comscore.push(COMSCORE_OPTS);
     <div class="satellite-container">
         <div class="satellite-inner-container"> <img class="satellite" src="assets/images/satellite.png" alt="satellite">
             <a id="btn_ugc" class="btn-write-letter hvr-pulse-grow" href="javascript:void(0)"><img src="assets/images/btn-wright-letter.png" alt="Write a Letter"></a>
+            
             <div class="el-container">
-                <div class="slider-bg">
-                    <div class="el-slider" id="listData"> </div>
+                <div class="slider-bg-box">
+                    <p class="letter-text"><strong>Read Letters</strong> From India.</p>
+                    <span class="click-btn"><a href="https://www.thequint.com/quintlab/sandesh-to-a-soldier/" target="_blank"><span>Click Here</span></a></span>
+                    <!-- <div class="el-slider" id="listData"> </div> -->
                 </div>
             </div>
-            <ul class="filter">
-                <li class="filter-audio" data-filter="audio"><a href="javascript:void(0);">a</a></li>
-                <li class="filter-video" data-filter="video"><a href="javascript:void(0);">v</a></li>
-                <li class="filter-text" data-filter="text"><a href="javascript:void(0);">t</a></li>
-            </ul>
         </div>
     </div>
 </div>
@@ -151,13 +150,13 @@ _comscore.push(COMSCORE_OPTS);
     <div class="modal-box"> <a id="close_card" class="close-card" href="javascript:void(0);"><i class="fa fa-times"></i></a>
         <div class="modal-content">
             <div class="data-video">
-                <div class="frame-video"> </div>
+                <!-- <div class="frame-video"> </div> -->
             </div>
             <div class="data-message">
                 <p><span></span> <a class="data-story" href="#" target="_blank">Read Full Letter</a></p>
             </div>
             <h3 class="data-name"></h3>
-            <h4 class="data-deg"></h4>
+            <!-- <h4 class="data-deg"></h4> -->
             <h5 class="data-location"></h5>
         </div>
     </div>
@@ -179,20 +178,19 @@ _comscore.push(COMSCORE_OPTS);
 </div>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.js"></script>
-<script type="text/javascript" src="assets/js/spreadsheet.js"></script>
-<script type="text/javascript" src="assets/js/data-spreadsheet.js"></script>
-<script type="text/javascript" src="assets/js/functions.js"></script>
-<script>
-jQuery(document).ready(function($) {
+<script type="text/javascript">
+    $('#btn_ugc').click(function(){
+        $('#ugc_Modal').addClass('is-open');
+    });
+    $('#close_ugc').click(function(){
+        $('#ugc_Modal').removeClass('is-open');
+    });
 
     $(window).load(function() {
         $('#preloader').fadeOut('slow', function() { $(this).remove(); });
         $('.lti-container').fadeOut('slow', function() { $(this).removeClass('loading'); });
         $('.globe').fadeOut('slow', function() { $(this).removeClass('loading'); });
     });
-
-});
 </script>
 </body>
 

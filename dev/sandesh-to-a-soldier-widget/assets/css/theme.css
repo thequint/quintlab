@@ -163,6 +163,65 @@ h6 {
     z-index: 1002;
 }
 
+.slider-bg-box {
+    width: 145px;
+    height: 150px;
+    background-image: url(../images/slider-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    bottom: 75px;
+    left: 13px;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    padding: 22px 23px 0 16px;
+}
+.slider-bg-box .letter-text {
+    text-align: center;
+    margin: 0 0 8px;
+    line-height: 115%;
+    font-weight: bold;
+}
+.slider-bg-box .click-btn {
+    margin: 0 auto;
+    display: block;
+    padding: 4px 0 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    background-color: #292929;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+}
+
+.slider-bg-box .click-btn span {
+    display: block;
+    background: url(../images/animated_text_fill2.jpg) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 18s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+
+
 .slider-bg {
     width: 120px;
     height: 120px;
@@ -277,12 +336,16 @@ h6 {
 
 .list-el h3 {
     font-weight: 700;
+    font-size: 16px
 }
 
 .data-message p {
+    font-size: 20px;
     margin-bottom: 20px;
 }
-
+/*.data-message p span {
+    display: block;
+}*/
 .data-video {
     margin: -20px -20px 20px -20px;
 }
