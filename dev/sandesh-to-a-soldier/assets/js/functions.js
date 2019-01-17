@@ -13,13 +13,17 @@ $('#pagepiling').pagepiling({
         $('#pp-nav').addClass('custom');
     },
     afterLoad: function(anchorLink, index) {
-        $(".section-first").addClass('freeze');
+        // $(".section-first").addClass('freeze');
         if (index > 1) {
             $('#pp-nav').removeClass('custom');
+            $(".section-first").addClass('freeze');
         } else {
             $('#pp-nav').addClass('custom');
         }
     }
+});
+$(".home").on("click", function(){
+     $(".section-first").removeClass('freeze');
 });
 
 // Initialize Firebase
@@ -65,6 +69,14 @@ function slider_init() {
             modifier: 1,
             slideShadows: true,
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
         // pagination: {
         //     el: '.swiper-pagination',
         // },
@@ -120,7 +132,7 @@ function slider_init() {
 
 $(document).ready(function() {
 
-    $(".share-btn").click(function(e) {
+    $(".share-btn span").click(function(e) {
         $(".social-icon").toggleClass("is-show");
         return false;
     });

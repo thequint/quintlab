@@ -129,6 +129,11 @@ _comscore.push(COMSCORE_OPTS);
 </head>
 
 <body>
+<div class="loader">
+    <div class="loader-icon"></div>
+</div>
+<!-- <div id="preloader"></div> -->
+
 <div id="pagepiling">
     <section class="section section-first" id="section1">
         <header class="header">
@@ -141,7 +146,7 @@ _comscore.push(COMSCORE_OPTS);
             <div class="home-page">
                 <div class="home-page__right">
                     <div class="home-content">
-                        <p>Send a 'Sandesh', to a soldier, a person you may not know, guarding the country. Pay your tribute, a silent gratitude, and share a token of appreciation. Jai Hind.</p>
+                        <p>Send a 'Sandesh' to a soldier, a person you may not know, guarding the country. Pay your tribute, a silent gratitude, and share a token of appreciation. Jai Hind.</p>
                         <span data-menuanchor="page2"><a href="#page2" class="read-more">Read Letters</a></span>
                     </div>
                 </div>
@@ -150,9 +155,6 @@ _comscore.push(COMSCORE_OPTS);
                         <span class="write-letter hvr-pulse-grow"><img src="assets/images/btn-wright-letter.png" alt="Write a Letter"></span>
                         <span class="media-play-icon hvr-pulse-grow"><img src="assets/images/icon-play.svg"></span>
                     </div>
-                    <!-- <div class="home-page__left--sandesh-box"><img src="assets/images/sandesh-to-soldier.png"></div> -->
-                    <!-- <span class="write-letter hvr-pulse-grow"><img src="assets/images/btn-wright-letter.png" alt="Write a Letter"></span>-->
-                    <!-- <span class="media-play-icon"><img src="assets/images/icon-play.svg"></span>  -->
                 </div>
             </div>
         </div>
@@ -168,9 +170,14 @@ _comscore.push(COMSCORE_OPTS);
             <div class="card-wrap__content">
                 <div class="swiper-container">
                     <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+
                     <ul class="swiper-wrapper">
                     </ul>
+
                     <div class="swiper-pagination"></div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -180,39 +187,28 @@ _comscore.push(COMSCORE_OPTS);
             <span class="share-btn"><span>Share</span>
                 <ul class="social-icon">
                     <li><a class="icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&t=Send+your+Sandesh+to+a+Soldier+Here!"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
                     <li><a class="icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&text=Send your Sandesh to a Soldier Here!%20https%3A//thequint.com/quintlab/khajuraho-things-to-do/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 </ul>
             </span>
-
-            <!-- <span class="share"> <a class="share-ico" href="javascript:void(0);">share</a> -->
-                <!-- <ul class="social-ico">
-                    <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&t=Send+your+Sandesh+to+a+Soldier+Here!"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
-                    <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&text=Send your Sandesh to a Soldier Here!%20https%3A//thequint.com/quintlab/khajuraho-things-to-do/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                </ul> -->
-            <!-- </span> -->
-
         </span>
 
-        <!-- <span class="write-letter write-letter-btn">Write a Letter</span>
-
-
-        <div class="share"> <a class="share-ico" href="javascript:void(0);">share</a>
-            <ul class="social-ico">
-                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&t=Send+your+Sandesh+to+a+Soldier+Here!"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-
-                <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A//thequint.com/quintlab/sandesh-to-a-soldier/&text=Send your Sandesh to a Soldier Here!%20https%3A//thequint.com/quintlab/khajuraho-things-to-do/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            </ul>
-        </div> -->
+        <!-- <span class="back-top">sfsf</span> -->
+        <span class="home back-top" data-menuanchor="page1"><a href="#page1"><img src="assets/images/back-top.svg"></a></span>
 
     </section>
 </div>
 
 <div class="side-bar">
+    <span class="side-bar__logo"><a href="https://thequint.com/" target="_blank"><img src="assets/images/quint-logo-black.svg"></a></span>
+
     <a href="javascript:void(0)" class="btn-close"></a>
-    <a data-menuanchor="page2" href="#page2">Read The Letters</a>
-    <a class="write-letter" href="javascript:void(0)">Write a Letter</a>
+
+    <ul>
+        <li><a class="home" data-menuanchor="page1" href="#page1"><span>Home</span></a></li>
+        <li><a data-menuanchor="page2" href="#page2"><span>Read The Letters</span></a></li>
+        <li><a class="write-letter" href="javascript:void(0)"><span>Write a Letter</span></a></li>
+        <!-- <li><a href="javascript:void(0)"><span>The Quint</span></a></li> -->
+    </ul>
 </div>
 
 <!-- Promo Popup -->
@@ -246,7 +242,11 @@ _comscore.push(COMSCORE_OPTS);
 <script src="assets/js/swiper.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 <script src="assets/js/functions.js"></script>
+
 <script type="text/javascript">
+    $(window).load(function() {
+        $('.loader').fadeOut('slow', function() { $(this).remove(); });
+    });
 
     var var_parallax = navigator.userAgent.toLowerCase(); 
     if (var_parallax.indexOf('safari') != -1) { 
