@@ -47,9 +47,27 @@ db.settings({
 db.collection("letter-to-india-letters").orderBy('date', 'desc').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log("loaded");
-        $(".swiper-wrapper").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile"><img src="assets/images/profile/' + doc.data().slug + '.jpg"></span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p><span><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span> </li>')
-        console.log(doc.data());
+
+        var btn_str="";
+
+        if (doc.data().video==true) {
+           btn_str= '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Watch The Video</a></span><span class="video-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
+        } else{
+         btn_str= '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span></div>'
+        }
+
+        var img_str='';
+
+        if (doc.data().slug=='' || doc.data().slug==undefined) {
+            img_str= '<img src="assets/images/profile/default.jpg">'
+        } else {
+            img_str= '<img src="assets/images/profile/' + doc.data().slug + '.jpg">'
+        }
+
+        $(".swiper-wrapper").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">'+ img_str +'</span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p>'+btn_str+' </li>')
+        // console.log(doc.data());
     });
+
     slider_init();
 });
 
@@ -77,9 +95,6 @@ function slider_init() {
             el: '.swiper-pagination',
             type: 'fraction',
           },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
     });
 
     $(".swiper-wrapper").css('margin-top', -1 * $(".swiper-wrapper").height() / 2)
@@ -125,10 +140,6 @@ function slider_init() {
         $("#form_popup").show();
     });
 }
-
-
-
-
 
 $(document).ready(function() {
 
