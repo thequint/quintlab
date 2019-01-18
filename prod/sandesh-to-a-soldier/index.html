@@ -108,13 +108,6 @@ _comscore.push(COMSCORE_OPTS);
 </script>
 <!-- End Tag Manager-->
 
-<script type='text/javascript'>
-    window.talktype = window.talktype || function(f) {
-        (talktype.q = talktype.q || []).push(arguments);
-    };
-</script>
-<script src='https://fea.assettype.com/quintype-metype/assets/application.js'></script>
-
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -125,11 +118,7 @@ _comscore.push(COMSCORE_OPTS);
 </head>
 
 <body>
-<div class="loader">
-    <div class="loader-icon"></div>
-</div>
-<!-- <div id="preloader"></div> -->
-
+<!-- <div class="loader"></div> -->
 <div id="pagepiling">
     <section class="section section-first" id="section1">
         <header class="header">
@@ -223,11 +212,7 @@ _comscore.push(COMSCORE_OPTS);
         <div class="popup-box-content">
             <div class="form-content">
                 <div id="contribution-container" data-metype-account-id="1" data-metype-host="https://www.metype.com/"></div>
-                <script type="text/javascript">
-                talktype(function() {
-                    talktype.contributionWidgetIframe(document.getElementById("contribution-container"));
-                });
-                </script>
+                
             </div>
         </div>
         <span class="popup-close"><i class="fa fa-times"></i></span>
@@ -237,10 +222,16 @@ _comscore.push(COMSCORE_OPTS);
 <script src="assets/js/bundles-script.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 <script src="assets/js/functions.js"></script>
-
-<script type="text/javascript">
+<script type='text/javascript'>
+    window.talktype = window.talktype || function(f) {
+        (talktype.q = talktype.q || []).push(arguments);
+    };
+    talktype(function() {
+        talktype.contributionWidgetIframe(document.getElementById("contribution-container"));
+    });
+    
     $(window).load(function() {
-        $('.loader').fadeOut('slow', function() { $(this).remove(); });
+        $('.loader').fadeOut('slow');
     });
 
     var var_parallax = navigator.userAgent.toLowerCase(); 
@@ -253,5 +244,6 @@ _comscore.push(COMSCORE_OPTS);
         }
     }
 </script>
+<script src='https://fea.assettype.com/quintype-metype/assets/application.js'></script>
 </body>
 </html>

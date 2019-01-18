@@ -49,6 +49,15 @@ img {
     bottom: 0;
     left: 0;
     z-index: 99999;
+    background: url(../images/ajax-loader.gif) #fff no-repeat center;
+}
+/*.loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
     background-color: #fff;
 }
 .loader .loader-icon {
@@ -73,7 +82,7 @@ img {
     bottom: -25px;
     left: -30px;
     font-weight: 700;
-}
+}*/
 #preloader svg {
     width: 100%;
 }
