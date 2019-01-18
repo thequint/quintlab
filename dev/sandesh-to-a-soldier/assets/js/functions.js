@@ -22,8 +22,8 @@ $('#pagepiling').pagepiling({
         }
     }
 });
-$(".home").on("click", function(){
-     $(".section-first").removeClass('freeze');
+$(".home").on("click", function() {
+    $(".section-first").removeClass('freeze');
 });
 
 // Initialize Firebase
@@ -46,25 +46,25 @@ db.settings({
 
 db.collection("letter-to-india-letters").orderBy('date', 'desc').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        console.log("loaded");
+        // console.log("loaded");
 
-        var btn_str="";
+        var btn_str = "";
 
-        if (doc.data().video==true) {
-           btn_str= '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Watch The Video</a></span><span class="video-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
-        } else{
-         btn_str= '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span></div>'
-        }
-
-        var img_str='';
-
-        if (doc.data().slug=='' || doc.data().slug==undefined) {
-            img_str= '<img src="assets/images/profile/default.jpg">'
+        if (doc.data().video == true) {
+            btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Watch The Video</a></span><span class="video-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
         } else {
-            img_str= '<img src="assets/images/profile/' + doc.data().slug + '.jpg">'
+            btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span></div>'
         }
 
-        $(".swiper-wrapper").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">'+ img_str +'</span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p>'+btn_str+' </li>')
+        var img_str = '';
+
+        if (doc.data().slug == '' || doc.data().slug == undefined) {
+            img_str = '<img src="assets/images/profile/default.jpg">'
+        } else {
+            img_str = '<img src="assets/images/profile/' + doc.data().slug + '.jpg">'
+        }
+
+        $(".swiper-wrapper").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">' + img_str + '</span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p>' + btn_str + ' </li>')
         // console.log(doc.data());
     });
 
@@ -94,7 +94,7 @@ function slider_init() {
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
-          },
+        },
     });
 
     $(".swiper-wrapper").css('margin-top', -1 * $(".swiper-wrapper").height() / 2)
@@ -135,28 +135,25 @@ function slider_init() {
     $("#form_popup .popup-close").on("click", function() {
         $("#form_popup").hide();
     });
-    
-    $(".write-letter").on("click", function(){
+
+    $(".write-letter").on("click", function() {
         $("#form_popup").show();
     });
 }
 
-$(document).ready(function() {
-
-    $(".share-btn span").click(function(e) {
-        $(".social-icon").toggleClass("is-show");
-        return false;
-    });
-    $("body").click(function() {
-        $(".social-icon").removeClass("is-show");
-    });
+$(".share-btn span").click(function(e) {
+    $(".social-icon").toggleClass("is-show");
+    return false;
+});
+$("body").click(function() {
+    $(".social-icon").removeClass("is-show");
+});
 
 
-    $(".share-ico").click(function(e) {
-        $(".social-ico").slideToggle(400);
-        return false;
-    });
-    $("body").click(function() {
-        $(".social-ico").slideUp();
-    });
+$(".share-ico").click(function(e) {
+    $(".social-ico").slideToggle(400);
+    return false;
+});
+$("body").click(function() {
+    $(".social-ico").slideUp();
 });

@@ -989,7 +989,6 @@ body.is-overlay:after {
 	    right: 0;
 	    float: none;
 	    display: block;
-	    margin-bottom: 5px;
 	}
 	.swiper-slide .card-header .profile-name {
 		text-align: center;
@@ -1003,11 +1002,7 @@ body.is-overlay:after {
 	}
 	.swiper-slide .cta-wrap .cta-btn .read-more {
 		font-size: 1em;
-	}
-	.swiper-slide .cta-wrap .video-icon {
-		margin-left: 10px;
-		width: 33px;
-		height: 33px;
+		padding: 9px 12px 7px;
 	}
 
 	.modal-popup .popup-box {
@@ -1089,6 +1084,13 @@ body.is-overlay:after {
 	    height: 400px;
 	    box-shadow: none;
 	}
+	.swiper-slide .cta-wrap .video-icon {
+	    margin-top: -2px;
+	}
+	.swiper-slide .cta-wrap .video-icon a {
+		width: 36px;
+	    height: 36px;
+	}
 }
 @media screen and (max-width: 359px) {
 	.swiper-slide {
@@ -1097,9 +1099,10 @@ body.is-overlay:after {
 	    height: 370px;
 	    box-shadow: none;
 	}
-	/*.swiper-slide .read-more {
-		font-size: 1em;
-	}*/
+	.swiper-slide .card-header,
+	.swiper-slide .card-content {
+		margin-bottom: 5px;
+	}
 	.section-second .social-share .write-letter-btn,
 	.section-second .social-share .share-btn {
 		font-size: 1em;
