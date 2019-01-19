@@ -668,7 +668,7 @@ body.is-overlay:after {
 }*/
 
 .swiper-slide .card-header {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 .swiper-slide .card-header:after {
 	content: " ";
@@ -707,7 +707,7 @@ body.is-overlay:after {
 	text-transform: capitalize;
 }
 .swiper-slide .card-content {
-	margin-bottom: 20px; 
+	margin-bottom: 10px; 
 	font-size: 1.2500em;
 	line-height: 125%
 }
@@ -986,9 +986,10 @@ body.is-overlay:after {
 		width: 300px;
 	    height: 460px;
 	    box-shadow: none;
+	    padding: 30px 25px 0;
 	}
 	.swiper-slide .card-header {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 	.swiper-slide .card-header .profile {
 		width: 80px;
@@ -1111,6 +1112,10 @@ body.is-overlay:after {
 	.swiper-slide .card-header,
 	.swiper-slide .card-content {
 		margin-bottom: 5px;
+	}
+	.swiper-slide .cta-wrap .cta-btn .read-more {
+	    font-size: 0.9375em;
+	    padding: 7px 9px 5px;
 	}
 	.section-second .social-share .write-letter-btn,
 	.section-second .social-share .share-btn {
