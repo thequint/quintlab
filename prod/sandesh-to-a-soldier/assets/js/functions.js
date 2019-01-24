@@ -50,8 +50,11 @@ db.collection("letter-to-india-letters").orderBy('date', 'desc').get().then((que
 
         var btn_str = "";
 
-        if (doc.data().video == true) {
+        if (doc.data().category == "video") {
             btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Watch The Video</a></span><span class="video-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
+
+        }else if (doc.data().category == "audio") {
+            btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Listen The Audio</a></span><span class="audio-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
         } else {
             btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span></div>'
         }
