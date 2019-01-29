@@ -203,7 +203,7 @@ img {
 }
 .section-second .social-share .share-btn .social-icon {
 	position: absolute;
-	right: 0px;
+	right: -5px;
 	top: 0;
 	z-index: -1;
 	height: 40px;
@@ -367,6 +367,8 @@ body.is-overlay:after {
 	margin: 25px 0 20px 50px;
 }
 .side-bar li a {
+	/*background-color: #ccc;*/
+	width: 245px;
 	/*padding: 14px 10px 14px 50px;*/
 	text-decoration: none;
 	font-size: 1.5em;
@@ -375,12 +377,26 @@ body.is-overlay:after {
 	transition: 0.3s;
 	font-family: 'Avenir LT Std 85 Heavy';
 }
-.side-bar li a span {
+/*.side-bar li a span {
 	display: block;
 	width: 245px;
-}
+}*/
 .side-bar li a:hover {
 	color: #000;
+}
+
+.side-bar li .side-bar-btn {
+	padding: 15px 20px 8px;
+	border-radius: 5px;
+	color: #fff; 
+	font-size: 1em;
+	line-height: 100%;
+	display: inline-block;
+	background-color: #292929;
+	transition: all 0.2s ease-in-out;
+}
+.side-bar li .side-bar-btn:hover {	
+	background-color: #000;
 }
 .side-bar .btn-close {
 	margin: 0;

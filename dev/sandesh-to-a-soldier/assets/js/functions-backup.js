@@ -54,7 +54,7 @@ db.collection("letter-to-india-letters").orderBy('date', 'desc').get().then((que
             btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Watch The Video</a></span><span class="video-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
 
         }else if (doc.data().category == "audio") {
-            btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Listen Audio</a></span><span class="audio-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
+            btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Listen The Audio</a></span><span class="audio-icon"><a href="' + doc.data().link + '" target="_blank"></a></span></div>'
         } else {
             btn_str = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link + '" target="_blank">Read The Letter</a></span></div>'
         }
@@ -62,30 +62,12 @@ db.collection("letter-to-india-letters").orderBy('date', 'desc').get().then((que
         var img_str = '';
 
         if (doc.data().slug == '' || doc.data().slug == undefined) {
-            img_str = '<img src="https://www.thequint.com/quintlab/sandesh-to-a-soldier/assets/images/profile/default.jpg">'
+            img_str = '<img src="assets/images/profile/default.jpg">'
         } else {
-            img_str = '<img src="https://www.thequint.com/quintlab/sandesh-to-a-soldier/assets/images/profile/' + doc.data().slug + '.jpg">'
+            img_str = '<img src="assets/images/profile/' + doc.data().slug + '.jpg">'
         }
 
-        $("#display_data_english").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">' + img_str + '</span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p>' + btn_str + ' </li>')
-
-        // Hindi
-        var btn_str_hindi = "";
-
-        if (doc.data().category == "video") {
-            btn_str_hindi = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link_hindi + '" target="_blank">वीडियो देखें</a></span><span class="video-icon"><a href="' + doc.data().link_hindi + '" target="_blank"></a></span></div>'
-
-        }else if (doc.data().category == "audio") {
-            btn_str_hindi = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link_hindi + '" target="_blank">ऑडियो सुनें</a></span><span class="audio-icon"><a href="' + doc.data().link_hindi + '" target="_blank"></a></span></div>'
-        } else {
-            btn_str_hindi = '<div class="cta-wrap"><span class="cta-btn"><a class="read-more" href="' + doc.data().link_hindi + '" target="_blank">चिट्ठी पढ़ें</a></span></div>'
-        }
-
-        if(doc.data().letter_hindi!=undefined) {
-            $("#display_data_hindi").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">' + img_str + '</span><span class="profile-name">' + doc.data().name_hindi + '<span class="profile-location">' + doc.data().location_hindi + '</span></span></div><p class="card-content">' + doc.data().letter_hindi + '</p>' + btn_str_hindi + ' </li>');
-        }
-
-
+        $(".swiper-wrapper").append('<li class="swiper-slide" data-swiper-parallax="-100"> <div class="card-header"><span class="profile">' + img_str + '</span><span class="profile-name">' + doc.data().name + '<span class="profile-location">' + doc.data().location + '</span></span></div><p class="card-content">' + doc.data().letter + '</p>' + btn_str + ' </li>')
         // console.log(doc.data());
     });
 
@@ -142,13 +124,6 @@ function slider_init() {
         $("#promo_popup").show();
         $("#promo_popup .popup-box .popup-box-content").html('<div class="popup-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/oXtdLEYeFDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>')
     });
-
-    // Hindi Promo
-    $(".media-play-icon.hindi").on("click", function() {
-        $("#promo_popup").show();
-        $("#promo_popup .popup-box .popup-box-content").html('<div class="popup-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/3pRBfxXF0bY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>')
-    });
-
     // Promo Popup Close
     $("#promo_popup .popup-close").on("click", function() {
         $("#promo_popup").hide();
