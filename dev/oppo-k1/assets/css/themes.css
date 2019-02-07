@@ -8,7 +8,6 @@ body {
 	overflow-x: hidden;
 	margin: 0 !important;
 	padding: 0 !important;
-	/*font-family: 'colunacondensed_bold';*/
 	font-family: myriad-pro,sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -18,20 +17,6 @@ body {
     font-family: 'colunacondensed_bold';
     src: url('coluna-webfont.woff2') format('woff2'),
          url('coluna-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'nillandregular';
-    src: url('nilland-webfont.woff2') format('woff2'),
-         url('nilland-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'nillandbold';
-    src: url('nilland-bold-webfont.woff2') format('woff2'),
-         url('nilland-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -152,7 +137,6 @@ img {
 }
 .color-option li:nth-child(2) {
 	background-color: #1a4fca;
-	/*background-color: rgb(130, 126, 126);*/
 }
 .color-option li:nth-child(3) {
 	background-color: rgb(50, 105, 44);
@@ -236,7 +220,6 @@ img {
 	height: 55px;
 	cursor: pointer;
 	border-radius: 100%;
-	/*background-color: #1467a7;*/
 	text-align: center;
 	font-size: 13px;
 	line-height: 120%;
@@ -245,7 +228,6 @@ img {
 	background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    /*font-family: 'colunacondensed_bold', serif;*/
     font-family: myriad-pro,sans-serif;
     transition: all 0.2s ease-in-out;
     z-index: 9
@@ -285,7 +267,6 @@ img {
 }
 
 .circle-list li:nth-child(4) {
-	
 	top: 72%;
     left: 14%;
 	background-image: url(../images/icon04.png);
@@ -310,7 +291,6 @@ img {
     right: 14%;
 	background-image: url(../images/icon08.png);
 }
-
 .overlay {
 	position: absolute;
 	width: 100%;
@@ -337,12 +317,8 @@ img {
 	z-index: 99;
     max-width: 500px;
     color: rgba(255, 255, 255, 1.0);
-    font-weight: 400;  
-    /*background-color: #ccc;*/
+    font-weight: 400;
     padding: 15px;
-    /*box-shadow: 10px 10px 70px #000;*/
-    /*font-family: 'nillandregular';*/
-    /*font-family: 'nillandbold';*/
     font-family: myriad-pro,sans-serif;
 }
 
@@ -427,7 +403,6 @@ img {
 		-webkit-transform: scale(1);
 		transform: scale(1);
 	}
-
 }
 @keyframes hvr-pulse {
 	0% {
@@ -550,7 +525,7 @@ img {
 		bottom: 150px;
 	}
 	.color-option li {
-		margin: 0 5px;
+		margin: 0 2px;
 	}
 	.section-wrap .know-more {
 		bottom: 50px;
@@ -663,10 +638,7 @@ img {
 		bottom: 205px;
 	}
 	.color-option li {
-		width: 18px;
-    	height: 18px;
+		width: 20px;
+    	height: 20px;
 	}
 }
-
-
-
