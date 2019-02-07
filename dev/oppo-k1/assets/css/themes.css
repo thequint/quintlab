@@ -267,8 +267,8 @@ img {
 	font-weight: 400;
 }
 .circle-list li:first-child {
-	top: 72%;
-    left: 14%;
+	top: 14%;
+	left: 17%;
 	/*background-size: 45%;*/
 	/*background-image: url(../images/icon01.svg);*/
 	background-image: url(../images/icon01.png);
@@ -285,8 +285,9 @@ img {
 }
 
 .circle-list li:nth-child(4) {
-	top: 14%;
-	left: 17%;
+	
+	top: 72%;
+    left: 14%;
 	background-image: url(../images/icon04.png);
 }
 .circle-list li:nth-child(5) {
