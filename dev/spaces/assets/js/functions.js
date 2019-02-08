@@ -27,6 +27,7 @@ function ToughDecision(){
     $('#vrview').html('');
     onLoad();
     $('body').removeClass('is-video');
+    $('body').addClass('is-logo');
     $('.control-details').addClass('is-open');
     $('#ToughDecision').show();
     $('.choice-wraper').show();
@@ -53,6 +54,7 @@ function ComparingSpaces(){
     $('#ToughDecision').show();
     $('.comparing-thumb').show();
     $('body').addClass('is-video');
+    $('body').removeClass('is-logo');
     $('.comparing-thumb a').removeClass('is-active');
     $('.comparing-thumb a:first-child').addClass('is-active');
     loadImage($(".comparing-thumb a").attr("data-src"));
@@ -109,7 +111,8 @@ $(".back-intro").click(function(){
     ToughDecision();
     GoBack();
     resetChoice();
-    resetDraggable()
+    resetDraggable();
+    $('body').removeClass('is-logo');
 
     $(".choice-text").hide();
     $(".choice-content").hide();
@@ -190,6 +193,9 @@ function enter_card(card_source_id) {
     $(".choice-text ul").append('<li>'+ data_array[slider_index].make_decision[slider_index][0].btn_text +'</li><li>'+ data_array[slider_index].make_decision[slider_index][1].btn_text +'</li>');
 
     $(".choice-text li").on("click", function(){ // Changing data of image slider
+        $(".choice-text li").removeClass("is-active");
+        $(this).addClass("is-active");
+
         $(".choice-content").fadeIn();
         $(".choice-content .choice-content-box").fadeOut();
         $(".choice-content .choice-content-box").eq($(this).index()).fadeIn();
