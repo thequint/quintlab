@@ -387,9 +387,6 @@ ul.grid {
 }
 
 @media screen and (max-width: 800px) {
-	/*.grid {
-		padding: 10px 10px 100px 10px;
-	}*/
 	.inner-page .category__headline {
 		padding: 10px 0 0 10px
 	}
@@ -404,9 +401,6 @@ ul.grid {
 	}
 }
 @media screen and (max-width: 480px) {
-	/*.grid {
-		padding: 10px 10px 100px 10px;
-	}*/
 	.grid li {
 		width: 100%;
 		/*min-width: 300px;*/

@@ -25,17 +25,16 @@ $(".icon-mobile").on("click", function() {
 
 });
 
+
 $(".desktop-close").on("click", function() {
     $(".modal-ads-desktop").hide();
     $(".desktop-box__screen").html('');
-
     $('.desktop-box__screen').attr('class', 'desktop-box__screen');
 });
 
 $(".mobile-close").on("click", function() {
     $(".modal-ads-mobile").hide();
     $(".mobile-box__screen").html('');
-
     $('.mobile-box__screen').attr('class', 'mobile-box__screen');
 });
 
