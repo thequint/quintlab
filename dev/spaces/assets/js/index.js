@@ -154,10 +154,7 @@ function onVRViewReady(e) {
       loadScene(event.target.parentNode.getAttribute('href').substring(1));
     });
   }
-
-  setTimeout(function(){
     $(".intro-text, .drag-wrap").css("opacity","1");
-  }, 1000);
   //
 }
 function onTogglePlay() {

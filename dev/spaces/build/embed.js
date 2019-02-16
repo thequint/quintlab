@@ -11807,14 +11807,20 @@ WorldRenderer.prototype.setScene = function(scene) {
       }
     } else {
       this.player = new AdaptivePlayer(params);
+      var this_var = this
+
       this.player.on('load', function(videoElement, videoType) {
+      	console.log(videoElement);
         self.sphereRenderer.set360Video(videoElement, videoType, params).then(function() {
           self.didLoad_({videoElement: videoElement});
         }).catch(self.didLoadFail_.bind(self));
       });
-      this.player.on('error', function(error) {
-        self.didLoadFail_('Video load error: ' + error);
+
+     this.player.on('error', function(error) {
+      	//console.log('error');
+      	self.didLoadFail_('Video load error: ' + error);
       });
+      
       this.player.load(scene.video);
 
       this.videoProxy = new VideoProxy(this.player.video);
