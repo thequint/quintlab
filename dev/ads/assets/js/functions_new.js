@@ -42,6 +42,39 @@ jQuery(document).ready(function($) {
     $('.smobitrigger').smplmnu();
 });
 
+$(".cs-style-2 figure").on("click", function(){
+    // $(".cs-style-2 figure").removeClass("cs-hover");
+    $(this).toggleClass("cs-hover");
+});
+
+// Document Click
+$(document).mouseup(function (e){
+    var container = $(".cs-hover");
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0)
+    {
+        // container.hide();
+        $(".cs-style-2 figure").removeClass("cs-hover");
+    }
+});
+$(window).scroll(function() {
+    $(".cs-style-2 figure").removeClass("cs-hover");
+});
+
+
+$(".demo-video").on("click", function() {
+    $(".modal-popup").show();
+
+    var video_id = $(this).attr("video-id")
+
+    $(".popup-video").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/'+ video_id +'?autoplay=1&loop=1&playlist='+ video_id +'&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+});
+
+$(".popup-close").on("click", function() {
+    $(".modal-popup").hide();
+    $(".popup-video").html('');
+});
+
 /*
 $(".interstitial-btn-wrap .icon-desktop").on("click", function() {
     console.log("List:"+$(this).closest("li").index());

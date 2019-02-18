@@ -74,14 +74,14 @@ ul.grid {
 	transition: transform 0.3s, opacity 0.3s;
 }
 
-.no-touch .cs-style-1 figure:hover figcaption,
+/*.no-touch .cs-style-1 figure:hover figcaption,
 .cs-style-1 figure.cs-hover figcaption {
 	opacity: 1;
 	-webkit-transform: translate(15px, 15px);
 	-moz-transform: translate(15px, 15px);
 	-ms-transform: translate(15px, 15px);
 	transform: translate(15px, 15px);
-}
+}*/
 
 .cs-style-1 figcaption h3 {
 	margin-top: 70px;
@@ -109,8 +109,14 @@ ul.grid {
 	-moz-transform: translateY(-100px);
 	-ms-transform: translateY(-100px);
 	transform: translateY(-100px);
-}*/
+}
 .grid li:hover img {
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	transform: translateY(-100px);
+}*/
+.cs-style-2 figure.cs-hover img {
 	-webkit-transform: translateY(-100px);
 	-moz-transform: translateY(-100px);
 	-ms-transform: translateY(-100px);
@@ -391,11 +397,14 @@ ul.grid {
 	transition: opacity 0.3s 0.2s;
 	opacity: 1;
 }
+@media screen and (max-width: 959px) {
+	.grid li {
+		padding: 10px;
+	}
+}
 
 @media screen and (max-width: 800px) {
-	.inner-page .category__headline {
-		padding: 10px 0 0 10px
-	}
+	
 	.inner-page ul {
 		padding: 0 10px;
 	}
@@ -406,7 +415,7 @@ ul.grid {
 		/*min-width: 300px;*/
 	}
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
 	.grid li {
 		width: 100%;
 		/*min-width: 300px;*/
