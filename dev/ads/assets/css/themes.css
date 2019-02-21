@@ -171,7 +171,7 @@ h6 {
 .tab-content.traditional-content {
     display: none;
     text-align: center;
-    min-height: 800px;
+    min-height: 600px;
     padding-top: 100px;
     font-size: 24px;
 }
@@ -514,6 +514,7 @@ h6 {
 }
 .view-demo-wrap {
 	margin-bottom: 8px; 
+    padding-top: 5px
 }
 .view-demo-wrap .demo-desktop,
 .view-demo-wrap .demo-mobile {
@@ -1526,25 +1527,25 @@ h6 {
     transition: opacity .3s, visibility 0s
 }
 
-.add-class .box-wrap {
+.intro-animate .box-wrap {
     position: relative;
     visibility: visible;
     opacity: 1;
 }
 
-.add-class .box-wrap h2 {
+.intro-animate .box-wrap h2 {
     -webkit-animation: cd-slide-in .8s;
     -moz-animation: cd-slide-in .8s;
     animation: cd-slide-in .8s
 }
 
-.add-class .box-wrap p {
+.intro-animate .box-wrap p {
     -webkit-animation: cd-slide-in .9s;
     -moz-animation: cd-slide-in .9s;
     animation: cd-slide-in .9s
 }
 
-.add-class .box-wrap a {
+.intro-animate .box-wrap a {
     -webkit-animation: cd-slide-in 1s;
     -moz-animation: cd-slide-in 1s;
     animation: cd-slide-in 1s
@@ -1647,8 +1648,16 @@ h6 {
     /*background-color: #ccc*/
 }
 
-.inner-page .rich-media {
-    padding: 50px 0
+.rich-media {
+    padding: 30px 0 40px
+}
+.rich-media:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    width: 100%;
+    clear: both;
 }
 
 .inner-page .inner-page-container {

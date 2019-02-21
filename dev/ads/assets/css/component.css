@@ -36,19 +36,13 @@ ul.grid {
 	left: 0;
 	padding: 10px;
 	background: #ddeaeb;
-	color: #ed4e6e;
+	color: rgba(35, 35, 35, 0.65);
 }
 
 .grid figcaption h3 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
+	font-size: 16px;
+    color: rgba(35, 35, 35, 0.9);
 }
-
-.grid figcaption span:before {
-	/*content: 'by ';*/
-}
-
 .grid figcaption a {
 	text-align: center;
 	padding: 5px 10px;
@@ -57,8 +51,6 @@ ul.grid {
 	background: #ed4e6e;
 	color: #fff;
 }
-
-/* Individual Caption Styles */
 
 /* Caption Style 1 */
 .cs-style-1 figcaption {

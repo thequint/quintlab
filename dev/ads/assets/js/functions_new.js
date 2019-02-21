@@ -1,4 +1,12 @@
 
+$(".tab-nav span").on("click", function(){
+    $(".tab-nav span").removeClass("active");
+    $(this).addClass("active");
+
+    $(".tab-content").fadeOut();
+    $(".tab-content").eq($(this).index()).fadeIn();
+});
+
 // Interstitial Section 
 $(".icon-desktop").on("click", function() {
     $(".modal-ads-desktop").show();
@@ -74,6 +82,8 @@ $(".popup-close").on("click", function() {
     $(".modal-popup").hide();
     $(".popup-video").html('');
 });
+
+
 
 /*
 $(".interstitial-btn-wrap .icon-desktop").on("click", function() {
