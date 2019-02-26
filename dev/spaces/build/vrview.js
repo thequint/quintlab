@@ -687,7 +687,7 @@ Player.prototype.getEmbedUrl_ = function() {
   var split = path.split('/');
   var rootSplit = split.slice(0, split.length - 2);
   var rootPath = rootSplit.join('/');
-  return rootPath + '/index.html';
+  return rootPath + '/home.html';
 };
 
 Player.prototype.getDirName_ = function() {

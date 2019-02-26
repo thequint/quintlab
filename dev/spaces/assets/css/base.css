@@ -693,11 +693,11 @@ body.is-modal .btn-credits{
 
 /* Slider */
 .content-slider {
-	position: relative;
+	/*position: relative;*/
 	/*width: 100%;
 	max-width: 650px;*/
-	width: 50%;
-	margin: 0 auto;
+	/*width: 50%;*/
+	/*margin: 0 auto;*/
 }
 @media (max-width: 768px) {
 	.content-slider {

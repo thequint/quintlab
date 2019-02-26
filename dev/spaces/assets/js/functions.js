@@ -83,8 +83,10 @@ $('#ToughDecision').click(function(){
     $("#GoBack").addClass("is-active");
     $(".list-btn.grey ul li").removeClass("is-active");
     $(".choice-text").show();
-    
     $(".option-list").show();
+
+    $(".choice-content").hide();
+    $(".choice-wrap .choice-content-default").show();
 });
 
 $('#GoBack').click(function(){
@@ -135,6 +137,10 @@ function resetChoice() {
     $(".cd-resize-img").removeAttr("style");
     $(".cd-handle").removeAttr("style");
 
+    $(".choice-text li").removeClass("is-active");
+    $(".choice-content").hide();
+    $(".choice-wrap .choice-content-default").show();
+
 }
 
 for (var i = 0; i < data_array.length; i++) {
@@ -179,6 +185,13 @@ function enter_card(card_source_id) {
         $(".option-list li").removeClass("is-active");
         $(this).addClass("is-active");
 
+        $(".choice-content-default div").hide();
+        $(".choice-content-default div").eq($(this).index()).show();
+        // alert($(this).index());
+
+
+        resetChoice();
+
         $('.choice-content-1').html(data_array[slider_index].make_decision[$(this).index()][0].text);
         $('.choice-content-2').html(data_array[slider_index].make_decision[$(this).index()][1].text);
 
@@ -196,9 +209,12 @@ function enter_card(card_source_id) {
         $(".choice-text li").removeClass("is-active");
         $(this).addClass("is-active");
 
-        $(".choice-content").fadeIn();
-        $(".choice-content .choice-content-box").fadeOut();
-        $(".choice-content .choice-content-box").eq($(this).index()).fadeIn();
+        $(".choice-content").show();
+        $(".choice-content .choice-content-box").hide();
+        $(".choice-content .choice-content-box").eq($(this).index()).show();
+
+        $(".choice-wrap .choice-content-default").hide();
+        // alert("test");
 
         if($(this).index() == 0){
             $(".cd-resize-img").css("width","10%");
@@ -419,4 +435,20 @@ jQuery(document).ready(function($){
             ( label.offset().left > resizeElement.offset().left + resizeElement.outerWidth() ) ? label.removeClass('is-hidden') : label.addClass('is-hidden') ;
         }
     }
+});
+
+
+//WhatsApp
+$(document).ready(function() {
+  $(document).on("click", '#btnWp', function() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      var text = $(this).attr("data-text");
+      var url = $(this).attr("data-link");
+      var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);
+      var whatsapp_url = "whatsapp://send?text=" + message;
+      window.location.href = whatsapp_url;
+    } else {
+      alert("Please use an Mobile Device to Share this Article");
+    }
+  });
 });

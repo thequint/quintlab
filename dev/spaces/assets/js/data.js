@@ -2,7 +2,7 @@ var data_array = [{
 		id: "card-1",
 		preview:"nav.gif",
 		headline: "Room of the Refugee",
-		sub_headline: "Inside a Home Away <span>From Home</span>",
+		sub_headline: "Inside a Home <span>Away From Home</span>",
 		// paragraph: "Facing an unfriendly administration and a brash crackdown on their community, Rohingya people fled Myanmar. Snaking through Bangladesh, and eventually finding refuge in India, they've scattered far and wide, seeking shelter in tiny settlements and impoverished conditions. What's next for them? The picture is still unclear.",
 		paragraph: "Facing hostile conditions in their country, Rohingya refugees crossed borders to seek shelter. Be their guest.",
 		image: "card.jpg",

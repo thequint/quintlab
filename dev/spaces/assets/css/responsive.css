@@ -6,5 +6,279 @@
 }
 
 
+@media (max-width:1023px) {
+    .is-mobile {
+        display: block;
+    }
+    .is-desktop {
+        display: none;
+    }
+}
 
-@media (max-width: 1130px) {}
+
+@media (min-width: 769px) {
+    .the-quint-logo {
+        top: 20px;
+        left: 20px;
+        width: 100px
+    }
+    .nav-icon {
+        top: 32px;
+        right: 30px;
+    }
+    .back-intro {
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .share {
+        top: 70px;
+        right: 30px;
+    }
+    .share-ico {
+        width: 40px;
+        height: 40px;
+        line-height: 42px;
+    }
+    .social-ico li {
+        margin-top: 10px;
+    }
+    .social-ico li a {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    .social-ico li:last-child {
+        margin-top: 3px;
+    }
+    .social-ico li a i {
+        line-height: 40px
+    }
+    .slider-wrapper::before {
+        background-image: url(../images/intro-frame-desktop.png);
+    }
+    .intro-slider {
+        position: absolute;
+        width: 29%;
+        height: 95%;
+        right: 16%;
+        top: 3%;
+        padding: 0;
+    }
+    .intro-text {
+        width: 45%;
+        top: 47%;
+        bottom: initial;
+        left: 4%;
+        height: auto;
+        /*background-color: #ccc;*/
+        transform: translateY(-50%);
+    }
+    .intro-text h4 {
+        font-weight: 600;
+        font-size: 3em;
+        line-height: 1.125em;
+        margin-bottom: 10px;
+    }
+    .intro-text p {
+        font-size: 1.3750em;
+        /*font-weight: 400;*/
+        line-height: 135%;
+    }
+    .btn-group {
+        position: absolute;
+        width: 180px;
+        left: 32%;
+        bottom: 80px;
+        height: 20px;
+    }
+    .btn-group:before {
+        position: absolute;
+        left: 48%;
+        bottom: -5px;
+        content: '';
+        width: 15px;
+        height: 3px;
+        z-index: 2;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+    .btn-group .swiper-button-next,
+    .btn-group .swiper-button-prev {
+        color: #ffce00;
+        height: 25px;
+        width: 40px;
+        line-height: 25px;
+        text-align: center;
+        background: none;
+        margin: 0;
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+    .btn-group .swiper-button-prev {
+        color: #fff
+    }
+    .drag-wrap {
+    	bottom: 40px;
+        width: 26%;
+        right: 17.5%;
+        left: inherit;
+        height: 48px;
+    }
+	.drag-wrap .drag-arrow {
+		height: 38px;
+		line-height: 33px;
+	}
+    .swiper-pagination {
+        padding-left: 20px;
+        bottom: 62px;
+        left: 6%;
+        right: inherit;
+    }
+    .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        margin: 0 6px;
+        opacity: 0.75
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 13px;
+        height: 13px;
+        opacity: 1;
+        background-color: #ffce00;
+    }
+    .controll-wrapper {
+        /*margin: 0 auto;*/
+        width: 400px;
+        left: inherit;
+        right: 100px;
+        bottom: 40px;
+    }
+    .controll-wrapper a {
+        /*width: auto;*/
+        padding: 0 20px;
+    }
+    .comparing-thumb {
+        width: 440px;
+        left: 80px;
+        bottom: 40px;
+        text-align: left;
+    }
+    .comparing-thumb a {
+        margin: 0 12% 0 0;
+        width: 70px;
+        height: 70px;
+    }
+    .comparing-thumb a span {
+        top: -33px;
+        font-size: 0.8750em;
+    }
+    .comparing-thumb .compare-with {
+        text-align: left;
+        top: -82px;
+        font-size: 2.5em;
+    }
+    .control-details--top {
+        height: 23%;
+        text-align: center;
+    }
+    .pop-center {
+    	top: 0;
+    }
+    .slider-headline {
+	    top: -75px;
+	}
+    .choice-text {
+	    position: fixed;
+	    bottom: 0;
+	    margin: 0;
+	    left: 100px;
+	    bottom: 40px;
+	    top: initial;
+	}
+    .list-btn ul {
+        border-radius: 3px;
+    }
+    .list-btn ul li,
+    .list-btn.grey ul li {
+        line-height: 50px;
+    }
+    .slider-headline {
+        top: -60px;
+    }
+    .control-details h2 {
+        font-size: 1.75em;
+    }
+    .choice-content {
+        height: auto;
+        bottom: 20px;
+    }
+    .option-list {
+    	bottom: 0;
+	    /*bottom: -60px;*/
+	}
+	.option-list ul:before {
+	    left: -105px;
+	    top: 2px;
+	}
+	/*.content-middle {
+		top: 51%
+	}*/
+	.pop-center .slider-wrap {
+	    width: calc(100% - 80px);
+	    width: -webkit-calc(100% - 80px);
+	}
+	.pop-center .slider-wrap .content-slider {
+	    /*float: left;*/
+	    width: 60%;
+	    display: table-cell;
+	}
+
+	.pop-center .slider-wrap .choice-wrap {
+	    /*float: left;*/
+	    width: 40%;
+	    
+	    font-size: 1.25em;
+	    line-height: 145%;
+	    display: table-cell;
+	        vertical-align: top;
+	}
+	
+	.pop-center .slider-wrap .choice-wrap .choice-wrap-bg {
+		padding: 20px;
+	}
+
+	
+}
+@media (min-width: 960px) {
+	.pop-center .slider-wrap {
+	    width: calc(100% - 200px);
+	    width: -webkit-calc(100% - 200px);
+	}
+}
+@media (max-width: 359px) {
+	.control-details h2 {
+		font-size: 1.4375em;
+	}
+	.intro-text h4 {
+		font-size: 1.6875em;
+	}
+	.intro-text p {
+		font-size: 1.0625em;
+		line-height: 120%;
+	}
+	.choice-content-box {
+		padding: 8px 10px;
+		font-size: 0.8750em;
+		line-height: 130%;
+	}
+	.comparing-thumb a {
+		
+		margin: 0px 5%;
+	}
+	.comparing-thumb a span {
+		top: -30px;
+		font-size: 0.8125em;
+	}
+}
