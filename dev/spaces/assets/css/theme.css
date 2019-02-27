@@ -525,8 +525,21 @@ body.is-overlay:after {
 
 .intro-slider {
     position: relative;
-    padding: 40px;
+    padding: 50px;
     height: 90%
+}
+.intro-slider::after {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	content: "";
+	bottom: 0;
+	z-index: 10;
+	/*background-color: #ccc*/
+	/*opacity: 0.9;*/
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
 
 .shadow::before {
@@ -538,6 +551,8 @@ body.is-overlay:after {
 	z-index: 10;
 	/*background-color: #ccc*/
 	opacity: 0.7;
+	background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+	background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
 
@@ -564,7 +579,7 @@ body.is-overlay:after {
     top: 4px;
     left: 5px;
     z-index: 1;
-    width: 60px;
+    width: 58px;
     height: 34px;
     line-height: 34px;
     border-radius: 15px;
