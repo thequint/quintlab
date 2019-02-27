@@ -1,0 +1,507 @@
+:root {
+ --font-base: font-family: futura-pt, sans-serif;
+ --font-headline: font-family: 'Work Sans', sans-serif;
+ --color-purple: #35144f;
+ --color-yellow: #ffbf00;
+ --color-white: #fff;
+}
+.submit-form {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    transform: translateY(100%);
+    padding: 20px 15px;
+    background: var(--color-purple);
+    color: var(--color-white);
+    z-index: 99999;
+    transition: transform 0.2s ease-in-out;
+    max-width: 600px;
+}
+.submit-form.is-submit .form-container {
+    display: none;
+}
+.submit-text {
+    display: none;
+}
+.submit-form.is-submit .submit-text {
+    display: block;
+}
+.submit-form.is-open {
+    transform: translate3d(0, 0, 0);
+}
+.submit-form h4 {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    font-size: 26px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 120%;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--color-yellow);
+    font-family: var(--font-base);
+    margin-bottom: 15px;
+}
+.submit-form .form-group {
+    padding-bottom: 15px;
+}
+.submit-form label {
+    color: rgba(255,255,255,0.7);
+    font-family: var(--font-base);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 100%;
+    padding-bottom: 5px;
+    display: block;
+}
+.submit-form input[type='text'], .submit-form textarea {
+    width: 100%;
+    border: 0px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-purple);
+    padding: 0px 7px;
+    font-family: var(--font-base);
+}
+.submit-form textarea {
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    resize: none;
+    line-height: 120%;
+    padding: 7px;
+}
+.btn-submit {
+    background-color: var(--color-yellow);
+    color: var(--color-purple);
+    height: 37px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+    width: 128px;
+    text-align: center;
+    border-radius: 30px;
+    border: 0;
+    font-family: var(--font-base);
+    cursor: pointer;
+}
+.submit-form .group-btn-submit {
+    padding: 10px 0px 0 0;
+}
+.btn-submit:hover {
+    background-color: var(--color-white);
+}
+.btn-submit.is-left {
+    float: left;
+}
+.btn-submit.is-right {
+    float: right;
+}
+body.is-droptheink {
+    padding: 55px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+header {
+    background: var(--color-purple);
+    height: 55px;
+    position: fixed;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+}
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    height: 55px;
+    z-index: 9999;
+    background: var(--color-purple);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
+}
+.fixed-footer h4 {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--color-white);
+    position: absolute;
+    line-height: 55px;
+    left: 10px;
+}
+.fixed-footer .btn-issue {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    background-color: var(--color-yellow);
+    color: var(--color-purple);
+    height: 37px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+    width: 128px;
+    text-align: center;
+    border-radius: 30px;
+}
+.fixed-footer .btn-issue:hover {
+    background-color: var(--color-white);
+}
+.btn-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: var(--color-yellow);
+    z-index: 2;
+    background-image: url("../images/btn-back.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px;
+}
+header span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 55px;
+    letter-spacing: normal;
+    color: var(--color-yellow);
+    font-size: 17px;
+    text-align: center;
+    padding: 0px 70px;
+    white-space: nowrap;
+}
+.nav-up {
+    transform: translate3d(0, -55px, 0);
+}
+.drop-the-ink-wrapper {
+    background-color: #e9e9e9;
+}
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+}
+.lists li {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+.lists li:nth-child(3n+1) {
+    width: 100%;
+}
+.lists li::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding: 0px;
+}
+.list-container .list-content {
+    background-color: var(--color-white);
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.list-content-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--color-purple);
+}
+.list-content-header {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: center;
+    color: var(--color-purple);
+    line-height: 100%;
+    font-size: 14px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 700;
+    font-family: var(--font-base);
+}
+.lists li:nth-child(3n+1) .list-content-header {
+    top: 20px;
+}
+.list-content-bottom h2, .list-content-bottom h3 {
+    line-height: 100%;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 700;
+    font-family: var(--font-base);
+    bottom: 7px;
+}
+.list-content-bottom h2 {
+    left: 7px;
+    text-align: left;
+    color: #bcbcbc;
+}
+.list-content-bottom h2 span {
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 3px;
+    left: 1px;
+    top: -13px;
+    line-height: 100%;
+    text-transform: uppercase;
+    opacity: 1;
+	white-space: nowrap;
+	position: absolute;
+}
+.is-hi .list-content-bottom h2 span {
+    font-size: 14px;
+}
+.lists li.is-active .list-content-bottom h2 span {
+    color: #ffbf00;
+}
+.list-content-bottom h3 {
+    right: 7px;
+    text-align: right;
+}
+.list-content-bottom h3 label {
+    opacity: 0.7;
+}
+.ctg-icon {
+    width: 30%;
+    border-radius: 100%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1s ease-in-out;
+    border: 0 !important;
+}
+.ctg-icon::before {
+    padding-top: 100%;
+    content: '';
+    display: block;
+    background-image: url("../images/icon-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.ctg-icon i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    border: 0 !important;
+}
+.list-message {
+    position: absolute;
+    width: 100%;
+    bottom: 32px;
+    left: 0;
+    font-size: 15px;
+    padding: 0px 10px;
+    line-height: 130%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+    transform: translate3d(0, 50px, 0);
+}
+.lists li:nth-child(3n+1) .list-message {
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    left: 0;
+    font-size: 25px;
+    padding: 0px 10%;
+    line-height: 130%;
+}
+.list-message span {
+    color: var(--color-yellow);/*    font-size: 120%;*/
+}
+.lists li.is-active .list-container .list-content {
+/*    background-color: var(--color-purple);*/
+}
+.lists li canvas {
+    transform: translate(-25%, -25%)
+}
+.lists li:nth-child(3n+1) canvas {
+    transform: translate(0%, 0%) scale(1.5);
+}
+.lists li.is-active .list-content-bottom, .lists li.is-active .list-content-header {
+    color: var(--color-white);
+}
+.lists li.is-active .ctg-icon {
+    border: 2px solid transparent;
+    background: transparent;
+    transform: translate3d(-50%, -125%, 0);
+}
+.lists li.is-active .ctg-icon::before {
+    opacity: 0;
+}
+.lists li.is-active .list-message {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+}
+/*CSS For nth-child 3n+1*/
+
+/*
+.lists li:nth-child(3n+1) .ctg-icon {
+    width: 120px;
+    height: 120px;
+}
+*/
+
+
+.lists li:nth-child(3n+1) .list-content-bottom h2, .lists li:nth-child(3n+1) .list-content-bottom h3, .lists li:nth-child(3n+1) .list-content-header {
+    font-size: 24px;
+    bottom: 10px;
+}
+.lists li:nth-child(3n+1) .list-content-bottom h2 {
+    left: 10px;
+}
+.lists li:nth-child(3n+1) .list-content-bottom h3 {
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+.lists {
+    display: block;
+    flex-wrap: inherit;
+    padding: 0;
+}
+.grid-sizer {
+    width: 25%;
+}
+.lists li {
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    float: left;
+}
+.lists li:nth-child(3n+1) {
+    width: 50%;
+}
+}
+
+@media (min-width: 1024px) {
+.drop-the-ink-wrapper .lists {
+    margin: 3px;
+}
+.list-message {
+    bottom: 50px;
+    font-size: 22px;
+    padding: 0px 10px;
+    line-height: 130%;
+}
+.lists {
+    display: block;
+    flex-wrap: inherit;
+    padding: 0;
+}
+.grid-sizer {
+    width: 20%;
+}
+.lists li {
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+    float: left;
+}
+.lists li:nth-child(3n+1) {
+    width: 40%;
+}
+.list-content-header {
+    font-size: 18px;
+    transition: all 1s ease-in-out;
+}
+.list-content-bottom h2, .list-content-bottom h3 {
+    font-size: 17px;
+}
+.list-message {
+    bottom: 50px;
+    font-size: 18px;
+    line-height: 120%;
+}
+.lists li canvas {
+    transform: translate(-25%, -25%)
+}
+.lists li:nth-child(3n+1) canvas {
+    transform: scale(1.5, 1.5);
+}
+}
+
+@media (min-width: 1440px) {
+.drop-the-ink-wrapper .lists {
+    margin: 3px;
+}
+.list-message {
+    bottom: 50px;
+    font-size: 22px;
+    padding: 0px 10px;
+    line-height: 130%;
+}
+.lists {
+    display: block;
+    flex-wrap: inherit;
+    padding: 0;
+}
+.grid-sizer {
+    width: 12.5%;
+}
+.lists li {
+    position: relative;
+    width: 12.5%;
+    overflow: hidden;
+    float: left;
+}
+.lists li:nth-child(3n+1) {
+    width: 25%;
+}
+.list-content-header {
+    font-size: 18px;
+}
+.list-content-bottom h2, .list-content-bottom h3 {
+    font-size: 17px;
+}
+.list-message {
+    bottom: 40px;
+    font-size: 20px;
+    line-height: 125%;
+}
+}
