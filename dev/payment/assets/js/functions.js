@@ -153,8 +153,9 @@ $('#SubmitForm').click(function(event) {
     }
     // Payment
     var options = {
-        "key": 'rzp_live_SWoEhVKfBqYonT',
-        "amount": "10000", // 2000 paise = INR 20
+        // "key": 'rzp_live_SWoEhVKfBqYonT',
+        "key": 'rzp_test_kOOUO6MX6RPYh9',
+        "amount": "100", // 2000 paise = INR 20
         "name": "The Quint111",
         "description": "*Entry fees includes GST",
         "image": "https://www.thequint.com/quintlab/my-report-debate/assets/images/thequint-logo.png",
