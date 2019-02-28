@@ -14,7 +14,7 @@ var db = firebase.firestore();
 db.settings({
     timestampsInSnapshots: true
 });*/
-
+/*
 init();
 
 function init() {
@@ -51,6 +51,7 @@ function init() {
         lastScrollTop = st;
     }
 }
+*/
 /*var maxLength = 500;
 $('textarea#Message').keyup(function() {
 var length = $(this).val().length;
@@ -99,6 +100,10 @@ $('#Mobile').on('keypress', function(e) {
     e.preventDefault();
     return false;
 });
+
+
+
+
 
 $('#SubmitForm').click(function(event) {
     event.preventDefault();
