@@ -1,3 +1,4 @@
+/*
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
@@ -12,7 +13,8 @@ var db = firebase.firestore();
 // Disable deprecated features
 db.settings({
     timestampsInSnapshots: true
-});
+});*/
+
 init();
 
 function init() {
@@ -156,11 +158,11 @@ $('#SubmitForm').click(function(event) {
         // "key": 'rzp_live_SWoEhVKfBqYonT',
         "key": 'rzp_test_kOOUO6MX6RPYh9',
         "amount": "100", // 2000 paise = INR 20
-        "name": "The Quint111",
+        "name": "The Quint",
         "description": "*Entry fees includes GST",
         "image": "https://www.thequint.com/quintlab/my-report-debate/assets/images/thequint-logo.png",
         "handler": function(response) {
-            update_db(response.razorpay_payment_id)
+            //update_db(response.razorpay_payment_id)
         },
         "prefill": {
             "name": $("input[name='name']").val(),
@@ -178,6 +180,9 @@ $('#SubmitForm').click(function(event) {
     // End Payment
     rzp1.open();
 });
+
+
+/*
 var essay = {}
 
 function update_db(id) {
@@ -205,7 +210,9 @@ function update_db(id) {
     }).catch(function(error) {
         //console.log(error)
     });
-}
+}*/
+
+/*
 $(document).ready(function() {
     $('.nav-bar').click(function() {
         "use strict";
@@ -266,4 +273,4 @@ $('.topic').click(function() {
 });
 $('.close-modal').click(function() {
     $('body').removeAttr('class');
-});
+});*/
