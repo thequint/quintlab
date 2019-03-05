@@ -158,7 +158,7 @@ $('#SubmitForm').click(function(event) {
     // Payment
     var options = {
         // "key": 'rzp_live_SWoEhVKfBqYonT',
-        "key": 'rzp_test_kOOUO6MX6RPYh9',
+        "key": 'rzp_live_tBGcMHFIr1pJox',
         "amount": "100", // 2000 paise = INR 20
         "name": "The Quint",
         "description": "*Entry fees includes GST",
