@@ -102,9 +102,6 @@ $('#Mobile').on('keypress', function(e) {
 });
 
 
-
-
-
 $('#SubmitForm').click(function(event) {
     event.preventDefault();
     //console.log(error);
