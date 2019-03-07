@@ -40,8 +40,8 @@
 				<a class="close-nav" href="javascript:void(0);">Close</a>
 				<a class="logo-bottom" href="javascript:void(0);"><img src="assets/images/logo-myreport-debate-bottom.svg" alt=""></a>
 				<ul class="clearfix">
-					<li><a href="data-list-english.html">English</a></li>
-					<li><a href="data-list-hindi.html">हिंदी</a></li>
+					<!-- <li><a href="data-list-english.html">English</a></li>
+					<li><a href="data-list-hindi.html">हिंदी</a></li> -->
 					<li><a class="des" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</ul>
 			</nav>
@@ -49,6 +49,7 @@
 	</header>
 	<section class="wrapper banner-wrapper">
 		<div class="container">
+			
 		<table id="MyReport" class="display" cellspacing="0" width="100%">
 		  <thead>
 			<tr>
@@ -120,7 +121,7 @@ var index=1;
 
 	db.collection("MyReport_Debate").orderBy('date', 'desc').get().then((querySnapshot) => {
 	querySnapshot.forEach((doc) => {
-		if(doc.data().lang=='hindi')
+		if(doc.data().lang=='eng')
 		{
 
 		console.log(doc.data());
@@ -139,7 +140,6 @@ var index=1;
 			})
 
 
-
 $(".des").click(function(){
 firebase.auth().signOut().then(function() {
   location.href="index.html"
@@ -147,6 +147,7 @@ firebase.auth().signOut().then(function() {
   // An error happened.
 });
 })
+
 	</script>
 </body>
 </html>
