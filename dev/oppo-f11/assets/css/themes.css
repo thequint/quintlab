@@ -64,14 +64,14 @@ img {
 	/* background-color: #fff; */
 }
 .main-wrap.device-frame {
-	max-width: 317px;
+	max-width: 300px;
 	width: 100%;
 
 }
 .section-wrap {
 	position: relative;
 	width: 100%;
-	min-height: 700px;
+	min-height: 670px;
 	z-index: 0;
 	background-image: url(../images/device-frame.png);
 	background-repeat: no-repeat;
