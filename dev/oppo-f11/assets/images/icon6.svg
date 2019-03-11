@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="AB_Icon" width="80.206" height="80.206" data-name="AB Icon" viewBox="0 0 80.206 80.206">
+    <defs>
+        <style>
+            .cls-1{fill:#e8fccf}.cls-2{fill:#3e8914}.cls-3{filter:url(#Rectangle_12)}.cls-4{filter:url(#Rectangle_11)}.cls-5{filter:url(#Rectangle_10)}.cls-6{filter:url(#Rectangle_9)}.cls-7{filter:url(#Path_39)}
+        </style>
+        <filter id="Path_39" width="34.669" height="55.038" x="23.563" y="15.722" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_9" width="26.782" height="16.515" x="27.507" y="22.174" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="3"/>
+            <feGaussianBlur result="blur-2" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_10" width="26.782" height="16.515" x="27.507" y="50.301" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="3"/>
+            <feGaussianBlur result="blur-3" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_11" width="26.782" height="16.515" x="27.507" y="40.925" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="3"/>
+            <feGaussianBlur result="blur-4" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_12" width="26.782" height="16.514" x="27.507" y="31.55" filterUnits="userSpaceOnUse">
+            <feOffset dx="1" dy="3"/>
+            <feGaussianBlur result="blur-5" stdDeviation="1.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <rect id="Rectangle_21" width="80.206" height="80.206" class="cls-1" data-name="Rectangle 21" rx="40.103"/>
+    <g class="cls-7">
+        <path id="Path_39-2" d="M210.686 783.448h-5.068v-1.254c0-.693-.81-1.254-1.81-1.254h-8.295c-1 0-1.81.561-1.81 1.254v1.254h-5.068a1.809 1.809 0 0 0-1.809 1.81v39.91a1.809 1.809 0 0 0 1.809 1.81h22.05a1.809 1.809 0 0 0 1.81-1.81v-39.91a1.809 1.809 0 0 0-1.809-1.81zm-.161 41.559H188.8v-39.588h21.728z" class="cls-2" data-name="Path 39" transform="translate(-159.76 -763.72)"/>
+    </g>
+    <g class="cls-6">
+        <path id="Rectangle_9-2" d="M0 0h17.782v7.515H0z" class="cls-2" data-name="Rectangle 9" transform="translate(31.01 23.67)"/>
+    </g>
+    <g class="cls-5">
+        <path id="Rectangle_10-2" d="M0 0h17.782v7.515H0z" class="cls-2" data-name="Rectangle 10" transform="translate(31.01 51.8)"/>
+    </g>
+    <g class="cls-4">
+        <path id="Rectangle_11-2" d="M0 0h17.782v7.515H0z" class="cls-2" data-name="Rectangle 11" transform="translate(31.01 42.43)"/>
+    </g>
+    <g class="cls-3">
+        <path id="Rectangle_12-2" d="M0 0h17.782v7.514H0z" class="cls-2" data-name="Rectangle 12" transform="translate(31.01 33.05)"/>
+    </g>
+</svg>

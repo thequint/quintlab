@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="UNM_Icon" width="80.206" height="80.206" data-name="UNM Icon" viewBox="0 0 80.206 80.206">
+    <defs>
+        <style>
+            .cls-1{fill:#1c75bd}.cls-2{fill:#fff}.cls-3{filter:url(#camera_night_mode)}
+        </style>
+        <filter id="camera_night_mode" width="57.409" height="49.527" x="11.174" y="18.111" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <rect id="Rectangle_21" width="80.206" height="80.206" class="cls-1" data-name="Rectangle 21" rx="40.103"/>
+    <g id="Group_45" class="cls-3" data-name="Group 45" transform="translate(.004 .001)">
+        <path id="camera_night_mode-2" d="M157.137 457.026v-2.558h9.213v-9.213h2.558v11.771zm-27.638 0v-11.771h2.559v9.213h9.213v2.558zm36.851-19.756v-9.21h-9.213v-2.56h11.771v11.77zm-36.851 0V425.5h11.772v2.561h-9.213v9.21zm28.831 8.015a9.634 9.634 0 0 1-8.716 5.578 9.348 9.348 0 0 1-3.728-.764 9.49 9.49 0 0 1-5.114-5.115 9.342 9.342 0 0 1-.762-3.727 9.6 9.6 0 0 1 9.241-9.592.8.8 0 0 1 .576 1.389 6.637 6.637 0 0 0-1.645 2.27 6.719 6.719 0 0 0-.569 2.733 6.646 6.646 0 0 0 .913 3.414 6.784 6.784 0 0 0 2.474 2.477 6.771 6.771 0 0 0 6.265.274.745.745 0 0 1 .9.162.781.781 0 0 1 .218.425.807.807 0 0 1-.056.475z" class="cls-2" data-name="camera night mode" transform="translate(-109.33 -401.39)"/>
+    </g>
+</svg>
