@@ -1,11 +1,10 @@
 $(".popup-bt").click(function(e) {
-    $(".overlay").show();
-    $(".info-popup").show();
+    $(".overlay").fadeIn();
+    $(".info-popup").fadeIn();
     $(".info-popup h2").html($(this).attr("data-headline"));
     $(".info-popup p").html($(this).attr("data-text"));
 
     $(".overlay").addClass($(this).attr("data-class"));
-
 });
 
 $(".close-icon").click(function() {

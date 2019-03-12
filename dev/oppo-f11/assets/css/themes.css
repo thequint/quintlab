@@ -643,7 +643,7 @@ transform: translate3d(0, 0, 0)
 }
 
 .scene {
-    width: 300px;
+    max-width: 300px;
     height: 680px;
     /* border: 1px solid #CCC; */
     perspective: 680px;
@@ -829,6 +829,12 @@ transform: translate3d(0, 0, 0)
 }
 
 @media screen and (max-width: 400px) {
+    .scene {
+        max-width: 290px;
+    }
+    .overlay {
+        height: 82%;
+    }
     .section-wrap:after {
         height: 36%;
     }
