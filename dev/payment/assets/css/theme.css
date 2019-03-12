@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* New Style */
 .iframe-wrap {
-    padding: 40px 40px;
+    padding: 30px 30px;
     /*min-height: 400px;*/
     background-color: #21224f
 }
@@ -226,13 +226,20 @@ h1, h2, h3, h4, h5, h6 {
 .iframe-wrap .iframe-right {
     float: left;
     width: 50%;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 30px;
+}
+.iframe-wrap .iframe-right__content {
+    width: 90%;
+    margin: 0 auto;
 }
 .iframe-wrap .iframe-right h2 {
+    width: 80%;
+    margin: 0 auto;
     color: #fff;
     font-size: 22px;
     font-weight: 500;
     text-align: center;
+    padding-top: 30px;
 }
 
 .iframe-wrap .iframe-logos {
@@ -242,7 +249,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 32%;
     text-align: center;
     display: inline-block;
+    /*background-color: #ccc;*/
 }
+
+.btn-wrap {
+    text-align: center;
+}
+.contribute-btn {
+    color: #21224f;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #54e6da;
+}
+
 
 /*Form*/
 .form-container .inner-container {
