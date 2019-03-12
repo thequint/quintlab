@@ -45,7 +45,7 @@ h4,
 h5,
 h6 {
     color: #333;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
 }
@@ -397,7 +397,7 @@ transform: translate3d(0, 0, 0)
 .circle-list li:nth-child(9) {
     top: 53%;
     left: 70%;
-    background-image: url(../images/icon8.svg);
+    background-image: url(../images/icon9.svg);
 }
 
 .overlay {
@@ -434,8 +434,8 @@ transform: translate3d(0, 0, 0)
     transform: translateY(-50%);
     z-index: 99;
     max-width: 500px;
-    color: rgba(41, 41, 41, 1.0);
-    font-weight: 400;
+    color: #191919;
+    font-weight: 500;
     /* padding: 12px; */
     font-family: 'Poppins', sans-serif;
 }
@@ -443,12 +443,11 @@ transform: translate3d(0, 0, 0)
 .info-popup--content {
     position: relative;
     width: 100%;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 125%;
-    /* min-height: 320px; */
+    padding: 15px;
+    font-size: 17px;
+    line-height: 28px;
     border-radius: 10px;
-    /* background-color: #e3f4fa; */
+    letter-spacing: -0.1px;
 }
 
 .overlay.icon-first {
@@ -492,14 +491,14 @@ transform: translate3d(0, 0, 0)
 }
 
 .overlay.icon-nineth {
-    background-color: #ceeaea;
-    background-image: url(../images/8.png);
+    /* background-color: #ceeaea; */
+    /* background-image: linear-gradient(221deg, rgb(19, 202, 169), rgb(22, 195, 183) 10%, rgb(52, 189, 218) 20%, rgb(98, 164, 237) 29%, rgb(123, 148, 234) 38%, rgb(171, 123, 230) 46%, rgb(201, 117, 199) 52%, rgb(212, 115, 189) 58%, rgb(252, 104, 143) 67%, rgb(254, 122, 118) 72%, rgb(254, 135, 95) 77%, rgb(254, 152, 72) 84%, rgb(254, 174, 36) 91%, rgb(254, 142, 82)); */
+    background-image: url(../images/9.png);
 }
 
 .info-popup--content h2 {
-    font-size: 24px;
-    /* padding-top: 20px; */
-    margin-bottom: 10px;
+    font-size: 23px;
+    margin-bottom: 15px;
     line-height: 115%;
     color: rgba(41, 41, 41, 0.5);
 }
@@ -726,9 +725,9 @@ transform: translate3d(0, 0, 0)
     position: relative;
     visibility: visible;
     opacity: 1;
-    -webkit-animation: cd-slide-in .6s;
-    -moz-animation: cd-slide-in .6s;
-    animation: cd-slide-in .6s
+    -webkit-animation: cd-slide-in .9s;
+    -moz-animation: cd-slide-in .9s;
+    animation: cd-slide-in .9s
 }
 
 @-webkit-keyframes cd-slide-in {
