@@ -43,58 +43,170 @@
 	
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900"> -->
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito+Sans:800,900" rel="stylesheet">
+
 <link rel="stylesheet" media="all" href="assets/css/font-awesome.min.css">
 <link rel="stylesheet" media="all" href="assets/css/base.css">
 <link rel="stylesheet" media="all" href="assets/css/theme.css">
 <link rel="stylesheet" media="all" href="assets/css/responsive.css">
 <style type="text/css">
-	.form-container {
-		margin: 0 auto;
-		max-width: 800px;
-		padding: 20px 20px 10px 20px;
-		background-color: #4ECDC4;
-	}
+	
 </style>
 </head>
 <body>
-<div class="form-container">
-	<div class="inner-container">
-		<form>
-			
-			<div class="form-group">
-				<input type="text" name="title" placeholder="Title*" id="Title">
+<main class="wrapper main-wrapper">
+	<header class="wrapper header-wrapper" id="header">
+		<div class="container">
+			<a class="logo-tq" target="_blank" href="https://www.thequint.com/"><img src="assets/images/logo-tq.svg" alt="TheQuint"></a>
+			<a class="nav-bar" href="javascript:void(0);"><span>Menu</span></a>
+			<nav class="top-nav">
+				<a class="close-nav" href="javascript:void(0);">Close</a>
+				<a class="logo-bottom" href="javascript:void(0);"><img src="assets/images/quint-logo-white.svg" alt=""></a>
+				<ul class="clearfix">
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a target="_blank" href="https://www.thequint.com/terms-and-conditions">Terms &amp; Conditions</a></li>
+				</ul>
+			</nav>
+		</div>	
+	</header>
+
+
+	<section class="wrapper section-first">
+		<div class="container">
+			<h1 class="main-headline">Pay for <strong>courageous journalism.</strong><br> Because the truth is worth it.</h1>
+		</div>
+	</section>
+
+
+	<section class="wrapper form-wrapper">
+		<div class="container">
+			<div class="form-container clearfix">
+
+
+				<div class="body-right">
+					<form>
+						<div class="form-group">
+							<input type="text" name="name" placeholder="Full Name*" id="Name">
+						</div>
+						
+						<div class="form-group">
+							<input type="email" name="email" placeholder="Email address*" id="Email">
+							<div class="error-msg" id="ErrorEmail"></div>
+						</div>
+						
+						<div class="form-group">
+							<input type="text" name="number" placeholder="Mobile Number*" id="Mobile">
+							<div class="error-msg" id="ErrorMobile"></div>
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="pannumber" placeholder="PAN Number*" id="PanNumber">
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="gstnumber" placeholder="GST Number" id="GstNumber">
+						</div>
+
+						<div class="form-group form-group-amount">
+							<div class="form-amout clearfix">
+								<div class="amout-label">Select Amount:</div>
+								<div class="amout-wrap">
+									<span class="amount amount-very-small" data-amount="100">100</span>
+									<span class="amount amount-small" data-amount="500">500</span>
+									<span class="amount amount-medium" data-amount="2000">2000</span>
+									<span class="amount amount-large" data-amount="5000">5000+</span>
+								</div>
+								<!--  -->
+								<div class="amout-input"><input type="text" name="amount" placeholder="" id="Add_Amount"></div>
+								<!-- <div class="error-msg" id="ErrorMobile"></div> -->
+							</div>
+						</div>
+						
+						<div class="form-group is-check">
+							<input class="styled-checkbox" required name="terms" id="fld_terms" type="checkbox" value="value1">
+							<label for="fld_terms">I accept the</label> <a target="_blank" href="https://www.thequint.com/terms-and-conditions">Terms &amp; Conditions</a>
+						</div>
+						<div class="form-group" style="text-align: center;">
+							<input type="submit" name="submit" value="Contribute Now" id="SubmitForm">
+						</div>
+					</form>
+				</div>
+
+				<div class="body-left">
+					<div class="iframe-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/pvQ1xNrctQ8?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+					<div class="iframe-logos">
+						<span><img src="assets/images/my-report-logo-color.svg"></span>
+						<span><img src="assets/images/webqoof-logo-color.svg"></span>
+						<span><img src="assets/images/special-projects-color.svg"></span>
+					</div>
+
+					<div class="body-left-content">
+						Pay for <span>courageous journalism.</span><br>
+						Because the truth is worth it.
+					</div>
+				</div>
+
+
 			</div>
 			
-			<div class="form-group">
-				<textarea class="is-message" name="message" placeholder="Write your essay here*" id="Message"></textarea>
-				 <div class="char-rem"><span id="chars">500</span> words remaining</div>
+			<div class="form-container clearfix content-bottom">
+				<div class="content-left">
+					<span>Contributors</span> can suggest stories The Quint should feature as special projects, flag suspicious news Webqoof should verify, and share citizen stories for My Report.
+				</div>
+				<div class="content-right">
+					<span>Contribution</span> from the audience safeguards our editorial independence, encouraging us to continue speaking truth to power.
+				</div>
 			</div>
+			<div class="form-group is-mobile">
+				<input type="submit" name="submit" value="Contribute Now" id="">
+			</div>
+
+		</div>
+	</section>
+</main>
+
+	<!-- <div class="form-container">
+		<div class="inner-container">
+			<form>
 	
-			<div class="form-group">
-				<input type="text" name="name" placeholder="Full Name*" id="Name">
-			</div>
-			
-			<div class="form-group">
-				<input type="email" name="email" placeholder="Email address*" id="Email">
-				<div class="error-msg" id="ErrorEmail"></div>
-			</div>
-			
-			<div class="form-group">
-				<input type="text" name="number" placeholder="Mobile Number*" id="Mobile">
-				<div class="error-msg" id="ErrorMobile"></div>
-			</div>
-			
-			<div class="form-group is-check">
-				<input class="styled-checkbox" required name="terms" id="fld_terms" type="checkbox" value="value1">
-				<label for="fld_terms">I accept the</label> <a target="_blank" href="https://www.thequint.com/terms-and-conditions">Terms &amp; Conditions</a>
-			</div>
-			<div class="form-group">
-				<input type="submit" name="submit" value="Pay &amp; Submit" id="SubmitForm">
-			</div>
-		</form>
-	</div>
-</div>
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Full Name*" id="Name">
+				</div>
+				
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Email address*" id="Email">
+					<div class="error-msg" id="ErrorEmail"></div>
+				</div>
+				
+				<div class="form-group">
+					<input type="text" name="number" placeholder="Mobile Number*" id="Mobile">
+					<div class="error-msg" id="ErrorMobile"></div>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="pannumber" placeholder="Pan Number" id="PanNumber">
+				</div>
+
+				<div class="form-group" style="padding-right: 450px;">
+					<input type="text" name="amount" placeholder="Amount" id="Add_Amount">
+					<div class="error-msg" id="ErrorMobile"></div>
+				</div>
+				
+				<div class="form-group is-check">
+					<input class="styled-checkbox" required name="terms" id="fld_terms" type="checkbox" value="value1">
+					<label for="fld_terms">I accept the</label> <a target="_blank" href="https://www.thequint.com/terms-and-conditions">Terms &amp; Conditions</a>
+				</div>
+				<div class="form-group">
+					<input type="submit" name="submit" value="Pay &amp; Submit" id="SubmitForm">
+				</div>
+			</form>
+		</div>
+	</div> -->
+
+
+
 
 <div class="payment-modal" id="Is_Payment">
 	<a class="close-modal" href="javascript:void(0);">Close modal</a>

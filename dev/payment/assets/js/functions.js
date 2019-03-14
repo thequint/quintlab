@@ -1,4 +1,4 @@
-/*
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
@@ -13,7 +13,7 @@ var db = firebase.firestore();
 // Disable deprecated features
 db.settings({
     timestampsInSnapshots: true
-});*/
+});
 /*
 init();
 
@@ -104,25 +104,17 @@ $('#Mobile').on('keypress', function(e) {
 
 $('#SubmitForm').click(function(event) {
     event.preventDefault();
-    //console.log(error);
-    // Initializing Variables With Form Element Values
-    var fld_title = $('#Title').val();
-    var fld_message = $('#Message').val();
+
+    // var fld_message = $('#Message').val();
     var fld_name = $('#Name').val();
     var fld_email = $('#Email').val();
     var fld_mobile = $('#Mobile').val();
-    var fld_address = $('#Address').val();
-    var fld_about = $('#About').val();
-    if (fld_title.length == 0) {
-        $('#head').text("All fields are mandatory");
-        $("#Title").focus();
-        return false;
-    }
-    if (fld_message.length == 0) {
-        $('#head').text("All fields are mandatory");
-        $("#Message").focus();
-        return false;
-    }
+    var fld_pannumber = $('#PanNumber').val();
+    // if (fld_message.length == 0) {
+    //     $('#head').text("All fields are mandatory");
+    //     $("#Message").focus();
+    //     return false;
+    // }
     if (fld_name.length == 0) {
         $('#head').text("All fields are mandatory");
         $("#Name").focus();
@@ -140,31 +132,26 @@ $('#SubmitForm').click(function(event) {
         $("#Mobile").focus();
         return false;
     }
-    /*if (fld_address.length == 0) {
-    $('#head').text("All fields are mandatory");
-    $("#Address").focus();
-    return false;
+    if (fld_pannumber.length == 0) {
+        $('#head').text("All fields are mandatory");
+        $("#PanNumber").focus();
+        return false;
     }
-    if (fld_about.length == 0) {
-    $('#head').text("All fields are mandatory");
-    $("#About").focus();
-    return false;
-    }*/
     if ($('#fld_terms').prop("checked") != true) {
         alert("Please accept the Terms and Conditions");
-        //fld_terms.terms.focus();
         return false;
     }
     // Payment
     var options = {
         // "key": 'rzp_live_SWoEhVKfBqYonT',
         "key": 'rzp_live_tBGcMHFIr1pJox',
-        "amount": "100", // 2000 paise = INR 20
+        // "amount": "100", // 2000 paise = INR 20
+        "amount": $('#Add_Amount').val(),
         "name": "The Quint",
         "description": "*Entry fees includes GST",
         "image": "https://www.thequint.com/quintlab/my-report-debate/assets/images/thequint-logo.png",
         "handler": function(response) {
-            //update_db(response.razorpay_payment_id)
+            update_db(response.razorpay_payment_id)
         },
         "prefill": {
             "name": $("input[name='name']").val(),
@@ -184,7 +171,7 @@ $('#SubmitForm').click(function(event) {
 });
 
 
-/*
+
 var essay = {}
 
 function update_db(id) {
@@ -195,15 +182,14 @@ function update_db(id) {
         essay[$(this).attr('name')] = $(this).val();
     });
     // check hindi or engish
-    if ($("#Radio_En").is(":checked")) {
-        //console.log('checked en')
-        essay['lang'] = "eng"
-    } else {
-        essay['lang'] = "hindi"
-    }
+    // if ($("#Radio_En").is(":checked")) {
+    //     essay['lang'] = "eng"
+    // } else {
+    //     essay['lang'] = "hindi"
+    // }
     essay['payment_id'] = id;
     essay['date'] = new Date();
-    db.collection('MyReport_Debate').doc(essay['email']).set(essay).then(function(result) {
+    db.collection('Contribute_Quint').doc(essay['payment_id']).set(essay).then(function(result) {
         // success screen
         $('body').addClass('is-modal is-payment');
         $('#PaymentId').html(essay['payment_id']);
@@ -212,9 +198,26 @@ function update_db(id) {
     }).catch(function(error) {
         //console.log(error)
     });
-}*/
+}
 
-/*
+$(".form-amout .amount").on('click', function(){
+    $(".form-amout .amount").removeClass("is-active");
+    $(this).addClass("is-active");
+    $("#Add_Amount").val($(this).attr("data-amount"));
+
+    $(".form-amout").removeClass("translate-amout");
+    // $(".amout-label").removeClass("amout-disable");
+    // $(".amout-input").removeClass("amout-enable");
+});
+
+
+$(".amount-large").on('click', function(){
+    $(".form-amout").addClass("translate-amout");
+    // $(".amout-label").addClass("amout-disable");
+    // $(".amout-input").addClass("amout-enable");
+})
+
+
 $(document).ready(function() {
     $('.nav-bar').click(function() {
         "use strict";
@@ -245,6 +248,7 @@ $(document).ready(function() {
         }, 1000, 'swing');
     });
 });
+
 $('body').click(function(evt) {
     if (evt.target.className == "is-more")
         return;
@@ -273,6 +277,7 @@ $('.read-profiles').click(function() {
 $('.topic').click(function() {
     $('body').addClass('is-modal is-topic');
 });
+
 $('.close-modal').click(function() {
     $('body').removeAttr('class');
-});*/
+});

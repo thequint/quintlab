@@ -1,26 +1,209 @@
 @charset "utf-8";
 .container {
-    max-width: 1240px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     position: relative;
-}
-
-@media (max-width: 940px) {
-.container {
     padding-left: 20px;
     padding-right: 20px;
 }
+@media (max-width: 1440px) {
+
 }
+@media (max-width: 1280px) {
+    body {
+        font-size: 90%;
+    }
+    .header-wrapper .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .form-container {
+        max-width: 90%;
+        width: 90%;
+    }
+    .form-container .body-left {
+        padding-right: 0;
+    }
+    .form-group {
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .content-bottom .content-left {
+        padding-right: 0;
+    }
+    .form-container .body-right {
+        padding-left: 4%;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 80%;
+    }
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .iframe-video {
+        width: 100%
+    }
+    .form-container .body-right {
+        padding-left: 5%;
+    }
+}
+@media (max-width: 959px) {
+    .section-first .main-headline {
+        line-height: 150%;
+    }
+    .section-first .main-headline span {
+        display: block;
+    }
+    .form-container {
+        width: 70%;
+        max-width: 70%;
+    }
+    .form-container .body-left,
+    .form-container .body-right {
+        width: 100%;
+        max-width: 100%;
+        padding: 0
+    }
+    .form-container .body-right {
+        margin-bottom: 40px;
+    }
+    .content-bottom .content-left,
+    .content-bottom .content-right {
+        width: 100%;
+        max-width: 100%;
+        padding: 0
+    }
+    .content-bottom .content-left {
+        margin-bottom: 40px;
+    }
+    
+    .content-bottom {
+        margin: 60px auto
+    }
+}
+@media (max-width: 767px) {
+    .form-container {
+        width: 80%;
+        max-width: 80%;
+    }
+}
+@media (max-width: 639px) {
+    body {
+        /*font-size: 75%;*/
+    }
+    .section-first {
+        text-align: center;
+        padding: 20px 0 35px;
+    }
+    .section-first .main-headline {
+        font-size: 2em;
+    }
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-container .body-left-content {
+        font-size: 1.8em;
+    }
+    .content-bottom {
+        margin: 50px auto 30px;
+    }
+    .content-bottom .content-left,
+    .content-bottom .content-right {
+        font-size: 1.3125em
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        height: 44px;
+        padding: 0px 10px;
+    }
+
+    .form-amout .amout-label {
+        display: none;
+    }
+    .form-amout .amout-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+    .form-amout .amout-wrap span {
+        line-height: 44px;
+        height: 44px;
+    }
+    .form-amout .amout-input {
+        top: 5px;
+    }
+
+    .iframe-wrap {
+        padding: 20px 15px;
+    }
+    .iframe-headline {
+        display: none;
+    }
+    .iframe-headline.is-mobile {
+        display: block;
+        font-size: 19px;
+        letter-spacing: -0.2px;
+        margin-bottom: 15px;
+    }
+    .iframe-wrap .iframe-left,
+    .iframe-wrap .iframe-right {
+        width: 100%;
+    }
+    .iframe-wrap .iframe-left {
+        margin-bottom: 30px;
+    }
+    .iframe-wrap .iframe-right {
+        padding: 0
+    }
+    .iframe-logos {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .body-left .iframe-logos {
+        margin: 40px auto;
+    }
+    .body-left .iframe-logos span img {
+        width: 90%;
+    }
+    .form-group.is-mobile {
+        text-align: center;
+    }
+    .is-mobile {
+        display: block;
+    }
+
+}
+@media (max-width: 359px) {
+    .section-first .main-headline {
+        font-size: 1.75em;
+    }
+    .form-container .body-left-content {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
 
 /*Website CSS*/
 
-@media (max-width: 940px) {
+/*@media (max-width: 940px) {
 .header-wrapper .container {
     width: inherit;
     max-width: 100%;
 }
-}
+}*/
 
 @media (max-width: 768px) {
 .logo-tq {
@@ -45,7 +228,7 @@
 }
 
 .banner-header p {
-    font-size: 18px;
+    /*font-size: 18px;*/
     position: relative;
 	line-height: 150%;
 }
@@ -54,14 +237,14 @@
 	display: block;
 	font-weight: 600;
 	padding-bottom: 3px;
-	font-size: 20px;
+	/*font-size: 20px;*/
 	
 }
 
 .banner-header strong{
 	display: block;
 	font-weight: 700;
-	font-size: 22px;
+	/*font-size: 22px;*/
 }
 	
 
@@ -73,7 +256,7 @@
     max-width: 100%;
 }
 .inner-container h2 {
-    font-size: 30px;
+    /*font-size: 30px;*/
 }
 li.is-whatsapp {
     display: block;
@@ -124,7 +307,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
     position: absolute;
     top: 22px;
     text-align: center;
-    font-size: 13px;
+    /*font-size: 13px;*/
     width: 100%;
     left: -1px;
     font-weight: 450;
@@ -176,7 +359,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
     background: var(--color-blue);
     margin: 0;
 }
-.top-nav::before {
+/*.top-nav::before {
     position: fixed;
     top: 0;
     left: 0;
@@ -191,7 +374,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
     background-image: url("../images/top-bg.png");
     opacity: 0.08;
     pointer-events: none;
-}
+}*/
 .top-nav ul li {
     margin: 0;
     display: block;
@@ -204,7 +387,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
     padding: 0;
     border: 0 !important;
     background: rgba(0,0,0,0) !important;
-    font-size: 24px;
+    /*font-size: 24px;*/
 }
 .top-nav ul li a:hover {
     color: var(--color-white);
@@ -259,7 +442,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
 @media (max-width: 767px) {
 	
 .banner-header p{
-	font-size: 16px;
+	/*font-size: 16px;*/
 }	
 	
 .top-nav {
@@ -278,6 +461,6 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
     right: 10px;
 }
 .content-page h2 {
-    font-size: 30px;
+    /*font-size: 30px;*/
 }
 }
