@@ -60,7 +60,7 @@ _comscore.push(COMSCORE_OPTS);
 
         <div class="card">
             <div class="card__face card__face--front">
-                <div class="flip-btn">Click to Flip the Phone</div>
+                <!-- <div class="flip-btn">Click to Flip the Phone</div> -->
             </div>
             <div class="card__face card__face--back">
                 <div class="circle-list">
@@ -109,10 +109,12 @@ _comscore.push(COMSCORE_OPTS);
 // });
 $(".card").on('click', function() {
     $(this).addClass("is-flipped");
+    $(".flip-btn").css({"opacity":"0"})
     setTimeout(function(){
         $(".is-ani-left").addClass("ani-left-visible");
         $(".circle-list li").addClass("is-visible");
     }, 600);
+    
 });
 </script>
 </body>
