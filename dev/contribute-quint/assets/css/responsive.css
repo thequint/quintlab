@@ -26,14 +26,18 @@
         padding-right: 0;
     }
     .form-group {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         position: relative;
     }
     .content-bottom .content-left {
         padding-right: 0;
     }
     .form-container .body-right {
-        padding-left: 4%;
+        padding-left: 5%;
+    }
+    .form-group input[type="submit"] {
+        height: 52px;
+        padding: 1px 30px 0;
     }
 }
 @media (max-width: 1024px) {
@@ -51,9 +55,11 @@
         padding-left: 5%;
     }
 }
+
+
 @media (max-width: 959px) {
-    .section-first .main-headline {
-        line-height: 150%;
+    .section-first {
+        padding: 50px 0 60px;
     }
     .section-first .main-headline span {
         display: block;
@@ -97,7 +103,7 @@
     }
     .section-first {
         text-align: center;
-        padding: 20px 0 35px;
+        padding: 30px 0 35px;
     }
     .section-first .main-headline {
         font-size: 2em;
@@ -109,11 +115,14 @@
     .form-group {
         margin-bottom: 20px;
     }
+    .form-container .body-right {
+        margin-bottom: 30px;
+    }
     .form-container .body-left-content {
         font-size: 1.8em;
     }
     .content-bottom {
-        margin: 50px auto 30px;
+        margin: 0px auto 30px;
     }
     .content-bottom .content-left,
     .content-bottom .content-right {
@@ -125,6 +134,10 @@
     .form-group textarea {
         height: 44px;
         padding: 0px 10px;
+    }
+    .form-group input[type="submit"] {
+        height: 48px;
+        padding: 1px 25px 0;
     }
 
     .form-amout .amout-label {
@@ -176,15 +189,21 @@
     }
     .form-group.is-mobile {
         text-align: center;
+        margin-bottom: 30px;
     }
     .is-mobile {
         display: block;
     }
 
 }
+@media (max-width: 479px) {
+    .section-first .main-headline {
+        font-size: 1.65em;
+    }
+}
 @media (max-width: 359px) {
     .section-first .main-headline {
-        font-size: 1.75em;
+        font-size: 1.4375em
     }
     .form-container .body-left-content {
         font-size: 1.5em;

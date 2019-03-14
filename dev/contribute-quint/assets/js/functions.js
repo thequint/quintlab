@@ -249,6 +249,11 @@ $(document).ready(function() {
     });
 });
 
+$("#formScroll").on("click", function() {
+    // $(window).scrollTop(0);
+    $("html, body").animate({scrollTop : 0},700);
+});
+
 $('body').click(function(evt) {
     if (evt.target.className == "is-more")
         return;
