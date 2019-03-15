@@ -208,6 +208,7 @@ $(".form-amount .amount").on('click', function(){
     $(".form-amount").removeClass("translate-amout");
     // $(".amout-label").removeClass("amout-disable");
     // $(".amout-input").removeClass("amout-enable");
+    $("#formSlide").slideDown();
 });
 
 

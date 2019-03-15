@@ -227,6 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 /* New Style */
 .iframe-wrap {
     max-width: 800px;
+    min-height: 360px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -271,38 +272,45 @@ h1, h2, h3, h4, h5, h6 {
     width: 50%;
     padding: 0 0 0 15px;
 }
+
+.iframe-wrap .iframe-fluid {
+    margin: 0 auto;
+    max-width: 480px;
+}
 .iframe-wrap .iframe-right__content {
     /*width: 90%;*/
     margin: 0 auto;
 }
 .iframe-wrap .iframe-headline {
     color: var(--color-yellow);
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 26px;
+    line-height: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin: 10px 0 30px;
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-headline {
-    font-size: 22px;
-    margin-bottom: 10px;
+.iframe-wrap .iframe-hindi .iframe-headline {
+    font-size: 30px;
 }
 .iframe-wrap h2 {
     color: var(--color-white);
     font-family: var(--font-base);
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 30px;
+}
+.iframe-wrap .iframe-hindi h2 {
+    font-size: 28px;
 }
 .iframe-logos {
     margin: 11% 0 8%
 }
 .iframe-wrap .iframe-logos {
-    margin: 22px auto
+    margin: 35px auto
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos {
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos {
     margin: 15px auto
-}
+}*/
 .iframe-logos span {
     width: 32%;
     text-align: center;
@@ -317,12 +325,12 @@ h1, h2, h3, h4, h5, h6 {
 .iframe-logos span img {
     width: 80%
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span img {
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span img {
     width: 70%
-}
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span:nth-child(2) img {
+}*/
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span:nth-child(2) img {
     width: 78%
-}
+}*/
 
 .body-left .iframe-logos span img {
     width: 82%
@@ -339,17 +347,17 @@ h1, h2, h3, h4, h5, h6 {
 .contribute-btn {
     color: var(--color-black);
     font-family: var(--font-base);
-    padding: 10px 20px 11px;
+    padding: 12px 24px 13px;
     display: inline-block;
     border-radius: 6px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -0.5px;
     text-transform: uppercase;
     background-color: #54e6da;
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .contribute-btn {
-    padding: 8px 20px 8px;
+.iframe-wrap .iframe-hindi .contribute-btn {
+    padding: 6px 20px 8px;
 }
 
 
@@ -969,38 +977,31 @@ li.is-whatsapp {
 .contribute-btn::after {
     position: absolute;
     top: 0;
-    left: -160px;
+    left: -225px;
     height: 60px;
-    width: 160px;
+    width: 225px;
     content: " ";
     z-index: 0;
     background-color: #febf0f;
-    animation: slide 4s linear infinite;
+    animation: slide 4s ease-in-out infinite;
 
     /*animation-delay: 3s;
     animation-delay: 0s;
     animation-delay: -1500ms;*/
 }
 
-/*@keyframes slide{
+@keyframes slide{
   0%{
-    transform: translate3d(-160px, 0, 0);
-    
-  }
-  25% {
-    transform: translate3d(0px, 0, 0);
+    transform: translate3d(0, 0, 0);
     
   }
   50% {
-    transform: translate3d(120px, 0, 0);
-  }
-  75% {
-    transform: translate3d(180px, 0, 0);
+    transform: translate3d(225px, 0, 0);
   }
   100%{
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(450px, 0, 0);
   }
-}*/
+}
 
 
 

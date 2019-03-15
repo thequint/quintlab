@@ -161,7 +161,7 @@
     .iframe-wrap {
         padding: 20px 15px;
     }
-    .iframe-headline {
+    /*.iframe-headline {
         display: none;
     }
     .iframe-headline.is-mobile {
@@ -169,6 +169,18 @@
         font-size: 19px;
         letter-spacing: -0.2px;
         margin-bottom: 15px;
+    }*/
+    .iframe-wrap .iframe-headline {
+        font-size: 22px;
+    }
+    .iframe-wrap h2 {
+        font-size: 22px;
+    }
+    .iframe-wrap .iframe-hindi .iframe-headline {
+        font-size: 28px;
+    }
+    .iframe-wrap .iframe-hindi h2 {
+        font-size: 26px;
     }
     .iframe-wrap .iframe-left,
     .iframe-wrap .iframe-right {
@@ -181,6 +193,7 @@
         padding: 0
     }
     .iframe-logos {
+        max-width: 80%;
         width: 100%;
         margin: 30px auto;
     }
@@ -203,6 +216,36 @@
     .section-first .main-headline {
         font-size: 1.65em;
     }
+    .iframe-wrap {
+        min-height: 280px;
+    }
+    .iframe-wrap .iframe-headline {
+        font-size: 18px;
+        margin: 0px 0 10px;
+    }
+    .iframe-wrap h2 {
+        font-size: 19px;
+    }
+
+    .iframe-wrap .iframe-hindi .iframe-headline {
+        font-size: 24px;
+    }
+    .iframe-wrap .iframe-hindi h2 {
+        font-size: 22px;
+    }
+
+
+    .iframe-logos {
+        max-width: 310px;
+        width: 100%;
+    }
+    .iframe-wrap .iframe-logos {
+        margin: 25px auto;
+    }
+    .contribute-btn {
+        font-size: 17px;
+        padding: 10px 22px 11px;
+    }
 }
 @media (max-width: 359px) {
     .section-first .main-headline {
@@ -211,21 +254,24 @@
     .form-container .body-left-content {
         font-size: 1.5em;
     }
+    .iframe-wrap .iframe-headline {
+        font-size: 16px;
+    }
+    .iframe-wrap h2 {
+        font-size: 17px;
+        line-height: 22px
+    }
+    .iframe-wrap .iframe-hindi .iframe-headline {
+        font-size: 22px;
+    }
+    .iframe-wrap .iframe-hindi h2 {
+        font-size: 20px;
+        line-height: 26px
+    }
 }
 
 
 
-
-
-
-/*Website CSS*/
-
-/*@media (max-width: 940px) {
-.header-wrapper .container {
-    width: inherit;
-    max-width: 100%;
-}
-}*/
 
 @media (max-width: 768px) {
 .logo-tq {
