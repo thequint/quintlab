@@ -14,7 +14,7 @@
 
 body {
     font-size: 100%;
-    font-weight: 500;
+    font-weight: 400;
     background: var(--color-body);
     font-family: var(--font-base);
     color: var(--color-blue);
@@ -126,21 +126,21 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-blue);
     line-height: 100%;
     border: 1px solid rgba(0,0,0,0);
-    padding: 10px 0 15px 15px;
+    padding: 10px 15px;
     border-radius: 30px;
-    font-size: 1.5em
+    font-size: 1.25em
 }
-/*.top-nav li:last-child a {
+.top-nav li:last-child a {
     border: 1px solid var(--color-orange);
     color: var(--color-orange);
-}*/
+}
 .top-nav ul li a:hover, .top-nav ul li.is-active a {
     color: var(--color-orange);
 }
-/*.top-nav li:last-child a:hover {
+.top-nav li:last-child a:hover {
     background-color: var(--color-orange);
     color: var(--color-white);
-}*/
+}
 .banner-wrapper {
     position: relative;
     height: auto;
@@ -283,6 +283,10 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+.iframe-wrap .iframe-right__content.iframe-hindi .iframe-headline {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .iframe-wrap h2 {
     color: var(--color-white);
     font-family: var(--font-base);
@@ -295,6 +299,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .iframe-wrap .iframe-logos {
     margin: 22px auto
+}
+.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos {
+    margin: 15px auto
 }
 .iframe-logos span {
     width: 32%;
@@ -310,6 +317,12 @@ h1, h2, h3, h4, h5, h6 {
 .iframe-logos span img {
     width: 80%
 }
+.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span img {
+    width: 70%
+}
+.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span:nth-child(2) img {
+    width: 78%
+}
 
 .body-left .iframe-logos span img {
     width: 82%
@@ -320,10 +333,6 @@ h1, h2, h3, h4, h5, h6 {
 .body-left .iframe-logos span:last-child {
     text-align: right;
 }
-
-
-
-
 .btn-wrap {
     text-align: center;
 }
@@ -338,6 +347,9 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.5px;
     text-transform: uppercase;
     background-color: #54e6da;
+}
+.iframe-wrap .iframe-right__content.iframe-hindi .contribute-btn {
+    padding: 8px 20px 8px;
 }
 
 
@@ -393,6 +405,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.75em;
     font-weight: 700;
     line-height: 1.43em;
+}
+#hindi .content-bottom .content-left,
+#hindi .content-bottom .content-right {
+    font-weight: 400;
 }
 .content-bottom .content-left {
     padding-right: 5%;
@@ -483,6 +499,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     padding: 0px 15px;
 }
+#hindi .form-group input[type="text"],
+#hindi .form-group input[type="email"],
+#hindi .form-group textarea {
+    font-weight: 400
+}
 .form-group input[type="submit"] {
     height: 55px;
     border-radius: 8px;
@@ -524,14 +545,20 @@ h1, h2, h3, h4, h5, h6 {
 .form-group.form-group-amount {
     overflow: hidden;
 }
-.form-amout {
+.form-amount {
     padding: 10px 3px;
     transition: all 0.3s ease-in-out;
 }
-.form-amout.translate-amout {
+
+.form-amount .fa-rupee-sign {
+    font-size: 0.9375em
+}
+
+
+.form-amount.translate-amout {
     transform: translateX(-150px);
 }
-.form-amout .amout-label {
+.form-amount .amout-label {
     width: 150px;
     float: left;
     font-size: 1.25em;
@@ -539,13 +566,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 55px;
     font-weight: 700;
 }
-.form-amout .amout-wrap {
+.form-amount .amout-wrap {
     float: left;
-    font-size: 1.3125em;
+    font-size: 1.2500em;
     width: calc(100% - 150px);
     width: -webkit-calc(100% - 150px);
 }
-.form-amout .amout-wrap span {
+.form-amount .amout-wrap span {
     width: 22%;
     line-height: 55px;
     font-weight: 600;
@@ -554,12 +581,13 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     cursor: pointer;
     border-radius: 5px;
+    background-color: #f4f4f4;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
 }
-.form-amout .amout-wrap span:first-child {
+.form-amount .amout-wrap span:first-child {
     margin-left: 0;
 }
-.form-amout .amout-input {
+.form-amount .amout-input {
     padding-left: 10px;
     width: 150px;
     font-size: 1.25em;
@@ -568,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     right: -150px;
 }
-.form-group .form-amout span.amount.is-active {
+.form-group .form-amount span.amount.is-active {
     color: var(--color-white);
     background-color: var(--color-blue);
 }
@@ -734,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 .payment-modal h1 {
-    /*font-size: 28px;*/
+    font-size: 1.75em;
     font-weight: 600;
     line-height: 100%;
     margin-bottom: 10px;
@@ -749,6 +777,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0;
 }
 .modal-block p {
+    font-size: 1.25em;
     font-weight: 500;
 }
 .modal-block p span {
@@ -803,9 +832,18 @@ body.is-modal.is-topic #Is_Topic {
 .share-app li.is-whatsapp a {
     background-color: #128c7e;
 }
+
+.content-page {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    
+}
+
 .content-page h2 {
     color: var(--color-blue);
     /*font-size: 33px;*/
+    font-size: 2.5em;
     font-weight: 700;
     line-height: 120%;
     margin: 10px 0 40px 0;
@@ -826,13 +864,16 @@ body.is-modal.is-topic #Is_Topic {
     margin: 0 0 5px 0;
     font-style: italic;
     padding-left: 23px;
+    font-size: 1.25em;
 }
 .content-page ul.is-faq li p {
     position: relative;
     padding-left: 23px;
+    font-size: 1.25em;
+    line-height: 130%;
 }
 .content-page ul.is-faq li h5::before, .content-page ul.is-faq li p::before {
-    /*font-size: 18px;*/
+    /*font-size: 1.25em;*/
     font-weight: 700;
     text-transform: uppercase;
     position: absolute;
@@ -849,15 +890,17 @@ body.is-modal.is-topic #Is_Topic {
     content: 'A.';
 }
 .content-page ul.is-faq li p a {
-    color: #fc6645;
+    color: var(--color-yellow);
     font-weight: 500;
-    background-image: linear-gradient(var(--color-orange) 50%, var(--color-orange) 50%);
+    background-image: linear-gradient(var(--color-yellow) 50%, var(--color-yellow) 50%);
     background-size: 100% 1px;
     background-position: 100% 21px;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    transition: all 0.0s ease-in-out;
 }
 .content-page ul.is-faq li p a:hover {
+    color: var(--color-blue);
     background-image: linear-gradient(var(--color-blue) 50%, var(--color-blue) 50%);
 }
 li.is-whatsapp {

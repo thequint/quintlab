@@ -200,19 +200,19 @@ function update_db(id) {
     });
 }
 
-$(".form-amout .amount").on('click', function(){
-    $(".form-amout .amount").removeClass("is-active");
+$(".form-amount .amount").on('click', function(){
+    $(".form-amount .amount").removeClass("is-active");
     $(this).addClass("is-active");
     $("#Add_Amount").val($(this).attr("data-amount"));
 
-    $(".form-amout").removeClass("translate-amout");
+    $(".form-amount").removeClass("translate-amout");
     // $(".amout-label").removeClass("amout-disable");
     // $(".amout-input").removeClass("amout-enable");
 });
 
 
 $(".amount-large").on('click', function(){
-    $(".form-amout").addClass("translate-amout");
+    $(".form-amount").addClass("translate-amout");
     // $(".amout-label").addClass("amout-disable");
     // $(".amout-input").addClass("amout-enable");
 })
