@@ -289,16 +289,18 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     margin: 10px 0 30px;
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-headline {
-    font-size: 22px;
-    margin-bottom: 10px;
+.iframe-wrap .iframe-hindi .iframe-headline {
+    font-size: 30px;
 }
 .iframe-wrap h2 {
     color: var(--color-white);
     font-family: var(--font-base);
     font-size: 26px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 30px;
+}
+.iframe-wrap .iframe-hindi h2 {
+    font-size: 28px;
 }
 .iframe-logos {
     margin: 11% 0 8%
@@ -306,9 +308,9 @@ h1, h2, h3, h4, h5, h6 {
 .iframe-wrap .iframe-logos {
     margin: 35px auto
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos {
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos {
     margin: 15px auto
-}
+}*/
 .iframe-logos span {
     width: 32%;
     text-align: center;
@@ -323,12 +325,12 @@ h1, h2, h3, h4, h5, h6 {
 .iframe-logos span img {
     width: 80%
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span img {
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span img {
     width: 70%
-}
-.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span:nth-child(2) img {
+}*/
+/*.iframe-wrap .iframe-right__content.iframe-hindi .iframe-logos span:nth-child(2) img {
     width: 78%
-}
+}*/
 
 .body-left .iframe-logos span img {
     width: 82%
@@ -354,8 +356,8 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     background-color: #54e6da;
 }
-.iframe-wrap .iframe-right__content.iframe-hindi .contribute-btn {
-    padding: 8px 20px 8px;
+.iframe-wrap .iframe-hindi .contribute-btn {
+    padding: 6px 20px 8px;
 }
 
 

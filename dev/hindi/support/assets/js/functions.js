@@ -146,7 +146,7 @@ $('#SubmitForm').click(function(event) {
         // "key": 'rzp_live_SWoEhVKfBqYonT',
         "key": 'rzp_live_tBGcMHFIr1pJox',
         // "amount": "100", // 2000 paise = INR 20
-        "amount": $('#Add_Amount').val(),
+        "amount": $('#Add_Amount').val()*100,
         "name": "The Quint",
         "description": "*Entry fees includes GST",
         "image": "https://www.thequint.com/quintlab/my-report-debate/assets/images/thequint-logo.png",
