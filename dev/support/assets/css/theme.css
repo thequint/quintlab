@@ -512,6 +512,10 @@ h1, h2, h3, h4, h5, h6 {
 #hindi .form-group textarea {
     font-weight: 400
 }
+.form-group input[disabled="disabled"] {
+    background-color: #ccc
+}
+
 .form-group input[type="submit"] {
     height: 55px;
     border-radius: 8px;
@@ -552,6 +556,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form-group.form-group-amount {
     overflow: hidden;
+    padding: 0 2px 6px;
 }
 .form-amount {
     padding: 10px 3px;

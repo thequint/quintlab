@@ -104,6 +104,9 @@
     body {
         /*font-size: 75%;*/
     }
+    #formSlide {
+        display: none;
+    }
     .section-first {
         text-align: center;
         padding: 30px 0 35px;

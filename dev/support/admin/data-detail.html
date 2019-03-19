@@ -16,8 +16,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#fff" />
-    <title>Yahoo Feed</title>
+    <title>My Report Debate 2019</title>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="">
     <meta name="Keywords" content="" />
     <meta name="author" content="Quint Lab">
     <meta name="copyright" content="The Quint">
@@ -28,21 +29,25 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+    .print_btn {
+        cursor: pointer;
+    }
+    </style>
 </head>
 
 <body>
     <main class="wrapper main-wrapper">
         <header class="wrapper header-wrapper" id="header">
             <div class="container">
-                <a class="logo-tq" target="_blank" href="https://www.thequint.com/"><img src="assets/images/logo-myreport-debate.svg" alt="TheQuint"></a>
+                <a class="logo-tq" href="javascript:void(0);"><img src="assets/images/logo-tq.svg" alt=""></a>
                 <a class="nav-bar" href="javascript:void(0);"><span>Menu</span></a>
                 <nav class="top-nav">
                     <a class="close-nav" href="javascript:void(0);">Close</a>
                     <a class="logo-bottom" href="javascript:void(0);"><img src="assets/images/logo-myreport-debate-bottom.svg" alt=""></a>
                     <ul class="clearfix">
                         <!-- <li><a href="data-list-english.html">English</a></li>
-                        <li><a href="data-list-hindi.html">हिंदी</a></li> -->
-                        <li class="add"><a href="data-detail.html"><i class="fa fa-plus-square"></i> Add Feed</a></li>
+					<li><a href="data-list-hindi.html">हिंदी</a></li> -->
                         <li><a class="des" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                 </nav>
@@ -50,28 +55,49 @@
         </header>
         <section class="wrapper banner-wrapper">
             <div class="container">
-                <table id="MyReport" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th style="width: 30px;">S.No.</th>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <!-- <th>Mobile Number</th>
-                            <th>Email Address</th> -->
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>S.No.</th>
-                            <th>Date</th>
-                            <th>Title</th>
-                            <!-- <th>Mobile Number</th>
-                            <th>Email Address</th> -->
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                    </tbody>
-                </table>
+                <div class="controll">
+                    <a href="data-list.html"><i class="fa fa-arrow-left"></i> Back</a>
+                    <!-- <a class="print_btn"><i class="fa fa-print"></i> Print</a> -->
+                </div>
+                <div class="data-detail">
+                    <div class="data-header">
+                        <h2></h2>
+                    </div>
+                    <div class="data-body clearfix">
+                        <div class="data-body-left">
+                            <div class="data-block" data-field="name">
+                                <h3>Name</h3>
+                                <p></p>
+                            </div>
+                            <div class="data-block" data-field="email">
+                                <h3>Email ID</h3>
+                                <p> </p>
+                            </div>
+                            <div class="data-block" data-field="number">
+                                <h3>Phone Number</h3>
+                                <p></p>
+                            </div>
+                            <div class="data-block" data-field="pannumber">
+                                <h3>PAN Number</h3>
+                                <p></p>
+                            </div>
+                            <div class="data-block" data-field="gstnnumber">
+                                <h3>GST Number</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="data-body-right">
+                            <div class="data-block" data-field="payment_id">
+                                <h3>Payment ID</h3>
+                                <p></p>
+                            </div>
+                            <div class="data-block" data-field="amount">
+                                <h3>Amount</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <footer class="wrapper footer-wrapper">
@@ -79,13 +105,21 @@
             </div>
         </footer>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/functions.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
     // Initialize Firebase
 
     // Initialize Firebase
@@ -105,45 +139,28 @@
         timestampsInSnapshots: true
     });
 
-    var index = 1;
+    db.collection("Contribute_Quint").doc(getUrlParameter('id')).get().then((doc) => {
+        console.log(doc.data());
+        $(".data-block").each(function() {
 
-
-    function get_date(timestamp) {
-        var curdate = new Date(null);
-        curdate.setTime(timestamp.seconds * 1000);
-        //2018-12-20T11:47:46+00:00
-        //2018-11-20T11:47:46+00:00
-        var date = curdate.getDate();
-        var month = curdate.getMonth() + 1;
-        if (date < 10) {
-            date = "0" + date;
-        }
-        if (month < 10) {
-            month = "0" + month;
-        }
-        return date + "-" + month + "-" + curdate.getFullYear()
-    }
-    db.collection("Yahoo_Feed").orderBy('date', 'desc').get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-
-            console.log(doc.data());
-            var str = ""
-
-            // str += '<tr> <td>' + index + '</td> <td><a href="data-detail.html?id=' + doc.data().email + '">' + doc.data().name + '</a></td><td>' + doc.data().payment_id + '</td><td>' + doc.data().number + '</td><td>' + doc.data().email + '</td></tr>';
-
-            str += '<tr> <td>' + index + '</td> <td>' + get_date(doc.data().date) + '</td> <td><a href="data-detail.html?id=' + doc.id + '">' + doc.data().title + '</a></td></tr>';
-
-            index = index + 1;
-            $("tbody").append(str);
-
-
-
+            $(this).find("p").html(doc.data()[$(this).attr('data-field')]);
         })
-        $('#MyReport').DataTable();
+
+        $(".data-header h2").html(doc.data().name);
+
+        // if (doc.data().lang == "eng") {
+        //     $(".back_link").attr("href", "data-list-english.html");
+        // } else {
+        //     $(".back_link").attr("href", "data-list-hindi.html");
+        // }
     }).catch(function(error) {
-        // location.href = "index.html"
+        location.href = "index.html"
     })
 
+    $(".print_btn").click(function() {
+
+        window.print();
+    })
 
     $(".des").click(function() {
         firebase.auth().signOut().then(function() {

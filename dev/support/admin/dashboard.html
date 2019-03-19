@@ -15,8 +15,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#fff" />
-<title>Yahoo Feed</title>
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>My Report Debate 2019</title>
+<meta name="">
 <meta name="Keywords" content=""/>
 <meta name="author" content="Quint Lab">
 <meta name="copyright" content="The Quint">
@@ -34,11 +34,18 @@
 <div class="login-box">
 	<div class="inner-box">
 	<div class="login-header">
-		<a href="javascript:void(0);"><img src="assets/images/logo-myreport-debate.svg" alt=""></a>	
+		<a href="javascript:void(0);"><img src="assets/images/logo-tq.svg" alt=""></a>	
 	</div>	
 		
 	<div class="login-body">
-		<div id="firebaseui-auth-container"></div>
+		<div class="lang">
+			<h4>Select languege</h4>
+		<div class="clearfix">
+			<a href="data-list-english.html">English</a>
+			<a href="data-list-hindi.html">हिंदी</a>
+		</div>	
+			
+		</div>
 	</div>	
 	
 	</div>
@@ -57,62 +64,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 	<script>
-	// Initialize Firebase
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
-    authDomain: "dashboard-51ea4.firebaseapp.com",
-    databaseURL: "https://dashboard-51ea4.firebaseio.com",
-    projectId: "dashboard-51ea4",
-    storageBucket: "dashboard-51ea4.appspot.com",
-    messagingSenderId: "1062965330854"
-  };
-  firebase.initializeApp(config);
-var db = firebase.firestore();
-
-// Disable deprecated features
-db.settings({
-	timestampsInSnapshots: true
+$(".des").click(function(){
+firebase.auth().signOut().then(function() {
+  location.href="index.html"
+}, function(error) {
+  // An error happened.
 });
-
-
-// Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-
-var uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-		console.log(authResult.user);
-      // User successfully signed in.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
-      return true;
-    },
-    uiShown: function() {
-      // The widget is rendered.
-      // Hide the loader.
-     // document.getElementById('loader').style.display = 'none';
-    }
-  },
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  signInSuccessUrl: 'data-list-english.html',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    
-  ],
-  // Terms of service url.
-  tosUrl: '<your-tos-url>',
-  // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-
-// The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
-	
-	</script>
+})</script>
 </body>
 </html>
