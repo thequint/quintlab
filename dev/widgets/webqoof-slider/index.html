@@ -130,15 +130,6 @@
 <script src="assets/js/iframeResizer.contentWindow.min.js"></script>
 
 <script>
-    function adjust_iframe_height() {
-        var actual_height = document.body.scrollHeight;
-        console.log("height is", actual_height);
-        parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
-        //* allows this to post to any parent iframe regardless of domain
-    }
-    
-</script>
-<script>
 var swiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
@@ -151,6 +142,13 @@ var swiper = new Swiper('.swiper-container', {
 
 });
 
+function adjust_iframe_height() {
+    var actual_height = document.body.scrollHeight;
+    console.log("height is", actual_height);
+    parent.postMessage(JSON.stringify({ 'msg-type': "resize-iframe", height: actual_height, src: window.location.href }), "*");
+    //* allows this to post to any parent iframe regardless of domain
+}
+adjust_iframe_height();
 </script>
 </body>
 
