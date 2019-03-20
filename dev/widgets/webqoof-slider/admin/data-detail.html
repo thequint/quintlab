@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#fff" />
+    <title>Webqoof Slider</title>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="Keywords" content="" />
+    <meta name="author" content="Quint Lab">
+    <meta name="copyright" content="The Quint">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+    .print_btn {
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <main class="wrapper main-wrapper">
+        <header class="wrapper header-wrapper" id="header">
+            <div class="container">
+                <a class="logo-tq" target="_blank" href="https://www.thequint.com/"><img src="assets/images/quint-logo.svg" alt="TheQuint"></a>
+                <a class="nav-bar" href="javascript:void(0);"><span>Menu</span></a>
+                <nav class="top-nav">
+                    <a class="close-nav" href="javascript:void(0);">Close</a>
+                    <a class="logo-bottom" href="javascript:void(0);"><img src="assets/images/quint-logo.svg" alt=""></a>
+                    <ul class="clearfix">
+                        <!-- <li><a href="data-list-english.html">English</a></li>
+                            <li><a href="data-list-hindi.html">हिंदी</a></li> -->
+                        <!-- <li class="add"><a href="data-detail.html"><i class="fa fa-plus-square"></i> Add Feed</a></li> -->
+                        <li><a class="des" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="wrapper banner-wrapper">
+            <div class="container">
+                <!-- <div class="controll clearfix">
+                    <a href="data-list-english.html" class="back_link"><i class="fa fa-arrow-left"></i> Back</a>
+                    <a class="print_btn"><i class="fa fa-print"></i> Print</a>
+                </div> -->
+                <div class="data-detail">
+                    <div class="data-header">
+                        <h2></h2>
+                    </div>
+                    <div class="data-body editable-form clearfix">
+                        <form id="details_form">
+                            <div class="panel-body">
+                                <div id="education_fields"></div>
+                                <div id="list-data">
+                                </div>
+                                <!-- <div class="col-sm-5">
+                                        <div class="data-block" data-field="description">
+                                            <h3>Claim</h3>
+                                            <div class="form-group">
+                                                <textarea class="is-about" name="description" placeholder="Description" id="des_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 ">
+                                        <div class="data-block" data-field="keywords">
+                                            <h3>Fact</h3>
+                                            <div class="form-group">
+                                                <textarea class="is-about" name="keywords" placeholder="Keywords" id="keywords_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2" style="padding-top: 110px;">
+                                        <div class="form-group">
+                                            <button class="btn btn-success" type="button" onclick="education_fields();"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button>
+                                        </div>
+                                    </div> -->
+                            </div>
+                            <div class="submit-feed btn-wrap">
+                                <!-- <div class="form-group">
+                                        <button id="add_feed">Add Feed</button>
+                                        <div class="success">Success</div>
+                                    </div> -->
+                                <div class="form-group">
+                                    <button id="update_feed">Update Feed</button>
+                                    <div class="error">Error</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="wrapper footer-wrapper">
+            <div class="container">
+            </div>
+        </footer>
+    </main>
+    <!-- <ui id="list-data">
+        
+        </ui> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script>
+    var room = 1;
+
+    function education_fields(x,y) {
+        room++;
+
+        console.log("check"+x,$(y).closest('.form-block').index());
+
+        var removeAttr = $(y).closest('.form-block').index()
+        $(y).removeClass('btn-success').addClass('btn-danger');
+
+        $(y).find("span").removeClass('glyphicon-plus').addClass('glyphicon-minus');
+
+        $(y).attr("onclick","remove_education_fields("+ removeAttr +",this)");
+
+
+        var objTo = document.getElementById('education_fields')
+        var divtest = document.createElement("div");
+        divtest.setAttribute("class", "form-block removeclass" + room);
+        var rdiv = 'removeclass' + room;
+        divtest.innerHTML = '<div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val"></textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val"></textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + room + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div><div class="clear"></div>';
+        objTo.appendChild(divtest);
+    }
+
+    function remove_education_fields(rid,this_var) {
+        $(this_var).closest('.form-block').remove();
+    }
+    var input_value = {}
+    var cur_id
+
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    // Initialize Firebase
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
+        authDomain: "dashboard-51ea4.firebaseapp.com",
+        databaseURL: "https://dashboard-51ea4.firebaseio.com",
+        projectId: "dashboard-51ea4",
+        storageBucket: "dashboard-51ea4.appspot.com",
+        messagingSenderId: "1062965330854"
+    };
+    firebase.initializeApp(config);
+    var db = firebase.firestore();
+    // Disable deprecated features
+    db.settings({
+        timestampsInSnapshots: true
+    });
+
+
+    db.collection("Webqoof_Slider").doc('4JDy5q6ZP2rcXgXxZKGW').get().then((doc) => {
+        console.log(doc.data().data);
+
+        for (var i = 0; i < doc.data().data.length; i++) {
+            console.log(i)
+
+            console.log(doc.data().data[i].claim);
+
+            var claimVal = doc.data().data[i].claim
+            var factVal = doc.data().data[i].fact
+
+            if (i == doc.data().data.length - 1) {
+                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" val="">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div></div></div>');
+                // add plus
+            } else {
+                //add minus
+                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div>');
+            }
+        }
+
+
+    }).catch(function(error) {
+        // location.href = "index.html"
+    });
+
+
+    var validate_flag = []
+    $('#update_feed').click(function(e) {
+        e.preventDefault();
+
+        
+        i=0;
+
+        validate_flag = []
+
+        $('.form-block').each(function(index) {
+            // console.log("Test " +$(this).find(".is-claim").val())
+
+            if ($(this).find(".is-claim").val() == "") {
+                $(this).find(".is-claim").focus();
+                return false;
+                
+            }else if ($(this).find(".is-fact").val() == "") {
+                $(this).find(".is-fact").focus();
+                return false;
+                
+            } else {
+                validate_flag.push({});
+
+                validate_flag[index]['claim'] = $(this).find(".is-claim").val();
+                validate_flag[index]['fact'] = $(this).find(".is-fact").val();
+            }
+        });
+        var webqoof_obj={data:validate_flag};
+        db.collection("Webqoof_Slider").doc('4JDy5q6ZP2rcXgXxZKGW').set(webqoof_obj).then((doc) => {
+        console.log('Success')
+        });
+        console.log(validate_flag);
+
+
+        // if (validate_flag.includes(0)) {
+        //     return false;
+        // }
+        /*db.collection("Yahoo_Feed").doc(cur_id).update(input_value).then((doc) => {
+        console.log('success')
+        // display success message
+        $(".success").fadeIn();
+        }).catch(function(error) {
+        console.log(error)
+        // display error message
+        $(".error").fadeIn().html(error);
+        });*/
+    });
+
+    $(".des").click(function() {
+        firebase.auth().signOut().then(function() {
+            location.href = "index.html"
+        }, function(error) {
+            // An error happened.
+        });
+    })
+
+
+
+
+    /*
+
+    function validate() {
+        $('#details_form input, #details_form textarea').each(function() {
+            if ($(this).val() == "") {
+                $(this).focus();
+                return false;
+            }
+        });
+    }
+    $('#add_feed').click(function(event) {
+        event.preventDefault();
+        validate_flag = []
+        $('#details_form input, #details_form textarea').each(function() {
+            console.log($(this).val())
+            if ($(this).val() == "") {
+                $(this).focus();
+                validate_flag.push(0)
+                return false;
+            } else {
+                validate_flag.push(1)
+            }
+        });
+        console.log(validate_flag);
+        if (validate_flag.includes(0)) {
+            return false;
+        }
+        //   $('#details_form input').each(function() {
+        //       if ($(this).attr('name') == 'date') {
+        //           var now = new Date;
+        //           var utc_timestamp = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate() ,
+        // now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
+        //           input_value[$(this).attr('name')] =new Date(utc_timestamp)
+        //       } else {
+        //           console.log()
+        //           input_value[$(this).attr('name')] = $(this).val();
+        //       }
+        //   })
+        //   $('#details_form textarea').each(function() {
+        //       input_value[$(this).attr('name')] = $(this).val();
+        //   })
+        
+        var radioValue = $("input[name='radio-group']:checked").val();
+        console.log("Radio: " +radioValue);
+        input_value['category'] = radioValue
+        
+        if(radioValue=='IPL' || radioValue=='TQ')
+        {
+        input_value['display_category'] = 'TQ'
+        }
+        else if(radioValue=='BQ')
+        {
+        input_value['display_category'] = 'BQ'
+        }
+        else
+        {
+        input_value['display_category'] = 'null'
+        }
+        console.log(input_value);*/
+        /*db.collection("Yahoo_Feed").doc().set(input_value).then((doc) => {
+        console.log('success')
+        // display success message
+        $(".success").fadeIn();
+        }).catch(function(error) {
+        console.log(error)
+        // display error message
+        $(".error").fadeIn().html(error);
+        });
+    });
+    var now = new Date();
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    var today = now.getFullYear() + "-" + (month) + "-" + (day);
+    $('#date').val(today);
+    $(".print_btn").click(function() {
+        window.print();
+    })
+    $(".des").click(function() {
+        firebase.auth().signOut().then(function() {
+            location.href = "index.html"
+        }, function(error) {
+            // An error happened.
+        });
+    })
+    var radioValue;
+    $("#form_btn").click(function(e) {
+        e.preventDefault();
+        console.log($("#enterId").val());
+        radioValue = $("input[name='radio-group']:checked").val();
+        console.log(radioValue);
+        var url;
+        if (radioValue == "TQ" || radioValue == "IPL") {
+            url = "www.thequint"
+            console.log("thequint")
+        } else if (radioValue == "HQ") {
+            url = "hindi.thequint"
+        } else {
+            url = "bloombergquint"
+        }
+        $.getJSON('https://' + url + '.com/api/v1/stories/' + $("#enterId").val(), function(data) {
+            console.log(data.story);
+            console.log(data.story.headline);
+            console.log(data.story.summary);
+            var tags = ""
+            for (var i = 0; i < data.story.tags.length; i++) {
+                tags += data.story.tags[i].name + ","
+            }
+            console.log(tags);
+            $("#title_val").val(data.story.headline);
+            $("#link_val").val("https://" + url + ".com/" + data.story.slug);
+            if (radioValue == "TQ" || radioValue == "IPL") {
+                $("#des_val").val(data.story.seo['meta-description']);
+            } else if (radioValue == "HQ") {
+                $("#des_val").val(data.story.summary);
+            } else {
+                $("#des_val").val(data.story.seo['meta-description']);
+            }
+            // $("#des_val").val(data.story.seo['meta-description']);
+            $("#keywords_val").val(tags);
+            $("#mediac_val").val(data.story['hero-image-url']);
+            $("#mediat_val").val(data.story['hero-image-url']);
+        });
+    });*/
+
+
+    </script>
+</body>
+
+</html>

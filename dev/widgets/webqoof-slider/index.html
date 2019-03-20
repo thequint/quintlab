@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<div class="main-wrap">
+<div class="main-wrap loader">
     <section class="section">
 
         <header class="header">
@@ -44,78 +44,7 @@
 
         <div class="content-block">
             <div id="swiper1" class="swiper-container">
-                <ul class="swiper-wrapper slider-content">
-
-
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
-
-                    <li class="swiper-slide">
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-claim">Claim</span>
-                            <span class="slider-content__row--text">As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March. As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March. As many as 18 people were injured in a grenade attack at a bus stand in Jammu on Thursday, 7 March.</span>
-                        </div>
-
-                        <div class="slider-content__row">
-                            <span class="slider-content__row--btn btn-fact">Fact</span>
-                            <span class="slider-content__row--text">"We are collecting evidence and an investigation is underway. No suspect has been taken into custody yet," Sinha said. Security forces in the state were already on high alert in the wake of the Pulwama terror attack last month.</span>
-                        </div>
-                    </li>
+                <ul id="data_display" class="swiper-wrapper slider-content">
                 </ul>
 
                 <div class="swiper-pagination"></div>
@@ -129,17 +58,57 @@
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/iframeResizer.contentWindow.min.js"></script>
 
-<script>
-var swiper = new Swiper('.swiper-container', {
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
 
+<script>
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyD2loaJl1Hn9SjjCan6CaV9sXDFvopA1k4",
+    authDomain: "dashboard-51ea4.firebaseapp.com",
+    databaseURL: "https://dashboard-51ea4.firebaseio.com",
+    projectId: "dashboard-51ea4",
+    storageBucket: "dashboard-51ea4.appspot.com",
+    messagingSenderId: "1062965330854"
+};
+firebase.initializeApp(config);
+var db = firebase.firestore();
+// Disable deprecated features
+db.settings({
+    timestampsInSnapshots: true
+});
+
+
+db.collection("Webqoof_Slider").doc('4JDy5q6ZP2rcXgXxZKGW').get().then((doc) => {
+    console.log(doc.data().data);
+
+    for (var i = 0; i < doc.data().data.length; i++) {
+        console.log(i)
+
+        var claimVal = doc.data().data[i].claim
+        var factVal = doc.data().data[i].fact
+
+        $("#data_display").append('<li class="swiper-slide"><div class="slider-content__row"><span class="slider-content__row--btn btn-claim">Claim</span><span class="slider-content__row--text">' + claimVal + '</span></div><div class="slider-content__row"><span class="slider-content__row--btn btn-fact">Fact</span><span class="slider-content__row--text">' + factVal + '</span></div></li>')
+    }
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+
+    $(".main-wrap").removeClass("loader");
+
+}).catch(function(error) {
+    // location.href = "index.html"
 });
 
 function adjust_iframe_height() {
