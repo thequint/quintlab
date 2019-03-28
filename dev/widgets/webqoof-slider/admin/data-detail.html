@@ -188,7 +188,7 @@
             var factVal = doc.data().data[i].fact
 
             if (i == doc.data().data.length - 1) {
-                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" val="">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div></div></div>');
+                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div></div></div>');
                 // add plus
             } else {
                 //add minus
