@@ -33,6 +33,8 @@
         cursor: pointer;
         }
         </style>
+
+
 </head>
 
 <body>
@@ -64,10 +66,6 @@
                         <h2></h2>
                     </div>
                     <div class="data-body editable-form clearfix">
-
-
-
-
                         <form>
                             <div class="form-main">
                                 
@@ -78,6 +76,11 @@
                                             <div class="single-radio">
                                                 <input type="radio" id="Radio_tq" name="radio-group" value="TQ" checked>
                                                 <label for="Radio_tq">TQ</label>
+                                            </div>
+
+                                            <div class="single-radio">
+                                                <input type="radio" id="Radio_ipl" name="radio-group" value="IPL">
+                                                <label for="Radio_ipl">IPL</label>
                                             </div>
 
                                             <div class="single-radio">
@@ -93,8 +96,6 @@
                                     </div>
                                 </div>
 
-
-
                                 <h3>Enter ID</h3>
                                 <div class="form-group">
                                     <div class="form-group-input"><input type="text" placeholder="Enter ID" id="enterId">
@@ -103,9 +104,6 @@
                                 </div>
                             </div>
                         </form>
-
-
-
 
                         <form id="details_form" >
                             <div class="data-body-left">
@@ -122,32 +120,6 @@
                                         <input type="text" name="link" placeholder="Link" id="link_val">
                                     </div>
                                 </div>
-
-
-
-                                <!-- <div class="data-block" data-field="category">
-                                    <h3>Category</h3>
-                                    <div class="form-group">
-                                        <div class="radios clearfix">
-                                            <div class="single-radio">
-                                                <input type="radio" id="Radio_tq" name="radio-group" value="TQ" checked>
-                                                <label for="Radio_tq">TQ</label>
-                                            </div>
-
-                                            <div class="single-radio">
-                                                <input type="radio" id="Radio_hq" name="radio-group" value="HQ">
-                                                <label for="Radio_hq">HQ</label>
-                                            </div>
-
-                                            <div class="single-radio">
-                                                <input type="radio" id="Radio_bq" name="radio-group" value="BQ">
-                                                <label for="Radio_bq">BQ</label>
-                                            </div>
-                                        </div>
-                                        <input type="text" name="category" placeholder="Category" id="ctg_val">
-                                    </div>
-                                </div> -->
-
                                 <div class="data-block date-field" data-field="date">
                                     <h3>Date</h3>
                                     <p></p>
@@ -190,9 +162,11 @@
                             </div>
                             <div class="submit-feed">
                                 <div class="form-group add-details">
-                                    <button id="add_feed">Add Feed</button>
-                                    <div class="success">Success</div>
+                                    <button id="add_feed">Add Feed</button><span class="add-feed-loader"> loader</span>
+                                    <div class="success">Successfully Added</div>
                                 </div>
+
+
                                 <div class="form-group update-details">
                                     <button id="update_feed">Update Feed</button>
                                     <div class="error">Error</div>
@@ -242,6 +216,8 @@
     db.settings({
         timestampsInSnapshots: true
     });
+
+
     if (getUrlParameter('id')) {
         db.collection("Yahoo_Feed").doc(getUrlParameter('id')).get().then((doc) => {
             console.log(doc.data());
@@ -310,8 +286,14 @@
             }
         });
     }
+    var add_feed_flag=0
     $('#add_feed').click(function(event) {
         event.preventDefault();
+        
+        if(add_feed_flag==0)
+        {
+        $(".add-feed-loader").css("display", "inline-block");
+        add_feed_flag=1
         validate_flag = []
         $('#details_form input, #details_form textarea').each(function() {
             console.log($(this).val())
@@ -330,7 +312,11 @@
         }
         $('#details_form input').each(function() {
             if ($(this).attr('name') == 'date') {
-                input_value[$(this).attr('name')] = new Date($(this).val())
+                var now = new Date;
+                var utc_timestamp = Date.UTC(now.getUTCFullYear(),now.getUTCMonth(), now.getUTCDate() , 
+      now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds(), now.getUTCMilliseconds());
+                input_value[$(this).attr('name')] =new Date(utc_timestamp)
+              
             } else {
                 console.log()
                 input_value[$(this).attr('name')] = $(this).val();
@@ -339,20 +325,39 @@
         $('#details_form textarea').each(function() {
             input_value[$(this).attr('name')] = $(this).val();
         })
-        // var radioValue = $("input[name='radio-group']:checked").val();
-        // console.log(radioValue);
-        // input_value['category'] = radioValue
-        // console.log(input_value);
+        var radioValue = $("input[name='radio-group']:checked").val();
+        console.log("Radio: " +radioValue);
+        input_value['category'] = radioValue
         
-        db.collection("Yahoo_Feed").doc().set(input_value).then((doc) => {
-            console.log('success')
+        if(radioValue=='IPL' || radioValue=='TQ')
+        {
+        input_value['display_category'] = 'TQ'   
+        }
+        else if(radioValue=='BQ')
+        {
+        input_value['display_category'] = 'BQ'   
+        }
+        else
+        {
+        input_value['display_category'] = 'null'     
+        }
+        console.log(input_value);
+       db.collection("Yahoo_Feed").doc().set(input_value).then((doc) => {
+            // hid loading icon
+            console.log('success');
             // display success message
             $(".success").fadeIn();
+            $(".add-feed-loader").fadeOut();
         }).catch(function(error) {
             console.log(error)
             // display error message
             $(".error").fadeIn().html(error);
         });
+    }
+    else
+    {
+        $(".success").html('Entry already added. Click "Add Feed" to add more');
+    }
     });
     var now = new Date();
     var day = ("0" + now.getDate()).slice(-2);
@@ -377,7 +382,7 @@
         radioValue = $("input[name='radio-group']:checked").val();
         console.log(radioValue);
         var url;
-        if(radioValue == "TQ"){
+        if(radioValue == "TQ" || radioValue == "IPL"){
             url ="www.thequint"
             console.log("thequint")
 
@@ -402,7 +407,7 @@
             $("#title_val").val(data.story.headline);
             $("#link_val").val("https://" + url + ".com/"+data.story.slug);
 
-            if(radioValue == "TQ"){
+            if(radioValue == "TQ" || radioValue == "IPL"){
                 $("#des_val").val(data.story.seo['meta-description']);
 
             }else if(radioValue == "HQ"){
@@ -418,6 +423,18 @@
             $("#mediat_val").val(data.story['hero-image-url']);
         });
     });
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        console.log(user)
+    if (user) {
+    // User is signed in.
+    } else {
+        location.href="index.html"
+    // No user is signed in.
+    }
+    });
+
+
     </script>
 </body>
 

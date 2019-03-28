@@ -123,7 +123,7 @@
         }
         return date + "-" + month + "-" + curdate.getFullYear()
     }
-    db.collection("Yahoo_Feed").orderBy('date', 'desc').get().then((querySnapshot) => {
+    db.collection("Yahoo_Feed").orderBy('date', 'desc').limit(20).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
 
             console.log(doc.data());
@@ -152,6 +152,15 @@
             // An error happened.
         });
     })
+    firebase.auth().onAuthStateChanged(function(user) {
+        console.log(user)
+    if (user) {
+    // User is signed in.
+    } else {
+        location.href="index.html"
+    // No user is signed in.
+    }
+    });
     </script>
 </body>
 
