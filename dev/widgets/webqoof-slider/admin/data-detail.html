@@ -67,7 +67,7 @@
                     <div class="data-body editable-form clearfix">
                         <form id="details_form">
                             <div class="panel-body">
-                                <div id="education_fields"></div>
+                                <div id="input_fields"></div>
                                 <div id="list-data">
                                 </div>
                                 <!-- <div class="col-sm-5">
@@ -125,7 +125,7 @@
     <script>
     var room = 1;
 
-    function education_fields(x,y) {
+    function input_fields(x,y) {
         room++;
 
         console.log("check"+x,$(y).closest('.form-block').index());
@@ -135,18 +135,22 @@
 
         $(y).find("span").removeClass('glyphicon-plus').addClass('glyphicon-minus');
 
-        $(y).attr("onclick","remove_education_fields("+ removeAttr +",this)");
+        $(y).attr("onclick","remove_input_fields("+ removeAttr +",this)");
+
+        var addNumSlider = document.getElementsByClassName("form-block").length + 1;
+
+        // console.log("Class Length: " +nodelist);
 
 
-        var objTo = document.getElementById('education_fields')
+        var objTo = document.getElementById('input_fields')
         var divtest = document.createElement("div");
         divtest.setAttribute("class", "form-block removeclass" + room);
         var rdiv = 'removeclass' + room;
-        divtest.innerHTML = '<div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val"></textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val"></textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + room + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div><div class="clear"></div>';
+        divtest.innerHTML = '<span class="num-slider">'+ addNumSlider + '</span><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val"></textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val"></textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="input_fields(' + room + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div><div class="clear"></div>';
         objTo.appendChild(divtest);
     }
 
-    function remove_education_fields(rid,this_var) {
+    function remove_input_fields(rid,this_var) {
         $(this_var).closest('.form-block').remove();
     }
     var input_value = {}
@@ -187,12 +191,14 @@
             var claimVal = doc.data().data[i].claim
             var factVal = doc.data().data[i].fact
 
+            var numSlider = i +1;
+
             if (i == doc.data().data.length - 1) {
-                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div></div></div>');
+                $('#input_fields').append('<div class="form-block"><span class="num-slider">'+ numSlider + '</span><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-success" type="button" onclick="input_fields(' + i + ',this);"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> </button></div></div></div>');
                 // add plus
             } else {
                 //add minus
-                $('#education_fields').append('<div class="form-block"><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_education_fields(' + i + ',this);"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div>');
+                $('#input_fields').append('<div class="form-block"><span class="num-slider">'+ numSlider + '</span><div class="col-sm-5"><div class="data-block" data-field="description"><h3>Claim</h3><div class="form-group"><textarea class="is-claim" name="description" placeholder="Description" id="des_val">' + claimVal +'</textarea></div></div></div><div class="col-sm-5 "><div class="data-block" data-field="keywords"><h3>Fact</h3><div class="form-group"><textarea class="is-fact" name="keywords" placeholder="Keywords" id="keywords_val">' + factVal +'</textarea></div></div></div><div class="col-sm-2" style="padding-top: 110px;"><div class="form-group"><button class="btn btn-danger" type="button" onclick="remove_input_fields(' + i + ',this);"> <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </button></div></div></div>');
             }
         }
 

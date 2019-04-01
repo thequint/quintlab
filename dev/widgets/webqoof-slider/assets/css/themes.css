@@ -182,17 +182,31 @@ img {
 	width: 30px;
 	height: 30px;
 	background-size: 33%;
-	
 	margin: 0;
 	top: 0;
 	right: 0;
 	border-radius: 3px;
 	background-color: var(--color-white);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px;
+    background-image: url("../images/next.svg");
+}
+.btn-controll .swiper-button-prev {
+    background-image: url("../images/prev.svg");
+}
+.btn-controll .swiper-button-next {
+    background-image: url("../images/next.svg");
 }
 .btn-controll .swiper-button-prev:focus,
 .btn-controll .swiper-button-next:focus {
 	outline: none;
 }
+.swiper-pagination-bullet-active {
+	background-color: #ffc000
+}
+
+
 
 
 @media screen and (max-width: 639px) {

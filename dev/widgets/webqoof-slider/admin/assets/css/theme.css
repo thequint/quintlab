@@ -879,3 +879,28 @@ table.dataTable td a:hover{
     color: var(--color-orange);
 }
 
+#input_fields .form-block {
+    position: relative;
+}
+#input_fields .form-block:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    width: 100%;
+    clear: both;
+}
+#input_fields .num-slider {
+    position: absolute;
+    left: -28px;
+    top: 118px;
+    width: 58px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    padding: 0 18px 0 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--color-white);
+    background-color: #14b277;
+}
