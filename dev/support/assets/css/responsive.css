@@ -40,7 +40,7 @@
     }
     .form-group input[type="submit"] {
         height: 52px;
-        padding: 1px 30px 0;
+        padding: 4px 30px 0;
     }
 }
 @media (max-width: 1024px) {
@@ -56,6 +56,14 @@
     }
     .form-container .body-right {
         padding-left: 5%;
+    }
+
+    .form-amount .amout-label {
+        width: 120px;
+    }
+    .form-amount .amout-wrap {
+        width: calc(100% - 120px);
+        width: -webkit-calc(100% - 120px);
     }
 }
 

@@ -569,12 +569,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .form-amount.translate-amout {
-    transform: translateX(-150px);
+    transform: translateX(-135px);
 }
 .form-amount .amout-label {
-    width: 150px;
+    width: 135px;
     float: left;
-    font-size: 1.25em;
+    font-size: 1.1250em;
     opacity: 0.65;
     line-height: 55px;
     font-weight: 700;
@@ -582,11 +582,11 @@ h1, h2, h3, h4, h5, h6 {
 .form-amount .amout-wrap {
     float: left;
     font-size: 1.2500em;
-    width: calc(100% - 150px);
-    width: -webkit-calc(100% - 150px);
+    width: calc(100% - 135px);
+    width: -webkit-calc(100% - 135px);
 }
 .form-amount .amout-wrap span {
-    width: 22%;
+    width: 20%;
     line-height: 55px;
     font-weight: 600;
     margin-left: 3.75%;
@@ -600,14 +600,20 @@ h1, h2, h3, h4, h5, h6 {
 .form-amount .amout-wrap span:first-child {
     margin-left: 0;
 }
+.form-amount .amout-wrap span:nth-child(3) {
+    width: 22%;
+}
+.form-amount .amout-wrap span:nth-child(4) {
+    width: 26%;
+}
 .form-amount .amout-input {
     padding-left: 10px;
-    width: 150px;
+    width: 135px;
     font-size: 1.25em;
     line-height: 55px;
     font-weight: 700;
     position: absolute;
-    right: -150px;
+    right: -135px;
 }
 .form-group .form-amount span.amount.is-active {
     color: var(--color-white);
