@@ -61,7 +61,7 @@ a {
     outline: none;
     color: var(--color-blue);
 }
-p span, p a, .banner-container h3 a {
+.banner-container h3 a {
     font-weight: 700;
     color: var(--color-orange);
 }
@@ -405,14 +405,29 @@ h1, h2, h3, h4, h5, h6 {
 .content-bottom {
     margin: 80px auto
 }
+.content-bottom p {
+    margin-top: 0; 
+    margin-bottom: 30px;
+}
+
+.content-list {
+
+}
+
+.content-list li {
+    margin: 0 0 10px; 
+    padding-left: 30px;
+
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    background-image: url("../images/bullet.svg");
+}
 
 .content-bottom .content-left,
 .content-bottom .content-right {
     float: left;
     width: 50%;
-    font-size: 1.75em;
     font-weight: 700;
-    line-height: 1.43em;
 }
 #hindi .content-bottom .content-left,
 #hindi .content-bottom .content-right {
@@ -420,15 +435,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content-bottom .content-left {
     padding-right: 5%;
+    
+}
+.content-bottom .content-left li {
+    padding-right: 5%;
+    font-size: 1.5em;
+    line-height: 1.25em;
+}
+.content-bottom .content-left p {
+    font-size: 1.75em;
+    line-height: 1.43em;
+    margin-bottom: 15px;
 }
 .content-bottom .content-right {
     padding-left: 5%;
+    font-size: 1.75em;
+    line-height: 1.43em;
 }
 .content-bottom .content-left span,
 .content-bottom .content-right span {
     padding: 2px 8px 4px;
     background-color: var(--color-yellow);
 }
+
+.
 
 
 
