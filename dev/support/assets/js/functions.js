@@ -67,6 +67,7 @@ $('#SubmitForm').click(function(event) {
 
     var fld_name = $('#Name').val();
     var fld_email = $('#Email').val();
+    var fld_city = $('#City').val();
     var fld_mobile = $('#Mobile').val();
     var fld_pannumber = $('#PanNumber').val();
 
@@ -78,6 +79,10 @@ $('#SubmitForm').click(function(event) {
     if (!fld_email.match(email_regex) || fld_email.length == 0) {
         $('#ErrorEmail').html("<span>Please enter a valid email address</span>");
         $("#Email").focus();
+        return false;
+    }
+    if (fld_city.length == 0) {
+        $("#City").focus();
         return false;
     }
     if (fld_mobile.length < 10) {
@@ -144,6 +149,7 @@ function update_db(id) {
     $("textarea").each(function() {
         essay[$(this).attr('name')] = $(this).val();
     });
+
     // check hindi or engish
     // if ($("#Radio_En").is(":checked")) {
     //     essay['lang'] = "eng"
@@ -151,6 +157,7 @@ function update_db(id) {
     //     essay['lang'] = "hindi"
     // }
     essay['payment_id'] = id;
+    // console.log(essay);
     essay['date'] = new Date();
     db.collection('Contribute_Quint').doc(essay['payment_id']).set(essay).then(function(result) {
         // success screen
@@ -162,7 +169,6 @@ function update_db(id) {
         //console.log(error)
     });
 }
-
 $(".form-amount .amount").on('click', function(){
     $(".form-amount .amount").removeClass("is-active");
     $(this).addClass("is-active");
