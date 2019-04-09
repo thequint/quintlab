@@ -403,11 +403,19 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .content-bottom {
-    margin: 80px auto
+    margin: 40px auto 80px
 }
 .content-bottom p {
     margin-top: 0; 
     margin-bottom: 30px;
+}
+
+.content-bottom .content-headline {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 800;
+    line-height: 135%;
+    margin-bottom: 40px;
 }
 
 .content-list {
@@ -419,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 30px;
 
     background-repeat: no-repeat;
-    background-position: left 5px;
+    background-position: left 6px;
     background-image: url("../images/bullet.svg");
 }
 
@@ -437,9 +445,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 5%;
     
 }
+
+#hindi .content-bottom .content-left {
+    padding-left: 5%;
+    font-size: 1.75em;
+    line-height: 1.43em;
+}
+
 .content-bottom .content-left li {
     padding-right: 5%;
-    font-size: 1.5em;
+    font-size: 1.65em;
     line-height: 1.25em;
 }
 .content-bottom .content-left p {
@@ -457,10 +472,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 8px 4px;
     background-color: var(--color-yellow);
 }
-
-.
-
-
 
 .form-container .inner-container {
     padding: 0;

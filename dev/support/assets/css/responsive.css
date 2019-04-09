@@ -85,6 +85,11 @@
         max-width: 100%;
         padding: 0
     }
+    
+    .iframe-logos {
+        margin: 6% 0 0%;
+    }
+
     .form-container .body-right {
         margin-bottom: 40px;
     }
@@ -99,7 +104,11 @@
     }
     
     .content-bottom {
-        margin: 60px auto
+        margin: 40px auto
+    }
+    .content-bottom .content-headline {
+        font-size: 2em;
+        line-height: 125%;
     }
 }
 @media (max-width: 767px) {
@@ -138,9 +147,13 @@
     .content-bottom {
         margin: 0px auto 30px;
     }
-    .content-bottom .content-left,
+    /*.content-bottom .content-left,*/
     .content-bottom .content-right {
-        font-size: 1.3125em
+        font-size: 1.5em
+    }
+
+    .content-bottom .content-left li {
+        font-size: 1.5em
     }
 
     .form-group input[type="text"],
@@ -209,7 +222,7 @@
         margin: 30px auto;
     }
     .body-left .iframe-logos {
-        margin: 40px auto;
+        margin: 30px auto;
     }
     .body-left .iframe-logos span img {
         width: 90%;
@@ -244,8 +257,6 @@
     .iframe-wrap .iframe-hindi h2 {
         font-size: 22px;
     }
-
-
     .iframe-logos {
         max-width: 310px;
         width: 100%;
@@ -256,6 +267,10 @@
     .contribute-btn {
         font-size: 17px;
         padding: 10px 22px 11px;
+    }
+    .content-bottom .content-headline {
+        font-size: 1.75em;
+        line-height: 115%;
     }
 }
 @media (max-width: 359px) {
@@ -508,7 +523,7 @@ body.is-nav .main-wrapper::before, body.is-modal .main-wrapper::before {
 .logo-bottom {
     position: absolute;
     bottom: 50px;
-    width: 150px;
+    width: 200px;
     text-align: center;
     display: block;
     left: 50%;
