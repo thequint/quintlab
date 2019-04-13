@@ -61,7 +61,7 @@ a {
     outline: none;
     color: var(--color-blue);
 }
-p span, p a, .banner-container h3 a {
+.banner-container h3 a {
     font-weight: 700;
     color: var(--color-orange);
 }
@@ -403,16 +403,39 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .content-bottom {
-    margin: 80px auto
+    margin: 40px auto 80px
+}
+.content-bottom p {
+    margin-top: 0; 
+    margin-bottom: 30px;
+}
+
+.content-bottom .content-headline {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 800;
+    line-height: 135%;
+    margin-bottom: 40px;
+}
+
+.content-list {
+
+}
+
+.content-list li {
+    margin: 0 0 10px; 
+    padding-left: 30px;
+
+    background-repeat: no-repeat;
+    background-position: left 6px;
+    background-image: url("../images/bullet.svg");
 }
 
 .content-bottom .content-left,
 .content-bottom .content-right {
     float: left;
     width: 50%;
-    font-size: 1.75em;
     font-weight: 700;
-    line-height: 1.43em;
 }
 #hindi .content-bottom .content-left,
 #hindi .content-bottom .content-right {
@@ -420,17 +443,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content-bottom .content-left {
     padding-right: 5%;
+    
+}
+
+#hindi .content-bottom .content-left {
+    padding-left: 5%;
+    font-size: 1.75em;
+    line-height: 1.43em;
+}
+
+.content-bottom .content-left li {
+    padding-right: 5%;
+    font-size: 1.65em;
+    line-height: 1.25em;
+}
+.content-bottom .content-left p {
+    font-size: 1.75em;
+    line-height: 1.43em;
+    margin-bottom: 15px;
 }
 .content-bottom .content-right {
     padding-left: 5%;
+    font-size: 1.75em;
+    line-height: 1.43em;
 }
 .content-bottom .content-left span,
 .content-bottom .content-right span {
     padding: 2px 8px 4px;
     background-color: var(--color-yellow);
 }
-
-
 
 .form-container .inner-container {
     padding: 0;
@@ -512,6 +553,10 @@ h1, h2, h3, h4, h5, h6 {
 #hindi .form-group textarea {
     font-weight: 400
 }
+.form-group input[disabled="disabled"] {
+    background-color: #ccc
+}
+
 .form-group input[type="submit"] {
     height: 55px;
     border-radius: 8px;
@@ -552,6 +597,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form-group.form-group-amount {
     overflow: hidden;
+    padding: 0 2px 6px;
 }
 .form-amount {
     padding: 10px 3px;
@@ -564,12 +610,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .form-amount.translate-amout {
-    transform: translateX(-150px);
+    transform: translateX(-135px);
 }
 .form-amount .amout-label {
-    width: 150px;
+    width: 135px;
     float: left;
-    font-size: 1.25em;
+    font-size: 1.1250em;
     opacity: 0.65;
     line-height: 55px;
     font-weight: 700;
@@ -577,11 +623,11 @@ h1, h2, h3, h4, h5, h6 {
 .form-amount .amout-wrap {
     float: left;
     font-size: 1.2500em;
-    width: calc(100% - 150px);
-    width: -webkit-calc(100% - 150px);
+    width: calc(100% - 135px);
+    width: -webkit-calc(100% - 135px);
 }
 .form-amount .amout-wrap span {
-    width: 22%;
+    width: 20%;
     line-height: 55px;
     font-weight: 600;
     margin-left: 3.75%;
@@ -595,14 +641,20 @@ h1, h2, h3, h4, h5, h6 {
 .form-amount .amout-wrap span:first-child {
     margin-left: 0;
 }
+.form-amount .amout-wrap span:nth-child(3) {
+    width: 22%;
+}
+.form-amount .amout-wrap span:nth-child(4) {
+    width: 26%;
+}
 .form-amount .amout-input {
     padding-left: 10px;
-    width: 150px;
+    width: 135px;
     font-size: 1.25em;
     line-height: 55px;
     font-weight: 700;
     position: absolute;
-    right: -150px;
+    right: -135px;
 }
 .form-group .form-amount span.amount.is-active {
     color: var(--color-white);

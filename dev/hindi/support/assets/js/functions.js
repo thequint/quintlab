@@ -11,53 +11,9 @@ var config = {
 firebase.initializeApp(config);
 var db = firebase.firestore();
 // Disable deprecated features
-db.settings({
-    timestampsInSnapshots: true
-});
-/*
-init();
-
-function init() {
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = $('#header').outerHeight();
-
-    function repeatOften() {
-        // Do whatever
-        hasScrolled();
-        requestAnimationFrame(repeatOften);
-    }
-    requestAnimationFrame(repeatOften);
-
-    function hasScrolled() {
-        var st = $(this).scrollTop();
-        // Make sure they scroll more than delta
-        if (Math.abs(lastScrollTop - st) <= delta)
-            return;
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        if (st > lastScrollTop && st > navbarHeight) {
-            // Scroll Down
-            $('#header').removeClass('header-down').addClass('header-up');
-        } else {
-            // Scroll Up
-            if (st + $(window).height() < $(document).height()) {
-                $('#header').removeClass('header-up').addClass('header-down');
-            }
-        }
-        if (st === 0) {
-            $('#header').removeClass('header-down');
-        }
-        lastScrollTop = st;
-    }
-}
-*/
-/*var maxLength = 500;
-$('textarea#Message').keyup(function() {
-var length = $(this).val().length;
-var length = maxLength-length;
-$('#chars').text(length);
-});*/
+// db.settings({
+//     timestampsInSnapshots: true
+// });
 
 $("textarea#Message").on('keyup', function() {
     var words = this.value.match(/\S+/g).length;
@@ -101,22 +57,21 @@ $('#Mobile').on('keypress', function(e) {
     return false;
 });
 
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-58739020-1');
 
 $('#SubmitForm').click(function(event) {
     event.preventDefault();
 
-    // var fld_message = $('#Message').val();
     var fld_name = $('#Name').val();
     var fld_email = $('#Email').val();
+    var fld_city = $('#City').val();
     var fld_mobile = $('#Mobile').val();
     var fld_pannumber = $('#PanNumber').val();
-    // if (fld_message.length == 0) {
-    //     $('#head').text("All fields are mandatory");
-    //     $("#Message").focus();
-    //     return false;
-    // }
+
     if (fld_name.length == 0) {
-        $('#head').text("All fields are mandatory");
         $("#Name").focus();
         return false;
     }
@@ -126,27 +81,34 @@ $('#SubmitForm').click(function(event) {
         $("#Email").focus();
         return false;
     }
+    if (fld_city.length == 0) {
+        $("#City").focus();
+        return false;
+    }
     if (fld_mobile.length < 10) {
-        $('#head').text("All fields are mandatory");
         $('#ErrorMobile').html("<span>Please enter a valid mobile number</span>");
         $("#Mobile").focus();
         return false;
     }
     if (fld_pannumber.length == 0) {
-        $('#head').text("All fields are mandatory");
         $("#PanNumber").focus();
         return false;
     }
+    if($("#Add_Amount").val() < 5000 && $("#Add_Amount").attr('disabled')!='disabled'){
+        alert("Please Enter amount above Rs 5000 or choose from the available options");
+        $("#Add_Amount").focus();
+        return false;
+    }
+
     if ($('#fld_terms').prop("checked") != true) {
         alert("Please accept the Terms and Conditions");
         return false;
     }
     // Payment
     var options = {
-        // "key": 'rzp_live_SWoEhVKfBqYonT',
         "key": 'rzp_live_tBGcMHFIr1pJox',
-        // "amount": "100", // 2000 paise = INR 20
-        "amount": $('#Add_Amount').val()*100,
+        // "amount": "100", // 1000 paise = INR 10
+        "amount": $('#Add_Amount').val() * 100,
         "name": "The Quint",
         "description": "*Entry fees includes GST",
         "image": "https://www.thequint.com/quintlab/my-report-debate/assets/images/thequint-logo.png",
@@ -166,11 +128,17 @@ $('#SubmitForm').click(function(event) {
         }
     };
     var rzp1 = new Razorpay(options);
+
+    ga("gtag_UA_58739020_1.send", {
+        hitType: 'event',
+        eventCategory: 'Labs',
+        eventAction: 'play',
+        eventLabel: 'Contribution Support'
+    });
+
     // End Payment
     rzp1.open();
 });
-
-
 
 var essay = {}
 
@@ -181,6 +149,7 @@ function update_db(id) {
     $("textarea").each(function() {
         essay[$(this).attr('name')] = $(this).val();
     });
+
     // check hindi or engish
     // if ($("#Radio_En").is(":checked")) {
     //     essay['lang'] = "eng"
@@ -188,6 +157,7 @@ function update_db(id) {
     //     essay['lang'] = "hindi"
     // }
     essay['payment_id'] = id;
+    // console.log(essay);
     essay['date'] = new Date();
     db.collection('Contribute_Quint').doc(essay['payment_id']).set(essay).then(function(result) {
         // success screen
@@ -199,25 +169,31 @@ function update_db(id) {
         //console.log(error)
     });
 }
-
 $(".form-amount .amount").on('click', function(){
     $(".form-amount .amount").removeClass("is-active");
     $(this).addClass("is-active");
     $("#Add_Amount").val($(this).attr("data-amount"));
 
     $(".form-amount").removeClass("translate-amout");
-    // $(".amout-label").removeClass("amout-disable");
-    // $(".amout-input").removeClass("amout-enable");
     $("#formSlide").slideDown();
+    $("#Add_Amount").attr('disabled','disabled');
 });
-
 
 $(".amount-large").on('click', function(){
     $(".form-amount").addClass("translate-amout");
-    // $(".amout-label").addClass("amout-disable");
-    // $(".amout-input").addClass("amout-enable");
-})
 
+    $("#Add_Amount").removeAttr('disabled');
+});
+
+$("#Add_Amount").blur(function(){
+    if($("#Add_Amount").val() < 5000){
+        // alert("Please Enter amount above Rs 5000 or choose from the available options");
+        $("#Add_Amount").val("5000");
+        // $("#Add_Amount").attr('disabled','disabled');
+    }else {
+        // $("#Add_Amount").removeAttr('disabled');
+    }
+});
 
 $(document).ready(function() {
     $('.nav-bar').click(function() {
