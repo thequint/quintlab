@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content-bottom p {
     margin-top: 0; 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .content-bottom .content-headline {
@@ -415,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.25em;
     font-weight: 800;
     line-height: 135%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .content-list {
@@ -446,25 +446,36 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-#hindi .content-bottom .content-left {
+/*#hindi .content-bottom .content-left {
     padding-left: 5%;
     font-size: 1.75em;
     line-height: 1.43em;
-}
+}*/
 
 .content-bottom .content-left li {
     padding-right: 5%;
     font-size: 1.65em;
     line-height: 1.25em;
 }
+#hindi .content-bottom .content-left li,
+#hindi .content-bottom .content-right {
+    font-size: 1.5em;
+    line-height: 1.43em;
+}
+
+#hindi .content-bottom .content-bottom-headline {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
 .content-bottom .content-left p {
-    font-size: 1.75em;
+    font-size: 1.65em;
     line-height: 1.43em;
     margin-bottom: 15px;
 }
 .content-bottom .content-right {
+    padding-top: 45px;
     padding-left: 5%;
-    font-size: 1.75em;
+    font-size: 1.65em;
     line-height: 1.43em;
 }
 .content-bottom .content-left span,
