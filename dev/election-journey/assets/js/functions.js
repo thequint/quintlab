@@ -2,6 +2,9 @@ nav_open = false;
 
 
 $(document).ready(function(){
+	
+	
+	
     $(".share-ico").click(function(e){
       $(".social-ico").slideToggle(400);
       return false;
@@ -13,17 +16,34 @@ $(document).ready(function(){
 	// Event Toggle
 	
 	$('.event-toggle').click(function(){
-		$('.event').toggleClass('is-show');
-		$(this).addClass('is-hide');
-		$('.event-close').addClass('is-show')
+		$('.info-container').toggleClass('is-mobile');
+		$('#menu').toggleClass('event-none');
 	});
-	$('.event-close').click(function(){
-		$('.event').removeClass('is-show');
-		$(this).removeClass('is-show');
-		$('.event-toggle').removeClass('is-hide');
-	})
 	
+	
+	
+	// intro animation
+	
+	
+	
+	$('.ico-play').click(function(){
+		
+  		audio_player.play(); 
+		
+		
+		$('.is-load').addClass('loaded');
+		$('body').removeClass('is-loading');
+		$('.intro').addClass('hidden');
+
+	
+			$(".play").toggleClass("is-hide");
+			$(".pause").toggleClass("is-hide");
+			check_animation();
+	
+		
+	});
 });
+
 
 
 // Sidebar

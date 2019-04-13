@@ -80,13 +80,12 @@ function refresh_pie() {
 
 }
 
-
 function refresh_popup(index) {
-
+	$(".mapsvg-region").unbind('mousemove');
 	$(".mapsvg-region").mousemove(function (e) {
 
 		var state, party;
-		console.log(map_data[index].Arunachal_Pradesh)
+		//console.log(map_data[index].Arunachal_Pradesh)
 		switch ($(this).attr("class").slice($(this).attr("class").indexOf("IN-"), $(this).attr("class").indexOf("IN-") + 5)) {
 			case "IN-AR":
 				state = "Arunachal Pradesh";
@@ -106,7 +105,7 @@ function refresh_popup(index) {
 				break;
 			case "IN-CT":
 				state = "Chhattisgarh";
-				party = map_data[index].Chattisgarh;
+				party = map_data[index].Chhattisgarh;
 				break;
 			case "IN-GA":
 				state = "Goa";
@@ -134,7 +133,7 @@ function refresh_popup(index) {
 				break;
 			case "IN-KA":
 				state = "Karnataka";
-				party = map_data[index].Karnataka;
+				party = map_data[index].Karnataka_Mysore;
 				break;
 			case "IN-MY":
 				state = "Mysore";
@@ -160,7 +159,7 @@ function refresh_popup(index) {
 				state = "Manipur";
 				party = map_data[index].Manipur;
 				break;
-			case "IN-MG":
+			case "IN-ML":
 				state = "Meghalya";
 				party = map_data[index].Meghalya;
 				break;
@@ -168,7 +167,7 @@ function refresh_popup(index) {
 				state = "Mizoram";
 				party = map_data[index].Mizoram;
 				break;
-			case "IN-NG":
+			case "IN-NL":
 				state = "Nagaland";
 				party = map_data[index].Nagaland;
 				break;
@@ -194,7 +193,7 @@ function refresh_popup(index) {
 				break;
 			case "IN-TN":
 				state = "Tamil Nadu";
-				party = map_data[index].Tamil_Nadi;
+				party = map_data[index].Tamil_Nadu;
 				break;
 			case "IN-TG":
 				state = "Telangana";
@@ -210,7 +209,7 @@ function refresh_popup(index) {
 				break;
 			case "IN-UP":
 				state = "Uttar Pradesh";
-				party = map_data[index].Arunachal_Pradesh;
+				party = map_data[index].Uttar_Pradesh;
 				break;
 			case "IN-WB":
 				state = "West Bengal";
@@ -259,16 +258,15 @@ function refresh_popup(index) {
 
 
 
-
 		$(".popup h1").html(state);
-		$(".popup p").html(party);
+		$(".popup p").html(party.replace('_',' ').replace('Congress A','Congress Alliance').replace('BJP A','BJP Alliance'));
 		$(".popup").css({
 			"top": e.pageY + 10,
 			"left": e.pageX + 10
 		});
 
 	})
-
+	
 
 	$(".graph__percent").mouseenter(function (e) {
 
@@ -352,16 +350,22 @@ function refresh_popup(index) {
 }
 
 function nav_init() {
+	
+	
+	//var str = "aa aa aa";
+	//str = str.replace(/\s+/g, '-').toLowerCase();
+	//console.log(str); // 
+	
+	
 	for (var i = 0; i < map_data.length; i++) {
-		$(".menu ul").append("<li><a href='javascript:void(0);'><figure><div class='list-img'><img src=" + "assets/images/pm.jpg" + " alt='pm'></div><figcaption><h3>" + map_data[i].Prime_Minister_Name + "</h3><h4>" + map_data[i].Prime_Minister_Party + "</h4><h5>" + map_data[i].Year + "</h5></figcaption></figure></a></li>")
+		$(".menu ul").append("<li><a href='javascript:void(0);'><figure><div class='list-img'><img src=" + "assets/images/pm/"+map_data[i].Prime_Minister_Name.toLowerCase().replace(' ','-').replace(' ','-')+".jpg" + " alt='pm'></div><figcaption><h3>" + map_data[i].Prime_Minister_Name + "</h3><h4>" + map_data[i].Prime_Minister_Party + "</h4><h5>" + map_data[i].Specific_Year + "</h5></figcaption></figure></a></li>")
 	}
-
 
 
 	$(".menu ul li").click(function () {
 
 		cur_index = $(this).index();
-		console.log($(this).index())
+		//console.log($(this).index())
 		update_data(cur_index);
 
 		$(".menu").removeClass("menu--anim")
@@ -372,10 +376,48 @@ function nav_init() {
 	})
 }
 
+function init_slider()
+	{
+  
+  	   
+    $( "#slider" ).slider({
+      value:map_data[map_data.length-1].Year-1946,
+		range: "min",
+      min: 0,
+      max: map_data[map_data.length-1].Year-1946,
+      slide: function( event, ui ) {
+      	//console.log(ui.value);
+       // $( "#amount" ).val( "$" + ui.value );
+		//console.log(ui.value/62*100);
+		 
+		 for (var i=map_data.length-1;i>=0;i--)
+			 {
+				 
+			if((ui.value+1947)>map_data[i].Year)
+				{
+					//console.log(ui.value+1947);
+					//console.log(i+"|"+map_data[i].Year);
+					update_data(i);
+					break;
+				}
+
+			//console.log((ui.value+1947)+"|"+map_data[i].Year);	 
+			 }
+		 
+		 
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+ 
+  }
+
+
+
+
 function update_data(index) {
 
 	$(".map-img").removeClass("map-visible");
-
+//console.log(map_data[index].Year);
 	switch (map_data[index].Year) {
 		case "1952":
 			$(".map-1952").addClass("map-visible");
@@ -410,6 +452,9 @@ function update_data(index) {
 		case "1996":
 			$(".map-1977").addClass("map-visible");
 			break;
+		case "1998":
+			$(".map-1977").addClass("map-visible");
+			break;	
 		case "1999":
 			$(".map-1977").addClass("map-visible");
 			break;
@@ -422,20 +467,36 @@ function update_data(index) {
 		case "2014":
 			$(".map-2014").addClass("map-visible");
 			break;
+		case "2015":
+			$(".map-2014").addClass("map-visible");
+			break;	
+		case "2016":
+			$(".map-2014").addClass("map-visible");
+			break;
+		case "2017":
+			$(".map-2014").addClass("map-visible");
+			break;	
+		case "2018":
+			$(".map-2014").addClass("map-visible");
+			break;		
 		default:
 			break;
 	}
 
 
-
 	$(".ui-widget-content .ui-state-default").html("<div class='current-year'>2009</div>");
+	
 
 	//console.log(map_data[index].Prime_Minister_Name);
-	$(".current-year").html(map_data[index].Year);
+	$(".current-year").html(map_data[index].Specific_Year);
 	$(".year-right").html(map_data[map_data.length - 1].Year);
 	$(".prime-minister").html(map_data[index].Prime_Minister_Name);
+	
+	$(".pm-img img").attr("src","assets/images/pm/"+map_data[index].Prime_Minister_Name.toLowerCase().replace(' ','-').replace(' ','-')+".jpg");
+	
 	$(".prime-minister-party").html(map_data[index].Prime_Minister_Party);
 	$(".prime-minister-tenure").html(map_data[index].Prime_Minister_Tenure);
+	$(".event-headline").html(map_data[index].Major_Event_Headline);
 	$(".event-text").html(map_data[index].Major_Event);
 
 	step_width = (map_data[index].Year - map_data[0].Year) * 100 / (map_data[map_data.length - 1].Year - map_data[0].Year);
@@ -462,49 +523,48 @@ function update_data(index) {
 	$(".mapsvg-region").removeClass("Janata_Dal");
 
 
-
-	$(".IN-AR").addClass(map_data[index].Arunachal_Pradesh);
-	$(".IN-AS").addClass(map_data[index].Assam);
-	$(".IN-AP").addClass(map_data[index].Andhra_Pradesh);
-	$(".IN-BR").addClass(map_data[index].Bihar);
-	$(".IN-CT").addClass(map_data[index].Chhattisgarh);
-	$(".IN-GA").addClass(map_data[index].Goa);
-	$(".IN-GJ").addClass(map_data[index].Gujarat);
-	$(".IN-HR").addClass(map_data[index].Haryana);
-	$(".IN-HP").addClass(map_data[index].Himachal_Pradesh);
-	$(".IN-JK").addClass(map_data[index].Jammu_Kashmir);
-	$(".IN-JH").addClass(map_data[index].Jharkhand);
-	$(".IN-KA").addClass(map_data[index].Karnataka_Mysore);
-	$(".IN-MY").addClass(map_data[index].Karnataka_Mysore);
-	$(".IN-KL").addClass(map_data[index].Kerala);
-	$(".IN-DL").addClass(map_data[index].Delhi);
-	$(".IN-MP").addClass(map_data[index].Madhya_Pradesh);
-	$(".IN-MD").addClass(map_data[index].Madras);
-	$(".IN-MH").addClass(map_data[index].Maharashtra);
-	$(".IN-MN").addClass(map_data[index].Manipur);
-	$(".IN-MG").addClass(map_data[index].Meghalya);
-	$(".IN-MZ").addClass(map_data[index].Mizoram);
-	$(".IN-NG").addClass(map_data[index].Nagaland);
-	$(".IN-OR").addClass(map_data[index].Orissa);
-	$(".IN-PB").addClass(map_data[index].Punjab);
-	$(".IN-PD").addClass(map_data[index].Pondicherry);
-	$(".IN-RJ").addClass(map_data[index].Rajasthan);
-	$(".IN-SK").addClass(map_data[index].Sikkim);
-	$(".IN-TN").addClass(map_data[index].Tamil_Nadu);
-	$(".IN-TG").addClass(map_data[index].Telangana);
-	$(".IN-TR").addClass(map_data[index].Tripura);
-	$(".IN-UT").addClass(map_data[index].Uttarakhand);
-	$(".IN-UP").addClass(map_data[index].Uttar_Pradesh);
-	$(".IN-WB").addClass(map_data[index].West_Bengal);
-	$(".IN-BO").addClass(map_data[index].Bombay);
-	$(".IN-AJ").addClass(map_data[index].Ajmer);
-	$(".IN-HY").addClass(map_data[index].Hyderabad);
-	$(".IN-MR").addClass(map_data[index].Madras);
-	$(".IN-CO").addClass(map_data[index].Cochin);
-	$(".IN-CR").addClass(map_data[index].Coorg);
-	$(".IN-MD").addClass(map_data[index].Madhya_Bharat);
-	$(".IN-VN").addClass(map_data[index].Vindhya_Pradesh);
-	$(".IN-BP").addClass(map_data[index].Bhopal);
+	$(".IN-AR").addClass((map_data[index].Arunachal_Pradesh).trim().replace(' ','_'));
+	$(".IN-AS").addClass((map_data[index].Assam).trim().replace(' ','_'));
+	$(".IN-AP").addClass((map_data[index].Andhra_Pradesh).trim().replace(' ','_'));
+	$(".IN-BR").addClass((map_data[index].Bihar).trim().replace(' ','_'));
+	$(".IN-CT").addClass((map_data[index].Chhattisgarh).trim().replace(' ','_'));
+	$(".IN-GA").addClass((map_data[index].Goa).trim().replace(' ','_'));
+	$(".IN-GJ").addClass((map_data[index].Gujarat).trim().replace(' ','_'));
+	$(".IN-HR").addClass((map_data[index].Haryana).trim().replace(' ','_'));
+	$(".IN-HP").addClass((map_data[index].Himachal_Pradesh).trim().replace(' ','_'));
+	$(".IN-JK").addClass((map_data[index].Jammu_Kashmir).trim().replace(' ','_'));
+	$(".IN-JH").addClass((map_data[index].Jharkhand).trim().replace(' ','_'));
+	$(".IN-KA").addClass((map_data[index].Karnataka_Mysore).trim().replace(' ','_'));
+	$(".IN-MY").addClass((map_data[index].Karnataka_Mysore).trim().replace(' ','_'));
+	$(".IN-KL").addClass((map_data[index].Kerala).trim().replace(' ','_'));
+	$(".IN-DL").addClass((map_data[index].Delhi).trim().replace(' ','_'));
+	$(".IN-MP").addClass((map_data[index].Madhya_Pradesh).trim().replace(' ','_'));
+	$(".IN-MD").addClass((map_data[index].Madras).trim().replace(' ','_'));
+	$(".IN-MH").addClass((map_data[index].Maharashtra).trim().replace(' ','_'));
+	$(".IN-MN").addClass((map_data[index].Manipur).trim().replace(' ','_'));
+	$(".IN-ML").addClass((map_data[index].Meghalya).trim().replace(' ','_'));
+	$(".IN-MZ").addClass((map_data[index].Mizoram).trim().replace(' ','_'));
+	$(".IN-NL").addClass((map_data[index].Nagaland).trim().replace(' ','_'));
+	$(".IN-OR").addClass((map_data[index].Orissa).trim().replace(' ','_'));
+	$(".IN-PB").addClass((map_data[index].Punjab).trim().replace(' ','_'));
+	$(".IN-PD").addClass((map_data[index].Pondicherry).trim().replace(' ','_'));
+	$(".IN-RJ").addClass((map_data[index].Rajasthan).trim().replace(' ','_'));
+	$(".IN-SK").addClass((map_data[index].Sikkim).trim().replace(' ','_'));
+	$(".IN-TN").addClass((map_data[index].Tamil_Nadu).trim().replace(' ','_'));
+	$(".IN-TG").addClass((map_data[index].Telangana).trim().replace(' ','_'));
+	$(".IN-TR").addClass((map_data[index].Tripura).trim().replace(' ','_'));
+	$(".IN-UT").addClass((map_data[index].Uttarakhand).trim().replace(' ','_'));
+	$(".IN-UP").addClass((map_data[index].Uttar_Pradesh).trim().replace(' ','_'));
+	$(".IN-WB").addClass((map_data[index].West_Bengal).trim().replace(' ','_'));
+	$(".IN-BO").addClass((map_data[index].Bombay).trim().replace(' ','_'));
+	$(".IN-AJ").addClass((map_data[index].Ajmer).trim().replace(' ','_'));
+	$(".IN-HY").addClass((map_data[index].Hyderabad).trim().replace(' ','_'));
+	$(".IN-MR").addClass((map_data[index].Madras).trim().replace(' ','_'));
+	$(".IN-CO").addClass((map_data[index].Cochin).trim().replace(' ','_'));
+	$(".IN-CR").addClass((map_data[index].Coorg).trim().replace(' ','_'));
+	$(".IN-MD").addClass((map_data[index].Madhya_Bharat).trim().replace(' ','_'));
+	$(".IN-VN").addClass((map_data[index].Vindhya_Pradesh).trim().replace(' ','_'));
+	$(".IN-BP").addClass((map_data[index].Bhopal).trim().replace(' ','_'));
 
 	if (map_data[index].Prime_Minister_Party == "Congress") {
 		$(".timeline-elmt").removeClass("is-bjp");
@@ -530,8 +590,6 @@ function update_data(index) {
 		$(".map-index ul li.is-janata").hide()
 	}
 
-	console.log(map_data[index].Congress_Vote_Percentage + "|" + map_data[index].BJP_Vote_Percentage + "|" + map_data[index].Others_Vote_Percentage + "|" + map_data[index].Janata_Vote_Percentage);
-
 	$(".pie_cont").html("<div class='pie pie-2' data-pie='#3b99cd " + map_data[index].Congress_LS_seats + ", #e27c20 " + map_data[index].BJP_LS_seats + ", #a18c8c " + map_data[index].Others_LS_seats + ",#d23737 " + map_data[index].Janata_Party_LS_Seats + "'></div><div class='pie pie-1' data-pie='#3b99cd " + map_data[index].Congress_Vote_Percentage + ", #e27c20 " + map_data[index].BJP_Vote_Percentage + ", #a18c8c " + map_data[index].Others_Vote_Percentage + ",#d23737 " + map_data[index].Janata_Vote_Percentage + "'></div>");
 
 
@@ -547,9 +605,20 @@ window.addEventListener('DOMContentLoaded', init);
 function showInfo(data) {
 
 	map_data = data;
+
+	init_slider();
 	nav_init();
 	update_data(cur_index);
-
+	
+	
+	// For Intro
+	
+	
+	//$('body').removeClass('is-loading');
+	
+	$('.loading').addClass('is-active');
+	
+	
 
 	$(".mapsvg-region").mouseenter(function (e) {
 
@@ -611,16 +680,44 @@ $(".prev").click(function () {
 		cur_index = cur_index - 1;
 		update_data(cur_index);
 	}
-})
+});
+
+
+	var audio_player = document.getElementById("player_audio"); 
+	
+	var playing = true;
 
 
 $(".play-pause").click(function () {
-
 	$(".play").toggleClass("is-hide")
 	$(".pause").toggleClass("is-hide")
 	check_animation();
+	audio_play();
+});
 
-})
+
+$('.volume').click(function(){
+	$(this).toggleClass('muted');
+	audio_play()
+	
+});
+
+
+function audio_play()
+{
+	
+	// play audio
+	if($(".pause").hasClass("is-hide") && !$('.volume').hasClass('muted'))
+		{
+			audio_player.play(); 
+            
+		}
+	else 
+		{
+			audio_player.pause(); 
+            
+		}
+}
 
 function check_animation() {
 	if (($(".pause").hasClass('is-hide') && step_width <= 100) || ($(".pause").hasClass('is-hide') && video_end == 1)) {
@@ -655,8 +752,6 @@ function check_animation() {
 
 }
 
-
-
 function step() {
 	step_width = step_width + 0.03;
 
@@ -675,7 +770,7 @@ function step() {
 			//console.log(i);
 			cur_index = i;
 			if (play_back != cur_index) {
-				console.log(cur_index);
+				//console.log(cur_index);
 				update_data(cur_index);
 				play_back = cur_index
 			}
