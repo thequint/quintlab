@@ -201,6 +201,10 @@ img {
     overflow: hidden;
 }
 
+.slider-content .slider-content__row .slider-content__row--text .content-claim {
+    color: #000
+}
+
 .slider-content .slider-slide {
     display: none;
 }

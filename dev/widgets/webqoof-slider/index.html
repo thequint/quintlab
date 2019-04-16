@@ -41,7 +41,7 @@
 </head>
 
 <body onload="adjust_iframe_height()">
-    
+
 <div class="main-wrap">
     <section class="section">
         <header class="header">
@@ -120,9 +120,9 @@ db.collection("Webqoof_Slider").doc('4JDy5q6ZP2rcXgXxZKGW').get().then((doc) => 
         var claimVal = doc.data().data[i].claim
         var factVal = doc.data().data[i].fact
         if (i % 2 == 0) {
-            $("#data_display").append('<li class="slider-slide fade is-ani-left"><div class="slider-content__row"><div class="slider-content__row--btn btn-claim"><span>Claim</span></div><div class="slider-content__row--text"><p class="ani-left">' + claimVal + '</p></div></div><div class="slider-content__row"><div class="slider-content__row--btn btn-fact"><span>Fact</span></div><div class="slider-content__row--text"><p class="ani-left">' + factVal + '</p></div></div></li>');
+            $("#data_display").append('<li class="slider-slide fade is-ani-left"><div class="slider-content__row"><div class="slider-content__row--btn btn-claim"><span>Claim</span></div><div class="slider-content__row--text"><p class="ani-left content-claim">' + claimVal + '</p></div></div><div class="slider-content__row"><div class="slider-content__row--btn btn-fact"><span>Fact</span></div><div class="slider-content__row--text"><p class="ani-left">' + factVal + '</p></div></div></li>');
         } else {
-            $("#data_display").append('<li class="slider-slide fade is-ani-right"><div class="slider-content__row"><div class="slider-content__row--btn btn-claim"><span>Claim</span></div><div class="slider-content__row--text"><p class="ani-right">' + claimVal + '</p></div></div><div class="slider-content__row"><div class="slider-content__row--btn btn-fact"><span>Fact</span></div><div class="slider-content__row--text"><p class="ani-right">' + factVal + '</p></div></div></li>');
+            $("#data_display").append('<li class="slider-slide fade is-ani-right"><div class="slider-content__row"><div class="slider-content__row--btn btn-claim"><span>Claim</span></div><div class="slider-content__row--text"><p class="ani-right content-claim">' + claimVal + '</p></div></div><div class="slider-content__row"><div class="slider-content__row--btn btn-fact"><span>Fact</span></div><div class="slider-content__row--text"><p class="ani-right">' + factVal + '</p></div></div></li>');
         }
         var str = i + 1;
         $("#data_pagination").append('<span class="dot" onclick="currentSlide(' + str + ')"></span>')
