@@ -27,10 +27,10 @@ $(".popup-bt").click(function(e) {
     $(".overlay").fadeIn();
     $(".info-popup").fadeIn();
     $(".info-popup .pop-img img").attr("src", "");
-    $(".info-popup .pop-img img").attr("src", $(this).attr("data-img"));
+    // $(".info-popup .pop-img img").attr("src", $(this).attr("data-img"));
 
-    $(".info-popup h2").html($(this).attr("data-headline"));
-    $(".info-popup p").html($(this).attr("data-text"));
+    $(".info-popup h2 span").html($(this).attr("data-headline"));
+    $(".info-popup p span").html($(this).attr("data-text"));
 
     $(".overlay").addClass($(this).attr("data-class"));
 });
@@ -39,7 +39,7 @@ $(".close-icon").click(function() {
     $(".overlay").hide();
     $(".info-popup").hide();
     $(".overlay").attr("class","overlay");
-    $(".info-popup .pop-img img").attr("src", "");
+    // $(".info-popup .pop-img img").attr("src", "");
 });
 
 // Document Click
