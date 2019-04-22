@@ -94,11 +94,11 @@ $('#SubmitForm').click(function(event) {
         $("#PanNumber").focus();
         return false;
     }
-    if($("#Add_Amount").val() < 5000 && $("#Add_Amount").attr('disabled')!='disabled'){
-        alert("Please Enter amount above Rs 5000 or choose from the available options");
-        $("#Add_Amount").focus();
-        return false;
-    }
+    // if($("#Add_Amount").val() < 5000 && $("#Add_Amount").attr('disabled')!='disabled'){
+    //     alert("Please Enter amount above Rs 5000 or choose from the available options");
+    //     $("#Add_Amount").focus();
+    //     return false;
+    // }
 
     if ($('#fld_terms').prop("checked") != true) {
         alert("Please accept the Terms and Conditions");
