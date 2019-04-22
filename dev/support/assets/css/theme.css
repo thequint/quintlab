@@ -667,9 +667,13 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     right: -135px;
 }
+.form-group .form-amount span.amount {
+    opacity: .3;
+}
 .form-group .form-amount span.amount.is-active {
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    opacity: 1;
+    /*color: var(--color-white);*/
+    /*background-color: var(--color-blue);*/
 }
 .char-rem {
     position: absolute;
