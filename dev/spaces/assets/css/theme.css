@@ -576,7 +576,7 @@ body.is-overlay:after {
 
 .drag-wrap .drag-arrow {
     position: absolute;
-    top: 4px;
+    top: 5.5px;
     left: 5px;
     z-index: 1;
     width: 58px;
@@ -688,7 +688,7 @@ body.is-overlay:after {
 .intro-text,
 .drag-wrap {
     transition: all 0.2s ease-in-out;
-    opacity: 0
+    /*opacity: 0*/
 }
 
 .intro-text h3 {

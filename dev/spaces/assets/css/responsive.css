@@ -248,6 +248,9 @@
 	.pop-center .slider-wrap .choice-wrap .choice-wrap-bg {
 		padding: 20px;
 	}
+    .drag-wrap .drag-arrow {
+        top: 4px;
+    }
 
 	
 }
@@ -257,6 +260,12 @@
 	    width: -webkit-calc(100% - 200px);
 	}
 }
+@media (max-width: 639px) {
+    .intro-text h4 span {
+        display: block;
+    }
+}
+
 @media (max-width: 359px) {
 	.control-details h2 {
 		font-size: 1.4375em;
