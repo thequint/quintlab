@@ -917,10 +917,10 @@ transform: translate3d(0, 0, 0)
     .scene {
         max-width: 290px;
     }
-    .overlay {
+    /*.overlay {
         width: 86%;
         height: 82%;
-    }
+    }*/
     .section-wrap:after {
         height: 36%;
     }
