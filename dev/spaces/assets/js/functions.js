@@ -209,6 +209,8 @@ function enter_card(card_source_id) {
         $(".choice-text li").removeClass("is-active");
         $(this).addClass("is-active");
 
+        $(".option-list li").removeClass("is-active");
+
         $(".choice-content").show();
         $(".choice-content .choice-content-box").hide();
         $(".choice-content .choice-content-box").eq($(this).index()).show();
@@ -297,7 +299,7 @@ $( "#draggable" ).draggable({
     axis:"x",
     revert: 'invalid',
 });
-$( "#droppable" ).droppable({
+$( "#droppable"     ).droppable({
     drop: function() {
         var card_source_id = $(".swiper-slide-active").attr('data-id');
         // alert($(".swiper-slide-active").attr('data-id'));
@@ -376,47 +378,61 @@ jQuery(document).ready(function($){
 
     //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-        dragElement.on("mousedown vmousedown", function(e) {
+
+        dragElement.on("mousedown vmousedown touchstart", function(e) {
+            console.log("touchstart");
             dragElement.addClass('draggable');
             resizeElement.addClass('resizable');
 
             var dragWidth = dragElement.outerWidth(),
-                xPosition = dragElement.offset().left + dragWidth - e.pageX,
                 containerOffset = container.offset().left,
                 containerWidth = container.outerWidth(),
                 minLeft = containerOffset + 10,
                 maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+                if (e.originalEvent.touches) {
+                    var xPosition = dragElement.offset().left + dragWidth - e.originalEvent.touches[0].pageX 
+                }else{
+                    var xPosition = dragElement.offset().left + dragWidth - e.pageX 
+                }  
             
-            dragElement.parents().on("mousemove vmousemove", function(e) {
+            dragElement.parents().on("mousemove vmousemove touchmove", function(e) {
                 if( !dragging) {
+                    console.log(e+"|"+ xPosition+"|"+ dragWidth+"|"+ minLeft+"|"+ maxLeft+"|"+ containerOffset+"|"+ containerWidth+"|"+ resizeElement+"|"+ labelContainer+"|"+ labelResizeElement)
                     dragging =  true;
                     ( !window.requestAnimationFrame )
                         ? setTimeout(function(){animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement);}, 100)
                         : requestAnimationFrame(function(){animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement);});
                 }
-            }).on("mouseup vmouseup", function(e){
+
+
+            }).on("mouseup vmouseup touchend", function(e){
                 dragElement.removeClass('draggable');
                 resizeElement.removeClass('resizable');
             });
             e.preventDefault();
-        }).on("mouseup vmouseup", function(e) {
+        }).on("mouseup vmouseup touchend", function(e) {
             dragElement.removeClass('draggable');
             resizeElement.removeClass('resizable');
         });
     }
 
     function animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement) {
-        var leftValue = e.pageX + xPosition - dragWidth;   
+        if (e.originalEvent.touches) {
+            var leftValue = e.originalEvent.touches[0].pageX + xPosition - dragWidth;
+        }else {
+            var leftValue = e.pageX + xPosition - dragWidth;
+        }
+
         //constrain the draggable element to move inside his container
         if(leftValue < minLeft ) {
             leftValue = minLeft;
         } else if ( leftValue > maxLeft) {
             leftValue = maxLeft;
         }
-
         var widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
         
-        $('.draggable').css('left', widthValue).on("mouseup vmouseup", function() {
+        $('.draggable').css('left', widthValue).on("mouseup vmouseup touchend", function() {
             $(this).removeClass('draggable');
             resizeElement.removeClass('resizable');
         });
