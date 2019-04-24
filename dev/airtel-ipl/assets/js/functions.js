@@ -4,6 +4,8 @@ $(".popup-bt").click(function(e) {
     $(".info-popup h2").html($(this).attr("data-headline"));
     $(".info-popup p").html($(this).attr("data-text"));
 
+    $(".info-popup img").attr("src", $(this).attr("data-img"));
+
     $(".overlay").addClass($(this).attr("data-class"));
 });
 
