@@ -2,17 +2,14 @@
 
 body {
     font-size: 16px;
-    font-weight: 400;
     color: #000;
-    min-height: 250px;
+    min-height: 500px;
     overflow-x: hidden;
     margin: 0 !important;
     font-weight: 400;
     font-style: normal;
     background-color: #fff;
-    padding: 10px 0 5px 0;
     font-family: 'Poppins', sans-serif;
-    /*font-family: 'Bree Serif', serif;*/
 }
 
 @font-face {
@@ -81,6 +78,9 @@ img {
     line-height: 110%;
     /*letter-spacing: 1px;*/
     text-transform: uppercase;
+}
+.top-header .headline span {
+    display: block;
 }
 
 .section-wrap {
@@ -455,7 +455,7 @@ img {
 
 .footer {
     margin: 0 auto 10px;
-    max-width: 600px;
+    max-width: 362px;
     font-size: 12px;
     line-height: 125%;
     text-align: center;
@@ -464,7 +464,7 @@ img {
 }
 
 .footer span {
-    display: block;
+    /*display: block;*/
 }
 
 .overlay {
@@ -885,7 +885,7 @@ img {
 
     .top-header .headline {
         padding: 0 10px;
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .section-wrap .circle-mid {
@@ -947,7 +947,9 @@ img {
     .scene {
         max-width: 290px;
     }
-
+    .top-header .headline {
+        font-size: 22px;
+    }
     /*.overlay {
         width: 86%;
         height: 82%;
