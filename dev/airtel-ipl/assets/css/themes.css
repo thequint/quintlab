@@ -48,7 +48,8 @@ h6 {
     color: #333;
     font-weight: 700;
     font-size: 100%;
-    font-family: 'Bree Serif', serif;
+    font-family: 'Bai Jamjuree', sans-serif;
+    /*font-family: 'Bree Serif', serif;*/
 }
 
 img {
@@ -77,8 +78,8 @@ img {
     font-size: 32px;
     max-width: 460px;
     text-align: center;
-    line-height: 100%;
-    letter-spacing: 2px;
+    line-height: 110%;
+    /*letter-spacing: 1px;*/
     text-transform: uppercase;
 }
 
