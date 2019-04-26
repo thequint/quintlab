@@ -90,15 +90,21 @@ $('#SubmitForm').click(function(event) {
         $("#Mobile").focus();
         return false;
     }
+
+    if ($("#PanNumber").val() == "") {
+        $("#PanNumber").focus();
+        return false;
+    }
+    /*
     if (fld_pannumber.length == 0) {
         $("#PanNumber").focus();
         return false;
     }
-    // if($("#Add_Amount").val() < 5000 && $("#Add_Amount").attr('disabled')!='disabled'){
-    //     alert("Please Enter amount above Rs 5000 or choose from the available options");
-    //     $("#Add_Amount").focus();
-    //     return false;
-    // }
+    if($("#Add_Amount").val() < 5000 && $("#Add_Amount").attr('disabled')!='disabled'){
+        alert("Please Enter amount above Rs 5000 or choose from the available options");
+        $("#Add_Amount").focus();
+        return false;
+    }*/
 
     if ($('#fld_terms').prop("checked") != true) {
         alert("Please accept the Terms and Conditions");
@@ -192,6 +198,20 @@ $("#Add_Amount").blur(function(){
         // $("#Add_Amount").attr('disabled','disabled');
     }else {
         // $("#Add_Amount").removeAttr('disabled');
+    }
+});
+
+$("#Add_Amount").on("change keyup", function(){
+    // console.log("changes");
+
+    if($("#Add_Amount").val() >= 10000){
+        console.log($(this).val());
+
+        $(".is-pan-number").slideDown();
+        $(".is-pan-number").html('<input type="text" name="pannumber" placeholder="PAN Number*" id="PanNumber">');
+    }else {
+        $(".is-pan-number").slideUp();
+        $(".is-pan-number").html("");
     }
 });
 

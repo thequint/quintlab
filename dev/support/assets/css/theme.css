@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-group.is-check{
 	text-align: left;
-	margin-top: -10px;
+	/*margin-top: -10px;*/
     /*font-size: 1.5em*/
 }
 
@@ -543,7 +543,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.form-group input[type="text"], .form-group input[type="email"], .form-group textarea {
+.form-group input[type="text"], .form-group input[type="number"], .form-group input[type="email"], .form-group textarea {
     width: 100%;
     max-width: 100%;
     background-color: var(--color-white);
@@ -567,7 +567,9 @@ h1, h2, h3, h4, h5, h6 {
 .form-group input[disabled="disabled"] {
     background-color: #ccc
 }
-
+.is-pan {
+    display: none;
+}
 .form-group input[type="submit"] {
     height: 55px;
     border-radius: 8px;
@@ -609,6 +611,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group.form-group-amount {
     overflow: hidden;
     padding: 0 2px 6px;
+    margin-bottom: 10px;
 }
 .form-amount {
     padding: 10px 3px;
