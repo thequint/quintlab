@@ -4,7 +4,7 @@ $(".popup-bt").on("click touchstart", function(e){
     $(".info-popup").fadeIn();
     $(".info-popup h2").html($(this).attr("data-headline"));
     $(".info-popup p").html($(this).attr("data-text"));
-    $(".info-popup .popup-img").attr("src", $(this).attr("data-img"));
+    $(".info-popup .popup-img img").attr("src", $(this).attr("data-img"));
 
     $(".overlay").addClass($(this).attr("data-class"));
 });
@@ -13,6 +13,7 @@ $(".close-icon").on("click touchstart", function(e){
     $(".overlay").hide();
     $(".info-popup").hide();
     $(".overlay").attr("class","overlay");
+    $(".info-popup .popup-img img").attr("src", "")
 });
 
 // Document Click
