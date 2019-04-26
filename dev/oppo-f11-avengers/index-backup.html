@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Oppo f11 Pro - The Quint</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+<meta name="author" content="The Quint">
+<meta name="copyright" content="The Quint">
+<link rel="canonical" href="https://www.thequint.com/quintlab/widgets/oppo-f11/">
+<!-- Fav icon -->
+<link rel="icon" href="assets/images/favicon/favicon.ico">
+<link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" href="assets/css/themes.css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Analytics -->
+<script type="text/javascript"> var gaTrackerCode = 'UA-58739020-1'; if (gaTrackerCode != null) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', gaTrackerCode, 'auto'); ga('send', 'pageview'); } </script>
+	
+<!-- Begin comScoreTag -->
+<script type="text/javascript">
+window.COMSCORE_OPTS = {
+    c1: "2",
+    c2: "20519288"
+};
+var _comscore = _comscore || [];
+_comscore.push(COMSCORE_OPTS);
+(function() {
+    var s = document.createElement("script"),
+        el = document.getElementsByTagName("script")[0];
+    s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=20519288&cv=2.0&cj=1" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+</head>
+
+<body>
+<div class="main-wrap">
+
+
+    <div class="device-frame">
+        <div class="scene scene--card">
+            <div class="device-camera is-ani-left">
+                <div class="ani-left">
+                    <img src="assets/images/device-camera.png" alt="Oppo F11">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__face card__face--front"></div>
+                <div class="card__face card__face--back">
+                    <div class="circle-list">
+                        <ul>
+                            <li class="popup-bt" data-class="icon-first" data-headline="Super Focus" data-text="The phone's amazing 48MP + 5MP dual rear camera gives you brilliant photos that look like professional clicks. The rising front camera gives you the most natural selfies.">
+                            <span>Super Focus</span></li>
+
+                            <li class="popup-bt" data-class="icon-second" data-headline="Super Style" data-text="The OPPO F11 Pro Marvel’s Avengers Limited Edition comes with a stunning glossy body finish. It’s available in blue colour and features OPPO’s signature gradient effects along with an intricate hexagonal pattern. A bold red Avengers logo completes the striking design. It’s easily the most stylish phone around.">
+                            <span>Super Style</span></li>
+
+                            <li class="popup-bt" data-class="icon-third" data-headline="Super Vision" data-text="The phone’s Ultra Night Mode comprises the AI Engine and Ultra Clear Engine. If the AI Engine recognises different settings and optimises settings accordingly, the Ultra Clear Engine enhances the quality of your pictures even in low light conditions. The result is crisp and clear pictures even in darkness."><span>Super Vision</span></li>
+
+                            <li class="popup-bt" data-class="icon-forth" data-headline="Super Entertainment" data-text="With its panoramic display, The OPPO F11 Pro Marvel’s Avengers Limited Edition gives you the ultimate viewing experience.">
+                            <span>Super Entertainment</span></li>
+
+                            <li class="popup-bt" data-class="icon-fifth" data-headline="Super Strength" data-text="The phone's Hyperboost feature takes your gaming experience to the next level. It optimises the memory in such a way that the game can make the most optimum use of the available RAM.">
+                            <span>Super Strength</span></li>
+
+                            <li class="popup-bt" data-class="icon-sixth" data-headline="Super Speed" data-text="You won’t have to wait for hours for the phone to get fully charged, thanks to VOOC 3.0. This superfast charging feature means even a short burst of charge will suffice you for a couple of hours.">
+                            <span>Super Speed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup -->
+        <div class="overlay" style="display: none;">
+            <div class="info-popup" style="display: none">
+                <div class="info-popup--content">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+            <span class="close-icon"></span>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/js/functions.js"></script>
+<script>
+// var card = document.querySelector('.card');
+// card.addEventListener( 'click', function() {
+//     card.classList.toggle('is-flipped');
+// });
+$(".card").on('click', function() {
+    $(this).addClass("is-flipped");
+    $(".flip-btn").css({"opacity":"0"})
+    setTimeout(function(){
+        $(".is-ani-left").addClass("ani-left-visible");
+        $(".circle-list li").addClass("is-visible");
+    }, 1000);
+    
+});
+</script>
+</body>
+
+</html>

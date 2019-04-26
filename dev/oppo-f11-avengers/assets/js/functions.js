@@ -1,6 +1,6 @@
 $(".popup-bt").click(function(e) {
-    $(".overlay").fadeIn();
-    $(".info-popup").fadeIn();
+    $(".overlay").show();
+    $(".info-popup").show();
     $(".info-popup h2").html($(this).attr("data-headline"));
     $(".info-popup p").html($(this).attr("data-text"));
 
