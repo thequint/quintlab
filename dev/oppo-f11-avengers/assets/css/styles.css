@@ -156,7 +156,7 @@ img {
     -moz-transform: translateY (-50%);
     -o-transform: translateY (-50%);
     transform: translateY(-50%);
-    transition: all 1s ease-in-out;
+    transition: all 0.75s ease-in-out;
 }
 
 .content-middle.zoom {
