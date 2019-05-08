@@ -795,4 +795,8 @@ table.dataTable td a:hover{
 	color: var(--color-orange);
 }
 
+#MyReport {
+    font-size: 13px; 
+}
+
 

@@ -181,8 +181,15 @@ $(".form-amount .amount").on('click', function(){
     $("#Add_Amount").val($(this).attr("data-amount"));
 
     $(".form-amount").removeClass("translate-amout");
-    $("#formSlide").slideDown();
+    // $("#formSlide").slideDown();
     $("#Add_Amount").attr('disabled','disabled');
+
+    $(".is-pan-number").slideUp();
+    $(".is-pan-number").html("");
+});
+
+$("#Name").focus(function(){
+    $("#formSlide").slideDown();
 });
 
 $(".amount-large").on('click', function(){

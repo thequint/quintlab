@@ -130,6 +130,9 @@
         font-size: 2em;
         line-height: 125%;
     }
+    .mandatory-text {
+        bottom: -21px;
+    }
 }
 
 @media (max-width: 767px) {
