@@ -364,9 +364,12 @@ h6 {
 }
 
 .box-inside .box-content .embed-wrap li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
     border-radius: 10px;
+}
+.box-inside .thumb-tweet .tweet_display_right li {
+    margin-bottom: 30px;
 }
 
 .box-inside .box-content .embed-wrap li:last-child {

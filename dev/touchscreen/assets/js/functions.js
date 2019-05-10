@@ -87,8 +87,8 @@ function functionSlider() {
 $(window).on("load", function() {
 
     $(".zoom-animation").addClass("transition-box");
-
     var pop_flag = 0;
+
     $(".img-thumb").on("click touchstart", function() {
 
         if (pop_flag == 0) {
@@ -134,3 +134,25 @@ $(window).on("load", function() {
         // $(".close-icon").addClass("is-show");
     });
 });
+
+// $(".close-icon").on("click touchstart", function(){
+//     $(".zoom-animation").removeClass("zoom");
+//     $(".close-icon").removeClass("is-show");
+
+//     $(".popup-box").hide();
+
+//     $(".text-animation").removeClass("is-show");
+//     $(".img-thumb").removeClass("test-close");
+
+//     setTimeout(function() {
+//         $(".zoom-animation").removeClass("zoom-index");
+
+//         $(".is-ani-left").removeClass("ani-left-visible");
+
+//     }, 800);
+// });
+
+$(".is-ani-btm .ani-btm-visible").addClass("text-ani");
+
+// $(".is-ani-left").addClass("ani-left-visible");
+$(".is-ani-right").addClass("ani-right-visible");
