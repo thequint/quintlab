@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71.295" height="63.091" viewBox="0 0 71.295 63.091">
+    <defs>
+        <style>
+            .cls-1{fill:#eef8d5}.cls-2{filter:url(#Path_93)}
+        </style>
+        <filter id="Path_93" width="71.295" height="63.091" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="ic_send_24px" class="cls-2">
+        <path id="Path_93-2" d="M2.07 48.091l53.3-22.545L2.07 3l7.119 19.679 32.217 2.867-32.217 2.866z" class="cls-1" data-name="Path 93" transform="translate(6.93 3)"/>
+    </g>
+</svg>
