@@ -378,7 +378,7 @@ h6 {
     width: 100%;
     height: 100%;
     /*background-color: #ccc;*/
-    overflow: scroll;
+    overflow: auto;
 }
 
 .box-inside .box-content .embed-wrap .embed-right {
