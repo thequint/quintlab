@@ -16,7 +16,6 @@ db.settings({
     timestampsInSnapshots: true
 });
 
-
 // Data Rohit
 db.collection("TouchscreenWidget").doc('rohit').get().then((doc) => {
     $(".box-first .headline").html(doc.data().heading);
@@ -59,6 +58,7 @@ db.collection("TouchscreenWidget").doc('memes').get().then((doc) => {
 });
 
 // Slider
+/*
 function functionSlider() {
 
     var galleryTop = new Swiper('.Gallery', {
@@ -81,7 +81,7 @@ function functionSlider() {
     })
     galleryTop.params.control = galleryThumbs
     galleryThumbs.params.control = galleryTop
-}
+}*/
 
 // On Load Data
 $(window).on("load", function() {
@@ -135,25 +135,3 @@ $(window).on("load", function() {
         // $(".close-icon").addClass("is-show");
     });
 });
-
-// $(".close-icon").on("click touchstart", function(){
-//     $(".zoom-animation").removeClass("zoom");
-//     $(".close-icon").removeClass("is-show");
-
-//     $(".popup-box").hide();
-
-//     $(".text-animation").removeClass("is-show");
-//     $(".img-thumb").removeClass("test-close");
-
-//     setTimeout(function() {
-//         $(".zoom-animation").removeClass("zoom-index");
-
-//         $(".is-ani-left").removeClass("ani-left-visible");
-
-//     }, 800);
-// });
-
-$(".is-ani-btm .ani-btm-visible").addClass("text-ani");
-
-// $(".is-ani-left").addClass("ani-left-visible");
-$(".is-ani-right").addClass("ani-right-visible");
