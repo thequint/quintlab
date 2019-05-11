@@ -102,8 +102,8 @@ $(window).on("load", function() {
             $(this).closest(".zoom-animation").find(".popup-box").show();
             $(this).closest(".zoom-animation").find(".thumb-tweet").addClass("half-width");
 
-            $(this).closest(".zoom-animation").find(".img-placeholder").removeClass("is-show");
-            $(this).closest(".zoom-animation").find(".img-placeholder").addClass("is-hide");
+            // $(this).closest(".zoom-animation").find(".img-placeholder").removeClass("is-show");
+            // $(this).closest(".zoom-animation").find(".img-placeholder").addClass("is-hide");
 
             var _this = $(this)
             setTimeout(function() {

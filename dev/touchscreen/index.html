@@ -16,6 +16,11 @@
 
 <!-- Custom styles for this template -->
 <link rel="stylesheet" href="assets/css/base.css" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
 <link rel="stylesheet" href="assets/css/swiper.css">
 <link rel="stylesheet" href="assets/css/themes.css" media="all">
 
@@ -29,6 +34,10 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style type="text/css">
+.slider-nav div img{
+    width: 100%;
+    /*height: 100%;*/
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -118,12 +127,38 @@
         <div class="box-forth zoom-animation">
             <div class="box-inside">
                 <div class="img-thumb"><img src="assets/images/img-4.png"></div>
-                <!-- <div class="img-placeholder"><img src="assets/images/slider-thumb01.jpg"></div> -->
+
+
+                <div class="img-placeholder">
+
+                    <!-- <img src="assets/images/slider-thumb01.jpg"> -->
+
+                    <div class="slider-nav">                                  
+                        <div><img src="assets/images/slider-img01.jpg"></div>
+                        <div><img src="assets/images/slider-img02.jpg"></div>
+                        <div><img src="assets/images/slider-img03.jpg"></div>
+                        <div><img src="assets/images/slider-img01.jpg"></div>
+                        <div><img src="assets/images/slider-img02.jpg"></div>
+                        <div><img src="assets/images/slider-img03.jpg"></div>
+                    </div>
+
+                    <div class="slider-for">
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div>Item 3</div>
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div>Item 3</div>
+                    </div> 
+
+                </div>
+
+
                 <div class="box-content text-animation">
                     <div class="data-popup-forth popup-box">
                         <div class="slider-wrap wrapper">
                             <div class="slide-img">
-                                <div class="swiper-container Gallery">
+                                <!-- <div class="swiper-container Gallery">
                                     <div class="swiper-wrapper data_img_slider">
                                         <div class="swiper-slide"><img src="assets/images/slider-img01.jpg"></div>
                                         <div class="swiper-slide"><img src="assets/images/slider-img02.jpg"></div>
@@ -132,13 +167,7 @@
                                         <div class="swiper-slide"><img src="assets/images/slider-img02.jpg"></div>
                                         <div class="swiper-slide"><img src="assets/images/slider-img03.jpg"></div>
                                     </div>
-                                    <!-- Add Pagination -->
-                                    <!-- <div class="swiper-pagination"></div>
-
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div> -->
-                                </div>
-                                <!-- <img src="assets/images/slider-img01.jpg"> -->
+                                </div> -->
                             </div>
                             <div class="slide-content">
                                 <div class="slide-content-wrap">
@@ -161,10 +190,46 @@
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src='assets/js/swiper.jquery.min.js'></script>
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 <script src="assets/js/functions.js"></script>
-    
+<script type="text/javascript">
+$('.slider-for').each(function(key, item) {
+
+  var sliderIdName = 'slider' + key;
+  var sliderNavIdName = 'sliderNav' + key;
+
+  this.id = sliderIdName;
+  $('.slider-nav')[key].id = sliderNavIdName;
+
+  var sliderId = '#' + sliderIdName;
+  var sliderNavId = '#' + sliderNavIdName;
+
+  $(sliderId).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    verticalSwiping: true,
+    // vertical: true,
+    asNavFor: sliderNavId
+  });
+
+  $(sliderNavId).slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: sliderId,
+    dots: true,
+    arrows: true,
+    centerMode: false,
+    focusOnSelect: true,
+    verticalSwiping: true,
+    vertical: true,
+  });
+
+});
+</script>
 </body>
 
 </html>
