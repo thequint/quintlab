@@ -54,7 +54,7 @@ db.collection("TouchscreenWidget").doc('memes').get().then((doc) => {
 
     // console.log(doc.data());
     for (var i = 0; i < doc.data().slider.length; i++) {
-        $(".box-forth .data_caption").append('<div class="swiper-slide">' + doc.data().slider[i].caption + '</div>');
+        $(".box-forth .data_caption").append('<div>' + doc.data().slider[i].caption + '</div>');
     }
 });
 
@@ -102,13 +102,14 @@ $(window).on("load", function() {
             $(this).closest(".zoom-animation").find(".popup-box").show();
             $(this).closest(".zoom-animation").find(".thumb-tweet").addClass("half-width");
 
-            // $(this).closest(".zoom-animation").find(".img-placeholder").removeClass("is-show");
-            // $(this).closest(".zoom-animation").find(".img-placeholder").addClass("is-hide");
+            $(this).closest(".zoom-animation").find(".img-placeholder").removeClass("is-show");
+            $(this).closest(".zoom-animation").find(".img-placeholder").addClass("is-hide");
 
             var _this = $(this)
             setTimeout(function() {
                 $(_this).closest(".zoom-animation").find(".text-animation").addClass("is-show");
-                functionSlider();
+                memeSlider();
+                // functionSlider();
             }, 1000);
 
         } else {

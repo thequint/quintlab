@@ -3,7 +3,6 @@
 :root {
     --font-base: 'Avenir LT Std 85 Heavy';
     --font-headline: 'Avenir LT Std 95 Black';
-    /*--font-headline: 'Nunito Sans', sans-serif;*/
     --color-body: #fff;
     --color-base: rgba(255, 255, 255, 1.0);
     --color-headline: #efffc6;
@@ -62,6 +61,25 @@ a {
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f2d13b; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2d13b; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f2d13b; 
 }
 
 h1,
@@ -276,9 +294,9 @@ h6 {
 }
 
 .box-forth.zoom .box-inside .img-thumb {
-    top: 10%;
+    top: 18%;
     right: 12%;
-    width: 410px;
+    width: 380px;
 }
 
 .box-inside .box-content {
@@ -286,6 +304,12 @@ h6 {
     width: 100%;
     height: 100%;
     opacity: 0;
+    font-size: 1.5em;
+    text-shadow: var(--text-shadow);
+}
+.slider-nav div img{
+    width: 100%;
+    /*height: 100%;*/
 }
 
 .box-inside .text-animation {
@@ -406,21 +430,27 @@ h6 {
 }
 
 .box-inside .box-content .slider-wrap {
-    padding: 3% 0;
+    padding: 5% 0 0 0;
     width: 100%;
-    height: 94%;
+    height: 95%;
 }
 
 .slider-wrap .slide-img {
     float: left;
-    width: 45%;
+    width: 50%;
     height: 100%;
+    
+}
+.slider-nav .slick-slider {
     box-shadow: var(--box-shadow);
+}
+.slick-vertical .slick-slide {
+    border: 0;
 }
 
 .slider-wrap .slide-content {
     float: left;
-    width: 55%;
+    width: 50%;
     height: 100%;
     position: relative;
 }
