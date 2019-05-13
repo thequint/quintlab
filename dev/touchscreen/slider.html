@@ -3,83 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<style type="text/css">
-	.slider-for div {
-		height: 100px;
-		background-color: #ccc;
-	}
-	.slider-nav div {
-		height: 100px;
-		background-color: #eee;
-	}
-	.slider-nav div img{
-		width: 100%;
-	}
-</style>
 </head>
 <body>
 
 
-<div class="slider-for">
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-</div> 
-
-<div class="slider-nav" style="width: 400px;">                                  
-    <div><img src="assets/images/slider-img01.jpg"></div>
-    <div><img src="assets/images/slider-img02.jpg"></div>
-    <div><img src="assets/images/slider-img03.jpg"></div>
-    <div><img src="assets/images/slider-img01.jpg"></div>
-    <div><img src="assets/images/slider-img02.jpg"></div>
-    <div><img src="assets/images/slider-img03.jpg"></div>
-</div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
 
 <script type="text/javascript">
-	$('.slider-for').each(function(key, item) {
+	
+	console.log("a");
+	
+	setTimeout(function(){
+		console.log("b");
+	}, 0);
 
-  var sliderIdName = 'slider' + key;
-  var sliderNavIdName = 'sliderNav' + key;
+	console.log("c");
 
-  this.id = sliderIdName;
-  $('.slider-nav')[key].id = sliderNavIdName;
 
-  var sliderId = '#' + sliderIdName;
-  var sliderNavId = '#' + sliderNavIdName;
 
-  $(sliderId).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    verticalSwiping: true,
-    // vertical: true,
-    asNavFor: sliderNavId
-  });
+	for(var i = 0; i < 1000; i++){
+		console.log(i);
+	}
 
-  $(sliderNavId).slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: sliderId,
-    dots: true,
-    arrows: true,
-    centerMode: false,
-    focusOnSelect: true,
-    verticalSwiping: true,
-    vertical: true,
-  });
 
-});
 </script>
+
 </body>
 </html>

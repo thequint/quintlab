@@ -82,6 +82,19 @@ a {
   background: #f2d13b; 
 }
 
+.box-forth ::-webkit-scrollbar{
+  width: 10px;
+}
+.box-forth ::-webkit-scrollbar-track {
+  background: #f3a041; 
+}
+.box-forth ::-webkit-scrollbar-thumb {
+  background: #f3a041; 
+}
+.box-forth ::-webkit-scrollbar-thumb:hover {
+  background: #f3a041; 
+}
+
 h1,
 h2,
 h3,
@@ -214,7 +227,7 @@ h6 {
 }
 
 .box-inside .img-placeholder {
-    padding: 30px;
+    padding: 20px;
     width: 48%;
     height: 100%;
 }
@@ -268,9 +281,9 @@ h6 {
 }
 
 .box-second.zoom .box-inside .img-thumb {
-    top: 5%;
-    right: 5%;
-    width: 275px;
+    top: 4%;
+    right: 8%;
+    width: 320px;
 }
 
 /* Third */
@@ -294,9 +307,11 @@ h6 {
 }
 
 .box-forth.zoom .box-inside .img-thumb {
-    top: 18%;
-    right: 12%;
-    width: 380px;
+    top: 7%;
+    right: 6%;
+    /*top: 18%;
+    right: 12%;*/
+    width: 430px;
 }
 
 .box-inside .box-content {
@@ -423,9 +438,38 @@ h6 {
 
 .box-inside .box-content .data-popup-forth {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     height: 100%;
 }
+
+
+.box-inside .box-content .memes-wrap {
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.box-inside .box-content .memes-wrap .memes-left {
+    float: left;
+    width: 55%;
+    height: 100%;
+    overflow: auto;
+    /*padding: 30px;*/
+    background-color: #fff;
+    /*background-color: #ccc*/
+}
+
+.box-inside .box-content .memes-wrap .memes-left img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#memes_display li {
+    padding: 10px 20px;
+    border-bottom: 1px #ddd solid;
+}
+
 
 .box-inside .box-content .slider-wrap {
     padding: 5% 0 0 0;

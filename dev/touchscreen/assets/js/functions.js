@@ -41,7 +41,7 @@ db.collection("TouchscreenWidget").doc('tweetdeck').get().then((doc) => {
         if (i % 2 == 0) {
             $(".tweet_display_left").append('<li>' + doc.data().tweets[i] + '</li>')
         } else {
-            console.log(doc.data().tweets[i]);
+            // console.log(doc.data().tweets[i]);
             $(".tweet_display_right").append('<li>' + doc.data().tweets[i] + '</li>')
         }
     }
@@ -51,9 +51,18 @@ db.collection("TouchscreenWidget").doc('tweetdeck').get().then((doc) => {
 // Data Meme
 db.collection("TouchscreenWidget").doc('memes').get().then((doc) => {
 
-    // console.log(doc.data());
+    console.log(doc.data().slider);
+
+    console.log(doc.data().slider[0].caption);
+
+    $(".box-forth .box-inside .img-placeholder").append('<img src="'+ doc.data().slider[0].image +'">')
+
     for (var i = 0; i < doc.data().slider.length; i++) {
-        $(".box-forth .data_caption").append('<div>' + doc.data().slider[i].caption + '</div>');
+
+    	$("#memes_display").append('<li><img src="'+ doc.data().slider[i].image +'"></li>')
+
+        // $("#slider_caption").append('<div>' + doc.data().slider[i].caption + '</div>');
+        // $("#slider_memes").append('<div><img src="'+ doc.data().slider[i].image +'"></div>');
     }
 });
 
