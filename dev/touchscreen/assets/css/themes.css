@@ -356,6 +356,9 @@ h6 {
     color: var(--color-headline);
     text-shadow: var(--headline-shadow);
 }
+.box-inside .box-content .data-header .headline.rohit {
+    padding-top: 13%;
+}
 
 .box-inside .box-content .data-header .headline.black-text {
     color: var(--color-headline-black);
@@ -377,7 +380,7 @@ h6 {
     text-shadow: var(--text-shadow);
 }
 .box-inside .box-content .data-list.rohit {
-    margin-top: 15%;
+    /*margin-top: 15%;*/
 }
 
 .box-inside .box-content .data-list li {
