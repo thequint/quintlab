@@ -371,10 +371,13 @@ h6 {
 
 .box-inside .box-content .data-list {
     width: 95%;
-    margin-top: 8%;
+    margin-top: 11%;
     font-size: 1.5em;
     font-size: 1.5625em;
     text-shadow: var(--text-shadow);
+}
+.box-inside .box-content .data-list.rohit {
+    margin-top: 15%;
 }
 
 .box-inside .box-content .data-list li {
