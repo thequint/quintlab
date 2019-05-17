@@ -1,0 +1,385 @@
+@charset "utf-8";
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+.container.full-container{
+	width: 100%;
+	max-width: 100%;
+}
+.container.full-container p{
+	line-height: 160%;
+}
+
+
+@media (max-width: 1130px) {
+.details-wrapper .btn-goback {
+	display: none;
+}
+.logo-tq {
+	width: 35px;
+	top: 15px;
+	left: 15px;
+}
+.paint-1 {
+	width: 80px;
+}
+/*.share-ico {
+	height: 40px;
+	width: 40px;
+}
+.share {
+	top: 12px;
+	right: 12px;
+}
+.social-ico li a {
+	height: 35px;
+	width: 35px;
+}
+.social-ico li a i {
+	line-height: 36px;
+}*/
+.details-wrapper .container {
+	padding: 80px 15px 0px 15px;
+}
+.details-wrapper .paint-2 {
+	display: none;
+}
+.btn-goback-mob {
+	display: block;
+}
+.btn-goback-mob {
+	border-radius: 0px 25px 25px 0px;
+	text-align: left;
+	background: #000;
+	display: inline-block;
+	height: 50px;
+	padding: 0px 0 0 15px;
+	line-height: 48px;
+	color: #D7C38C;
+	position: relative;
+	font-weight: 700;
+	text-decoration: none;
+	width: 142px;
+	left: 0;
+	margin: 0 0 0 -20px;
+}
+.btn-goback-mob::before {
+	position: absolute;
+	content: '';
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+	top: 5px;
+	right: 5px;
+	border-radius: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(../images/ico-1.svg);
+}
+.profil-image {
+	position: absolute;
+	width: 153px;
+	z-index: 10000;
+	top: 10px;
+	left: -200px;
+	border: 6px solid #fff;
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.5);
+	transform: scale(0.6) rotate(5deg);
+	transform-origin: right;
+}
+}
+
+@media (max-width: 768px) {
+/*index page*/
+	
+	
+.letters li {
+	margin-bottom: 30px;
+}
+.letters li figure {
+	margin: 0px 15px;
+}
+.letters {
+	margin: 0px -15px;
+	text-align: center;
+}
+.letters li figcaption {
+	font-size: 18px;
+}
+.kargil-text h1 {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.kargil-text p {
+	font-size: 22px;
+	line-height: 120%;
+	margin-top: -40px;
+	max-width: 600px;
+	margin: -60px auto;
+}
+.article-image {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+}
+
+@media (max-width: 767px) {
+.btn-goback-mob {
+	height: 40px;
+	padding: 0px 0 0 10px;
+	line-height: 40px;
+	width: 124px;
+	margin: 0 0 0 -16px;
+}
+.btn-goback-mob::before {
+	width: 34px;
+	height: 34px;
+	top: 3px;
+	right: 3px;
+}
+.details-wrapper .article-headline span {
+	padding: 8px 8px;
+	font-size: 27px;
+}
+.article-text {
+	padding: 2px 0% 0px 15px;
+}
+.article-views {
+	margin: 0
+}
+.details-wrapper .article-sub-headline {
+	font-size: 27px;
+}
+	
+	.details-wrapper .article-sub-headline.inner {
+	font-size: 22px;
+}
+	
+	
+.article-views h3 {
+	font-size: 27px;
+	border-bottom: 2px solid #000;
+	padding: 0px 0 5px 0px;
+}
+.details-wrapper .container {
+	font-size: 20px;
+}
+/* Style for modal */
+
+.paint-2 {
+	display: none;
+}
+.profil-image {
+	display: none;
+}
+.modal-body {
+	position: relative;
+	margin: 140px auto 0 auto;
+	color: #fff;
+}
+.left-controls {
+	position: absolute;
+	left: 0;
+	top: -60px;
+}
+.left-controls a {
+	border-radius: 25px;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
+.controls .left-controls a::before {
+	width: 34px;
+	height: 34px;
+	top: 3px;
+	left: 3px;
+}
+.controls a.btn-goback {
+	padding: 0px 0px 0 56px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 160px;
+}
+.right-controls a {
+	border-radius: 25px;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
+.right-controls {
+	position: inherit;
+	right: auto;
+	top: auto;
+	width: 100%;
+	padding: 80px 0px 30px 0;
+}
+.right-controls.pagination {
+	padding: 30px 0px 30px 0;
+}
+.controls .right-controls a::before {
+	width: 34px;
+	height: 34px;
+	top: 3px;
+	right: 3px;
+}
+.controls a.btn-nextletter {
+	padding-right: 0;
+	position: absolute;
+	right: 0;
+	top: -60px;
+	width: 160px;
+	padding-left: 10px;
+	left: auto;
+}
+.right-controls .btn-stamp {
+	position: relative;
+    float: left;
+    width: 33.333%;
+    left: auto;
+    top: auto;
+    z-index: 9999;
+}
+.btn-stamp span.text {
+	font-size: 15px;
+}
+.btn-stamp.btn-stamp-detail span.text {
+	font-size: 16px;
+	top: 30px;
+	line-height: 100%;
+}
+.btn-stamp::before {
+	top: 40px;
+}
+.arrow {
+	bottom: 100px;
+}
+/* Style for modal */
+
+.left-controls, .right-controls {
+	transition: all 0s ease-in-out;
+}
+}
+
+@media (max-width: 680px) {
+.headline {
+	margin: 0 0 25px 0;
+	padding: 0;
+}
+.headline span {
+	background: #000;
+	padding: 10px;
+	font-size: 30px;
+}
+.letters {
+	margin: 0px -10px;
+}
+.letters li figure {
+	margin: 0px 10px;
+}
+.letters li {
+	width: 50%;
+}
+.letters-wrapper {
+	padding: 30px 0px 10px 0;
+}
+}
+
+@media (max-width: 600px) {
+.kargil-text p {
+	margin: -30px auto;
+}
+.headline span {
+	background: #000;
+	padding: 10px;
+	font-size: 28px;
+	display: block;
+	text-align: center;
+}
+.headline {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+.letters li figure {
+	margin: 0px 5px;
+}
+.letters {
+	margin: 0px -5px;
+}
+.letters li {
+	margin-bottom: 18px;
+}
+.letters li figcaption {
+	font-size: 16px;
+}
+	
+.details-wrapper .container {
+	font-size: 18px;
+}
+	
+}
+
+@media (max-width: 410px) {
+	.controls a{
+		font-size:17px;
+	}
+	
+.flip-container, .front, .back, .modal-body {
+	width: 310px;
+	z-index: 1000;
+}
+.controls a.btn-goback {
+	padding: 0px 0px 0 52px;
+	width: 150px;
+}
+.controls a.btn-nextletter {
+	width: 150px;
+	padding-left: 10px;
+}
+.letter-name {
+	padding: 10px 5px;
+	font-size: 18px;
+}
+.modal-body .slick-dots li {
+	margin: 0 0 0 4px;
+}
+.modal-body .slick-dots li button {
+	width: 18px;
+	height: 18px;
+	line-height: 16px;
+	font-size: 12px;
+}
+.modal-body .slick-dots li button::before {
+	width: 14px;
+	height: 14px;
+}
+.btn-stamp span.text {
+	font-size: 13px;
+	top: 16px;
+}
+.btn-stamp::before {
+	top: 30px;
+	width: 26px;
+	height: 26px;
+	margin-left: -13px;
+}
+.btn-stamp.btn-stamp-detail span.text {
+	font-size: 14px;
+	top: 23px;
+	line-height: 100%;
+}
+.details-wrapper .article-headline span, .headline span {
+	font-size: 22px;
+}
+.arrow {
+	bottom: 40px;
+}
+	
+.details-wrapper .article-sub-headline {
+	font-size: 23px;
+}
+	
+}
