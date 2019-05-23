@@ -461,6 +461,9 @@ img {
 .footer .footer-right {
     right: 10px;
     width: 120px;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: right;
 }
 @media screen and (max-width: 699px) {
     .footer .footer-left,
