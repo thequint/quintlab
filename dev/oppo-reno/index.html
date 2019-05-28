@@ -17,7 +17,7 @@
 <link rel="icon" href="assets/images/favicon/favicon.ico">
 
 <link rel="stylesheet" href="assets/css/base.css" media="all">
-<link rel="stylesheet" href="assets/css/styles.css?v=0.03" media="all">
+<link rel="stylesheet" href="assets/css/styles.css?v=0.05" media="all">
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,900&display=swap" rel="stylesheet">
 
@@ -115,24 +115,24 @@ _comscore.push(COMSCORE_OPTS);
                             </div>
                             <div class="content-slide third is-ani-left">
                                 <div class="ani-left">
-                                    But, isn't it dark in here?
+                                    
+                                    <span style="display: block;">But, isn't it dark in here?<br>
+                                    Let there be light.</span>
+                                    <span class="btn-click light-image-btn"><img src="assets/images/click.png" alt=""></span>
                                 </div>
                             </div>
-                            <div class="content-slide forth is-ani-left">
+                            <!-- <div class="content-slide forth is-ani-left">
                                 <div class="ani-left">
                                     <span style="display: block;">Let there be light</span>
                                     <span class="btn-click light-image-btn"><img src="assets/images/click.png" alt=""></span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="content-slide fifth is-ani-left">
                                 <div class="ani-left">
                                     <span style="display: block;">With<br>
                                     <strong>Ultra Night Mode 2.0,</strong>
                                     get crisp and clear pictures even at night.</span>
-                                    
-                                    
-
                                     <span class="btn-click screen-next-btn"><img src="assets/images/click.png" alt=""></span>
 
                                 </div>
@@ -258,9 +258,9 @@ _comscore.push(COMSCORE_OPTS);
             $(".content-slide.first").fadeOut(800);
             setTimeout(function(){
                 $(".content-slide.second").fadeOut(800);
-                setTimeout(function(){
-                    $(".content-slide.third").fadeOut(800);
-                }, 2000);
+                // setTimeout(function(){
+                //     $(".content-slide.third").fadeOut(800);
+                // }, 2000);
             }, 2000);
         }, 500);
 
@@ -269,9 +269,9 @@ _comscore.push(COMSCORE_OPTS);
             $(".second.is-ani-left").addClass("ani-left-visible");
             setTimeout(function(){
                 $(".third.is-ani-left").addClass("ani-left-visible");
-                setTimeout(function(){
-                    $(".forth.is-ani-left").addClass("ani-left-visible");
-                }, 2000);
+                // setTimeout(function(){
+                //     $(".forth.is-ani-left").addClass("ani-left-visible");
+                // }, 2000);
             }, 2000);
         }, 1000);
     });
@@ -279,7 +279,7 @@ _comscore.push(COMSCORE_OPTS);
     var imgPath = "assets/images/zoom-light.jpg"
 
     $(".light-image-btn").on("click", function() {
-        $(".content-slide.forth").fadeOut(800);
+        $(".content-slide.third").fadeOut(800);
         setTimeout(function(){
             $(".fifth.is-ani-left").fadeIn().addClass("ani-left-visible");
             $(".screen-first-image img").attr("src", imgPath);
