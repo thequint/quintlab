@@ -142,8 +142,8 @@ img {
 }
 
 .screen-first-content {
-    padding: 0 0 20px;
-    min-height: 160px;
+    /*padding: 0 0 20px;*/
+    min-height: 200px;
     /*background-color: #ccc;*/
     overflow: hidden;
     position: relative;
@@ -152,12 +152,18 @@ img {
 
 .screen-first-content .content-slide {
     margin: 0 auto;
+    text-align: left;
+    line-height: 120%;
+
+    position: absolute;
+    top: 45%;
     left: 0;
     right: 0;
-    position: absolute;
-    text-align: left;
-    /*font-size: 1.5em;*/
-    line-height: 120%;
+    -ms-transform: translateY (-50%);
+    -webkit-transform: translateY (-50%);
+    -moz-transform: translateY (-50%);
+    -o-transform: translateY (-50%);
+    transform: translateY(-50%);
 }
 .screen-first-content .content-slide strong {
     display: block;
@@ -200,7 +206,7 @@ img {
 
 .screen-first-btn {
     position: absolute;
-    bottom: 25%;
+    bottom: 20%;
     left: 0;
     right: 0;
     text-align: center;
@@ -230,11 +236,12 @@ img {
 }
 
 .screen-next-btn {
-    position: absolute;
+    /*position: absolute;
     bottom: 55px;
     right: 55px;
     width: 60px;
-    cursor: pointer;
+    cursor: pointer;*/
+    /*max-width: 80px;*/
 }
 .btn-click {
     margin: 20px auto 0;
@@ -299,7 +306,7 @@ img {
 
 
 .screen-second-content {
-    min-height: 160px;
+    min-height: 70px;
     position: relative;
 }
 
