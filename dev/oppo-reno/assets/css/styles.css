@@ -169,7 +169,7 @@ img {
 
 .screen-first-image {
     margin-bottom: 170px;
-    width: 150px;
+    width: 120px;
     transition: all .6s ease-in-out;
     background-color: #fff;
     transform: rotate(5deg);
@@ -190,8 +190,8 @@ img {
 
 .screen-first-image.zoom {
     margin-bottom: 0px;
-    max-width: 80%;
-    width: 80%;
+    max-width: 85%;
+    width: 85%;
     transform: rotate(-10deg);
     padding: 10px 10px 30px;
     /*transform: scale3d(1.22, 1.22, 1) rotate(-10deg);*/
@@ -231,8 +231,8 @@ img {
 
 .screen-next-btn {
     position: absolute;
-    bottom: 30px;
-    right: 42px;
+    bottom: 55px;
+    right: 55px;
     width: 60px;
     cursor: pointer;
 }
