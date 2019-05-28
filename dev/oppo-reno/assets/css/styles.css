@@ -274,6 +274,10 @@ img {
     right: 0;
     position: absolute;
 }
+.screen-second-headline .content-headline .data-headline {
+    font-size: 1.35em;
+    margin-bottom: 5px;
+}
 
 .screen-second-image {
     margin: 0 auto 10px;
@@ -458,5 +462,12 @@ img {
 @media screen and (max-width: 440px) {
     body {
         font-size: 90%;
+    }
+    .screen-second-headline .content-headline .data-headline {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    .content-headline.headline-first strong {
+        display: inline-block;
     }
 }
