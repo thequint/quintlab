@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="23.571" height="19.294" viewBox="0 0 23.571 19.294">
+<svg xmlns="http://www.w3.org/2000/svg" width="21.99" height="18" viewBox="0 0 21.99 18">
     <defs>
         <style>
-            .cls-1{fill:#febf0f;stroke:#212150;stroke-width:.7px}
+            .cls-1{fill:#be2d2b}
         </style>
     </defs>
-    <path id="Path_132759" d="M2.01 21L24 12 2.01 3 5 10l12 2-12 2z" class="cls-1" data-name="Path 132759" transform="translate(-1.353 -2.353)"/>
+    <path id="Path_132759" d="M2.01 21L24 12 2.01 3 5 10l12 2-12 2z" class="cls-1" data-name="Path 132759" transform="translate(-2.01 -3)"/>
 </svg>
